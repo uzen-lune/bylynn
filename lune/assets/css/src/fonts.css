@@ -1,0 +1,47 @@
+/* webfont */
+
+@font-face {
+	font-family: NotoSerifKR;
+	src:
+		local(※),
+		url(../fonts/NotoSerifKR.otf) format('oft'),
+}
+
+@font-face {
+	font-family: NanumBarunGothicBold;
+	src:
+		local(※),
+		url(../fonts/NanumBarunGothicBold.eot) format('eot'),
+		url(../fonts/NanumBarunGothicBold.woff) format('woff'),
+		url(../fonts/NanumBarunGothicBold.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: NanumBarunGothicLight;
+	src:
+		local(※),
+		url(../fonts/NanumBarunGothicLight.eot) format('eot'),
+		url(../fonts/NanumBarunGothicLight.woff) format('woff'),
+		url(../fonts/NanumBarunGothicLight.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: Raleway-Thin;
+	src:
+		local(※),
+		url(../fonts/raleway-extralight.svg) format('svg'),
+		url(../fonts/raleway-extralight.eot) format('eot'),
+		url(../fonts/raleway-extralight.woff) format('woff'),
+		url(../fonts/raleway-extralight.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: Raleway-Bold;
+	src:
+		local(※),
+		url(../fonts/raleway-bold-webfont.eot) format('eot'),
+		url(../fonts/raleway-bold-webfont.woff) format('woff'),
+		url(../fonts/raleway-bold-webfont.ttf) format('ttf');
+}
+
+
