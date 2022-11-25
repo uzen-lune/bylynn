@@ -772,11 +772,21 @@ h4{
 	background:#fff;
 }
 .actionbar-floating button span {
-	display:none;
-	width:0;
-	height:0;
+	display:block;
+	width:100%;
+	height:100%;
 	font-size:0;
 	color:#fff;
+}
+.actionbar-floating button span.float-item {
+	width:0;
+	height:0;
+}
+.actionbar-floating button .float-chat {
+	background:url(../../assets/images/common/action-chat.svg) center center no-repeat;
+}
+.actionbar-floating button .float-top {
+	background:url(../../assets/images/common/action-top.svg) center center no-repeat;
 }
 .actionbar-floating button img {
 	width:100%;
