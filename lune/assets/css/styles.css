@@ -640,9 +640,6 @@ h4{
 .sec-main{
 	padding:65px 30px 30px;
 }
-.main-slide {
-
-}
 .main-slide .swiper-slide a {
 	position:relative;
 	display:block;
@@ -824,7 +821,7 @@ h4{
 
 
 /* Firefox bug fix */
-@keyframes "mq" {
+@keyframes mq {
 	0% {
 		-moz-transform: translateX(100%);
 		-webkit-transform: translateX(100%);
@@ -838,7 +835,7 @@ h4{
 }
 
 
-@keyframes "rotate" {
+@keyframes rotate {
 	from {
 		transform: rotate(0deg);
 	}
@@ -846,7 +843,7 @@ h4{
 		transform: rotate(360deg);
 	}
 }
-@-moz-keyframes "rotate" {
+@-moz-keyframes rotate {
 	from {
 		-moz-transform: rotate(0deg);
 	}
@@ -854,7 +851,7 @@ h4{
 		-moz-transform: rotate(360deg);
 	}
 }
-@-webkit-keyframes "rotate" {
+@-webkit-keyframes rotate {
 	from {
 		-webkit-transform: rotate(0deg);
 	}
@@ -864,7 +861,7 @@ h4{
 }
 
 
-@keyframes "bounce" {
+@keyframes bounce {
 	10%,30%,50%,70%,90% {
 		transform: translateY(-2px);
 	}
@@ -872,7 +869,7 @@ h4{
 		transform: translateY(2px);
 	}
 }
-@-moz-keyframes "bounce" {
+@-moz-keyframes bounce {
 	10%,30%,50%,70%,90% {
 		-moz-transform: translateY(-2px);
 	}
@@ -880,7 +877,7 @@ h4{
 		-moz-transform: translateY(2px);
 	}
 }
-@-webkit-keyframes "bounce" {
+@-webkit-keyframes bounce {
 	10%,30%,50%,70%,90% {
 		-webkit-transform: translateY(-2px);
 	}
