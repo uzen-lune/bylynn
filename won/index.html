@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/index_flex.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script>
@@ -73,18 +73,46 @@
     <!----------main------------->
 
     <main>
-        <div class="main-txt">
-            <a href="#" class="tit">TWEED COLLECTION</a>
-            <a href="#" class="des">가을무드 가득<br> 트위드</a>
-        </div>
+        
 
         <div class="swiper main-img">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/KV.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="images/KV.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="images/KV.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="images/KV.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="images/KV.jpg" alt=""></div>
+                <div class="swiper-slide">
+                    <img src="images/KV.jpg" alt="">
+                    <div class="main-txt">
+                        <a href="#" class="tit">TWEED COLLECTION</a>
+                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/KV.jpg" alt="">
+                    <div class="main-txt">
+                        <a href="#" class="tit">TWEED COLLECTION</a>
+                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/KV.jpg" alt="">
+                    <div class="main-txt">
+                        <a href="#" class="tit">TWEED COLLECTION</a>
+                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/KV.jpg" alt="">
+                    <div class="main-txt">
+                        <a href="#" class="tit">TWEED COLLECTION</a>
+                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/KV.jpg" alt="">
+                    <div class="main-txt">
+                        <a href="#" class="tit">TWEED COLLECTION</a>
+                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                    </div>
+                </div>
+                
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -370,9 +398,10 @@
         <!----------week------------->
 
         <article class="week">
-            <h2>this week</h2>
-            <div class="box-wrap clearfix">
-                <div class="box">
+            <h2>This Week</h2>
+            <div class="swiper week-slide">
+            <div class="swiper-wrapper clearfix">
+                <div class="swiper-slide">
                     <a href="#">
                         <img src="images/classic01.jpg" alt="">
 
@@ -382,15 +411,15 @@
                     </a>
 
                 </div>
-                <div class="box">
+                <div class="swiper-slide">
                     <a href="#">
-                        <img src="images/classic02.jpg" alt="">
+                        <img src="images/classic01.jpg" alt="">
                         <p class="tit">클래식룩</p>
                         <p class="des">클래식룩을 추천드립니다.</p>
                     </a>
 
                 </div>
-                <div class="box">
+                <div class="swiper-slide">
                     <a href="#">
                         <img src="images/classic01.jpg" alt="">
 
@@ -400,14 +429,15 @@
                     </a>
 
                 </div>
-                <div class="box">
+                <div class="swiper-slide">
                     <a href="#">
-                        <img src="images/classic02.jpg" alt="">
+                        <img src="images/classic01.jpg" alt="">
                         <p class="tit">클래식룩</p>
                         <p class="des">클래식룩을 추천드립니다.</p>
                     </a>
 
                 </div>
+            </div>
             </div>
         </article>
 
@@ -421,152 +451,137 @@
 
         <article class="best">
             <h2>Best Item</h2>
-            <div class="box-wrap clearfix">
-                <div class="box">
-                    <div href="#" class="img-box">
+            <div class="swiper today-pdt">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div href="#" class="img-box">
 
-                        <img src="images/best01.jpg" alt="">
-                        <a href="#" class="like">
-                            <img src="images/heart.png" alt="">
-                        </a>
+                            <img src="images/best01.jpg" alt="">
+                            <a href="#" class="like">
+                                <img src="images/heart.png" alt="">
+                            </a>
 
-                        <p class="best-num">1</p>
-
-                    </div>
-                    <ul class="sel-color clearfix">
-                        <li><a href="#"><span></span></a></li>
-                        <li><a href="#"><span></span></a></li>
-                    </ul>
-                    <div class="box-txt">
-                        <a href="#" class="brand">LYNN</a>
-                        <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
-                        <p class="sale">219,000원</p>
-                        <p class="price">197,100원</p>
-                        <p class="per">10%</p>
-                    </div>
-
-                </div>
-                <div class="box">
-                    <div href="#" class="img-box">
-
-                        <img src="images/best02.jpg" alt="">
-                        <a href="#" class="like">
-                            <img src="images/heart.png" alt="">
-                        </a>
-
-                        <p class="best-num">2</p>
+                        </div>
+                        <ul class="sel-color clearfix">
+                            <li><a href="#"><span class="brown"></span></a></li>
+                            <li><a href="#"><span class="gray"></span></a></li>
+                        </ul>
+                        <div class="box-txt">
+                            <a href="#" class="brand">LYNN</a>
+                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <p class="sale">219,000원</p>
+                            <p class="price">197,100원<span class="per">10%</span></p>
+                        </div>
 
                     </div>
-                    <ul class="sel-color clearfix">
-                        <li><a href="#"><span></span></a></li>
-                        <li><a href="#"><span></span></a></li>
-                    </ul>
-                    <div class="box-txt">
-                        <a href="#" class="brand">LYNN</a>
-                        <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
-                        <p class="sale">219,000원</p>
-                        <p class="price">197,100원</p>
-                        <p class="per">10%</p>
-                    </div>
+                    <div class="swiper-slide">
+                        <div href="#" class="img-box">
 
-                </div>
-                <div class="box">
-                    <div href="#" class="img-box">
+                            <img src="images/best02.jpg" alt="">
+                            <a href="#" class="like">
+                                <img src="images/heart.png" alt="">
+                            </a>
 
-                        <img src="images/best01.jpg" alt="">
-                        <a href="#" class="like">
-                            <img src="images/heart.png" alt="">
-                        </a>
-
-                        <p class="best-num">3</p>
+                        </div>
+                        <ul class="sel-color clearfix">
+                            <li><a href="#"><span class="pink"></span></a></li>
+                            <li><a href="#"><span class="gold"></span></a></li>
+                        </ul>
+                        <div class="box-txt">
+                            <a href="#" class="brand">LYNN</a>
+                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <p class="sale">219,000원</p>
+                            <p class="price">197,100원<span class="per">10%</span></p>
+                        </div>
 
                     </div>
-                    <p></p>
-                    <ul class="sel-color clearfix">
-                        <li><a href="#"><span></span></a></li>
-                        <li><a href="#"><span></span></a></li>
-                    </ul>
-                    <div class="box-txt">
-                        <a href="#" class="brand">LYNN</a>
-                        <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
-                        <p class="sale">219,000원</p>
-                        <p class="price">197,100원</p>
-                        <p class="per">10%</p>
-                    </div>
+                    <div class="swiper-slide">
+                        <div href="#" class="img-box">
 
-                </div>
-                <div class="box">
-                    <div href="#" class="img-box">
+                            <img src="images/best01.jpg" alt="">
+                            <a href="#" class="like">
+                                <img src="images/heart.png" alt="">
+                            </a>
 
-                        <img src="images/best01.jpg" alt="">
-                        <a href="#" class="like">
-                            <img src="images/heart.png" alt="">
-                        </a>
-
-                        <p class="best-num">1</p>
+                        </div>
+                        <ul class="sel-color clearfix">
+                            <li><a href="#"><span class="brown"></span></a></li>
+                            <li><a href="#"><span class="gray"></span></a></li>
+                        </ul>
+                        <div class="box-txt">
+                            <a href="#" class="brand">LYNN</a>
+                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <p class="sale">219,000원</p>
+                            <p class="price">197,100원<span class="per">10%</span></p>
+                        </div>
 
                     </div>
-                    <ul class="sel-color clearfix">
-                        <li><a href="#"><span></span></a></li>
-                        <li><a href="#"><span></span></a></li>
-                    </ul>
-                    <div class="box-txt">
-                        <a href="#" class="brand">LYNN</a>
-                        <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
-                        <p class="sale">219,000원</p>
-                        <p class="price">197,100원</p>
-                        <p class="per">10%</p>
-                    </div>
+                    <div class="swiper-slide">
+                        <div href="#" class="img-box">
 
-                </div>
-                <div class="box">
-                    <div href="#" class="img-box">
+                            <img src="images/best02.jpg" alt="">
+                            <a href="#" class="like">
+                                <img src="images/heart.png" alt="">
+                            </a>
 
-                        <img src="images/best02.jpg" alt="">
-                        <a href="#" class="like">
-                            <img src="images/heart.png" alt="">
-                        </a>
-
-                        <p class="best-num">2</p>
+                        </div>
+                        <ul class="sel-color clearfix">
+                            <li><a href="#"><span class="pink"></span></a></li>
+                            <li><a href="#"><span class="gold"></span></a></li>
+                        </ul>
+                        <div class="box-txt">
+                            <a href="#" class="brand">LYNN</a>
+                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <p class="sale">219,000원</p>
+                            <p class="price">197,100원<span class="per">10%</span></p>
+                        </div>
 
                     </div>
-                    <ul class="sel-color clearfix">
-                        <li><a href="#"><span></span></a></li>
-                        <li><a href="#"><span></span></a></li>
-                    </ul>
-                    <div class="box-txt">
-                        <a href="#" class="brand">LYNN</a>
-                        <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
-                        <p class="sale">219,000원</p>
-                        <p class="price">197,100원</p>
-                        <p class="per">10%</p>
-                    </div>
+                    <div class="swiper-slide">
+                        <div href="#" class="img-box">
 
-                </div>
-                <div class="box">
-                    <div href="#" class="img-box">
+                            <img src="images/best01.jpg" alt="">
+                            <a href="#" class="like">
+                                <img src="images/heart.png" alt="">
+                            </a>
 
-                        <img src="images/best01.jpg" alt="">
-                        <a href="#" class="like">
-                            <img src="images/heart.png" alt="">
-                        </a>
-
-                        <p class="best-num">3</p>
+                        </div>
+                        <ul class="sel-color clearfix">
+                            <li><a href="#"><span class="brown"></span></a></li>
+                            <li><a href="#"><span class="gray"></span></a></li>
+                        </ul>
+                        <div class="box-txt">
+                            <a href="#" class="brand">LYNN</a>
+                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <p class="sale">219,000원</p>
+                            <p class="price">197,100원<span class="per">10%</span></p>
+                        </div>
 
                     </div>
-                    <p></p>
-                    <ul class="sel-color clearfix">
-                        <li><a href="#"><span></span></a></li>
-                        <li><a href="#"><span></span></a></li>
-                    </ul>
-                    <div class="box-txt">
-                        <a href="#" class="brand">LYNN</a>
-                        <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
-                        <p class="sale">219,000원</p>
-                        <p class="price">197,100원</p>
-                        <p class="per">10%</p>
-                    </div>
+                    <div class="swiper-slide">
+                        <div href="#" class="img-box">
 
+                            <img src="images/best02.jpg" alt="">
+                            <a href="#" class="like">
+                                <img src="images/heart.png" alt="">
+                            </a>
+
+                        </div>
+                        <ul class="sel-color clearfix">
+                            <li><a href="#"><span class="pink"></span></a></li>
+                            <li><a href="#"><span class="gold"></span></a></li>
+                        </ul>
+                        <div class="box-txt">
+                            <a href="#" class="brand">LYNN</a>
+                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <p class="sale">219,000원</p>
+                            <p class="price">197,100원<span class="per">10%</span></p>
+                        </div>
+
+                    </div>
+                    
+                
+                    
                 </div>
             </div>
             <a href="#" class="btn">전체보기</a>
@@ -585,28 +600,30 @@
                     <h3>SOMEDAY</h3>
                     <p>이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
                 </div>
-                <div class="box-wrap clearfix">
-                    <div class="box">
+                <div class="swiper">
+                <div class="swiper-wrapper box-wrap clearfix">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/someday01.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/someday02.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/someday03.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/someday01.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
                 </div>
+            </div>
             </div>
 
             <div class="celeb container">
@@ -617,28 +634,30 @@
                     <h3>CELEB’S PICK</h3>
                     <p>셀럽들이 픽한 아이템들을 만나보세요.</p>
                 </div>
-                <div class="box-wrap clearfix">
-                    <div class="box">
+                <div class="swiper">
+                <div class="swiper-wrapper box-wrap">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/celeb01.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/celeb02.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/celeb03.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/celeb01.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
                 </div>
+            </div>
             </div>
 
             <div class="classic container">
@@ -649,28 +668,30 @@
                     <h3>IN CLASSIC</h3>
                     <p>간결한 선, 세련된 컬러, 사려 깊은 디테일로 새롭게 재해석하였습니다.</p>
                 </div>
-                <div class="box-wrap clearfix">
-                    <div class="box">
+                <div class="swiper">
+                <div class="swiper-wrapper box-wrap clearfix">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/classic_product1.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/classic_product2.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/classic_product3.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
-                    <div class="box">
+                    <div class="swiper-slide box">
                         <a href="#"><img src="images/classic_product1.jpg" alt=""></a>
                         <p class="tit">클래식 크롭 테일러드 자켓</p>
                         <p class="des">197,100원</p>
                     </div>
                 </div>
+            </div>
 
 
                 <div class="in-classic">
@@ -691,8 +712,9 @@
 
         <article class="review">
             <h2>Best Review</h2>
-            <div class="box-wrap clearfix">
-                <div class="reviewBox">
+            <div class="swiper">
+            <div class="swiper-wrapper box-wrap clearfix">
+                <div class="swiper-slide reviewBox">
                     <div class="img-box">
                         <img src="images/review_img.jpg" alt="">
                     </div>
@@ -728,7 +750,7 @@
                     </a>
                 </div>
 
-                <div class="reviewBox">
+                <div class="swiper-slide reviewBox">
                     <div class="img-box">
                         <img src="images/review_img.jpg" alt="">
                     </div>
@@ -764,7 +786,7 @@
                     </a>
                 </div>
 
-                <div class="reviewBox">
+                <div class="swiper-slide reviewBox">
                     <div class="img-box">
                         <img src="images/review_img.jpg" alt="">
                     </div>
@@ -800,6 +822,7 @@
                     </a>
                 </div>
             </div>
+        </div>
         </article>
 
     </section>
