@@ -663,6 +663,12 @@ section h2 {
     font-size: 3.8889vw;
     line-height: 6.6667vw;
     margin-bottom: 6.6667vw;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
 }
 .reviewBox .pro-box {
     background-color: #fff;
