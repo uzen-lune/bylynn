@@ -82,7 +82,7 @@ header .header_top .util .shopping_basket img {
 }
 
 .gnb .gnb_slide {
-    width: 1400px;
+    /* width: 1400px; */
 }
 
 .gnb .gnb_slide .swiper-container {
