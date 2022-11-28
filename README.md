@@ -10,7 +10,7 @@ https://uzen-lune.github.io/bylynn/lune/assets/html/main.html
 <div>*won </div>
 https://uzen-lune.github.io/bylynn/won/html/index.html
 <div>*stella</div>
-https://uzen-lune.github.io/bylynn/stella/index_mobile.html
+https://uzen-lune.github.io/bylynn/stella/html/index_mobile.html
 <hr>
 <h2><strong>전시</strong></h2>
 <div>*lune </div>
