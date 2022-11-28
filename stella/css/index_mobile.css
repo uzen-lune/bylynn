@@ -1028,11 +1028,11 @@ section .best_item h2 {
     display: block;
     width: 130%;
     height: 130%;
-    border: 1px solid #eee;
+   border: 1px solid #000;
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color1 .color1-2 {
@@ -1056,7 +1056,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color2 {
@@ -1094,7 +1094,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color2 .color2-2 {
@@ -1118,7 +1118,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color3 {
@@ -1156,7 +1156,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color3 .color3-2 {
@@ -1180,7 +1180,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color4 {
@@ -1218,7 +1218,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color4 .color4-2 {
@@ -1242,7 +1242,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color5 {
@@ -1280,7 +1280,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color5 .color5-2 {
@@ -1304,7 +1304,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color6 {
@@ -1342,7 +1342,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color6 .color6-2 {
@@ -1366,7 +1366,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color7 {
@@ -1404,7 +1404,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color7 .color7-2 {
@@ -1428,7 +1428,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color8 {
@@ -1466,7 +1466,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color8 .color8-2 {
@@ -1490,7 +1490,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color9 {
@@ -1528,7 +1528,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .color9 .color9-2 {
@@ -1552,7 +1552,7 @@ section .best_item h2 {
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
-    top: -3.0938px;
+    top: -3.7px;
 }
 
 .best_item_slide .swiper-slide .new_name {
