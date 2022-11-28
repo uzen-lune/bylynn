@@ -167,11 +167,4 @@ jQuery.extend( jQuery.easing,
  *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
  * OF THE POSSIBILITY OF SUCH DAMAGE. 
  *
- *///main swiper
-$(function() {
-    var swiper = new Swiper('.main-slide .swiper-container', {
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
-});
+ */
