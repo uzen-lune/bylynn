@@ -150,9 +150,18 @@ header .navigation_bar ul {
 
 header .navigation_bar ul li {
     width: 20%;
+    height: 25px;
     padding: 0 25px;
     box-sizing: border-box;
+    position: relative;
 }
+
+header .navigation_bar ul li a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 
 /* Main 슬라이드 */
@@ -1955,6 +1964,7 @@ footer h4 {
 }
 
 footer p {
+    color: #666;
     font-size: 13px;
     font-weight: 500;
     line-height: 2;
@@ -1962,6 +1972,7 @@ footer p {
 }
 
 footer .footer-menu li {
+    color: #111;
     float: left;
     margin-bottom: 8px;
 }
@@ -1982,10 +1993,12 @@ footer .footer-menu li a {
 
 footer .sns {
     margin-bottom: 16px;
+    display: flex;
 }
 
 footer .sns li {
-    float: left;
+    width: 44px;
+    height: 44px;
 }
 
 footer .sns li a {
