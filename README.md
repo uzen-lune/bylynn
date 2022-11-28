@@ -6,7 +6,7 @@ https://www.figma.com/file/pfezm3WQGKUicy7HVJP6pS/%ED%8D%BC%EB%B8%94%EB%A6%AC%EC
 <hr>
 <h2><strong>메인</strong></h2>
 <div>*lune </div>
-https://uzen-lune.github.io/bylynn/lune/assets/html/main.html
+https://uzen-lune.github.io/bylynn/lune/assets/html/main.html (완료)
 <div>*won </div>
 https://uzen-lune.github.io/bylynn/won/html/index.html
 <div>*stella</div>
