@@ -911,7 +911,7 @@ h4{
 .login-top {
     position:sticky;
     top:0;
-    padding:32px 0 24px;
+    padding:32px 0 20px;
     background:#fff;
     display:flex;
     justify-content: space-between;
@@ -947,6 +947,7 @@ h4{
 
 /* my-point */
 .layer-login .my-point {
+    padding-top:4px;
     display:flex;
     justify-content: space-between;
     align-items: center;
