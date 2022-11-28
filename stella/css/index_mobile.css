@@ -117,6 +117,10 @@ header .header_top .util .shopping_basket img {
     position: relative;
 }
 
+.gnb_slide .swiper-slide:hover a {
+    color: #111;
+}
+
 .gnb_slide .swiper-slide:hover a:after {
     content: "";
     display: block;
@@ -448,9 +452,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color1 .color1-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color1 .color1-2 {
@@ -460,9 +476,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color1 .color1-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color2 {
@@ -486,9 +514,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color2 .color2-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color2 .color2-2 {
@@ -498,9 +538,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color2 .color2-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color3 {
@@ -524,9 +576,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color3 .color3-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color3 .color3-2 {
@@ -536,9 +600,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color3 .color3-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color4 {
@@ -562,9 +638,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color4 .color4-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color4 .color4-2 {
@@ -574,9 +662,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color4 .color4-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color5 {
@@ -600,9 +700,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color5 .color5-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color5 .color5-2 {
@@ -612,9 +724,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color5 .color5-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color6 {
@@ -638,9 +762,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color6 .color6-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .color6 .color6-2 {
@@ -650,9 +786,21 @@ section .today_new h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.new_item_slide .swiper-slide .color6 .color6-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
 }
 
 .new_item_slide .swiper-slide .new_name {
@@ -870,9 +1018,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color1 .color1-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color1 .color1-2 {
@@ -882,9 +1042,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color1 .color1-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color2 {
@@ -908,9 +1080,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color2 .color2-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color2 .color2-2 {
@@ -920,9 +1104,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color2 .color2-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color3 {
@@ -946,9 +1142,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color3 .color3-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color3 .color3-2 {
@@ -958,9 +1166,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color3 .color3-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color4 {
@@ -984,9 +1204,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color4 .color4-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color4 .color4-2 {
@@ -996,9 +1228,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color4 .color4-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color5 {
@@ -1022,9 +1266,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color5 .color5-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color5 .color5-2 {
@@ -1034,9 +1290,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color5 .color5-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color6 {
@@ -1060,9 +1328,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color6 .color6-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color6 .color6-2 {
@@ -1072,9 +1352,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color6 .color6-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color7 {
@@ -1098,9 +1390,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color7 .color7-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color7 .color7-2 {
@@ -1110,9 +1414,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color7 .color7-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color8 {
@@ -1136,9 +1452,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color8 .color8-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color8 .color8-2 {
@@ -1148,9 +1476,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color8 .color8-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color9 {
@@ -1174,9 +1514,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #000;
     margin-left: 2px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color9 .color9-1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .color9 .color9-2 {
@@ -1186,9 +1538,21 @@ section .best_item h2 {
     border: 3px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    outline: 1px solid #eee;
     margin-left: 8px;
     font-size: 0;
+    position: relative;
+}
+
+.best_item_slide .swiper-slide .color9 .color9-2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.0938px;
 }
 
 .best_item_slide .swiper-slide .new_name {
@@ -1415,73 +1779,67 @@ section .banner .banner_txt p {
 }
 
 
-
-
-
-
-
-
-
 /* Best Review */
 section .best_review {
-    margin-left: 20px;
     margin-bottom: 60px;
 }
 
 section .best_review h2 {
     font-weight: 500;
+    margin-left: 20px;
     margin-bottom: 16px;
 }
 
 .best_review .review_slide {
-    width: 100%;
+    width: auto;
     overflow: hidden;
 }
 
-.best_review .review_slide .review_wrap {
-    width: 668px;
-}
-
-.best_review .review_slide .review_wrap .review_box {
+.best_review .review_slide .swiper-slide {
     width: 320px;
     float: left;
     background-color: #eee;
 }
 
-.review_wrap .review_box ~ .review_box {
+.best_review .review_slide .swiper-slide ~ .swiper-slide {
     margin-left: 8px;
 }
 
-.review_wrap .review_box:last-child {
+.best_review .review_slide .swiper-slide:first-child {
+    margin-left: 20px;
+}
+
+.best_review .review_slide .swiper-slide:last-child {
     margin-right: 20px;
 }
 
-.best_review .review_slide .review_wrap .review_box > img {
+.best_review .review_slide .swiper-slide > img {
     padding: 32px 24px 16px;
+    box-sizing: border-box;
 }
 
-.best_review .review_slide .review_wrap .review_box .mark {
+.best_review .review_slide .swiper-slide .mark {
     margin-left: 20px;
     margin-bottom: 14px;
 }
 
-.review_box .mark:after {
+.review_slide .swiper-slide .mark:after {
     content: "";
     display: block;
     clear: both;
 }
 
-.review_box .mark i {
+.review_slide .swiper-slide .mark i {
     float: left;
 }
 
-.review_box .mark p {
+.review_slide .swiper-slide .mark p {
     float: left;
     margin-left: 12px;
     font-weight: 500;
 }
 
-.best_review .review_slide .review_wrap .review_box > p {
+.best_review .review_slide .swiper-slide > p {
     margin: 0 20px;
     font-size: 14px;
     letter-spacing: -1.2px;
@@ -1495,18 +1853,18 @@ section .best_review h2 {
     -webkit-box-orient: vertical;
 }
 
-.best_review .review_box .review_product {
+.best_review .review_slide .swiper-slide .review_product {
     margin: 24px 24px 32px;
     background-color: #fff;
     position: relative;
 }
 
-.review_box .review_product img {
+.review_slide .swiper-slide .review_product img {
     display: block;
     padding: 16px;
 }
 
-.review_box .review_product .product_info {
+.review_slide .swiper-slide .review_product .product_info {
     position: absolute;
     left: 100px;
     top: 10px;
@@ -1515,7 +1873,7 @@ section .best_review h2 {
     line-height: 1.8;
 }
 
-.review_box .review_product .price {
+.review_slide .swiper-slide .review_product .price {
     font-size: 16px;
     font-weight: 700;
 }
