@@ -1,5 +1,5 @@
 
-/* maint.css */
+/* main.css */
 
 /* main */
 .sec-main{
@@ -218,26 +218,38 @@
     border:1px solid #333;
     background:#333333;
 }
-
-.main-prod-type1 {
-    overflow-x: scroll;
+.main-prod-type1 ul {
+    overflow-x: auto;
     overflow-y: hidden;
-    padding:0 20px;
+    white-space: nowrap;
+    font-size: 0;
+    padding-left: 20px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
-.main-prod-type1::-webkit-scrollbar {
+.main-prod-type1 ul::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
-.main-prod-type1 ul {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-}
 .main-prod-type1 ul li {
-    width:156px;
+    width:calc(50% - 8px);
     display: inline-block;
     margin-right:8px;
+}
+.main-prod-type1 ul li .item {
+    position:relative;
+}
+.main-prod-type1 ul li .item .btn-like {
+    position:absolute;
+    top:8px;
+    right:8px;
+    width:24px;
+    height:24px;
+    font-size:0;
+    color:#fff;
+    background:url(../../assets/images/common/btn-like.svg) no-repeat;
 }
 .main-prod-type1 .item .thumb img {
     width:100%;
@@ -276,6 +288,7 @@
 }
 .main-prod-type1 .info {
     padding-top:12px;
+    white-space: initial;
     
 }
 .main-prod-type1 .info a {
@@ -463,23 +476,25 @@
 }
 
 .main-prod-type3 {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding:0 20px;
     margin-bottom:48px;
+}
+.main-prod-type3 ul {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    padding-left: 20px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
-.main-prod-type3::-webkit-scrollbar {
+.main-prod-type3 ul::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
-.main-prod-type3 ul {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-}
 .main-prod-type3 ul li {
-    width:156px;
+    width:calc(33.33% - 8px);
     display: inline-block;
     margin-right:8px;
 }
@@ -520,6 +535,7 @@
 }
 .main-prod-type3 .info {
     padding-top:12px;
+    white-space: initial;
     
 }
 .main-prod-type3 .info a {

@@ -1,4 +1,4 @@
-/* css 수정 - v1.0.2 - 2022-11-28 */@charset "utf-8";
+/* BYLYNN SHOP - v1.0.3 - 2022-11-28 */@charset "utf-8";
 /* reset */
 
 body,
@@ -905,7 +905,42 @@ h4{
 		-webkit-transform: translateY(2px);
 	}
 }
-/* main */
+.layer-login {
+    padding:0 20px;
+}
+.login-top {
+    padding:32px 0 24px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-top .member-name {
+    font-size:18px;
+    color:#111;
+    font-weight: 500;
+}
+.login-top .member-util {
+}
+.login-top .member-util button {
+    width:24px;
+    height:24px;
+    margin-left:12px;
+    font-size:0;
+    color:#fff;
+}
+.login-top .member-util .btn-search {
+    background:url(../../assets/images/common/btn-search.svg) center center no-repeat;
+}
+.login-top .member-util .btn-like {
+    background:url(../../assets/images/common/btn-like.svg) center center no-repeat;
+}
+.login-top .member-util .btn-cart {
+    background:url(../../assets/images/common/btn-cart.svg) center center no-repeat;
+}
+.login-top .member-util .btn-close {
+    margin-left:16px;
+    background:url(../../assets/images/common/btn-close.svg) center center no-repeat;
+}/* main */
 .sec-main{
 	padding:65px 30px 30px;
 }
@@ -1122,26 +1157,38 @@ h4{
     border:1px solid #333;
     background:#333333;
 }
-
-.main-prod-type1 {
-    overflow-x: scroll;
+.main-prod-type1 ul {
+    overflow-x: auto;
     overflow-y: hidden;
-    padding:0 20px;
+    white-space: nowrap;
+    font-size: 0;
+    padding-left: 20px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
-.main-prod-type1::-webkit-scrollbar {
+.main-prod-type1 ul::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
-.main-prod-type1 ul {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-}
 .main-prod-type1 ul li {
-    width:156px;
+    width:calc(50% - 8px);
     display: inline-block;
     margin-right:8px;
+}
+.main-prod-type1 ul li .item {
+    position:relative;
+}
+.main-prod-type1 ul li .item .btn-like {
+    position:absolute;
+    top:8px;
+    right:8px;
+    width:24px;
+    height:24px;
+    font-size:0;
+    color:#fff;
+    background:url(../../assets/images/common/btn-like.svg) no-repeat;
 }
 .main-prod-type1 .item .thumb img {
     width:100%;
@@ -1180,6 +1227,7 @@ h4{
 }
 .main-prod-type1 .info {
     padding-top:12px;
+    white-space: initial;
     
 }
 .main-prod-type1 .info a {
@@ -1367,23 +1415,25 @@ h4{
 }
 
 .main-prod-type3 {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding:0 20px;
     margin-bottom:48px;
+}
+.main-prod-type3 ul {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    padding-left: 20px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
-.main-prod-type3::-webkit-scrollbar {
+.main-prod-type3 ul::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
-.main-prod-type3 ul {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-}
 .main-prod-type3 ul li {
-    width:156px;
+    width:calc(33.33% - 8px);
     display: inline-block;
     margin-right:8px;
 }
@@ -1424,6 +1474,7 @@ h4{
 }
 .main-prod-type3 .info {
     padding-top:12px;
+    white-space: initial;
     
 }
 .main-prod-type3 .info a {
