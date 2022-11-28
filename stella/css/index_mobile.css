@@ -149,10 +149,19 @@ header .navigation_bar ul {
 }
 
 header .navigation_bar ul li {
-    float: left;
+    width: 20%;
+    height: 25px;
     padding: 0 25px;
     box-sizing: border-box;
+    position: relative;
 }
+
+header .navigation_bar ul li a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 
 /* Main 슬라이드 */
@@ -240,15 +249,14 @@ section .hot_keyword {
     overflow: hidden;
 }
 
-
 .hot_keyword .keyword_slide .swiper-container .swiper-wrapper .swiper-slide {
     width: auto;
     height: 100%;
 }
 
 .hot_keyword .keyword_slide .swiper-container .swiper-wrapper .swiper-slide img {
-    width: 100%;
-    height: 100%;
+    width: 120px;
+    height: 120px;
 }
 
 .hot_keyword .keyword_slide .swiper-wrapper .swiper-slide ~ .swiper-slide {
@@ -306,8 +314,8 @@ section .exhibition h2 {
 }
 
 .exhibition_slide .swiper-wrapper .swiper-slide img {
-    width: 100%;
-    height: 100%;
+    width: 320px;
+    height: 320px;
 }
 
 .exhibition_slide .swiper-wrapper .swiper-slide:first-child {
@@ -422,13 +430,15 @@ section .today_new h2 {
 }
 
 .new_item_slide .swiper-container .swiper-wrapper .swiper-slide > a > img {
+    width: 156px;
+    height: 234px;
     margin-bottom: 12px;
 }
 
 .new_item_slide .swiper-container .swiper-wrapper .swiper-slide .keeping {
     position: absolute;
     right: 10px;
-    top: 11px;
+    top: 10px;
 }
 
 .new_item_slide .swiper-slide .color1 {
@@ -913,7 +923,8 @@ section .this_week h2 {
 }
 
 .this_week .this_week_slide .swiper-wrapper .swiper-slide img {
-    display: block;
+    width: 320px;
+    height: 480px;
 }
 
 .this_week .this_week_slide .swiper-wrapper .swiper-slide .this_week_txt {
@@ -966,6 +977,11 @@ section .best_item h2 {
     position: relative;
 }
 
+.best_item_slide .swiper-slide > a > img {
+    width: 156px;
+    height: 234px;
+}
+
 .best_item_slide .swiper-slide ~ .swiper-slide {
     margin-left: 8px;
 }
@@ -985,7 +1001,7 @@ section .best_item h2 {
 .best_item_slide .swiper-slide .keeping {
     position: absolute;
     right: 10px;
-    top: 11px;
+    top: 10px;
 }
 
 .best_item_slide .swiper-slide .num {
@@ -1028,7 +1044,7 @@ section .best_item h2 {
     display: block;
     width: 130%;
     height: 130%;
-   border: 1px solid #000;
+    border: 1px solid #000;
     border-radius: 50%;
     position: absolute;
     left: -3.7px;
@@ -1640,6 +1656,11 @@ section .style_trend .trend1 > p {
     float: left;
 }
 
+.style_trend .trend1 .list_slide .swiper-slide img {
+    width: 101px;
+    height: 152px;
+}
+
 .style_trend .trend1 .list_slide .swiper-slide ~ .swiper-slide {
     margin-left: 8px;
 }
@@ -1683,6 +1704,11 @@ section .style_trend .trend2 > p {
     float: left;
 }
 
+.style_trend .trend2 .list_slide .swiper-slide img {
+    width: 101px;
+    height: 152px;
+}
+
 .style_trend .trend2 .list_slide .swiper-slide ~ .swiper-slide {
     margin-left: 8px;
 }
@@ -1714,12 +1740,18 @@ section .style_trend .trend3 > img {
 }
 
 section .style_trend .trend3 > p {
-    margin-left: 20px;
+    margin: 0 20px;
+    margin-bottom: 16px;
 }
 
 .style_trend .trend3 .list_slide .swiper-slide {
     width: auto;
     float: left;
+}
+
+.style_trend .trend3 .list_slide .swiper-slide img {
+    width: 101px;
+    height: 152px;
 }
 
 .style_trend .trend3 .list_slide .swiper-slide ~ .swiper-slide {
@@ -1814,8 +1846,9 @@ section .best_review h2 {
 }
 
 .best_review .review_slide .swiper-slide > img {
+    width: 272px;
+    height: 272px;
     padding: 32px 24px 16px;
-    box-sizing: border-box;
 }
 
 .best_review .review_slide .swiper-slide .mark {
@@ -1860,6 +1893,8 @@ section .best_review h2 {
 }
 
 .review_slide .swiper-slide .review_product img {
+    width: 71px;
+    height: 107px;
     display: block;
     padding: 16px;
 }
@@ -1911,7 +1946,7 @@ section .totop {
 
 section .totop a img {
     display: block;
-    padding: 9.5px 12.5px;
+    padding: 8px;
 }
 
 
@@ -1929,6 +1964,7 @@ footer h4 {
 }
 
 footer p {
+    color: #666;
     font-size: 13px;
     font-weight: 500;
     line-height: 2;
@@ -1936,6 +1972,7 @@ footer p {
 }
 
 footer .footer-menu li {
+    color: #111;
     float: left;
     margin-bottom: 8px;
 }
@@ -1956,10 +1993,12 @@ footer .footer-menu li a {
 
 footer .sns {
     margin-bottom: 16px;
+    display: flex;
 }
 
 footer .sns li {
-    float: left;
+    width: 44px;
+    height: 44px;
 }
 
 footer .sns li a {
