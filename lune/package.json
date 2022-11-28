@@ -1,6 +1,6 @@
 {
-  "name": "css 수정",
-  "version": "1.0.2",
+  "name": "BYLYNN SHOP 퍼블리싱",
+  "version": "1.0.3",
   "main": "index.js",
   "dependencies": {
     "gulp-clean": "^0.4.0",
