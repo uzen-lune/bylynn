@@ -18,4 +18,4 @@ https://uzen-lune.github.io/bylynn/stella/index_mobile.html
 <div>*won </div>
 <!-- https://uzen-lune.github.io/bylynn/won/html/index.html -->
 <div>*stella</div>
-<!-- https://uzen-lune.github.io/bylynn/stella/index_mobile.html -->
+<!-- https://uzen-lune.github.io/bylynn/stella/html/index_mobile.html -->
