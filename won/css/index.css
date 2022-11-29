@@ -27,7 +27,9 @@ body {
     font-family: 'Pretendard';
 
 }
-
+p {
+    font-size: 4.4444vw;
+}
 /************header*****************/
 /* header {} */
 
@@ -54,10 +56,12 @@ body {
 
 }
 
-/* .hTop .util li {}
+.hTop .util li {
+    width: 6.6667vw;
+}
 
 .hTop .util li a {}
- */
+
 .hTop .util li a img {display: block;
 width: 100%;}
 
@@ -96,6 +100,7 @@ width: 100%;}
     color: #999;
     font-weight: 500;
     position: relative;
+    font-size: 4.4444vw;
 }
 .gnb ul li a::after {
     content: "";
@@ -259,13 +264,23 @@ section h2 {
 }
 /*******************trending*******************/
 .trending {
-    margin-left: 5.5556vw;
     margin-bottom: 16.6667vw;
 }
-/* .trending .trend-slide{}
-.trending .trend-slide .swiper-wrapper{} */
+.trending h2 {
+    margin-left: 5.5556vw;
+}
+/* .trending .trend-slide{} */
+.trending .trend-slide .swiper-wrapper{
+    margin-left: 5.5556vw;
+}
 .trending .trend-slide .swiper-wrapper .swiper-slide{
+    width: 88.8889vw;
+    height: 88.8889vw;
+    margin-right: 2.2222vw;
     position: relative;
+}
+.trending .trend-slide .swiper-wrapper .swiper-slide:last-child {
+    margin-right: 11.1111vw;
 }
 .trend-slide .swiper-wrapper .swiper-slide a{
     width: 88.8889vw;
@@ -323,8 +338,17 @@ section h2 {
 }
 .today .today-navi ul li a{
     padding: 3.7500vw 6.6667vw;
+    background-color: #fff;
+    color: #999;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 3.8889vw;
+}
+.today .today-navi ul .active a {
     background-color: #111;
     color: #fff;
+    border-color: #111;
 }
 .pdt2 .swiper-wrapper {
     margin-left: 5.5556vw;
@@ -557,6 +581,7 @@ section h2 {
    /*  float: left; */
     width: 28.0556vw;
     margin-right: 2.2222vw;
+    word-break: keep-all;
 
 }
 
@@ -673,8 +698,13 @@ section h2 {
     display: flex;
     
 }
-/* .reviewBox .sat-star li {
-} */
+.reviewBox .sat-star li {
+    width: 4.7222vw;
+    height: 4.4444vw;
+}
+.reviewBox .sat-star li img {
+    width: 100%;
+}
 .reviewBox .sat-score {
     /* float: left; */
     font-weight: 500;
@@ -701,8 +731,9 @@ section h2 {
     display: flex;
     /*box-sizing: border-box;*/
 }
-/* .reviewBox .pro-box .thumb-img {  
-} */
+.reviewBox .pro-box .thumb-img {  
+    width: 19.7222vw;
+}
 .reviewBox .pro-box .thumb-img img {
     display: block;
     width: 100%;
