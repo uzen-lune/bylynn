@@ -10,22 +10,22 @@ https://uzen-lune.github.io/bylynn/lune/assets/html/main.html (완료)
 <div>*won </div>
 https://uzen-lune.github.io/bylynn/won/html/index.html
 <div>*stella</div>
-https://uzen-lune.github.io/bylynn/stella/html/index_mobile.html (완료)
+https://uzen-lune.github.io/bylynn/stella/html/index_mobile.html
 
 <hr>
 <h2><strong>Navigation Layer_로그인후</strong></h2>
 <div>*lune </div>
-https://uzen-lune.github.io/bylynn/lune/assets/html/login.html (작업중)
+https://uzen-lune.github.io/bylynn/lune/assets/html/login.html (완료)
 <div>*won </div>
-<!-- https://uzen-lune.github.io/bylynn/won/html/index.html -->
+<!-- https://uzen-lune.github.io/bylynn/won/html/.html -->
 <div>*stella</div>
 <!-- https://uzen-lune.github.io/bylynn/stella/html/navigation_drawer_layer_mobile (작업중) -->
 
 <hr>
 <h2><strong>전시</strong></h2>
 <div>*lune </div>
-<!-- https://uzen-lune.github.io/bylynn/lune/assets/html/main.html -->
+https://uzen-lune.github.io/bylynn/lune/assets/html/display.html (필터 제외 완료)
 <div>*won </div>
-<!-- https://uzen-lune.github.io/bylynn/won/html/index.html -->
+<!-- https://uzen-lune.github.io/bylynn/won/html/.html -->
 <div>*stella</div>
-<!-- https://uzen-lune.github.io/bylynn/stella/html/index_mobile.html -->
+<!-- https://uzen-lune.github.io/bylynn/stella/html/.html -->
