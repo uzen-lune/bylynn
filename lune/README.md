@@ -13,4 +13,4 @@ https://uzen-lune.github.io/bylynn/lune/assets/html/display.html (완료)
 
 <hr>
 <h2><strong>필터</strong></h2>
-https://uzen-lune.github.io/bylynn/lune/assets/html/filter.html (작업중)
+https://uzen-lune.github.io/bylynn/lune/assets/html/display-filter.html (작업중)
