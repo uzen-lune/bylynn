@@ -112,10 +112,10 @@ width: 100%;}
     bottom: 0;
     left: 3.3333vw;
 }
-.gnb ul li:first-child a {
+.gnb ul .active a {
     color: #111;
 }
-.gnb ul li:first-child a::after {
+.gnb ul .active a::after {
     display: block;
 }
 
