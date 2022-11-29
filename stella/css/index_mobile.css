@@ -163,7 +163,6 @@ header .navigation_bar ul li a {
 }
 
 
-
 /* Main 슬라이드 */
 main {
     position: relative;
@@ -1625,7 +1624,7 @@ section .style_trend h3 {
 
 section .style_trend p {
     font-size: 14px;
-    letter-spacing: -1.8px;
+    letter-spacing: -1.4px;
     line-height: 20px;
     margin-bottom: 16px;
 }
@@ -1648,6 +1647,7 @@ section .style_trend .trend1 > img {
 }
 
 section .style_trend .trend1 > p {
+    color: #666;
     margin-left: 20px;
 }
 
@@ -1696,6 +1696,7 @@ section .style_trend .trend2 > img {
 }
 
 section .style_trend .trend2 > p {
+    color: #666;
     margin-left: 20px;
 }
 
@@ -1740,6 +1741,8 @@ section .style_trend .trend3 > img {
 }
 
 section .style_trend .trend3 > p {
+    color: #666;
+    letter-spacing: -1.5px;
     margin: 0 20px;
     margin-bottom: 16px;
 }
