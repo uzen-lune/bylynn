@@ -1,2 +1,0 @@
-# bylynn
-bylynn shop
