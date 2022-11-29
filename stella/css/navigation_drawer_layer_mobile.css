@@ -122,6 +122,10 @@ h6 {
 /* category-all */
 .category-all {}
 
+.category-all a {
+    color: #111;
+}
+
 .category-all h2 {
     font-size: 24px;
     font-weight: 500;
