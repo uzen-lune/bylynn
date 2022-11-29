@@ -1,15 +1,5 @@
 /* ui.js */
 
-<<<<<<< HEAD
-//main swiper
-$(function() {
-    var swiper = new Swiper('.main-slide .swiper-container', {
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
-});
-=======
 
 $( document ).ready(function() {
     //브라우저 체크
@@ -29,10 +19,13 @@ $( document ).ready(function() {
         //모바일 브라우저
         console.log('mobile');
         alert('mobile');
+        $('body').addClass('mobile');
+        $('body').removeClass('pc');
     } else {
         //PC 브라우저
         console.log('pc');
+        $('body').addClass('pc');
+        $('body').removeClass('mobile');
     }
 });
 
->>>>>>> 574b5a546cc3857260de12e16b36222c3b57d638
