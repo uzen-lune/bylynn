@@ -19,7 +19,6 @@
   <link rel="stylesheet" type="text/css" href="../css/styles.min.css">
   <script type="text/javascript" src="../js/built.min.js"></script>
   <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="../js/src/ui.js"></script>
 </head>
 
 <body>
@@ -184,7 +183,27 @@
 
         <!-- display-filter -->
         <section class="display-filter">
-            <h2>필터</h2>
+            <ul>
+                <li>
+                    <button type="button" class="btn-sort">
+                        <span>신상품순</span>
+                    </button>
+                    <div class="sort-list"> <!-- 선택시 .active -->
+                        <ul>
+                            <li><a href="#none">판매순</a></li>
+                            <li><a href="#none">할인율순</a></li>
+                            <li><a href="#none">낮은가격순</a></li>
+                            <li><a href="#none">높은가격순</a></li>
+                            <li><a href="#none">리뷰순</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="btn-filter">
+                        <span>필터</span>
+                    </button>
+                </li>
+            </ul>
         </section>
         <!-- //display-filter -->
  

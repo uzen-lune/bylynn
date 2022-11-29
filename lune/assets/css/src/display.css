@@ -147,6 +147,78 @@
     max-height: 100%;
 }
 
+/* display-filter */
+.display-filter {
+    padding:0 20px 4px;
+}
+
+.display-filter ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.display-filter ul li {
+    position:relative;
+    width:calc(50% - 4px);
+}
+.display-filter .btn-sort {
+    display:block;
+    width:100%;
+    height:48px;
+    padding:15px;
+    text-align:center;
+    font-size:14px;
+    font-weight: 500;
+    color:#111;
+    border:1px solid #333;
+}
+.display-filter .btn-sort span {
+    padding-right:17px;
+    background:url(../../assets/images/display/icon-sort.svg) right center no-repeat;
+    background-size:9px auto;
+}
+.display-filter ul li .sort-list {
+    display:none;
+    position:absolute;
+    top:47px;
+    width:100%;
+    border:1px solid #111;
+    border-top:none;
+    background:#eee;
+    box-sizing: border-box;
+    z-index: 9;
+}
+.display-filter ul li .sort-list.active {
+    display: block;
+}
+
+.display-filter ul li .sort-list li {
+    width:100%;
+}
+.display-filter ul li .sort-list li a {
+    display:block;
+    padding:10px 0;
+    text-align:center;
+    font-size:13px;
+    color:#333;
+}
+.display-filter .btn-filter {
+    display:block;
+    width:100%;
+    height:48px;
+    padding:15px;
+    text-align:center;
+    font-size:14px;
+    font-weight: 500;
+    color:#111;
+    border:1px solid #333;
+}
+.display-filter .btn-filter span {
+    padding-left:30px;
+    background:url(../../assets/images/display/icon-filter.svg) 0 center no-repeat;
+    background-size:20px auto;
+}
+
 /* display-prod */
 .display-prod ul {
     padding: 20px;
@@ -260,4 +332,49 @@
     line-height:17px;
     color:#111;
     border:1px solid #111;
+}
+
+
+/* layer-filter */
+.layer-filter {
+
+}
+.filter-top {
+    position:sticky;
+    top:0;
+    padding:34px 20px 20px;
+    background:#fff;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-top .filter-title {
+    font-size:22px;
+    color:#111;
+    font-weight: 500;
+}
+.filter-top .btn-filter {
+    width:24px;
+    height:24px;
+    font-size:0;
+    color:#fff;
+    background:url(../../assets/images/display/btn-close.svg) no-repeat;
+}
+.filter-buttons {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    background:#fff;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.filter-buttons button {
+    width:calc(50% - 4px);
+}
+
+.filter-contents {
+    padding:0 0 100px;
 }

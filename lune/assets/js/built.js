@@ -168,6 +168,8 @@ jQuery.extend( jQuery.easing,
  * OF THE POSSIBILITY OF SUCH DAMAGE. 
  *
  */$( document ).ready(function() {
+
+
     //브라우저 체크
     function isMobileYn(){
         var filter = "win16|win32|win64|mac|macintel";
@@ -193,5 +195,22 @@ jQuery.extend( jQuery.easing,
         $('body').addClass('pc');
         $('body').removeClass('mobile');
     }
+
+
+    //display 필터
+    var $dSort = $('.display-filter .btn-sort'),
+        $dSortList = $('.display-filter .sort-list'),
+        $dSortItem = $('.display-filter.sort-list.active li a');
+
+        $dSort.on('click', function() {
+            $dSortList.toggleClass('active');
+        });
+        $dSortItem.on('click', function() {
+            console.log("xxx");
+            $dSortList.removeClass('active');
+        });
+
+
 });
+
 

@@ -268,8 +268,20 @@ h4{
 
 /*  */
 /* button */
-.btn-small{
-
+.btn-white {
+  display:block;
+  height:48px;
+  font-size:14px;
+  color:#111;
+  border:1px solid #333;
+}
+.btn-black {
+  display:block;
+  height:48px;
+  font-size:14px;
+  color:#fff;
+  border:1px solid #111;
+  background:#111;
 }
 
 /* table */
