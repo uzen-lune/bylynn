@@ -20,7 +20,6 @@ $( document ).ready(function() {
     if (isMobileYn()) {
         //모바일 브라우저
         console.log('mobile');
-        alert('mobile');
         $('body').addClass('mobile');
         $('body').removeClass('pc');
     } else {
@@ -44,6 +43,34 @@ $( document ).ready(function() {
             $dSortList.removeClass('active');
         });
 
+
+    //로그인 상위 카테고리
+    $(".category-parent").click(function(){
+        if($(this).hasClass("open")) {
+            $(this).addClass("close").removeClass("open");
+            $(this).next('.depth1').slideUp();
+          } else {
+            $(this).addClass("open").removeClass("close");
+            $(this).next('.depth1').slideDown();
+        }
+    });
+
+    //로그인 하위 카테고리 아코디언
+    var acc = document.getElementsByClassName("category-link");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            console.log("click");
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+    }
 
 });
 
