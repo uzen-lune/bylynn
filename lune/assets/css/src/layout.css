@@ -232,7 +232,7 @@
 	width:100%;
 	border-top:1px solid #eee;
 	background: #fff;
-	z-index:99;
+	z-index:100;
 }
 .actionbar-nav {
 	height:100%;
@@ -270,8 +270,92 @@
 	background:url(../../assets/images/common/action-my.svg) center center no-repeat;
 }
 .actionbar-nav li button .f-view {
-	background:url(../../assets/images/common/action-view.svg) center center no-repeat;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+	/* background:url(../../assets/images/common/action-view.svg) center center no-repeat; */
 }
+.actionbar-nav li button.active .f-like {
+	background:url(../../assets/images/common/action-like-active.svg) center center no-repeat;
+}
+.actionbar-nav li button.active .f-home {
+	background:url(../../assets/images/common/action-home-active.svg) center center no-repeat;
+}
+.actionbar-nav li button.active .f-my {
+	animation-name: actionMy;
+    animation-duration: 2s; 
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+}
+.actionbar-nav li button.active .f-view .action-view1 {
+	animation-name: actionView-1;
+    animation-duration: 2s; 
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+}
+.actionbar-nav li button.active .f-view .action-view2 {
+	animation-name: actionView-2;
+    animation-duration: 2s; 
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+}
+.actionbar-nav li button.active .f-view .action-view3 {
+	animation-name: actionView-3;
+    animation-duration: 2s; 
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+}
+
+@keyframes actionMy {
+    0% {
+		transform: rotate(-10deg);
+	}
+	30% {
+		transform: rotate(0);
+	}
+	60% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes actionView-1 {
+    0% {
+        transform:translateY(0);
+    }
+    30% {
+        transform:translateY(-20%);
+    }
+	100% {
+		transform:translateY(0);
+	}
+}
+@keyframes actionView-2 {
+    10% {
+        transform:translateY(0);
+    }
+    40% {
+        transform:translateY(-20%);
+    }
+	100% {
+		transform:translateY(0);
+	}
+}
+@keyframes actionView-3 {
+    20% {
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(-20%);
+    }
+	100% {
+		transform:translateY(0);
+	}
+}
+
 .actionbar-floating {
 	position:fixed;
 	bottom: 70px;

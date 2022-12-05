@@ -1,6 +1,6 @@
 
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12.5" cy="12" r="2" fill="black"/>
-                            <circle cx="4.5" cy="12" r="2" fill="black"/>
-                            <circle cx="20.5" cy="12" r="2" fill="black"/>
+                            <circle class="action-view1" cx="12.5" cy="12" r="2" fill="black"/>
+                            <circle class="action-view2" cx="4.5" cy="12" r="2" fill="black"/>
+                            <circle class="action-view3" cx="20.5" cy="12" r="2" fill="black"/>
                             </svg>

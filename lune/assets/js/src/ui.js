@@ -72,6 +72,18 @@ $( document ).ready(function() {
         });
     }
 
+    //actionbar
+    $('.actionbar-nav button').on('click', function() {
+        if ($(this).hasClass('active')) {
+            $('.actionbar-nav button').removeClass('active');
+            $(this).removeClass('active');
+        } else {
+            $('.actionbar-nav button').removeClass('active');
+            $(this).addClass('active');
+        }
+    })
+    
+
 });
 
 
