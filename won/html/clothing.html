@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clothing</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/clothing.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="hTop">
+            <h1 class="logo"><a href="index.html">logo</a></h1>
+            <ul class="util">
+                <li><a href="#"><img src="../images/search.svg" alt="검색하기"></a></li>
+                <li><a href="#"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
+            </ul>
+        </div>
+        <nav class="gnb">
+            <ul>
+                <li class="active g-home"><a href="#">홈</a></li>
+                <li><a href="#">의류</a></li>
+                <li><a href="#">가방</a></li>
+                <li><a href="#">신발</a></li>
+                <li><a href="#">악세사리</a></li>
+                <li><a href="#">골프/애슬래저</a></li>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">쇼핑의목적</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">기획전</a></li>
+                <li><a href="#">함께한스타</a></li>
+                <li><a href="#">에디토리얼</a></li>
+                <li><a href="#">바이린샵</a></li>
+                <li><a href="#">about 린컴퍼니</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            $('.gnb li').click(function() {
+                $(this).addClass('active');
+                $(this).siblings().removeClass();
+            });
+
+            $('.g-home')
+        </script>
+
+
+
+        <div class="bottom-menu">
+            <a href="mobile_gnb.html" class="hamburg"><img src="../images/Menu.png" alt="햄버거메뉴">
+            </a>
+            <a href="#" class="heart"><img src="../images/wish.svg" alt=하트""></a>
+            <a href="#" class="home"><img src="../images/home.svg" alt="홈"></a>
+            <a href="#" class="mypage"><img src="../images/mypage.svg" alt="마이페이지"></a>
+            <a href="#" class="more"><img src="../images/dot3.svg" alt="더보기"></a>
+        </div>
+
+
+    </header>
+    <aside>
+        <ul>
+            <li><a href="#"><img src="../images/chat.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/top.svg" alt=""></a></li>
+        </ul>
+    </aside>
+
+    <article>
+        <div class="displayTab">
+            <ul class="tabArea">
+                <li class="tabItem"><a href="#">전체</a></li>
+                <li class="tabItem active"><a href="#">아우터</a></li>
+                <li class="tabItem"><a href="#">원피스</a></li>
+                <li class="tabItem"><a href="#">블라우스/셔츠</a></li>
+                <li class="tabItem"><a href="#">스커트</a></li>
+                <li class="tabItem"><a href="#">팬츠</a></li>
+                <li class="tabItem"><a href="#">티셔츠</a></li>
+                <li class="tabItem"><a href="#">데님</a></li>
+                <li class="tabItem"><a href="#">니트</a></li>
+            </ul>
+        </div>
+
+        <section class="outer">
+            <h2>아우터</h2>
+            <div class="swiper main-img">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../images/clothing/KV.jpg" alt="">
+                        <div class="main-txt">
+                            <a href="#" class="tit">KENNETH LADY</a>
+                            <a href="#" class="emp">IN CLASSIC</a>
+                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/clothing/KV.jpg" alt="">
+                        <div class="main-txt">
+                            <a href="#" class="tit">KENNETH LADY</a>
+                            <a href="#" class="emp">IN CLASSIC</a>
+                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/clothing/KV.jpg" alt="">
+                        <div class="main-txt">
+                            <a href="#" class="tit">KENNETH LADY</a>
+                            <a href="#" class="emp">IN CLASSIC</a>
+                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/clothing/KV.jpg" alt="">
+                        <div class="main-txt">
+                            <a href="#" class="tit">KENNETH LADY</a>
+                            <a href="#" class="emp">IN CLASSIC</a>
+                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/clothing/KV.jpg" alt="">
+                        <div class="main-txt">
+                            <a href="#" class="tit">KENNETH LADY</a>
+                            <a href="#" class="emp">IN CLASSIC</a>
+                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <script>
+                    var swiper = new Swiper(".main-img", {
+                        pagination: {
+                            el: ".swiper-pagination",
+                            draggable: true,
+                            hide: true,
+                            clickable: true,
+                        },
+                    });
+                </script>
+            </div>
+            <div class="brand">
+                <h3>브랜드</h3>
+                <div class="brandTab">
+                    <ul class="slide-wrap">
+                        <li class="slide"><a href="#"></a></li>
+                        <li class="slide"><a href="#"></a></li>
+                        <li class="slide"><a href="#"></a></li>
+                        <li class="slide"><a href="#"></a></li>
+                        <li class="slide"><a href="#"></a></li>
+                        <li class="slide"><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="align">
+                    <ul>
+                        <li class="viewSelect"><a href="#"><span>신상품순</span></a></li>
+                        <li class="filter"><a href="#"><span>필터</span></a></li>
+                    </ul>
+                </div>
+                <ul class="box-wrap">
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth01.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth02.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth03.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth04.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth05.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth06.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth07.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth08.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth09.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="img-box">
+                            <img src="../images/clothing/cloth10.jpg" alt="">
+                            <a href="#" class="wish">좋아요</a>
+                        </div>
+                        <ul class="color-select">
+                            <li class="sel-brown"><a href="#"><span></span></a></li>
+                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p-brand">LYNN</p>
+                            <p class="p-name">클래식 크롭 테일러드 자켓</p>
+                            <p class="p-price">197,100원<span>219,000원</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </section>
+
+
+    </article>
+
+
+
+    <!-- footer -->
+
+
+</body></html>
