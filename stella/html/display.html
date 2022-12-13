@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/display.css">
     <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
-    <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
@@ -99,7 +98,7 @@
 
             <!-- Initialize Swiper -->
             <script>
-                var swiper = new Swiper('.tag_slide .swiper-container', {
+                var swiper = new Swiper('.clothing_category_slide .swiper-container', {
                     slidesPerView: "auto",
                     scrollbar: {
                         el: '.swiper-scrollbar',
@@ -109,6 +108,96 @@
                 });
             </script>
         </div>
+
+        <!--outer-->
+        <section class="outer">
+            <h2>아우터</h2>
+            <!-- Swiper -->
+            <div class="swiper outer_slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper clearfix">
+                        <div class="swiper-slide"><a href="#none">
+                                <img src="../images/outer_banner.png" alt="">
+                                <div class="txt">
+                                    <h5>KENNETH LADY</h5>
+                                    <h3>IN CLASSIC</h3>
+                                    <h4>2022 winter collection</h4>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none">
+                                <img src="../images/outer_banner.png" alt="">
+                                <div class="txt">
+                                    <h5>KENNETH LADY</h5>
+                                    <h3>IN CLASSIC</h3>
+                                    <h4>2022 winter collection</h4>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none">
+                                <img src="../images/outer_banner.png" alt="">
+                                <div class="txt">
+                                    <h5>KENNETH LADY</h5>
+                                    <h3>IN CLASSIC</h3>
+                                    <h4>2022 winter collection</h4>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none">
+                                <img src="../images/outer_banner.png" alt="">
+                                <div class="txt">
+                                    <h5>KENNETH LADY</h5>
+                                    <h3>IN CLASSIC</h3>
+                                    <h4>2022 winter collection</h4>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none">
+                                <img src="../images/outer_banner.png" alt="">
+                                <div class="txt">
+                                    <h5>KENNETH LADY</h5>
+                                    <h3>IN CLASSIC</h3>
+                                    <h4>2022 winter collection</h4>
+                                </div>
+                            </a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper('.outer_slide .swiper-container', {
+                        slidesPerView: "auto",
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+                </script>
+            </div>
+
+            <h3>브랜드</h3>
+            <div class="swiper outer_brand_slide">
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="#none"><img src="../images/outer_brand1.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#none"><img src="../images/outer_brand2.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#none"><img src="../images/outer_brand1.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#none"><img src="../images/outer_brand2.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#none"><img src="../images/outer_brand1.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#none"><img src="../images/outer_brand2.png" alt=""></a></li>
+                    </ul>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper('.outer_brand_slide .swiper-container', {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            draggable: true,
+                            hide: true,
+                        },
+                    });
+                </script>
+            </div>
+        </section>
 
     </article>
 
