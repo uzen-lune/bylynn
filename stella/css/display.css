@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+
+.clothing_category_slide {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.clothing_category_slide .swiper-container .swiper-wrapper .swiper-slide {
+    width: auto;
+}
+
+.clothing_category_slide .swiper-container .swiper-wrapper .swiper-slide ~ .swiper-slide {
+    margin-left: 8px;
+}
+
+.clothing_category_slide .swiper-container .swiper-wrapper .swiper-slide:first-child {
+    margin-left: 20px;
+}
+
+.clothing_category_slide .swiper-container .swiper-wrapper .swiper-slide:last-child {
+    margin-right: 20px;
+}
+
+.clothing_category_slide .swiper-container .swiper-wrapper .swiper-slide a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 12px 24px;
+    float: left;
+}
+
+.clothing_category_slide .swiper-container .swiper-wrapper .swiper-slide a:hover {
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+}
+

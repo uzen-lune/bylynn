@@ -12,43 +12,31 @@
     <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <script>
-        /*$(document).ready(function() {
-            $('.depth1').click(function() {
-                $('.all,.depth2').stop().slideToggle(100);
-                $('.depth3').stop().slideUp(100);
-            });
-
-            $('.depth2').click(function() {
-                $('.depth3').stop().slideToggle(100);
-            });
-        });*/
-
-
         $(document).ready(function() {
             $('.depth1').click(function() {
-                $(this).siblings('.detail-wrap').children('.all,.depth2').stop().slideToggle(100);
+                $(this).parent('li').children('.detail-wrap').stop().slideToggle(100);
+                $(this).parent('li').siblings().children('.detail-wrap').slideUp(100);
                 $('.depth3').stop().slideUp(100);
             });
 
             $('.depth2').click(function() {
-                /*$('.depth3').stop().slideToggle(100);*/
-                $(this).siblings('.depth3').stop().slideToggle(100);
+                $(this).parent('li').children('.depth3').stop().slideToggle(100);
             });
         });
     </script>
 </head>
 
 <body>
-    <!--Navigation_drawer_layer-->
-    <section>
+    <!--Navigation drawer layer-->
+    <article class="navi_layer">
         <div class="inner">
             <div class="navi-top clearfix">
                 <div class="member-name">회원명님</div>
                 <div class="member-util">
                     <ul>
-                        <li><a href="#"><img src="../images/search.svg" alt="검색"></a></li>
-                        <li><a href="#"><img src="../images/wish.svg" alt="찜"></a></li>
-                        <li><a href="#"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
+                        <li><a href="#none"><img src="../images/search.svg" alt="검색"></a></li>
+                        <li><a href="#none"><img src="../images/wish.svg" alt="찜"></a></li>
+                        <li><a href="#none"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
                         <li><a href="../html/index_mobile.html"><img src="../images/close.svg" alt="닫기"></a></li>
                     </ul>
                 </div>
@@ -152,41 +140,61 @@
                 <div class="category-wrap">
                     <ul>
                         <li>
-                            <a href="#" class="depth1">의류</a>
+                            <a href="#none" class="depth1">의류</a>
                             <div class="detail-wrap">
-                                <a href="#" class="all">전체</a>
-                                <a href="#" class="depth2">아우터</a>
-                                <ul class="depth3">
-                                    <li><a href="#">자켓</a></li>
-                                    <li><a href="#">코트</a></li>
-                                    <li><a href="#">점퍼</a></li>
-                                    <li><a href="#">패딩</a></li>
-                                    <li><a href="#">트렌치코트</a></li>
-                                    <li><a href="#">레더</a></li>
-                                    <li><a href="#">퍼</a></li>
-                                    <li><a href="#">후드집업</a></li>
-                                    <li><a href="#">핸드메이드</a></li>
+                                <ul>
+                                    <li>
+                                        <a href="#none" class="all">전체</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">아우터</a>
+                                        <ul class="depth3">
+                                            <li><a href="#none">자켓</a></li>
+                                            <li><a href="#none">코트</a></li>
+                                            <li><a href="#none">점퍼</a></li>
+                                            <li><a href="#none">패딩</a></li>
+                                            <li><a href="#none">트렌치코트</a></li>
+                                            <li><a href="#none">레더</a></li>
+                                            <li><a href="#none">퍼</a></li>
+                                            <li><a href="#none">후드집업</a></li>
+                                            <li><a href="#none">핸드메이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">원피스</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">블라우스/셔츠</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">스커트</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">팬츠</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">티셔츠</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">데님</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="depth2">니트</a>
+                                    </li>
                                 </ul>
-                                <a href="#" class="depth2">원피스</a>
-                                <a href="#" class="depth2">블라우스/셔츠</a>
-                                <a href="#" class="depth2">스커트</a>
-                                <a href="#" class="depth2">팬츠</a>
-                                <a href="#" class="depth2">티셔츠</a>
-                                <a href="#" class="depth2">데님</a>
-                                <a href="#" class="depth2">니트</a>
                             </div>
                         </li>
                         <li>
-                            <a href="#" class="depth1">가방</a>
+                            <a href="#none" class="depth1">가방</a>
                         </li>
                         <li>
-                            <a href="#" class="depth1">신발</a>
+                            <a href="#none" class="depth1">신발</a>
                         </li>
                         <li>
-                            <a href="#" class="depth1">악세서리</a>
+                            <a href="#none" class="depth1">악세서리</a>
                         </li>
                         <li>
-                            <a href="#" class="depth1">골프/애슬레저</a>
+                            <a href="#none" class="depth1">골프/애슬레저</a>
                         </li>
                     </ul>
                 </div>
@@ -195,12 +203,12 @@
 
         <div class="navi-bottom clearfix">
             <ul>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">고객센터</a></li>
-                <li><a href="#">로그아웃</a></li>
+                <li><a href="#none">공지사항</a></li>
+                <li><a href="#none">고객센터</a></li>
+                <li><a href="#none">로그아웃</a></li>
             </ul>
         </div>
-    </section>
+    </article>
 </body>
 
 </html>
