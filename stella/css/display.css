@@ -81,12 +81,13 @@
 }
 
 .outer_slide .swiper-slide a .txt {
-    width: 100%;
+    /*width: 100%;*/
     text-align: center;
     color: #fff;
     position: absolute;
     bottom: 50px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .outer_slide .swiper-slide a .txt h5 {
@@ -144,7 +145,7 @@
 .outer_brand_slide {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .outer_brand_slide .swiper-container .swiper-wrapper {
@@ -175,4 +176,187 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.product-box {
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+.product-box .inner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.product-box .product-select {
+    width: 48.6%;
+    height: 48px;
+    border: 1px solid #333;
+    padding: 12px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+}
+
+.product-box .product-select select {
+    width: 100%;
+    line-height: 24px;
+    padding-left: 38px;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/arrow_d.svg') no-repeat 71% center;
+}
+
+.product-box .product-select select:focus {
+    border: 0;
+    outline: 0;
+}
+
+.product-box .filter {
+    width: 156px;
+    width: 48.6%;
+    height: 48px;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 12.5px 0;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.product-box .filter img {
+    width: 24px;
+    height: 24px;
+}
+
+.product-box .filter p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #111;
+    margin-left: 4px;
+}
+
+.outer-product-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    justify-content: space-between;
+}
+
+.outer-product-wrap .outer-product-box {
+    /*width: 156px;*/
+    width: 48.6%;
+    align-self: stretch;
+    position: relative;
+}
+
+.outer-product-wrap .outer-product-box > a > img {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.outer-product-wrap .outer-product-box .keeping {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.outer-product-wrap .outer-product-box .color {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.outer-product-wrap .outer-product-box .color .color1 {
+    width: 24px;
+    height: 24px;
+    background-color: #856D63;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-size: 0;
+    position: relative;
+}
+
+.outer-product-wrap .outer-product-box .color .color1::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
+}
+
+.outer-product-wrap .outer-product-box .color .color2 {
+    width: 24px;
+    height: 24px;
+    background-color: #aaa;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-left: 8px;
+    font-size: 0;
+    position: relative;
+}
+
+.outer-product-wrap .outer-product-box .color .color2::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 130%;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.7px;
+    top: -3.7px;
+}
+
+.outer-product-wrap .outer-product-box .outer_name {
+    font-size: 13px;
+    text-align: center;
+    line-height: 23px;
+    margin-bottom: 8px;
+}
+
+.outer-product-wrap .outer-product-box .outer_name span {
+    letter-spacing: -1.2px;
+}
+
+.outer-product-wrap .outer-product-box .price {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.outer-product-wrap .outer-product-box .price del {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+    margin-bottom: 4px;
+    padding-left: 4px;
+}
+
+.outer-product-wrap a.more {
+    width: 100%;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 0;
+    border: 1px solid #333;
+    margin-top: 180px;
+    margin-bottom: 60px;
 }

@@ -140,6 +140,8 @@ main .bnavi a {
 }
 
 .main-contents .exhibition h2 {
+    color: #111;
+    font-size: 24px;
     font-weight: 500;
     margin-left: 20px;
     margin-bottom: 15px;
@@ -201,6 +203,8 @@ main .bnavi a {
 }
 
 .main-contents .today_new h2 {
+    color: #111;
+    font-size: 24px;
     font-weight: 500;
     margin-left: 20px;
     margin-bottom: 24px;
@@ -694,6 +698,8 @@ main .bnavi a {
 }
 
 .main-contents .brand_news h2 {
+    color: #111;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 24px;
 }
@@ -737,6 +743,8 @@ main .bnavi a {
 }
 
 .main-contents .this_week h2 {
+    color: #111;
+    font-size: 24px;
     font-weight: 500;
     margin-left: 20px;
     margin-bottom: 13px;
@@ -803,6 +811,8 @@ main .bnavi a {
 }
 
 .main-contents .best_item h2 {
+    color: #111;
+    font-size: 24px;
     font-weight: 500;
     margin-left: 20px;
     margin-bottom: 16px;
@@ -1453,6 +1463,8 @@ main .bnavi a {
 }
 
 .main-contents .style_trend h2 {
+    color: #111;
+    font-size: 24px;
     font-weight: 500;
     margin-left: 20px;
     margin-bottom: 24px;
@@ -1663,6 +1675,8 @@ main .bnavi a {
 }
 
 .main-contents .best_review h2 {
+    color: #111;
+    font-size: 24px;
     font-weight: 500;
     margin-left: 20px;
     margin-bottom: 16px;
