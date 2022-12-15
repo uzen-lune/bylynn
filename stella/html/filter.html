@@ -14,9 +14,16 @@
     <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <script>
         $(document).ready(function() {
+            var category_line = $('ul.filter-category-box');
+
+            $('legend').click(function() {
+                $('.all, .depth1').slideToggle(100).siblings('.category-wrap').slideUp(100);
+                $(category_line).slideToggle(100);
+            });
+
             $('.depth1').click(function() {
-                $(this).parent('li').children('.detail-wrap').stop().slideToggle(100);
-                $(this).parent('li').siblings().children('.detail-wrap').slideUp(100);
+                $(this).parent('li').children('.category-wrap').stop().slideToggle(100);
+                $(this).parent('li').siblings().children('.category-wrap').slideUp(100);
                 $('.depth3').stop().slideUp(100);
             });
 
@@ -28,125 +35,27 @@
 </head>
 
 <body>
-    <!--Navigation drawer layer-->
-    <article class="navi_layer">
-        <div class="inner">
-            <div class="navi-top clearfix">
-                <div class="member-name">회원명님</div>
-                <div class="member-util">
-                    <ul>
-                        <li><a href="#none"><img src="../images/search.svg" alt="검색"></a></li>
-                        <li><a href="#none"><img src="../images/wish.svg" alt="찜"></a></li>
-                        <li><a href="#none"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
-                        <li><a href="../html/index_mobile.html"><img src="../images/close.svg" alt="닫기"></a></li>
-                    </ul>
-                </div>
+    <!--filter-->
+    <article class="filter-contents">
+        <div class="filter-top">
+            <div class="filter-tit">필터</div>
+            <div class="filter-close">
+                <a href="display.html"><img src="../images/close.svg" alt="닫기"></a>
             </div>
+        </div>
 
-            <div class="reserve">
-                <div class="keep-reserve">
-                    <h3>10,000,000</h3>
-                    <p>보유 적립금</p>
-                </div>
-                <div class="extinction-reserve">
-                    <h3>100</h3>
-                    <p>당월 소멸예정 적립금</p>
-                </div>
-            </div>
-
-            <div class="category-all">
-                <h2>ALL</h2>
-                <ul>
-                    <li>
-                        <label for="clothes">의류</label>
-                        <div class="select-wrap">
-                            <select name="clothes_type" id="clothes_type">
-                                <option value="">의류</option>
-                                <option value="">전체</option>
-                                <option value="">아우터</option>
-                                <option value="">원피스</option>
-                                <option value="">블라우스/셔츠</option>
-                                <option value="">스커트</option>
-                                <option value="">팬츠</option>
-                                <option value="">티셔츠</option>
-                                <option value="">데님</option>
-                                <option value="">니트</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <label for="bag">가방</label>
-                        <div class="select-wrap">
-                            <select name="bag_type" id="bag_type">
-                                <option value="">가방</option>
-                                <option value="">전체</option>
-                                <option value="">숄더백</option>
-                                <option value="">도트백</option>
-                                <option value="">버킷백</option>
-                                <option value="">백팩</option>
-                                <option value="">크로스백</option>
-                                <option value="">클러치</option>
-                                <option value="">벨트백</option>
-                                <option value="">샤첼백</option>
-                                <option value="">트래블백</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <label for="shoes">신발</label>
-                        <div class="select-wrap">
-                            <select name="shoes_type" id="shoes_type">
-                                <option value="">신발</option>
-                                <option value="">전체</option>
-                                <option value="">부츠</option>
-                                <option value="">펌프스힐/슬링백</option>
-                                <option value="">샌달/뮬</option>
-                                <option value="">스니커즈</option>
-                                <option value="">로퍼</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <label for="accessory">악세사리</label>
-                        <div class="select-wrap">
-                            <select name="accessory_type" id="accessory_type">
-                                <option value="">악세사리</option>
-                                <option value="">전체</option>
-                                <option value="">브레이슬릿</option>
-                                <option value="">이어링</option>
-                                <option value="">네크리스</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <label for="athleisure">골프/에슬레저</label>
-                        <div class="select-wrap">
-                            <select name="athleisure_type" id="athleisure_type">
-                                <option value="">골프/에슬레저</option>
-                                <option value="">전체</option>
-                                <option value="">브라탑</option>
-                                <option value="">탱크탑</option>
-                                <option value="">후드티셔츠</option>
-                                <option value="">래깅스</option>
-                                <option value="">팬츠</option>
-                                <option value="">기타</option>
-                            </select>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="detail-category">
-                <h2>CATEGORY</h2>
-                <div class="category-wrap">
-                    <ul>
-                        <li>
-                            <a href="#none" class="depth1">의류</a>
-                            <div class="detail-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="#none" class="all">전체</a>
-                                    </li>
+        <form action="#" method="post" name="filterfrm">
+            <fieldset class="filter-category">
+                <div class="inner">
+                    <div class="filter-category-wrap">
+                        <legend>카테고리</legend>
+                        <ul class="filter-category-box">
+                            <li>
+                                <a href="#none" class="all">전체</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="depth1">의류</a>
+                                <ul class="category-wrap">
                                     <li>
                                         <a href="#none" class="depth2">아우터</a>
                                         <ul class="depth3">
@@ -183,31 +92,70 @@
                                         <a href="#none" class="depth2">니트</a>
                                     </li>
                                 </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#none" class="depth1">가방</a>
-                        </li>
-                        <li>
-                            <a href="#none" class="depth1">신발</a>
-                        </li>
-                        <li>
-                            <a href="#none" class="depth1">악세서리</a>
-                        </li>
-                        <li>
-                            <a href="#none" class="depth1">골프/애슬레저</a>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                <a href="#none" class="depth1">가방</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="depth1">신발</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="depth1">악세서리</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="depth1">골프/애슬레저</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </fieldset>
 
-        <div class="navi-bottom clearfix">
-            <ul>
-                <li><a href="#none">공지사항</a></li>
-                <li><a href="#none">고객센터</a></li>
-                <li><a href="#none">로그아웃</a></li>
-            </ul>
+            <fieldset>
+                <div class="inner">
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="inner">
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="inner">
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="inner">
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="inner">
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="inner">
+
+                </div>
+            </fieldset>
+
+
+        </form>
+
+
+
+        <div class="filter-bottom">
+            <div class="inner">
+                <div class="filter-reset"><a href="filter.html">초기화</a></div>
+                <div class="filter-apply"><a href="filter.html">적용</a></div>
+            </div>
         </div>
     </article>
 </body>
