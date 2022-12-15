@@ -122,42 +122,42 @@ h2 {
     margin-bottom: 6.6667vw;
 }
 
-.selec .depth1Wrap {}
+.selec .depth1 {}
 
-.selec .depth1Wrap .depth1 {
+.selec .depth1 > li {
     width: 88.8889vw;
     line-height: 13.3333vw;
     border: 0.2778vw solid #ccc;
     margin-bottom: 3.3333vw;
     
 }
-.selec .depth1Wrap .depth1 > div {
+.selec .depth1 > li > div {
     box-sizing: border-box;
     padding: 0 4.4444vw;
     display: flex;
     justify-content: space-between;
 }
 
-.selec .depth1Wrap .depth1 > div p {
+.selec .depth1 > li > div p {
     font-size: 3.8889vw;
 }
 
-.selec .depth1Wrap .depth1 > div a {
+.selec .depth1 > li > div a {
     width: 3.8889vw;
 }
 
-.selec .depth1Wrap .depth1 > div a img {
+.selec .depth1 > li > div a img {
     width: 100%;
 
 }
-
-.selec .depth1Wrap .depth1 .depth2Wrap {
+.selec .depth1 li .depth2 {
     display: none;
     padding-bottom: 4.4444vw;
 }
-.selec .depth1Wrap .depth1 .depth2Wrap .depth2 {
+.selec .depth1 li .depth2 li {
     padding: 0 4.4444vw;
 }
+
 
 
 .mo-category {
@@ -169,7 +169,7 @@ h2 {
     margin-bottom: 0;
 }
 
-.mo-category .depth1 .line {
+.mo-category .depth1 > li .line {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -177,55 +177,55 @@ h2 {
     border-bottom: 0.2778vw solid #eee;
 }
 
-.mo-category .depth1 .active {
+.mo-category .depth1 >li .active {
     border-color: #333;
 }
 
-.mo-category .depth1 .line p {
+.mo-category .depth1 >li .line p {
     font-size: 5.0000vw;
     font-weight: 500;
 }
 
-.mo-category .depth1 .line a {
+.mo-category .depth1 >li .line a {
     width: 6.6667vw;
 }
 
-.mo-category .depth1 .line a img {
+.mo-category .depth1 >li .line a img {
     width: 100%;
 }
 
-.mo-category .depth2Wrap {
+.mo-category .depth2 {
     display: none;
 }
 
-.mo-category .depth2Wrap .depth2 {}
+.mo-category .depth2 > li {}
 
-.mo-category .depth2Wrap .depth2 a {
+.mo-category .depth2 > li a {
     padding: 2.2222vw 0;
     color: #111;
 }
 
-.mo-category .depth2Wrap .depth2:first-child {
+.mo-category .depth2 > li:first-child {
     padding-top: 6.6667vw;
 }
 
-.mo-category .depth2Wrap .depth2:last-child {
+.mo-category .depth2 > li:last-child {
     padding-bottom: 6.6667vw;
     border-bottom: 0.2778vw solid #eee;
 }
 
-.mo-category .depth3Wrap {
+.mo-category .depth3 {
     display: none;
     margin-left: 5.5556vw;
     margin-top: 4.4444vw;
 }
 
-.mo-category .depth3Wrap .depth3 {
+.mo-category .depth3 > li{
     margin-bottom: 4.4444vw;
     font-size: 3.8889vw;
 }
 
-.mo-category .depth3Wrap .depth3 a {
+.mo-category .depth3 > li a {
     color: #333;
 }
 

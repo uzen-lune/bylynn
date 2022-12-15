@@ -26,9 +26,10 @@ body {
     font-family: 'Pretendard';
 
 }
-p {
+p, a, li {
     font-size: 4.4444vw;
 }
+
 /************header*****************/
 /* header {} */
 

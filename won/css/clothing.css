@@ -203,8 +203,8 @@ body {
 .brand .align ul li a {
     width: 100%;
     height: 100%;
-
-
+    color: #333;
+    font-size: 14px;
 }
 
 .brand .align ul li:first-child a span {
