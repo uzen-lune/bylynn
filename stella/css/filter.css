@@ -456,6 +456,7 @@
 
 .filter-price-box {
     margin-top: 24px;
+    display: none;
 }
 
 .filter-price-box .min-price {
@@ -560,6 +561,7 @@
     margin-top: 24px;
     padding-bottom: 12px;
     border-bottom: 1px solid #eee;
+    display: none;
 }
 
 input[id="purpose1"] {
