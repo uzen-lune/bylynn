@@ -1,13 +1,15 @@
 @charset "utf-8";
 .inner{
-    width: 320px;
+    width: 88.8889vw;
     margin: 0 auto;
 }
-
+body {
+    padding-bottom: 18.0556vw;
+}
 
 header {
     width: 100%;
-    height: 52px;
+    height: 14.4444vw;
     position: fixed;
     left: 0;
     top: 0;
@@ -19,7 +21,7 @@ header .navibar {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 5.5556vw;
     box-sizing: border-box;
     background-color: #fff;
 
@@ -33,13 +35,13 @@ header .navibar li {
 }
 
 header .navibar li a {
-    width: 24px;
-    height: 24px;
+    width: 6.6667vw;
+    height: 6.6667vw;
     font-size: 0;
 }
 
 header .navibar li a:last-child {
-    margin-left: 20px;
+    margin-left: 5.5556vw;
 }
 
 aside li:first-child a img {
@@ -49,7 +51,7 @@ aside li:first-child a img {
 
 .bottom {
     width: 100%;
-    height: 65px;
+    height: 18.0556vw;
     background-color: #fff;
     position: fixed;
     left: 0;
@@ -60,8 +62,8 @@ aside li:first-child a img {
 }
 
 .bottom .wish {
-    width: 60px;
-    height: 44px;
+    width: 16.6667vw;
+    height: 12.2222vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,8 +71,8 @@ aside li:first-child a img {
 }
 
 .bottom .wish a {
-    width: 24px;
-    height: 24px;
+    width: 6.6667vw;
+    height: 6.6667vw;
 
 }
 
@@ -83,20 +85,20 @@ aside li:first-child a img {
 }
 
 .bottom .bottom-btn a {
-    width: 140px;
-    height: 44px;
-    line-height: 44px;
+    width: 38.8889vw;
+    height: 12.2222vw;
+    line-height: 12.2222vw;
     text-align: center;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 4.4444vw;
     font-weight: 500;
 }
 
 .bottom .bottom-btn .bottom-shopping-bag {
-    border: 1px solid #333;
+    border: 0.2778vw solid #333;
     background-color: #fff;
     color: #333;
-    margin-right: 4px;
+    margin-right: 1.1111vw;
 }
 
 .bottom .bottom-btn .bottom-buy-now {
@@ -108,7 +110,7 @@ aside li:first-child a img {
 
 
 .detail-contents {
-    padding-top: 52px;
+    padding-top: 14.4444vw;
     width: 100%;
 }
 
@@ -142,29 +144,29 @@ aside li:first-child a img {
     box-sizing: border-box;
     background-color: #666;
     opacity: 1;
-    width: 6px;
-    height: 6px;
+    width: 1.6667vw;
+    height: 1.6667vw;
 
 }
 
 .pdt-img .swiper-pagination-bullet-active {
     background-color: #fff;
-    width: 10px;
-    height: 10px;
+    width: 2.7778vw;
+    height: 2.7778vw;
 }
 
 
 .pdt-detail .sel-color {
-    width: 320px;
+    width: 88.8889vw;
     margin: 0 auto;
      display: flex;
-    padding-top: 16px;
-    padding-bottom: 24px;
+    padding-top: 4.4444vw;
+    padding-bottom: 6.6667vw;
 }
 .sel-color li {
-    width: 48px;
-    height: 48px;
-    margin-right: 12px;
+    width: 13.3333vw;
+    height: 13.3333vw;
+    margin-right: 3.3333vw;
 }
 .sel-color li a {
     width: 100%;
@@ -173,14 +175,14 @@ aside li:first-child a img {
     box-sizing: border-box;
 }
 .sel-color .color-beige a{
-    border: 1px solid #111;
+    border: 0.2778vw solid #111;
     position: relative;
 }
 .sel-color .color-beige a span{
     display: block;
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 11.1111vw;
+    height: 11.1111vw;
     background-color: #E9D8BA;
     position: absolute;
     left: 50%;
@@ -188,14 +190,14 @@ aside li:first-child a img {
     transform: translate(-50%, -50%);
 }
 .sel-color .color-black a{
-    border: 1px solid #eee;
+    border: 0.2778vw solid #eee;
     position: relative;
 }
 .sel-color .color-black a span{
     display: block;
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 11.1111vw;
+    height: 11.1111vw;
     background-color: #000;
     position: absolute;
     left: 50%;
@@ -206,86 +208,86 @@ aside li:first-child a img {
     
 }
 .pdt-introduction .pdt-info {
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.2778vw solid #eee;
 }
 
 .pdt-introduction .pdt-info .pdt-show-name {
     font-weight: 500;
-    line-height: 24px;
-    margin-bottom: 8px;
+    line-height: 6.6667vw;
+    margin-bottom: 2.2222vw;
     position: relative;
 }
 .pdt-introduction .pdt-info .pdt-show-name span {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 6.6667vw;
+    height: 6.6667vw;
     position: absolute;
     right: 0;
     top: 0;
 }
 .pdt-introduction .pdt-info .pdt-code {
-    font-size: 13px;
-    margin-bottom: 8px;
+    font-size: 3.6111vw;
+    margin-bottom: 2.2222vw;
     
 }
 .pdt-introduction .pdt-info .pdt-name {
-    font-size: 20px;
+    font-size: 5.5556vw;
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 4.4444vw;
 }
 .pdt-introduction .pdt-info .badge {
     display: flex;
-    margin-bottom: 16px;
+    margin-bottom: 4.4444vw;
 }
 .pdt-introduction .pdt-info .badge li {
     background-color: #000;
     color: #fff;
-    margin-right: 4px;
-    padding: 3.5px 8px;
-    font-size: 11px;
+    margin-right: 1.1111vw;
+    padding: 0.9722vw 2.2222vw;
+    font-size: 3.0556vw;
 }
 .pdt-introduction .pdt-info .des {
-    font-size: 13px;
+    font-size: 3.6111vw;
     color: #999;
-    line-height: 19px;
-    margin-bottom: 16px;
+    line-height: 5.2778vw;
+    margin-bottom: 4.4444vw;
 }
 .pdt-introduction .pdt-info .price {
-    margin-bottom: 14px;
+    margin-bottom: 3.8889vw;
 }
 .pdt-introduction .pdt-info .price p {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 4.4444vw;
 }
 .pdt-introduction .pdt-info .price p em {
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    font-size: 24px;
+    font-size: 6.6667vw;
+    font-size: 6.6667vw;
 }
 .pdt-introduction .pdt-info .price p span {
     font-size: inherit;
     color: #999;
     text-decoration: line-through;
-    margin-left: 12px;
-    margin-right: 16px;
+    margin-left: 3.3333vw;
+    margin-right: 4.4444vw;
     font-weight: 400;
 }
 .pdt-introduction .pdt-info .review {
     display: flex;
-    margin-bottom: 26px;
+    margin-bottom: 7.2222vw;
 }
 .pdt-introduction .pdt-info .review p{
-    font-size: 13px;
-    padding-right: 12px;
-    margin-right: 12px;
+    font-size: 3.6111vw;
+    padding-right: 3.3333vw;
+    margin-right: 3.3333vw;
     position: relative;
 }
 .pdt-introduction .pdt-info .review p:after {
     content: "";
     display: block;
-    width: 1px;
-    height: 11px;
+    width: 0.2778vw;
+    height: 3.0556vw;
     background-color: #ccc;
     position: absolute;
     top: 50%;
@@ -293,53 +295,53 @@ aside li:first-child a img {
     transform: translateY(-50%);
 }
 .pdt-introduction .pdt-info .review a {
-    font-size: 13px;
+    font-size: 3.6111vw;
 }
 
 .pdt-introduction .benefits {
-    padding-top: 24px;
-    width: 320px;
-    margin: 0 auto 24px;
+    padding-top: 6.6667vw;
+    width: 88.8889vw;
+    margin: 0 auto 6.6667vw;
 }
 .pdt-introduction .benefits li {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 12px;
+    margin-bottom: 3.3333vw;
 }
 .pdt-introduction .benefits li h5 {
-    width: 82px;
-    font-size: 13px;
+    width: 22.7778vw;
+    font-size: 3.6111vw;
 }
 .pdt-introduction .benefits li p {
-    font-size: 13px;
+    font-size: 3.6111vw;
     font-weight: 400;
     color: #666;
 }
 .pdt-introduction .benefits li a {
-    font-size: 13px;
+    font-size: 3.6111vw;
     font-weight: 500;
     color: #999;
     text-decoration: underline;
 }
 .pdt-introduction .gift {
     background-color: #f6f6f6;
-    padding: 24px 0;
+    padding: 6.6667vw 0;
 }
 .pdt-introduction .gift .inner {
-    /*outline: 1px solid red;*/
+    /*outline: 0.2778vw solid red;*/
     position: relative;
 }
 .pdt-introduction .gift .inner > div {
     display: flex;
 }
 .pdt-introduction .gift h4 {
-    margin-bottom: 12px;
-    font-size: 14px;
+    margin-bottom: 3.3333vw;
+    font-size: 3.8889vw;
     font-weight: 400;
 }
 .pdt-introduction .gift .gift-img {
-    width: 74px;
-    margin-right: 8px;
+    width: 20.5556vw;
+    margin-right: 2.2222vw;
 }
 .pdt-introduction .gift .gift-img img {
     width: 100%;
@@ -347,17 +349,17 @@ aside li:first-child a img {
 }
 .pdt-introduction .gift .gift-txt {}
 .pdt-introduction .gift .gift-txt .gift-pdt-show{
-    font-size: 13px;
+    font-size: 3.6111vw;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 2.2222vw;
 }
 .pdt-introduction .gift .gift-txt .gift-des{
     font-weight: 500;
-    font-size: 14px;
+    font-size: 3.8889vw;
     word-break: keep-all;
 }
 .pdt-introduction .gift .gift-more{
-    /*outline: 1px solid blue;*/
+    /*outline: 0.2778vw solid blue;*/
     text-align: right;
     position: relative;
 }
@@ -365,21 +367,21 @@ aside li:first-child a img {
     position: absolute;
     right: 0;
     bottom: 0;
-    font-size: 13px;
+    font-size: 3.6111vw;
     color: #999;
     text-decoration: underline;
 }
    
 .pdt-detail .pdt-suggestion {
-    padding-top: 40px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #eee;
+    padding-top: 11.1111vw;
+    padding-bottom: 13.8889vw;
+    border-bottom: 0.2778vw solid #eee;
 }
 .pdt-detail .pdt-suggestion h3 {
-    font-size: 20px;
+    font-size: 5.5556vw;
     font-weight: 500;
-    margin-left: 20px;
-    margin-bottom: 16px;
+    margin-left: 5.5556vw;
+    margin-bottom: 4.4444vw;
 }
 
 
@@ -406,13 +408,13 @@ aside li:first-child a img {
     width: 43.3333vw;
 }
 .pdt-show .box-wrap .box {
-    margin-right: 8px;
+    margin-right: 2.2222vw;
 }
 .pdt-show .box-wrap .box:first-child {
-    margin-left: 20px;
+    margin-left: 5.5556vw;
 }
 .pdt-show .box-wrap .box:last-child {
-    margin-right: 20px;
+    margin-right: 5.5556vw;
 }
 
 
@@ -520,27 +522,27 @@ aside li:first-child a img {
 
 
 .pdt-detail .pdt-similar {
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding-top: 11.1111vw;
+    padding-bottom: 13.8889vw;
 }
  .pdt-similar h3 {
-    font-size: 20px;
+    font-size: 5.5556vw;
     font-weight: 500;
-    margin-left: 20px;
-    margin-bottom: 16px;
+    margin-left: 5.5556vw;
+    margin-bottom: 4.4444vw;
 }
 .pdt-tab {
     width: 100%;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 40px;
+    border-top: 0.2778vw solid #eee;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 11.1111vw;
 }
 .pdt-tab ul{
     display: flex;
 }
 .pdt-tab ul li{
-    height: 60px;
-    line-height: 60px;
+    height: 16.6667vw;
+    line-height: 16.6667vw;
     width: 25%;
     text-align: center;
 }
@@ -558,7 +560,7 @@ aside li:first-child a img {
     content: "";
     display: block;
     width: 100%;
-    height: 4px;
+    height: 1.1111vw;
     background-color: #333;
     position: absolute;
     left: 0;
@@ -566,43 +568,121 @@ aside li:first-child a img {
     
 }
 .pdt-detail .pdt-description {
-    padding-top: 40px;
+    padding-top: 11.1111vw;
 }
 .pdt-description .txt-box-gray{
-    width: 320px;
-    margin: 0 auto 40px;
+    width: 88.8889vw;
+    margin: 0 auto 4.4444vw;
     background-color: #f6f6f6;
-    padding: 87px 24px;
+    padding: 24.1667vw 6.6667vw;
     box-sizing: border-box;
-    border-radius: 100px 100px 0px 100px;
+    border-radius: 27.7778vw 27.7778vw 0.0000vw 27.7778vw;
     position: relative;
 }
 .pdt-description .txt-box-gray::before {
     content: "";
     display: block;
-    width: 32px;
-    height: 23px;
+    width: 8.8889vw;
+    height: 6.3889vw;
     background-image: url(../images/detail/quotes_left.svg);
     position: absolute;
     left: 50%;
-    top: 40px;
+    top: 11.1111vw;
     transform: translateX(-50%);
 }
 .pdt-description .txt-box-gray::after {
     content: "";
     display: block;
-    width: 32px;
-    height: 23px;
+    width: 8.8889vw;
+    height: 6.3889vw;
     background-image: url(../images/detail/quotes_right.svg);
     position: absolute;
     left: 50%;
-    bottom: 40px;
+    bottom: 11.1111vw;
     transform: translateX(-50%);
 }
-.pdt-description
-
-
-
+.pdt-description .pdt-data {
+    width: 88.8889vw;
+    margin: 0 auto;
+    margin-bottom: 22.2222vw;
+}
+.pdt-description .pdt-data h3 {
+    position: relative;
+    padding: 6.6667vw 0;
+    border-bottom: 0.2778vw solid #111;
+    margin-bottom: 2.2222vw;
+}
+.pdt-description .pdt-data h3 span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pdt-description .pdt-data h3 span img {
+    width: 100%;
+    display: block;
+}
+.pdt-description .pdt-data > ul > li {
+    padding: 4.4444vw 0;
+    display: flex;
+    border-bottom: 0.2778vw solid #eee;
+    box-sizing: border-box;
+}
+.pdt-description .pdt-data > ul > li h5 {
+    width: 22.7778vw;
+    font-size: 3.8889vw;
+    font-weight: 500;
+    color: #333;
+}
+.pdt-description .pdt-data > ul > li p {
+    font-size: 3.8889vw;
+    color: #666;
+    word-break: break-all;
+    
+}
+.pdt-description .pdt-data > ul > li ul {
+    width: 66.1111vw;
+}
+.pdt-description .pdt-data > ul > li ul li {
+    font-size: 3.8889vw;
+    word-break: break-all;
+    line-height: 5.5556vw;
+    color: #666;
+}
+.pdt-detail .tab-review {
+    border-top: none;
+}
+.pdt-detail .pdt-review {
+    margin-bottom: 16.6667vw;
+}
+.pdt-detail .pdt-review div {
+     width: 88.8889vw;
+    height: 83.3333vw;
+    background-color: #eee;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 83.3333vw;
+    font-size: 11.1111vw;
+    font-weight: 500;
+    color: #999;
+}
+.pdt-detail .btn-qna {
+    width: 88.8889vw;
+    height: 13.3333vw;
+    line-height: 13.3333vw;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 6.6667vw;
+    margin-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.pdt-detail .btn-qna a {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    font-size: 3.8889vw;
+}
 
 
 
