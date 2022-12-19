@@ -14,21 +14,51 @@
     <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <script>
         $(document).ready(function() {
+            /* filter-category */
             var category_line = $('ul.filter-category-box');
 
-            $('legend').click(function() {
-                $('.all, .depth1').slideToggle(100).siblings('.category-wrap').slideUp(100);
-                $(category_line).slideToggle(100);
+            $('.filter-category-wrap legend').click(function() {
+                $('.filter-category-box').stop().slideToggle(200).css('display', 'block').children().find('.category-wrap').slideUp(100);
             });
 
             $('.depth1').click(function() {
-                $(this).parent('li').children('.category-wrap').stop().slideToggle(100);
+                $(this).parent('li').children('.category-wrap').stop().slideToggle(200);
                 $(this).parent('li').siblings().children('.category-wrap').slideUp(100);
                 $('.depth3').stop().slideUp(100);
             });
 
             $('.depth2').click(function() {
-                $(this).parent('li').children('.depth3').stop().slideToggle(100);
+                $(this).parent('li').children('.depth3').stop().slideToggle(200);
+            });
+
+            /* filter-brand */
+            $('.filter-brand-wrap legend').click(function() {
+                $('.filter-brand-box, a.more').stop().slideToggle(200).css('display', 'flex');
+            });
+
+            /* filter-color */
+            $('.filter-color-wrap legend').click(function() {
+                $('.filter-color-box').stop().slideToggle(200).css('display', 'flex');
+            });
+
+            /* filter-size */
+            $('.filter-size-wrap legend').click(function() {
+                $('.filter-size-box').stop().slideToggle(200).css('display', 'flex');
+            });
+
+            /* filter-benefit */
+            $('.filter-benefit-wrap legend').click(function() {
+                $('.filter-benefit-box').stop().slideToggle(200).css('display', 'flex');
+            });
+
+            /* filter-price */
+            $('.filter-price-wrap legend').click(function() {
+                $('.filter-price-box').stop().slideToggle(200).css('display', 'block');
+            });
+
+            /* filter-purpose */
+            $('.filter-purpose-wrap legend').click(function() {
+                $('.filter-purpose-box').stop().slideToggle(200).css('display', 'block');
             });
         });
     </script>
@@ -110,53 +140,222 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-brand">
                 <div class="inner">
-
+                    <div class="filter-brand-wrap">
+                        <legend>브랜드</legend>
+                        <ul class="filter-brand-box">
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand1" value="DEAR K"><label for="brand1">DEAR K</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand2" value="HUIT DE LYNN">
+                                <label for="brand2">HUIT DE LYNN</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand3" value="KENNETH LADY">
+                                <label for="brand3">KENNETH LADY</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand4" value="KL">
+                                <label for="brand4">KL</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand5" value="LINE">
+                                <label for="brand5">LINE</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand6" value="LINE STUDIO ONE">
+                                <label for="brand6">LINE STUDIO ONE</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand7" value="LYNN">
+                                <label for="brand7">LYNN</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand8" value="MOE">
+                                <label for="brand8">MOE</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand9" value="NUVO10">
+                                <label for="brand9">NUVO10</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-brand" id="brand10" value="A.P.C">
+                                <label for="brand10">A.P.C</label>
+                            </li>
+                        </ul>
+                        <a href="#none" class="more">더보기</a>
+                    </div>
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-color">
                 <div class="inner">
-
+                    <div class="filter-color-wrap">
+                        <legend>색상</legend>
+                        <ul class="filter-color-box">
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color1" value="">
+                                <label for="color1"></label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color2" value="">
+                                <label for="color2">color2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color3" value="">
+                                <label for="color3">color3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color4" value="">
+                                <label for="color4">color4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color5" value="">
+                                <label for="color5">color5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color6" value="">
+                                <label for="color6">color6</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color7" value="">
+                                <label for="color7">color7</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color8" value="">
+                                <label for="color8">color8</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color9" value="">
+                                <label for="color9">color9</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color10" value="">
+                                <label for="color10">color10</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color11" value="">
+                                <label for="color11">color11</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color12" value="">
+                                <label for="color12">color12</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color13" value="">
+                                <label for="color13">color13</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color14" value="">
+                                <label for="color14">color14</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-color" id="color15" value="">
+                                <label for="color15">color15</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-size">
                 <div class="inner">
-
+                    <div class="filter-size-wrap">
+                        <legend>사이즈</legend>
+                        <ul class="filter-size-box">
+                            <li>
+                                <input type="checkbox" name="filter-size" id="size_44" value="44"><label for="size_44">44</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-size" id="size_55" value="55"><label for="size_55">55</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-size" id="size_66" value="66"><label for="size_66">66</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-size" id="size_77" value="77"><label for="size_77">77</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-size" id="size_free" value="free"><label for="size_free">Free</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-benefit">
                 <div class="inner">
-
+                    <div class="filter-benefit-wrap">
+                        <legend>혜택</legend>
+                        <ul class="filter-benefit-box">
+                            <li>
+                                <input type="checkbox" name="filter-benefit" id="benefit1" value="즉시할인쿠폰"><label for="benefit1">즉시할인쿠폰</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-benefit" id="benefit2" value="세일"><label for="benefit2">세일</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="filter-benefit" id="benefit3" value="예약상품"><label for="benefit3">예약상품</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-price">
                 <div class="inner">
-
+                    <div class="filter-price-wrap">
+                        <legend>가격</legend>
+                        <div class="filter-price-box">
+                            <div class="min-price">
+                                <p>최소</p>
+                                <input type="text" name="min-price" value="">
+                            </div>
+                            <div class="max-price">
+                                <p>최대</p>
+                                <input type="text" name="max-price" value="">
+                            </div>
+                            <a href="#none" class="search">검색</a>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-purpose">
                 <div class="inner">
-
+                    <div class="filter-purpose-wrap">
+                        <legend>쇼핑의 목적</legend>
+                        <div class="filter-purpose-box">
+                            <div class="purpose-box">
+                                <input type="checkbox" id="purpose1" name="" value="">
+                                <label for="purpose1">클래식룩</label>
+                            </div>
+                            <div class="purpose-box">
+                                <input type="checkbox" id="purpose2" name="" value="">
+                                <label for="purpose2">데이트룩</label>
+                            </div>
+                            <div class="purpose-box">
+                                <input type="checkbox" id="purpose3" name="" value="">
+                                <label for="purpose3">면접프리패스룩</label>
+                            </div>
+                            <div class="purpose-box">
+                                <input type="checkbox" id="purpose4" name="" value="">
+                                <label for="purpose4">골프라운딩룩</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
 
-
-        </form>
-
-
-
-        <div class="filter-bottom">
-            <div class="inner">
-                <div class="filter-reset"><a href="filter.html">초기화</a></div>
-                <div class="filter-apply"><a href="filter.html">적용</a></div>
+            <div class="filter-bottom">
+                <div class="inner">
+                    <div class="filter-reset"><a href="filter.html">초기화</a></div>
+                    <div class="filter-apply"><a href="filter.html">적용</a></div>
+                </div>
             </div>
-        </div>
+        </form>
     </article>
 </body>
 
