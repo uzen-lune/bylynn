@@ -44,13 +44,13 @@ main .main-txt .des {
 }
 
 
-.swiper-pagination-bullet {
+.main-img .swiper-pagination-bullet {
     border: 0.2778vw solid #666;
     box-sizing: border-box;
     background-color: #666;
 }
 
-.swiper-pagination-bullet-active {
+.main-img .swiper-pagination-bullet-active {
     background-color: #fff;
     transform: scale(1.3)
 }

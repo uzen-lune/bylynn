@@ -15,7 +15,7 @@
     <section class="filter-contents">
         <div class="top">
             <h2>필터</h2>
-            <a href="#">닫기</a>
+            <a href="#" onclick="window.history.back()">닫기</a>
         </div>
         <form action="">
             <fieldset class="category">
@@ -209,8 +209,11 @@
 
                         $('.brand .btn').on('click', function(e) {
                             e.preventDefault();
-
                             $('.brand-list li:hidden').slideDown();
+                             $(this).css({
+                                display : "none"
+                            });
+
 
 
                         });
@@ -387,11 +390,6 @@
         </form>
         <script>
             $('legend').click(function() {
-                /* $(this).siblings('ul').slideToggle();
-                 $(this).siblings('div').slideToggle();*/
-                /* 
-                 var a = $(this).siblings('ul').attr('disply')
-                 console.log(a);*/
                 if ($(this).siblings('div').is(":visible") != true) {
 
                     $(this).siblings('div').slideDown();
@@ -409,9 +407,7 @@
                     $('.category-contents').find('.depth3').slideUp();
 
                 }
-                /* $(this).find('img').css({
-                     transform: 'rotate(180deg)'
-                 });*/
+                
             });
         </script>
     </section>
