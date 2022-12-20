@@ -5,11 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>BYLYNN.SHOP</title>
-
-    <!--<link rel="stylesheet" media="all and (max-width:767px)" href="../css/index_mobile.css">-->
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/filter.css">
-
     <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <script>
@@ -18,47 +15,47 @@
             var category_line = $('ul.filter-category-box');
 
             $('.filter-category-wrap legend').click(function() {
-                $('.filter-category-box').stop().slideToggle(200).css('display', 'block').children().find('.category-wrap').slideUp(100);
+                $('.filter-category-box').stop().slideToggle(100).css('display', 'block').children().find('.category-wrap').slideUp(80);
             });
 
             $('.depth1').click(function() {
-                $(this).parent('li').children('.category-wrap').stop().slideToggle(200);
-                $(this).parent('li').siblings().children('.category-wrap').slideUp(100);
-                $('.depth3').stop().slideUp(100);
+                $(this).parent('li').children('.category-wrap').stop().slideToggle(100);
+                $(this).parent('li').siblings().children('.category-wrap').slideUp(80);
+                $('.depth3').stop().slideUp(80);
             });
 
             $('.depth2').click(function() {
-                $(this).parent('li').children('.depth3').stop().slideToggle(200);
+                $(this).parent('li').children('.depth3').stop().slideToggle(100);
             });
 
             /* filter-brand */
             $('.filter-brand-wrap legend').click(function() {
-                $('.filter-brand-box, a.more').stop().slideToggle(200).css('display', 'flex');
+                $('.filter-brand-box, a.more').stop().slideToggle(100).css('display', 'flex');
             });
 
             /* filter-color */
             $('.filter-color-wrap legend').click(function() {
-                $('.filter-color-box').stop().slideToggle(200).css('display', 'flex');
+                $('.filter-color-box').stop().slideToggle(100).css('display', 'flex');
             });
 
             /* filter-size */
             $('.filter-size-wrap legend').click(function() {
-                $('.filter-size-box').stop().slideToggle(200).css('display', 'flex');
+                $('.filter-size-box').stop().slideToggle(100).css('display', 'flex');
             });
 
             /* filter-benefit */
             $('.filter-benefit-wrap legend').click(function() {
-                $('.filter-benefit-box').stop().slideToggle(200).css('display', 'flex');
+                $('.filter-benefit-box').stop().slideToggle(100).css('display', 'flex');
             });
 
             /* filter-price */
             $('.filter-price-wrap legend').click(function() {
-                $('.filter-price-box').stop().slideToggle(200).css('display', 'block');
+                $('.filter-price-box').stop().slideToggle(100).css('display', 'block');
             });
 
             /* filter-purpose */
             $('.filter-purpose-wrap legend').click(function() {
-                $('.filter-purpose-box').stop().slideToggle(200).css('display', 'block');
+                $('.filter-purpose-box').stop().slideToggle(100).css('display', 'block');
             });
         });
     </script>
