@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="detail-header">
+            <div class="inner">
+                <div class="return">
+                    <a href="" class="back"><img src="../images/back.svg" alt="뒤로가기"></a>
+                    <a href="index_mobile.html" class="home"><img src="../images/home.svg" alt="홈으로가기"></a>
+                </div>
+                <div class="util">
+                    <a href="#none" class="search"><img src="../images/search.svg" alt="검색"></a>
+                    <a href="#none" class="shopping_basket"><img src="../images/shopping-bag.svg" alt="장바구니"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="detail_menu_bottom">
+        <ul>
+            <li class="keeping"><a href="#none"><img src="../images/wish.svg" alt=""></a></li>
+            <li class="shop-basket"><a href="#none">장바구니</a></li>
+            <li class="will-buy"><a href="#none">바로구매</a></li>
+        </ul>
+    </div>
+
+    <!--detail content-->
+    <article class="detail_content">
+        <!--detail_main-->
+        <section class="detail_main">
+            <div class="main_slide">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너1">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너2">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너3">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너4">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너5">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너6">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너7">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너8">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너9">
+                        </div>
+                        <div class="swiper-slide"><img src="../images/detail_img.png" alt="메인배너10">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper('.main_slide .swiper-container', {
+                    slidesPerView: "auto",
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            </script>
+
+            <div class="detail_product_color">
+                <div class="color-box active">
+                    <span>color1</span>
+                </div>
+                <div class="color-box">
+                    <span>color2</span>
+                </div>
+            </div>
+
+            <div class="product-name">
+                <h3>LINE STUDIO ONE</h3>
+                <a href="#none" class="share"><img src="../images/share.svg" alt="공유하기"></a>
+            </div>
+
+            <ul class="product-keyword">
+                <li>HOT</li>
+                <li>NEW</li>
+                <li>무료배송</li>
+                <li>사은품</li>
+            </ul>
+
+            <p class="one-ex">한 줄 설명이 보여집니다. 한 줄 설명이 보여집니다. 한 줄 설명이 보여집니다. 한 줄 설명이 보여집니다.</p>
+
+            <div class="price clearfix">
+                <p>197,100원 <del>219,000원</del> 10%</p>
+
+                <div class="review">
+                    <div class="mark clearfix">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <p>5.0</p>
+                    </div>
+                    <div class="review-wrap"><a href="#none">리뷰 10 <img src="../images/back.svg" alt="리뷰보기"></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!--add-des-->
+        <section class="add-des">
+            <p><span>적립금</span> <span>전용포인트 2% / 통합포인트 3%</span></p>
+            <p><span>추가적립금</span> <span>전용포인트 500P / 통합포인트 1000P</span></p>
+            <p><span>배송비</span> <span>2,500원 (30,000원 이상 무료) <br><span>지역별 추가배송비</span></span></p>
+            <p><span>안내</span> <span>상품설명 및 구매정보를 정확하게 확인하신 후 신중한 주문 당부 드립니다.</span></p>
+        </section>
+
+        <!--freebie-->
+        <section class="freebie">
+            <p>20,000원 이상 구매 시 사은품을 증정합니다.</p>
+            <div class="freebie-info">
+                <img src="../images/freebie_img.png" alt="사은품 이미지">
+                <p>LYNN <br><span>사은품명 사은품명 사은품명 사은품명 사은품명</span></p>
+            </div>
+            <a href="#none">상세보기</a>
+        </section>
+
+        <!--recommend-product-->
+        <section class="recommend-product">
+            <h2>추천상품</h2>
+            <div class="swiper recommend_product_slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#none"><img src="../images/recommend_product1.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color1">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="recommend_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/recommend_product2.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color2">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="recommend_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/recommend_product1.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color3">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="recommend_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/recommend_product2.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color4">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="recommend_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/recommend_product1.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color5">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="recommend_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/recommend_product2.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color6">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="recommend_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper('.recommend_product_slide .swiper-container', {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            draggable: true,
+                            hide: true,
+                        },
+                    });
+                </script>
+            </div>
+        </section>
+
+        <!--similar-product-->
+        <section class="similar-product">
+            <h2>유사상품</h2>
+            <div class="swiper similar_product_slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#none"><img src="../images/similar_product1.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color1">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="similar_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/similar_product2.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color2">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="similar_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/similar_product1.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color3">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="similar_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/similar_product2.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color4">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="similar_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/similar_product1.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color5">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="similar_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="../images/similar_product2.png" alt="">
+                                <div class="keeping"><img src="../images/wish.svg" alt=""></div>
+                                <div class="color color6">
+                                    <div class="color-1 active"><a href="#none">color1</a></div>
+                                    <div class="color-2"><a href="#none">color2</a></div>
+                                </div>
+                                <div class="similar_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper('.similar_product_slide .swiper-container', {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            draggable: true,
+                            hide: true,
+                        },
+                    });
+                </script>
+            </div>
+        </section>
+
+
+        <!--문의하기 & 탑버튼-->
+        <div class="contact">
+            <a href="#none"><img src="../images/chat.svg" alt="문의하기"></a>
+        </div>
+
+        <div class="totop">
+            <a href="#none"><img src="../images/top.svg" alt="탑버튼"></a>
+        </div>
+    </article>
+
+
+    <!--footer-->
+    <footer>
+        <h4>(주) 린 컴퍼니</h4>
+        <p>대표이사 문경란 | 서울 강남구 영동대로 734 <br>개인정보보호책임자 이성춘 <br>사업자등록번호 120-81-84619 <br>통신판매업신고번호 제2018-서울강남-00940 <br>이메일 info@bylynn.shop</p>
+        <ul class="footer-menu clearfix">
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="sns clearfix">
+            <li><a href="#none"><img src="../images/googleplay.svg" alt="구글 플레이"></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt="애플"></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt="네이버"></a></li>
+            <li><a href="#none"><img src="../images/youtube_icon.png" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt="페이스북"></a></li>
+        </ul>
+        <p class="copy">Copyright &copy; BYLYNNSHOP all rights reserved.</p>
+    </footer>
+</body>
+
+</html>
