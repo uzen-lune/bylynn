@@ -1,0 +1,65 @@
+@charset "utf-8";
+body {
+    padding-top: 14.4444vw;
+}
+header {
+    width: 100%;
+    height: 14.4444vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    border-bottom: 1px solid #eee;
+}
+
+header .navibar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5.5556vw;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+
+header .navibar li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+header .navibar li a {
+    width: 6.6667vw;
+    height: 6.6667vw;
+    font-size: 0;
+}
+
+header .navibar li a:last-child {
+    margin-left: 5.5556vw;
+}
+
+header .navibar li a img {
+    display: block;
+    width: 100%;
+}
+
+.cart-contents {
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 32px;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

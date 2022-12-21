@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <ul class="navibar">
+            <li>
+                <a href="#">뒤로가기<img src="../images/detail/back.svg" alt=""></a>
+                <a href="#">홈<img src="../images/detail/home.svg" alt=""></a>
+            </li>
+            <li>
+                <a href="#">검색<img src="../images/detail/search.svg" alt=""></a>
+                <a href="#">장바구니<img src="../images/detail/shopping-bag.svg" alt=""></a>
+            </li>
+        </ul>
+    </header>
+    <section class="cart-contents">
+        <h2>장바구니</h2>
+        <form action="">
+            <div class="delete-area">
+                <input type="checkbox" name="sel-all" id="sel-all">
+                <label for="sel-all">전체선택</label>
+                <input type="submit" value="선택삭제" name="sel-delete" id="sel-delete">
+                <input type="submit" value="주문불가 삭제" name="unable-delete" id="unable-delete">
+                <input type="submit" value="" name="refresh" id="refresh">
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" name="cart-bynn1" id="cart-bynn1">
+                    <label for="cart-bynn1">바이린1 배송상품</label>
+                    <a href="">지역별 추가배송비</a>
+                </div>
+                <div class="">
+                    <div>
+                        <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                        <ul>
+                            <li class="pdt-wish"></li>
+                            <li class="pdt-delete"></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="pdt-img"><img src="" alt=""></div>
+                        <div>
+                            <p class="pdt-brand">LYNN</p>
+                            <h4>클래식 크롭 테일러드 자켓</h4>
+                            <ul class="pdt-option">
+                                <li>브라운 / 55</li>
+                                <li href="#"><a href="">옵션변경</a></li>
+                            </ul>
+                            <ul class="pdt-price">
+                                <li>197,100원</li>
+                                <li>219,000원</li>
+                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                            </ul>
+                            <ul class="pdt-total">
+                                <li>
+                                    <select name="select-number" id="select-number">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </li>
+                                <li>197,100원</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="pdt-benefits">
+                        <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                        <p>3,000원</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>총 {0}개 합계</h3>
+                <ul>
+                    <li>
+                        <p>정상판매금액</p>
+                        <p>300,000원</p>
+                    </li>
+                    <li>
+                        <p>할인금액</p>
+                        <p>-3,000원</p>
+                    </li>
+                    <li>
+                        <p>배송비</p>
+                        <p>2,500원</p>
+                    </li>
+                </ul>
+                <div>
+                    <p>결제예정금액</p>
+                    <p>290,500원</p>
+                </div>
+                <ul>
+                    <li>장바구니에 담을 수 있는 상품의 품목은 최대 {0}개입니다.</li>
+                    <li>오랫동안 장바구니에 보관된 상품을 주문하실 경우, 가격이나 혜택이 변동 될 수 있습니다.</li>
+                    <li>구매하기 선택 시, 구매시점에 품절된 상품은 제외하고 주문이 진행됩니다.</li>
+                </ul>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <h3>(주) 린 컴퍼니</h3>
+        <ul class="adress">
+            <li>대표이사 문경란</li>
+            <li>서울 강남구 영동대로 734</li>
+            <li>개인정보보호책임자 이성춘</li>
+            <li>통신판매업신고번호 제2018-서울강남-00940</li>
+            <li>사업자등록번호 120-81-84619</li>
+            <li>이메일 info@bylynn.shop</li>
+        </ul>
+        <ul class="link">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">매장안내</a></li>
+            <li><a href="#">멤버십 혜택</a></li>
+        </ul>
+        <ul class="foot-sns">
+            <li><a href="#"><img src="../images/googleplay.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/apple.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/naver.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/youtube.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/facebook.svg" alt=""></a></li>
+        </ul>
+        <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
+    </footer>
+</body></html>
