@@ -44,7 +44,13 @@ header .navibar li a:last-child {
     margin-left: 5.5556vw;
 }
 
+header .navibar li a img {
+    display: block;
+    width: 100%;
+}
+
 aside li:first-child a img {
+    display: block;
     width: 100%;
 
 }
@@ -558,12 +564,20 @@ aside li:first-child a img {
 }
 
 /*********** TAB ****************/
+/*상단고정 css*/
+/*.fixed {
+    position: fixed;
+    left: 0;
+    top: 14.4444vw;
+    z-index: 999;
+}*/
 
 .pdt-tab {
     width: 100%;
     border-top: 0.2778vw solid #eee;
     border-bottom: 0.2778vw solid #eee;
     margin-bottom: 11.1111vw;
+    background-color: #fff;
 }
 .pdt-tab ul{
     display: flex;
@@ -616,6 +630,9 @@ aside li:first-child a img {
     width: 8.8889vw;
     height: 6.3889vw;
     background-image: url(../images/detail/quotes_left.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left top;
     position: absolute;
     left: 50%;
     top: 11.1111vw;
@@ -627,6 +644,9 @@ aside li:first-child a img {
     width: 8.8889vw;
     height: 6.3889vw;
     background-image: url(../images/detail/quotes_right.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left top;
     position: absolute;
     left: 50%;
     bottom: 11.1111vw;
@@ -638,12 +658,16 @@ aside li:first-child a img {
     margin-bottom: 22.2222vw;
 }
 .pdt-description .pdt-data h3 {
+    font-size: 5.0000vw;
     position: relative;
     padding: 6.6667vw 0;
     border-bottom: 0.2778vw solid #111;
     margin-bottom: 2.2222vw;
 }
 .pdt-description .pdt-data h3 span {
+    display: block;
+    width: 6.6667vw;
+    height: 6.6667vw;
     position: absolute;
     right: 0;
     top: 50%;
@@ -652,6 +676,9 @@ aside li:first-child a img {
 .pdt-description .pdt-data h3 span img {
     width: 100%;
     display: block;
+}
+.pdt-description .pdt-data > ul {
+    display: none;
 }
 .pdt-description .pdt-data > ul > li {
     padding: 4.4444vw 0;
@@ -772,6 +799,8 @@ aside li:first-child a img {
      line-height: 6.6667vw;
     padding-left: 7.7778vw;
      background-image: url(../images/detail/lock.svg);
+     background-size: 4.4444vw;
+     background-position: center left;
      background-repeat: no-repeat;
 }
 .detail-qna .detail-qna-top .private span {
@@ -1040,7 +1069,10 @@ aside li:first-child a img {
     top: 50%;
     transform: translateY(-50%);
 }
-.brand-link h3 span img{}
+.brand-link h3 span img{
+    display: block;
+    width: 100%;
+}
 .brand-link p{
     font-size: 3.8889vw;
     color: #fff;
