@@ -9,3 +9,7 @@ https://uzen-lune.github.io/bylynn/stella/html/navigation_drawer_layer_mobile.ht
 <hr>
 <h2><strong>전시</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/display.html 
+
+<hr>
+<h2><strong>상세</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/detail.html 
