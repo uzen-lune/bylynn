@@ -568,7 +568,7 @@ aside li:first-child a img {
 /*********** TAB ****************/
 /*상단고정 css*/
 .fixed {
-    position: sticky;
+    position: fixed;
     width: 100%;
     z-index: 999;
 }

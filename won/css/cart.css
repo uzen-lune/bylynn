@@ -92,84 +92,200 @@ header .navibar li a img {
     background-size: 24px;
 }
 .cart-contents .cart-dpt {}
-.cart-pdt .group1 {
+.cart-pdt .group-title {
     padding: 22px 0;
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     
 }
-.cart-pdt .group1 div {
+.cart-pdt .group-title div {
     display: flex;
 }
-.cart-pdt .group1 div label {
+.cart-pdt .group-title div label {
     margin-left: 8px;
     font-size: 16px;
 }
-.cart-pdt .group1 a {
+.cart-pdt .group-title a {
     font-size: 13px;
     color: #999;
     text-decoration: underline;
 }
-.cart-pdt .group-pdt-box {
+.cart-pdt .box {
     padding-top: 24px;
 }
-.cart-pdt .group-pdt-box .box-check {
+.cart-pdt .box .box-check {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
 }
-.cart-pdt .group-pdt-box .box-check input{}
-.cart-pdt .group-pdt-box .box-check ul{
+.cart-pdt .box .box-check input{}
+.cart-pdt .box .box-check ul{
     display: flex;
 }
-.cart-pdt .group-pdt-box .box-check ul li {
+.cart-pdt .box .box-check ul li {
     width: 24px;
     height: 24px;
     font-size: 0;
 }
-.cart-pdt .group-pdt-box .box-check ul .pdt-wish {
+.cart-pdt .box .box-check ul .pdt-wish {
     background-image: url(../images/cart/wish-black.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
         
 }
-.cart-pdt .group-pdt-box .box-check ul .pdt-delete {
+.cart-pdt .box .box-check ul .pdt-delete {
     background-image: url(../images/cart/close.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     margin-left: 16px;
 }
-.cart-pdt .group-pdt-box .pdt-info {}
-.cart-pdt .group-pdt-box .pdt-info .pdt-img{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-img img{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-brand{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-option{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-option li{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-option li a{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-price li{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-price li img{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-total{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-total li{}
-.cart-pdt .group-pdt-box .pdt-info .pdt-info-total li select{}
+.cart-pdt .box .pdt-info {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+}
+.cart-pdt .box .pdt-info .container {
+    display: flex;
+    margin-bottom: 24px;
+}
+.pdt-info .pdt-info-img{
+    width: 74px;
+    margin-right: 16px;
+    position: relative;
+}
+.pdt-info .pdt-info-img img{
+    display: block;
+    width: 100%;
+}
+.pdt-info .pdt-info-img .soldOut-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.pdt-info .pdt-info-img .soldOut-bg span {
+    font-size: 14px;
+    color: #666;
+}
+.pdt-info .pdt-info-detail{
+}
+.pdt-info .pdt-info-detail .pdt-brand{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.pdt-info .pdt-info-detail h4 {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+.pdt-info .pdt-info-detail .pdt-option{
+    display: flex;
+    margin-bottom: 13px;
+}
+.pdt-info .pdt-info-detail .pdt-option li{
+    font-size: 13px;
+    color: #666;
+}
+.pdt-info .pdt-info-detail .pdt-option li a{
+    font-size: 13px;
+    margin-left: 12px;
+    color: #999; 
+    text-decoration: underline;
+}
+.pdt-info .pdt-info-detail .pdt-price {
+    display: flex;
+    align-items: center;
+}
+.pdt-info .pdt-info-detail .pdt-price li:first-of-type{
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 12px;
+}
+.pdt-info .pdt-info-detail .pdt-price li:nth-of-type(2){
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+.pdt-info .pdt-info-detail .pdt-price li img{
+    display: block;
+    width: 20px;
+}
+.pdt-info .soldOut-text {
+    display: none;
+    margin-bottom: 24px;
+}
+.pdt-info .soldOut-text p {
+    font-size: 13px;
+    color: #D9320B;
+}
+.pdt-info .pdt-info-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pdt-info .pdt-info-total li{
+    font-size: 16px;
+    font-weight: 700;
+}
+.pdt-info .pdt-info-total li select{
+    width: 74px;
+    height: 48px;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-image: url(../images/cart/down.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: right 16px center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.cart-pdt .box .pdt-benefits {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.cart-pdt .box .pdt-benefits p:first-of-type {
+    font-size: 13px;
+}
+.cart-pdt .box .pdt-benefits p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+}
 
 
+/******** 품절 ***********/
+.soldOut .pdt-info .pdt-info-img .soldOut-bg {
+    display: flex;
+}
+.soldOut .pdt-info .soldOut-text {
+    display: block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.soldOut .pdt-info .pdt-info-detail .pdt-option {
+    display: none;
+}
+.soldOut .pdt-info .pdt-info-total li:last-of-type {
+    display: none;
+}
+.cart-pdt .soldOut .pdt-benefits {
+    display: none;
+}
+.cart-pdt .soldOut .box-check ul .pdt-wish {
+    background-image: url(../images/cart/wish.svg);
+}
 
 
 

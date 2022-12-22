@@ -512,7 +512,9 @@
                     var tabTop = contents.offset().top;
                     var headerH = $('header').height();
                     var tabH = tab.height();
+                    var linkH = $('.brand-link').offset().top;
                     var plus = headerH + tabH;
+                    var lh = linkH - plus;
                     var h = tabTop - plus - 1;
                      console.log("스크롤값:" + scTop);
                     console.log("컨텐츠 높이값:" + tabTop);
@@ -523,16 +525,26 @@
                     });
 
                     if (scTop >= h) {
-                        $('.pdt-tab').addClass("fixed");
-                        /*contents.css({
+                        tab.addClass("fixed");
+                        contents.css({
                             paddingTop: tabH 
-                        });*/
+                        });
                     } else {
-                        $('.pdt-tab').removeClass("fixed");
-                        /*contents.css({
+                        tab.removeClass("fixed");
+                        contents.css({
                             paddingTop: 0
-                        });*/
+                        });
                     };
+                    if (scTop > lh){
+                        tab.hide();
+                    }else{
+                        tab.show();
+                    };
+                    
+                    
+                    $(li).click(function(){
+                        $(window).scrollTop(tabTop);
+                    });
                 });
 
                 
