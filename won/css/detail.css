@@ -14,7 +14,8 @@ header {
     left: 0;
     top: 0;
     z-index: 99;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.2778vw solid #eee;
+    box-sizing: border-box;
 }
 
 header .navibar {
@@ -567,9 +568,8 @@ aside li:first-child a img {
 /*********** TAB ****************/
 /*상단고정 css*/
 .fixed {
-    position: fixed;
+    position: sticky;
     width: 100%;
-    top: 14.4444vw;
     z-index: 999;
 }
 
@@ -578,6 +578,7 @@ aside li:first-child a img {
     border-top: 0.2778vw solid #eee;
     border-bottom: 0.2778vw solid #eee;
     background-color: #fff;
+    box-sizing: border-box;
 }
 .pdt-tab ul{
     display: flex;
@@ -616,7 +617,7 @@ aside li:first-child a img {
      padding-top: 22.2222vw;
 }
 /*.pdt-detail .tab-contents .pdt-description {
-   
+     padding-top: 22.2222vw;
 }*/
 
 /******* description **************/
@@ -718,6 +719,7 @@ aside li:first-child a img {
 
 .pdt-detail .pdt-review {
     margin-bottom: 16.6667vw;
+    display: none;
 }
 
 
@@ -736,6 +738,7 @@ aside li:first-child a img {
 /********  Q&A *************/
 .pdt-detail .pdt-qna {
     margin-bottom: 16.6667vw;
+    display: none;
 }
 .pdt-qna .btn-qna {
     width: 88.8889vw;
@@ -909,6 +912,7 @@ aside li:first-child a img {
 .purchase-info {
     width: 88.8889vw;
     margin: 0 auto;
+    display: none;
 }
 .purchase-info h3 {
     font-size: 5.0000vw;
@@ -1101,7 +1105,7 @@ aside li:first-child a img {
     width: 5.0000vw;
     height: 2.5000vw;
     position: absolute;
-    right: 6.6667vw;;
+    right: 6.6667vw;
     top: 50%;
     transform: translateY(-50%);
 }
