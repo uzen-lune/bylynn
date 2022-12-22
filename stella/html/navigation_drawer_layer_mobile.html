@@ -12,13 +12,13 @@
     <script>
         $(document).ready(function() {
             $('.depth1').click(function() {
-                $(this).parent('li').children('.detail-wrap').stop().slideToggle(100);
-                $(this).parent('li').siblings().children('.detail-wrap').slideUp(100);
-                $('.depth3').stop().slideUp(100);
+                $(this).parent('li').children('.detail-wrap').stop().slideToggle(200);
+                $(this).parent('li').siblings().children('.detail-wrap').slideUp(200);
+                $('.depth3').stop().slideUp(200);
             });
 
             $('.depth2').click(function() {
-                $(this).parent('li').children('.depth3').stop().slideToggle(100);
+                $(this).parent('li').children('.depth3').stop().slideToggle(200);
             });
         });
     </script>
