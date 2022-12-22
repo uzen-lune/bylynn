@@ -29,7 +29,9 @@ body {
 p, a, li {
     font-size: 4.4444vw;
 }
-
+button {
+    font-family: Pretendard;
+}
 /************header*****************/
 /* header {} */
 

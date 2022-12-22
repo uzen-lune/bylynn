@@ -474,39 +474,74 @@
                     $(".tab-contents .pdt-description").show();
                     $(".tab-contents .pdt-description").siblings().hide();
                 });
-                li2.click(function(){
+                li2.click(function() {
                     $(".tab-contents .pdt-review").show();
                     $(".tab-contents .pdt-review").siblings().hide();
-                    
+
                 });
-                li3.click(function(){
+                li3.click(function() {
                     $(".tab-contents .pdt-qna").show();
                     $(".tab-contents .pdt-qna").siblings().hide();
-                    
+
                 });
-                li4.click(function(){
+                li4.click(function() {
                     $(".tab-contents .purchase-info").show();
                     $(".tab-contents .purchase-info").siblings().hide();
                 });
-            </script>
 
-            <!--<script>
-               
-                $(window).scroll(function(){
+
+                /*$(window).scroll(function() {
                     var scTop = $(this).scrollTop();
                     console.log("스크롤값" + scTop);
                     var tab = $('.pdt-tab');
                     var tabTop = tab.offset().top;
                     console.log(tabTop);
-                    
-                    if (scTop > tabTop){
+
+                    if (scTop > tabTop) {
                         tab.addClass("fixed");
-                    }else{
+                    } else if(scTop < tabTop){
                         tab.removeClass("fixed");
                     };
-                });
+                });*/
                 
-            </script>-->
+                
+                $(window).scroll(function(){
+                    var scTop = $(this).scrollTop();
+                   
+                    var tab = $('.pdt-tab');
+                    var contents = $('.tab-contents');
+                    var tabTop = contents.offset().top;
+                    var headerH = $('header').height();
+                    var tabH = tab.height();
+                    var plus = headerH + tabH;
+                    var h = tabTop - plus;
+                     console.log("스크롤값:" + scTop);
+                    console.log("컨텐츠 높이값:" + tabTop);
+                    console.log("헤더+탭높이값:" + plus);
+
+                    if (scTop >= h) {
+                        $('.pdt-tab').addClass("fixed");
+                        contents.css({
+                            paddingTop: tabH 
+                        });
+                    } else {
+                        $('.pdt-tab').removeClass("fixed");
+                        contents.css({
+                            paddingTop: 0
+                        });
+                    };
+                });
+
+                
+            </script>
+           
+                
+
+                
+
+            
+
+
 
 
             <!-- 상품설명 -->

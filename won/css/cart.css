@@ -50,6 +50,128 @@ header .navibar li a img {
     margin: 0 auto;
     padding-top: 32px;   
 }
+.cart-contents h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.cart-contents form {}
+.cart-contents form input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+}
+.cart-contents .delete-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #666;
+    /*outline: 1px solid red;*/
+}
+
+.cart-contents .delete-area label[for=select-all] {
+    font-size: 14px;
+    color: #666;
+    margin-left: 8px;
+    margin-right: 12px;
+}
+.cart-contents .delete-area button {
+    background-color: #fff;
+    border: 1px solid #666;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 8px;
+    padding: 0 12px;
+    font-size: 13px;
+}
+.cart-contents .delete-area .refresh {
+    width: 40px;
+    font-size: 0;
+    background-image: url(../images/cart/reset.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+}
+.cart-contents .cart-dpt {}
+.cart-pdt .group1 {
+    padding: 22px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cart-pdt .group1 div {
+    display: flex;
+}
+.cart-pdt .group1 div label {
+    margin-left: 8px;
+    font-size: 16px;
+}
+.cart-pdt .group1 a {
+    font-size: 13px;
+    color: #999;
+    text-decoration: underline;
+}
+.cart-pdt .group-pdt-box {
+    padding-top: 24px;
+}
+.cart-pdt .group-pdt-box .box-check {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.cart-pdt .group-pdt-box .box-check input{}
+.cart-pdt .group-pdt-box .box-check ul{
+    display: flex;
+}
+.cart-pdt .group-pdt-box .box-check ul li {
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+}
+.cart-pdt .group-pdt-box .box-check ul .pdt-wish {
+    background-image: url(../images/cart/wish-black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+        
+}
+.cart-pdt .group-pdt-box .box-check ul .pdt-delete {
+    background-image: url(../images/cart/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-left: 16px;
+}
+.cart-pdt .group-pdt-box .pdt-info {}
+.cart-pdt .group-pdt-box .pdt-info .pdt-img{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-img img{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-brand{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-option{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-option li{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-option li a{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-price li{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-detail .pdt-price li img{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-total{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-total li{}
+.cart-pdt .group-pdt-box .pdt-info .pdt-info-total li select{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

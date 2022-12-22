@@ -566,18 +566,17 @@ aside li:first-child a img {
 
 /*********** TAB ****************/
 /*상단고정 css*/
-/*.fixed {
+.fixed {
     position: fixed;
-    left: 0;
+    width: 100%;
     top: 14.4444vw;
     z-index: 999;
-}*/
+}
 
 .pdt-tab {
     width: 100%;
     border-top: 0.2778vw solid #eee;
     border-bottom: 0.2778vw solid #eee;
-    margin-bottom: 11.1111vw;
     background-color: #fff;
 }
 .pdt-tab ul{
@@ -610,9 +609,15 @@ aside li:first-child a img {
     bottom: 0;
     
 }
-.pdt-detail .pdt-description {
+/*.pdt-detail .tab-contents {
     padding-top: 11.1111vw;
+}*/
+.pdt-detail .tab-contents > div {
+     padding-top: 22.2222vw;
 }
+/*.pdt-detail .tab-contents .pdt-description {
+   
+}*/
 
 /******* description **************/
 
