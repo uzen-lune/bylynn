@@ -29,7 +29,7 @@
             var infoTitleHeight = $('.product-info > ul').height();
             var nextContent = $('.detail-banner').offset().top;
 
-            if (scTop >= (productInfo - infoTitleHeight) && scTop < (nextContent) - 20) {
+            if (scTop >= (productInfo - infoTitleHeight) && scTop < (nextContent - infoTitleHeight)) {
                 $('.product-info > ul').addClass('topfixed').siblings('.product-info-wrap').css({
                     /*paddingTop: '60px'*/
                     paddingTop: '10px'
