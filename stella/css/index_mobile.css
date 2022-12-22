@@ -1035,6 +1035,7 @@ main .bnavi a {
     width: 40px;
     height: 40px;
     border: 1px solid #eee;
+    box-sizing: border-box;
     border-radius: 50%;
     background-color: #fff;
     position: fixed;
@@ -1045,13 +1046,14 @@ main .bnavi a {
 
 .main-contents .contact a img {
     display: block;
-    padding: 8px;
+    padding: 6.5px;
 }
 
 .main-contents .totop {
     width: 40px;
     height: 40px;
     border: 1px solid #eee;
+    box-sizing: border-box;
     border-radius: 50%;
     background-color: #fff;
     position: fixed;
@@ -1062,5 +1064,5 @@ main .bnavi a {
 
 .main-contents .totop a img {
     display: block;
-    padding: 8px;
+    padding: 6.5px;
 }
