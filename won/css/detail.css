@@ -324,6 +324,12 @@ aside li:first-child a img {
 }
 .pdt-introduction .pdt-info .review a {
     font-size: 3.6111vw;
+    color: #111;
+    padding-right: 3.6111vw;
+    background-image: url(../images/detail/arrow_right.svg);
+    background-repeat: no-repeat;
+    background-size: 1.9444vw;
+    background-position: center right;
 }
 
 .pdt-introduction .benefits {
@@ -469,7 +475,7 @@ aside li:first-child a img {
     position: absolute;
     right: 2.7778vw;
     top: 3.0556vw;
-    background-image: url(../images/heart.png);
+    background-image: url(../images/wish.svg);
     background-repeat: no-repeat;
     background-size: 5.8333vw;
     background-position: center;

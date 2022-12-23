@@ -140,6 +140,13 @@ width: 100%;}
     align-items: center;
     z-index: 99;
 }
+.bottom-menu a {
+    width: 6.6667vw;
+    height: 6.6667vw;
+}
+.bottom-menu a img {
+    width: 100%;
+}
 
 /* aside */
 aside {

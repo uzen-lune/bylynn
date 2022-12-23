@@ -200,7 +200,10 @@ main .main-txt .des {
     width: 5.5556vw; position: absolute;
     top: 3.0556vw; right: 2.7778vw;
 }
-.swiper-slide .img-box .like img{display: block;}
+.swiper-slide .img-box .like img{
+    width: 100%;
+    display: block;
+}
 .swiper-slide .sel-color {display: flex; margin-bottom: 3.3333vw;}
 .swiper-slide .sel-color li{
     width: 6.6667vw; height: 6.6667vw;
@@ -518,6 +521,7 @@ main .main-txt .des {
 .review h2 {
     margin-bottom: 4.4444vw;
     margin-left: 5.5556vw;
+    font-size: 6.6667vw;
 }
 .review .box-wrap {
     margin-left: 5.5556vw;

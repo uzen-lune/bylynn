@@ -15,19 +15,17 @@
     <script>
         $(document).ready(function() {
             // wish 색 변경
-
             $('.pdt-wish').click(function() {
-                var w = $(this).css('background-image');
-                var fullWish = 'url("http://127.0.0.1:57545/images/cart/wish-black.svg")';
-                if (w == fullWish) {
+                var backImg = $(this).css("background-image");
+                if(backImg.match("black")){
                     $(this).css({
-                        backgroundImage: "url(../images/cart/wish.svg)"
+                        backgroundImage : "url(../images/cart/wish.svg)"
                     });
-                } else {
+                }else{
                     $(this).css({
-                        backgroundImage: "url(../images/cart/wish-black.svg)"
+                        backgroundImage : "url(../images/cart/wish-black.svg)"
                     });
-                }
+                };
             });
 
         });
