@@ -20,4 +20,4 @@ https://uzen-lune.github.io/bylynn/won/html/detail.html (완료)
 
 <hr>
 <h2><strong>장바구니</strong></h2> (진행중)
-<-- https://uzen-lune.github.io/bylynn/won/html/detail.html -->
+<-- https://uzen-lune.github.io/bylynn/won/html/cart.html -->
