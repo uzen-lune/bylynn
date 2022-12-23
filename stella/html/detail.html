@@ -45,6 +45,18 @@
                 //$(window).scrollTop(productInfo - infoTitleHeight);
                 $(window).scrollTop(productInfo - 40);
             });
+
+            if (scTop >= (nextContent - infoTitleHeight - 50)) {
+                /* $('.product-info > ul').css({
+                     display: 'none'
+                 });*/
+                $('.product-info > ul').hide();
+            } else {
+                /*$('.product-info > ul').css({
+                    display: 'flex',
+                });*/
+                $('.product-info > ul').show();
+            }
         });
 
         $(document).ready(function() {
