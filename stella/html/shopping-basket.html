@@ -19,14 +19,20 @@
                 scrollTop: 0
             }, 10);
 
-        }); 
+            $('.keeping').click(function() {
+                $(this).children('img').attr({
+                    src: '../images/keeping_black.svg'
+                });
+            });
+
+        });
     </script>
 </head>
 
 <body>
     <!--header-->
     <header>
-        <div class="detail-header">
+        <div class="basket-header">
             <div class="inner">
                 <div class="return">
                     <a href="" class="back"><img src="../images/back.svg" alt="뒤로가기"></a>
@@ -39,11 +45,419 @@
             </div>
         </div>
     </header>
- 
- 
+
+
     <!--shopping-basket content-->
     <article class="shopping-basket_content">
+        <form action="#" method="post" name="basketfrm">
+            <fieldset>
+                <legend>장바구니</legend>
+                <div class="delete">
+                    <input type="checkbox" id="all-chk" name="" value="">
+                    <label for="all-chk">전체선택</label>
+                    <ul>
+                        <li>
+                            <button type="button" onclick="">선택삭제</button>
+                            <button type="button" onclick="">주문불가 삭제</button>
+                            <button type="reset" onclick=""><img src="../images/reset.svg" alt="리셋"></button>
+                        </li>
+                    </ul>
+                </div>
 
+                <!--bylynn-1-->
+                <div class="bylynn1">
+                    <ul>
+                        <li class="bylynn1-top">
+                            <div class="inner">
+                                <input type="checkbox" id="bylynn1-all">
+                                <label for="bylynn1-all">바이린1 배송상품</label>
+                                <a href="#none">지역별 추가배송비</a>
+                            </div>
+                        </li>
+                        <li class="bylynn1-box">
+                            <div class="inner">
+                                <div class="box-top">
+                                    <input type="checkbox" id="chkbox1">
+                                    <label for="chkbox1">제품선택</label>
+                                    <div>
+                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="sel-product-info">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="sel-product-txt">
+                                        <p><span>LYNN</span> <br>클래식 크롭 테일러드 자켓</p>
+                                        <p>브라운/55<a href="#none">옵션변경</a></p>
+                                        <p>197,100원 <del>219,000원</del><img src="../images/down_btn.svg" alt=""></p>
+                                    </div>
+                                </div>
+                                <div class="sum">
+                                    <select class="quantity-select">
+                                        <option value="0">1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option>
+                                        <option value="3">4</option>
+                                        <option value="4">5</option>
+                                        <option value="5">6</option>
+                                        <option value="6">7</option>
+                                        <option value="7">8</option>
+                                        <option value="8">9</option>
+                                        <option value="9">10</option>
+                                    </select>
+                                    <div class="sel-price">
+                                        <p>197,100원</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-fee">
+                                    <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bylynn1-box unable-order">
+                            <div class="inner">
+                                <div class="box-top">
+                                    <input type="checkbox" id="chkbox2" disabled>
+                                    <label for="chkbox2">제품선택</label>
+                                    <div>
+                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="sel-product-info">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <p class="sold-out">품절</p>
+                                    <div class="sel-product-txt">
+                                        <p><span>LYNN</span> <br>클래식 크롭 테일러드 자켓</p>
+                                        <p>브라운/55</p>
+                                    </div>
+                                </div>
+                                <p class="unable-order-txt">* 주문할 수 없습니다.</p>
+                                <div class="sum">
+                                    <select class="quantity-select" disabled>
+                                        <option value="0">1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option>
+                                        <option value="3">4</option>
+                                        <option value="4">5</option>
+                                        <option value="5">6</option>
+                                        <option value="6">7</option>
+                                        <option value="7">8</option>
+                                        <option value="8">9</option>
+                                        <option value="9">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--bylynn-2-->
+                <div class="bylynn2">
+                    <ul>
+                        <li class="bylynn2-top">
+                            <div class="inner">
+                                <input type="checkbox" id="bylynn2-all">
+                                <label for="bylynn2-all">바이린2 배송상품</label>
+                                <a href="#none">지역별 추가배송비</a>
+                            </div>
+                        </li>
+                        <li class="bylynn2-box">
+                            <div class="inner">
+                                <div class="box-top">
+                                    <input type="checkbox" id="chkbox3">
+                                    <label for="chkbox3">제품선택</label>
+                                    <div>
+                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="sel-product-info">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="sel-product-txt">
+                                        <p><span>LYNN</span> <br>클래식 크롭 테일러드 자켓</p>
+                                        <p>브라운/55<a href="#none">옵션변경</a></p>
+                                        <p>197,100원</p>
+                                    </div>
+                                </div>
+                                <p class="freebie"><span>[사은품]</span> 브랜드명 사은품명-1개 (2개) <span>* 소진</span></p>
+                                <div class="sum">
+                                    <select class="quantity-select">
+                                        <option value="0">1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option>
+                                        <option value="3">4</option>
+                                        <option value="4">5</option>
+                                        <option value="5">6</option>
+                                        <option value="6">7</option>
+                                        <option value="7">8</option>
+                                        <option value="8">9</option>
+                                        <option value="9">10</option>
+                                    </select>
+                                    <div class="sel-price">
+                                        <p>197,100원</p>
+                                    </div>
+                                </div>
+                                <div class="add">
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="price">5000원</span><a href="#none"><img src="../images/close_M.svg" alt=""></a></p>
+                                    <div class="sum">
+                                        <select class="quantity-select">
+                                            <option value="0">1</option>
+                                            <option value="1">2</option>
+                                            <option value="2">3</option>
+                                            <option value="3">4</option>
+                                            <option value="4">5</option>
+                                            <option value="5">6</option>
+                                            <option value="6">7</option>
+                                            <option value="7">8</option>
+                                            <option value="8">9</option>
+                                            <option value="9">10</option>
+                                        </select>
+                                        <div class="sel-price">
+                                            <p>10,000원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-fee">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bylynn2-box">
+                            <div class="inner">
+                                <div class="box-top">
+                                    <input type="checkbox" id="chkbox4">
+                                    <label for="chkbox4">제품선택</label>
+                                    <div>
+                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="sel-product-info">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="sel-product-txt">
+                                        <p><span>LYNN</span> <br>클래식 크롭 테일러드 자켓</p>
+                                        <p>브라운/55<a href="#none">옵션변경</a></p>
+                                    </div>
+                                </div>
+                                <div class="sum">
+                                    <select class="quantity-select">
+                                        <option value="0">1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option>
+                                        <option value="3">4</option>
+                                        <option value="4">5</option>
+                                        <option value="5">6</option>
+                                        <option value="6">7</option>
+                                        <option value="7">8</option>
+                                        <option value="8">9</option>
+                                        <option value="9">10</option>
+                                    </select>
+                                    <div class="sel-price">
+                                        <p>197,100원</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-fee">
+                                    <p>배송비 (수량 1개당)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bylynn2-box modal">
+                            <div class="inner">
+                                <div class="box-top">
+                                    <input type="checkbox" id="chkbox5">
+                                    <label for="chkbox5">제품선택</label>
+                                    <div>
+                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="sel-product-info">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="sel-product-txt">
+                                        <p><span>LYNN</span> <br>클래식 크롭 테일러드 자켓</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="black-box">
+                                <p>가격 및 혜택 정보가 변경되었습니다.</p>
+                                <a href="#none"><img src="../images/reset.svg" alt="">변경정보 새로고침</a>
+                            </div>
+                        </li>
+                        <li class="bylynn2-box">
+                            <div class="inner">
+                                <div class="box-top">
+                                    <input type="checkbox" id="chkbox6">
+                                    <label for="chkbox6">제품선택</label>
+                                    <div>
+                                        <a href="#none"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="sel-product-info">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="sel-product-txt">
+                                        <p><span>LYNN</span> <br>클래식 크롭 테일러드 자켓</p>
+                                        <p>브라운/55<a href="#none">옵션변경</a></p>
+                                        <p>197,100원 <del>219,000원</del><img src="../images/down_btn.svg" alt=""></p>
+                                    </div>
+                                </div>
+                                <div class="freebie-box">
+                                    <p><span>[사은품]</span> 브랜드명 사은품명-1개 (2개)</p>
+                                    <p><span>[사은품]</span> 브랜드명 사은품명-1개 (2개)<span>* 소진</span></p>
+                                </div>
+                                <div class="sum">
+                                    <select class="quantity-select">
+                                        <option value="0">1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option>
+                                        <option value="3">4</option>
+                                        <option value="4">5</option>
+                                        <option value="5">6</option>
+                                        <option value="6">7</option>
+                                        <option value="7">8</option>
+                                        <option value="8">9</option>
+                                        <option value="9">10</option>
+                                    </select>
+                                    <div class="sel-price">
+                                        <p>197,100원</p>
+                                    </div>
+                                </div>
+                                <div class="add">
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="price">5000원</span><a href="#none"><img src="../images/close_M.svg" alt=""></a><br><span class="order-quantity">* 해당 상품의 판매가능수량은 {0}개 입니다.</span></p>
+                                    <div class="sum">
+                                        <select class="quantity-select">
+                                            <option value="0">1</option>
+                                            <option value="1">2</option>
+                                            <option value="2">3</option>
+                                            <option value="3">4</option>
+                                            <option value="4">5</option>
+                                            <option value="5">6</option>
+                                            <option value="6">7</option>
+                                            <option value="7">8</option>
+                                            <option value="8">9</option>
+                                            <option value="9">10</option>
+                                        </select>
+                                        <div class="sel-price">
+                                            <p>10,000원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add">
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="not">* 품절</span><a href="#none"><img src="../images/close_M.svg" alt=""></a><br><span class="not-order">* 주문할 수 없습니다. </span></p>
+                                    <div class="sum">
+                                        <select class="quantity-select" disabled>
+                                            <option value="0">1</option>
+                                            <option value="1">2</option>
+                                            <option value="2">3</option>
+                                            <option value="3">4</option>
+                                            <option value="4">5</option>
+                                            <option value="5">6</option>
+                                            <option value="6">7</option>
+                                            <option value="7">8</option>
+                                            <option value="8">9</option>
+                                            <option value="9">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="add">
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="not">* 판매중지</span><a href="#none"><img src="../images/close_M.svg" alt=""></a><br><span class="not-order">* 주문할 수 없습니다. </span></p>
+                                    <div class="sum">
+                                        <select class="quantity-select" disabled>
+                                            <option value="0">1</option>
+                                            <option value="1">2</option>
+                                            <option value="2">3</option>
+                                            <option value="3">4</option>
+                                            <option value="4">5</option>
+                                            <option value="5">6</option>
+                                            <option value="6">7</option>
+                                            <option value="7">8</option>
+                                            <option value="8">9</option>
+                                            <option value="9">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="delivery-fee">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bylynn2-box">
+                            <div class="inner">
+                                <div class="box-top">
+                                    <input type="checkbox" id="chkbox7">
+                                    <label for="chkbox7">제품선택</label>
+                                    <div>
+                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="sel-product-info">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="sel-product-txt">
+                                        <p><span>LYNN</span> <br>클래식 크롭 테일러드 자켓</p>
+                                        <p>브라운/55<a href="#none">옵션변경</a></p>
+                                        <p>197,100원 <del>219,000원</del><img src="../images/down_btn.svg" alt=""></p>
+                                    </div>
+                                </div>
+                                <p class="order-txt">* 해당 상품의 최소가능수량은 {0}개 입니다.</p>
+                                <div class="sum">
+                                    <select class="quantity-select">
+                                        <option value="0">1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option>
+                                        <option value="3">4</option>
+                                        <option value="4">5</option>
+                                        <option value="5">6</option>
+                                        <option value="6">7</option>
+                                        <option value="7">8</option>
+                                        <option value="8">9</option>
+                                        <option value="9">10</option>
+                                    </select>
+                                    <div class="sel-price">
+                                        <p>197,100원</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-fee">
+                                    <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--total-->
+                <div class="total">
+                    <h3>총 {0}개 합계</h3>
+                    <dl>
+                        <dt>정상판매금액</dt>
+                        <dd>300,000원</dd>
+                    </dl>
+                    <dl>
+                        <dt>할인금액</dt>
+                        <dd>-3,000원</dd>
+                    </dl>
+                    <dl>
+                        <dt>배송비</dt>
+                        <dd>2,500원</dd>
+                    </dl>
+                    <dl>
+                        <dt>결제예정금액</dt>
+                        <dd>290,500원</dd>
+                    </dl>
+                    <ul>
+                        <li>장바구니에 담을 수 있는 상품의 품목은 최대 {0}개입니다.</li>
+                        <li>오랫동안 장바구니에 보관된 상품을 주문하실 경우, 가격이나 혜택이 변동 될 수 있습니다.</li>
+                        <li>구매하기 선택 시, 구매시점에 품절된 상품은 제외하고 주문이 진행됩니다.</li>
+                    </ul>
+                </div>
+            </fieldset>
+        </form>
     </article>
 
 

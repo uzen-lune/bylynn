@@ -1,1 +1,882 @@
 @charset "utf-8";
+
+
+/* basket header */
+.basket-header {
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.basket-header .inner {
+    margin: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basket-header .inner .return {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.basket-header .inner .return .back {
+    width: 24px;
+    height: 24px;
+}
+
+.basket-header .inner .return .back img {
+    width: 11px;
+    height: 20px;
+    padding: 1.8px 6.4px;
+}
+
+.basket-header .inner .return .home {
+    width: 24px;
+    height: 24px;
+    margin-left: 14px;
+}
+
+.basket-header .inner .return .home img {
+    width: 24px;
+    height: 24px;
+}
+
+.basket-header .inner .util {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.basket-header .inner .util .search {
+    width: 24px;
+    height: 24px;
+}
+
+.basket-header .inner .util .search img {
+    width: 24px;
+    height: 24px;
+}
+
+.basket-header .inner .util .shopping_basket {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+}
+
+.basket-header .inner .util .shopping_basket img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* shopping-basket_content */
+.shopping-basket_content {
+    margin-top: 52px;
+}
+
+.shopping-basket_content form {
+    padding-top: 32px;
+}
+
+.shopping-basket_content form fieldset {
+    border: none;
+}
+
+.shopping-basket_content form fieldset legend {
+    font-size: 24px;
+    font-weight: 500;
+    color: #111;
+    margin: 0 20px;
+    margin-bottom: 24px;
+}
+
+.shopping-basket_content form fieldset .delete {
+    margin: 0 20px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+
+input[id="all-chk"] {
+    display: none;
+}
+
+input[id="all-chk"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-top: 5.5px;
+    margin-bottom: 12px;
+}
+
+input[id="all-chk"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.delete ul li button {
+    height: 32px;
+    background-color: #fff;
+    padding: 0 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    border: 1px solid #666;
+    vertical-align: middle;
+}
+
+.delete ul li button img {
+    display: block;
+}
+
+.delete ul li button:nth-of-type(3) {
+    padding: 0 8px;
+}
+
+.shopping-basket_content .bylynn1 {
+    margin-bottom: 60px;
+}
+
+.bylynn1 ul li.bylynn1-top .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0 13px;
+    border-bottom: 1px solid #ccc;
+}
+
+input[id="bylynn1-all"] {
+    display: none;
+}
+
+input[id="bylynn1-all"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+input[id="bylynn1-all"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn1 ul li.bylynn1-top a {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    color: #999;
+    text-decoration-line: underline;
+    margin-top: 4px;
+}
+
+.bylynn1 ul li.bylynn1-box .box-top {
+    height: 20px;
+    padding: 24px 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[id="chkbox1"] {
+    display: none;
+}
+
+input[id="chkbox1"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: #fff;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[id="chkbox1"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn1 ul li.bylynn1-box .box-top div {
+    display: flex;
+    align-items: center;
+}
+
+.bylynn1 ul li.bylynn1-box .box-top a ~ a {
+    margin-left: 18px;
+}
+
+.bylynn1 ul li.bylynn1-box .box-top a:first-of img {
+    display: block;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt {
+    margin-left: 16px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:first-of-type {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    line-height: 22px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:first-of-type span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    line-height: 26px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(2) a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-decoration-line: underline;
+    margin-left: 12px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(3) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    line-height: 30px;
+    position: relative;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(3) del {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(3) img {
+    margin-left: 8px;
+    position: absolute;
+    top: 4.5px;
+}
+
+.bylynn1 ul li.bylynn1-box .sum {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+
+.bylynn1 ul li.bylynn1-box .sum select {
+    width: 74px;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/down.svg') no-repeat 74% center;
+    text-indent: 14px;
+}
+
+.bylynn1 ul li.bylynn1-box .sum select:focus {
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+.bylynn1 ul li.bylynn1-box .sum .sel-price p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    line-height: 48px;
+}
+
+.bylynn1 ul li.bylynn1-box .delivery-fee {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bylynn1 ul li.bylynn1-box .delivery-fee p:first-of-type {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+}
+
+.bylynn1 ul li.bylynn1-box .delivery-fee p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.unable-order .sel-product-info {
+    position: relative;
+}
+
+.unable-order .sel-product-info img {
+    opacity: 0.5;
+}
+
+.unable-order .sel-product-info .sold-out {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    position: absolute;
+    left: 25px;
+    top: 47.5px;
+}
+
+.unable-order-txt {
+    font-size: 13px;
+    color: #d9320b;
+    margin-bottom: 24px;
+}
+
+input[id="chkbox2"] {
+    display: none;
+}
+
+input[id="chkbox2"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: #fff;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[id="chkbox2"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+
+/* bylynn-2 */
+.shopping-basket_content .bylynn2 {
+    margin-bottom: 60px;
+}
+
+.bylynn2 ul li.bylynn2-top .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0 13px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #ccc;
+}
+
+input[id="bylynn2-all"] {
+    display: none;
+}
+
+input[id="bylynn2-all"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+input[id="bylynn2-all"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn2 ul li.bylynn2-top a {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    color: #999;
+    text-decoration-line: underline;
+    margin-top: 4px;
+}
+
+.bylynn2 ul li.bylynn2-box .box-top {
+    height: 20px;
+    padding: 24px 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[id="chkbox3"] {
+    display: none;
+}
+
+input[id="chkbox3"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: #fff;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[id="chkbox3"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn2 ul li.bylynn2-box .box-top div {
+    display: flex;
+    align-items: center;
+}
+
+.bylynn2 ul li.bylynn2-box .box-top a ~ a {
+    margin-left: 18px;
+}
+
+.bylynn2 ul li.bylynn2-box .box-top a:first-of img {
+    display: block;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info {
+    display: flex;
+    padding-bottom: 24px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt {
+    margin-left: 16px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:first-of-type {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    line-height: 22px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:first-of-type span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    line-height: 26px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(2) a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-decoration-line: underline;
+    margin-left: 12px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(3) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    line-height: 30px;
+    position: relative;
+}
+
+.bylynn2 .bylynn2-box .freebie {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.bylynn2 .bylynn2-box .freebie span:nth-of-type(1) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.bylynn2 .bylynn2-box .freebie span:nth-of-type(2) {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d9320b;
+}
+
+.bylynn2 ul li.bylynn2-box .sum {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+
+.bylynn2 ul li.bylynn2-box .sum select {
+    width: 74px;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/down.svg') no-repeat 74% center;
+    text-indent: 14px;
+}
+
+.bylynn2 ul li.bylynn2-box .sum select:focus {
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+.bylynn2 ul li.bylynn2-box .sum .sel-price p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    line-height: 48px;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin: 24px 0;
+    position: relative;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item span:nth-child(1) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+    margin-right: 4px;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item span.price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    margin-left: 8px;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item img {
+    position: absolute;
+    right: 0;
+    top: -6px;
+}
+
+.bylynn2 ul li.bylynn2-box .delivery-fee {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bylynn2 ul li.bylynn2-box .delivery-fee p:first-of-type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+}
+
+.bylynn2 ul li.bylynn2-box .delivery-fee p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+input[id="chkbox4"] {
+    display: none;
+}
+
+input[id="chkbox4"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: #fff;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[id="chkbox4"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+input[id="chkbox5"] {
+    display: none;
+}
+
+input[id="chkbox5"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: #fff;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[id="chkbox5"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.modal {
+    position: relative;
+}
+
+.black-box {
+    width: 100%;
+    height: 197px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -1px;
+}
+
+.black-box p {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.black-box a {
+    display: inline-block;
+    padding: 4px 12px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    line-height: 24px;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    vertical-align: middle;
+}
+
+.black-box a img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+input[id="chkbox6"] {
+    display: none;
+}
+
+input[id="chkbox6"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: #fff;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[id="chkbox6"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(3) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    line-height: 30px;
+    position: relative;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(3) del {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(3) img {
+    margin-left: 8px;
+    position: absolute;
+    top: 4.5px;
+}
+
+.bylynn2 .bylynn2-box .freebie-box {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.bylynn2 .bylynn2-box .freebie-box p ~ p {
+    margin-top: 8px;
+}
+
+.bylynn2 .bylynn2-box .freebie-box p span:nth-of-type(1) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.bylynn2 .bylynn2-box .freebie-box p span:nth-of-type(2) {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d9320b;
+    margin-left: 8px;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item span.order-quantity {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d9320b;
+    line-height: 30px;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item span.not {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d9320b;
+    margin-left: 8px;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item span.not-order {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d9320b;
+    line-height: 30px;
+}
+
+input[id="chkbox7"] {
+    display: none;
+}
+
+input[id="chkbox7"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: #fff;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[id="chkbox7"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn2-box .order-txt {
+    font-size: 13px;
+    color: #d9320b;
+    margin-bottom: 24px;
+}
+
+.total {
+    margin: 0 20px 60px;
+}
+
+.total h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.total dl {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.total dl dt {
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+}
+
+.total dl dd {
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+}
+
+.total dl:last-of-type {
+    padding-top: 16px;
+    border-top: 1px solid #333;
+}
+
+.total dl:last-of-type dt {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.total dl:last-of-type dd {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.total ul li {
+    font-size: 13px;
+    color: #666;
+    line-height: 19px;
+    list-style-image: url(../images/list-style-img.png);
+    list-style-position: outside;
+    margin-left: 10px;
+}
