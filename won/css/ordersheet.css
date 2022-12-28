@@ -1,0 +1,1008 @@
+@charset"utf-8";
+
+body {
+    padding-top: 14.4444vw;
+}
+
+header {
+    width: 100%;
+    height: 14.4444vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    border-bottom: 0.2778vw solid #eee;
+}
+
+header .navibar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5.5556vw;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+
+header .navibar li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+header .navibar li a {
+    width: 6.6667vw;
+    height: 6.6667vw;
+    font-size: 0;
+}
+
+header .navibar li a:last-child {
+    margin-left: 5.5556vw;
+}
+
+header .navibar li a img {
+    display: block;
+    width: 100%;
+}
+
+/** section **/
+.ordersheet-contents {
+    width: 320px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.ordersheet-contents h2 {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+}
+
+.ordersheet-contents .signUp {
+    padding-top: 40px;
+    text-align: center;
+    background-image: url(../images/ordersheet/coupon.svg);
+    background-repeat: no-repeat;
+    background-size: 320px;
+    background-position: center bottom 136px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.ordersheet-contents .signUp p {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.ordersheet-contents .signUp h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 160px;
+}
+
+.ordersheet-contents .signUp a {
+    width: 300px;
+    margin: 0 auto;
+    height: 56px;
+    line-height: 56px;
+    background-color: #111;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ordersheet-contents form {}
+
+form fieldset {
+    border: 0;
+}
+
+form .non-members-agreement {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+
+}
+
+form .non-members-agreement legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #111;
+    margin-bottom: 24px;
+}
+
+form .non-members-agreement p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+form .non-members-agreement div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+form .non-members-agreement div input {
+    width: 20px;
+    height: 20px;
+    accent-color: black;
+
+}
+
+form .non-members-agreement div label {
+    line-height: 20px;
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+form .non-members-agreement div a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-indent: 29px;
+    text-decoration: underline;
+}
+
+/**  customer-order **/
+.customer-order {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.customer-order legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #111;
+    margin-bottom: 24px;
+}
+
+.customer-order .gray-box {
+    padding: 24px 20px 24px 32px;
+    background-color: #f6f6f6;
+    margin-bottom: 24px;
+}
+
+.customer-order .gray-box li {
+    list-style: disc;
+    font-size: 13px;
+    color: #666;
+    line-height: 19px;
+}
+
+.customer-order .gray-box li::marker {
+    font-size: 10px;
+    /* line-height: 19px;*/
+
+}
+
+.customer-order .order-user-info {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+
+.customer-order .order-user-info li {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*.customer-order .order-user-info .userName{}
+.customer-order .order-user-info .userNumber{}
+.customer-order .order-user-info .userMail{}*/
+.customer-order input {
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+}
+
+.customer-order input[type=text],
+.customer-order input[type=number],
+.customer-order input[type=password] {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.customer-order input[type=email] {
+    height: 48px;
+    line-height: 48px;
+}
+
+.customer-order input::placeholder {
+    font-size: 14px;
+    color: #999;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+
+.customer-order .email-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 48px;
+    font-size: 14px;
+}
+
+.customer-order .email-wrap input[id*=Email] {
+    width: 144px;
+}
+
+.customer-order .email-wrap select {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    padding: 0 12px;
+    -webkit-appearance: none;
+    /* 크롬 화살표 없애기 */
+    -moz-appearance: none;
+    /* 파이어폭스 화살표 없애기 */
+    appearance: none;
+    /* 화살표 없애기 */
+    background-image: url(../images/ordersheet/S-down.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: right 14px center;
+}
+
+.customer-order .email-wrap select option {}
+
+.customer-receive {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.customer-receive legend {
+    width: 100%;
+    line-height: 32px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    position: relative;
+    /*outline: 1px solid red;*/
+}
+
+.customer-receive legend span {
+    display: block;
+    width: 84px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.customer-receive .receive-tab {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+}
+
+.customer-receive .receive-tab li {
+    width: 33.33%;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    color: #999;
+}
+
+.customer-receive .receive-tab .active {
+    font-weight: 500;
+    color: #000;
+}
+
+.customer-receive .receive-tab .active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3.75px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.customer-receive > div .receive-user-info {
+    padding-bottom: 14px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+}
+
+.customer-receive > div .receive-user-info li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.customer-receive > div .input-wrap {}
+
+.customer-receive > div .input-wrap li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.customer-receive > div .input-wrap li input {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.customer-receive > div .input-wrap li input::placeholder {
+    color: #999;
+    font-size: 14px;
+    letter-spacing: -1px;
+}
+
+.customer-receive > div .input-wrap #sameUser {
+    width: 20px;
+    height: 20px;
+    accent-color: black;
+}
+
+.customer-receive > div .input-wrap label[for=sameUser] {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.customer-receive > div .input-wrap li #receiveUserName {
+    width: 100%;
+}
+
+.customer-receive > div .input-wrap li #receiveUserNumber {
+    width: 100%;
+}
+
+
+.customer-receive > div .input-wrap .zipCodeWrap {
+    align-items: flex-start;
+}
+
+.customer-receive > div .input-wrap li #receiveZipCode {
+    width: 211px;
+    margin-bottom: 12px;
+}
+
+.customer-receive > div .input-wrap li label[for=receiveZipCode] {
+    height: 48px;
+    line-height: 48px;
+    width: 97px;
+    margin-left: 12px;
+    text-align: center;
+    border: 1px solid #111;
+    box-sizing: border-box;
+
+
+}
+
+.customer-receive > div .input-wrap li #receiveZipCodeDetail {
+    width: 100%;
+}
+
+.customer-receive > div .input-wrap li #receiveMessage {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    -webkit-appearance: none;
+    /* 크롬 화살표 없애기 */
+    -moz-appearance: none;
+    /* 파이어폭스 화살표 없애기 */
+    appearance: none;
+    /* 화살표 없애기 */
+    background-image: url(../images/ordersheet/S-down.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: right 14px center;
+    border: 1px solid #ccc;
+    color: #999;
+}
+
+.customer-receive > div .input-wrap li #receiveMessageDetail {
+    width: 100%;
+    height: 48px;
+    padding: 16px 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.customer-receive > div .input-wrap li #receiveMessageDetail::placeholder {
+    color: #999;
+}
+
+.customer-receive > div .input-wrap li #defaultAddress {
+    width: 20px;
+    height: 20px;
+}
+
+.customer-receive > div .input-wrap li label[for=defaultAddress] {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.customer-receive > div .input-wrap li input:read-only {
+    background-color: #eee;
+}
+
+/* 개인통관 */
+.overseas-direct {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.overseas-direct legend {
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #333;
+}
+
+.overseas-direct input[type=text] {
+    width: 100%;
+    padding-left: 12px;
+    height: 48px;
+    line-height: 48px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+
+}
+
+.overseas-direct input[type=text]::placeholder {
+    color: #999;
+    font-size: 14px;
+    height: 48px;
+}
+
+.overseas-direct > p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 12px;
+}
+.overseas-direct .overseas-checkbox-wrap {
+    display: flex;
+    margin-bottom: 12px;
+}
+.overseas-direct .overseas-checkbox-wrap > div {
+    width: 290px;
+    margin-left: 10px;
+} 
+.overseas-direct .overseas-checkbox-wrap input {
+    width: 20px;
+    height: 20px;
+}
+
+.overseas-direct .overseas-checkbox-wrap label {
+    font-size:14px;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.overseas-direct .overseas-checkbox-wrap a {
+    font-size: 13px;
+    color: #999;
+    text-decoration: underline;
+}
+
+.overseas-direct > ul {
+    margin-top: 24px;
+    background-color: #f6f6f6;
+    padding: 24px 20px 24px 32px;
+    list-style: disc;
+}
+.overseas-direct > ul li::marker {
+    font-size: 10px;
+}
+.overseas-direct > ul li {
+    font-size: 13px;
+    line-height: 19px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.benefits {
+    padding-bottom: 24px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #eee;
+}
+.benefits legend{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #333;
+}
+.benefits .coupon{
+    margin-bottom: 24px;
+}
+.benefits .coupon h4{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.benefits .coupon div{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.benefits .coupon div input{
+    width: 192px;
+    height: 48px;
+    line-height: 48px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    text-align: end;
+    padding-right: 24px;
+}
+.benefits .coupon div label{
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 168px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.benefits .coupon div button{
+    width: 120px;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+}
+.benefits .coupon p{
+    margin-top: 13px;
+    font-size: 14px;
+    color: #666;
+}
+.benefits ul{
+    background-color: #f6f6f6;
+    padding: 24px 20px 24px 32px;
+}
+.benefits ul li{
+    font-size: 13px;
+    color: #666;
+}
+.benefits ul li span {
+    margin-right: 4px;
+}
+/*.benefits ul li::marker {
+    font-size: 10px;
+}*/
+.point {}
+.point legend{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #333;
+}
+.point .point-apply-wrap {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 60px;
+}
+.point .point-apply{
+    margin-bottom: 25px;
+}
+.point .point-apply h4{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.point .point-apply div{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 13px;
+}
+.point .point-apply div input{
+    width: 225px;
+    height: 48px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.point .point-apply div label{
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.point .point-apply div button{
+    width: 87px;
+    height: 48px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #111;
+}
+.point .point-apply .point-available {
+    font-size: 14px;
+    margin-bottom: 13px;
+    color: #666;
+    
+}
+.point .point-apply .point-available-des {
+    font-size: 13px;
+    color: #666;
+}
+
+.payment-information {
+    
+}
+.payment-information legend {
+    width: 100%;
+    line-height: 32px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: 1px solid #333;
+    /*outline: 1px solid red;*/
+}
+
+.payment-information legend span {
+    display: block;
+    width: 84px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.payment-information .same-checkBox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.payment-information .same-checkBox #same-method-of-payment{
+    width: 20px;
+    height: 20px;
+}
+.payment-information .same-checkBox label[for=same-method-of-payment]{
+    margin-left: 8px;
+    font-size: 14px;
+}
+.payment-information .method-of-payment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.payment-information .method-of-payment li{
+    width: 155px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    font-size: 18px;
+    color: #666;
+}
+.payment-information .method-of-payment .active {
+    background-color: #111;
+    color: #fff;
+}
+.payment-information .select-bank {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+.payment-information .select-bank h4{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.payment-information .select-bank select{
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 14px;
+    color: #999;
+    -webkit-appearance: none;
+    /* 크롬 화살표 없애기 */
+    -moz-appearance: none;
+    /* 파이어폭스 화살표 없애기 */
+    appearance: none;
+    /* 화살표 없애기 */
+    background-image: url(../images/ordersheet/S-down.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: right 14px center;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+.payment-information .select-bank p{
+    font-size: 13px;
+    color: #666;
+}
+.payment-information .select-bank p span{
+    margin-right: 4px;
+}
+.payment-information .point-caution {
+    padding: 64px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 24px;
+}
+.payment-information .point-caution p{}
+.payment-information .cash-receipts {}
+.payment-information .cash-receipts .cash-check{
+    display: flex;
+    align-items: center;
+     margin-bottom: 24px;
+}
+.payment-information .cash-receipts .cash-check input{
+    width: 20px;
+    height: 20px;
+    accent-color:#000;}
+.payment-information .cash-receipts .cash-check label{
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+   
+}
+.payment-information .cash-receipts .cash-radio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.payment-information .cash-receipts .cash-radio input{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.payment-information .cash-receipts .cash-radio label{
+    display: inline-block;
+    width: calc(50% - 28px);
+    /*outline: 1px solid red;*/
+    margin-left: 8px;
+    font-size: 14px;
+    color: #666;
+}
+.payment-information .cash-receipts .cash-number {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 32px;
+}
+.payment-information .cash-receipts .cash-number h5{
+    font-size 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.payment-information .cash-receipts .cash-number input{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 24px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.payment-information .cash-receipts .cash-number input::placeholder {
+    color: #999;
+}
+.payment-information .agreement-wrap {
+    padding-bottom: 8px;
+}
+.payment-information .agreement-wrap li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.payment-information .agreement-wrap li input{
+    width: 20px;
+    height: 20px;
+    
+}
+.payment-information .agreement-wrap li label{
+    margin-left: 8px;
+    font-size: 14px;
+    color: #666;
+}
+.payment-information .agreement-wrap li a {
+     font-size: 13px;
+    color: #999;
+    margin-left: 12px;
+    text-decoration: underline;
+}
+
+.payment-information .agreement-wrap .full-agreement label{
+    font-size: 16px;
+    color: #111;
+}
+.payment-information .grayBox-wrap {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 60px;
+}
+.payment-information .grayBox {
+    background-color: #f6f6f6;
+    padding: 24px 20px 24px 32px;
+}
+.payment-information .grayBox li {
+    font-size: 13px;
+    color: #666;line-height: 19px;
+    margin-bottom: 4px;
+}
+.payment-information .grayBox li span {
+    margin-right: 4px;
+    font-size: 14px;
+}
+
+.payment-information .payment-sum {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 24px;
+}
+.payment-information .payment-sum li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.payment-information .payment-sum li:first-child{
+    margin-bottom: 24px;
+}
+.payment-information .payment-sum li h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+.payment-information .payment-sum li p{
+    font-size: 14px;
+}
+.payment-information .payment-final-wrap {}
+.payment-information .payment-final-wrap .payment-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.payment-information .payment-final-wrap .payment-final p:first-of-type{
+    font-size: 18px;
+    font-weight: 500;
+}
+.payment-information .payment-final-wrap .payment-final p:last-of-type{
+    font-size: 24px;
+    font-weight: 700;
+}
+.payment-information .payment-final-wrap .reserved {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.payment-information .payment-final-wrap .reserved p{
+    font-size: 14px;
+}
+.payment-information .payment-final-wrap .all-agreement {
+    display: flex;
+    margin-bottom: 16px;
+}
+.payment-information .payment-final-wrap .all-agreement input {
+    width: 20px;
+    height: 20px;
+}
+.payment-information .payment-final-wrap .all-agreement label {
+    font-size: 16px;
+    margin-left: 8px;
+    
+}
+.payment-information .payment-final-wrap .law-agreement {
+    display: flex;
+    margin-bottom: 16px;
+}
+.payment-information .payment-final-wrap .law-agreement input {
+    width: 20px;
+    height: 20px;
+}
+.payment-information .payment-final-wrap .law-agreement label {
+    width: calc(100% - 28px);
+     font-size: 14px;
+    color: #666;
+     margin-left: 8px;
+}
+.payment-information .payment-final-wrap .terms-of-service {
+    display: flex;
+    position: relative;
+    margin-bottom: 40px;
+}
+.payment-information .payment-final-wrap .terms-of-service input {
+    width: 20px;
+    height: 20px;
+}
+.payment-information .payment-final-wrap .terms-of-service label {
+    font-size: 14px;
+    color: #666;
+     margin-left: 8px;
+}
+.payment-information .payment-final-wrap .terms-of-service a {
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+}
+
+.payment-information .order-btn {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
