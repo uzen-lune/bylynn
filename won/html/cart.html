@@ -34,14 +34,14 @@
             });
             
             //전체선택
-            $('#noneselect-all').click(function(){
+            $('#select-all').click(function(){
                 var allChk = $('input[type=checkbox]');
                 var checked = $(this).prop('checked');
                 console.log(checked);
                 if (checked == true) {
                     /*alert("작동중");*/
                     allChk.prop('checked',true);
-                    $("#nonecart-bynn1-pdt5").prop('checked',false);
+                    $("#cart-bynn1-pdt5").prop('checked',false);
                 }else {
                      allChk.prop('checked',false);
                 }
