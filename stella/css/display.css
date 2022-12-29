@@ -211,11 +211,8 @@
     -moz-appearance: none;
     appearance: none;
     background: url('../images/arrow_d.svg') no-repeat 74% center;
-    /*padding: 15px 40px 15px 0;*/
     padding: 15px 50px 15px 30px;
     box-sizing: border-box;
-    /*text-align: center;*/
-    /*text-indent: 34px;*/
     text-align-last: center;
 }
 
