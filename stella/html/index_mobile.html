@@ -17,6 +17,10 @@
             $('.swiper-slide a').click(function() {
                 $(this).addClass('active').parents('.swiper-slide').siblings('.swiper-slide').children('a').removeClass('active');
             });
+
+            $('.keeping').click(function() {
+                alert("로그인 시에만 위시리스트를 이용하실 수 있습니다.");
+            });
         });
     </script>
 </head>
