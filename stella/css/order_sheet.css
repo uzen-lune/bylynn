@@ -1,0 +1,1693 @@
+@charset "utf-8";
+
+
+/* order_sheet header */
+.order-sheet-header {
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.order-sheet-header .inner {
+    margin: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-sheet-header .inner .return {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.order-sheet-header .inner .return .back {
+    width: 24px;
+    height: 24px;
+}
+
+.order-sheet-header .inner .return .back img {
+    width: 11px;
+    height: 20px;
+    padding: 1.8px 6.4px;
+}
+
+.order-sheet-header .inner .return .home {
+    width: 24px;
+    height: 24px;
+    margin-left: 14px;
+}
+
+.order-sheet-header .inner .return .home img {
+    width: 24px;
+    height: 24px;
+}
+
+.order-sheet-header .inner .util {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.order-sheet-header .inner .util .search {
+    width: 24px;
+    height: 24px;
+}
+
+.order-sheet-header .inner .util .search img {
+    width: 24px;
+    height: 24px;
+}
+
+.order-sheet-header .inner .util .shopping_basket {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+}
+
+.order-sheet-header .inner .util .shopping_basket img {
+    width: 24px;
+    height: 24px;
+}
+
+.order-sheet_content {
+    margin: 52px 20px 0;
+}
+
+.order-sheet_content fieldset {
+    border: 0;
+}
+
+
+/* 주문서작성 */
+.order-sheet_content .order-sheet-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.order-sheet-top legend {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    color: #111;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 40px;
+}
+
+.order-sheet-top .sign-up {
+    text-align: center;
+}
+
+.order-sheet-top .sign-up p:first-of-type {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.order-sheet-top .sign-up p:last-of-type {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    padding-bottom: 165px;
+    background: url(../images/coupon.png) no-repeat center;
+    background-size: 100%;
+}
+
+.order-sheet-top .sign-up a {
+    display: inline-block;
+    width: 100%;
+    padding: 13.5px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #111;
+}
+
+
+/* 비회원 주문 정보수집 동의 */
+.non-mem-order legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+.non-mem-order p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #666;
+}
+
+.non-mem-order .non-mem-agree-wrap {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.non-mem-order .non-mem-agree-wrap .agree-box {
+    position: relative;
+    padding-top: 2px;
+    padding-bottom: 24px;
+}
+
+.non-mem-order .non-mem-agree-wrap .agree-box:first-of-type {
+    margin-top: 10px;
+}
+
+input[id="agree1"] {
+    display: none;
+}
+
+input[id="agree1"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-indent: 28px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    line-height: 18px;
+    position: relative;
+}
+
+input[id="agree1"] + label span {
+    padding-left: 27px;
+}
+
+input[id="agree1"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.non-mem-order .non-mem-agree-wrap .agree-box a {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    color: #999;
+    text-decoration-line: underline;
+    position: absolute;
+    left: 28px;
+    top: 42px;
+}
+
+input[id="agree2"] {
+    display: none;
+}
+
+input[id="agree2"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-indent: 28px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    line-height: 19px;
+    position: relative;
+}
+
+input[id="agree2"] + label span {
+    padding-left: 27px;
+}
+
+input[id="agree2"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+
+/* 주문하시는 분 */
+.order-sheet_content .orderer legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+.order-sheet_content .orderer .order-refer {
+    background-color: #f6f6f6;
+    padding: 24px 20px 24px 35px;
+}
+
+.orderer .order-refer li {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #666;
+    list-style-image: url(../images/list-style-img.png);
+    list-style-position: outside;
+}
+
+.order-sheet_content .orderer .ex-info {
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 24px;
+}
+
+.orderer .ex-info p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #111;
+}
+
+.orderer .ex-info p ~ p {
+    padding-top: 10px;
+}
+
+.order-sheet_content .orderer .user-input {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.orderer .user-input li input {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    text-indent: 12px;
+    padding: 16px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline: 0;
+    margin-bottom: 12px;
+}
+
+.orderer .user-input li input[id="username"] {
+    width: 100%;
+}
+
+.orderer .user-input li input[id="userphone"] {
+    width: 100%;
+}
+
+.orderer .user-input li.email {
+    width: 100.25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.orderer .user-input li input[id="user_email"] {
+    width: 45%;
+}
+
+.orderer .user-input li.email p {
+    padding: 14px 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+}
+
+.orderer .user-input li select {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+    padding: 16px 0 16px 9px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline: 0;
+    margin-bottom: 12px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../images/down.svg) no-repeat 96% 50%;
+}
+
+.orderer .user-input li input[id="pw"] {
+    width: 100%;
+}
+
+.orderer .user-input li input[id="pw_chk"] {
+    width: 100%;
+}
+
+
+/* 받으시는 분 */
+.order-sheet_content .recipient {
+    position: relative;
+}
+
+.order-sheet_content .recipient legend {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.order-sheet_content .recipient > a.delivery-list {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    padding: 8px 12px;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: -57px;
+}
+
+.order-sheet_content .recipient > ul {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 24px;
+}
+
+.recipient > ul li {
+    width: 33.33%;
+    text-align: center;
+    padding: 19px 0;
+}
+
+.recipient > ul li.on {
+    position: relative;
+}
+
+.recipient > ul li.on a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.recipient > ul li.on:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.recipient > ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+}
+
+.recipient .product-information .user-info {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+}
+
+.recipient .product-information .user-info p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+    line-height: 17px;
+}
+
+.product-information .user-info p ~ p {
+    margin-top: 10px;
+}
+
+.recipient .product-information .order-info {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+input[id="order-chkbox1"] {
+    display: none;
+}
+
+input[id="order-chkbox1"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    text-indent: 28px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 19px;
+    margin-bottom: 12px;
+}
+
+input[id="order-chkbox1"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.product-information .order-info ul li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.product-information .order-info ul li input {
+    padding: 16px 0;
+    text-indent: 12px;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+
+.order-info ul li input[id="name"] {
+    width: 100%;
+}
+
+.order-info ul li input[id="phone"] {
+    width: 100%;
+}
+
+.order-info ul li input[id="zipcode"] {
+    width: calc(100% - 140.0999px);
+    background-color: #eee;
+}
+
+.order-info ul li input[id="zipcode_btn"] {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    padding: 15.5px 24px;
+    box-sizing: border-box;
+    border: 1px solid #111;
+    background-color: #fff;
+    text-indent: 0;
+    margin-left: 12px;
+}
+
+.order-info ul li input[id="address"] {
+    width: 100%;
+    background-color: #eee;
+}
+
+.product-information .order-info ul li select {
+    width: 100%;
+    padding: 16px 12px;
+    outline: 0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #999;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../images/down.svg) no-repeat 96% 50%;
+}
+
+.product-information .order-info ul li textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 48px;
+    min-height: 48px;
+    padding: 16px 12px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+
+input[id="order-chkbox2"] {
+    display: none;
+}
+
+input[id="order-chkbox2"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    text-indent: 28px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 19px;
+}
+
+input[id="order-chkbox2"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+
+/* bylynn1 */
+.order-sheet_content .bylynn1 {
+    margin-bottom: 60px;
+}
+
+.bylynn1 ul li.bylynn1-top {
+    display: flex;
+    padding: 24px 0 13px;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #ccc;
+}
+
+input[id="bylynn1-all"] {
+    display: none;
+}
+
+input[id="bylynn1-all"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+input[id="bylynn1-all"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn1 ul li.bylynn1-top a {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    color: #999;
+    text-decoration-line: underline;
+    margin-top: 4px;
+}
+
+.bylynn1 ul li.bylynn1-box {
+    padding-top: 22px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info {
+    display: flex;
+    padding-bottom: 24px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt {
+    margin-left: 16px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:first-of-type {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    line-height: 22px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:first-of-type span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    line-height: 26px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(2) a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-decoration-line: underline;
+    margin-left: 12px;
+}
+
+.bylynn1 ul li.bylynn1-box .sel-product-info .sel-product-txt p:nth-of-type(3) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    line-height: 30px;
+    position: relative;
+}
+
+.bylynn1 .bylynn1-box .freebie-box {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.bylynn1 .bylynn1-box .freebie-box p {
+    margin-bottom: 8px;
+}
+
+.bylynn1 .bylynn1-box .freebie-box span:nth-of-type(1) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.bylynn1 .bylynn1-box .freebie-box span:nth-of-type(2) {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d9320b;
+    margin-left: 8px;
+}
+
+.bylynn1 ul li.bylynn1-box .sum {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.bylynn1 ul li.bylynn1-box .sum p:nth-child(1) {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    line-height: 19px;
+}
+
+.bylynn1 ul li.bylynn1-box .sum p:nth-child(2) {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    line-height: 19px;
+}
+
+.bylynn1 ul li.bylynn1-box .add .add-item {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin: 24px 0;
+    position: relative;
+}
+
+.bylynn1 ul li.bylynn1-box .add .add-item span:nth-child(1) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+    margin-right: 4px;
+}
+
+.bylynn1 ul li.bylynn1-box .delivery-fee {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bylynn1 ul li.bylynn1-box .delivery-fee p:first-of-type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+}
+
+.bylynn1 ul li.bylynn1-box .delivery-fee p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+
+/* bylynn2 */
+.order-sheet_content .bylynn2 {
+    margin-bottom: 60px;
+}
+
+.bylynn2 ul li.bylynn2-top {
+    display: flex;
+    padding: 24px 0 13px;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #ccc;
+}
+
+input[id="bylynn2-all"] {
+    display: none;
+}
+
+input[id="bylynn2-all"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    text-indent: 26px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+input[id="bylynn2-all"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+}
+
+.bylynn2 ul li.bylynn2-top a {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    color: #999;
+    text-decoration-line: underline;
+    margin-top: 4px;
+}
+
+.bylynn2 ul li.bylynn2-box {
+    padding-top: 22px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info {
+    display: flex;
+    padding-bottom: 24px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt {
+    margin-left: 16px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:first-of-type {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    line-height: 22px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:first-of-type span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    line-height: 26px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(2) a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-decoration-line: underline;
+    margin-left: 12px;
+}
+
+.bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt p:nth-of-type(3) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    line-height: 30px;
+    position: relative;
+}
+
+.bylynn2 .bylynn2-box .freebie-box {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.bylynn2 .bylynn2-box .freebie-box p {
+    margin-bottom: 8px;
+}
+
+.bylynn2 .bylynn2-box .freebie-box span:nth-of-type(1) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.bylynn2 .bylynn2-box .freebie-box span:nth-of-type(2) {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d9320b;
+    margin-left: 8px;
+}
+
+.bylynn2 ul li.bylynn2-box .sum {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.bylynn2 ul li.bylynn2-box .sum p:nth-child(1) {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    line-height: 19px;
+}
+
+.bylynn2 ul li.bylynn2-box .sum p:nth-child(2) {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    line-height: 19px;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin: 24px 0;
+    position: relative;
+}
+
+.bylynn2 ul li.bylynn2-box .add .add-item span:nth-child(1) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+    margin-right: 4px;
+}
+
+.bylynn2 ul li.bylynn2-box .delivery-fee {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bylynn2 ul li.bylynn2-box .delivery-fee p:first-of-type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+}
+
+.bylynn2 ul li.bylynn2-box .delivery-fee p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+
+/* promotion */
+.product-information .promotion {
+    margin-bottom: 60px;
+}
+
+.product-information .promotion h3 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+.product-information .promotion h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.product-information .promotion > p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.product-information .promotion ul {
+    border-bottom: 1px solid #eee;
+}
+
+.product-information .promotion ul li {
+    display: flex;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.product-information .promotion ul li.sold-out img {
+    opacity: 0.2;
+}
+
+.product-information .promotion ul li.sold-out > p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    position: absolute;
+    left: 24px;
+    top: 48px;
+}
+
+.product-information .promotion ul li img {
+    margin-right: 16px;
+}
+
+.product-information .promotion ul li .sel-product-txt p:first-of-type {
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    line-height: 21px;
+}
+
+.product-information .promotion ul li .sel-product-txt p:first-of-type span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    line-height: 16px;
+}
+
+.product-information .promotion ul li .sel-product-txt p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+/* 해외직배송 개인통관 고유부호 */
+.order-sheet_content .pcc {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.order-sheet_content .pcc legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+.pcc input[id="pcc"] {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    padding: 16px 12px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+}
+
+.order-sheet_content .pcc > p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.pcc .pcc-agree-box {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+input[id="pcc-agree1"] {
+    display: none;
+}
+
+input[id="pcc-agree1"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    line-height: 18px;
+    position: relative;
+}
+
+input[id="pcc-agree1"] + label p {
+    padding-left: 28px;
+    width: 290px;
+    word-break: keep-all;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+
+input[id="pcc-agree1"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.pcc .pcc-agree-box a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-decoration-line: underline;
+    position: absolute;
+    left: 29px;
+    top: 40px;
+}
+
+input[id="pcc-agree2"] {
+    display: none;
+}
+
+input[id="pcc-agree2"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: relative;
+}
+
+input[id="pcc-agree2"] + label p {
+    padding-left: 28px;
+    width: 290px;
+    word-break: keep-all;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    line-height: 18px;
+}
+
+input[id="pcc-agree2"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.pcc ul {
+    background-color: #f6f6f6;
+    padding: 24px 20px 24px 34px;
+    box-sizing: border-box;
+}
+
+.pcc ul li {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #666;
+    list-style-image: url(../images/list-style-img.png);
+}
+
+.pcc ul li ~ li {
+    margin-top: 5px;
+}
+
+
+/* 할인 및 혜택 */
+.order-sheet_content .coupon {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.order-sheet_content .coupon legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+.order-sheet_content .coupon dl dt {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.order-sheet_content .coupon dl dd:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.order-sheet_content .coupon dl dd:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.order-sheet_content .coupon dl dd:first-of-type input {
+    width: 59%;
+    padding: 16px 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+}
+
+.order-sheet_content .coupon dl dd:first-of-type a {
+    width: 38.5%;
+    padding: 15.5px 19.5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    border: 1px solid #111;
+    text-align: center;
+}
+
+.order-sheet_content .coupon > p {
+    width: 100%;
+    padding: 24px 0 24px 18px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    background-color: #f6f6f6;
+}
+
+
+/* 적립금/예치금 */
+.order-sheet_content .reserve_deposit {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.order-sheet_content .reserve_deposit legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+.order-sheet_content .reserve_deposit dl dt {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.order-sheet_content .reserve_deposit dl dd {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 13px;
+}
+
+.order-sheet_content .reserve_deposit dl dd:first-of-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-sheet_content .reserve_deposit dl dd:first-of-type input {
+    width: 68%;
+    padding: 16px 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+}
+
+.order-sheet_content .reserve_deposit dl dd:first-of-type a {
+    width: 29%;
+    padding: 15.5px 19.5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    border: 1px solid #111;
+    text-align: center;
+}
+
+.order-sheet_content .reserve_deposit dl dd:last-of-type {
+    margin-bottom: 25px;
+}
+
+
+/* 결제정보 */
+.order-sheet_content .payment-info {
+    position: relative;
+}
+
+.order-sheet_content .payment-info legend {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+.order-sheet_content .payment-info > a:first-of-type {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    padding: 8px 12px;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: -75px;
+}
+
+input[id="payment-agree"] {
+    display: none;
+}
+
+input[id="payment-agree"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #eee;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    text-indent: 28px;
+    line-height: 19px;
+}
+
+input[id="payment-agree"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.order-sheet_content .payment-info .payment-method {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 0 14px;
+}
+
+.payment-info .payment-method input {
+    display: none;
+}
+
+.payment-info .payment-method input + label {
+    width: 48%;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    border: 1px solid #eee;
+    padding: 17.5px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.payment-info .payment-method input:checked + label {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.payment-info .deposit-bank h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.payment-info .deposit-bank select {
+    width: 100%;
+    padding: 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../images/down.svg) no-repeat 96% 50%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    outline: 0;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+
+.payment-info .deposit-bank p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.payment-info .payment-txt {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    text-align: center;
+    padding: 64px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 24px;
+}
+
+.payment-info .cash-receipt-apply {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 32px;
+}
+
+input[id="cash-receipt"] {
+    display: none;
+}
+
+input[id="cash-receipt"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    white-space: nowrap;
+    text-indent: 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    line-height: 19px;
+}
+
+input[id="cash-receipt"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.payment-info .cash-receipt-apply .cash-receipt-method {
+    margin: 24px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+input[id="cash-receipt1"] {
+    display: none;
+}
+
+input[id="cash-receipt1"] + label {
+    width: 20px;
+    width: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    text-indent: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+    margin-right: 43%;
+}
+
+input[id="cash-receipt1"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 60%;
+    border: 1px solid #111;
+}
+
+input[id="cash-receipt2"] {
+    display: none;
+}
+
+input[id="cash-receipt2"] + label {
+    width: 20px;
+    width: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    text-indent: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+}
+
+input[id="cash-receipt2"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 60%;
+    border: 1px solid #111;
+}
+
+.cash-receipt-apply .phone-num {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+input[id="phone-num"] {
+    width: 100%;
+    padding: 16px 12px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    margin: 12px 0 24px;
+}
+
+.cash-receipt-apply .business-num {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+}
+
+input[id="business-num"] {
+    width: 100%;
+    padding: 16px 12px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    margin: 12px 0 24px;
+}
+
+.payment-info .payment-refer-wrap .payment-agree-box {
+    padding-bottom: 12px;
+}
+
+.payment-refer-wrap .payment-agree-box li {
+    display: flex;
+}
+
+.payment-refer-wrap .payment-agree-box input {
+    display: none;
+}
+
+.payment-refer-wrap .payment-agree-box input + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    white-space: nowrap;
+    text-indent: 28px;
+    margin-bottom: 16px;
+}
+
+.payment-agree-box input[id="terms-all-chk"] + label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+}
+
+.payment-agree-box input[id="terms1"] + label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+    margin-right: 182px;
+}
+
+.payment-agree-box input[id="terms2"] + label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+    margin-right: 205px;
+}
+
+.payment-agree-box input[id="terms3"] + label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+    margin-right: 198px;
+}
+
+.payment-refer-wrap .payment-agree-box input:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.payment-refer-wrap .payment-agree-box a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-decoration-line: underline;
+    line-height: 24px;
+}
+
+.payment-info .payment-refer-wrap .payment-refer-box {
+    background-color: #f6f6f6;
+    padding: 24px 20px 24px 34px;
+    margin-bottom: 24px;
+}
+
+.payment-refer-wrap .payment-refer-box li {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    list-style-image: url(../images/list-style-img.png);
+    list-style-position: outside;
+}
+
+.payment-refer-wrap .payment-refer-box li ~ li {
+    margin-top: 4px;
+}
+
+.payment-info .total {
+    border-top: 1px solid #eee;
+    margin-bottom: 19px;
+}
+
+.payment-info .total h3 {
+    padding-top: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.payment-info .total dl {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+    padding-bottom: 21px;
+}
+
+.payment-info .total dl:nth-of-type(6) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+}
+
+.payment-info .total dl:nth-of-type(7) {
+    padding-top: 28px;
+}
+
+.payment-info .total dl:nth-of-type(7) dt {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 31px;
+}
+
+.payment-info .total dl:nth-of-type(7) dd {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.payment-info .agree-checkbox {
+    margin-bottom: 40px;
+}
+
+.payment-info .agree-checkbox li:nth-of-type(3) {
+    position: relative;
+}
+
+.agree-checkbox li input {
+    display: none;
+}
+
+input[id="agree-all-chk"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #eee;
+    display: inline-block;
+    text-indent: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    white-space: nowrap;
+    margin-bottom: 16px;
+}
+
+input[id="agree-chk1"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #eee;
+    display: inline-block;
+    text-indent: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 18px;
+    margin-bottom: 46px;
+}
+
+input[id="agree-chk1"] + label p {
+    width: 281px;
+    text-indent: 0;
+    display: inline-block;
+}
+
+input[id="agree-chk2"] + label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #eee;
+    display: inline-block;
+    text-indent: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.agree-checkbox li input:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    background-size: 65%;
+    border: 1px solid #111;
+}
+
+.payment-info .agree-checkbox li:nth-of-type(3) a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    text-decoration-line: underline;
+    line-height: ;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.payment-info > a.order {
+    width: 100%;
+    display: inline-block;
+    background-color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding: 15.5px 0;
+    margin-bottom: 60px;
+}
