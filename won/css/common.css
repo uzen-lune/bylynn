@@ -36,6 +36,9 @@ button {
 input[type=button]{
     cursor: pointer;
 }
+textarea {
+     font-family: Pretendard;
+}
 /************header*****************/
 
 .hTop {

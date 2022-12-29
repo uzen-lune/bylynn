@@ -258,6 +258,7 @@ form .non-members-agreement div a {
 .customer-order input {
     margin-bottom: 3.3333vw;
     border: 0.2778vw solid #ccc;
+    position: relative;
 }
 
 .customer-order input[type=text],
@@ -268,6 +269,7 @@ form .non-members-agreement div a {
     line-height: 13.3333vw;
     padding: 0 3.3333vw;
     box-sizing: border-box;
+    font-size: 3.8889vw;
 }
 
 .customer-order input[type=email] {
@@ -276,10 +278,16 @@ form .non-members-agreement div a {
 }
 
 .customer-order input::placeholder {
+    width: 100%;
     font-size: 3.8889vw;
+    /*height: 13.3333vw;
+    line-height: 13.3333vw;*/
     color: #999;
-    line-height: 13.3333vw;
     letter-spacing: -0.2778vw;
+    position: absolute;
+    top: 50%;
+    left: 3.3333vw;
+    transform: translateY(-50%);
 }
 
 .customer-order .email-wrap {
@@ -293,6 +301,9 @@ form .non-members-agreement div a {
 .customer-order .email-wrap input[id*=Email] {
     width: 40.0000vw;
 }
+
+
+
 
 .customer-order .email-wrap select {
     width: 100%;
@@ -310,8 +321,9 @@ form .non-members-agreement div a {
     background-repeat: no-repeat;
     background-size: 3.8889vw;
     background-position: right 3.8889vw center;
-}
+    font-size: 3.8889vw;
 
+}
 .customer-order .email-wrap select option {}
 
 .customer-receive {
@@ -410,10 +422,16 @@ form .non-members-agreement div a {
     box-sizing: border-box;
 }
 
+
 .customer-receive > div .input-wrap li input::placeholder {
+    width: 100%;
     color: #999;
     font-size: 3.8889vw;
     letter-spacing: -0.2778vw;
+    position: absolute;
+    top: 50%;
+    left: 3.3333vw;
+    transform: translateY(-50%);
 }
 
 /*.customer-receive > div .input-wrap #sameUser {
@@ -454,7 +472,7 @@ form .non-members-agreement div a {
     text-align: center;
     border: 0.2778vw solid #111;
     box-sizing: border-box;
-
+    font-size: 3.8889vw;
 
 }
 
@@ -466,6 +484,7 @@ form .non-members-agreement div a {
     width: 100%;
     height: 13.3333vw;
     padding: 0 3.3333vw;
+    font-size: 3.8889vw;
     -webkit-appearance: none;
     /* 크롬 화살표 없애기 */
     -moz-appearance: none;
@@ -479,17 +498,18 @@ form .non-members-agreement div a {
     border: 0.2778vw solid #ccc;
     color: #999;
 }
-
 .customer-receive > div .input-wrap li #receiveMessageDetail {
     width: 100%;
     height: 13.3333vw;
     padding: 4.4444vw 3.3333vw;
     box-sizing: border-box;
     border: 0.2778vw solid #ccc;
+    font-size: 3.8889vw;
 }
 
 .customer-receive > div .input-wrap li #receiveMessageDetail::placeholder {
     color: #999;
+    font-size: 3.8889vw;
 }
 
 /*.customer-receive > div .input-wrap li #defaultAddress {
@@ -651,7 +671,7 @@ form .non-members-agreement div a {
     border-bottom: 0.2778vw solid #333;
 }
 .promotion .promotion-title{}
-.promotion .promotion-title h3{
+.promotion .promotion-title h4{
     font-size: 4.4444vw;
     font-weight: 500;
     margin-bottom: 0.5556vw;
@@ -724,7 +744,7 @@ form .non-members-agreement div a {
     box-sizing: border-box;
     margin-bottom: 3.3333vw;
     border: 0.2778vw solid #ccc;
-
+    font-size: 3.8889vw;
 }
 
 .overseas-direct input[type=text]::placeholder {
@@ -938,7 +958,7 @@ form .non-members-agreement div a {
     box-sizing: border-box;
     padding-right: 6.6667vw;
     text-align: end;
-    
+    font-size: 3.8889vw;
 }
 
 .point .point-apply div label {
@@ -1153,6 +1173,7 @@ form .non-members-agreement div a {
     padding: 0 3.3333vw;
     box-sizing: border-box;
     border: 0.2778vw solid #ccc;
+    font-size: 3.8889vw;
 }
 
 .payment-information .cash-receipts .cash-number input::placeholder {
