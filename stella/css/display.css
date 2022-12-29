@@ -192,12 +192,13 @@
 .product-box .product-select {
     width: 48.6%;
     height: 48px;
+    display: inline-block;
     border: 1px solid #333;
     box-sizing: border-box;
-    background-color: #fff;
-    color: #111;
     font-size: 14px;
     font-weight: 500;
+    color: #111;
+    background-color: #fff;
 }
 
 .product-box .product-select select {
@@ -209,8 +210,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url('../images/arrow_d.svg') no-repeat 74% center;
-    padding: 15px 15px 15px 0;
+    background: url('../images/arrow_d.svg') no-repeat 72% center;
+    padding: 15px 40px 15px 15px;
+    box-sizing: border-box;
     text-align: center;
 }
 
