@@ -13,34 +13,52 @@
     <link rel="stylesheet" href="../css/detail.css">
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // wish 색 변경
+            $('.img-box .wish').click(function(e) {
+                e.preventDefault();
+                var backImg = $(this).css("background-image");
+                if (backImg.match("black")) {
+                    $(this).css({
+                        backgroundImage: "url(../images/detail/wish.svg)"
+                    });
+                } else {
+                    $(this).css({
+                        backgroundImage: "url(../images/detail/wish-black.svg)"
+                    });
+                };
+            });
+        });
+    </script>
 </head>
 
 <body>
     <header>
         <ul class="navibar">
             <li>
-                <a href="#">뒤로가기<img src="../images/detail/back.svg" alt=""></a>
-                <a href="#">홈<img src="../images/detail/home.svg" alt=""></a>
+                <a href="#none">뒤로가기<img src="../images/detail/back.svg" alt=""></a>
+                <a href="#none">홈<img src="../images/detail/home.svg" alt=""></a>
             </li>
             <li>
-                <a href="#">검색<img src="../images/detail/search.svg" alt=""></a>
-                <a href="#">장바구니<img src="../images/detail/shopping-bag.svg" alt=""></a>
+                <a href="#none">검색<img src="../images/detail/search.svg" alt=""></a>
+                <a href="#none">장바구니<img src="../images/detail/shopping-bag.svg" alt=""></a>
             </li>
         </ul>
     </header>
     <aside>
         <ul>
-            <li><a href="#"><img src="../images/recent.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/chat.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/top.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/recent.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/chat.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/top.svg" alt=""></a></li>
         </ul>
     </aside>
 
     <div class="bottom">
-        <div class="wish"><a href="#"><img src="../images/wish.svg" alt=""></a></div>
+        <div class="wish"><a href="#nonenone"><img src="../images/wish.svg" alt=""></a></div>
         <div class="bottom-btn">
-            <a href="#" class="bottom-shopping-bag">장바구니</a>
-            <a href="#" class="bottom-buy-now">바로구매</a>
+            <a href="#nonenone" class="bottom-shopping-bag">장바구니</a>
+            <a href="#nonenone" class="bottom-buy-now">바로구매</a>
         </div>
     </div>
     <article class="detail-contents">
@@ -76,13 +94,13 @@
                 });
             </script>
             <ul class="sel-color">
-                <li class="color-beige"><a href="#"><span></span></a></li>
-                <li class="color-black"><a href="#"><span></span></a></li>
+                <li class="color-beige"><a href="#nonenone"><span></span></a></li>
+                <li class="color-black"><a href="#nonenone"><span></span></a></li>
             </ul>
             <div class="pdt-introduction">
                 <div class="pdt-info">
                     <div class="inner">
-                        <p class="brand-name">LINE STUDIO ONE <span><a href="#"><img src="../images/detail/share.svg" alt=""></a></span></p>
+                        <p class="brand-name">LINE STUDIO ONE <span><a href="#none"><img src="../images/detail/share.svg" alt=""></a></span></p>
                         <p class="pdt-code">제품코드</p>
                         <h2 class="pdt-name">제품명</h2>
                         <ul class="badge">
@@ -97,24 +115,24 @@
                         </div>
                         <div class="review">
                             <p>★★★★★ 5.0</p>
-                            <a href="#">리뷰 10 <span><img src="" alt=""></span></a>
+                            <a href="#none">리뷰 10 <span><img src="" alt=""></span></a>
                         </div>
                     </div>
                 </div>
                 <ul class="benefits">
                     <li>
                         <h5>적립금</h5>
-                        <p>전용포인트 2% &#47; 통합포인트 3%</p>
+                        <p>전용포인트 2% &#none47; 통합포인트 3%</p>
                     </li>
                     <li>
                         <h5>추가적립금</h5>
-                        <p>전용포인트 500P &#47; 통합포인트 1000P</p>
+                        <p>전용포인트 500P &#none47; 통합포인트 1000P</p>
                     </li>
                     <li>
                         <h5>배송비</h5>
                         <div>
                             <p>2.500원 (30,000원 이상 무료)</p>
-                            <a href="#">지역별 추가배송비</a>
+                            <a href="#none">지역별 추가배송비</a>
                         </div>
                     </li>
                     <li>
@@ -132,7 +150,7 @@
                                 <p class="gift-des">사은품명 사은품명 사은품명 사은품명 사은품명</p>
                             </div>
                         </div>
-                        <a href="#" class="gift-more">상세보기</a>
+                        <a href="#none" class="gift-more">상세보기</a>
                     </div>
                 </div>
             </div>
@@ -143,11 +161,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth01.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -158,11 +176,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth02.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -173,11 +191,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth03.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -188,11 +206,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth04.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -203,11 +221,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth05.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -218,11 +236,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth06.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -233,11 +251,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth07.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -248,11 +266,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth08.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -263,11 +281,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth09.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -278,11 +296,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth10.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -300,11 +318,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth01.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -315,11 +333,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth02.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -330,11 +348,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth03.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -345,11 +363,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth04.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -360,11 +378,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth05.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -375,11 +393,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth06.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -390,11 +408,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth07.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -405,11 +423,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth08.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -420,11 +438,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth09.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -435,11 +453,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth10.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -452,10 +470,10 @@
             </div>
             <div class="pdt-tab">
                 <ul>
-                    <li class="active"><a href="#">상품설명</a></li>
-                    <li><a href="#">리뷰(999)</a></li>
-                    <li><a href="#">문의(999)</a></li>
-                    <li><a href="#">구매정보</a></li>
+                    <li class="active"><a href="#none">상품설명</a></li>
+                    <li><a href="#none">리뷰(999)</a></li>
+                    <li><a href="#none">문의(999)</a></li>
+                    <li><a href="#none">구매정보</a></li>
                 </ul>
             </div>
             <script>
@@ -605,7 +623,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <h5>제조사&#47;<br>수입원</h5>
+                                <h5>제조사&#none47;<br>수입원</h5>
                                 <p>(주)린컴퍼니</p>
                             </li>
                             <li>
@@ -676,7 +694,7 @@
 
                 <div class="pdt-qna">
                     <div class="btn-qna">
-                        <a href="#">문의하기</a>
+                        <a href="#none">문의하기</a>
                     </div>
 
                     <ul class="detail-qna">
@@ -695,8 +713,8 @@
                                     <div class="qna-img"><img src="../images/detail/question.jpg" alt=""></div>
                                 </li>
                                 <li class="detail-qna-btn">
-                                    <a href="#" class="qna-modify">수정</a>
-                                    <a href="#" class="qna-delete">삭제</a>
+                                    <a href="#none" class="qna-modify">수정</a>
+                                    <a href="#none" class="qna-delete">삭제</a>
                                 </li>
                                 <li class="qna-answer">
                                     <div>
@@ -723,8 +741,8 @@
                                     <div class="qna-img"><img src="../images/detail/question.jpg" alt=""></div>
                                 </li>
                                 <li class="detail-qna-btn">
-                                    <a href="#" class="qna-modify">수정</a>
-                                    <a href="#" class="qna-delete">삭제</a>
+                                    <a href="#none" class="qna-modify">수정</a>
+                                    <a href="#none" class="qna-delete">삭제</a>
                                 </li>
                                 <li class="qna-answer">
                                     <div>
@@ -751,8 +769,8 @@
                                     <div class="qna-img"><img src="../images/detail/question.jpg" alt=""></div>
                                 </li>
                                 <li class="detail-qna-btn">
-                                    <a href="#" class="qna-modify">수정</a>
-                                    <a href="#" class="qna-delete">삭제</a>
+                                    <a href="#none" class="qna-modify">수정</a>
+                                    <a href="#none" class="qna-delete">삭제</a>
                                 </li>
                                 <li class="qna-answer">
                                     <div>
@@ -779,8 +797,8 @@
                                     <div class="qna-img"><img src="../images/detail/question.jpg" alt=""></div>
                                 </li>
                                 <li class="detail-qna-btn">
-                                    <a href="#" class="qna-modify">수정</a>
-                                    <a href="#" class="qna-delete">삭제</a>
+                                    <a href="#none" class="qna-modify">수정</a>
+                                    <a href="#none" class="qna-delete">삭제</a>
                                 </li>
                                 <li class="qna-answer">
                                     <div>
@@ -948,7 +966,7 @@
                 <div class="inner">
                     <h3>LINE STUDIO ONE <span><img src="../images/detail/wish-white.svg" alt=""></span></h3>
                     <p>브랜드 한 줄 설명이 보여집니다. 브랜드 한 줄 설명이 보여집니다.</p>
-                    <a href="#">브랜드 홈 바로가기<span><img src="../images/detail/arrow.svg" alt=""></span></a>
+                    <a href="#none">브랜드 홈 바로가기<span><img src="../images/detail/arrow.svg" alt=""></span></a>
                 </div>
 
             </div>
@@ -958,11 +976,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth01.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -973,11 +991,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth02.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -988,11 +1006,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth03.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1003,11 +1021,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth04.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1018,11 +1036,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth05.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1033,11 +1051,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth06.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1048,11 +1066,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth07.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1063,11 +1081,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth08.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1078,11 +1096,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth09.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1093,11 +1111,11 @@
                         <li class="box">
                             <div class="img-box">
                                 <img src="../images/detail/cloth10.jpg" alt="">
-                                <a href="#" class="wish">좋아요</a>
+                                <a href="#none" class="wish">좋아요</a>
                             </div>
                             <ul class="color-select">
-                                <li class="sel-brown"><a href="#"><span></span></a></li>
-                                <li class="sel-gray"><a href="#"><span></span></a></li>
+                                <li class="sel-brown"><a href="#none"><span></span></a></li>
+                                <li class="sel-gray"><a href="#none"><span></span></a></li>
                             </ul>
                             <div class="txt-box">
                                 <p class="pdt-brand">LYNN</p>
@@ -1127,20 +1145,20 @@
             <li>이메일 info@bylynn.shop</li>
         </ul>
         <ul class="link">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">멤버십 혜택</a></li>
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
         </ul>
         <ul class="foot-sns">
-            <li><a href="#"><img src="../images/googleplay.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/apple.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/naver.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/youtube.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/facebook.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/googleplay.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/youtube.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt=""></a></li>
         </ul>
         <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
     </footer>

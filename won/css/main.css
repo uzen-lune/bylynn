@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-
-
-
-
 /*main*/
 main {
     margin-bottom: 29.1667vw;
@@ -319,7 +315,7 @@ main .main-txt .des {
 }
 .week-slide .swiper-wrapper .swiper-slide a{
     width: 100%;
-    color: #fff;;
+    color: #fff;
     position: relative; /* text */
 }
 .week-slide .swiper-wrapper .swiper-slide a img{
@@ -345,7 +341,7 @@ main .main-txt .des {
 /******* BANNER ************/
 .banner {
     width: 100%; 
-    margin-bottom: 16.6667vw;;
+    margin-bottom: 16.6667vw;
 }
 .banner a { width: 100%;}
 .banner a img { width: 100%; display: block;}

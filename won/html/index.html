@@ -35,6 +35,19 @@
                     display: "none"
                 });
             });
+            
+            //like
+            $('.like').click(function(e){
+                e.preventDefault();
+                var likeImg = $(this).find('img'); 
+                var like = likeImg.attr("src");
+                /*console.log(like);*/
+                if (like.match("black")){
+                    likeImg.attr('src','../images/wish.svg')
+                }else {
+                    likeImg.attr('src','../images/wish-black.svg')
+                }
+            });
 
         });
 
@@ -48,26 +61,26 @@
         <div class="hTop">
             <h1 class="logo"><a href="index.html">logo</a></h1>
             <ul class="util">
-                <li><a href="#"><img src="../images/search.svg" alt="검색하기"></a></li>
-                <li><a href="#"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
+                <li><a href="#none"><img src="../images/search.svg" alt="검색하기"></a></li>
+                <li><a href="cart.html"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
             </ul>
         </div>
         <nav class="gnb">
             <ul>
                 <li class="active g-home"><a href="index.html">홈</a></li>
-                <li><a href="clothing.html">의류</a></li>
-                <li><a href="#">가방</a></li>
-                <li><a href="#">신발</a></li>
-                <li><a href="#">악세사리</a></li>
-                <li><a href="#">골프/애슬래저</a></li>
-                <li><a href="#">브랜드</a></li>
-                <li><a href="#">쇼핑의목적</a></li>
-                <li><a href="#">베스트</a></li>
-                <li><a href="#">기획전</a></li>
-                <li><a href="#">함께한스타</a></li>
-                <li><a href="#">에디토리얼</a></li>
-                <li><a href="#">바이린샵</a></li>
-                <li><a href="#">about 린컴퍼니</a></li>
+                <li><a href="display.html">의류</a></li>
+                <li><a href="#none">가방</a></li>
+                <li><a href="#none">신발</a></li>
+                <li><a href="#none">악세사리</a></li>
+                <li><a href="#none">골프/애슬래저</a></li>
+                <li><a href="#none">브랜드</a></li>
+                <li><a href="#none">쇼핑의목적</a></li>
+                <li><a href="#none">베스트</a></li>
+                <li><a href="#none">기획전</a></li>
+                <li><a href="#none">함께한스타</a></li>
+                <li><a href="#none">에디토리얼</a></li>
+                <li><a href="#none">바이린샵</a></li>
+                <li><a href="#none">about 린컴퍼니</a></li>
             </ul>
         </nav>
 
@@ -85,18 +98,18 @@
         <div class="bottom-menu">
             <a href="mobile_gnb.html" class="hamburg"><img src="../images/menu.svg" alt="햄버거메뉴">
             </a>
-            <a href="#" class="heart"><img src="../images/wish.svg" alt=하트""></a>
-            <a href="#" class="home"><img src="../images/home.svg" alt="홈"></a>
-            <a href="#" class="mypage"><img src="../images/mypage.svg" alt="마이페이지"></a>
-            <a href="#" class="more"><img src="../images/dot3.svg" alt="더보기"></a>
+            <a href="#none" class="heart"><img src="../images/wish.svg" alt=하트""></a>
+            <a href="#none" class="home"><img src="../images/home.svg" alt="홈"></a>
+            <a href="#none" class="mypage"><img src="../images/mypage.svg" alt="마이페이지"></a>
+            <a href="#none" class="more"><img src="../images/dot3.svg" alt="더보기"></a>
         </div>
 
 
     </header>
     <aside>
         <ul>
-            <li><a href="#"><img src="../images/chat.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/top.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/chat.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/top.svg" alt=""></a></li>
         </ul>
     </aside>
     <!----------main------------->
@@ -109,36 +122,36 @@
                 <div class="swiper-slide">
                     <img src="../images/KV.jpg" alt="">
                     <div class="main-txt">
-                        <a href="#" class="tit">TWEED COLLECTION</a>
-                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                        <a href="#none" class="tit">TWEED COLLECTION</a>
+                        <a href="#none" class="des">가을무드 가득<br> 트위드</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="../images/KV.jpg" alt="">
                     <div class="main-txt">
-                        <a href="#" class="tit">TWEED COLLECTION</a>
-                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                        <a href="#none" class="tit">TWEED COLLECTION</a>
+                        <a href="#none" class="des">가을무드 가득<br> 트위드</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="../images/KV.jpg" alt="">
                     <div class="main-txt">
-                        <a href="#" class="tit">TWEED COLLECTION</a>
-                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                        <a href="#none" class="tit">TWEED COLLECTION</a>
+                        <a href="#none" class="des">가을무드 가득<br> 트위드</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="../images/KV.jpg" alt="">
                     <div class="main-txt">
-                        <a href="#" class="tit">TWEED COLLECTION</a>
-                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                        <a href="#none" class="tit">TWEED COLLECTION</a>
+                        <a href="#none" class="des">가을무드 가득<br> 트위드</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="../images/KV.jpg" alt="">
                     <div class="main-txt">
-                        <a href="#" class="tit">TWEED COLLECTION</a>
-                        <a href="#" class="des">가을무드 가득<br> 트위드</a>
+                        <a href="#none" class="tit">TWEED COLLECTION</a>
+                        <a href="#none" class="des">가을무드 가득<br> 트위드</a>
                     </div>
                 </div>
 
@@ -165,39 +178,39 @@
     <div class="swiper navigator">
         <ul class="swiper-wrapper">
             <li class="swiper-slide">
-                <a href="#">
+                <a href="#none">
                     <img src="../images/slidenav01.jpg" alt="">
-                    <p>#모피</p>
+                    <p>#none모피</p>
                 </a>
             </li>
             <li class="swiper-slide">
-                <a href="#">
+                <a href="#none">
                     <img src="../images/slidenav02.jpg" alt="">
-                    <p>#데님</p>
+                    <p>#none데님</p>
                 </a>
             </li>
             <li class="swiper-slide">
-                <a href="#">
+                <a href="#none">
                     <img src="../images/slidenav01.jpg" alt="">
-                    <p>#무스탕</p>
+                    <p>#none무스탕</p>
                 </a>
             </li>
             <li class="swiper-slide">
-                <a href="#">
+                <a href="#none">
                     <img src="../images/slidenav02.jpg" alt="">
-                    <p>#데님</p>
+                    <p>#none데님</p>
                 </a>
             </li>
             <li class="swiper-slide">
-                <a href="#">
+                <a href="#none">
                     <img src="../images/slidenav01.jpg" alt="">
-                    <p>#모피</p>
+                    <p>#none모피</p>
                 </a>
             </li>
             <li class="swiper-slide">
-                <a href="#">
+                <a href="#none">
                     <img src="../images/slidenav02.jpg" alt="">
-                    <p>#데님</p>
+                    <p>#none데님</p>
                 </a>
             </li>
 
@@ -228,25 +241,25 @@
             <div class="swiper trend-slide">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <p class="tit">SOMEDAY</p>
                             <p class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <p class="tit">SOMEDAY</p>
                             <p class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <p class="tit">SOMEDAY</p>
                             <p class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <p class="tit">SOMEDAY</p>
                             <p class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
                         </a>
@@ -261,15 +274,15 @@
             <h2>Today's New</h2>
             <div class="today-navi">
                 <ul>
-                    <li class="active"><a href="#">#DEAR K</a></li>
-                    <li><a href="#">#HUIT DE LYNN</a></li>
-                    <li><a href="#">#KENNETH LADY</a></li>
-                    <li><a href="#">#KL</a></li>
-                    <li><a href="#">#LINE</a></li>
-                    <li><a href="#">#LINE STUDIO ONE</a></li>
-                    <li><a href="#">#LYNN</a></li>
-                    <li><a href="#">#MOE</a></li>
-                    <li><a href="#">#NUVO10</a></li>
+                    <li class="active"><a href="#none">#noneDEAR K</a></li>
+                    <li><a href="#none">#noneHUIT DE LYNN</a></li>
+                    <li><a href="#none">#noneKENNETH LADY</a></li>
+                    <li><a href="#none">#noneKL</a></li>
+                    <li><a href="#none">#noneLINE</a></li>
+                    <li><a href="#none">#noneLINE STUDIO ONE</a></li>
+                    <li><a href="#none">#noneLYNN</a></li>
+                    <li><a href="#none">#noneMOE</a></li>
+                    <li><a href="#none">#noneNUVO10</a></li>
 
                 </ul>
             </div>
@@ -277,126 +290,126 @@
             <div class="swiper pdt2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best01.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#nonenone" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="brown"></span></a></li>
-                            <li><a href="#"><span class="gray"></span></a></li>
+                            <li><a href="#none"><span class="brown"></span></a></li>
+                            <li><a href="#none"><span class="gray"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best02.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#nonenone" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="pink"></span></a></li>
-                            <li><a href="#"><span class="gold"></span></a></li>
+                            <li><a href="#none"><span class="pink"></span></a></li>
+                            <li><a href="#none"><span class="gold"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best01.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#nonenone" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="brown"></span></a></li>
-                            <li><a href="#"><span class="gray"></span></a></li>
+                            <li><a href="#none"><span class="brown"></span></a></li>
+                            <li><a href="#none"><span class="gray"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best02.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="pink"></span></a></li>
-                            <li><a href="#"><span class="gold"></span></a></li>
+                            <li><a href="#none"><span class="pink"></span></a></li>
+                            <li><a href="#none"><span class="gold"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best01.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#nonenone" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="brown"></span></a></li>
-                            <li><a href="#"><span class="gray"></span></a></li>
+                            <li><a href="#none"><span class="brown"></span></a></li>
+                            <li><a href="#none"><span class="gray"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best02.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="pink"></span></a></li>
-                            <li><a href="#"><span class="gold"></span></a></li>
+                            <li><a href="#none"><span class="pink"></span></a></li>
+                            <li><a href="#none"><span class="gold"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
@@ -408,7 +421,7 @@
                 </div>
             </div>
 
-            <a href="#" class="btn">전체보기</a>
+            <a href="#none" class="btn">전체보기</a>
         </section>
 
         <!----------brand-new------------->
@@ -417,13 +430,13 @@
             <h2>Brand News</h2>
             <div class="new-box">
 
-                <div class="new-img-box"><a href="#"><img src="../images/nuvo.jpg" alt=""></a></div>
+                <div class="new-img-box"><a href="#none"><img src="../images/nuvo.jpg" alt=""></a></div>
                 <p class="pdt-name">NUVO10</p>
                 <p class="pdt-title">Mind Mapping</p>
                 <p class="pdt-des">이번 시즌 누보텐은 아이템간에 유기적인 스타일링에 집중하였습니다.</p>
             </div>
             <div class="new-box">
-                <div class="new-img-box"><a href="#"><img src="../images/line.jpg" alt=""></a></div>
+                <div class="new-img-box"><a href="#none"><img src="../images/line.jpg" alt=""></a></div>
                 <p class="pdt-name">LINE</p>
                 <p class="pdt-title">OUR TIME</p>
                 <p class="pdt-des">다정한 프렌드룩으로 완성한 시간을 함께 즐겨주세요.</p>
@@ -437,7 +450,7 @@
             <div class="swiper week-slide">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <img src="../images/classic01.jpg" alt="">
 
                             <p class="tit">클래식룩</p>
@@ -447,7 +460,7 @@
 
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <img src="../images/classic01.jpg" alt="">
                             <p class="tit">클래식룩</p>
                             <p class="des">클래식룩을 추천드립니다.</p>
@@ -455,7 +468,7 @@
 
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <img src="../images/classic01.jpg" alt="">
 
                             <p class="tit">클래식룩</p>
@@ -465,7 +478,7 @@
 
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
+                        <a href="#none">
                             <img src="../images/classic01.jpg" alt="">
                             <p class="tit">클래식룩</p>
                             <p class="des">클래식룩을 추천드립니다.</p>
@@ -479,7 +492,7 @@
         <!----------banner------------->
 
         <section class="banner">
-            <a href="#"><img src="../images/band.jpg" alt=""></a>
+            <a href="#none"><img src="../images/band.jpg" alt=""></a>
         </section>
 
         <!----------best------------->
@@ -489,126 +502,126 @@
             <div class="swiper pdt2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best01.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="brown"></span></a></li>
-                            <li><a href="#"><span class="gray"></span></a></li>
+                            <li><a href="#none"><span class="brown"></span></a></li>
+                            <li><a href="#none"><span class="gray"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best02.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="pink"></span></a></li>
-                            <li><a href="#"><span class="gold"></span></a></li>
+                            <li><a href="#none"><span class="pink"></span></a></li>
+                            <li><a href="#none"><span class="gold"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best01.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="brown"></span></a></li>
-                            <li><a href="#"><span class="gray"></span></a></li>
+                            <li><a href="#none"><span class="brown"></span></a></li>
+                            <li><a href="#none"><span class="gray"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best02.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="pink"></span></a></li>
-                            <li><a href="#"><span class="gold"></span></a></li>
+                            <li><a href="#none"><span class="pink"></span></a></li>
+                            <li><a href="#none"><span class="gold"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best01.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="brown"></span></a></li>
-                            <li><a href="#"><span class="gray"></span></a></li>
+                            <li><a href="#none"><span class="brown"></span></a></li>
+                            <li><a href="#none"><span class="gray"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
-                        <div href="#" class="img-box">
+                        <div href="#none" class="img-box">
 
                             <img src="../images/best02.jpg" alt="">
-                            <a href="#" class="like">
+                            <a href="#none" class="like">
                                 <img src="../images/wish.svg" alt="">
                             </a>
 
                         </div>
                         <ul class="sel-color">
-                            <li><a href="#"><span class="pink"></span></a></li>
-                            <li><a href="#"><span class="gold"></span></a></li>
+                            <li><a href="#none"><span class="pink"></span></a></li>
+                            <li><a href="#none"><span class="gold"></span></a></li>
                         </ul>
                         <div class="box-txt">
-                            <a href="#" class="brand">LYNN</a>
-                            <a href="#" class="name">클래식 크롭 테일러드 자켓</a>
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="name">클래식 크롭 테일러드 자켓</a>
                             <p class="sale">219,000원</p>
                             <p class="price">197,100원<span class="per">10%</span></p>
                         </div>
@@ -619,7 +632,7 @@
 
                 </div>
             </div>
-            <a href="#" class="btn">전체보기</a>
+            <a href="#none" class="btn">전체보기</a>
         </section>
 
         <!----------trend------------->
@@ -629,7 +642,7 @@
 
             <div class="someday container">
                 <div class="intro">
-                    <a href="#">
+                    <a href="#none">
                         <img src="../images/someday00.jpg" alt="">
                     </a>
                     <h3>SOMEDAY</h3>
@@ -638,37 +651,37 @@
                 <div class="swiper">
                     <div class="swiper-wrapper pdt3">
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/someday01.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/someday01.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/someday02.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/someday02.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/someday03.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/someday03.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/someday01.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/someday01.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/someday01.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/someday01.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/someday02.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/someday02.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/someday03.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/someday03.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
@@ -678,7 +691,7 @@
 
             <div class="celeb container">
                 <div class="intro">
-                    <a href="#">
+                    <a href="#none">
                         <img src="../images/celeb00.jpg" alt="">
                     </a>
                     <h3>CELEB’S PICK</h3>
@@ -687,22 +700,22 @@
                 <div class="swiper">
                     <div class="swiper-wrapper pdt3">
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/celeb01.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/celeb01.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/celeb02.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/celeb02.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/celeb03.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/celeb03.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/celeb01.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/celeb01.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
@@ -712,7 +725,7 @@
 
             <div class="classic container">
                 <div class="intro">
-                    <a href="#">
+                    <a href="#none">
                         <img src="../images/inclassic00.jpg" alt="">
                     </a>
                     <h3>IN CLASSIC</h3>
@@ -721,32 +734,32 @@
                 <div class="swiper">
                     <div class="swiper-wrapper pdt3">
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/inclassic01.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/inclassic01.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/inclassic02.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/inclassic02.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/inclassic03.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/inclassic03.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/inclassic01.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/inclassic01.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/inclassic02.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/inclassic02.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
                         <div class="swiper-slide box">
-                            <a href="#"><img src="../images/inclassic03.jpg" alt=""></a>
+                            <a href="#none"><img src="../images/inclassic03.jpg" alt=""></a>
                             <p class="tit">클래식 크롭 테일러드 자켓</p>
                             <p class="des">197,100원</p>
                         </div>
@@ -756,7 +769,7 @@
 
 
                 <div class="in-classic">
-                    <a href="#">
+                    <a href="#none">
                         <span>
                             <p class="tit">IN CLASSIC</p>
                             <p class="des">간결한 선, 세련된 컬러, 사려 깊은 디테일로 새롭게 재해석하였습니다.</p>
@@ -898,7 +911,7 @@
         }
 
         async function importPage(target) {
-            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+            document.querySelector('#none' + target).innerHTML = await fetchHtmlAsText(target + '.html');
         }
         
         importPage('clothing');
@@ -917,20 +930,20 @@
             <li>이메일 info@bylynn.shop</li>
         </ul>
         <ul class="link">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">멤버십 혜택</a></li>
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
         </ul>
         <ul class="foot-sns">
-            <li><a href="#"><img src="../images/googleplay.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/apple.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/naver.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/youtube.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/facebook.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/googleplay.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/youtube.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt=""></a></li>
         </ul>
         <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
     </footer>

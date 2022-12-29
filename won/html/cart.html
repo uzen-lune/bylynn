@@ -32,8 +32,24 @@
             $('.infoChange').prev().find(".pdt-benefits").css({
                 borderBottom: 0
             });
+            
+            //전체선택
+            $('#noneselect-all').click(function(){
+                var allChk = $('input[type=checkbox]');
+                var checked = $(this).prop('checked');
+                console.log(checked);
+                if (checked == true) {
+                    /*alert("작동중");*/
+                    allChk.prop('checked',true);
+                    $("#nonecart-bynn1-pdt5").prop('checked',false);
+                }else {
+                     allChk.prop('checked',false);
+                }
+            });
 
         });
+        
+        
     </script>
 </head>
 
@@ -41,12 +57,12 @@
     <header>
         <ul class="navibar">
             <li>
-                <a href="#">뒤로가기<img src="../images/cart/back.svg" alt=""></a>
-                <a href="#">홈<img src="../images/cart/home.svg" alt=""></a>
+                <a href="javascript:history.back();">뒤로가기<img src="../images/cart/back.svg" alt=""></a>
+                <a href="index.html">홈<img src="../images/cart/home.svg" alt=""></a>
             </li>
             <li>
-                <a href="#">검색<img src="../images/cart/search.svg" alt=""></a>
-                <a href="#">장바구니<img src="../images/cart/shopping-bag.svg" alt=""></a>
+                <a href="#none">검색<img src="../images/cart/search.svg" alt=""></a>
+                <a href="cart.html">장바구니<img src="../images/cart/shopping-bag.svg" alt=""></a>
             </li>
         </ul>
     </header>
@@ -60,7 +76,7 @@
                     <label for="select-all">전체선택</label>
                     <button class="select-delete">선택삭제</button>
                     <button class="unable-delete">주문불가 삭제</button>
-                    <button class="refresh">새로고침</button>
+                    <button type="reset" class="refresh">새로고침</button>
                 </div>
                 <div class="cart-pdt">
                     <div class="group">
@@ -75,6 +91,7 @@
                         <div class="box">
                             <div class="box-check">
                                 <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                <label for="cart-bynn1-pdt1"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -94,7 +111,7 @@
                                         <h4>클래식 크롭 테일러드 자켓</h4>
                                         <ul class="pdt-option">
                                             <li>브라운 / 55</li>
-                                            <li href="#"><a href="">옵션변경</a></li>
+                                            <li href="#none"><a href="">옵션변경</a></li>
                                         </ul>
                                         <ul class="pdt-price">
                                             <li>197,100원</li>
@@ -129,7 +146,8 @@
 
                         <div class="box soldOut">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                <input type="checkbox" name="cart-bynn1-pdt2" id="cart-bynn1-pdt2">
+                                <label for="cart-bynn1-pdt2"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -149,7 +167,7 @@
                                         <h4>클래식 크롭 테일러드 자켓</h4>
                                         <ul class="pdt-option">
                                             <li>브라운 / 55</li>
-                                            <li href="#"><a href="">옵션변경</a></li>
+                                            <li href="#none"><a href="">옵션변경</a></li>
                                         </ul>
                                         <ul class="pdt-price">
                                             <li>197,100원</li>
@@ -194,7 +212,8 @@
                         <!-------- 사은품/추가 --------->
                         <div class="box addProduct">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                <input type="checkbox" name="cart-bynn1-pdt3" id="cart-bynn1-pdt3">
+                                <label for="cart-bynn1-pdt3"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -214,7 +233,7 @@
                                         <h4>클래식 크롭 테일러드 자켓</h4>
                                         <ul class="pdt-option">
                                             <li>브라운 / 55</li>
-                                            <li href="#"><a href="">옵션변경</a></li>
+                                            <li href="#none"><a href="">옵션변경</a></li>
                                         </ul>
                                         <ul class="pdt-price">
                                             <li>197,100원</li>
@@ -269,7 +288,8 @@
                         <!-- 가격없음 -->
                         <div class="box priceHide">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                <input type="checkbox" name="cart-bynn1-pdt4" id="cart-bynn1-pdt4">
+                                <label for="cart-bynn1-pdt4"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -289,7 +309,7 @@
                                         <h4>클래식 크롭 테일러드 자켓</h4>
                                         <ul class="pdt-option">
                                             <li>브라운 / 55</li>
-                                            <li href="#"><a href="">옵션변경</a></li>
+                                            <li href="#none"><a href="">옵션변경</a></li>
                                         </ul>
                                         <ul class="pdt-price">
                                             <li>197,100원</li>
@@ -324,7 +344,8 @@
 
                         <div class="box infoChange">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                <input type="checkbox" name="cart-bynn1-pdt5" id="cart-bynn1-pdt5">
+                                <label for="cart-bynn1-pdt5"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -344,7 +365,7 @@
                                         <h4>클래식 크롭 테일러드 자켓</h4>
                                         <!--<ul class="pdt-option">
                                         <li>브라운 / 55</li>
-                                        <li href="#"><a href="">옵션변경</a></li>
+                                        <li href="#none"><a href="">옵션변경</a></li>
                                     </ul>
                                     <ul class="pdt-price">
                                         <li>197,100원</li>
@@ -375,14 +396,15 @@
                         </div>-->
                             <div class="blind">
                                 <p>가격 및 혜택 정보가 변경되었습니다.</p>
-                                <a href="#">변경정보 새로고침</a>
+                                <a href="#none">변경정보 새로고침</a>
                             </div>
                         </div>
 
                         <!-- ALL -->
                         <div class="box boxAll">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                <input type="checkbox" name="cart-bynn1-pdt6" id="cart-bynn1-pdt6">
+                                <label for="cart-bynn1-pdt6"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -400,7 +422,7 @@
                                         <h4>클래식 크롭 테일러드 자켓</h4>
                                         <ul class="pdt-option">
                                             <li>브라운 / 55</li>
-                                            <li href="#"><a href="">옵션변경</a></li>
+                                            <li href="#none"><a href="">옵션변경</a></li>
                                         </ul>
                                         <ul class="pdt-price">
                                             <li>197,100원</li>
@@ -521,7 +543,8 @@
 
                         <div class="box minimum">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                <input type="checkbox" name="cart-bynn1-pdt7" id="cart-bynn1-pdt7">
+                                <label for="cart-bynn1-pdt7"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -541,7 +564,7 @@
                                         <h4>클래식 크롭 테일러드 자켓</h4>
                                         <ul class="pdt-option">
                                             <li>브라운 / 55</li>
-                                            <li href="#"><a href="">옵션변경</a></li>
+                                            <li href="#none"><a href="">옵션변경</a></li>
                                         </ul>
                                         <ul class="pdt-price">
                                             <li>197,100원</li>
@@ -616,20 +639,20 @@
             <li>이메일 info@bylynn.shop</li>
         </ul>
         <ul class="link">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">멤버십 혜택</a></li>
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
         </ul>
         <ul class="foot-sns">
-            <li><a href="#"><img src="../images/googleplay.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/apple.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/naver.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/youtube.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/facebook.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/googleplay.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/youtube.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt=""></a></li>
         </ul>
         <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
     </footer>

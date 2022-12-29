@@ -14,6 +14,24 @@
     <link rel="stylesheet" href="../css/display.css">
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // wish 색 변경
+            $('.img-box .wish').click(function(e) {
+                e.preventDefault();
+                var backImg = $(this).css("background-image");
+                if (backImg.match("black")) {
+                    $(this).css({
+                        backgroundImage: "url(../images/display/wish.svg)"
+                    });
+                } else {
+                    $(this).css({
+                        backgroundImage: "url(../images/display/wish-black.svg)"
+                    });
+                };
+            });
+        });
+    </script>
 
 </head>
 
@@ -22,26 +40,26 @@
         <div class="hTop">
             <h1 class="logo"><a href="index.html">logo</a></h1>
             <ul class="util">
-                <li><a href="#"><img src="../images/search.svg" alt="검색하기"></a></li>
-                <li><a href="#"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
+                <li><a href="#none"><img src="../images/search.svg" alt="검색하기"></a></li>
+                <li><a href="#none"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
             </ul>
         </div>
         <nav class="gnb">
             <ul>
-                <li class="active g-home"><a href="#">홈</a></li>
-                <li><a href="#">의류</a></li>
-                <li><a href="#">가방</a></li>
-                <li><a href="#">신발</a></li>
-                <li><a href="#">악세사리</a></li>
-                <li><a href="#">골프/애슬래저</a></li>
-                <li><a href="#">브랜드</a></li>
-                <li><a href="#">쇼핑의목적</a></li>
-                <li><a href="#">베스트</a></li>
-                <li><a href="#">기획전</a></li>
-                <li><a href="#">함께한스타</a></li>
-                <li><a href="#">에디토리얼</a></li>
-                <li><a href="#">바이린샵</a></li>
-                <li><a href="#">about 린컴퍼니</a></li>
+                <li class="g-home"><a href="index.html">홈</a></li>
+                <li class="active"><a href="display.html">의류</a></li>
+                <li><a href="#none">가방</a></li>
+                <li><a href="#none">신발</a></li>
+                <li><a href="#none">악세사리</a></li>
+                <li><a href="#none">골프/애슬래저</a></li>
+                <li><a href="#none">브랜드</a></li>
+                <li><a href="#none">쇼핑의목적</a></li>
+                <li><a href="#none">베스트</a></li>
+                <li><a href="#none">기획전</a></li>
+                <li><a href="#none">함께한스타</a></li>
+                <li><a href="#none">에디토리얼</a></li>
+                <li><a href="#none">바이린샵</a></li>
+                <li><a href="#none">about 린컴퍼니</a></li>
             </ul>
         </nav>
 
@@ -59,34 +77,34 @@
         <div class="bottom-menu">
             <a href="mobile_gnb.html" class="hamburg"><img src="../images/menu.svg" alt="햄버거메뉴">
             </a>
-            <a href="#" class="heart"><img src="../images/wish.svg" alt=하트""></a>
-            <a href="#" class="home"><img src="../images/home.svg" alt="홈"></a>
-            <a href="#" class="mypage"><img src="../images/mypage.svg" alt="마이페이지"></a>
-            <a href="#" class="more"><img src="../images/dot3.svg" alt="더보기"></a>
+            <a href="#none" class="heart"><img src="../images/wish.svg" alt=하트""></a>
+            <a href="#none" class="home"><img src="../images/home.svg" alt="홈"></a>
+            <a href="#none" class="mypage"><img src="../images/mypage.svg" alt="마이페이지"></a>
+            <a href="#none" class="more"><img src="../images/dot3.svg" alt="더보기"></a>
         </div>
 
 
     </header>
     <aside>
         <ul>
-            <li><a href="#"><img src="../images/recent.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/chat.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/top.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/recent.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/chat.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/top.svg" alt=""></a></li>
         </ul>
     </aside>
 
     <article>
         <div class="displayTab">
             <ul class="tabArea">
-                <li class="tabItem"><a href="#">전체</a></li>
-                <li class="tabItem active"><a href="#">아우터</a></li>
-                <li class="tabItem"><a href="#">원피스</a></li>
-                <li class="tabItem"><a href="#">블라우스/셔츠</a></li>
-                <li class="tabItem"><a href="#">스커트</a></li>
-                <li class="tabItem"><a href="#">팬츠</a></li>
-                <li class="tabItem"><a href="#">티셔츠</a></li>
-                <li class="tabItem"><a href="#">데님</a></li>
-                <li class="tabItem"><a href="#">니트</a></li>
+                <li class="tabItem"><a href="#none">전체</a></li>
+                <li class="tabItem active"><a href="#none">아우터</a></li>
+                <li class="tabItem"><a href="#none">원피스</a></li>
+                <li class="tabItem"><a href="#none">블라우스/셔츠</a></li>
+                <li class="tabItem"><a href="#none">스커트</a></li>
+                <li class="tabItem"><a href="#none">팬츠</a></li>
+                <li class="tabItem"><a href="#none">티셔츠</a></li>
+                <li class="tabItem"><a href="#none">데님</a></li>
+                <li class="tabItem"><a href="#none">니트</a></li>
             </ul>
         </div>
 
@@ -97,41 +115,41 @@
                     <div class="swiper-slide">
                         <img src="../images/display/KV.jpg" alt="">
                         <div class="main-txt">
-                            <a href="#" class="tit">KENNETH LADY</a>
-                            <a href="#" class="emp">IN CLASSIC</a>
-                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                            <a href="#none" class="tit">KENNETH LADY</a>
+                            <a href="#none" class="emp">IN CLASSIC</a>
+                            <a href="#none" class="des">2022 WINTER COLLECTION</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="../images/display/KV.jpg" alt="">
                         <div class="main-txt">
-                            <a href="#" class="tit">KENNETH LADY</a>
-                            <a href="#" class="emp">IN CLASSIC</a>
-                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                            <a href="#none" class="tit">KENNETH LADY</a>
+                            <a href="#none" class="emp">IN CLASSIC</a>
+                            <a href="#none" class="des">2022 WINTER COLLECTION</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="../images/display/KV.jpg" alt="">
                         <div class="main-txt">
-                            <a href="#" class="tit">KENNETH LADY</a>
-                            <a href="#" class="emp">IN CLASSIC</a>
-                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                            <a href="#none" class="tit">KENNETH LADY</a>
+                            <a href="#none" class="emp">IN CLASSIC</a>
+                            <a href="#none" class="des">2022 WINTER COLLECTION</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="../images/display/KV.jpg" alt="">
                         <div class="main-txt">
-                            <a href="#" class="tit">KENNETH LADY</a>
-                            <a href="#" class="emp">IN CLASSIC</a>
-                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                            <a href="#none" class="tit">KENNETH LADY</a>
+                            <a href="#none" class="emp">IN CLASSIC</a>
+                            <a href="#none" class="des">2022 WINTER COLLECTION</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="../images/display/KV.jpg" alt="">
                         <div class="main-txt">
-                            <a href="#" class="tit">KENNETH LADY</a>
-                            <a href="#" class="emp">IN CLASSIC</a>
-                            <a href="#" class="des">2022 WINTER COLLECTION</a>
+                            <a href="#none" class="tit">KENNETH LADY</a>
+                            <a href="#none" class="emp">IN CLASSIC</a>
+                            <a href="#none" class="des">2022 WINTER COLLECTION</a>
                         </div>
                     </div>
                 </div>
@@ -151,17 +169,17 @@
                 <h3>브랜드</h3>
                 <div class="brandTab">
                     <ul class="slide-wrap">
-                        <li class="slide"><a href="#"></a></li>
-                        <li class="slide"><a href="#"></a></li>
-                        <li class="slide"><a href="#"></a></li>
-                        <li class="slide"><a href="#"></a></li>
-                        <li class="slide"><a href="#"></a></li>
-                        <li class="slide"><a href="#"></a></li>
+                        <li class="slide"><a href="#none"></a></li>
+                        <li class="slide"><a href="#none"></a></li>
+                        <li class="slide"><a href="#none"></a></li>
+                        <li class="slide"><a href="#none"></a></li>
+                        <li class="slide"><a href="#none"></a></li>
+                        <li class="slide"><a href="#none"></a></li>
                     </ul>
                 </div>
                 <div class="align">
                     <ul>
-                        <li class="viewSelect"><a href="#"><span>신상품순</span></a></li>
+                        <li class="viewSelect"><a href="#none"><span>신상품순</span></a></li>
                         <li class="filter"><a href="filter.html"><span>필터</span></a></li>
                     </ul>
                 </div>
@@ -169,11 +187,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth01.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -184,11 +202,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth02.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -199,11 +217,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth03.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -214,11 +232,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth04.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -229,11 +247,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth05.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -244,11 +262,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth06.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -259,11 +277,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth07.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -274,11 +292,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth08.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -289,11 +307,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth09.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -304,11 +322,11 @@
                     <li class="box">
                         <div class="img-box">
                             <img src="../images/display/cloth10.jpg" alt="">
-                            <a href="#" class="wish">좋아요</a>
+                            <a href="#none" class="wish">좋아요</a>
                         </div>
                         <ul class="color-select">
-                            <li class="sel-brown"><a href="#"><span></span></a></li>
-                            <li class="sel-gray"><a href="#"><span></span></a></li>
+                            <li class="sel-brown"><a href="#none"><span></span></a></li>
+                            <li class="sel-gray"><a href="#none"><span></span></a></li>
                         </ul>
                         <div class="txt-box">
                             <p class="pdt-brand">LYNN</p>
@@ -319,7 +337,7 @@
                 </ul>
 
                 <div class="btn-more">
-                    <a href="#none">더보기</a>
+                    <a href="#nonenone">더보기</a>
                 </div>
             </div>
 
@@ -343,20 +361,20 @@
             <li>이메일 info@bylynn.shop</li>
         </ul>
         <ul class="link">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">멤버십 혜택</a></li>
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
         </ul>
         <ul class="foot-sns">
-            <li><a href="#"><img src="../images/googleplay.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/apple.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/naver.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/youtube.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/facebook.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/googleplay.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/youtube.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt=""></a></li>
         </ul>
         <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
     </footer>

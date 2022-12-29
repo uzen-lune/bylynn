@@ -55,6 +55,36 @@ header .navibar li a img {
     margin: 0 auto;
     border: 0;
 }
+.cart-contents{}
+.cart-contents input[type=checkbox]{
+    display: none;
+}
+.cart-contents input[type=checkbox] + label {
+    line-height: 20px;
+    padding-left: 28px;
+    position: relative;
+}
+.cart-contents input[type=checkbox] + label::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cart-contents input[type=checkbox]:checked + label::before {
+    background-image: url(../images/ordersheet/checkbox.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+
+
+
+
 .cart-contents legend {
     font-size: 6.6667vw;
     margin-bottom: 6.6667vw;
@@ -75,7 +105,6 @@ header .navibar li a img {
 .cart-contents .delete-area label[for=select-all] {
     font-size: 3.8889vw;
     color: #666;
-    margin-left: 2.2222vw;
     margin-right: 3.3333vw;
 }
 .cart-contents .delete-area button {
@@ -83,7 +112,6 @@ header .navibar li a img {
     border: 0.2778vw solid #666;
     height: 8.8889vw;
     line-height: 8.8889vw;
-    margin-left: 2.2222vw;
     font-size: 3.6111vw;
 }
 .cart-contents .delete-area .select-delete {
@@ -116,7 +144,6 @@ header .navibar li a img {
     display: flex;
 }
 .group-title div label {
-    margin-left: 2.2222vw;
     font-size: 4.4444vw;
 }
 .group-title a {

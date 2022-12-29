@@ -16,6 +16,7 @@ header {
     z-index: 99;
     border-bottom: 0.2778vw solid #eee;
     box-sizing: border-box;
+    
 }
 
 header .navibar {

@@ -19,12 +19,12 @@
     <header>
         <ul class="navibar">
             <li>
-                <a href="#">뒤로가기<img src="../images/ordersheet/back.svg" alt=""></a>
-                <a href="#">홈<img src="../images/ordersheet/home.svg" alt=""></a>
+                <a href="#none">뒤로가기<img src="../images/ordersheet/back.svg" alt=""></a>
+                <a href="#none">홈<img src="../images/ordersheet/home.svg" alt=""></a>
             </li>
             <li>
-                <a href="#">검색<img src="../images/ordersheet/search.svg" alt=""></a>
-                <a href="#">장바구니<img src="../images/ordersheet/shopping-bag.svg" alt=""></a>
+                <a href="#none">검색<img src="../images/ordersheet/search.svg" alt=""></a>
+                <a href="#none">장바구니<img src="../images/ordersheet/shopping-bag.svg" alt=""></a>
             </li>
         </ul>
     </header>
@@ -34,17 +34,17 @@
             <p>회원으로 가입하시면 할인 및 적립금 등의<br>
                 다양한 혜택을 받으실 수 있습니다. </p>
             <h4>신규회원 특별혜택</h4>
-            <a href="#">회원가입</a>
+            <a href="#none">회원가입</a>
         </div>
-        <form action="#">
+        <form action="#none">
             <fieldset class="non-members-agreement">
                 <legend>비회원 주문 정보수집 동의</legend>
                 <p>비회원 주문 시 쿠폰 및 적립금 등의 혜택을 받을 수 없습니다. 간단한 과정을 거쳐 회원가입 하시고 회원 혜택을 누리시기 바랍니다.</p>
                 <p>비회원 구매 시 입력하신 비밀번호와 결제완료 후 노출되는 주문번호를 통해서 구매내역을 조회하실 수 있습니다.</p>
                 <div>
-                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox" checked>
-                    <label for="non-members-chkBox">비회원 주문 개인정보 수집 및 이용에 동의합니다. <br>(필수)</label>
-                    <a href="#">전체보기</a>
+                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox">
+                    <label for="non-members-chkBox" tabindex="0">비회원 주문 개인정보 수집 및 이용에 동의합니다. <br>(필수)</label>
+                    <a href="#none">전체보기</a>
                 </div>
                 <div>
                     <input type="checkbox" name="up14" id="up14">
@@ -118,23 +118,187 @@
                             <textarea name="receiveMessageDetail" id="receiveMessageDetail" cols="30" rows="10" placeholder="50자 이내로 입력해 주세요."></textarea>
                         </li>
                         <li>
-                            <input type="checkbox" name="defaultAddress" id="defaultAddress"><label for="defaultAddress">기본배송지로 선택</label>
+                            <input type="checkbox" name="defaultAddress" id="defaultAddress">
+
+                            <label for="defaultAddress">기본배송지로 선택</label>
                         </li>
 
                     </ul>
                 </div>
             </fieldset>
-            <fieldset class="pdt">
+
+            <fieldset class="ordersheet-pdt">
                 <legend>배송상품</legend>
-                <div class="group-title">
-                    <div>
-                        <input type="checkbox" name="cart-bynn1" id="cart-bynn1">
-                        <label for="cart-bynn1">바이린1 배송상품</label>
+                <div class="group">
+                    <div class="group-title">
+                        <div>
+                            <input type="checkbox" name="cart-bynn1" id="cart-bynn1">
+
+                            <label for="cart-bynn1">바이린1 배송상품</label>
+                        </div>
+                        <a href="">지역별 추가배송비</a>
                     </div>
-                    <a href="">지역별 추가배송비</a>
+
+
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gifts-text-wrap">
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                </dl>
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                </dl>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="add-text">
+                                <em>[추가]</em>
+                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="pdt-benefits">
+                                <p>기본배송비</p>
+                                <p>3,000원</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="pdt-benefits">
+                                <p>상품별 배송비</p>
+                                <p>3,000원</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+                <!--/그룹1-->
+                <!--그룹2-->
+                <div class="group">
+                    <div class="group-title">
+                        <div>
+                            <input type="checkbox" name="cart-bynn2" id="cart-bynn2">
+
+                            <label for="cart-bynn2">바이린2 배송상품</label>
+                        </div>
+                        <a href="">지역별 추가배송비</a>
+                    </div>
 
 
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gifts-text-wrap">
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                </dl>
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                </dl>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="add-text">
+                                <em>[추가]</em>
+                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="pdt-benefits">
+                                <p>상품별 배송비</p>
+                                <p>3,000원</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+            <fieldset class="promotion">
+                <legend>주문 증정 프로모션</legend>
+                <div class="promotion-title">
+                    <h4>자동지급형 사은품 증정 프로모션 </h4>
+                    <p>(2020-11-01~2022-11-30)</p>
+                </div>
                 <div class="box">
                     <div class="pdt-info">
                         <div class="container">
@@ -149,28 +313,40 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="gifts-text-wrap">
-                            <dl class="gifts-text">
-                                <dt>[사은품]</dt>
-                                <dd>브랜드명 사은품명-1개 (2개)</dd>
-
-                            </dl>
-                            <dl class="gifts-text">
-                                <dt>[사은품]</dt>
-                                <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
-
-                            </dl>
-                        </div>
-
-
                     </div>
                 </div>
-
-
-
-
-
-
+                <div class="box">
+                    <div class="pdt-info">
+                        <div class="container">
+                            <div class="pdt-info-img">
+                                <img src="../images/cart/pdt.jpg" alt="">
+                            </div>
+                            <div class="pdt-info-detail">
+                                <p class="pdt-brand">LYNN</p>
+                                <h4>클래식 크롭 테일러드 자켓</h4>
+                                <ul class="pdt-option">
+                                    <li>브라운 / 55</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pdt-info">
+                        <div class="container">
+                            <div class="pdt-info-img">
+                                <img src="../images/cart/pdt.jpg" alt="">
+                            </div>
+                            <div class="pdt-info-detail">
+                                <p class="pdt-brand">LYNN</p>
+                                <h4>클래식 크롭 테일러드 자켓</h4>
+                                <ul class="pdt-option">
+                                    <li>브라운 / 55</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </fieldset>
             <fieldset class="overseas-direct">
@@ -178,19 +354,17 @@
                 <input type="text" placeholder="개인통관 고유부호">
                 <p>상품을 받는 분의 명의로 통관이 진행되므로 고객 님의 정보를 입력해주세요.</p>
                 <div class="overseas-checkbox-wrap">
-                    <input type="checkbox" name="" id="">
-                    <div>
-                        <label for="">해외직배송 상품의 수입신고를 위한 개인통관고유부호 수집에 동의합니다.</label>
-                        <a href="">전체보기</a>
-                    </div>
+                    <input type="checkbox" name="overseaChk01" id="overseaChk01">
+                    <label for="overseaChk01">해외직배송 상품의 수입신고를 위한 개인통관고유부호 수집에 동의합니다.</label>
+                    
                 </div>
+                <a href="">전체보기</a>
                 <div class="overseas-checkbox-wrap">
-                    <input type="checkbox" name="" id="">
-                    <div>
-                        <label for="">해외직배송 상품의 수입신고를 위한 개인통관고유부호의 판매자 제공에 동의합니다.</label>
-                        <a href="">전체보기</a>
-                    </div>
+                    <input type="checkbox" name="overseaChk02" id="overseaChk02">
+                    <label for="overseaChk02">해외직배송 상품의 수입신고를 위한 개인통관고유부호의 판매자 제공에 동의합니다.</label>
+                    
                 </div>
+                <a href="">전체보기</a>
                 <ul>
                     <li>개인통관 고유부호 정보수정이 필요할 경우 마이페이지>개인정보>개인통관고유부호 관리에서 수정하실 수 있습니다.</li>
                     <li>해외배송상품은 통상 5~15일 정도의 배송기간이 소요됩니다.</li>
@@ -205,8 +379,8 @@
                 <div class="coupon">
                     <h4>상품할인쿠폰</h4>
                     <div>
-                        <input type="text" name="" id="">
-                        <label for="">원</label>
+                        <input type="text" name="coupon01" id="coupon01" readonly>
+                        <label for="coupon01">원</label>
                         <button>쿠폰 조회/적용</button>
                     </div>
                     <p>(사용가능한 쿠폰 0장)</p>
@@ -214,8 +388,8 @@
                 <div class="coupon">
                     <h4>주문할인쿠폰</h4>
                     <div>
-                        <input type="text" name="" id="">
-                        <label for="">원</label>
+                        <input type="text" name="coupon02" id="coupon02" readonly>
+                        <label for="coupon02">원</label>
                         <button>쿠폰 조회/적용</button>
                     </div>
                     <p>(사용가능한 쿠폰 0장)</p>
@@ -223,8 +397,8 @@
                 <div class="coupon">
                     <h4>무료배송쿠폰</h4>
                     <div>
-                        <input type="text" name="" id="">
-                        <label for="">원</label>
+                        <input type="text" name="coupon03" id="coupon03" readonly>
+                        <label for="coupon03">원</label>
                         <button>쿠폰 조회/적용</button>
                     </div>
                     <p>(사용가능한 쿠폰 0장)</p>
@@ -232,8 +406,8 @@
                 <div class="coupon">
                     <h4>사은품증정쿠폰</h4>
                     <div>
-                        <input type="text" name="" id="">
-                        <label for="">원</label>
+                        <input type="text" name="coupon04" id="coupon04" re readonly>
+                        <label for="coupon04">원</label>
                         <button>쿠폰 조회/적용</button>
                     </div>
                     <p>(사용가능한 쿠폰 0장)</p>
@@ -285,6 +459,9 @@
                     <h4>입금은행</h4>
                     <select name="" id="">
                         <option value="은행을 선택해 주세요">은행을 선택해 주세요.</option>
+                        <option value="국민은행">국민은행</option>
+                        <option value="신한은행">신한은행</option>
+                        <option value="농협">농협</option>
                     </select>
                     <p><span>&middot;</span>입금기한 : 2022-11-30</p>
                 </div>
@@ -293,14 +470,14 @@
                 </div>
                 <div class="cash-receipts">
                     <div class="cash-check">
-                        <input type="checkbox">
-                        <label for="">현금영수증 신청</label>
+                        <input type="checkbox" name="cashChk01" id="cashChk01">
+                        <label for="cashChk01">현금영수증 신청</label>
                     </div>
                     <div class="cash-radio">
-                        <input type="radio">
-                        <label for="">개인소득공제용</label>
-                        <input type="radio">
-                        <label for="">사업자증빙용</label>
+                        <input type="radio" name="cash-radio" id="cash-radio01">
+                        <label for="cash-radio01">개인소득공제용</label>
+                        <input type="radio" name="cash-radio" id="cash-radio02">
+                        <label for="cash-radio02">사업자증빙용</label>
                     </div>
                     <div class="cash-number">
                         <h5>휴대폰번호</h5>
@@ -311,23 +488,23 @@
                 </div>
                 <ul class="agreement-wrap">
                     <li class="full-agreement">
-                        <input type="checkbox" name="" id="">
-                        <label for="">전체동의</label>
+                        <input type="checkbox" name="payInfoFullChk" id="payInfoFullChk">
+                        <label for="payInfoFullChk">전체동의</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="">
-                        <label for="">전자금융거래 이용약관 (필수)</label>
-                        <a href="#">전체보기</a>
+                        <input type="checkbox" name="eAgreeChk" id="eAgreeChk">
+                        <label for="eAgreeChk">전자금융거래 이용약관 (필수)</label>
+                        <a href="#none">전체보기</a>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="">
-                        <label for="">개인정보 수집 및 이용 동의 (필수)</label>
-                        <a href="#">전체보기</a>
+                        <input type="checkbox" name="pAgreeChk01" id="pAgreeChk01">
+                        <label for="pAgreeChk01">개인정보 수집 및 이용 동의 (필수)</label>
+                        <a href="#none">전체보기</a>
                     </li>
                     <li>
-                        <input type="checkbox" name="" id="">
-                        <label for="">개인정보 제3자 제공 동의 (필수)</label>
-                        <a href="#">전체보기</a>
+                        <input type="checkbox" name="pAgreeChk02" id="pAgreeChk02">
+                        <label for="pAgreeChk02">개인정보 제3자 제공 동의 (필수)</label>
+                        <a href="#none">전체보기</a>
                     </li>
 
                 </ul>
@@ -379,17 +556,17 @@
                         <p>3,000원</p>
                     </li>
                     <li class="all-agreement">
-                        <input type="checkbox" name="" id="">
-                        <label for="">전체동의</label>
+                        <input type="checkbox" name="lastChk01" id="lastChk01">
+                        <label for="lastChk01">전체동의</label>
                     </li>
                     <li class="law-agreement">
-                        <input type="checkbox" name="" id="">
-                        <label for="">주문할 상품의 내용,가격,배송정책 등 구매조건을 확인하였으며, 구매진행에 동의합니다. (필수)<br>[전자상거래법 제 8조 2항]</label>
+                        <input type="checkbox" name="lastChk02" id="lastChk02">
+                        <label for="lastChk02">주문할 상품의 내용,가격,배송정책 등 구매조건을 확인하였으며, 구매진행에 동의합니다. (필수)<br>[전자상거래법 제 8조 2항]</label>
                     </li>
                     <li class="terms-of-service">
-                        <input type="checkbox" name="" id="">
-                        <label for="">G1 이용약관에 동의합니다. (필수)</label>
-                        <a href="#">전체보기</a>
+                        <input type="checkbox" name="lastChk03" id="lastChk03">
+                        <label for="lastChk03">G1 이용약관에 동의합니다. (필수)</label>
+                        <a href="#none">전체보기</a>
                     </li>
                 </ul>
                 <input type="submit" value="주문하기" class="order-btn">
@@ -407,20 +584,20 @@
             <li>이메일 info@bylynn.shop</li>
         </ul>
         <ul class="link">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">멤버십 혜택</a></li>
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
         </ul>
         <ul class="foot-sns">
-            <li><a href="#"><img src="../images/googleplay.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/apple.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/naver.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/youtube.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/facebook.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/googleplay.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/youtube.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt=""></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt=""></a></li>
         </ul>
         <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
     </footer>
