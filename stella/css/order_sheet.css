@@ -1156,6 +1156,8 @@ input[id="pcc-agree2"]:checked + label {
     font-size: 14px;
     font-weight: 500;
     color: #111;
+    text-align: end;
+    outline: 0;
 }
 
 .order-sheet_content .coupon dl dd:first-of-type a {
@@ -1222,6 +1224,8 @@ input[id="pcc-agree2"]:checked + label {
     font-size: 14px;
     font-weight: 500;
     color: #111;
+    text-align: end;
+    outline: 0;
 }
 
 .order-sheet_content .reserve_deposit dl dd:first-of-type a {
