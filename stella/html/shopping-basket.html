@@ -67,6 +67,10 @@
                 if (chkbox1 == false) {
                     $('#bylynn1-all').prop('checked', false);
                 }
+
+                if (chkbox1 == false && $('#all_chk').prop('checked') == true) {
+                    $('#all_chk').prop('checked', false);
+                }
             });
 
             var bylynn1_all_chk = $('#bylynn1-all').parents('li').siblings().find('input[type=checkbox]');
@@ -76,6 +80,7 @@
                     $('#bylynn1-all').prop('checked', true);
                 } else {
                     $('#bylynn1-all').prop('checked', false);
+                    $('#all_chk').prop('checked', false);
                 }
             });
 
@@ -94,35 +99,35 @@
             $('#chkbox3').click(function() {
                 var chkbox3 = $('#chkbox3').prop('checked');
                 if (chkbox3 == false) {
-                    $('#bylynn1-all').prop('checked', false);
+                    $('#bylynn2-all').prop('checked', false);
                 }
             });
 
             $('#chkbox4').click(function() {
                 var chkbox4 = $('#chkbox4').prop('checked');
                 if (chkbox4 == false) {
-                    $('#bylynn1-all').prop('checked', false);
+                    $('#bylynn2-all').prop('checked', false);
                 }
             });
 
             $('#chkbox5').click(function() {
                 var chkbox5 = $('#chkbox5').prop('checked');
                 if (chkbox5 == false) {
-                    $('#bylynn1-all').prop('checked', false);
+                    $('#bylynn2-all').prop('checked', false);
                 }
             });
 
             $('#chkbox6').click(function() {
                 var chkbox6 = $('#chkbox6').prop('checked');
                 if (chkbox6 == false) {
-                    $('#bylynn1-all').prop('checked', false);
+                    $('#bylynn2-all').prop('checked', false);
                 }
             });
 
             $('#chkbox7').click(function() {
                 var chkbox7 = $('#chkbox7').prop('checked');
                 if (chkbox7 == false) {
-                    $('#bylynn1-all').prop('checked', false);
+                    $('#bylynn2-all').prop('checked', false);
                 }
             });
 
@@ -133,6 +138,7 @@
                     $('#bylynn2-all').prop('checked', true);
                 } else {
                     $('#bylynn2-all').prop('checked', false);
+                    $('#all_chk').prop('checked', false);
                 }
             });
 
