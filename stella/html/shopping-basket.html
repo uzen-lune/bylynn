@@ -33,21 +33,11 @@
             /*전체선택*/
             $('#all_chk').click(function() {
                 var all_chk = $('#all_chk').prop('checked');
-                console.log(all_chk);
+                //console.log(all_chk);
                 if (all_chk == true) {
                     $(this).parents('fieldset').find('input[type=checkbox]').not('[disabled]').prop('checked', true);
                 } else {
                     $(this).parents('fieldset').find('input[type=checkbox]').not('[disabled]').prop('checked', false);
-                }
-            });
-
-            var bylynn_all_chk = $('#all_chk').parents('fieldset').find('input[type=checkbox]').not('[disabled]');
-
-            $(bylynn_all_chk).click(function() {
-                if ($('#bylynn1-all').prop('checked') == true && $('#bylynn2-all').prop('checked') == true) {
-                    $('#all_chk').prop('checked', true);
-                } else {
-                    $('#all_chk').prop('checked', false);
                 }
             });
 
@@ -138,6 +128,16 @@
                     $('#bylynn2-all').prop('checked', true);
                 } else {
                     $('#bylynn2-all').prop('checked', false);
+                    $('#all_chk').prop('checked', false);
+                }
+            });
+
+            var bylynn_all_chk = $('#all_chk').parents('fieldset').find('input[type=checkbox]').not('[disabled]');
+
+            $(bylynn_all_chk).click(function() {
+                if ($('#bylynn1-all').prop('checked') == true && $('#bylynn2-all').prop('checked') == true) {
+                    $('#all_chk').prop('checked', true);
+                } else {
                     $('#all_chk').prop('checked', false);
                 }
             });
