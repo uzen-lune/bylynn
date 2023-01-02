@@ -15,9 +15,82 @@
     <script>
         $(document).ready(function() {
 
-            $('html, body').animate({
-                scrollTop: 0
-            }, 10);
+            /*전체동의1*/
+            $('#terms-all-chk').click(function() {
+                var terms_all_chk = $('#terms-all-chk').prop('checked');
+                //console.log(terms_all_chk);
+                if (terms_all_chk == true) {
+                    $(this).parent('li').siblings().find('input[type=checkbox]').prop('checked', true);
+                } else {
+                    $(this).parent('li').siblings().find('input[type=checkbox]').prop('checked', false);
+                }
+            });
+
+            $('#terms1').click(function() {
+                var terms1 = $('#terms1').prop('checked');
+                if (terms1 == false) {
+                    $('#terms-all-chk').prop('checked', false);
+                }
+            });
+
+            $('#terms2').click(function() {
+                var terms2 = $('#terms2').prop('checked');
+                if (terms2 == false) {
+                    $('#terms-all-chk').prop('checked', false);
+                }
+            });
+
+            $('#terms3').click(function() {
+                var terms3 = $('#terms3').prop('checked');
+                if (terms3 == false) {
+                    $('#terms-all-chk').prop('checked', false);
+                }
+            });
+
+            var term_all_chk = $('#terms-all-chk').parent('li').siblings().find('input[type=checkbox]');
+
+            $(term_all_chk).click(function() {
+                if ($('#terms1').prop('checked') == true && $('#terms2').prop('checked') == true && $('#terms3').prop('checked') == true) {
+                    $('#terms-all-chk').prop('checked', true);
+                } else {
+                    $('#terms-all-chk').prop('checked', false);
+                }
+            });
+
+            /*전체동의2*/
+            $('#agree-all-chk').click(function() {
+                var all_agree = $('#agree-all-chk').prop('checked');
+                //console.log(all_agree);
+                if (all_agree == true) {
+                    $(this).parent('li').siblings().find('input[type=checkbox]').prop('checked', true);
+                } else {
+                    $(this).parent('li').siblings().find('input[type=checkbox]').prop('checked', false);
+                }
+            });
+
+            $('#agree-chk1').click(function() {
+                var agree1 = $('#agree-chk1').prop('checked');
+                if (agree1 == false) {
+                    $('#agree-all-chk').prop('checked', false);
+                }
+            });
+
+            $('#agree-chk2').click(function() {
+                var agree2 = $('#agree-chk2').prop('checked');
+                if (agree2 == false) {
+                    $('#agree-all-chk').prop('checked', false);
+                }
+            });
+
+            var agree_chk = $('#agree-all-chk').parent('li').siblings().find('input[type=checkbox]');
+
+            $(agree_chk).click(function() {
+                if ($('#agree-chk1').prop('checked') == true && $('#agree-chk2').prop('checked') == true) {
+                    $('#agree-all-chk').prop('checked', true);
+                } else {
+                    $('#agree-all-chk').prop('checked', false);
+                }
+            });
         });
     </script>
 </head>

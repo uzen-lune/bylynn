@@ -724,6 +724,7 @@ input[id="bylynn1-all"]:checked + label {
     font-size: 13px;
     font-weight: 500;
     color: #111;
+    line-height: 20px;
 }
 
 
@@ -900,6 +901,7 @@ input[id="bylynn2-all"]:checked + label {
     font-size: 13px;
     font-weight: 500;
     color: #111;
+    line-height: 20px;
 }
 
 
