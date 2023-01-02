@@ -676,12 +676,15 @@ input[id="purpose4"]:checked + label {
     text-align: center;
 }
 
-.filter-bottom .filter-reset a {
+.filter-bottom .filter-reset button {
+    width: 100%;
     display: block;
     font-size: 14px;
     font-weight: 500;
     color: #111;
     padding: 14.5px 0;
+    background-color: #fff;
+    border: 0;
 }
 
 .filter-bottom .filter-apply {
@@ -693,10 +696,13 @@ input[id="purpose4"]:checked + label {
     text-align: center;
 }
 
-.filter-bottom .filter-apply a {
+.filter-bottom .filter-apply button {
+    width: 100%;
     display: block;
     font-size: 14px;
     font-weight: 500;
     color: #fff;
     padding: 14.5px 0;
+    background-color: #111;
+    border: 0;
 }
