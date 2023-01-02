@@ -15,15 +15,125 @@
     <script>
         $(document).ready(function() {
 
-            $('html, body').animate({
-                scrollTop: 0
-            }, 10);
-
             $('.keeping').click(function() {
-                /*$(this).children('img').attr({
-                    src: '../images/keeping_black.svg'
-                });*/
-                alert("로그인 시에만 위시리스트를 이용하실 수 있습니다.");
+                var img = $(this).children('img').attr('src');
+                //console.log(img);
+
+                if (img.match('black')) {
+                    $(this).children('img').attr({
+                        src: '../images/keeping.svg'
+                    });
+                } else {
+                    $(this).children('img').attr({
+                        src: '../images/keeping_black.svg'
+                    });
+                }
+            });
+
+            /*전체선택*/
+            $('#all_chk').click(function() {
+                var all_chk = $('#all_chk').prop('checked');
+                console.log(all_chk);
+                if (all_chk == true) {
+                    $(this).parents('fieldset').find('input[type=checkbox]').not('[disabled]').prop('checked', true);
+                } else {
+                    $(this).parents('fieldset').find('input[type=checkbox]').not('[disabled]').prop('checked', false);
+                }
+            });
+
+            var bylynn_all_chk = $('#all_chk').parents('fieldset').find('input[type=checkbox]').not('[disabled]');
+
+            $(bylynn_all_chk).click(function() {
+                if ($('#bylynn1-all').prop('checked') == true && $('#bylynn2-all').prop('checked') == true) {
+                    $('#all_chk').prop('checked', true);
+                } else {
+                    $('#all_chk').prop('checked', false);
+                }
+            });
+
+            /*bylynn1 선택*/
+            $('#bylynn1-all').click(function() {
+                var bylynn1_all = $('#bylynn1-all').prop('checked');
+                //console.log(bylynn1_all);
+                if (bylynn1_all == true) {
+                    $(this).parents('li').siblings().find('input[type=checkbox]').not('[disabled]').prop('checked', true);
+                } else {
+                    $(this).parents('li').siblings().find('input[type=checkbox]').not('[disabled]').prop('checked', false);
+                }
+            });
+
+            $('#chkbox1').click(function() {
+                var chkbox1 = $('#chkbox1').prop('checked');
+                if (chkbox1 == false) {
+                    $('#bylynn1-all').prop('checked', false);
+                }
+            });
+
+            var bylynn1_all_chk = $('#bylynn1-all').parents('li').siblings().find('input[type=checkbox]');
+
+            $(bylynn1_all_chk).click(function() {
+                if ($('#chkbox1').prop('checked') == true) {
+                    $('#bylynn1-all').prop('checked', true);
+                } else {
+                    $('#bylynn1-all').prop('checked', false);
+                }
+            });
+
+
+            /*bylynn2 선택*/
+            $('#bylynn2-all').click(function() {
+                var bylynn2_all = $('#bylynn2-all').prop('checked');
+                //console.log(bylynn1_all);
+                if (bylynn2_all == true) {
+                    $(this).parents('li').siblings().find('input[type=checkbox]').not('[disabled]').prop('checked', true);
+                } else {
+                    $(this).parents('li').siblings().find('input[type=checkbox]').not('[disabled]').prop('checked', false);
+                }
+            });
+
+            $('#chkbox3').click(function() {
+                var chkbox3 = $('#chkbox3').prop('checked');
+                if (chkbox3 == false) {
+                    $('#bylynn1-all').prop('checked', false);
+                }
+            });
+
+            $('#chkbox4').click(function() {
+                var chkbox4 = $('#chkbox4').prop('checked');
+                if (chkbox4 == false) {
+                    $('#bylynn1-all').prop('checked', false);
+                }
+            });
+
+            $('#chkbox5').click(function() {
+                var chkbox5 = $('#chkbox5').prop('checked');
+                if (chkbox5 == false) {
+                    $('#bylynn1-all').prop('checked', false);
+                }
+            });
+
+            $('#chkbox6').click(function() {
+                var chkbox6 = $('#chkbox6').prop('checked');
+                if (chkbox6 == false) {
+                    $('#bylynn1-all').prop('checked', false);
+                }
+            });
+
+            $('#chkbox7').click(function() {
+                var chkbox7 = $('#chkbox7').prop('checked');
+                if (chkbox7 == false) {
+                    $('#bylynn1-all').prop('checked', false);
+                }
+            });
+
+            var bylynn2_all_chk = $('#bylynn2-all').parents('li').siblings().find('input[type=checkbox]');
+
+            $(bylynn2_all_chk).click(function() {
+                if ($('#chkbox3').prop('checked') == true && $('#chkbox4').prop('checked') == true && $('#chkbox5').prop('checked') == true && $('#chkbox6').prop('checked') == true && $('#chkbox7').prop('checked') == true) {
+                    $('#bylynn2-all').prop('checked', true);
+                } else {
+                    $('#bylynn2-all').prop('checked', false);
+                }
             });
 
         });
@@ -54,8 +164,8 @@
             <fieldset>
                 <legend>장바구니</legend>
                 <div class="delete">
-                    <input type="checkbox" id="all-chk" name="" value="">
-                    <label for="all-chk">전체선택</label>
+                    <input type="checkbox" id="all_chk" name="" value="">
+                    <label for="all_chk">전체선택</label>
                     <ul>
                         <li>
                             <button type="button" onclick="">선택삭제</button>
@@ -122,7 +232,7 @@
                                     <input type="checkbox" id="chkbox2" disabled>
                                     <label for="chkbox2">제품선택</label>
                                     <div>
-                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none"><img src="../images/keeping.svg" alt=""></a>
                                         <a href="#none"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
@@ -294,7 +404,7 @@
                                     <input type="checkbox" id="chkbox6">
                                     <label for="chkbox6">제품선택</label>
                                     <div>
-                                        <a href="#none"><img src="../images/keeping.svg" alt=""></a>
+                                        <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
                                         <a href="#none"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
