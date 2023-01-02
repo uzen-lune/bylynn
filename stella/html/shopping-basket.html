@@ -57,13 +57,9 @@
                 if (chkbox1 == false) {
                     $('#bylynn1-all').prop('checked', false);
                 }
-
-                if (chkbox1 == false && $('#all_chk').prop('checked') == true) {
-                    $('#all_chk').prop('checked', false);
-                }
             });
 
-            var bylynn1_all_chk = $('#bylynn1-all').parents('li').siblings().find('input[type=checkbox]');
+            var bylynn1_all_chk = $('#bylynn1-all').parents('li').siblings().find('input[type=checkbox]').not('[disabled]');
 
             $(bylynn1_all_chk).click(function() {
                 if ($('#chkbox1').prop('checked') == true) {
