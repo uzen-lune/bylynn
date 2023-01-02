@@ -41,12 +41,72 @@
                 if (checked == true) {
                     /*alert("작동중");*/
                     allChk.prop('checked',true);
-                    $("#cart-bynn1-pdt5").prop('checked',false);
+                    $("#cart-bynn2-pdt3").prop('checked',false);
                 }else {
                      allChk.prop('checked',false);
                 }
             });
-
+            
+            
+            
+            //그룹1
+            
+           $('#cart-bynn1').click(function(){
+                
+               
+                var group1Child = $(this).parents('.group').find('input[type=checkbox]');
+                if($(this).prop('checked') == true) {
+                    group1Child.prop('checked',true);
+                }else{
+                    group1Child.prop('checked',false);
+                };
+                
+            });
+    
+            var group1Child = $('#cart-bynn1').parents('.group').children('.box-wrap').find('input[type=checkbox]');
+            
+            //그룹1 개별체크박스에 따라 전체체크박스 변화
+            $(group1Child).click(function(){
+                var clickChk = $(this).prop('checked');
+                var siblingsChk = $(this).parents('.box').siblings().find('input[type=checkbox]').prop('checked');
+                
+                if(clickChk == true && siblingsChk == true ){
+                    $('#cart-bynn1').prop('checked',true);
+                }else if ($(this).prop('checked') == false){
+                     $('#cart-bynn1').prop('checked',false);
+                }
+                
+            });
+            
+            
+            ///그룹2
+            var group2child = $('input[name*=cart-bynn2-pdt]');
+            $('#cart-bynn2').click(function(){
+                if($(this).is(':checked')){
+                    group2child.prop('checked',true); $('.infoChange').find('input').prop('checked',false);
+                }else{
+                    group2child.prop('checked',false); 
+                };
+                
+            });
+            var group2childLength = $('input[name*=cart-bynn2-pdt]').length;//그룹2박스
+            var infoChangeLength = $('.infoChange').find('input[type=checkbox]').length;//정보가 바뀐박스
+            group2child.click(function(){
+                var group2childChecked = $('input[name*=cart-bynn2-pdt]:checked').length;//체크된 박스
+                
+                if(group2childLength-infoChangeLength != group2childChecked){
+                    $('#cart-bynn2').prop('checked',false);
+                }else{
+                    $('#cart-bynn2').prop('checked',true);
+                }
+                
+            });
+            
+            
+                
+            
+            
+            
         });
         
         
@@ -88,6 +148,7 @@
                             <a href="">지역별 추가배송비</a>
                         </div>
                         <!-- 기본 -->
+                        <div class="box-wrap">
                         <div class="box">
                             <div class="box-check">
                                 <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
@@ -198,22 +259,23 @@
                             </div>
 
                         </div>
+                        </div>
                     </div>
 
                     <!-- 두번째그룹 -->
                     <div class="group">
                         <div class="group-title">
                             <div>
-                                <input type="checkbox" name="cart-bynn1" id="cart-bynn1">
-                                <label for="cart-bynn1">바이린2 배송상품</label>
+                                <input type="checkbox" name="cart-bynn2" id="cart-bynn2">
+                                <label for="cart-bynn2">바이린2 배송상품</label>
                             </div>
                             <a href="">지역별 추가배송비</a>
                         </div>
                         <!-------- 사은품/추가 --------->
                         <div class="box addProduct">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt3" id="cart-bynn1-pdt3">
-                                <label for="cart-bynn1-pdt3"></label>
+                                <input type="checkbox" name="cart-bynn2-pdt1" id="cart-bynn2-pdt1">
+                                <label for="cart-bynn2-pdt1"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -288,8 +350,8 @@
                         <!-- 가격없음 -->
                         <div class="box priceHide">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt4" id="cart-bynn1-pdt4">
-                                <label for="cart-bynn1-pdt4"></label>
+                                <input type="checkbox" name="cart-bynn2-pdt2" id="cart-bynn2-pdt2">
+                                <label for="cart-bynn2-pdt2"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -344,8 +406,8 @@
 
                         <div class="box infoChange">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt5" id="cart-bynn1-pdt5">
-                                <label for="cart-bynn1-pdt5"></label>
+                                <input type="checkbox" name="cart-bynn2-pdt3" id="cart-bynn2-pdt3">
+                                <label for="cart-bynn2-pdt3"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -403,8 +465,8 @@
                         <!-- ALL -->
                         <div class="box boxAll">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt6" id="cart-bynn1-pdt6">
-                                <label for="cart-bynn1-pdt6"></label>
+                                <input type="checkbox" name="cart-bynn2-pdt4" id="cart-bynn2-pdt4">
+                                <label for="cart-bynn2-pdt4"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>
@@ -543,8 +605,8 @@
 
                         <div class="box minimum">
                             <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt7" id="cart-bynn1-pdt7">
-                                <label for="cart-bynn1-pdt7"></label>
+                                <input type="checkbox" name="cart-bynn2-pdt5" id="cart-bynn2-pdt5">
+                                <label for="cart-bynn2-pdt5"></label>
                                 <ul>
                                     <li class="pdt-wish">좋아요</li>
                                     <li class="pdt-delete">삭제</li>

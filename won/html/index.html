@@ -50,6 +50,14 @@
             });
 
         });
+        $(window).scroll(function(){
+            var winTop = $(window).scrollTop();
+            if(winTop >= 1000){
+                $(".scTop").show(0);
+            }else{
+                $(".scTop").hide(0);
+            };
+        });
 
     </script>
 
@@ -109,7 +117,7 @@
     <aside>
         <ul>
             <li><a href="#none"><img src="../images/chat.svg" alt=""></a></li>
-            <li><a href="#none"><img src="../images/top.svg" alt=""></a></li>
+            <li class="scTop"><a href="#"><img src="../images/top.svg" alt=""></a></li>
         </ul>
     </aside>
     <!----------main------------->
@@ -180,37 +188,37 @@
             <li class="swiper-slide">
                 <a href="#none">
                     <img src="../images/slidenav01.jpg" alt="">
-                    <p>#none모피</p>
+                    <p>#모피</p>
                 </a>
             </li>
             <li class="swiper-slide">
                 <a href="#none">
                     <img src="../images/slidenav02.jpg" alt="">
-                    <p>#none데님</p>
+                    <p>#데님</p>
                 </a>
             </li>
             <li class="swiper-slide">
                 <a href="#none">
                     <img src="../images/slidenav01.jpg" alt="">
-                    <p>#none무스탕</p>
+                    <p>#무스탕</p>
                 </a>
             </li>
             <li class="swiper-slide">
                 <a href="#none">
                     <img src="../images/slidenav02.jpg" alt="">
-                    <p>#none데님</p>
+                    <p>#데님</p>
                 </a>
             </li>
             <li class="swiper-slide">
                 <a href="#none">
                     <img src="../images/slidenav01.jpg" alt="">
-                    <p>#none모피</p>
+                    <p>#모피</p>
                 </a>
             </li>
             <li class="swiper-slide">
                 <a href="#none">
                     <img src="../images/slidenav02.jpg" alt="">
-                    <p>#none데님</p>
+                    <p>#데님</p>
                 </a>
             </li>
 
@@ -274,15 +282,15 @@
             <h2>Today's New</h2>
             <div class="today-navi">
                 <ul>
-                    <li class="active"><a href="#none">#noneDEAR K</a></li>
-                    <li><a href="#none">#noneHUIT DE LYNN</a></li>
-                    <li><a href="#none">#noneKENNETH LADY</a></li>
-                    <li><a href="#none">#noneKL</a></li>
-                    <li><a href="#none">#noneLINE</a></li>
-                    <li><a href="#none">#noneLINE STUDIO ONE</a></li>
-                    <li><a href="#none">#noneLYNN</a></li>
-                    <li><a href="#none">#noneMOE</a></li>
-                    <li><a href="#none">#noneNUVO10</a></li>
+                    <li class="active"><a href="#none">#DEAR K</a></li>
+                    <li><a href="#none">#HUIT DE LYNN</a></li>
+                    <li><a href="#none">#KENNETH LADY</a></li>
+                    <li><a href="#none">#KL</a></li>
+                    <li><a href="#none">#LINE</a></li>
+                    <li><a href="#none">#LINE STUDIO ONE</a></li>
+                    <li><a href="#none">#LYNN</a></li>
+                    <li><a href="#none">#MOE</a></li>
+                    <li><a href="#none">#NUVO10</a></li>
 
                 </ul>
             </div>

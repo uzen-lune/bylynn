@@ -15,6 +15,7 @@
     <script src="../js/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
+            //2개짜리 전체동의
             $('#lastChk01').click(function() {
                 /*alert("클릭됨");*/
                 var checkSiblings = $(this).parent().siblings().find('input[type=checkbox]');
@@ -27,39 +28,16 @@
                 };
 
             });
+            
+             var a = $('.payment-final-wrap').children('li').find('input[type=checkbox]')
 
-
-            //전체선택
-            $('#select-all').click(function() {
-                var allChk = $('input[type=checkbox]');
-                var checked = $(this).prop('checked');
-                console.log(checked);
-                if (checked == true) {
-                    /*alert("작동중");*/
-                    allChk.prop('checked', true);
-                    $("#cart-bynn1-pdt5").prop('checked', false);
-                } else {
-                    allChk.prop('checked', false);
-                }
-
-
-
-
-            });
-
-
-            /*payment-final-wrap > li > input[type=checkbox]를 클릭 했을 때
-            --> 두번째(#lastChk02), 세번째(#lastChk03) 체크박스가 체크되어 있는 상태일 때,첫번째(#lastChk01)체크박스는 체크된다.*/
-            /*둘중에 하나라도 체크되지 않았을 때 첫번째 체크박스는 체크되지 않는다.
-            이걸 논리 연산자로?*/
-
-            var a = $('.payment-final-wrap').children('li').find('input[type=checkbox]')
-
-            $(a).click(function() {
+            $(a).
+            click(function() {
 
                 if ($('#lastChk02').prop('checked') == true && $('#lastChk03').prop('checked') == true) {
 
-                    $('#lastChk01').prop('checked', true);
+                    $('#lastChk01').prop(
+                        'checked', true);
 
                 } else {
 
@@ -69,6 +47,52 @@
 
 
             });
+            //2개짜리 전체동의
+            //3개짜리 전체동의
+            /*$('#payInfoFullChk').click(function(){
+                var fullCheckSiblings = $(this).parent().siblings().find('input[type=checkbox]');
+                var checked = $(this).prop('checked');
+                console.log(checked);
+                if (checked == true) {
+                    fullCheckSiblings.prop('checked', true);
+                } else {
+                    fullCheckSiblings.prop('checked', false);
+                };
+            });
+            
+            var agreeInput = $('.agreement-wrap').children('li').find('input[type=checkbox]').not('#payInfoFullChk');
+            $(agreeInput).click(function(){
+               var agreeInputSiblings = $(this).
+            });*/
+            
+            ////////////is:checked랑 name값 활용
+            var pAgreeChk = $('input[name*=pAgreeChk]');
+            
+            $('#payInfoFullChk').click(function(){
+                if($(this).is(":checked")){
+                    pAgreeChk.prop('checked',true);
+                }else{
+                    pAgreeChk.prop('checked',false);
+                }
+            });
+            
+            $(pAgreeChk).click(function(){
+                var pAgreeChked =$(pAgreeChk).length,
+                    pAgreeNotChk = $('input[name*=pAgreeChk]:checked').length;
+                
+                if(pAgreeChked != pAgreeNotChk){
+                    $('#payInfoFullChk').prop('checked',false);
+                }else{
+                    $('#payInfoFullChk').prop('checked',true);
+                }
+            });
+            
+            
+            
+            //체크된것의 갯수
+
+
+           
 
 
 
@@ -181,7 +205,7 @@
                             <textarea name="receiveMessageDetail" id="receiveMessageDetail" cols="30" rows="10" placeholder="50자 이내로 입력해 주세요."></textarea>
                         </li>
                         <li>
-                            <input type="checkbox" name="defaultAddress" id="defaultAddress">
+                            <input type="checkbox" name="defaultAddress" id="defaultAddress" checked>
 
                             <label for="defaultAddress">기본배송지로 선택</label>
                         </li>
@@ -555,18 +579,18 @@
                         <label for="payInfoFullChk">전체동의</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="eAgreeChk" id="eAgreeChk">
-                        <label for="eAgreeChk">전자금융거래 이용약관 (필수)</label>
-                        <a href="#none">전체보기</a>
-                    </li>
-                    <li>
                         <input type="checkbox" name="pAgreeChk01" id="pAgreeChk01">
-                        <label for="pAgreeChk01">개인정보 수집 및 이용 동의 (필수)</label>
+                        <label for="pAgreeChk01">전자금융거래 이용약관 (필수)</label>
                         <a href="#none">전체보기</a>
                     </li>
                     <li>
                         <input type="checkbox" name="pAgreeChk02" id="pAgreeChk02">
-                        <label for="pAgreeChk02">개인정보 제3자 제공 동의 (필수)</label>
+                        <label for="pAgreeChk02">개인정보 수집 및 이용 동의 (필수)</label>
+                        <a href="#none">전체보기</a>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pAgreeChk03" id="pAgreeChk03">
+                        <label for="pAgreeChk03">개인정보 제3자 제공 동의 (필수)</label>
                         <a href="#none">전체보기</a>
                     </li>
 
