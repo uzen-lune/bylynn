@@ -94,7 +94,28 @@
 
            
 
-
+            //입력 안하고 전송하면 알럿띄우기
+            /*$('.order-btn').click(function(){
+                
+                if($('#non-members-chkBox').is(':checked') == false){
+                    alert('정보수집에 동의해주세요');
+                    $('#non-members-chkBox').focus();
+                    return false;
+                }
+                if($('#up14').is(':checked') == false){
+                    alert('정보수집에 동의해주세요');
+                    $('#up14').focus();
+                    return false;
+                }
+                
+                if($('#orderUserName').val().length == 0){
+                    alert('이름을 입력하세요');
+                    $('#orderUserName').focus();
+                    return false;
+                }
+                
+            });*/
+            
 
 
         });
@@ -129,12 +150,12 @@
                 <p>비회원 주문 시 쿠폰 및 적립금 등의 혜택을 받을 수 없습니다. 간단한 과정을 거쳐 회원가입 하시고 회원 혜택을 누리시기 바랍니다.</p>
                 <p>비회원 구매 시 입력하신 비밀번호와 결제완료 후 노출되는 주문번호를 통해서 구매내역을 조회하실 수 있습니다.</p>
                 <div>
-                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox">
+                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox" tabindex="1">
                     <label for="non-members-chkBox" tabindex="0">비회원 주문 개인정보 수집 및 이용에 동의합니다. <br>(필수)</label>
                     <a href="#none">전체보기</a>
                 </div>
                 <div>
-                    <input type="checkbox" name="up14" id="up14">
+                    <input type="checkbox" name="up14" id="up14" tabindex="1">
                     <label for="up14">만 14세 이상입니다.(필수)</label>
                 </div>
 

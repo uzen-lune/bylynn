@@ -32,84 +32,154 @@
             $('.infoChange').prev().find(".pdt-benefits").css({
                 borderBottom: 0
             });
-            
+
             //전체선택
-            $('#select-all').click(function(){
+            $('#select-all').click(function() { //
+                if ($(this).is(":checked")) {
+                    $('.cart-pdt').find('input[type=checkbox]').prop('checked', true);
+                    $('.infoChange').find('input[type=checkbox]').prop('checked', false);//변경박스 제외
+                } else {
+                    $('.cart-pdt').find('input[type=checkbox]').prop('checked', false);
+                };
+            });
+            
+            //문자 읽어와서 바꾸기
+            var allClickBtn = $('.group-title').find('input[id*=cart-bynn]');
+
+            allClickBtn.click(function() { //바이린+''+배송상품 클릭 했을 때
+
+                var gId = $(this).attr('id'), //클릭한input 아이디값
+                    gNumber = gId[gId.length - 1], //변하는 숫자 값
+                    bynnList = $('.box-wrap').find('input[name*=cart-bynn' + gNumber + ']'),
+                    bynnListLength = bynnList.length;
+
+                if ($(this).prop('checked') == true) {
+                    bynnList.prop('checked', true);
+                    $(this).parents('.group-title').siblings('.box-wrap').find('.infoChange').find('input[type=checkbox]').prop('checked',false);
+                    /*$("#cart-bynn2-pdt3").prop('checked', false);*/
+                } else {
+                    bynnList.prop('checked', false);
+                };
+
+            });
+            
+            $('.box-wrap').find('input[type=checkbox]').click(function() { //list
+                var gId = $(this).attr('id'),
+                    gNumber = gId.charAt(9),
+                    allCheckedNumber = $('.box-wrap').find('input[name*=cart-bynn' + gNumber + ']:checked').length,
+                    notCheckedNumber = $('.box-wrap').find('input[name*=cart-bynn' + gNumber + ']').length,
+                    changeN = $(this).parents('.box-wrap').find('.infoChange').find('input[type=checkbox]').length,
+                    totalchecked = notCheckedNumber - changeN,
+                    changeNumber = $(this).parents('.cart-pdt').find('.infoChange').find('input[type=checkbox]').length,
+                    allClickBtn = $('.group-title').find('input[id*=cart-bynn' + gNumber + ']'),
+                    n = $(this).parents('.cart-pdt').find('.box-wrap').find('input[type=checkbox]').length,
+                    nu = $(this).parents('.cart-pdt').find('.box-wrap').find('input[type=checkbox]:checked').length,
+                    num = n - changeNumber;
+
+                console.log(num);
+                console.log('change' + changeNumber);
+
+                if (allCheckedNumber != totalchecked) {
+                    allClickBtn.prop('checked', false);
+                    /*$('#select-all').prop('checked', true);*/
+                } else {
+                    allClickBtn.prop('checked', true);
+                };
+
+                if (num != nu) {
+                    $('#select-all').prop('chekced', false);
+                } else {
+                    $('#select-all').prop('chekced', true);
+                }
+
+            });
+            
+            $('.cart-pdt').find('input[type=checkbox]').click(function() {
+                var gCheck = $('.cart-pdt').find('input[type=checkbox]').length;
+                console.log("1 : "+ gCheck);
+                var gCheked = $('.cart-pdt').find('input[type=checkbox]:checked').length;
+                console.log("2 : "+ gCheked);
+                var chCheked = $('.cart-pdt').find('.infoChange').find('input[type=checkbox]').length;
+                var gResult = gCheck - chCheked;
+                if (gCheked != gResult) {
+                    $('#select-all').prop('checked', false);
+                } else {
+                    $('#select-all').prop('checked', true);
+                }
+            });
+
+
+
+            /////////////////////////그룹마다 따로따로 script//////////////////////////////////////
+           /* var group2child = $('input[name*=cart-bynn2-pdt]');*/
+
+            /*$('#select-all').click(function() {
                 var allChk = $('input[type=checkbox]');
                 var checked = $(this).prop('checked');
                 console.log(checked);
                 if (checked == true) {
-                    /*alert("작동중");*/
-                    allChk.prop('checked',true);
-                    $("#cart-bynn2-pdt3").prop('checked',false);
-                }else {
-                     allChk.prop('checked',false);
+                    allChk.prop('checked', true);
+                    $("#cart-bynn2-pdt3").prop('checked', false);
+                } else {
+                    allChk.prop('checked', false);
                 }
-            });
-            
-            
-            
-            //그룹1
-            
-           $('#cart-bynn1').click(function(){
-                
-               
+            });*/
+
+            /*$('#cart-bynn1').click(function() {
+
+
                 var group1Child = $(this).parents('.group').find('input[type=checkbox]');
-                if($(this).prop('checked') == true) {
-                    group1Child.prop('checked',true);
-                }else{
-                    group1Child.prop('checked',false);
+                if ($(this).prop('checked') == true) {
+                    group1Child.prop('checked', true);
+                } else {
+                    group1Child.prop('checked', false);
                 };
-                
-            });
-    
-            var group1Child = $('#cart-bynn1').parents('.group').children('.box-wrap').find('input[type=checkbox]');
-            
-            //그룹1 개별체크박스에 따라 전체체크박스 변화
-            $(group1Child).click(function(){
+
+            });*/
+
+            /* var group1Child = $('#cart-bynn1').parents('.group').children('.box-wrap').find('input[type=checkbox]');
+
+
+            $(group1Child).click(function() {
                 var clickChk = $(this).prop('checked');
                 var siblingsChk = $(this).parents('.box').siblings().find('input[type=checkbox]').prop('checked');
-                
-                if(clickChk == true && siblingsChk == true ){
-                    $('#cart-bynn1').prop('checked',true);
-                }else if ($(this).prop('checked') == false){
-                     $('#cart-bynn1').prop('checked',false);
+
+                if (clickChk == true && siblingsChk == true) {
+                    $('#cart-bynn1').prop('checked', true);
+                } else if ($(this).prop('checked') == false) {
+                    $('#cart-bynn1').prop('checked', false);
                 }
-                
+
             });
-            
-            
-            ///그룹2
-            var group2child = $('input[name*=cart-bynn2-pdt]');
-            $('#cart-bynn2').click(function(){
-                if($(this).is(':checked')){
-                    group2child.prop('checked',true); $('.infoChange').find('input').prop('checked',false);
-                }else{
-                    group2child.prop('checked',false); 
+            */
+
+
+            /*var group2child = $('input[name*=cart-bynn2-pdt]');
+            $('#cart-bynn2').click(function() {
+                if ($(this).is(':checked')) {
+                    group2child.prop('checked', true);
+                    $('.infoChange').find('input').prop('checked', false);
+                } else {
+                    group2child.prop('checked', false);
                 };
-                
+
             });
-            var group2childLength = $('input[name*=cart-bynn2-pdt]').length;//그룹2박스
-            var infoChangeLength = $('.infoChange').find('input[type=checkbox]').length;//정보가 바뀐박스
-            group2child.click(function(){
-                var group2childChecked = $('input[name*=cart-bynn2-pdt]:checked').length;//체크된 박스
-                
-                if(group2childLength-infoChangeLength != group2childChecked){
-                    $('#cart-bynn2').prop('checked',false);
-                }else{
-                    $('#cart-bynn2').prop('checked',true);
+            var group2childLength = $('input[name*=cart-bynn2-pdt]').length;
+            var infoChangeLength = $('.infoChange').find('input[type=checkbox]').length;
+            group2child.click(function() {
+                var group2childChecked = $('input[name*=cart-bynn2-pdt]:checked').length;
+
+                if (group2childLength - infoChangeLength != group2childChecked) {
+                    $('#cart-bynn2').prop('checked', false);
+                } else {
+                    $('#cart-bynn2').prop('checked', true);
                 }
-                
+
             });
-            
-            
-                
-            
-            
-            
+            /////////////////////////그룹마다 따로따로 script//////////////////////////////////////
+            */
+
         });
-        
-        
     </script>
 </head>
 
@@ -149,362 +219,37 @@
                         </div>
                         <!-- 기본 -->
                         <div class="box-wrap">
-                        <div class="box">
-                            <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
-                                <label for="cart-bynn1-pdt1"></label>
-                                <ul>
-                                    <li class="pdt-wish">좋아요</li>
-                                    <li class="pdt-delete">삭제</li>
-                                </ul>
-
-                            </div>
-                            <div class="pdt-info">
-                                <div class="container">
-                                    <div class="pdt-info-img">
-                                        <img src="../images/cart/pdt.jpg" alt="">
-                                        <div class="soldOut-bg">
-                                            <span>품절</span>
-                                        </div>
-                                    </div>
-                                    <div class="pdt-info-detail">
-                                        <p class="pdt-brand">LYNN</p>
-                                        <h4>클래식 크롭 테일러드 자켓</h4>
-                                        <ul class="pdt-option">
-                                            <li>브라운 / 55</li>
-                                            <li href="#none"><a href="">옵션변경</a></li>
-                                        </ul>
-                                        <ul class="pdt-price">
-                                            <li>197,100원</li>
-                                            <li>219,000원</li>
-                                            <li><img src="../images/cart/circle_down.svg" alt=""></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="soldOut-text">
-                                    <p>* 주문할 수 없습니다.</p>
-                                </div>
-                                <ul class="pdt-info-total">
-                                    <li>
-                                        <select name="select-number" id="select-number">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </li>
-                                    <li>197,100원</li>
-                                </ul>
-
-
-                            </div>
-                            <div class="pdt-benefits">
-                                <p>배송비 (50,000원 이상 구매 시 무료)</p>
-                                <p>3,000원</p>
-                            </div>
-                        </div>
-
-                        <!------------ 품절 -------------->
-
-                        <div class="box soldOut">
-                            <div class="box-check">
-                                <input type="checkbox" name="cart-bynn1-pdt2" id="cart-bynn1-pdt2">
-                                <label for="cart-bynn1-pdt2"></label>
-                                <ul>
-                                    <li class="pdt-wish">좋아요</li>
-                                    <li class="pdt-delete">삭제</li>
-                                </ul>
-
-                            </div>
-                            <div class="pdt-info">
-                                <div class="container">
-                                    <div class="pdt-info-img">
-                                        <img src="../images/cart/pdt.jpg" alt="">
-                                        <div class="soldOut-bg">
-                                            <span>품절</span>
-                                        </div>
-                                    </div>
-                                    <div class="pdt-info-detail">
-                                        <p class="pdt-brand">LYNN</p>
-                                        <h4>클래식 크롭 테일러드 자켓</h4>
-                                        <ul class="pdt-option">
-                                            <li>브라운 / 55</li>
-                                            <li href="#none"><a href="">옵션변경</a></li>
-                                        </ul>
-                                        <ul class="pdt-price">
-                                            <li>197,100원</li>
-                                            <li>219,000원</li>
-                                            <li><img src="../images/cart/circle_down.svg" alt=""></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="soldOut-text">
-                                    <p>* 주문할 수 없습니다.</p>
-                                </div>
-                                <ul class="pdt-info-total">
-                                    <li>
-                                        <select name="select-number" id="select-number">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </li>
-                                    <li>197,100원</li>
-                                </ul>
-
-
-                            </div>
-                            <div class="pdt-benefits">
-                                <p>배송비 (50,000원 이상 구매 시 무료)</p>
-                                <p>3,000원</p>
-                            </div>
-
-                        </div>
-                        </div>
-                    </div>
-
-                    <!-- 두번째그룹 -->
-                    <div class="group">
-                        <div class="group-title">
-                            <div>
-                                <input type="checkbox" name="cart-bynn2" id="cart-bynn2">
-                                <label for="cart-bynn2">바이린2 배송상품</label>
-                            </div>
-                            <a href="">지역별 추가배송비</a>
-                        </div>
-                        <!-------- 사은품/추가 --------->
-                        <div class="box addProduct">
-                            <div class="box-check">
-                                <input type="checkbox" name="cart-bynn2-pdt1" id="cart-bynn2-pdt1">
-                                <label for="cart-bynn2-pdt1"></label>
-                                <ul>
-                                    <li class="pdt-wish">좋아요</li>
-                                    <li class="pdt-delete">삭제</li>
-                                </ul>
-
-                            </div>
-                            <div class="pdt-info">
-                                <div class="container">
-                                    <div class="pdt-info-img">
-                                        <img src="../images/cart/pdt.jpg" alt="">
-                                        <div class="soldOut-bg">
-                                            <span>품절</span>
-                                        </div>
-                                    </div>
-                                    <div class="pdt-info-detail">
-                                        <p class="pdt-brand">LYNN</p>
-                                        <h4>클래식 크롭 테일러드 자켓</h4>
-                                        <ul class="pdt-option">
-                                            <li>브라운 / 55</li>
-                                            <li href="#none"><a href="">옵션변경</a></li>
-                                        </ul>
-                                        <ul class="pdt-price">
-                                            <li>197,100원</li>
-                                            <li>219,000원</li>
-                                            <li><img src="../images/cart/circle_down.svg" alt=""></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="soldOut-text">
-                                    <p>* 주문할 수 없습니다.</p>
-                                </div>
-                                <dl class="gifts-text">
-                                    <dt>[사은품]</dt>
-                                    <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
-
-                                </dl>
-                                <ul class="pdt-info-total">
-                                    <li>
-                                        <select name="select-number" id="select-number">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </li>
-                                    <li>197,100원</li>
-                                </ul>
-                                <div class="add-text">
-                                    <em>[추가]</em>
-                                    <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
-                                    <button class="delete-add">닫기</button>
-
-                                </div>
-                                <ul class="pdt-info-total">
-                                    <li>
-                                        <select name="select-number" id="select-number">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </li>
-                                    <li>197,100원</li>
-                                </ul>
-
-
-                            </div>
-                            <div class="pdt-benefits">
-                                <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
-                                <p>3,000원</p>
-                            </div>
-                        </div>
-
-                        <!-- 가격없음 -->
-                        <div class="box priceHide">
-                            <div class="box-check">
-                                <input type="checkbox" name="cart-bynn2-pdt2" id="cart-bynn2-pdt2">
-                                <label for="cart-bynn2-pdt2"></label>
-                                <ul>
-                                    <li class="pdt-wish">좋아요</li>
-                                    <li class="pdt-delete">삭제</li>
-                                </ul>
-
-                            </div>
-                            <div class="pdt-info">
-                                <div class="container">
-                                    <div class="pdt-info-img">
-                                        <img src="../images/cart/pdt.jpg" alt="">
-                                        <div class="soldOut-bg">
-                                            <span>품절</span>
-                                        </div>
-                                    </div>
-                                    <div class="pdt-info-detail">
-                                        <p class="pdt-brand">LYNN</p>
-                                        <h4>클래식 크롭 테일러드 자켓</h4>
-                                        <ul class="pdt-option">
-                                            <li>브라운 / 55</li>
-                                            <li href="#none"><a href="">옵션변경</a></li>
-                                        </ul>
-                                        <ul class="pdt-price">
-                                            <li>197,100원</li>
-                                            <li>219,000원</li>
-                                            <li><img src="../images/cart/circle_down.svg" alt=""></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="soldOut-text">
-                                    <p>* 주문할 수 없습니다.</p>
-                                </div>
-                                <ul class="pdt-info-total">
-                                    <li>
-                                        <select name="select-number" id="select-number">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </li>
-                                    <li>197,100원</li>
-                                </ul>
-
-
-                            </div>
-                            <div class="pdt-benefits">
-                                <p>배송비 (수량 1개당)</p>
-                                <p>3,000원</p>
-                            </div>
-                        </div>
-
-                        <!-- 정보변경 -->
-
-                        <div class="box infoChange">
-                            <div class="box-check">
-                                <input type="checkbox" name="cart-bynn2-pdt3" id="cart-bynn2-pdt3">
-                                <label for="cart-bynn2-pdt3"></label>
-                                <ul>
-                                    <li class="pdt-wish">좋아요</li>
-                                    <li class="pdt-delete">삭제</li>
-                                </ul>
-
-                            </div>
-                            <div class="pdt-info">
-                                <div class="container">
-                                    <div class="pdt-info-img">
-                                        <img src="../images/cart/pdt.jpg" alt="">
-                                        <div class="soldOut-bg">
-                                            <span>품절</span>
-                                        </div>
-                                    </div>
-                                    <div class="pdt-info-detail">
-                                        <p class="pdt-brand">LYNN</p>
-                                        <h4>클래식 크롭 테일러드 자켓</h4>
-                                        <!--<ul class="pdt-option">
-                                        <li>브라운 / 55</li>
-                                        <li href="#none"><a href="">옵션변경</a></li>
+                            <div class="box">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn1-pdt1" id="cart-bynn1-pdt1">
+                                    <label for="cart-bynn1-pdt1"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
                                     </ul>
-                                    <ul class="pdt-price">
-                                        <li>197,100원</li>
-                                        <li>219,000원</li>
-                                        <li><img src="../images/cart/circle_down.svg" alt=""></li>
-                                    </ul>-->
-                                    </div>
+
                                 </div>
-                                <!--<div class="soldOut-text">
-                                <p>* 주문할 수 없습니다.</p>
-                            </div>
-                            <ul class="pdt-info-total">
-                                <li>
-                                    <select name="select-number" id="select-number">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </li>
-                                <li>197,100원</li>
-                            </ul>-->
-
-
-                            </div>
-                            <!--<div class="pdt-benefits">
-                            <p>배송비 (수량 1개당)</p>
-                            <p>3,000원</p>
-                        </div>-->
-                            <div class="blind">
-                                <p>가격 및 혜택 정보가 변경되었습니다.</p>
-                                <a href="#none">변경정보 새로고침</a>
-                            </div>
-                        </div>
-
-                        <!-- ALL -->
-                        <div class="box boxAll">
-                            <div class="box-check">
-                                <input type="checkbox" name="cart-bynn2-pdt4" id="cart-bynn2-pdt4">
-                                <label for="cart-bynn2-pdt4"></label>
-                                <ul>
-                                    <li class="pdt-wish">좋아요</li>
-                                    <li class="pdt-delete">삭제</li>
-                                </ul>
-
-                            </div>
-                            <div class="pdt-info">
-                                <div class="container">
-                                    <div class="pdt-info-img">
-                                        <img src="../images/cart/pdt.jpg" alt="">
-                                    </div>
-
-                                    <div class="pdt-info-detail">
-                                        <p class="pdt-brand">LYNN</p>
-                                        <h4>클래식 크롭 테일러드 자켓</h4>
-                                        <ul class="pdt-option">
-                                            <li>브라운 / 55</li>
-                                            <li href="#none"><a href="">옵션변경</a></li>
-                                        </ul>
-                                        <ul class="pdt-price">
-                                            <li>197,100원</li>
-                                            <li>219,000원</li>
-                                            <li><img src="../images/cart/circle_down.svg" alt=""></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="select-wrap">
-                                    <div class="gifts-text-wrap">
-                                        <dl class="gifts-text">
-                                            <dt>[사은품]</dt>
-                                            <dd>브랜드명 사은품명-1개 (2개)</dd>
-
-                                        </dl>
-                                        <dl class="gifts-text">
-                                            <dt>[사은품]</dt>
-                                            <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
-
-                                        </dl>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="soldOut-text">
                                         <p>* 주문할 수 없습니다.</p>
@@ -519,19 +264,52 @@
                                         </li>
                                         <li>197,100원</li>
                                     </ul>
+
+
                                 </div>
-                                <div class="select-wrap">
-                                    <div class="add-text-wrap">
-                                        <div class="add-text">
+                                <div class="pdt-benefits">
+                                    <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
 
-                                            <em>[추가]</em>
-                                            <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
-                                            <button class="delete-add">닫기</button>
+                            <!------------ 품절 -------------->
 
+                            <div class="box soldOut">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn1-pdt2" id="cart-bynn1-pdt2">
+                                    <label for="cart-bynn1-pdt2"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
                                         </div>
-                                        <p class="em-red">* 해당 상품의 판매가능수량은 {0}개 입니다.</p>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
                                     </div>
-
+                                    <div class="soldOut-text">
+                                        <p>* 주문할 수 없습니다.</p>
+                                    </div>
                                     <ul class="pdt-info-total">
                                         <li>
                                             <select name="select-number" id="select-number">
@@ -542,121 +320,1214 @@
                                         </li>
                                         <li>197,100원</li>
                                     </ul>
+
+
                                 </div>
-                                <div class="select-wrap">
-                                    <div class="add-text-wrap">
-                                        <div class="add-text">
-
-                                            <em>[추가]</em>
-                                            <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
-                                            <button class="delete-add">닫기</button>
-                                            <p class="em-red">
-                                                * 품절
-                                            </p>
-
-                                        </div>
-                                        <p class="em-red">* 주문할 수 없습니다. </p>
-                                    </div>
-
-                                    <ul class="pdt-info-total">
-                                        <li>
-                                            <select name="select-number" id="select-number" disabled>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </li>
-                                        <li>197,100원</li>
-                                    </ul>
-                                </div>
-                                <div class="select-wrap">
-                                    <div class="add-text-wrap">
-                                        <div class="add-text">
-
-                                            <em>[추가]</em>
-                                            <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
-                                            <button class="delete-add">닫기</button>
-                                            <p class="em-red">
-                                                * 판매중지
-                                            </p>
-
-                                        </div>
-                                        <p class="em-red">* 주문할 수 없습니다. </p>
-                                    </div>
-
-                                    <ul class="pdt-info-total">
-                                        <li>
-                                            <select name="select-number" id="select-number" disabled>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </li>
-                                        <li>197,100원</li>
-                                    </ul>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                                    <p>3,000원</p>
                                 </div>
 
-                            </div>
-                            <div class="pdt-benefits">
-                                <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
-                                <p>3,000원</p>
-                            </div>
-                        </div>
-
-                        <div class="box minimum">
-                            <div class="box-check">
-                                <input type="checkbox" name="cart-bynn2-pdt5" id="cart-bynn2-pdt5">
-                                <label for="cart-bynn2-pdt5"></label>
-                                <ul>
-                                    <li class="pdt-wish">좋아요</li>
-                                    <li class="pdt-delete">삭제</li>
-                                </ul>
-
-                            </div>
-                            <div class="pdt-info">
-                                <div class="container">
-                                    <div class="pdt-info-img">
-                                        <img src="../images/cart/pdt.jpg" alt="">
-                                        <div class="soldOut-bg">
-                                            <span>품절</span>
-                                        </div>
-                                    </div>
-                                    <div class="pdt-info-detail">
-                                        <p class="pdt-brand">LYNN</p>
-                                        <h4>클래식 크롭 테일러드 자켓</h4>
-                                        <ul class="pdt-option">
-                                            <li>브라운 / 55</li>
-                                            <li href="#none"><a href="">옵션변경</a></li>
-                                        </ul>
-                                        <ul class="pdt-price">
-                                            <li>197,100원</li>
-                                            <li>219,000원</li>
-                                            <li><img src="../images/cart/circle_down.svg" alt=""></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="minimum-text">
-                                    <p>* 해당 상품의 최소가능수량은 {0}개 입니다.</p>
-                                </div>
-                                <ul class="pdt-info-total">
-                                    <li>
-                                        <select name="select-number" id="select-number">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </li>
-                                    <li>197,100원</li>
-                                </ul>
-
-
-                            </div>
-                            <div class="pdt-benefits">
-                                <p>배송비 (50,000원 이상 구매 시 무료)</p>
-                                <p>3,000원</p>
                             </div>
                         </div>
                     </div>
+
+                    <!-- 두번째그룹 -->
+                    <div class="group">
+                        <div class="group-title">
+                            <div>
+                                <input type="checkbox" name="cart-bynn2" id="cart-bynn2">
+                                <label for="cart-bynn2">바이린2 배송상품</label>
+                            </div>
+                            <a href="">지역별 추가배송비</a>
+                        </div>
+                        <!-------- 사은품/추가 --------->
+                        <div class="box-wrap">
+                            <div class="box addProduct">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn2-pdt1" id="cart-bynn2-pdt1">
+                                    <label for="cart-bynn2-pdt1"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="soldOut-text">
+                                        <p>* 주문할 수 없습니다.</p>
+                                    </div>
+                                    <dl class="gifts-text">
+                                        <dt>[사은품]</dt>
+                                        <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                    </dl>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+                                    <div class="add-text">
+                                        <em>[추가]</em>
+                                        <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
+                                        <button class="delete-add">닫기</button>
+
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <!-- 가격없음 -->
+                            <div class="box priceHide">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn2-pdt2" id="cart-bynn2-pdt2">
+                                    <label for="cart-bynn2-pdt2"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="soldOut-text">
+                                        <p>* 주문할 수 없습니다.</p>
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (수량 1개당)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <!-- 정보변경 -->
+
+                            <div class="box infoChange">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn2-pdt3" id="cart-bynn2-pdt3">
+                                    <label for="cart-bynn2-pdt3"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <!--<ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                        <li href="#none"><a href="">옵션변경</a></li>
+                                    </ul>
+                                    <ul class="pdt-price">
+                                        <li>197,100원</li>
+                                        <li>219,000원</li>
+                                        <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                    </ul>-->
+                                        </div>
+                                    </div>
+                                    <!--<div class="soldOut-text">
+                                <p>* 주문할 수 없습니다.</p>
+                            </div>
+                            <ul class="pdt-info-total">
+                                <li>
+                                    <select name="select-number" id="select-number">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </li>
+                                <li>197,100원</li>
+                            </ul>-->
+
+
+                                </div>
+                                <!--<div class="pdt-benefits">
+                            <p>배송비 (수량 1개당)</p>
+                            <p>3,000원</p>
+                        </div>-->
+                                <div class="blind">
+                                    <p>가격 및 혜택 정보가 변경되었습니다.</p>
+                                    <a href="#none">변경정보 새로고침</a>
+                                </div>
+                            </div>
+
+                            <!-- ALL -->
+                            <div class="box boxAll">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn2-pdt4" id="cart-bynn2-pdt4">
+                                    <label for="cart-bynn2-pdt4"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                        </div>
+
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="gifts-text-wrap">
+                                            <dl class="gifts-text">
+                                                <dt>[사은품]</dt>
+                                                <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                            </dl>
+                                            <dl class="gifts-text">
+                                                <dt>[사은품]</dt>
+                                                <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                            </dl>
+                                        </div>
+                                        <div class="soldOut-text">
+                                            <p>* 주문할 수 없습니다.</p>
+                                        </div>
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
+                                                <button class="delete-add">닫기</button>
+
+                                            </div>
+                                            <p class="em-red">* 해당 상품의 판매가능수량은 {0}개 입니다.</p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                                                <button class="delete-add">닫기</button>
+                                                <p class="em-red">
+                                                    * 품절
+                                                </p>
+
+                                            </div>
+                                            <p class="em-red">* 주문할 수 없습니다. </p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number" disabled>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                                                <button class="delete-add">닫기</button>
+                                                <p class="em-red">
+                                                    * 판매중지
+                                                </p>
+
+                                            </div>
+                                            <p class="em-red">* 주문할 수 없습니다. </p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number" disabled>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <div class="box minimum">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn2-pdt5" id="cart-bynn2-pdt5">
+                                    <label for="cart-bynn2-pdt5"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="minimum-text">
+                                        <p>* 해당 상품의 최소가능수량은 {0}개 입니다.</p>
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- 세번째그룹 -->
+                    <div class="group">
+                        <div class="group-title">
+                            <div>
+                                <input type="checkbox" name="cart-bynn3" id="cart-bynn3">
+                                <label for="cart-bynn3">바이린3 배송상품</label>
+                            </div>
+                            <a href="">지역별 추가배송비</a>
+                        </div>
+                        <!-------- 사은품/추가 --------->
+                        <div class="box-wrap">
+                            <div class="box addProduct">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn3-pdt1" id="cart-bynn3-pdt1">
+                                    <label for="cart-bynn3-pdt1"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="soldOut-text">
+                                        <p>* 주문할 수 없습니다.</p>
+                                    </div>
+                                    <dl class="gifts-text">
+                                        <dt>[사은품]</dt>
+                                        <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                    </dl>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+                                    <div class="add-text">
+                                        <em>[추가]</em>
+                                        <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
+                                        <button class="delete-add">닫기</button>
+
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <!-- 가격없음 -->
+                            <div class="box priceHide">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn3-pdt2" id="cart-bynn3-pdt2">
+                                    <label for="cart-bynn3-pdt2"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="soldOut-text">
+                                        <p>* 주문할 수 없습니다.</p>
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (수량 1개당)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <!-- 정보변경 -->
+
+                            <div class="box infoChange">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn3-pdt3" id="cart-bynn3-pdt3">
+                                    <label for="cart-bynn3-pdt3"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <!--<ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                        <li href="#none"><a href="">옵션변경</a></li>
+                                    </ul>
+                                    <ul class="pdt-price">
+                                        <li>197,100원</li>
+                                        <li>219,000원</li>
+                                        <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                    </ul>-->
+                                        </div>
+                                    </div>
+                                    <!--<div class="soldOut-text">
+                                <p>* 주문할 수 없습니다.</p>
+                            </div>
+                            <ul class="pdt-info-total">
+                                <li>
+                                    <select name="select-number" id="select-number">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </li>
+                                <li>197,100원</li>
+                            </ul>-->
+
+
+                                </div>
+                                <!--<div class="pdt-benefits">
+                            <p>배송비 (수량 1개당)</p>
+                            <p>3,000원</p>
+                        </div>-->
+                                <div class="blind">
+                                    <p>가격 및 혜택 정보가 변경되었습니다.</p>
+                                    <a href="#none">변경정보 새로고침</a>
+                                </div>
+                            </div>
+
+                            <!-- ALL -->
+                            <div class="box boxAll">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn3-pdt4" id="cart-bynn3-pdt4">
+                                    <label for="cart-bynn3-pdt4"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                        </div>
+
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="gifts-text-wrap">
+                                            <dl class="gifts-text">
+                                                <dt>[사은품]</dt>
+                                                <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                            </dl>
+                                            <dl class="gifts-text">
+                                                <dt>[사은품]</dt>
+                                                <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                            </dl>
+                                        </div>
+                                        <div class="soldOut-text">
+                                            <p>* 주문할 수 없습니다.</p>
+                                        </div>
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
+                                                <button class="delete-add">닫기</button>
+
+                                            </div>
+                                            <p class="em-red">* 해당 상품의 판매가능수량은 {0}개 입니다.</p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                                                <button class="delete-add">닫기</button>
+                                                <p class="em-red">
+                                                    * 품절
+                                                </p>
+
+                                            </div>
+                                            <p class="em-red">* 주문할 수 없습니다. </p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number" disabled>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                                                <button class="delete-add">닫기</button>
+                                                <p class="em-red">
+                                                    * 판매중지
+                                                </p>
+
+                                            </div>
+                                            <p class="em-red">* 주문할 수 없습니다. </p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number" disabled>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <div class="box minimum">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn3-pdt5" id="cart-bynn3-pdt5">
+                                    <label for="cart-bynn3-pdt5"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="minimum-text">
+                                        <p>* 해당 상품의 최소가능수량은 {0}개 입니다.</p>
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 네번째그룹 -->
+                    <div class="group">
+                        <div class="group-title">
+                            <div>
+                                <input type="checkbox" name="cart-bynn4" id="cart-bynn4">
+                                <label for="cart-bynn4">바이린4 배송상품</label>
+                            </div>
+                            <a href="">지역별 추가배송비</a>
+                        </div>
+                        <!-------- 사은품/추가 --------->
+                        <div class="box-wrap">
+                            <div class="box addProduct">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn4-pdt1" id="cart-bynn4-pdt1">
+                                    <label for="cart-bynn4-pdt1"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="soldOut-text">
+                                        <p>* 주문할 수 없습니다.</p>
+                                    </div>
+                                    <dl class="gifts-text">
+                                        <dt>[사은품]</dt>
+                                        <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                    </dl>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+                                    <div class="add-text">
+                                        <em>[추가]</em>
+                                        <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
+                                        <button class="delete-add">닫기</button>
+
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <!-- 가격없음 -->
+                            <div class="box priceHide">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn4-pdt2" id="cart-bynn4-pdt2">
+                                    <label for="cart-bynn4-pdt2"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="soldOut-text">
+                                        <p>* 주문할 수 없습니다.</p>
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (수량 1개당)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <!-- 정보변경 -->
+
+                            <div class="box infoChange">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn4-pdt3" id="cart-bynn4-pdt3">
+                                    <label for="cart-bynn4-pdt3"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <!--<ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                        <li href="#none"><a href="">옵션변경</a></li>
+                                    </ul>
+                                    <ul class="pdt-price">
+                                        <li>197,100원</li>
+                                        <li>219,000원</li>
+                                        <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                    </ul>-->
+                                        </div>
+                                    </div>
+                                    <!--<div class="soldOut-text">
+                                <p>* 주문할 수 없습니다.</p>
+                            </div>
+                            <ul class="pdt-info-total">
+                                <li>
+                                    <select name="select-number" id="select-number">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </li>
+                                <li>197,100원</li>
+                            </ul>-->
+
+
+                                </div>
+                                <!--<div class="pdt-benefits">
+                            <p>배송비 (수량 1개당)</p>
+                            <p>3,000원</p>
+                        </div>-->
+                                <div class="blind">
+                                    <p>가격 및 혜택 정보가 변경되었습니다.</p>
+                                    <a href="#none">변경정보 새로고침</a>
+                                </div>
+                            </div>
+
+                            <!-- ALL -->
+                            <div class="box boxAll">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn4-pdt4" id="cart-bynn4-pdt4">
+                                    <label for="cart-bynn4-pdt4"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                        </div>
+
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="gifts-text-wrap">
+                                            <dl class="gifts-text">
+                                                <dt>[사은품]</dt>
+                                                <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                            </dl>
+                                            <dl class="gifts-text">
+                                                <dt>[사은품]</dt>
+                                                <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                            </dl>
+                                        </div>
+                                        <div class="soldOut-text">
+                                            <p>* 주문할 수 없습니다.</p>
+                                        </div>
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)<span>5,000원</span></p>
+                                                <button class="delete-add">닫기</button>
+
+                                            </div>
+                                            <p class="em-red">* 해당 상품의 판매가능수량은 {0}개 입니다.</p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                                                <button class="delete-add">닫기</button>
+                                                <p class="em-red">
+                                                    * 품절
+                                                </p>
+
+                                            </div>
+                                            <p class="em-red">* 주문할 수 없습니다. </p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number" disabled>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <div class="add-text-wrap">
+                                            <div class="add-text">
+
+                                                <em>[추가]</em>
+                                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                                                <button class="delete-add">닫기</button>
+                                                <p class="em-red">
+                                                    * 판매중지
+                                                </p>
+
+                                            </div>
+                                            <p class="em-red">* 주문할 수 없습니다. </p>
+                                        </div>
+
+                                        <ul class="pdt-info-total">
+                                            <li>
+                                                <select name="select-number" id="select-number" disabled>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </li>
+                                            <li>197,100원</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (11월 무료배송 프로모션 : <br>2022.11.01 ~ 2022.11.30)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+
+                            <div class="box minimum">
+                                <div class="box-check">
+                                    <input type="checkbox" name="cart-bynn4-pdt5" id="cart-bynn4-pdt5">
+                                    <label for="cart-bynn4-pdt5"></label>
+                                    <ul>
+                                        <li class="pdt-wish">좋아요</li>
+                                        <li class="pdt-delete">삭제</li>
+                                    </ul>
+
+                                </div>
+                                <div class="pdt-info">
+                                    <div class="container">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
+                                            <div class="soldOut-bg">
+                                                <span>품절</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>브라운 / 55</li>
+                                                <li href="#none"><a href="">옵션변경</a></li>
+                                            </ul>
+                                            <ul class="pdt-price">
+                                                <li>197,100원</li>
+                                                <li>219,000원</li>
+                                                <li><img src="../images/cart/circle_down.svg" alt=""></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="minimum-text">
+                                        <p>* 해당 상품의 최소가능수량은 {0}개 입니다.</p>
+                                    </div>
+                                    <ul class="pdt-info-total">
+                                        <li>
+                                            <select name="select-number" id="select-number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </li>
+                                        <li>197,100원</li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="pdt-benefits">
+                                    <p>배송비 (50,000원 이상 구매 시 무료)</p>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
                 <div class="cart-total">
                     <h3>총 {0}개 합계</h3>
