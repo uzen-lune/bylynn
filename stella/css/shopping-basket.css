@@ -314,6 +314,11 @@ input[id="chkbox1"]:checked + label {
     text-indent: 14px;
 }
 
+.bylynn1 ul li.bylynn1-box .sum select:disabled {
+    background-color: #eee;
+    color: #999;
+}
+
 .bylynn1 ul li.bylynn1-box .sum select:focus {
     border: 1px solid #ccc;
     outline: 0;
@@ -561,6 +566,11 @@ input[id="chkbox3"]:checked + label {
     appearance: none;
     background: url('../images/down.svg') no-repeat 74% center;
     text-indent: 14px;
+}
+
+.bylynn2 ul li.bylynn2-box .sum select:disabled {
+    background-color: #eee;
+    color: #999;
 }
 
 .bylynn2 ul li.bylynn2-box .sum select:focus {
