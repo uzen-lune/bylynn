@@ -486,6 +486,7 @@ input[id="order-chkbox1"]:checked + label {
 }
 
 .order-info ul li input[id="zipcode_btn"] {
+    display: inline-block;
     font-size: 14px;
     font-weight: 500;
     color: #111;
