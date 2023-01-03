@@ -28,8 +28,8 @@
                 };
 
             });
-            
-             var a = $('.payment-final-wrap').children('li').find('input[type=checkbox]')
+
+            var a = $('.payment-final-wrap').children('li').find('input[type=checkbox]')
 
             $(a).
             click(function() {
@@ -64,58 +64,145 @@
             $(agreeInput).click(function(){
                var agreeInputSiblings = $(this).
             });*/
-            
+
             ////////////is:checked랑 name값 활용
             var pAgreeChk = $('input[name*=pAgreeChk]');
-            
-            $('#payInfoFullChk').click(function(){
-                if($(this).is(":checked")){
-                    pAgreeChk.prop('checked',true);
-                }else{
-                    pAgreeChk.prop('checked',false);
+
+            $('#payInfoFullChk').click(function() {
+                if ($(this).is(":checked")) {
+                    pAgreeChk.prop('checked', true);
+                } else {
+                    pAgreeChk.prop('checked', false);
                 }
             });
-            
-            $(pAgreeChk).click(function(){
-                var pAgreeChked =$(pAgreeChk).length,
+
+            $(pAgreeChk).click(function() {
+                var pAgreeChked = $(pAgreeChk).length,
                     pAgreeNotChk = $('input[name*=pAgreeChk]:checked').length;
-                
-                if(pAgreeChked != pAgreeNotChk){
-                    $('#payInfoFullChk').prop('checked',false);
-                }else{
-                    $('#payInfoFullChk').prop('checked',true);
+
+                if (pAgreeChked != pAgreeNotChk) {
+                    $('#payInfoFullChk').prop('checked', false);
+                } else {
+                    $('#payInfoFullChk').prop('checked', true);
                 }
             });
-            
-            
-            
-            //체크된것의 갯수
 
 
-           
+
+
+
 
             //입력 안하고 전송하면 알럿띄우기
-            /*$('.order-btn').click(function(){
+            $('.order-btn').click(function() {
                 
-                if($('#non-members-chkBox').is(':checked') == false){
-                    alert('정보수집에 동의해주세요');
-                    $('#non-members-chkBox').focus();
+                //비회원 주문 정보수집 동의
+                if($('#non-members-chkBox').is(":checked") == false){
+                    alert('정보수집에 동의하세요');
+                    $('label[for=non-members-chkBox]').focus();
                     return false;
                 }
-                if($('#up14').is(':checked') == false){
-                    alert('정보수집에 동의해주세요');
-                    $('#up14').focus();
+                if($('#up14').is(":checked") == false){
+                    alert('정보수집에 동의하세요');
+                    $('label[for=up14]').focus();
                     return false;
                 }
                 
-                if($('#orderUserName').val().length == 0){
+
+                // 보내는사람
+
+                if ($('#orderUserName').val().length == "") {
                     alert('이름을 입력하세요');
                     $('#orderUserName').focus();
                     return false;
                 }
+                if ($('#orderUserNumber').val().length == "") {
+                    alert('연락처를 입력하세요');
+                    $('#orderUserNumber').focus();
+                    return false;
+                }
+                if ($('#orderUserEmail1').val().length == "") {
+                    alert('이메일을 입력하세요');
+                    $('#orderUserEmail1').focus();
+                    return false;
+                }
+                if ($('#orderUserEmail2').val().length == "") {
+                    alert('이메일을 입력하세요');
+                    $('#orderUserEmail2').focus();
+                    return false;
+                }
+                if ($('#orderSelectEmail').val() == "") { //셀렉박스
+                    alert('select선택 경고창');
+                    $('#orderSelectEmail').focus();
+                    return false;
+
+                }
+                if ($('input[type=password]').val().length == "") {
+                    alert('비밀번호를 입력하세요');
+                    $('input[type=password]').focus();
+                    return false;
+                }
                 
-            });*/
+                
+                // 받는사람
+                if ($('#receiveUserName').val().length == "") {
+                    alert('이름을 입력하세요');
+                    $('#receiveUserName').focus();
+                    return false;
+                }
+                if ($('#receiveUserNumber').val().length == "") {
+                    alert('연락처를 입력하세요');
+                    $('#receiveUserNumber').focus();
+                    return false;
+                }
+                if ($('#receiveMessage').val().length == "") {
+                    alert('배송메세지를 선택하세요');
+                    $('#receiveMessage').focus();
+                    return false;
+                }
+                if ($('#receiveMessageDetail').val().length == "") {
+                    alert('배송메세지를 선택하세요');
+                    $('#receiveMessageDetail').focus();
+                    return false;
+                }
+                // 개인통관고유번호
+                if($('#overseasNumber').val().length == ""){
+                    alert('개인통관고유번호를 입력하세요');
+                    $('#overseasNumber').focus();
+                    return false;
+                } 
+
+
+
+
+
+            });
+            //보내는사람 셀렉박스
+            $('#orderSelectEmail').change(function() {
+                $("#orderUserEmail2").val($(this).val());
+                $("#orderUserEmail2").prop('readonly', true);
+                if ($("#orderUserEmail2").val() == "") {
+                    $("#orderUserEmail2").prop('readonly', false);
+                };
+            });
+            //input태그가 변경 되었을 때, 셀렉박스의 val변경
             
+            $('#orderUserEmail2').change(function(){
+                $('#orderSelectEmail').val($(this).val());
+            });
+            //주문자와 동일버튼
+            
+            $('#sameUser').click(function(){
+                $('#receiveUserName').val($('#orderUserName').val());
+                $('#receiveUserName').prop('readonly',true);
+                
+                $('#receiveUserNumber').val($('#orderUserNumber').val());
+                $('#receiveUserNumber').prop('readonly',true);
+                
+            });
+            
+            
+            
+
 
 
         });
@@ -150,13 +237,13 @@
                 <p>비회원 주문 시 쿠폰 및 적립금 등의 혜택을 받을 수 없습니다. 간단한 과정을 거쳐 회원가입 하시고 회원 혜택을 누리시기 바랍니다.</p>
                 <p>비회원 구매 시 입력하신 비밀번호와 결제완료 후 노출되는 주문번호를 통해서 구매내역을 조회하실 수 있습니다.</p>
                 <div>
-                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox" tabindex="1">
+                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox" tabindex="0">
                     <label for="non-members-chkBox" tabindex="0">비회원 주문 개인정보 수집 및 이용에 동의합니다. <br>(필수)</label>
                     <a href="#none">전체보기</a>
                 </div>
                 <div>
-                    <input type="checkbox" name="up14" id="up14" tabindex="1">
-                    <label for="up14">만 14세 이상입니다.(필수)</label>
+                    <input type="checkbox" name="up14" id="up14" tabindex="0">
+                    <label for="up14" tabindex="0">만 14세 이상입니다.(필수)</label>
                 </div>
 
             </fieldset>
@@ -177,9 +264,9 @@
                     <input type="text" name="orderUserEmail" id="orderUserEmail1" placeholder="수신용 이메일(필수)">@<input type="text" name="orderUserEmail" id="orderUserEmail2">
                     <select name="orderSelectEmail" id="orderSelectEmail">
                         <option value="">직접입력</option>
-                        <option value="">123</option>
-                        <option value="">234</option>
-                        <option value="">345</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="daum.net">다음</option>
+                        <option value="gmail.com">지메일</option>
                     </select>
                 </div>
                 <input type="password" placeholder="비밀번호(필수)">
@@ -218,8 +305,8 @@
                         <li>
                             <select name="receiveMessage" id="receiveMessage">
                                 <option value="배송 메세지를 선택하세요.">배송 메세지를 선택하세요.</option>
-                                <option value="">123</option>
-                                <option value="">234</option>
+                                <option value="">집</option>
+                                <option value="">회사</option>
                             </select>
                         </li>
                         <li>
@@ -459,7 +546,7 @@
             </fieldset>
             <fieldset class="overseas-direct">
                 <legend>해외직배송 개인통관 고유부호</legend>
-                <input type="text" placeholder="개인통관 고유부호">
+                <input type="text" name="overseasNumber" id="overseasNumber" placeholder="개인통관 고유부호">
                 <p>상품을 받는 분의 명의로 통관이 진행되므로 고객 님의 정보를 입력해주세요.</p>
                 <div class="overseas-checkbox-wrap">
                     <input type="checkbox" name="overseaChk01" id="overseaChk01">
