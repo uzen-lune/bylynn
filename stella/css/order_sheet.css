@@ -1687,7 +1687,7 @@ input[id="agree-chk2"] + label {
     top: 5px;
 }
 
-.payment-info > a.order {
+.payment-info > button.order {
     width: 100%;
     display: inline-block;
     background-color: #111;
@@ -1696,5 +1696,6 @@ input[id="agree-chk2"] + label {
     color: #fff;
     text-align: center;
     padding: 15.5px 0;
+    border: 0;
     margin-bottom: 60px;
 }

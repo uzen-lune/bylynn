@@ -157,13 +157,13 @@
                 </div>
                 <ul class="user-input">
                     <li>
-                        <input type="text" name="username" id="username" placeholder="이름 (필수)" autofocus>
+                        <input type="text" name="username" id="username" placeholder="이름 (필수)" required>
                     </li>
                     <li>
-                        <input type="tel" name="userphone" id="userphone" placeholder="연락처1-없이(필수)">
+                        <input type="tel" name="userphone" id="userphone" placeholder="연락처1-없이(필수)" required>
                     </li>
                     <li class="email">
-                        <input type="email" name="user_email" id="user_email" placeholder="수신용 이메일(필수)">
+                        <input type="email" name="user_email" id="user_email" placeholder="수신용 이메일(필수)" required>
                         <p>@</p>
                         <input type="email" name="user_email" id="user_email" placeholder="">
                         <select name="email_type" id="email_type">
@@ -176,8 +176,8 @@
                         </select>
                     </li>
                     <li>
-                        <input type="password" name="pw" id="pw" placeholder="비밀번호(필수)">
-                        <input type="password" name="pw_chk" id="pw_chk" placeholder="비밀번호 확인(필수)">
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호(필수)" required>
+                        <input type="password" name="pw_chk" id="pw_chk" placeholder="비밀번호 확인(필수)" required>
                     </li>
                 </ul>
             </fieldset>
@@ -203,13 +203,13 @@
                         <label for="order-chkbox1">주문하시는 분과 동일</label>
                         <ul>
                             <li>
-                                <input type="text" name="name" id="name" placeholder="이름 (필수)" autofocus>
+                                <input type="text" name="name" id="name" placeholder="이름 (필수)" required>
                             </li>
                             <li>
-                                <input type="tel" name="phone" id="phone" placeholder="연락처1-없이(필수)">
+                                <input type="tel" name="phone" id="phone" placeholder="연락처1-없이(필수)" required>
                             </li>
                             <li>
-                                <input type="text" name="zipcode" id="zipcode" placeholder="우편번호 (필수)">
+                                <input type="text" name="zipcode" id="zipcode" placeholder="우편번호 (필수)" required>
                                 <input type="button" id="zipcode_btn" value="우편번호찾기">
                             </li>
                             <li>
@@ -621,7 +621,7 @@
                         <a href="#none">전체보기</a>
                     </li>
                 </ul>
-                <a href="#none" class="order">주문하기</a>
+                <button type="submit" class="order" onclick="">주문하기</button>
             </fieldset>
         </form>
     </article>
