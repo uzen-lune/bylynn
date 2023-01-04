@@ -968,8 +968,7 @@ main .bnavi a {
 }
 
 .best_review .review_slide .swiper-slide .mark {
-    margin-left: 20px;
-    margin-bottom: 14px;
+    margin: 0 24px 14px;
 }
 
 .review_slide .swiper-slide .mark:after {
@@ -978,8 +977,12 @@ main .bnavi a {
     clear: both;
 }
 
-.review_slide .swiper-slide .mark i {
+.review_slide .swiper-slide .mark img {
     float: left;
+}
+
+.review_slide .swiper-slide .mark img ~ img {
+    margin-left: 2px;
 }
 
 .review_slide .swiper-slide .mark p {
@@ -989,9 +992,8 @@ main .bnavi a {
 }
 
 .best_review .review_slide .swiper-slide > p {
-    margin: 0 20px;
+    margin: 0 24px;
     font-size: 14px;
-    letter-spacing: -1.2px;
     line-height: 24px;
     text-overflow: ellipsis;
     height: 70px;
