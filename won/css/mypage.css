@@ -1,0 +1,499 @@
+@charset "utf-8";
+
+body {
+    padding-top: 14.4444vw;
+}
+
+header {
+    width: 100%;
+    height: 14.4444vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    border-bottom: 0.2778vw solid #eee;
+}
+
+header .navibar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5.5556vw;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+
+header .navibar li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+header .navibar li a {
+    width: 6.6667vw;
+    height: 6.6667vw;
+    font-size: 0;
+}
+
+header .navibar li a:last-child {
+    margin-left: 5.5556vw;
+}
+
+header .navibar li a img {
+    display: block;
+    width: 100%;
+}
+header .navibar li h1 {
+    font-size: 5.0000vw;
+    margin-left: 3.8889vw;
+    font-weight: 500;
+}
+
+/* section */
+.mypage-contents {}
+.mypage-contents .benefit-summary{
+    width: 88.8889vw;
+    margin: 0 auto;
+    padding-top: 8.8889vw;
+    margin-bottom: 16.6667vw;
+}
+
+.benefit-summary .my-id {
+    margin-bottom: 3.3333vw;
+}
+.benefit-summary .my-id p{
+    font-size: 6.6667vw;
+    font-weight: 500;
+}
+.benefit-summary .my-id strong {
+    font-weight: 500;
+}
+.benefit-summary .my-grade{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6.6667vw;
+}
+.benefit-summary .my-grade p{
+    font-size: 3.8889vw;
+}
+.benefit-summary .my-grade a{
+    font-size: 3.6111vw;
+    margin-left: 3.3333vw;
+    text-decoration: underline;
+    color: #999;
+}
+.benefit-summary .myBox-wrap{
+    box-sizing: border-box;
+    border: 0.2778vw solid #111;
+    padding: 6.6667vw 8.8889vw;
+}
+.benefit-summary .myBox-wrap .myBox{}
+.benefit-summary .myBox-wrap .myBox li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.3333vw;
+}
+.benefit-summary .myBox-wrap .myBox li:last-child {
+    margin-bottom: 0;
+}
+.benefit-summary .myBox-wrap .myBox li p{
+    font-size: 3.3333vw;
+}
+.benefit-summary .myBox-wrap .myBox li em{
+    font-style: normal;
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+/* 최근주문내역 */
+.mypage-contents .recent-order-history {
+    width: 88.8889vw;
+    margin: 0 auto;
+}
+.recent-order-history .order-list-wrap{}
+.recent-order-history .order-history-top{
+    margin-bottom: 6.6667vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recent-order-history .order-history-top h2{
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+.recent-order-history .order-history-top a{
+    font-size: 3.6111vw;
+    padding-right: 3.6111vw;
+    background-image: url(../images/mypage/bg_more-btn.svg);
+    background-repeat: no-repeat;
+    background-size: 1.9444vw;
+    background-position: right center;
+    color: #111;
+}
+.recent-order-history .history-box-wrap {}
+.recent-order-history .history-box-wrap .history-box{}
+.recent-order-history .history-box .order-info-wrap{
+    background-color: #f6f6f6;
+    border-top: 0.2778vw solid #333;
+    border-bottom: 0.2778vw solid #ccc;
+    padding: 6.6667vw 5.5556vw;
+    margin-bottom: 6.6667vw;
+}
+.recent-order-history .history-box .order-info-wrap .order-info{
+    margin-bottom: 4.4444vw;
+}
+.recent-order-history .history-box .order-info-wrap .order-info li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.2222vw;
+}
+.recent-order-history .history-box .order-info-wrap .order-info li em{
+    font-style: normal;
+    width: 25.0000vw;
+    font-size: 3.6111vw;
+    font-weight: 500;
+}
+.recent-order-history .history-box .order-info-wrap .order-info li p{
+    font-size: 3.6111vw;
+    color: #666;
+}
+.recent-order-history .history-box .order-info-wrap  button {
+    width: 37.7778vw;
+    height: 8.8889vw;
+    line-height: 8.8889vw;
+    text-align: center;
+    background-color: #111;
+    color: #FFF;
+    border: 0;
+    font-size: 3.6111vw;
+}
+
+/*박스*/
+.recent-order-history .order-pdt .box {
+    padding-top: 6.6667vw;
+}
+.order-pdt .box .pdt-info {}
+.order-pdt .box .pdt-info .pdt-basic{
+    padding-bottom: 4.4444vw;
+    border-bottom: 0.2778vw solid #eee;
+}
+.order-pdt .box .pdt-info .pdt-info-basic{
+    display: flex;
+    margin-bottom: 6.6667vw;
+}
+.box .pdt-info .pdt-info-basic .pdt-info-img {
+    width: 20.5556vw;
+    height: 30.8333vw;
+}
+.box .pdt-info .pdt-info-basic .pdt-info-img img {
+    width: 100%;
+}
+.order-pdt .box .pdt-info-basic .pdt-info-detail {
+    margin-left: 4.4444vw;
+}
+.order-pdt .box .pdt-info-basic .pdt-info-detail p{
+    font-size: 3.3333vw;
+    font-weight: 500;
+    margin-bottom: 2.2222vw;
+}
+.order-pdt .box .pdt-info-basic .pdt-info-detail h4{
+    font-size: 3.6111vw;
+    margin-bottom: 3.3333vw;
+    font-weight: 400;
+}
+.order-pdt .box .pdt-info-basic .pdt-info-detail ul{}
+.order-pdt .box .pdt-info-basic .pdt-info-detail ul li{
+    font-size: 3.6111vw;
+}
+.order-pdt .box .pdt-info .gifts-text-wrap {
+    margin-bottom: 6.9444vw;
+}
+.order-pdt .box .pdt-info .gifts-text-wrap dl {
+    display: flex;
+    margin-bottom: 2.2222vw;
+}
+.order-pdt .box .pdt-info .gifts-text-wrap dl dt{
+    font-size: 3.6111vw;
+    font-weight: 500;
+}
+.order-pdt .box .pdt-info .gifts-text-wrap dl dd{
+    margin-left: 1.1111vw;
+    font-size: 3.6111vw;
+}
+.order-pdt .box .pdt-info .gifts-text-wrap dl dd span {
+    font-size: 3.3333vw;
+    color: #D9320B;
+    margin-left: 2.2222vw;
+}
+.order-pdt .box .pdt-info .each-pdt-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 6.9444vw;
+    /*border-bottom: 0.2778vw solid #eee;*/
+}
+.order-pdt .box .pdt-info .each-pdt-price p {
+    font-size: 3.6111vw;
+}
+.order-pdt .box .pdt-info .each-pdt-price strong {
+    font-size: 4.4444vw;
+    font-weight: 700;
+}
+.order-pdt .box .pdt-info .pdt-status-wrap {}
+.order-pdt .box .pdt-info .pdt-status-wrap ul{
+    display: flex;
+    justify-content: space-between;
+}
+.order-pdt .box .pdt-info .pdt-status-wrap ul .pdt-status{}
+.order-pdt .box .pdt-info .pdt-status-wrap ul .pdt-status p {
+    padding-top: 2.2222vw;
+    color: #0000BF;
+    font-size: 3.8889vw;
+    font-weight: 500;
+}
+.order-pdt .box .pdt-info .pdt-status-wrap ul .pdt-status-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 63.8889vw;
+    
+}
+.order-pdt .box .pdt-info .pdt-status-wrap ul .pdt-status-btn button{
+    width: 30.8333vw;
+    height: 8.8889vw;
+    line-height: 8.8889vw;
+    border: 0.2778vw solid #666;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #666;
+    font-size: 3.6111vw;
+    font-weight: 500;
+    margin-bottom: 2.2222vw;
+}
+.order-pdt .box .pdt-info .pdt-status-wrap ul .pdt-status-btn .active {
+    background-color: #111;
+    color: #fff;
+}
+
+.order-pdt .box .pdt-info .add-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10.5556vw;
+}
+.order-pdt .box .pdt-info .add-text em {
+    font-style: normal;
+    font-size: 3.6111vw;
+    font-weight: 500;
+}
+.order-pdt .box .pdt-info .add-text p {
+    margin-left: 1.1111vw;
+    font-size: 3.6111vw;
+    
+}
+.order-pdt .box .pdt-benefits {
+    padding: 6.6667vw 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.2778vw solid #eee;
+}
+.order-pdt .box .pdt-benefits p:first-of-type {
+    font-size: 3.6111vw;
+}
+.order-pdt .box .pdt-benefits p:nth-of-type(2) {
+    font-size: 3.6111vw;
+    font-weight: 500;
+}
+.order-pdt .box .pdt-add {
+    padding: 6.6667vw 0 4.4444vw;
+    border-bottom: 0.2778vw solid #ccc;
+}
+
+.recent-order-history .order-list-none {
+    padding: 16.6667vw 0;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 16.6667vw;
+}
+.recent-order-history .order-list-none div {
+    padding-top: 24.4444vw;
+    background-image: url(../images/mypage/empty.svg);
+    background-repeat: no-repeat;
+    background-size: 17.7778vw;
+    background-position: center top;
+    text-align: center;
+    font-size: 3.8889vw;
+}
+
+/*  관심상품  */
+.interest-pdt {
+    width: 100%;
+}
+.interest-pdt .interest-pdt-top{
+    width: 88.8889vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #333;
+    margin-bottom: 6.6667vw;
+}
+
+.interest-pdt .interest-pdt-top h2{
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+.interest-pdt .interest-pdt-top a{
+    font-size: 3.6111vw;
+    padding-right: 3.6111vw;
+    background-image: url(../images/mypage/bg_more-btn.svg);
+    background-repeat: no-repeat;
+    background-size: 1.9444vw;
+    background-position: right center;
+    color: #111
+}
+/*  스와이프  */
+
+.interest-list-wrap {
+    position: relative;
+}
+.interest-list-wrap::after {
+    content: "";
+    display: block;
+    width: 88.8889vw;
+    height: 0.2778vw;
+    background-color: #ccc;
+    position: absolute;
+    left: 5.5556vw;
+    bottom: 0;
+}
+.interest-list-wrap .swiper-wrapper {
+    margin-left: 5.5556vw;
+}
+.interest-list-wrap .swiper-wrapper .swiper-slide{
+    width: 43.3333vw;
+    margin-right: 2.2222vw;
+    margin-bottom: 10.2778vw;
+}
+.interest-list-wrap .swiper-wrapper .swiper-slide:last-child {
+    margin-right: 11.1111vw;
+}
+.interest-list-wrap .swiper-wrapper .swiper-slide .img-box{width: 100%; position: relative; margin-bottom: 3.3333vw;}
+.interest-list-wrap .swiper-wrapper .swiper-slide .img-box > img{display: block; width: 100%;}
+.swiper-slide .img-box .like{
+    width: 5.5556vw; position: absolute;
+    top: 3.0556vw; right: 2.7778vw;
+}
+.swiper-slide .img-box .like img{
+    width: 100%;
+    display: block;
+}
+.swiper-slide .sel-color {display: flex; margin-bottom: 3.3333vw;}
+.swiper-slide .sel-color li{
+    width: 6.6667vw; height: 6.6667vw;
+    margin-right: 2.2222vw;
+}
+.swiper-slide .sel-color li a{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+.swiper-slide .sel-color li:first-child a {
+    border: 0.2778vw solid #111;
+}
+.swiper-slide .sel-color li:last-child a {
+    border: 0.2778vw solid #eee;
+}
+.swiper-slide .sel-color li a span{
+    border-radius: 100%;
+    display: block;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: border-box;
+}
+.sel-color li .brown { background-color: #856D63;}
+.sel-color li .gray {background-color: #AAAAAA;}
+.sel-color li .pink {background-color: #FCB9C2;}
+.sel-color li .gold {background-color: #E9D8BA;}
+/* .swiper-slide .box-txt {} */
+.swiper-slide .box-txt .brand{
+    font-weight: 500;
+    font-size: 3.3333vw;
+    color: #111;
+    margin-bottom: 1.1111vw;
+    
+}
+.swiper-slide .box-txt .name{
+    font-size: 3.6111vw;
+    color: #111;
+    margin-bottom: 3.3333vw;
+}
+.swiper-slide .box-txt .sale {
+    font-size: 3.3333vw;
+    text-decoration: line-through;
+    color: #999;
+    margin-bottom: 1.1111vw;
+}
+.swiper-slide .box-txt .price{
+    font-size: 3.8889vw;
+    font-weight: 700;
+}
+.swiper-slide .box-txt .per{
+    margin-left: 2.7778vw;
+}
+.interest-pdt .interest-list-none {
+    padding: 16.6667vw 0;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 16.6667vw;
+}
+.interest-pdt .interest-list-none div {
+    padding-top: 24.4444vw;
+    background-image: url(../images/mypage/empty.svg);
+    background-repeat: no-repeat;
+    background-size: 17.7778vw;
+    background-position: center top;
+    text-align: center;
+    font-size: 3.8889vw;
+}
+
+/*  나의쇼핑정보  */
+.my-shopping-info {
+    width: 88.8889vw;
+    margin: 0 auto;
+    padding-bottom: 5.5556vw;
+}
+.my-shopping-info .shopping-info-depth1 {}
+.my-shopping-info .shopping-info-depth1 > li {
+    margin-bottom: 10.0000vw;
+}
+.my-shopping-info .shopping-info-depth1 > li h3{
+    font-size: 5.0000vw;
+    font-weight: 600;
+    margin-bottom: 6.6667vw;
+    color: #111;
+}
+.my-shopping-info .shopping-info-depth1 > li .shopping-info-depth2{}
+.my-shopping-info .shopping-info-depth1 > li .shopping-info-depth2 li{
+    margin-bottom: 4.4444vw;
+}
+.my-shopping-info .shopping-info-depth1 > li .shopping-info-depth2 li a{
+    color: #111;
+}
+
+
+
+
+
+
+
+
+
