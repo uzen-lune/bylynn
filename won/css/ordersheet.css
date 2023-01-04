@@ -47,6 +47,8 @@ header .navibar li a img {
     width: 100%;
 }
 
+
+
 /** section **/
 .ordersheet-contents {
     width: 88.8889vw;
@@ -85,29 +87,11 @@ header .navibar li a img {
     background-size: 5.5556vw;
     background-position: center;
 }
-/**/
-/**/
-.ordersheet-contents input[type=checkbox] + div label {
-    line-height: 5.5556vw;
-    padding-left: 7.7778vw;
-    position: relative;
+.ordersheet-contents input[type=checkbox] + label:focus{
+    outline: none;
 }
-.ordersheet-contents input[type=checkbox] + div label::before {
-    content: "";
-    display: block;
-    width: 5.5556vw;
-    height: 5.5556vw;
-    border: 0.2778vw solid #ccc;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.ordersheet-contents input[type=checkbox]:checked + div label::before {
-    background-image: url(../images/ordersheet/checkbox.svg);
-    background-repeat: no-repeat;
-    background-size: 5.5556vw;
-    background-position: center;
+.ordersheet-contents input[type=checkbox] + label:focus-visible::before{
+    outline: 2px solid #000;
 }
 
 .ordersheet-contents .signUp {
@@ -1196,7 +1180,6 @@ form .non-members-agreement div a {
     
 }*/
 .payment-information .agreement-wrap li label {
-    margin-left: 2.2222vw;
     font-size: 3.8889vw;
     color: #666;
 }
@@ -1353,4 +1336,7 @@ form .non-members-agreement div a {
     background-color: #111;
     color: #fff;
     font-size: 3.8889vw;
+}
+.payment-information .order-btn:focus {
+    outline: 3px solid #fff;
 }

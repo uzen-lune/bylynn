@@ -86,27 +86,38 @@
                     $('#payInfoFullChk').prop('checked', true);
                 }
             });
-
-
-
-
-
+            
+            
+            
+            //
+            /*$('#cashChk01').click(function(){
+                if($(this).prop('checked') == true){
+                    console.log($('input[name=cashRadio]:checked').length);
+                    if ($("input[name=cashRadio]:checked").length < 1) {
+                    alert("현금영수증 종류를 선택하세요.");
+                    return false;
+                };
+                };
+            });*/
+            
 
             //입력 안하고 전송하면 알럿띄우기
             $('.order-btn').click(function() {
                 
+                
+
                 //비회원 주문 정보수집 동의
-                if($('#non-members-chkBox').is(":checked") == false){
+                if ($('#non-members-chkBox').is(":checked") == false) {
                     alert('정보수집에 동의하세요');
                     $('label[for=non-members-chkBox]').focus();
                     return false;
-                }
-                if($('#up14').is(":checked") == false){
+                };
+                if ($('#up14').is(":checked") == false) {
                     alert('정보수집에 동의하세요');
                     $('label[for=up14]').focus();
                     return false;
-                }
-                
+                };
+
 
                 // 보내는사람
 
@@ -114,68 +125,92 @@
                     alert('이름을 입력하세요');
                     $('#orderUserName').focus();
                     return false;
-                }
+                };
                 if ($('#orderUserNumber').val().length == "") {
                     alert('연락처를 입력하세요');
                     $('#orderUserNumber').focus();
                     return false;
-                }
+                };
                 if ($('#orderUserEmail1').val().length == "") {
                     alert('이메일을 입력하세요');
                     $('#orderUserEmail1').focus();
                     return false;
-                }
+                };
                 if ($('#orderUserEmail2').val().length == "") {
                     alert('이메일을 입력하세요');
                     $('#orderUserEmail2').focus();
                     return false;
-                }
+                };
                 if ($('#orderSelectEmail').val() == "") { //셀렉박스
                     alert('select선택 경고창');
                     $('#orderSelectEmail').focus();
                     return false;
 
-                }
+                };
                 if ($('input[type=password]').val().length == "") {
                     alert('비밀번호를 입력하세요');
                     $('input[type=password]').focus();
                     return false;
-                }
-                
-                
+                };
+
+
                 // 받는사람
                 if ($('#receiveUserName').val().length == "") {
                     alert('이름을 입력하세요');
                     $('#receiveUserName').focus();
                     return false;
-                }
+                };
                 if ($('#receiveUserNumber').val().length == "") {
                     alert('연락처를 입력하세요');
                     $('#receiveUserNumber').focus();
                     return false;
-                }
+                };
                 if ($('#receiveMessage').val().length == "") {
                     alert('배송메세지를 선택하세요');
                     $('#receiveMessage').focus();
                     return false;
-                }
+                };
                 if ($('#receiveMessageDetail').val().length == "") {
                     alert('배송메세지를 선택하세요');
                     $('#receiveMessageDetail').focus();
                     return false;
-                }
+                };
                 // 개인통관고유번호
-                if($('#overseasNumber').val().length == ""){
+                if ($('#overseasNumber').val().length == "") {
                     alert('개인통관고유번호를 입력하세요');
                     $('#overseasNumber').focus();
                     return false;
-                } 
+                };
+                if ($('#overseasNumber').val().length == "") {
+                    alert('개인통관고유번호를 입력하세요');
+                    $('#overseasNumber').focus();
+                    return false;
+                };
+                if ($('#overseaChk01').val().length == "") {
+                    alert('개인통관고유번호 수집에 동의하세요');
+                    $('#overseaChk01').focus();
+                    return false;
+                };
+                if ($('#overseaChk02').val().length == "") {
+                    alert('개인통관고유부호의 판매자 제공에 동의하세요');
+                    $('#overseaChk02').focus();
+                    return false;
+                };
+                if($('#cashChk01').prop('checked') == true){
+                    console.log($('input[name=cashRadio]:checked').length);
+                    if ($("input[name=cashRadio]:checked").length < 1) {
+                    alert("현금영수증 종류를 선택하세요.");
+                    $('.cash-receipts').focus();
+                    return false;
+                };
+                };
 
 
 
 
 
-            });
+            });//서밋클릭
+            
             //보내는사람 셀렉박스
             $('#orderSelectEmail').change(function() {
                 $("#orderUserEmail2").val($(this).val());
@@ -185,23 +220,35 @@
                 };
             });
             //input태그가 변경 되었을 때, 셀렉박스의 val변경
-            
-            $('#orderUserEmail2').change(function(){
+
+            $('#orderUserEmail2').change(function() {
                 $('#orderSelectEmail').val($(this).val());
             });
             //주문자와 동일버튼
-            
-            $('#sameUser').click(function(){
-                $('#receiveUserName').val($('#orderUserName').val());
-                $('#receiveUserName').prop('readonly',true);
-                
+
+            $('#sameUser').click(function() {
+                if($(this).is(':checked') == true){
+                    $('#receiveUserName').val($('#orderUserName').val());
+                $('#receiveUserName').prop('readonly', true);
+
                 $('#receiveUserNumber').val($('#orderUserNumber').val());
-                $('#receiveUserNumber').prop('readonly',true);
+                $('#receiveUserNumber').prop('readonly', true);
+                }else {
+                    $('#receiveUserName').prop('readonly', false);
+                    $('#receiveUserNumber').prop('readonly', false);
+                }
                 
+
             });
             
-            
-            
+            //현금 영수증이 체크되어있을때
+            /*if ($('#cashChk01').prop('checked') == true) {
+                
+            };*/
+
+
+
+
 
 
 
@@ -237,7 +284,7 @@
                 <p>비회원 주문 시 쿠폰 및 적립금 등의 혜택을 받을 수 없습니다. 간단한 과정을 거쳐 회원가입 하시고 회원 혜택을 누리시기 바랍니다.</p>
                 <p>비회원 구매 시 입력하신 비밀번호와 결제완료 후 노출되는 주문번호를 통해서 구매내역을 조회하실 수 있습니다.</p>
                 <div>
-                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox" tabindex="0">
+                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox">
                     <label for="non-members-chkBox" tabindex="0">비회원 주문 개인정보 수집 및 이용에 동의합니다. <br>(필수)</label>
                     <a href="#none">전체보기</a>
                 </div>
@@ -289,7 +336,7 @@
                     <ul class="input-wrap">
                         <li>
                             <input type="checkbox" name="sameUser" id="sameUser">
-                            <label for="sameUser">주문하시는 분과 동일</label>
+                            <label for="sameUser" tabindex="0">주문하시는 분과 동일</label>
                         </li>
                         <li>
                             <input type="text" name="receiveUserName" id="receiveUserName" placeholder="이름 (필수)">
@@ -305,8 +352,8 @@
                         <li>
                             <select name="receiveMessage" id="receiveMessage">
                                 <option value="배송 메세지를 선택하세요.">배송 메세지를 선택하세요.</option>
-                                <option value="">집</option>
-                                <option value="">회사</option>
+                                <option value="집">집</option>
+                                <option value="회사">회사</option>
                             </select>
                         </li>
                         <li>
@@ -315,7 +362,7 @@
                         <li>
                             <input type="checkbox" name="defaultAddress" id="defaultAddress" checked>
 
-                            <label for="defaultAddress">기본배송지로 선택</label>
+                            <label for="defaultAddress" tabindex="0">기본배송지로 선택</label>
                         </li>
 
                     </ul>
@@ -329,7 +376,7 @@
                         <div>
                             <input type="checkbox" name="cart-bynn1" id="cart-bynn1">
 
-                            <label for="cart-bynn1">바이린1 배송상품</label>
+                            <label for="cart-bynn1" tabindex="0">바이린1 배송상품</label>
                         </div>
                         <a href="">지역별 추가배송비</a>
                     </div>
@@ -435,7 +482,7 @@
                         <div>
                             <input type="checkbox" name="cart-bynn2" id="cart-bynn2">
 
-                            <label for="cart-bynn2">바이린2 배송상품</label>
+                            <label for="cart-bynn2" tabindex="0">바이린2 배송상품</label>
                         </div>
                         <a href="">지역별 추가배송비</a>
                     </div>
@@ -550,13 +597,13 @@
                 <p>상품을 받는 분의 명의로 통관이 진행되므로 고객 님의 정보를 입력해주세요.</p>
                 <div class="overseas-checkbox-wrap">
                     <input type="checkbox" name="overseaChk01" id="overseaChk01">
-                    <label for="overseaChk01">해외직배송 상품의 수입신고를 위한 개인통관고유부호 수집에 동의합니다.</label>
+                    <label for="overseaChk01" tabindex="0">해외직배송 상품의 수입신고를 위한 개인통관고유부호 수집에 동의합니다.</label>
 
                 </div>
                 <a href="">전체보기</a>
                 <div class="overseas-checkbox-wrap">
                     <input type="checkbox" name="overseaChk02" id="overseaChk02">
-                    <label for="overseaChk02">해외직배송 상품의 수입신고를 위한 개인통관고유부호의 판매자 제공에 동의합니다.</label>
+                    <label for="overseaChk02" tabindex="0">해외직배송 상품의 수입신고를 위한 개인통관고유부호의 판매자 제공에 동의합니다.</label>
 
                 </div>
                 <a href="">전체보기</a>
@@ -640,7 +687,7 @@
                 <legend>결제정보<span>카트혜택</span></legend>
                 <div class="same-checkBox">
                     <input type="checkbox" name="same-method-of-payment" id="same-method-of-payment">
-                    <label for="same-method-of-payment">지금 선택한 결제수단을 다음에도 사용</label>
+                    <label for="same-method-of-payment" tabindex="0">지금 선택한 결제수단을 다음에도 사용</label>
                 </div>
                 <ul class="method-of-payment">
                     <li class="active">신용카드</li>
@@ -665,13 +712,13 @@
                 </div>
                 <div class="cash-receipts">
                     <div class="cash-check">
-                        <input type="checkbox" name="cashChk01" id="cashChk01">
-                        <label for="cashChk01">현금영수증 신청</label>
+                        <input type="checkbox" name="cashChk01" id="cashChk01" tabindex="0">
+                        <label for="cashChk01" tabindex="0">현금영수증 신청</label>
                     </div>
                     <div class="cash-radio">
-                        <input type="radio" name="cash-radio" id="cash-radio01">
+                        <input type="radio" name="cashRadio" id="cash-radio01">
                         <label for="cash-radio01">개인소득공제용</label>
-                        <input type="radio" name="cash-radio" id="cash-radio02">
+                        <input type="radio" name="cashRadio" id="cash-radio02">
                         <label for="cash-radio02">사업자증빙용</label>
                     </div>
                     <div class="cash-number">
@@ -684,21 +731,21 @@
                 <ul class="agreement-wrap">
                     <li class="full-agreement">
                         <input type="checkbox" name="payInfoFullChk" id="payInfoFullChk">
-                        <label for="payInfoFullChk">전체동의</label>
+                        <label for="payInfoFullChk" tabindex="0">전체동의</label>
                     </li>
                     <li>
                         <input type="checkbox" name="pAgreeChk01" id="pAgreeChk01">
-                        <label for="pAgreeChk01">전자금융거래 이용약관 (필수)</label>
+                        <label for="pAgreeChk01" tabindex="0">전자금융거래 이용약관 (필수)</label>
                         <a href="#none">전체보기</a>
                     </li>
                     <li>
                         <input type="checkbox" name="pAgreeChk02" id="pAgreeChk02">
-                        <label for="pAgreeChk02">개인정보 수집 및 이용 동의 (필수)</label>
+                        <label for="pAgreeChk02" tabindex="0">개인정보 수집 및 이용 동의 (필수)</label>
                         <a href="#none">전체보기</a>
                     </li>
                     <li>
                         <input type="checkbox" name="pAgreeChk03" id="pAgreeChk03">
-                        <label for="pAgreeChk03">개인정보 제3자 제공 동의 (필수)</label>
+                        <label for="pAgreeChk03" tabindex="0">개인정보 제3자 제공 동의 (필수)</label>
                         <a href="#none">전체보기</a>
                     </li>
 
@@ -752,15 +799,15 @@
                     </li>
                     <li class="all-agreement">
                         <input type="checkbox" name="lastChk01" id="lastChk01">
-                        <label for="lastChk01">전체동의</label>
+                        <label for="lastChk01" tabindex="0">전체동의</label>
                     </li>
                     <li class="law-agreement">
                         <input type="checkbox" name="lastChk02" id="lastChk02">
-                        <label for="lastChk02">주문할 상품의 내용,가격,배송정책 등 구매조건을 확인하였으며, 구매진행에 동의합니다. (필수)<br>[전자상거래법 제 8조 2항]</label>
+                        <label for="lastChk02" tabindex="0">주문할 상품의 내용,가격,배송정책 등 구매조건을 확인하였으며, 구매진행에 동의합니다. (필수)<br>[전자상거래법 제 8조 2항]</label>
                     </li>
                     <li class="terms-of-service">
                         <input type="checkbox" name="lastChk03" id="lastChk03">
-                        <label for="lastChk03">G1 이용약관에 동의합니다. (필수)</label>
+                        <label for="lastChk03" tabindex="0">G1 이용약관에 동의합니다. (필수)</label>
                         <a href="#none">전체보기</a>
                     </li>
                 </ul>
