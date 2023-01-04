@@ -173,10 +173,10 @@
 .filter-brand-box li input {
     display: none;
 }
-
+ 
 .filter-brand-box li input:checked + label {
     background-color: #333;
-    border: 2px solid #333;
+    border: 1px solid #333;
     box-sizing: border-box;
     color: #fff;
 }
@@ -185,7 +185,7 @@
     font-size: 13px;
     font-weight: 500;
     padding: 14px 21px;
-    border: 2px solid #f5f5f5;
+    border: 1px solid #f5f5f5;
     box-sizing: border-box;
     display: block;
 }
@@ -327,7 +327,7 @@
 }
 
 .filter-color-box li input:checked + label {
-    border: 2px solid #333;
+    border: 1px solid #333;
 }
 
 
@@ -369,7 +369,7 @@
 
 .filter-size-box li input:checked + label {
     background-color: #333;
-    border: 2px solid #333;
+    border: 1px solid #333;
     box-sizing: border-box;
     color: #fff;
 }
@@ -378,7 +378,7 @@
     font-size: 13px;
     font-weight: 500;
     padding: 14px 23px;
-    border: 2px solid #f5f5f5;
+    border: 1px solid #f5f5f5;
     box-sizing: border-box;
     display: inline-block;
 }
@@ -422,7 +422,7 @@
 
 .filter-benefit-box li input:checked + label {
     background-color: #333;
-    border: 2px solid #333;
+    border: 1px solid #333;
     box-sizing: border-box;
     color: #fff;
 }
@@ -431,7 +431,7 @@
     font-size: 13px;
     font-weight: 500;
     padding: 14px 23px;
-    border: 2px solid #f5f5f5;
+    border: 1px solid #f5f5f5;
     box-sizing: border-box;
     display: inline-block;
 }
