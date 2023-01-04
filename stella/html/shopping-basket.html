@@ -39,6 +39,8 @@
                 } else {
                     $(this).parents('fieldset').find('input[type=checkbox]').not('[disabled]').prop('checked', false);
                 }
+
+                $('.black-box').siblings('.inner').children('.box-top').find('input[type=checkbox]').prop('checked', false);
             });
 
             /*bylynn1 선택*/
@@ -80,6 +82,8 @@
                 } else {
                     $(this).parents('li').siblings().find('input[type=checkbox]').not('[disabled]').prop('checked', false);
                 }
+
+                $('.black-box').siblings('.inner').children('.box-top').find('input[type=checkbox]').prop('checked', false);
             });
 
             $('#chkbox3').click(function() {
@@ -126,6 +130,7 @@
                     $('#bylynn2-all').prop('checked', false);
                     $('#all_chk').prop('checked', false);
                 }
+
             });
 
             var bylynn_all_chk = $('#all_chk').parents('fieldset').find('input[type=checkbox]').not('[disabled]');
