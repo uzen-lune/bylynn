@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/mypage_main.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tenan_footer h4').click(function() {
+                if ($('.tenan_footer .company-info').css('display') == 'none') {
+                    $('.tenan_footer .company-info').slideDown(80);
+                    $(this).css({
+                        background: 'url(../images/arrow_up.svg) no-repeat right 67.5%'
+                    });
+                } else {
+                    $('.tenan_footer .company-info').slideUp(100);
+                    $(this).css({
+                        background: 'url(../images/arrow_down.png) no-repeat right 67.5%'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="mypage-header">
+            <div class="inner">
+                <div class="header-top">
+                    <a href="" class="back">
+                        <img src="../images/back_icon.svg" alt="뒤로가기">
+                    </a>
+                    <h2>마이페이지</h2>
+                </div>
+                <div class="util">
+                    <a href="#none" class="search"><img src="../images/search.svg" alt="검색"></a>
+                    <a href="#none" class="shopping_basket"><img src="../images/shopping-basket.svg" alt="장바구니"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--mypage_main_content-->
+    <article class="mypage_main_content">
+        <!--my-info-->
+        <section class="my-info">
+            <div class="my-rating">
+                <h3>안녕하세요, 홍길동님</h3>
+                <p>등급명<a href="#none">등급별 혜택안내</a></p>
+            </div>
+            <div class="my-box">
+                <dl>
+                    <dt>보유 적립금</dt>
+                    <dd>100,000,000원</dd>
+                </dl>
+                <dl>
+                    <dt>쿠폰</dt>
+                    <dd>3개</dd>
+                </dl>
+                <dl>
+                    <dt>관심상품</dt>
+                    <dd>100개</dd>
+                </dl>
+            </div>
+        </section>
+        <!--recent-order-history-->
+        <section class="recent-order-history">
+            <h3><span>최근 주문 내역</span><a href="#none">더보기<img src="../images/more.svg" alt=""></a></h3>
+            <div class="order-info">
+                <dl>
+                    <dt>주문일</dt>
+                    <dd>2022-12-23</dd>
+                </dl>
+                <dl>
+                    <dt>주문번호</dt>
+                    <dd>YYMMDDHHMI0000</dd>
+                </dl>
+                <a href="#none">배송지 변경</a>
+            </div>
+            <div class="order-list">
+                <div class="order-product">
+                    <div class="product-info">
+                        <img src="../images/sel_product.png" alt="">
+                        <dl>
+                            <dd>LYNN</dd>
+                            <dd>클래식 크롭 테일러드 자켓</dd>
+                            <dd>브라운 / 55</dd>
+                        </dl>
+                    </div>
+                    <ol class="freebie-box">
+                        <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개) <span class="out">* 소진</span></li>
+                        <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개)</li>
+                    </ol>
+                    <div class="sum">
+                        <p>주문수량 2개</p>
+                        <p>9,000원</p>
+                    </div>
+                    <div class="order-check">
+                        <p>주문완료</p>
+                        <ul>
+                            <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                            <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                            <li><input type="button" id="return_request" value="반품신청"></li>
+                            <li><input type="button" id="exchange_request" value="교환신청"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="add-product">
+                    <p><span>[추가]</span> 맨투맨티셔츠 빨강/L-1개 (총 2개)</p>
+                    <div class="sum">
+                        <p>주문수량 1개</p>
+                        <p>9,000원</p>
+                    </div>
+                    <div class="order-check">
+                        <p>주문완료</p>
+                        <input type="button" id="delivery_check2" value="배송조회">
+                    </div>
+                </div>
+                <div class="recent-none">
+                    <img src="../images/warn.svg" alt="">
+                    <p>최근 주문내역이 없습니다.</p>
+                </div>
+            </div>
+        </section>
+        <!--interest-product-->
+        <section class="interest-product">
+            <h3><span>관심상품</span><a href="#none">더보기<img src="../images/more.svg" alt=""></a></h3>
+            <div class="swiper interest-product_slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#none">
+                                <img src="../images/best01.png" alt="">
+                                <div class="interest_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del> 10%
+                                </div>
+                                <div class="color color1">
+                                    <div class="color1 active"><a href="#none">color1</a></div>
+                                    <div class="color2"><a href="#none">color2</a></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#none">
+                                <img src="../images/best01.png" alt="">
+                                <div class="interest_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del> 10%
+                                </div>
+                                <div class="color color2">
+                                    <div class="color1 active"><a href="#none">color1</a></div>
+                                    <div class="color2"><a href="#none">color2</a></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#none">
+                                <img src="../images/best01.png" alt="">
+                                <div class="interest_name">
+                                    LYNN <br><span>클래식 크롭 테일러드 자켓</span>
+                                </div>
+                                <div class="price">
+                                    197,100원 <del>219,000원</del> 10%
+                                </div>
+                                <div class="color color3">
+                                    <div class="color1 active"><a href="#none">color1</a></div>
+                                    <div class="color2"><a href="#none">color2</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper('.interest-product_slide .swiper-container', {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            draggable: true,
+                            hide: true,
+                        },
+                    });
+                </script>
+            </div>
+            <div class="interest-none">
+                <img src="../images/warn.svg" alt="">
+                <p>관심상품이 없습니다.</p>
+            </div>
+        </section>
+        <!--my-more-->
+        <section class="my-more">
+            <dl>
+                <dt>나의 쇼핑정보</dt>
+                <dd><a href="#none">주문배송조회</a></dd>
+                <dd><a href="#none">반품/교환조회</a></dd>
+                <dd><a href="#none">오프라인 주문/배송조회</a></dd>
+                <dd><a href="#none">이전 주문 조회</a></dd>
+            </dl>
+            <dl>
+                <dt>혜택정보</dt>
+                <dd><a href="#none">적립금</a></dd>
+                <dd><a href="#none">쿠폰</a></dd>
+                <dd><a href="#none">예치금/환불계좌</a></dd>
+            </dl>
+            <dl>
+                <dt>활동정보</dt>
+                <dd><a href="#none">상품리뷰</a></dd>
+                <dd><a href="#none">관심상품</a></dd>
+                <dd><a href="#none">재입고알림</a></dd>
+            </dl>
+            <dl>
+                <dt>문의정보</dt>
+                <dd><a href="#none">1:1문의</a></dd>
+                <dd><a href="#none">상품문의</a></dd>
+            </dl>
+            <dl>
+                <dt>회원정보</dt>
+                <dd><a href="#none">회원정보수정</a></dd>
+                <dd><a href="#none">비밀번호변경</a></dd>
+                <dd><a href="#none">배송지관리</a></dd>
+                <dd><a href="#none">회원탈퇴</a></dd>
+            </dl>
+        </section>
+    </article>
+
+    <!--footer-->
+    <footer class="tenan_footer">
+        <h4>(주)테난</h4>
+        <p class="company-info">대표이사 문경란 | 서울 강남구 영동대로 734 <br>개인정보보호책임자 이성춘 <br>사업자등록번호 120-81-84619 <br>통신판매업신고번호 제2018-서울강남-00940 <br>이메일 info@bylynn.shop</p>
+        <ul class="footer-menu clearfix">
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="sns clearfix">
+            <li><a href="#none"><img src="../images/googleplay.svg" alt="구글 플레이"></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt="애플"></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt="네이버"></a></li>
+            <li><a href="#none"><img src="../images/youtube_icon.png" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt="페이스북"></a></li>
+        </ul>
+        <p class="copy">Copyright &copy; BYLYNNSHOP all rights reserved.</p>
+    </footer>
+</body>
+
+</html>
