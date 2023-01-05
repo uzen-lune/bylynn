@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/order-delivery_inquiry.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tenan_footer h4').click(function() {
+                if ($('.tenan_footer .company-info').css('display') == 'none') {
+                    $('.tenan_footer .company-info').slideDown(80);
+                    $(this).css({
+                        background: 'url(../images/arrow_up.svg) no-repeat right 67.5%'
+                    });
+                } else {
+                    $('.tenan_footer .company-info').slideUp(100);
+                    $(this).css({
+                        background: 'url(../images/arrow_down.png) no-repeat right 67.5%'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="order-inquiry-header">
+            <div class="inner">
+                <div class="header-top">
+                    <a href="" class="back">
+                        <img src="../images/back_icon.svg" alt="뒤로가기">
+                    </a>
+                    <h2>주문/배송조회</h2>
+                </div>
+                <div class="util">
+                    <a href="#none" class="search"><img src="../images/search.svg" alt="검색"></a>
+                    <a href="#none" class="shopping_basket"><img src="../images/shopping-basket.svg" alt="장바구니"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--order-inquiry_content-->
+    <article class="order-inquiry_content">
+        <!--record-inquiry-->
+        <section class="record-inquiry">
+            <div class="period-inquiry">
+                <input type="radio" id="period-inquiry1" name="period-inquiry" value="">
+                <label for="period-inquiry1">3개월</label>
+                <input type="radio" id="period-inquiry2" name="period-inquiry" value="">
+                <label for="period-inquiry2">6개월</label>
+                <input type="radio" id="period-inquiry3" name="period-inquiry" value="">
+                <label for="period-inquiry3">1년</label>
+                <input type="radio" id="period-inquiry4" name="period-inquiry" value="">
+                <label for="period-inquiry4">기간조회</label>
+            </div>
+            <div class="date-inquiry">
+                <input type="date" name="date1" id="date1" value="2022-10-01">
+                <span>~</span>
+                <input type="date" name="date2" value="2022-10-30" min="$[date1]">
+            </div>
+            <div class="inquiry-box">
+                <select name="inquiry-selb" id="">
+                    <option value="0">전체</option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                </select>
+                <input type="text" id="" name="" value="">
+                <button type="submit">조회</button>
+            </div>
+        </section>
+
+        <!--order-info-list-wrap-->
+        <section class="order-info-list-wrap">
+            <div class="order-info-list-box">
+                <div class="order-info">
+                    <dl>
+                        <dt>주문일</dt>
+                        <dd>2022-12-23</dd>
+                    </dl>
+                    <dl>
+                        <dt>주문번호</dt>
+                        <dd>YYMMDDHHMI0000</dd>
+                    </dl>
+                    <button type="button">배송지 변경</button>
+                    <button type="reset">주문전체취소</button>
+                </div>
+                <div class="order-list">
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>브라운 / 55</dd>
+                            </dl>
+                        </div>
+                        <ol class="freebie-box">
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개) <span class="out">* 소진</span></li>
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개)</li>
+                        </ol>
+                        <div class="sum">
+                            <p>주문수량 2개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <ul>
+                                <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                                <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                                <li><input type="button" id="return_request" value="반품신청"></li>
+                                <li><input type="button" id="exchange_request" value="교환신청"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add-product">
+                        <p><span>[추가]</span> 맨투맨티셔츠 빨강/L-1개 (총 2개)</p>
+                        <div class="sum">
+                            <p>주문수량 1개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <input type="button" id="delivery_check2" value="배송조회">
+                        </div>
+                    </div>
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>브라운 / 55</dd>
+                            </dl>
+                        </div>
+                        <div class="sum">
+                            <p>주문수량 1개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <ul>
+                                <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                                <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                                <li><input type="button" id="return_request" value="반품신청"></li>
+                                <li><input type="button" id="exchange_request" value="교환신청"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info-list-box">
+                <div class="order-info">
+                    <dl>
+                        <dt>주문일</dt>
+                        <dd>2022-12-23</dd>
+                    </dl>
+                    <dl>
+                        <dt>주문번호</dt>
+                        <dd>YYMMDDHHMI0000</dd>
+                    </dl>
+                    <button type="button">배송지 변경</button>
+                </div>
+                <div class="order-list">
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>ㄴ구성상품명-1개 (총 2개)</dd>
+                                <dd>ㄴ구성상품명-2개 (총 4개)</dd>
+                            </dl>
+                        </div>
+                        <div class="sum">
+                            <p>주문수량 2개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <ul>
+                                <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                                <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                                <li><input type="button" id="return_request" value="반품신청"></li>
+                                <li><input type="button" id="exchange_request" value="교환신청"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info-list-box">
+                <div class="order-info">
+                    <dl>
+                        <dt>주문일</dt>
+                        <dd>2022-12-23</dd>
+                    </dl>
+                    <dl>
+                        <dt>주문번호</dt>
+                        <dd>YYMMDDHHMI0000</dd>
+                    </dl>
+                    <button type="button">배송지 변경</button>
+                </div>
+                <div class="order-list">
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓 <a href="#none">옵션변경</a></dd>
+                                <dd>ㄴ구성상품명 | 옵션값/옵션값/옵션값/옵션값 (총 2개)</dd>
+                                <dd>ㄴ구성상품명 | 옵션값/옵션값/옵션값/옵션값 (총 2개)</dd>
+                                <dd>ㄴ구성상품명 | 옵션값/옵션값/옵션값/옵션값 (총 2개)</dd>
+                            </dl>
+                        </div>
+                        <div class="sum">
+                            <p>주문수량 2개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <ul>
+                                <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                                <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                                <li><input type="button" id="return_request" value="반품신청"></li>
+                                <li><input type="button" id="exchange_request" value="교환신청"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#none" class="more">더보기</a>
+        </section>
+    </article>
+
+    <!--footer-->
+    <footer class="tenan_footer">
+        <h4>(주)테난</h4>
+        <p class="company-info">대표이사 문경란 | 서울 강남구 영동대로 734 <br>개인정보보호책임자 이성춘 <br>사업자등록번호 120-81-84619 <br>통신판매업신고번호 제2018-서울강남-00940 <br>이메일 info@bylynn.shop</p>
+        <ul class="footer-menu clearfix">
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="sns clearfix">
+            <li><a href="#none"><img src="../images/googleplay.svg" alt="구글 플레이"></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt="애플"></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt="네이버"></a></li>
+            <li><a href="#none"><img src="../images/youtube_icon.png" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt="페이스북"></a></li>
+        </ul>
+        <p class="copy">Copyright &copy; BYLYNNSHOP all rights reserved.</p>
+    </footer>
+</body>
+
+</html>
