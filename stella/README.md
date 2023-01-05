@@ -25,3 +25,7 @@ https://uzen-lune.github.io/bylynn/stella/html/shopping-basket.html
 <hr>
 <h2><strong>주문서작성</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/order_sheet.html
+
+<hr>
+<h2><strong>마이페이지메인</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/mypage_main.html
