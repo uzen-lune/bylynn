@@ -29,3 +29,7 @@ https://uzen-lune.github.io/bylynn/stella/html/order_sheet.html
 <hr>
 <h2><strong>마이페이지메인</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/mypage_main.html
+
+<hr>
+<h2><strong>주문/배송조회</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/order-delivery_inquiry.html
