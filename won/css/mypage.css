@@ -198,6 +198,7 @@ header .navibar li h1 {
     font-size: 3.3333vw;
     font-weight: 500;
     margin-bottom: 2.2222vw;
+    color: #999;
 }
 .order-pdt .box .pdt-info-basic .pdt-info-detail h4{
     font-size: 3.6111vw;
@@ -207,6 +208,7 @@ header .navibar li h1 {
 .order-pdt .box .pdt-info-basic .pdt-info-detail ul{}
 .order-pdt .box .pdt-info-basic .pdt-info-detail ul li{
     font-size: 3.6111vw;
+    color: #666;
 }
 .order-pdt .box .pdt-info .gifts-text-wrap {
     margin-bottom: 6.9444vw;
