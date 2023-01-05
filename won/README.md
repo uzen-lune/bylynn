@@ -29,3 +29,9 @@ https://uzen-lune.github.io/bylynn/won/html/ordersheet.html (완료)
 <hr>
 <h2><strong>마이페이지</strong></h2> 
 https://uzen-lune.github.io/bylynn/won/html/mypage.html (완료)
+
+<hr>
+<h2><strong>주문/배송조회</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/inquiry_order-delivery.html (완료)
+
+
