@@ -188,6 +188,17 @@ form .layer-filter .apply-btn-area input[type=button]{
     font-size: 3.6111vw;
     color: #666;
 }
+.inquiry-pdt .history-box .order-info-wrap .btn-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.inquiry-pdt .history-box .order-info-wrap .btn-wrap button:first-of-type{}
+.inquiry-pdt .history-box .order-info-wrap .btn-wrap button:last-of-type{
+    border: 1px solid #666;
+    background-color: #fff;
+    color: #666;
+}
+
 .inquiry-pdt .history-box .order-info-wrap  button {
     width: 37.7778vw;
     height: 8.8889vw;
@@ -197,6 +208,8 @@ form .layer-filter .apply-btn-area input[type=button]{
     color: #FFF;
     border: 0;
     font-size: 3.6111vw;
+    box-sizing: border-box;
+    font-weight: 500;
 }
 
 /*박스*/
