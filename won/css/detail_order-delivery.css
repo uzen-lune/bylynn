@@ -456,7 +456,7 @@ header .navibar li h1 {
 /* 받으시는분 변경 */
 .receive .receive-change{
     padding-bottom: 6.6667vw;
-    /*display: none;*/
+    display: none;
 }
 .receive .receive-change .receive-change-top{
     display: flex;
