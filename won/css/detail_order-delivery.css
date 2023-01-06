@@ -66,7 +66,7 @@ header .navibar li h1 {
     background-color: #f6f6f6;
     border-top: 0.2778vw solid #333;
     padding: 6.6667vw 5.5556vw;
-    margin-bottom: 40px;
+    margin-bottom: 11.1111vw;
 }
 .order-delivery-summary .order-info-wrap .order-info{
     margin-bottom: 4.4444vw;
@@ -92,13 +92,13 @@ header .navibar li h1 {
 }
 .order-delivery-summary .order-info-wrap .btn-wrap button:first-of-type{}
 .order-delivery-summary .order-info-wrap .btn-wrap button:last-of-type{
-    border: 1px solid #666;
+    border: 0.2778vw solid #666;
     background-color: #fff;
     color: #666;
 }
 
 .order-delivery-summary .order-info-wrap  button {
-    width: 156px;
+    width: 43.3333vw;
     height: 8.8889vw;
     line-height: 8.8889vw;
     text-align: center;
@@ -113,19 +113,19 @@ header .navibar li h1 {
 /* detail-order-delivery-pdt */
 
 .detail-order-delivery-pdt {
-    width: 320px;
+    width: 88.8889vw;
     margin: 0 auto;
 }
 .detail-order-delivery-pdt .group {
-    margin-bottom: 60px;
+    margin-bottom: 16.6667vw;
 }
 .detail-order-delivery-pdt .group .box-title{
-    padding: 24px 0;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #ccc;
+    padding: 6.6667vw 0;
+    border-top: 0.2778vw solid #333;
+    border-bottom: 0.2778vw solid #ccc;
 }
 .detail-order-delivery-pdt .group .box-title h2{
-    font-size: 16px;
+    font-size: 4.4444vw;
     font-weight: 500;
 }
 .detail-order-delivery-pdt .group .box {
@@ -263,23 +263,23 @@ header .navibar li h1 {
 }
 .detail-order-delivery-pdt .group .box .pdt-add .pdt-status-wrap {
     padding-bottom: 4.4444vw;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.2778vw solid #eee;
 }
 .detail-order-delivery-pdt .group .box .delivery-price {
     border-bottom: 0.2778vw solid #ccc;
 }
 .detail-order-delivery-pdt .group .box .delivery-price p{
-    padding: 24px 0;
-    font-size: 13px;
+    padding: 6.6667vw 0;
+    font-size: 3.6111vw;
     position: relative;
     background-image: url(../images/detail_order-delivery/circle-down.svg);
     background-repeat: no-repeat;
-    background-size: 20px;
+    background-size: 5.5556vw;
     background-position: right center;
 }
 .detail-order-delivery-pdt .group .box .delivery-price p span{
     position: absolute;
-    right: 28px;
+    right: 7.7778vw;
     top: 50%;
     transform: translateY(-50%);
     font-weight: 500;
@@ -287,44 +287,47 @@ header .navibar li h1 {
 /* 사은품 정보 */
 .order-gifts-info {}
 .order-gifts-info .gifts-info-title{
-    width: 320px;
+    width: 88.8889vw;
     margin: 0 auto;
 }
 .order-gifts-info .gifts-info-title h2{
-    font-size: 18px;
+    font-size: 5.0000vw;
     font-weight: 500;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #333;
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #333;
 }
 .order-gifts-info .box-wrap{
-    margin-bottom: 24px;
+    margin-bottom: 6.6667vw;
 }
 .order-gifts-info .box-wrap .box{
-    padding: 24px 0;
+    padding: 6.6667vw 0;
     position: relative;
 }
 .order-gifts-info .box-wrap .box::after {
     content: "";
     display: block;
-    width: 320px;
-    height: 1px;
+    width: 88.8889vw;
+    height: 0.2778vw;
     background-color: #ccc;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
+.order-gifts-info .box-wrap .box:last-of-type::after{
+    background-color: #eee;
+}
 .order-gifts-info .box-wrap .box .gifts-info-des{
-    width: 320px;
-    margin: 0 auto 24px;
+    width: 88.8889vw;
+    margin: 0 auto 6.6667vw;
 }
 .order-gifts-info .box-wrap .box .gifts-info-des h3{
-    font-size: 16px;
+    font-size: 4.4444vw;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 1.1111vw;
 }
 .order-gifts-info .box-wrap .box .gifts-info-des p{
-    font-size: 14px;
+    font-size: 3.8889vw;
 }
 .order-gifts-info .box-wrap .box .gifts-box-show{
     overflow: auto;
@@ -338,20 +341,20 @@ header .navibar li h1 {
     display: table;
     width: 100%;
     white-space: nowrap;
-    padding: 0 20px;
+    padding: 0 5.5556vw;
 }
 
 .order-gifts-info .box-wrap .box .gifts-box-show .gifts-box-wrap .gifts-box{
     display: inline-block;
-    width: 74px;
-    margin-left: 8px;
+    width: 20.5556vw;
+    margin-left: 2.2222vw;
     white-space: normal;
 }
 .order-gifts-info .box-wrap .box .gifts-box-show .gifts-box-wrap .gifts-box:first-of-type {
     margin-left: 0;
 }
 .order-gifts-info .box-wrap .box .gifts-box-show .gifts-box-wrap .gifts-box .gifts-box-img{
-    margin-bottom: 8px;
+    margin-bottom: 2.2222vw;
     position: relative; /*소진*/
 }
 .order-gifts-info .box-wrap .box .gifts-box-show .gifts-box-wrap .gifts-box .gifts-box-img img{}
@@ -370,39 +373,39 @@ header .navibar li h1 {
     display: flex;
 }
 .order-gifts-info .box-wrap .box .gifts-box-show .gifts-box-wrap .gifts-box h4{
-    font-size: 12px;
+    font-size: 3.3333vw;
     color: #999;
-    margin-bottom: 8px;
+    margin-bottom: 2.2222vw;
     font-weight: 400;
 } 
 .order-gifts-info .box-wrap .box .gifts-box-show .gifts-box-wrap .gifts-box .gifts-name{
-    font-size: 13px;
-    margin-bottom: 8px;
+    font-size: 3.6111vw;
+    margin-bottom: 2.2222vw;
 } 
 .order-gifts-info .box-wrap .box .gifts-box-show .gifts-box-wrap .gifts-box .gifts-count{
-    font-size: 14px;
+    font-size: 3.8889vw;
     color: #666;
 } 
 
 /* 경고문 */
 .order-gifts-info .order-gifts-notice {
-    width: 320px;
+    width: 88.8889vw;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 16.6667vw;
 }
 .order-gifts-info .order-gifts-notice ul{
     width: 100%;
     background-color: #f6f6f6;
-    padding: 24px 20px;
+    padding: 6.6667vw 5.5556vw;
     box-sizing: border-box;
 }
 .order-gifts-info .order-gifts-notice ul li{}
 .order-gifts-info .order-gifts-notice ul li p{
-    font-size: 13px;
-    padding-left: 12px;
+    font-size: 3.6111vw;
+    padding-left: 3.3333vw;
     position: relative;
-    line-height: 19px;
-    margin-bottom: 4px;
+    line-height: 5.2778vw;
+    margin-bottom: 1.1111vw;
 }
 \.order-gifts-info .order-gifts-notice ul li p:last-of-type {
     margin-bottom: 0;
@@ -414,64 +417,464 @@ header .navibar li h1 {
     top: 0;
     left: 0;
 }
-
-form#detailOrderDeliveryForm {
-    width: 320px;
+/* receive */
+.receive {
+    width: 88.8889vw;
     margin: 0 auto;
 }
-form fieldset {
-    border: 0; 
+.receive .receive-saved{}
+.receive .receive-saved .receive-saved-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4.4444vw;
+    border-bottom: 0.2778vw solid #333;
 }
-form legend {
-    font-size: 18px;
+.receive .receive-saved .receive-saved-top h2{
+    font-size: 5.0000vw;
     font-weight: 500;
-    position: relative;
 }
-form legend span{
-    position: absolute;
-    right: 0;
-    top: 0;
+.receive .receive-saved .receive-saved-top button{
+    width: 13.0556vw;
+    height: 8.8889vw;
+    background-color: #fff;
+    border: 0.2778vw solid #666;
+    box-sizing: border-box;
+    font-size: 3.6111vw;
 }
-form .receive-inputChange {}
-form .receive-inputChange input[type=text]{
+.receive .receive-saved .receive-saved-info {
+    padding: 6.6667vw 0 2.2222vw;;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 8.3333vw;
+}
+.receive .receive-saved .receive-saved-info ul{}
+.receive .receive-saved .receive-saved-info ul li{
+    margin-bottom: 4.4444vw;
+    font-size: 3.8889vw;
+}
+
+/* 받으시는분 변경 */
+.receive .receive-change{
+    padding-bottom: 6.6667vw;
+    /*display: none;*/
+}
+.receive .receive-change .receive-change-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.4444vw;
+    padding-bottom: 4.4444vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.receive .receive-change .receive-change-top h2{
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+.receive .receive-change .receive-change-top .change-top-btn{
+    display: flex;
+}
+.receive .receive-change .receive-change-top .change-top-btn button{
+    width: 13.0556vw;
+    height: 8.8889vw;
+    background-color: #fff;
+    border: 0.2778vw solid #666;
+}
+.receive .receive-change .receive-change-top .change-top-btn #receiveChangeBtnCancel {
+    margin-left: 2.2222vw;
+}
+.receive .receive-change .receive-change-info {
+}
+.receive .receive-change .receive-change-info input {
     width: 100%;
-    height: 48px;
+    height: 13.3333vw;
+    margin-bottom: 3.3333vw;
+    border: 0.2778vw solid #ccc;
+    padding: 0 3.3333vw;
+    box-sizing: border-box;
 }
-form .receive-inputChange input[type=number]{
-    width: 100%;
-    height: 48px;
+.receive .receive-change .receive-change-info input::placeholder {
+    color: #999;
+    font-size: 3.8889vw;
+    line-height: 13.3333vw;
 }
-form .receive-inputChange .search-zipcode{
+.receive .receive-change .receive-change-info input:read-only{
+    background-color: #eee;
+}
+.receive .receive-change .receive-change-info .search-zipcode{
     display: flex;
     justify-content: space-between;
 }
-form .receive-inputChange .search-zipcode input[type=number]{
-    width: 211px;
+.receive .receive-change .receive-change-info .search-zipcode input[type=number]{
+    width: 58.6111vw;
 }
-form .receive-inputChange .search-zipcode input[type=button]{
-    width: 97px;
-    height: 48px;
+.receive .receive-change .receive-change-info .search-zipcode input[type=button]{
+    width: 26.9444vw;
+    height: 13.3333vw;
+    margin-bottom: 3.3333vw;
+    background-color: #fff;
+    border: 0.2778vw solid #111;
+    color: #111;
+    font-size: 3.8889vw;
+    font-weight: 500;
 }
-form .receive-inputChange select {
+.receive .receive-change .receive-change-info select {
     width: 100%;
-    height: 48px;
+    height: 13.3333vw;
+    margin-bottom: 3.3333vw;
+    border: 0.2778vw solid #ccc;
+    padding: 0 3.3333vw;
+    box-sizing: border-box;
+    color: #999;
+        background-image: url(../images/detail_order-delivery/S-down.svg);
+    background-repeat: no-repeat;
+    background-size: 3.8889vw;
+    background-position: right 3.8889vw center;
 }
-form .receive-inputChange textarea {
+.receive .receive-change .receive-change-info select option {
+    color: #999;
+}
+.receive .receive-change .receive-change-info textarea {
     width: 100%;
-    height: 48px;
+    height: 13.3333vw;
+    border: 0.2778vw solid #ccc;
+    padding: 4.4444vw 3.3333vw 0;
+    box-sizing: border-box;
+    resize: none;
+}
+.receive .receive-change .receive-change-info textarea::placeholder {
+    color: #999;
+    
 }
 
+/* ORDER */
+.order {
+    width: 88.8889vw;
+    margin: 0 auto 16.6667vw;
+    
+}
+.order .order-saved{}
+.order .order-saved .order-saved-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4.4444vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.order .order-saved .order-saved-top h2{
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+.order .order-saved .order-saved-top button{
+    width: 13.0556vw;
+    height: 8.8889vw;
+    background-color: #fff;
+    border: 0.2778vw solid #666;
+    box-sizing: border-box;
+    font-size: 3.6111vw;
+}
+.order .order-saved .order-saved-info {
+    padding: 6.6667vw 0 2.2222vw;;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 8.3333vw;
+}
+.order .order-saved .order-saved-info ul{}
+.order .order-saved .order-saved-info ul li{
+    margin-bottom: 4.4444vw;
+    font-size: 3.8889vw;
+}
+.order .order-change{
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #eee;
+    /*display: none;*/
+}
+.order .order-change .order-change-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.4444vw;
+    padding-bottom: 4.4444vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.order .order-change .order-change-top h2{
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+.order .order-change .order-change-top .change-top-btn{
+    display: flex;
+}
+.order .order-change .order-change-top .change-top-btn button{
+    width: 13.0556vw;
+    height: 8.8889vw;
+    background-color: #fff;
+    border: 0.2778vw solid #666;
+}
+.order .order-change .order-change-top .change-top-btn #orderChangeBtnCancel {
+    margin-left: 2.2222vw;
+}
+.order .order-change .order-change-info {
+}
+.order .order-change .order-change-info input {
+    width: 100%;
+    height: 13.3333vw;
+    margin-bottom: 3.3333vw;
+    border: 0.2778vw solid #ccc;
+    padding: 0 3.3333vw;
+    box-sizing: border-box;
+}
+.order .order-change .order-change-info input[type=email]{
+    margin-bottom: 0;
+}
+.order .order-change .order-change-info input::placeholder {
+    color: #999;
+    font-size: 3.8889vw;
+    line-height: 13.3333vw;
+}
+.order .order-change .order-change-info input:read-only{
+    background-color: #eee;
+}
+.order .order-change .order-change-info .search-zipcode{
+    display: flex;
+    justify-content: space-between;
+}
+.order .order-change .order-change-info .search-zipcode input[type=number]{
+    width: 58.6111vw;
+}
+.order .order-change .order-change-info .search-zipcode input[type=button]{
+    width: 26.9444vw;
+    height: 13.3333vw;
+    margin-bottom: 3.3333vw;
+    background-color: #fff;
+    border: 0.2778vw solid #111;
+    color: #111;
+    font-size: 3.8889vw;
+    font-weight: 500;
+}
+.order .order-change .order-change-info select {
+    width: 100%;
+    height: 13.3333vw;
+    margin-bottom: 3.3333vw;
+    border: 0.2778vw solid #ccc;
+    padding: 0 3.3333vw;
+    box-sizing: border-box;
+    color: #999;
+        background-image: url(../images/detail_order-delivery/S-down.svg);
+    background-repeat: no-repeat;
+    background-size: 3.8889vw;
+    background-position: right 3.8889vw center;
+}
+.order .order-change .order-change-info select option {
+    color: #999;
+}
+.order .order-change .order-change-info textarea {
+    width: 100%;
+    height: 13.3333vw;
+    border: 0.2778vw solid #ccc;
+    padding: 4.4444vw 3.3333vw 0;
+    box-sizing: border-box;
+    resize: none;
+}
+.order .order-change .order-change-info textarea::placeholder {
+    color: #999;
+    
+}
 
+/*목록 공통 css*/
+.listBox {
+    padding-top: 6.6667vw;
+    padding-bottom: 2.2222vw;
+    border-bottom: 0.2778vw solid #ccc;
+    
+}
+.listBox h3{
+    font-size: 3.8889vw;
+    font-weight: 500;
+    margin-bottom: 6.6667vw;
+}
+.listBox .dep1 {}
+.listBox .dep1 >li{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4.4444vw;
+}
+.listBox .dep1 > li strong{
+    font-size: 3.8889vw;
+    font-weight: 400;
+    font-weight: 500;
+}
+.listBox .dep1 > li p{
+    font-size: 3.8889vw;
+}
+.listBox .dep1 > li  p span{
 
+}
+.listBox .dep1 > li > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3.3333vw;
+}
+.listBox .dep1 > li > p , .listBox .dep1 > li > strong {
+    font-weight: 500;
+}
+.listBox .dep1 > li > div > p , .listBox .dep1 > li > div > strong {
+    font-weight: 500;
+}
+.listBox .dep1 .dep2 {
+    width: 100%;
+    padding-left: 5.5556vw;
+    
+}
+.listBox .dep1 .dep2 > li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4.4444vw;
+}
+.listBox .dep1 .dep2 > li:last-of-type {
+    margin-bottom: 0;
+}
+.listBox .dep1 .dep2 > li > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4.4444vw;
+}
+.listBox .dep1 .dep2 > li strong {
+    color: #666;
+    font-weight: 400;
+}
+.listBox .dep1 .dep2 > li p {
+    color: #666;
+}
+.listBox .dep1 .dep2 .dep3 {
+    width: 100%;
+    
+}
+.listBox .dep1 .dep2 .dep3 li{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5.5556vw;
+}
+.listBox .list-more {
+    line-height: 5.5556vw;
+    padding-right: 6.6667vw;
+    background-image: url(../images/detail_order-delivery/circle-down.svg);
+    background-repeat: no-repeat;
+    background-size: 5.5556vw;
+    background-position: right center;
+}
+/*결제상세*/
 
-
-
-
-
-
-
-
-
-
-
-
+.payment-details {
+    width: 88.8889vw;
+    margin: 0 auto;
+}
+.payment-details .payment-details-top {
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.payment-details .payment-details-top h2{
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+.payment-details .payment-info-wrap {}
+/*.payment-details .payment-info-wrap .payment-amount-info{
+    padding-bottom: 2.2222vw;
+    border-bottom: 0.2778vw solid #ccc;
+}*/
+.payment-details .payment-details-final {
+    padding: 6.6667vw 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2778vw solid #ccc;
+}
+.payment-details .payment-details-final h3 {
+    font-size: 3.8889vw;
+    font-weight: 500;
+}
+.payment-details .payment-details-final strong {
+    font-size: 6.6667vw;
+    font-weight: 700;
+}
+.payment-details .payment-details-btn-wrap {
+    padding-bottom: 4.4444vw;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 16.6667vw;
+}
+.payment-details .payment-details-btn-wrap ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.payment-details .payment-details-btn-wrap ul li{
+    width: 43.3333vw;
+    height: 8.8889vw;
+    margin-bottom: 2.2222vw;
+}
+.payment-details .payment-details-btn-wrap ul li a {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 8.8889vw;
+    border: 0.2778vw solid #666;
+    font-size: 3.6111vw;
+    font-weight: 500;
+    color: #666;
+    box-sizing:border-box; 
+}
+.payment-details .payment-details-btn-wrap .btn-black {
+    background-color: #111;
+    color: #fff;
+    border: 0;
+}
+/*payment-method-information*/
+.payment-method-information {
+    border-bottom: 0;
+}
+/* 환불정보 */
+.refund-amount-info {
+    width: 88.8889vw;
+    margin: 0 auto;
+}
+.refund-amount-info .refund-amount-info-top {
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.refund-amount-info .refund-amount-info-top h2{
+    font-size: 5.0000vw;
+    font-weight: 500;
+}
+.refund-amount-info .refund-amount-info-wrap .listBox {
+    padding-bottom: 4.4444vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.refund-amount-info .refund-amount-info-wrap .listBox:last-of-type {
+    border-bottom: 0;
+}
+.refund-amount-info .refund-amount-info-wrap .dep1 {
+    border-bottom: 0.2778vw solid #ccc;
+    margin-bottom: 6.6667vw;
+}
+.refund-amount-info .refund-amount-info-wrap .dep1:last-of-type {
+    border-bottom: 0;
+}
+.refund-amount-info .listBox .refund-subject {
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #ccc;
+    margin-bottom: 6.6667vw;
+}
+.refund-amount-info .listBox .deduction-subject {
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #ccc;
+    margin-bottom: 6.6667vw;
+}
+.refund-amount-info .listBox .refund-amount {
+    padding-bottom: 6.6667vw;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 6.6667vw;
+}
+.refund-amount-info .listBox .refund-amount > div {
+    color: #FF2A00;
+}

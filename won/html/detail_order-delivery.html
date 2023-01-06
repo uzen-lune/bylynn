@@ -13,6 +13,64 @@
     <link rel="stylesheet" href="../css/detail_order-delivery.css">
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //변경버튼
+            $('.receive-saved-top button').click(function() {
+                $('.receive .receive-saved').hide();
+                $('.receive .receive-change').show();
+            });
+            //취소버튼
+            $('.change-top-btn #receiveChangeBtnCancel').click(function() {
+                $('.receive .receive-saved').show();
+                $('.receive .receive-change').hide();
+            });
+            //확인버튼
+            $('.change-top-btn #receiveChangeBtnSubmit').click(function() {
+                var nameRe = $('#receiveChangeUserName').val(),
+                    numberRe1 = $('#receiveChangeUserNumber1').val(),
+                    numberRe2 = $('#receiveChangeUserNumber2').val(),
+                    addressRe = $('#receiveChangeAddress2').val(),
+                    messageRe = $('#receiveChangeTextarea').val();
+                if (nameRe.length == '') {
+                    alert('변경할 이름을 입력하세요')
+                    return false;
+                } else {
+                    $('.receive-saved-userName').text(nameRe);
+                    $('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();
+                }
+                if (numberRe1.length == '') {
+                    alert('연락처를 입력하세요')
+                    return false;
+                } else {
+                    $('.receive-saved-userNumber1').text(numberRe1);
+                    $('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();
+                }
+                if (numberRe2.length == '') {
+                    alert('연락처를 입력하세요')
+                    return false;
+                } else {
+                    $('.receive-saved-userNumber2').text(numberRe2);
+                    $('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();
+                }
+                if (messageRe.length == '') {
+                    alert('배송메세지를 입력하세요')
+                    return false;
+                } else {
+                    $('.receive-saved-message').text(messageRe);
+                    $('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();
+                }
+
+
+            });
+
+        });
+
+    </script>
 </head>
 
 <body>
@@ -481,37 +539,421 @@
                 </ul>
             </div>
         </div>
-        <form action="" id="detailOrderDeliveryForm">
-            <fieldset>
-                <legend>주문하시는분<span class="btnChange">변경</span></legend>
-                <div class="receive-beforeChange">
-                    <ul>
-                        <li>홍길동</li>
-                        <li>010-1234-5678</li>
-                        <li>abcde@mail.com</li>
+
+        <div class="customer-info">
+            <!-- RECEIVE -->
+            <div class="receive">
+                <div class="receive-saved">
+                    <div class="receive-saved-top">
+                        <h2>받으시는분</h2>
+                        <button>변경</button>
+                    </div>
+                    <div class="receive-saved-info">
+                        <ul>
+                            <li class="receive-saved-userName">홍길동</li>
+                            <li class="receive-saved-userNumber1">010-1234-5678</li>
+                            <li class="receive-saved-userNumber2">02-9876-5432</li>
+                            <li class="receive-saved-userAddress">12345 서울특별시 강남구 테헤란로20길 9 동궁빌딩 6층</li>
+                            <li class="receive-saved-message">문앞에 놓아주세요.</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!--변경-->
+                <div class="receive-change">
+                    <div class="receive-change-top">
+                        <h2>받으시는분</h2>
+                        <div class="change-top-btn">
+                            <button id="receiveChangeBtnSubmit">확인</button>
+                            <button id="receiveChangeBtnCancel">취소</button>
+                        </div>
+                    </div>
+
+                    <div class="receive-change-info">
+                        <input type="text" name="receiveChangeUserName" id="receiveChangeUserName" placeholder="이름(필수)">
+                        <input type="number" name="receiveChangeUserNumber1" id="receiveChangeUserNumber1" placeholder="연락처1-없이 (필수)">
+                        <input type="number" name="receiveChangeUserNumber2" id="receiveChangeUserNumber2" placeholder="연락처2-없이">
+                        <div class="search-zipcode">
+                            <input type="number" placeholder="우편번호 (필수)" name="receiveChangeZipcode" id="receiveChangeZipcode" readonly>
+                            <input type="button" value="우편번호" id="receiveChangeZipcodeBtn" name="receiveChangeZipcodeBtn">
+                        </div>
+                        <input type="text" placeholder="주소" name="receiveChangeAddress1" id="receiveChangeAddress1" readonly>
+                        <input type="text" placeholder="주소상세" name="receiveChangeAddress2" id="receiveChangeAddress2" readonly>
+                        <select name="receiveChangeSendMessage" id="receiveChangeSendMessage">
+                            <option value="배송메세지를 선택하세요.">배송메세지를 선택하세요.</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <textarea name="receiveChangeTextarea" id="receiveChangeTextarea" cols="30" rows="10" placeholder="50자 이내로 입력해 주세요."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORDER -->
+            <div class="order">
+                <div class="order-saved">
+                    <div class="order-saved-top">
+                        <h2>주문하시는분</h2>
+                        <button>변경</button>
+                    </div>
+                    <div class="order-saved-info">
+                        <ul>
+                            <li class="order-saved-userName">홍길동</li>
+                            <li class="order-saved-userNumber1">010-1234-5678</li>
+                            <li class="order-saved-email">abcde@mail.com</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!--변경-->
+                <div class="order-change">
+                    <div class="order-change-top">
+                        <h2>주문하시는분</h2>
+                        <div class="change-top-btn">
+                            <button id="orderChangeBtnSubmit">확인</button>
+                            <button id="orderChangeBtnCancel">취소</button>
+                        </div>
+                    </div>
+
+                    <div class="order-change-info">
+                        <input type="text" name="orderChangeUserName" id="orderChangeUserName" placeholder="이름(필수)">
+                        <input type="number" name="orderChangeUserNumber1" id="orderChangeUserNumber1" placeholder="연락처1-없이 (필수)">
+                        <input type="email" placeholder="수신용 이메일(필수)" name="orderChangeEmail" id="orderChangeEmail">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="payment-details">
+            <div class="payment-details-top">
+                <h2>결제상세</h2>
+            </div>
+            <div class="payment-info-wrap">
+                <div class="payment-amount-info listBox">
+                    <h3>결제금액정보</h3>
+                    <ul class="dep1">
+                        <li>
+                            <strong>상품주문금액</strong>
+                            <p><span>30,000</span>원</p>
+                        </li>
+                        <li>
+                            <div>
+                                <strong class="list-more">회원쿠폰할인금액</strong>
+                                <p><span>-</span><span>3,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품할인쿠폰</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>주문할인쿠폰</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>최종배송비</strong>
+                            <p><span>+</span><span>3,000</span>원</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="payment-details-final">
+                    <h3>최종 결제금액</h3>
+                    <strong><span>29,000,500</span>원</strong>
+                </div>
+                <!--//적립금-->
+                <div class="listBox">
+                    <h3>적립금</h3>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>전용포인트</strong>
+                                <p><span>5,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <div>
+                                        <strong>회원등급별 적립</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <strong class="list-more">상품별 추가적립</strong>
+                                            <p><span>2,500</span>원</p>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>통합포인트</strong>
+                                <p><span>5,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>회원등급별 적립</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>상품별 추가적립</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
-                <div class="receive-inputChange">
-                    <input type="text" name="" id="" placeholder="이름(필수)">
-                    <input type="number" name="" id="" placeholder="연락처1-없이 (필수)">
-                    <input type="number" name="" id="" placeholder="연락처2-없이">
-                    <div class="search-zipcode">
-                        <input type="number" placeholder="우편번호 (필수)">
-                        <input type="button" value="우편번호">
-                    </div>
-                    <input type="text" placeholder="주소">
-                    <input type="text" placeholder="주소상세">
-                    <select name="" id="">
-                        <option value="1">배송메세지를 선택하세요.</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="50자 이내로 입력해 주세요."></textarea>
+                <!--결제수단정보-->
+                <div class="payment-method-information listBox">
+                    <h3>결제수단정보</h3>
+                    <ul class="dep1">
+                        <li>
+                            <strong>전용포인트 사용금액</strong>
+                            <p><span>3,000</span>원</p>
+                        </li>
+                        <li>
+                            <strong class="list-more">통합포인트 사용금액</strong>
+                            <p><span>3,000</span>원</p>
+                        </li>
+                        <li>
+                            <strong>예치금 사용금액</strong>
+                            <p><span>3,000</span>원</p>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>신용카드</strong>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <p>카드사명 (1287-****-3172-1231) / 일시불</p>
+                                </li>
+                                <li>
+                                    <p>승인일시 : YYYY-MM-DD</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>간편결제</strong>
+                                <p><span>3,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <p>국민은행 **-******-***-**</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>안심가상계좌</strong>
+                                <p><span>3,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <p>농협 700000000000000(예금주:G1몰)</p>
+                                </li>
+                                <li>
+                                    <p>입금기한 : YYYY-MM-DD</p>
+                                </li>
+                                <li>
+                                    <p>입금일시 : YYYY-MM-DD</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="payment-details-btn-wrap">
+                    <ul>
+                        <li><a href="#none" class="btn-black">입금은행 변경</a></li>
+                        <li><a href="#none" class="btn-black">결제수단 변경</a></li>
+                        <li><a href="#none">현금영수증 전표</a></li>
+                        <li><a href="#none">신용카드 전표</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--payment-info-wrap-->
+        </div>
+        <!-- 환불금액정보 -->
+        <div class="refund-amount-info">
+            <div class="refund-amount-info-top">
+                <h2>환불금액정보</h2>
+            </div>
+            <div class="refund-amount-info-wrap">
+                <div class="listBox">
+                    <h3>YYYY-MM-DD</h3>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>취소전</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품주문금액</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>회원쿠폰할인금액</strong>
+                                    <p><span>-</span><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>최종배송비</strong>
+                                    <p><span>+</span><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>취소후</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품주문금액</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>회원쿠폰할인금액</strong>
+                                    <p><span>-</span><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>최종배송비</strong>
+                                    <p><span>+</span><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>환불금액</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>전용포인트</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>통합포인트</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>예치금</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>신용카드</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <p>카드사명 (1234-123-123-1-23-123)/일시불</p>
+                                        </li>
+                                        <li>
+                                            <p>승인취소일시 :YYYY-MM-DD</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>간편결제</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <p>국민은행 (1234-124-123-123-1-23)/일시불</p>
+                                        </li>
+                                        <li>
+                                            <p>승인취소일시 :YYYY-MM-DD</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>환불계좌</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <p>농협 (1234-124-123-123-1-23)/일시불</p>
+                                        </li>
+                                        <li>
+                                            <p>환불일시 :YYYY-MM-DD</p>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+                <div class="listBox">
+                    <h3>YYYY-MM-DD</h3>
+                    <ul class="dep1">
+                        <li class="refund-subject">
+                            <div>
+                                <strong>환불대상</strong>
+                                <p><span>3,0000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품주문금액</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>회원쿠폰할인금액</strong>
+                                    <p><span>-</span><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>최종배송비</strong>
+                                    <p><span>+</span><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="deduction-subject">
+                            <div>
+                                <strong>차감대상</strong>
+                                <p><span>3,0000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>클레임배송비</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="refund-amount">
+                            <div>
+                                <strong>환불금액</strong>
+                                <p><span>3,0000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>예치금</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
 
+            </div>
+            <!--payment-info-wrap-->
+        </div>
 
-            </fieldset>
-        </form>
     </section>
 
     <footer>
@@ -543,4 +985,6 @@
         <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
     </footer>
 
-</body></html>
+</body>
+
+</html>
