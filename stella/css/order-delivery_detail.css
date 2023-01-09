@@ -710,7 +710,8 @@
     width: 100%;
     font-size: 14px;
     font-weight: 400;
-    color: #999;
+    /*color: #999;*/
+    color: #111;
     border: 1px solid #ccc;
     padding: 16px 12px;
     box-sizing: border-box;
@@ -856,7 +857,7 @@
     width: 100%;
     font-size: 14px;
     font-weight: 400;
-    color: #999;
+    color: #111;
     border: 1px solid #ccc;
     padding: 16px 12px;
     box-sizing: border-box;
