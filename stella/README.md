@@ -33,3 +33,7 @@ https://uzen-lune.github.io/bylynn/stella/html/mypage_main.html
 <hr>
 <h2><strong>주문/배송조회</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/order-delivery_inquiry.html
+
+<hr>
+<h2><strong>주문/배송상세</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/order-delivery_detail.html
