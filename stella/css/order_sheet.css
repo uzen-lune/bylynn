@@ -296,10 +296,12 @@ input[id="agree2"]:checked + label {
 
 .orderer .user-input li input[id="username"] {
     width: 100%;
+    color: #333;
 }
 
 .orderer .user-input li input[id="userphone"] {
     width: 100%;
+    color: #333;
 }
 
 .orderer .user-input li.email {
@@ -311,6 +313,12 @@ input[id="agree2"]:checked + label {
 
 .orderer .user-input li input[id="user_email"] {
     width: 45%;
+    color: #333;
+}
+
+.orderer .user-input li input[id="email_address"] {
+    width: 45%;
+    color: #333;
 }
 
 .orderer .user-input li.email p {
@@ -339,10 +347,12 @@ input[id="agree2"]:checked + label {
 
 .orderer .user-input li input[id="pw"] {
     width: 100%;
+    color: #333;
 }
 
 .orderer .user-input li input[id="pw_chk"] {
     width: 100%;
+    color: #333;
 }
 
 
@@ -1464,7 +1474,7 @@ input[id="phone-num"] {
     border: 1px solid #ccc;
     font-size: 14px;
     font-weight: 400;
-    color: #999;
+    color: #111;
     margin: 12px 0 24px;
 }
 
@@ -1482,7 +1492,7 @@ input[id="business-num"] {
     border: 1px solid #ccc;
     font-size: 14px;
     font-weight: 400;
-    color: #999;
+    color: #111;
     margin: 12px 0 24px;
 }
 

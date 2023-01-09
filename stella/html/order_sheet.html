@@ -90,6 +90,18 @@
                     $('#agree-all-chk').prop('checked', false);
                 }
             });
+
+            $('#order-chkbox1').click(function() {
+                var same = $('#order-chkbox1').prop('checked');
+                if (same == true) {
+                    var username = document.getElementById('username').value;
+                    var userphone = document.getElementById('userphone').value;
+
+                    document.getElementById('name').value = username;
+                    document.getElementById('phone').value = userphone;
+                }
+
+            });
         });
     </script>
 </head>
@@ -156,15 +168,15 @@
                 </div>
                 <ul class="user-input">
                     <li>
-                        <input type="text" name="username" id="username" placeholder="이름 (필수)" required>
+                        <input type="text" name="username" id="username" value="" placeholder="이름 (필수)" required>
                     </li>
                     <li>
-                        <input type="tel" name="userphone" id="userphone" placeholder="연락처1-없이(필수)" required>
+                        <input type="tel" name="userphone" id="userphone" value="" placeholder="연락처1-없이(필수)" required>
                     </li>
                     <li class="email">
                         <input type="email" name="user_email" id="user_email" placeholder="수신용 이메일(필수)" required>
                         <p>@</p>
-                        <input type="email" name="user_email" id="user_email" placeholder="">
+                        <input type="email" name="email_address" id="email_address" placeholder="">
                         <select name="email_type" id="email_type">
                             <option value="0">직접 입력</option>
                             <option value="1">naver.com</option>
@@ -202,10 +214,10 @@
                         <label for="order-chkbox1">주문하시는 분과 동일</label>
                         <ul>
                             <li>
-                                <input type="text" name="name" id="name" placeholder="이름 (필수)" required>
+                                <input type="text" name="name" id="name" value="" placeholder="이름 (필수)" required>
                             </li>
                             <li>
-                                <input type="tel" name="phone" id="phone" placeholder="연락처1-없이(필수)" required>
+                                <input type="tel" name="phone" id="phone" value="" placeholder="연락처1-없이(필수)" required>
                             </li>
                             <li>
                                 <input type="text" name="zipcode" id="zipcode" placeholder="우편번호 (필수)" required>
