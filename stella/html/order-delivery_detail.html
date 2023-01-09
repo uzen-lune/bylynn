@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/order-delivery_detail.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.r_change').click(function() {
+                $('.recipient_change').css('display', 'block');
+                $('.recipient_existing').css('display', 'none');
+            });
+            $('.recipient_change button').click(function() {
+                $('.recipient_existing').css('display', 'block');
+                $('.recipient_change').css('display', 'none');
+            });
+
+            $('.o_change').click(function() {
+                $('.orderer_change').css('display', 'block');
+                $('.orderer_existing').css('display', 'none');
+            });
+
+            $('.orderer_change button').click(function() {
+                $('.orderer_existing').css('display', 'block');
+                $('.orderer_change').css('display', 'none');
+            });
+
+
+            $('.recipient_change button[type="submit"]').click(function() {
+                var name = document.getElementById('name').value;
+                var phone = document.getElementById('phone').value;
+                var phone2 = document.getElementById('phone2').value;
+                var zipcode = document.getElementById('zipcode').value;
+                var address = document.getElementById('address').value;
+                var address_detail = document.getElementById('address_detail').value;
+
+                document.getElementById('r_name').innerHTML = name;
+                document.getElementById('r_num1').innerHTML = phone;
+                document.getElementById('r_num2').innerHTML = phone2;
+                document.getElementById('r_address').innerHTML = zipcode + "" + address + "" + address_detail;
+            });
+
+
+            $('.orderer_change button[type="submit"]').click(function() {
+                var name_o = document.getElementById('name_o').value;
+                var phone_o = document.getElementById('phone_o').value;
+                var receive_email = document.getElementById('receive_email').value;
+
+                document.getElementById('o_name').innerHTML = name_o;
+                document.getElementById('o_num').innerHTML = phone_o;
+                document.getElementById('o_email').innerHTML = receive_email;
+            });
+
+
+
+            $('.tenan_footer h4').click(function() {
+                if ($('.tenan_footer .company-info').css('display') == 'none') {
+                    $('.tenan_footer .company-info').slideDown(80);
+                    $(this).css({
+                        background: 'url(../images/arrow_up.svg) no-repeat right 67.5%'
+                    });
+                } else {
+                    $('.tenan_footer .company-info').slideUp(100);
+                    $(this).css({
+                        background: 'url(../images/arrow_down.png) no-repeat right 67.5%'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="order-detail-header">
+            <div class="inner">
+                <div class="header-top">
+                    <a href="" class="back">
+                        <img src="../images/back_icon.svg" alt="뒤로가기">
+                    </a>
+                    <h2>주문/배송상세</h2>
+                </div>
+                <div class="util">
+                    <a href="#none" class="search"><img src="../images/search.svg" alt="검색"></a>
+                    <a href="#none" class="shopping_basket"><img src="../images/shopping-basket.svg" alt="장바구니"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--order-detail_content-->
+    <article class="order-detail_content">
+        <!--order-info-box-->
+        <section class="order-info-box">
+            <div class="order-info">
+                <dl>
+                    <dt>주문일</dt>
+                    <dd>2022-12-23</dd>
+                </dl>
+                <dl>
+                    <dt>주문번호</dt>
+                    <dd>YYMMDDHHMI0000</dd>
+                </dl>
+                <div class="btn">
+                    <button type="reset">주문전체취소</button>
+                    <button type="button">영수증발급</button>
+                </div>
+            </div>
+        </section>
+
+        <!--order-info-list-wrap-->
+        <section class="order-info-list-wrap">
+            <div class="order-info-list-box">
+                <h3>바이린1 배송상품</h3>
+                <div class="order-list">
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>브라운 / 55</dd>
+                            </dl>
+                        </div>
+                        <ol class="freebie-box">
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개) <span class="out">* 소진</span></li>
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개)</li>
+                        </ol>
+                        <div class="sum">
+                            <p>주문수량 2개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <ul>
+                                <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                                <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                                <li><input type="button" id="return_request" value="반품신청"></li>
+                                <li><input type="button" id="exchange_request" value="교환신청"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add-product">
+                        <p><span>[추가]</span> 맨투맨티셔츠 빨강/L-1개 (총 2개)</p>
+                        <div class="sum">
+                            <p>주문수량 1개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <input type="button" id="delivery_check2" value="배송조회">
+                        </div>
+                    </div>
+                    <div class="delivery-fee">
+                        <p>배송비</p>
+                        <p>3,000원 <img src="../images/down_btn.svg" alt=""></p>
+                    </div>
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>브라운 / 55</dd>
+                            </dl>
+                        </div>
+                        <div class="sum">
+                            <p>주문수량 1개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <ul>
+                                <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                                <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                                <li><input type="button" id="return_request" value="반품신청"></li>
+                                <li><input type="button" id="exchange_request" value="교환신청"></li>
+                            </ul>
+                        </div>
+                        <div class="delivery-fee">
+                            <p>배송비</p>
+                            <p>3,000원 <img src="../images/down_btn.svg" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info-list-box">
+                <h3>바이린2 배송상품</h3>
+                <div class="order-list">
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>ㄴ구성상품명-1개 (총 2개)</dd>
+                                <dd>ㄴ구성상품명-2개 (총 4개)</dd>
+                            </dl>
+                        </div>
+                        <div class="sum">
+                            <p>주문수량 2개</p>
+                            <p>9,000원</p>
+                        </div>
+                        <div class="order-check">
+                            <p>주문완료</p>
+                            <ul>
+                                <li><input type="button" id="purchase_confirmed" value="구매확정"></li>
+                                <li><input type="button" id="delivery_check1" value="배송조회"></li>
+                                <li><input type="button" id="return_request" value="반품신청"></li>
+                                <li><input type="button" id="exchange_request" value="교환신청"></li>
+                            </ul>
+                        </div>
+                        <div class="delivery-fee">
+                            <p>배송비</p>
+                            <p>3,000원 <img src="../images/down_btn.svg" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="freebie-info">
+            <h3>주문사은품 정보</h3>
+            <div class="event_name">
+                <h4>주문사은품증정 행사명</h4>
+                <p>2022-11-01~2022-11-30</p>
+                <div class="swiper freebie_slide1">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="exhaust">소진</div>
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper('.freebie_slide1 .swiper-container', {
+                            slidesPerView: "auto",
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                                draggable: true,
+                                hide: true,
+                            },
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="coupon_name">
+                <h4>사은품증정쿠폰명</h4>
+                <div class="swiper freebie_slide2">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="exhaust">소진</div>
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper('.freebie_slide2 .swiper-container', {
+                            slidesPerView: "auto",
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                                draggable: true,
+                                hide: true,
+                            },
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="else_freebie">
+                <h4>기타 사은품증정</h4>
+                <div class="swiper freebie_slide3">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="exhaust">소진</div>
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <img src="../images/sel_product.png" alt="">
+                                    <div class="freebie_name">
+                                        <p>LYNN</p>
+                                        <p>사은품명 전체가 표시</p>
+                                        <p>1개</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper('.freebie_slide3 .swiper-container', {
+                            slidesPerView: "auto",
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                                draggable: true,
+                                hide: true,
+                            },
+                        });
+                    </script>
+                </div>
+            </div>
+            <ul class="refer">
+                <li>부분 주문취소 및 반품 시 사은품 증정이 취소될 수 있습니다.</li>
+                <li>반품 시 지급받은 사은품도 함께 보내주셔야 반품이 진행됩니다.</li>
+            </ul>
+        </section>
+        <section class="recipient_existing">
+            <h3>받으시는 분</h3>
+            <button type="button" class="r_change">변경</button>
+            <p id="r_name">홍길동</p>
+            <p id="r_num1">010-1234-5678</p>
+            <p id="r_num2">02-9876-5432</p>
+            <p id="r_address">12345 서울특별시 강남구 테헤란로20길 9 동궁빌딩 6층</p>
+            <p id="r_message">문 앞에 놓아주세요.</p>
+        </section>
+        <section class="recipient_change">
+            <div>
+                <h3>받으시는 분</h3>
+                <button type="submit">확인</button>
+                <button type="reset">취소</button>
+            </div>
+            <ul class="recipient-info">
+                <li>
+                    <input type="text" name="name" id="name" value="" placeholder="이름 (필수)" required>
+                </li>
+                <li>
+                    <input type="tel" name="phone" id="phone" value="" placeholder="연락처1-없이(필수)" required>
+                </li>
+                <li>
+                    <input type="tel" name="phone2" id="phone2" value="" placeholder="연락처2-없이">
+                </li>
+                <li>
+                    <input type="text" name="zipcode" id="zipcode" value="" placeholder="우편번호 (필수)" required>
+                    <input type="button" id="zipcode_btn" value="우편번호찾기">
+                </li>
+                <li>
+                    <input type="text" name="address" id="address" value="" placeholder="주소">
+                </li>
+                <li>
+                    <input type="text" name="address_detail" id="address_detail" value="" placeholder="주소상세">
+                </li>
+                <li>
+                    <select name="message" id="message_type">
+                        <option value="0">배송메시지를 선택하세요.</option>
+                        <option value="1">부재시 경비실에 맡겨주세요.</option>
+                        <option value="2">부재시 문앞에 놓아주세요.</option>
+                        <option value="3">빠른 배송 부탁드립니다.</option>
+                        <option value="4">배송 전 연락바랍니다.</option>
+                    </select>
+                </li>
+                <li>
+                    <textarea name="message-txt" id="message-txt" readonly` placeholder="50자 이내로 입력해 주세요."></textarea>
+                </li>
+            </ul>
+        </section>
+        <section class="orderer_existing">
+            <h3>주문하시는 분</h3>
+            <button type="button" class="o_change">변경</button>
+            <p id="o_name">홍길동</p>
+            <p id="o_num">010-1234-5678</p>
+            <p id="o_email">abcde@mail.com</p>
+        </section>
+        <section class="orderer_change">
+            <div>
+                <h3>주문하시는 분</h3>
+                <button type="submit">확인</button>
+                <button type="reset">취소</button>
+            </div>
+            <ul class="orderer-info">
+                <li>
+                    <input type="text" name="name_o" id="name_o" value="" placeholder="이름 (필수)" required>
+                </li>
+                <li>
+                    <input type="tel" name="phone_o" id="phone_o" value="" placeholder="연락처1-없이(필수)" required>
+                </li>
+                <li>
+                    <input type="email" name=" receive_email" id="receive_email" value="" placeholder="수신용 이메일(필수)" required>
+                </li>
+            </ul>
+        </section>
+        <section class="payment_detail">
+            <h3>결제상세</h3>
+            <div class="amount-info-box">
+                <h4>결제금액정보</h4>
+                <dl>
+                    <dt>상품주문금액</dt>
+                    <dd>30,000원</dd>
+                </dl>
+                <dl>
+                    <dt>회원쿠폰할인금액 <img src="../images/down_btn.svg" alt=""></dt>
+                    <dd>-3,000원</dd>
+                    <div>
+                        <dl>
+                            <dt>상품할인쿠폰</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>주문할인쿠폰</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                    </div>
+                </dl>
+                <dl>
+                    <dt>최종배송비</dt>
+                    <dd>+3,000원</dd>
+                </dl>
+            </div>
+            <dl class="total">
+                <dt>최종 결제금액</dt>
+                <dd>29,000,500원</dd>
+            </dl>
+            <div class="amount-info-box">
+                <h4>적립금</h4>
+                <dl>
+                    <dt>전용포인트</dt>
+                    <dd>5,000원</dd>
+                    <div>
+                        <dl>
+                            <dt>회원등급별 적립</dt>
+                            <dd>2,500원</dd>
+                            <div>
+                                <dl>
+                                    <dt>상품별 추가적립 <img src="../images/down_btn.svg" alt=""></dt>
+                                    <dd>2,500원</dd>
+                                </dl>
+                            </div>
+                        </dl>
+                    </div>
+                </dl>
+                <dl>
+                    <dt>통합포인트</dt>
+                    <dd>5,000원</dd>
+                    <div>
+                        <dl>
+                            <dt>회원등급별 적립</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>상품별 추가적립</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                    </div>
+                </dl>
+            </div>
+            <div class="amount-info-box">
+                <h4>결제수단정보</h4>
+                <dl>
+                    <dt>전용포인트 사용금액</dt>
+                    <dd>3,000원</dd>
+                </dl>
+                <dl>
+                    <dt>통합포인트 사용금액 <img src="../images/down_btn.svg" alt=""></dt>
+                    <dd>3,000원</dd>
+                </dl>
+                <dl>
+                    <dt>예치금 사용금액</dt>
+                    <dd>3,000원</dd>
+                </dl>
+                <dl class="card">
+                    <dt>신용카드</dt>
+                    <dd>카트사명 (1234-****-1234-1234) / 일시불</dd>
+                    <dd>승인일시 : YYYY-MM-DD</dd>
+                </dl>
+                <dl>
+                    <dt>간편결제</dt>
+                    <dd>3,000원</dd>
+                    <div>
+                        <p>국민은행 **-******-***-**</p>
+                    </div>
+                </dl>
+                <dl>
+                    <dt>안심가상계좌</dt>
+                    <dd>3,000원</dd>
+                    <div>
+                        <p>농협 79004483982261 (예금주: G1몰)</p>
+                        <p>입금기한: YYYY-MM-DD</p>
+                        <p>입금일시: YYYY-MM-DD</p>
+                    </div>
+                </dl>
+                <div class="btn">
+                    <button type="button">입금은행 변경</button>
+                    <button type="button">결제수단 변경</button>
+                    <button type="button">현금영수증 전표</button>
+                    <button type="button">신용카드 전표</button>
+                </div>
+            </div>
+        </section>
+        <section class="refund_info">
+            <h3>환불금액정보</h3>
+            <div class="amount-info-box">
+                <h4>YYYY-MM-DD</h4>
+                <dl>
+                    <dt>취소 전</dt>
+                    <dd>30,000원</dd>
+                    <div class="amount-detail-info">
+                        <dl>
+                            <dt>상품주문금액</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>회원쿠폰할인금액</dt>
+                            <dd>-2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>최종배송비</dt>
+                            <dd>+2,500원</dd>
+                        </dl>
+                    </div>
+                </dl>
+                <dl>
+                    <dt>취소 후</dt>
+                    <dd>30,000원</dd>
+                    <div class="amount-detail-info">
+                        <dl>
+                            <dt>상품주문금액</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>회원쿠폰할인금액</dt>
+                            <dd>-2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>최종배송비</dt>
+                            <dd>+2,500원</dd>
+                        </dl>
+                    </div>
+                </dl>
+                <dl>
+                    <dt>환불금액</dt>
+                    <dd>30,000원</dd>
+                    <div class="amount-detail-info">
+                        <dl>
+                            <dt>전용포인트</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>통합포인트</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>예치금</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>신용카드</dt>
+                            <dd>2,500원</dd>
+                            <div>
+                                <p>카드사명 (1234-****-1234-1234) / 일시불</p>
+                                <p>승인취소일시 : YYYY-MM-DD</p>
+                            </div>
+                        </dl>
+                        <dl>
+                            <dt>간편결제</dt>
+                            <dd>2,500원</dd>
+                            <div>
+                                <p>국민은행 **-******-***-**</p>
+                                <p>승인취소일시 : YYYY-MM-DD</p>
+                            </div>
+                        </dl>
+                        <dl>
+                            <dt>환불계좌</dt>
+                            <dd>2,500원</dd>
+                            <div>
+                                <p>농협 79004483982261 (예금주: G1몰)</p>
+                                <p>환불일시 : YYYY-MM-DD</p>
+                            </div>
+                        </dl>
+                    </div>
+                </dl>
+            </div>
+            <div class="amount-info-box">
+                <h4>YYYY-MM-DD</h4>
+                <dl>
+                    <dt>환불대상</dt>
+                    <dd>30,000원</dd>
+                    <div class="amount-detail-info">
+                        <dl>
+                            <dt>상품주문금액</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>회원쿠폰할인금액</dt>
+                            <dd>-2,500원</dd>
+                        </dl>
+                        <dl>
+                            <dt>최종배송비</dt>
+                            <dd>+2,500원</dd>
+                        </dl>
+                    </div>
+                </dl>
+                <dl>
+                    <dt>차감대상</dt>
+                    <dd>30,000원</dd>
+                    <div class="amount-detail-info">
+                        <dl>
+                            <dt>클레임배송비</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                    </div>
+                </dl>
+                <dl class="refund-amount">
+                    <dt>환불금액</dt>
+                    <dd>3,000원</dd>
+                    <div class="amount-detail-info">
+                        <dl>
+                            <dt>예치금</dt>
+                            <dd>2,500원</dd>
+                        </dl>
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </article>
+
+    <!--footer-->
+    <footer class="tenan_footer">
+        <h4>(주)테난</h4>
+        <p class="company-info">대표이사 문경란 | 서울 강남구 영동대로 734 <br>개인정보보호책임자 이성춘 <br>사업자등록번호 120-81-84619 <br>통신판매업신고번호 제2018-서울강남-00940 <br>이메일 info@bylynn.shop</p>
+        <ul class="footer-menu clearfix">
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="sns clearfix">
+            <li><a href="#none"><img src="../images/googleplay.svg" alt="구글 플레이"></a></li>
+            <li><a href="#none"><img src="../images/apple.svg" alt="애플"></a></li>
+            <li><a href="#none"><img src="../images/naver.svg" alt="네이버"></a></li>
+            <li><a href="#none"><img src="../images/youtube_icon.png" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="../images/instagram.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images/facebook.svg" alt="페이스북"></a></li>
+        </ul>
+        <p class="copy">Copyright &copy; BYLYNNSHOP all rights reserved.</p>
+    </footer>
+</body>
+
+</html>
