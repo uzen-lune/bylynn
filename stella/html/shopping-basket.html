@@ -142,6 +142,30 @@
                 }
             });
 
+
+            $('.delete_b').click(function() {
+
+                var answer = confirm('선택한 제품을 삭제하시겠습니까?');
+
+                if (answer == true) {
+                    $(this).parents('.bylynn1-box,.bylynn2-box').remove();
+                }
+            });
+
+            $('#del-selection').click(function() {
+
+                $('.chkbox:checked').each(function() {
+                    $(this).parents('.bylynn1-box,.bylynn2-box').remove();
+                });
+
+                if ($('.bylynn1-box,.bylynn2-box').not) {
+                    $('#bylynn1-all,#bylynn2-all').prop('checked', false);
+                }
+            });
+
+            $('#del-unable').click(function() {
+                $('input[type="checkbox"][disabled]').parents('.bylynn1-box,.bylynn2-box').remove();
+            });
         });
     </script>
 </head>
@@ -174,8 +198,8 @@
                     <label for="all_chk">전체선택</label>
                     <ul>
                         <li>
-                            <button type="button" onclick="">선택삭제</button>
-                            <button type="button" onclick="">주문불가 삭제</button>
+                            <button type="button" id="del-selection" onclick="">선택삭제</button>
+                            <button type="button" id="del-unable" onclick="">주문불가 삭제</button>
                             <button type="reset" onclick=""><img src="../images/reset.svg" alt="리셋"></button>
                         </li>
                     </ul>
@@ -194,11 +218,11 @@
                         <li class="bylynn1-box">
                             <div class="inner">
                                 <div class="box-top">
-                                    <input type="checkbox" id="chkbox1">
+                                    <input type="checkbox" id="chkbox1" class="chkbox">
                                     <label for="chkbox1">제품선택</label>
                                     <div>
                                         <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
-                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                        <a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="sel-product-info">
@@ -235,11 +259,11 @@
                         <li class="bylynn1-box unable-order">
                             <div class="inner">
                                 <div class="box-top">
-                                    <input type="checkbox" id="chkbox2" disabled>
+                                    <input type="checkbox" id="chkbox2" class="chkbox" disabled>
                                     <label for="chkbox2">제품선택</label>
                                     <div>
                                         <a href="#none"><img src="../images/keeping.svg" alt=""></a>
-                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                        <a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="sel-product-info">
@@ -283,11 +307,11 @@
                         <li class="bylynn2-box">
                             <div class="inner">
                                 <div class="box-top">
-                                    <input type="checkbox" id="chkbox3">
+                                    <input type="checkbox" id="chkbox3" class="chkbox">
                                     <label for="chkbox3">제품선택</label>
                                     <div>
                                         <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
-                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                        <a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="sel-product-info">
@@ -317,7 +341,7 @@
                                     </div>
                                 </div>
                                 <div class="add">
-                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="price">5000원</span><a href="#none"><img src="../images/close_M.svg" alt=""></a></p>
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="price">5000원</span><a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a></p>
                                     <div class="sum">
                                         <select class="quantity-select">
                                             <option value="0">1</option>
@@ -345,11 +369,11 @@
                         <li class="bylynn2-box">
                             <div class="inner">
                                 <div class="box-top">
-                                    <input type="checkbox" id="chkbox4">
+                                    <input type="checkbox" id="chkbox4" class="chkbox">
                                     <label for="chkbox4">제품선택</label>
                                     <div>
                                         <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
-                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                        <a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="sel-product-info">
@@ -385,11 +409,11 @@
                         <li class="bylynn2-box modal">
                             <div class="inner">
                                 <div class="box-top">
-                                    <input type="checkbox" id="chkbox5">
+                                    <input type="checkbox" id="chkbox5" class="chkbox">
                                     <label for="chkbox5">제품선택</label>
                                     <div>
                                         <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
-                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                        <a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="sel-product-info">
@@ -407,11 +431,11 @@
                         <li class="bylynn2-box">
                             <div class="inner">
                                 <div class="box-top">
-                                    <input type="checkbox" id="chkbox6">
+                                    <input type="checkbox" id="chkbox6" class="chkbox">
                                     <label for="chkbox6">제품선택</label>
                                     <div>
                                         <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
-                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                        <a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="sel-product-info">
@@ -444,7 +468,7 @@
                                     </div>
                                 </div>
                                 <div class="add">
-                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="price">5000원</span><a href="#none"><img src="../images/close_M.svg" alt=""></a><br><span class="order-quantity">* 해당 상품의 판매가능수량은 {0}개 입니다.</span></p>
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="price">5000원</span><a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a><br><span class="order-quantity">* 해당 상품의 판매가능수량은 {0}개 입니다.</span></p>
                                     <div class="sum">
                                         <select class="quantity-select">
                                             <option value="0">1</option>
@@ -464,7 +488,7 @@
                                     </div>
                                 </div>
                                 <div class="add">
-                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="not">* 품절</span><a href="#none"><img src="../images/close_M.svg" alt=""></a><br><span class="not-order">* 주문할 수 없습니다. </span></p>
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="not">* 품절</span><a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a><br><span class="not-order">* 주문할 수 없습니다. </span></p>
                                     <div class="sum">
                                         <select class="quantity-select" disabled>
                                             <option value="0">1</option>
@@ -481,7 +505,7 @@
                                     </div>
                                 </div>
                                 <div class="add">
-                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="not">* 판매중지</span><a href="#none"><img src="../images/close_M.svg" alt=""></a><br><span class="not-order">* 주문할 수 없습니다. </span></p>
+                                    <p class="add-item"><span>[추가]</span>맨투맨티셔츠 빨강/L-1개 (총 2개)<span class="not">* 판매중지</span><a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a><br><span class="not-order">* 주문할 수 없습니다. </span></p>
                                     <div class="sum">
                                         <select class="quantity-select" disabled>
                                             <option value="0">1</option>
@@ -506,11 +530,11 @@
                         <li class="bylynn2-box">
                             <div class="inner">
                                 <div class="box-top">
-                                    <input type="checkbox" id="chkbox7">
+                                    <input type="checkbox" id="chkbox7" class="chkbox">
                                     <label for="chkbox7">제품선택</label>
                                     <div>
                                         <a href="#none" class="keeping"><img src="../images/keeping.svg" alt=""></a>
-                                        <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                                        <a href="#none" class="delete_b"><img src="../images/close_M.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="sel-product-info">

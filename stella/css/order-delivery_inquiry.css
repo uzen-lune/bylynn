@@ -181,6 +181,7 @@ input[type="date"]:after {
     color: #111;
     border: 1px solid #ccc;
     background-color: #fff;
+    outline: 0;
 }
 
 .record-inquiry .inquiry-box button {
