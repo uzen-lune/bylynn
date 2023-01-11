@@ -101,6 +101,7 @@
     padding: 15.5px 12px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    outline: 0;
 }
 
 .notice-search .search input[type="button"] {
