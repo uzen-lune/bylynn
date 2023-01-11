@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,19 @@
     <link rel="stylesheet" href="../css/direct_inquiry_register.css">
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var deleteImg = $('.pdt-inquiry .add-photo .box-wrap .box a');
+            deleteImg.click(function(){ //사진 삭제
+                $(this).parents('.box').remove();
+            });
+            
+            $('.btn-close').click(function(){
+                $(this).parents('.box').remove();
+            });
+            
+        });
+    </script>
 </head>
 
 <body>
@@ -182,15 +196,15 @@
                 <ul>
                     <li>
                         <div>
-                            <input type="checkbox">
-                            <label for="">이메일</label>
+                            <input type="checkbox" id="answerChk1" name="answerChk1">
+                            <label for="answerChk1">이메일</label>
                         </div>
                         <input type="text" placeholder="이메일 주소">
                     </li>
                     <li>
                         <div>
-                            <input type="checkbox">
-                            <label for="">SNS</label>
+                            <input type="checkbox" id="answerChk2" name="answerChk2">
+                            <label for="answerChk2">SNS</label>
                         </div>
                         <input type="text" placeholder="연락처 -없이">
                     </li>
@@ -227,4 +241,6 @@
         </ul>
         <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
     </footer>
-</body></html>
+</body>
+
+</html>

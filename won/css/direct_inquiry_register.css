@@ -418,6 +418,12 @@ header .navibar li a img {
 .answer-noti ul li input[type=checkbox]{
     display: none;
 }
+.answer-noti ul li input[type=checkbox]:checked + label::before{
+    background-image: url(../images/direct_inquiry_register/checkbox.svg);
+    background-repeat: no-repeat;
+    background-size: 5.5556vw;
+    background-position: center;
+}
 .answer-noti ul li label{
     padding-left: 7.7778vw;
     position: relative;
