@@ -245,6 +245,12 @@ main .bnavi a {
     float: left;
 }
 
+.tag_slide .swiper-container .swiper-wrapper .swiper-slide a.on {
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+}
+
 .tag_slide .swiper-container .swiper-wrapper .swiper-slide a:hover {
     color: #fff;
     background-color: #333;

@@ -129,7 +129,6 @@
                     $('#bylynn2-all').prop('checked', false);
                     $('#all_chk').prop('checked', false);
                 }
-
             });
 
             var bylynn_all_chk = $('#all_chk').parents('fieldset').find('input[type=checkbox]').not('[disabled]');
@@ -153,7 +152,6 @@
             });
 
             $('#del-selection').click(function() {
-
                 $('.chkbox:checked').each(function() {
                     $(this).parents('.bylynn1-box,.bylynn2-box').remove();
                 });

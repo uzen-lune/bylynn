@@ -17,6 +17,10 @@
                 $(this).addClass('active').parents('.swiper-slide').siblings('.swiper-slide').children('a').removeClass('active');
             });
 
+            $('.tag_slide a').click(function() {
+                $(this).addClass('on').parent().siblings().children().removeClass('on');
+            });
+
             $('.keeping').click(function() {
                 alert("로그인 시에만 위시리스트를 이용하실 수 있습니다.");
             });
@@ -26,6 +30,7 @@
                     scrollTop: 0
                 }, 10);
             });
+
         });
     </script>
 </head>
@@ -79,10 +84,10 @@
 
         <div class="navigation_bar">
             <ul class="clearfix">
-                <li><a href="../html/navigation_drawer_layer_mobile.html"><img src="../images/menu.svg" alt="메뉴"></a></li>
+                <li><a href="navigation_drawer_layer_mobile.html"><img src="../images/menu.svg" alt="메뉴"></a></li>
                 <li><a href="#none"><img src="../images/wish.svg" alt="찜"></a></li>
                 <li><a href="index_mobile.html"><img src="../images/home.svg" alt="홈"></a></li>
-                <li><a href="#none"><img src="../images/mypage.svg" alt="마이페이지"></a></li>
+                <li><a href="mypage_main.html"><img src="../images/mypage.svg" alt="마이페이지"></a></li>
                 <li><a href="#none"><img src="../images/dot3.svg" alt="더보기"></a></li>
             </ul>
         </div>
@@ -247,7 +252,7 @@
             <div class="swiper tag_slide">
                 <div class="swiper-container">
                     <ul class="swiper-wrapper">
-                        <li class="swiper-slide"><a href="#none">#DEAR K</a></li>
+                        <li class="swiper-slide"><a href="#none" class="on">#DEAR K</a></li>
                         <li class="swiper-slide"><a href="#none">#HUIT DE LYNN</a></li>
                         <li class="swiper-slide"><a href="#none">#KENNETH LADY</a></li>
                         <li class="swiper-slide"><a href="#none">#KL</a></li>

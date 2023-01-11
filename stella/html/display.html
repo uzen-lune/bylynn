@@ -21,6 +21,10 @@
             $('.keeping').click(function() {
                 alert("로그인 시에만 위시리스트를 이용하실 수 있습니다.");
             });
+
+            $('.clothing_category_slide li').click(function() {
+                $(this).addClass('on').siblings().removeClass('on');
+            });
         });
     </script>
 </head>
@@ -74,10 +78,10 @@
 
         <div class="navigation_bar">
             <ul class="clearfix">
-                <li><a href="../html/navigation_drawer_layer_mobile.html"><img src="../images/menu.svg" alt=""></a></li>
+                <li><a href="navigation_drawer_layer_mobile.html"><img src="../images/menu.svg" alt=""></a></li>
                 <li><a href="#none"><img src="../images/wish.svg" alt=""></a></li>
-                <li><a href="#none"><img src="../images/home.svg" alt=""></a></li>
-                <li><a href="#none"><img src="../images/mypage.svg" alt=""></a></li>
+                <li><a href="index_mobile.html"><img src="../images/home.svg" alt=""></a></li>
+                <li><a href="mypage_main.html"><img src="../images/mypage.svg" alt=""></a></li>
                 <li><a href="#none"><img src="../images/dot3.svg" alt=""></a></li>
             </ul>
         </div>
@@ -88,7 +92,7 @@
         <div class="swiper clothing_category_slide">
             <div class="swiper-container">
                 <ul class="swiper-wrapper">
-                    <li class="swiper-slide"><a href="#none">전체</a></li>
+                    <li class="swiper-slide on"><a href="#none">전체</a></li>
                     <li class="swiper-slide"><a href="#none">아우터</a></li>
                     <li class="swiper-slide"><a href="#none">원피스</a></li>
                     <li class="swiper-slide"><a href="#none">블라우스/셔츠</a></li>
