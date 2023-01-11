@@ -37,3 +37,7 @@ https://uzen-lune.github.io/bylynn/won/html/inquiry_order-delivery.html (완료)
 <hr>
 <h2><strong>주문/배송상세</strong></h2> 
 https://uzen-lune.github.io/bylynn/won/html/detail_order-delivery.html (완료)
+
+<hr>
+<h2><strong>공지사항</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/notice.html (완료)
