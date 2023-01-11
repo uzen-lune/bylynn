@@ -2,7 +2,9 @@
 body {
     padding-top: 14.4444vw;
 }
-
+.red-em {
+    color: #FF2A00;
+}
 select {
 	border-radius:0; /* 아이폰 사파리 보더 없애기 */
 	-webkit-appearance:none; /* 화살표 없애기 for chrome*/
@@ -53,9 +55,7 @@ header .navibar li a img {
 }
 
 /*section*/
-.red-em {
-    color: #FF2A00;
-}
+
 /*폼*/
 #directRegister {
     padding-top: 8.8889vw;
