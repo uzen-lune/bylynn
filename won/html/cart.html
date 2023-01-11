@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,12 +38,12 @@
             $('#select-all').click(function() { //
                 if ($(this).is(":checked")) {
                     $('.cart-pdt').find('input[type=checkbox]').prop('checked', true);
-                    $('.infoChange').find('input[type=checkbox]').prop('checked', false);//변경박스 제외
+                    $('.infoChange').find('input[type=checkbox]').prop('checked', false); //변경박스 제외
                 } else {
                     $('.cart-pdt').find('input[type=checkbox]').prop('checked', false);
                 };
             });
-            
+
             //문자 읽어와서 바꾸기
             var allClickBtn = $('.group-title').find('input[id*=cart-bynn]');
 
@@ -55,14 +56,14 @@
 
                 if ($(this).prop('checked') == true) {
                     bynnList.prop('checked', true);
-                    $(this).parents('.group-title').siblings('.box-wrap').find('.infoChange').find('input[type=checkbox]').prop('checked',false);
+                    $(this).parents('.group-title').siblings('.box-wrap').find('.infoChange').find('input[type=checkbox]').prop('checked', false);
                     /*$("#cart-bynn2-pdt3").prop('checked', false);*/
                 } else {
                     bynnList.prop('checked', false);
                 };
 
             });
-            
+
             $('.box-wrap').find('input[type=checkbox]').click(function() { //list
                 var gId = $(this).attr('id'),
                     gNumber = gId.charAt(9),
@@ -93,12 +94,12 @@
                 }
 
             });
-            
+
             $('.cart-pdt').find('input[type=checkbox]').click(function() {
                 var gCheck = $('.cart-pdt').find('input[type=checkbox]').length;
-                console.log("1 : "+ gCheck);
+                console.log("1 : " + gCheck);
                 var gCheked = $('.cart-pdt').find('input[type=checkbox]:checked').length;
-                console.log("2 : "+ gCheked);
+                console.log("2 : " + gCheked);
                 var chCheked = $('.cart-pdt').find('.infoChange').find('input[type=checkbox]').length;
                 var gResult = gCheck - chCheked;
                 if (gCheked != gResult) {
@@ -109,75 +110,52 @@
             });
 
 
-
-            /////////////////////////그룹마다 따로따로 script//////////////////////////////////////
-           /* var group2child = $('input[name*=cart-bynn2-pdt]');*/
-
-            /*$('#select-all').click(function() {
-                var allChk = $('input[type=checkbox]');
-                var checked = $(this).prop('checked');
-                console.log(checked);
-                if (checked == true) {
-                    allChk.prop('checked', true);
-                    $("#cart-bynn2-pdt3").prop('checked', false);
-                } else {
-                    allChk.prop('checked', false);
-                }
-            });*/
-
-            /*$('#cart-bynn1').click(function() {
-
-
-                var group1Child = $(this).parents('.group').find('input[type=checkbox]');
-                if ($(this).prop('checked') == true) {
-                    group1Child.prop('checked', true);
-                } else {
-                    group1Child.prop('checked', false);
+            /*선택삭제*/
+            $('.select-delete').click(function(e) {
+                e.preventDefault();
+                var boxCheck = $('.box').find('input[type=checkbox]:checked');
+                /*var boxSiblings = boxCheck.parents('.box').siblings();*/
+                var con = confirm('정말 삭제 하시겠습니까?');
+                if (con == true) {
+                    boxCheck.parents('.box').remove();
+                    setTimeout(function() {
+                        alert('삭제완료:');
+                    });
                 };
+                
+                
+                /*그룹타이틀 제거*/
+               /*var box1 = $('#cart-bynn1').parents('.group').find('.box-wrap .box');
+                console.log('박스1:'+box1.length);
+                if(box1.length == 0){
+                    $('#cart-bynn1').parents('.group').remove();
+                }*/
 
-            });*/
-
-            /* var group1Child = $('#cart-bynn1').parents('.group').children('.box-wrap').find('input[type=checkbox]');
-
-
-            $(group1Child).click(function() {
-                var clickChk = $(this).prop('checked');
-                var siblingsChk = $(this).parents('.box').siblings().find('input[type=checkbox]').prop('checked');
-
-                if (clickChk == true && siblingsChk == true) {
-                    $('#cart-bynn1').prop('checked', true);
-                } else if ($(this).prop('checked') == false) {
-                    $('#cart-bynn1').prop('checked', false);
-                }
-
+            }); //선택삭제click
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /*변경정보 새로고침*/
+            $('.blind a').click(function(){
+                $(this).parents('.box').removeClass('infoChange');
+                $(this).parent('.blind').remove();
             });
-            */
-
-
-            /*var group2child = $('input[name*=cart-bynn2-pdt]');
-            $('#cart-bynn2').click(function() {
-                if ($(this).is(':checked')) {
-                    group2child.prop('checked', true);
-                    $('.infoChange').find('input').prop('checked', false);
-                } else {
-                    group2child.prop('checked', false);
-                };
-
+            /*추가 박스 지우기*/
+            $('.delete-add').click(function(){
+                $(this).parents('select-wrap').remove();
             });
-            var group2childLength = $('input[name*=cart-bynn2-pdt]').length;
-            var infoChangeLength = $('.infoChange').find('input[type=checkbox]').length;
-            group2child.click(function() {
-                var group2childChecked = $('input[name*=cart-bynn2-pdt]:checked').length;
 
-                if (group2childLength - infoChangeLength != group2childChecked) {
-                    $('#cart-bynn2').prop('checked', false);
-                } else {
-                    $('#cart-bynn2').prop('checked', true);
-                }
 
-            });
-            /////////////////////////그룹마다 따로따로 script//////////////////////////////////////
-            */
+
+
+
+
 
         });
     </script>
@@ -729,8 +707,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                     <!-- 세번째그룹 -->
                     <div class="group">
                         <div class="group-title">
@@ -1128,7 +1106,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 네번째그룹 -->
                     <div class="group">
                         <div class="group-title">
@@ -1526,8 +1504,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
                 <div class="cart-total">
                     <h3>총 {0}개 합계</h3>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@
                     addressRe = $('#receiveChangeAddress2').val(),
                     messageRe = $('#receiveChangeTextarea').val();
                 if (nameRe.length == '') {
-                    alert('변경할 이름을 입력하세요')
+                    alert('변경할 이름을 입력하세요');
                     return false;
                 } else {
                     $('.receive-saved-userName').text(nameRe);
@@ -41,7 +41,7 @@
                     $('.receive .receive-change').hide();*/
                 }
                 if (numberRe1.length == '') {
-                    alert('연락처를 입력하세요')
+                    alert('연락처를 입력하세요');
                     return false;
                 } else {
                     $('.receive-saved-userNumber1').text(numberRe1);
@@ -49,7 +49,7 @@
                     $('.receive .receive-change').hide();*/
                 }
                 if (numberRe2.length == '') {
-                    alert('연락처를 입력하세요')
+                    alert('연락처를 입력하세요');
                     return false;
                 } else {
                     $('.receive-saved-userNumber2').text(numberRe2);
@@ -57,7 +57,7 @@
                     $('.receive .receive-change').hide();*/
                 }
                 if (messageRe.length == '') {
-                    alert('배송메세지를 입력하세요')
+                    alert('배송메세지를 입력하세요');
                     return false;
                 } else {
                     $('.receive-saved-message').text(messageRe);
@@ -67,7 +67,57 @@
 
 
             });
+            $('#receiveChangeSendMessage').change(function(){
+                $('#receiveChangeTextarea').val($(this).val());
+                /*if(('#receiveChangeSendMessage').val() == '기타' ){
+                    $('#receiveChangeTextarea')
+                }*/
+            });
+            ////받는사람
+            
+            //보내는사람
+            $('.order-saved-top button').click(function(){ //변경버튼
+                $('.order-change').show();
+                $('.order-saved').hide();
+            });
+            
+            $('#orderChangeBtnCancel').click(function(){ //취소버튼
+                $('.order-change').hide();
+                $('.order-saved').show();
+            });
+            
+            $('.change-top-btn #orderChangeBtnSubmit').click(function() { //확인버튼
+                var nameOr = $('#orderChangeUserName').val(),
+                    numberOr = $('#orderChangeUserNumber1').val(),
+                    emailOr = $('#orderChangeEmail').val();
+                    
+                if (nameOr.length == '') {
+                    alert('변경할 이름을 입력하세요');
+                    return false;
+                } else {
+                    $('.order-saved-userName').text(nameOr);
+                    
+                }
+                if (numberOr.length == '') {
+                    alert('연락처를 입력하세요');
+                    return false;
+                } else {
+                    $('.order-saved-userNumber1').text(numberOr);
+                    
+                }
+                if (emailOr.length == '') {
+                    alert('이메일을 입력하세요');
+                    return false;
+                } else {
+                    $('.order-saved-email').text(emailOr);
+                    $('.order .order-saved').show();
+                    $('.order .order-change').hide();
+                }
 
+            });
+            
+            
+            
         });
 
     </script>
@@ -582,8 +632,10 @@
                         <input type="text" placeholder="주소상세" name="receiveChangeAddress2" id="receiveChangeAddress2" readonly>
                         <select name="receiveChangeSendMessage" id="receiveChangeSendMessage">
                             <option value="배송메세지를 선택하세요.">배송메세지를 선택하세요.</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <option value="경비실에 맡겨주세요">경비실에 맡겨주세요</option>
+                            <option value="문앞에 놔주세요">문앞에 놔주세요</option>
+                            <option value="벵을 눌러주세요">벨을 눌러주세요</option>
+                            <option value="기타">기타</option>
                         </select>
                         <textarea name="receiveChangeTextarea" id="receiveChangeTextarea" cols="30" rows="10" placeholder="50자 이내로 입력해 주세요."></textarea>
                     </div>
@@ -789,7 +841,7 @@
                     <ul class="dep1">
                         <li>
                             <div>
-                                <strong>취소전</strong>
+                                <strong>취소 전</strong>
                                 <p><span>30,000</span>원</p>
                             </div>
                             <ul class="dep2">
@@ -811,7 +863,7 @@
                     <ul class="dep1">
                         <li>
                             <div>
-                                <strong>취소후</strong>
+                                <strong>취소 후</strong>
                                 <p><span>30,000</span>원</p>
                             </div>
                             <ul class="dep2">
@@ -834,7 +886,7 @@
                         <li>
                             <div>
                                 <strong>환불금액</strong>
-                                <p><span>30,000</span>원</p>
+                                <p><span>3,000</span>원</p>
                             </div>
                             <ul class="dep2">
                                 <li>
@@ -906,7 +958,7 @@
                         <li class="refund-subject">
                             <div>
                                 <strong>환불대상</strong>
-                                <p><span>3,0000</span>원</p>
+                                <p><span>30,000</span>원</p>
                             </div>
                             <ul class="dep2">
                                 <li>
@@ -926,7 +978,7 @@
                         <li class="deduction-subject">
                             <div>
                                 <strong>차감대상</strong>
-                                <p><span>3,0000</span>원</p>
+                                <p><span>30,000</span>원</p>
                             </div>
                             <ul class="dep2">
                                 <li>
@@ -938,7 +990,7 @@
                         <li class="refund-amount">
                             <div>
                                 <strong>환불금액</strong>
-                                <p><span>3,0000</span>원</p>
+                                <p><span>30,000</span>원</p>
                             </div>
                             <ul class="dep2">
                                 <li>

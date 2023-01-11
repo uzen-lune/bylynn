@@ -60,15 +60,15 @@ header .navibar li a img {
     display: none;
 }
 .cart-contents input[type=checkbox] + label {
-    line-height: 20px;
-    padding-left: 28px;
+    line-height: 5.5556vw;
+    padding-left: 7.7778vw;
     position: relative;
 }
 .cart-contents input[type=checkbox] + label::before {
     content: "";
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 5.5556vw;
+    height: 5.5556vw;
     border: 1px solid #ccc;
     box-sizing: border-box;
     position: absolute;
@@ -78,7 +78,7 @@ header .navibar li a img {
 .cart-contents input[type=checkbox]:checked + label::before {
     background-image: url(../images/ordersheet/checkbox.svg);
     background-repeat: no-repeat;
-    background-size: 20px;
+    background-size: 5.5556vw;
     background-position: center;
 }
 
@@ -138,7 +138,7 @@ header .navibar li a img {
     border-top: 0.2778vw solid #666;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
 }
 .group-title div {
     display: flex;
@@ -482,12 +482,14 @@ header .navibar li a img {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    margin-bottom: 2.2222vw;
+    align-items: center;
 }
 .boxAll .add-text em{
     font-size: 3.6111vw;
     font-weight: 500;
     font-style: normal;
-   margin-bottom: 2.2222vw;
+   
 }
 .boxAll .add-text p{
     font-size: 3.6111vw;
