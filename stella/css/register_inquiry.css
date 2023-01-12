@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+
+/* register_inquiry-header */
+.register_inquiry-header {
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.register_inquiry-header .inner {
+    margin: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register_inquiry-header .inner h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    line-height: 24px;
+    margin-left: 12px;
+}
+
+.register_inquiry-header .inner a img {
+    display: block;
+}
+
+/* register_inquiry_content */
+.register_inquiry_content {
+    margin-top: 52px;
+}
+
+.register_inquiry_content fieldset {
+    border: 0;
+}
+
+.register_inquiry_content fieldset legend {
+    font-size: 0;
+}
+
+/* inquiry-sel */
+.inquiry-sel {
+    margin: 32px 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inquiry-sel select {
+    width: 48%;
+    font-size: 14px;
+    color: #999;
+    outline: 0;
+    padding: 16px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/arrow_down.png') no-repeat 90% center;
+    margin-bottom: 12px;
+}
+
+.inquiry-sel button {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    padding: 15.5px 0;
+    background-color: #fff;
+    border: 1px solid #333;
+}
+
+/* cancel-info */
+.cancel-info {
+    margin: 0 20px;
+    background-color: #f6f6f6;
+    padding: 24px 16px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.cancel-info dl {
+    display: flex;
+}
+
+.cancel-info dl ~ dl {
+    margin-top: 8px;
+}
+
+.cancel-info dl dt {
+    width: 25%;
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.cancel-info dl dd {
+    font-size: 13px;
+    color: #666;
+    margin-left: 20px;
+}
+
+/* order-list */
+.order-list {
+    margin: 0 20px;
+}
+
+.order-list .order-product {
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-list .order-product .product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.order-product .product-info img {
+    width: 74px;
+}
+
+.order-product .product-info dl {
+    width: calc(100% - 130px);
+}
+
+.order-product .product-info dd:nth-of-type(1) {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.order-product .product-info dd:nth-of-type(2) {
+    font-size: 13px;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.order-product .product-info dd:nth-of-type(3) {
+    font-size: 13px;
+    color: #666;
+}
+
+.order-product .product-info > a {
+    width: 24px;
+}
+
+.order-product .product-info > a img {
+    width: 24px;
+    display: block;
+}
+
+.order-list .freebie-box {
+    margin-bottom: 24px;
+}
+
+.order-list .freebie-box li {
+    font-size: 13px;
+    color: #111;
+}
+
+.order-list .freebie-box li ~ li {
+    margin-top: 8px;
+}
+
+.order-list .freebie-box li span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.order-list .freebie-box li span.out {
+    font-size: 12px;
+    color: #ff2a00;
+    margin-left: 8px;
+}
+
+.order-list .order-cancel {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff2a00;
+    padding: 7px 0;
+}
+
+.order-list .add-product {
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* inquiry-content */
+.inquiry-content {
+    margin: 0 20px;
+}
+
+.inquiry-content textarea {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 160px;
+    padding: 16px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #111;
+    line-height: 20px;
+    outline: 0;
+}
+
+.inquiry-content > p {
+    font-size: 14px;
+    color: #ff2a00;
+    padding: 12px 0 24px;
+}
+
+.inquiry-content .img {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+}
+
+.inquiry-content .img > a {
+    position: relative;
+}
+
+.inquiry-content .img > a ~ a {
+    margin-left: 8px;
+}
+
+.inquiry-content .img a img {
+    display: block;
+}
+
+.inquiry-content .img a button {
+    width: 24px;
+    height: 24px;
+    outline: 0;
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 1px;
+}
+
+.inquiry-content ul {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+}
+
+.inquiry-content ul li {
+    font-size: 13px;
+    color: #666;
+    list-style-position: inside;
+    list-style-image: url(../images/list-style-img.png);
+}
+
+.inquiry-content ul li ~ li {
+    margin-top: 8px;
+}
+
+/* notification */
+.notification {
+    margin: 0 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+}
+
+.notification h3 {
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.notification .mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.notification .mail input[id="email_chk"] {
+    display: none;
+}
+
+.notification .mail input[id="email_chk"] + label {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    line-height: 20px;
+    text-indent: 28px;
+}
+
+.notification .mail input[id="email_chk"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+    background-size: 65%;
+}
+
+.notification .mail input[id="useremail"] {
+    width: 72%;
+    padding: 16px 16px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.notification .sms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification .sms input[id="sms_chk"] {
+    display: none;
+}
+
+.notification .sms input[id="sms_chk"] + label {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    line-height: 20px;
+    text-indent: 28px;
+}
+
+.notification .sms input[id="sms_chk"]:checked + label {
+    background: #111 url(../images/checkbox_check.svg) no-repeat center;
+    border: 1px solid #111;
+    background-size: 65%;
+}
+
+.notification .sms input[id="usersms"] {
+    width: 72%;
+    padding: 16px 16px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+button.registration {
+    width: 100%;
+    color: #fff;
+    background-color: #111;
+    padding: 15.5px;
+    border: 0;
+}

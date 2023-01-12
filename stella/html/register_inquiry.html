@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/register_inquiry.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.img a button').click(function() {
+                $(this).parent('a').remove();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="register_inquiry-header">
+            <div class="inner">
+                <h2>1:1 문의 등록</h2>
+                <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+            </div>
+        </div>
+    </header>
+
+    <!--register_inquiry_content-->
+    <article class="register_inquiry_content">
+        <form action="#" method="get" name="register_inquiryfrm">
+            <fieldset>
+                <legend>1:1 문의 등록</legend>
+                <div class="inquiry-sel">
+                    <select name="inquiry_type" id="inquiry_type">
+                        <option value="0">문의유형</option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                    </select>
+                    <select name="inquiry_type" id="inquiry_detail_type">
+                        <option value="0">상세문의유형</option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                    </select>
+                    <button type="button">문의상품 선택</button>
+                </div>
+                <div class="cancel-info">
+                    <dl>
+                        <dt>주문취소일</dt>
+                        <dd>2022-11-01</dd>
+                    </dl>
+                    <dl>
+                        <dt>주문취소번호</dt>
+                        <dd>21123117282343</dd>
+                    </dl>
+                    <dl>
+                        <dt>주문번호</dt>
+                        <dd>21123117282343</dd>
+                    </dl>
+                </div>
+                <div class="order-list">
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>브라운 / 55</dd>
+                            </dl>
+                            <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                        </div>
+                        <ol class="freebie-box">
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개) <span class="out">* 소진</span></li>
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개)</li>
+                        </ol>
+                        <p class="order-cancel">주문취소</p>
+                    </div>
+                    <div class="add-product">
+                        <p><span>[추가]</span> 맨투맨티셔츠 빨강/L-1개 (총 2개)</p>
+                        <p class="order-cancel">주문취소</p>
+                    </div>
+                    <div class="order-product">
+                        <div class="product-info">
+                            <img src="../images/sel_product.png" alt="">
+                            <dl>
+                                <dd>LYNN</dd>
+                                <dd>클래식 크롭 테일러드 자켓</dd>
+                                <dd>브라운 / 55</dd>
+                            </dl>
+                            <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                        </div>
+                        <ol class="freebie-box">
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개) <span class="out">* 소진</span></li>
+                            <li><span class="freebie">[사은품]</span> 브랜드명 사은품명-1개 (2개)</li>
+                        </ol>
+                        <p class="order-cancel">주문취소</p>
+                    </div>
+                </div>
+                <div class="inquiry-content">
+                    <textarea name="message-txt" id="message-txt" rows="" placeholder="문의내용을 입력해 주세요. &#13;&#10;주민등록번호, 휴대폰번호 등의 개인정보는 입력하지 말아 주세요."></textarea>
+                    <p>문의 내용을 입력해 주세요.</p>
+                    <div class="img">
+                        <a href="#none">
+                            <img src="../images/inquiry_thumnail.png" alt="">
+                            <button type="button"><img src="../images/close_M_gray.svg" alt=""></button>
+                        </a>
+                        <a href="#none">
+                            <img src="../images/inquiry_thumnail.png" alt="">
+                            <button type="button"><img src="../images/close_M_gray.svg" alt=""></button>
+                        </a>
+                        <a href="#none">
+                            <img src="../images/upload_plus.png" alt="">
+                        </a>
+                    </div>
+                    <ul>
+                        <li>사진은 최대 10장까지 등록 가능합니다.</li>
+                        <li>사진파일 용량은 최대 5M 입니다.</li>
+                    </ul>
+                </div>
+                <div class="notification">
+                    <h3>답변알림 선택</h3>
+                    <div class="mail">
+                        <input type="checkbox" id="email_chk" name="" value="">
+                        <label for="email_chk">이메일</label>
+                        <input type="email" name="" id="useremail" value="" placeholder="이메일 주소">
+                    </div>
+                    <div class="sms">
+                        <input type="checkbox" id="sms_chk" name="" value="">
+                        <label for="sms_chk">SMS</label>
+                        <input type="tel" name="" id="usersms" value="" placeholder="연락처 -없이">
+                    </div>
+                </div>
+                <button type="submit" class="registration">등록</button>
+            </fieldset>
+        </form>
+    </article>
+</body>
+
+</html>
