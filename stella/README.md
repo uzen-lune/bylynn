@@ -48,7 +48,7 @@ https://uzen-lune.github.io/bylynn/stella/html/register_inquiry.html
 
 <hr>
 <h2><strong>1:1 문의</strong></h2>
-https://uzen-lune.github.io/bylynn/stella/html/.html
+https://uzen-lune.github.io/bylynn/stella/html/inquiry.html
 
 <hr>
 <h2><strong>매장안내</strong></h2>
