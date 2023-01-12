@@ -57,38 +57,42 @@ header .navibar li h1 {
 
 /*문의하기*/
 .drt-inq-contents {
-    width: 320px;
+    width: 88.8889vw;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 8.8889vw;
 }
 .drt-inq-top {}
 .drt-inq-top .drt-inq-filter {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 6.6667vw;
 }
 .drt-inq-top .drt-inq-filter p {
-    font-size: 14px;
+    font-size: 3.8889vw;
 }
 .drt-inq-top .drt-inq-filter p span{}
 .drt-inq-top .drt-inq-filter ul{}
 .drt-inq-top .drt-inq-filter ul li{
-    font-size: 14px;
+    font-size: 3.8889vw;
     font-weight: 500;
-    padding-right: 17px;
+    padding-right: 4.7222vw;
     background-image: url(../images/direct_inquiry/arrow-triangle.svg);
     background-repeat: no-repeat;
-    background-size: 9px;
-    background-position: right top 6px;
+    background-size: 2.5000vw;
+    background-position: right top 1.6667vw;
 }
-.drt-inq-top .drt-inq-btn{}
-.drt-inq-top .drt-inq-btn input[type=button]{
+.drt-inq-top .drt-inq-btn{
+    text-align: center;
+}
+.drt-inq-top .drt-inq-btn a{
     width: 100%;
-    height: 48px;
+    height: 13.3333vw;
+    line-height: 13.3333vw;
     background-color: #333;
     color: #fff;
-    border: 0;
+    font-size: 3.8889vw;
+    font-weight: 500;
 }
 
 
@@ -99,34 +103,53 @@ header .navibar li h1 {
 }
 .drt-inq-list-wrap .drt-inq-list{}
 .drt-inq-list-wrap .drt-inq-list li .list-show{
-    padding: 24px 0;
+    padding: 5.5556vw 0 6.6667vw;
     display: flex;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.2778vw solid #eee;
     background-image: url(../images/direct_inquiry/arrowdown.svg);
     background-repeat: no-repeat;
-    background-size: 24px;
+    background-size: 6.6667vw;
     background-position: right center;
 }
 .drt-inq-list-wrap .drt-inq-list li .list-show .list-tag{
-    width: 50px;
-    margin-right: 33px;
+    width: 13.8889vw;
+    margin-right: 9.1667vw;
+    padding-top: 1.1111vw;
 }
 .drt-inq-list-wrap .drt-inq-list li .list-show .list-tag p {
-    font-size: 14px;
+    font-size: 3.8889vw;
 }
-.drt-inq-list-wrap .drt-inq-list li .list-show .list-summary{}
+.drt-inq-list-wrap .drt-inq-list li .list-show .list-summary{
+    padding-top: 1.1111vw;
+    /*padding-left: 9.1667vw;*/
+}
 .drt-inq-list-wrap .drt-inq-list li .list-show .list-summary .list-tit{
-    font-size: 14px;
-    margin-bottom: 12px;
+    font-size: 3.8889vw;
+    margin-bottom: 3.3333vw;
 }
 .drt-inq-list-wrap .drt-inq-list li .list-show .list-summary .list-date{
-    font-size: 14px;
+    font-size: 3.8889vw;
     color: #666;
 }
 .drt-inq-list-wrap .drt-inq-list li .list-show .list-summary .list-date span{
-    margin-left: 11px;
+    margin-left: 3.0556vw;
 }
-.drt-inq-list-wrap .drt-inq-list li .list-hide {}
+.drt-inq-list-wrap .drt-inq-list li .list-hide {
+    display: none;
+}
+/*비공개*/
+.drt-inq-list-wrap .drt-inq-list .private .list-summary{
+    background-image: url(../images/direct_inquiry/lock.svg);
+    background-repeat: no-repeat;
+    background-size: 6.6667vw;
+    background-position: left top; 
+}
+.drt-inq-list-wrap .drt-inq-list .private .list-summary .list-tit {
+    padding-left: 7.7778vw;
+}
+
+
+
 .list-hide {}
 
 /**/
@@ -340,8 +363,13 @@ header .navibar li h1 {
     transform: translateY(-50%);
     font-weight: 500;
 }
-.list-hide .customer-question {}
-.list-hide .customer-question p{}
+.list-hide .customer-question {
+    margin-bottom: 6.6667vw;
+}
+.list-hide .customer-question p{
+    font-size: 3.8889vw;
+    margin-bottom: 4.4444vw;
+}
 .list-hide .customer-question .cus-que-img{
     width: 100%;
 }
@@ -349,12 +377,76 @@ header .navibar li h1 {
     display: block;
     width: 100%;
 }
+.list-hide .btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 6.6667vw;
+}
+.list-hide .btn input[type=button]{
+    border: 0.2778vw solid #666;
+    background-color: #fff;
+    width: 13.0556vw;
+    height: 8.8889vw;
+    font-size: 3.6111vw;
+    font-weight: 500;
+    margin-left: 1.1111vw;
+}
+.list-hide .seller-answer {
+    padding: 6.6667vw 5.5556vw;
+    background-color: #f7f7f7;
+}
+.list-hide .seller-answer div{
+    display: flex;
+    margin-bottom: 5.0000vw;
+}
+.list-hide .seller-answer div .badge{
+    font-size: 3.8889vw;
+}
+.list-hide .seller-answer div .writer{
+    font-size: 3.8889vw;
+    color: #666;
+    margin-left: 5.5556vw;
+}
+.list-hide .seller-answer > p{
+    padding-left: 5.0000vw;
+    background-image: url(../images/direct_inquiry/L.svg);
+    background-repeat: no-repeat;
+    background-size: 2.7778vw;
+    background-position: left top;
+    font-size: 3.8889vw;
+}
+/*empty*/
+.drt-inq-list-wrap .drt-inq-list .empty {
+    padding: 41.6667vw 0 16.6667vw;
+    text-align: center;
+    background-image: url(../images/direct_inquiry/empty.svg);
+    background-repeat: no-repeat;
+    background-position: center top 16.6667vw;
+    background-size: 17.7778vw;
+    border-bottom: 0.2778vw solid #eee;
+    margin-bottom: 11.1111vw;
+}
+.drt-inq-list-wrap .drt-inq-list .empty p{
+    font-size: 3.8889vw;
+}
 
 
-
-
-
-
+/*더보기*/
+.drt-inq-contents .btn-more{
+    width: 100%;
+    height: 13.3333vw;
+    line-height: 13.3333vw;
+    text-align: center;
+    border: 0.2778vw solid #333;
+    box-sizing: border-box;
+   
+    font-weight: 500;
+    margin-bottom: 16.6667vw;
+}
+.drt-inq-contents .btn-more a {
+    color: #111;
+     font-size: 3.8889vw; 
+}
 
 
 
