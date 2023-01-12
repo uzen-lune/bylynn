@@ -49,3 +49,8 @@ https://uzen-lune.github.io/bylynn/won/html/direct_inquiry_register.html (완료
 <hr>
 <h2><strong>1:1 문의</strong></h2> 
 https://uzen-lune.github.io/bylynn/won/html/direct_inquiry.html (완료)
+
+<hr>
+<h2><strong>매장안내</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/store_info.html (완료)
+
