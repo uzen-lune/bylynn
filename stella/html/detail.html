@@ -13,6 +13,13 @@
     <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
+            
+            $('.back').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
+            
             $('.keeping').click(function() {
                 alert("로그인 시에만 위시리스트를 이용하실 수 있습니다.");
             });

@@ -14,6 +14,12 @@
     <script>
         $(document).ready(function() {
 
+            $('.back').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
+
             /*전체동의1*/
             $('#terms-all-chk').click(function() {
                 var terms_all_chk = $('#terms-all-chk').prop('checked');

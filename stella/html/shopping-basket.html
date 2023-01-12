@@ -14,6 +14,12 @@
     <script>
         $(document).ready(function() {
 
+            $('.back').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
+
             $('.keeping').click(function() {
                 var img = $(this).children('img').attr('src');
                 //console.log(img);

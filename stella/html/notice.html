@@ -14,6 +14,12 @@
     <script>
         $(document).ready(function() {
 
+            $('.back').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
+
             $('.depth1 li').click(function() {
                 $(this).addClass('on').siblings().removeClass('on');
                 /*var idx = $(this).index();

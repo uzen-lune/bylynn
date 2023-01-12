@@ -13,6 +13,12 @@
     <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
+            
+            $('.close').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
 
             $('.img a button').click(function() {
                 $(this).parent('a').remove();
@@ -28,7 +34,7 @@
         <div class="register_inquiry-header">
             <div class="inner">
                 <h2>1:1 문의 등록</h2>
-                <a href="#none"><img src="../images/close_M.svg" alt=""></a>
+                <a href="#none" class="close"><img src="../images/close_M.svg" alt=""></a>
             </div>
         </div>
     </header>
