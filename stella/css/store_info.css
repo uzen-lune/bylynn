@@ -94,6 +94,7 @@ input[id="search"] {
     border: 1px solid #ccc;
     background: url(../images/search.svg) no-repeat 95% center;
     margin-bottom: 12px;
+    outline: 0;
 }
 
 select[id="brand"] {
@@ -106,6 +107,7 @@ select[id="brand"] {
     -moz-appearance: none;
     appearance: none;
     background: url('../images/arrow_down.png') no-repeat 90% center;
+    outline: 0;
 }
 
 select[id="local"] {
@@ -118,6 +120,7 @@ select[id="local"] {
     -moz-appearance: none;
     appearance: none;
     background: url('../images/arrow_down.png') no-repeat 90% center;
+    outline: 0;
 }
 
 .store_info_content .store-info {
