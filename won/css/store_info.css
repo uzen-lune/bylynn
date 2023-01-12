@@ -1,0 +1,207 @@
+@charset "utf-8";
+body {
+    padding-top: 14.4444vw;
+}
+.red-em {
+    color: #FF2A00;
+}
+/* header */
+header {
+    width: 100%;
+    height: 14.4444vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    border-bottom: 0.2778vw solid #eee;
+}
+
+header .navibar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5.5556vw;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+
+header .navibar li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+header .navibar li a {
+    width: 6.6667vw;
+    height: 6.6667vw;
+    font-size: 0;
+}
+
+header .navibar li a:last-child {
+    margin-left: 5.5556vw;
+}
+
+header .navibar li a img {
+    display: block;
+    width: 100%;
+}
+header .navibar li h1 {
+    font-size: 5.0000vw;
+    margin-left: 3.8889vw;
+    font-weight: 500;
+}
+/*section*/
+#storeInfoContents {
+    padding-top: 8.8889vw;
+}
+#storeInfoForm {
+    width: 88.8889vw;
+    margin: 0 auto 8.8889vw;
+}
+#storeInfoForm .search-wrap {
+    border: 0;
+}
+.search-wrap .store-search {
+    margin-bottom: 3.3333vw;
+    
+}
+.search-wrap .store-search input{
+    width: 100%;
+    height: 13.3333vw;
+    border: 0.2778vw solid #ccc;
+    box-sizing: border-box;
+    padding: 0 11.6667vw 0 3.3333vw;
+    font-size: 3.8889vw;
+    background-image: url(../images/store_info/search.svg);
+    background-repeat: no-repeat;
+    background-size: 6.6667vw;
+    background-position: right 3.3333vw center;
+}
+.search-wrap .store-search input::placeholder {
+    /*font-size: 3.8889vw;*/
+    color: #999;
+}
+.search-wrap .store-search-filter {
+    display: flex;
+    justify-content: space-between;
+}
+.search-wrap .store-search-filter select{
+    width: 43.3333vw;
+    height: 13.3333vw;
+    border: 0.2778vw solid #ccc;
+    box-sizing: border-box;
+    padding-left: 3.3333vw;
+    font-size: 3.8889vw;
+    color: #999;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    appearance : none;
+    background-image: url(../images/store_info/arrowdown.svg);
+    background-repeat: no-repeat;
+    background-size: 3.8889vw;
+    background-position: right 3.3333vw center;
+}
+
+/*검색결과*/
+.result-search {}
+.result-search .result-top{
+    width: 88.8889vw;
+    margin: 0 auto;
+    padding-bottom: 8.8889vw;
+    border-bottom: 0.2778vw solid #333;
+}
+.result-search .result-top .store-count {
+    margin-bottom: 3.3333vw;
+}
+.result-search .result-top .store-count p{
+    font-size: 3.8889vw;
+    font-weight: 400;
+}
+.result-search .result-top .btn-wrap{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.result-search .result-top .btn-wrap a{
+    width: 43.3333vw;
+    height: 13.3333vw;
+    line-height: 13.3333vw;
+    border: 0.2778vw solid #ccc;
+    box-sizing: border-box;
+    color: #111;
+    font-size: 3.8889vw;
+}
+.result-search .result-top .btn-wrap a span{
+    display: inline-block;
+    height: 100%;    
+    padding-left: 8.8889vw;
+}
+.result-search .result-top .btn-wrap .view-map span {
+    background-image: url(../images/store_info/location.svg);
+    background-repeat: no-repeat;
+    background-size: 6.6667vw;
+    background-position: left center;
+}
+.result-search .result-top .btn-wrap .view-list span {
+    background-image: url(../images/store_info/menu.svg);
+    background-repeat: no-repeat;
+    background-size: 6.6667vw;
+    background-position: left center;
+}
+.result-search .result-list {
+    width: 88.8889vw;
+    margin: 0 auto 8.8889vw;
+}
+.result-search .result-list ul{}
+.result-search .result-list ul li {
+    padding: 6.6667vw 0;
+    border-bottom: 0.2778vw solid #ccc;
+    background-image:url(../images/store_info/go.svg);
+    background-repeat: no-repeat;
+    background-size: 2.2222vw;
+    background-position: right center;
+}
+.result-search .result-list ul li strong{
+    display: block;
+    font-size: 4.4444vw;
+    font-weight: 500;
+    margin-bottom: 3.3333vw;
+}
+.result-search .result-list ul li strong span{
+    font-size: 3.8889vw;
+    margin-left: 3.3333vw;
+    color: #999;
+    font-weight: 400;
+}
+.result-search .result-list ul li .address{
+    color: #666;
+    font-size: 3.8889vw;
+    margin-bottom: 2.2222vw;
+}
+.result-search .result-list ul li .tel{
+    color: #666;
+    font-size: 3.8889vw;
+}
+.result-search .store-map {
+    width: 100%;
+    height: 158.3333vw;
+}
+.result-search .store-map iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
