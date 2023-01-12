@@ -153,6 +153,7 @@ form feildset input[type=button]{
 }
 .notice-depth2-wrap .notice-depth2 li a{
     font-size: 3.8889vw;
+    color: #111;
 }
 .notice-list-wrap {}
 .notice-list-wrap .notice-list-top{
