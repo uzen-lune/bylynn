@@ -41,3 +41,19 @@ https://uzen-lune.github.io/bylynn/stella/html/order-delivery_detail.html
 <hr>
 <h2><strong>공지사항</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/notice.html
+
+<hr>
+<h2><strong>1:1 문의 등록</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/register_inquiry.html
+
+<hr>
+<h2><strong>1:1 문의</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/.html
+
+<hr>
+<h2><strong>매장안내</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/.html
+
+<hr>
+<h2><strong>자주묻는질문</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/.html
