@@ -12,6 +12,13 @@
     <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <script>
         $(document).ready(function() {
+
+            $('.close').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
+
             $('.depth1').click(function() {
                 $(this).parent('li').children('.detail-wrap').stop().slideToggle(200);
                 $(this).parent('li').siblings().children('.detail-wrap').slideUp(200);
@@ -36,7 +43,7 @@
                         <li><a href="#none"><img src="../images/search.svg" alt="검색"></a></li>
                         <li><a href="#none"><img src="../images/wish.svg" alt="찜"></a></li>
                         <li><a href="shopping-basket.html"><img src="../images/shopping-bag.svg" alt="장바구니"></a></li>
-                        <li><a href="../html/index_mobile.html"><img src="../images/close.svg" alt="닫기"></a></li>
+                        <li><a href="" class="close"><img src="../images/close.svg" alt="닫기"></a></li>
                     </ul>
                 </div>
             </div>

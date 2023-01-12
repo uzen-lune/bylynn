@@ -489,6 +489,10 @@ input[id="chkbox3"]:checked + label {
     padding-bottom: 24px;
 }
 
+.bylynn2 ul li.bylynn2-box.modal .sel-product-info {
+    border-bottom: 1px solid #eee;
+}
+
 .bylynn2 ul li.bylynn2-box .sel-product-info .sel-product-txt {
     margin-left: 16px;
 }

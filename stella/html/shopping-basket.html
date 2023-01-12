@@ -170,6 +170,10 @@
             $('#del-unable').click(function() {
                 $('input[type="checkbox"][disabled]').parents('.bylynn1-box,.bylynn2-box').remove();
             });
+
+            $('.refresh').click(function() {
+                $(this).parent('.black-box').remove();
+            });
         });
     </script>
 </head>
@@ -429,7 +433,7 @@
                             </div>
                             <div class="black-box">
                                 <p>가격 및 혜택 정보가 변경되었습니다.</p>
-                                <a href="#none"><img src="../images/reset.svg" alt="">변경정보 새로고침</a>
+                                <a href="#none" class="refresh"><img src="../images/reset.svg" alt="">변경정보 새로고침</a>
                             </div>
                         </li>
                         <li class="bylynn2-box">
