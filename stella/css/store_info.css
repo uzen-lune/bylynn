@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+
+/* store_info-header */
+.store_info-header {
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.store_info-header .inner {
+    margin: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store_info-header .inner .header-top {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.store_info-header .inner .header-top .back {
+    width: 24px;
+    height: 24px;
+}
+
+.store_info-header .inner .header-top h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    line-height: 24px;
+    margin-left: 12px;
+}
+
+.store_info-header .inner .util {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.store_info-header .inner .util .search {
+    width: 24px;
+    height: 24px;
+}
+
+.store_info-header .inner .util .search img {
+    width: 24px;
+    height: 24px;
+}
+
+.store_info-header .inner .util .shopping_basket {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+}
+
+.store_info-header .inner .util .shopping_basket img {
+    width: 100%;
+}
+
+/* store_info_content */
+.store_info_content {
+    margin: 52px 0 60px;
+}
+
+.store_info_content fieldset {
+    border: 0;
+}
+
+.store_info_content fieldset legend {
+    font-size: 0;
+}
+
+.store_info_content .store_search {
+    margin: 32px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input[id="search"] {
+    width: 100%;
+    padding: 16px 12px;
+    font-size: 14px;
+    color: #999;
+    border: 1px solid #ccc;
+    background: url(../images/search.svg) no-repeat 95% center;
+    margin-bottom: 12px;
+}
+
+select[id="brand"] {
+    width: 48.7%;
+    padding: 16px;
+    font-size: 14px;
+    color: #999;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/arrow_down.png') no-repeat 90% center;
+}
+
+select[id="local"] {
+    width: 48.7%;
+    padding: 16px;
+    font-size: 14px;
+    color: #999;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/arrow_down.png') no-repeat 90% center;
+}
+
+.store_info_content .store-info {
+    margin: 0 20px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #333;
+}
+
+.store_info_content .store-info h4 {
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.store_info_content .store-info .store-view {
+    display: flex;
+    justify-content: space-between;
+}
+
+.store_info_content .store-info .store-view a {
+    width: 48.7%;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    text-align: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+}
+
+.store_info_content .store-info .store-view a img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.store_info_content ul {
+    margin: 0 20px;
+    margin-bottom: 32px;
+}
+
+.store_info_content ul li {
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.store_info_content ul li:last-child {
+    border-bottom: 1px solid #eee;
+}
+
+.store_info_content ul li dl {
+    background: url(../images/go.svg) no-repeat 100% center;
+}
+
+.store_info_content ul li dl dt {
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.store_info_content ul li dl dt span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+    margin-left: 12px;
+}
+
+.store_info_content ul li dl dd {
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+}
+
+.map iframe {
+    display: block;
+    border: 0;
+}
+
+
+/* footer */
+.tenan_footer {
+    padding-bottom: 80px;
+}
+
+.tenan_footer h4 {
+    background: url(../images/arrow_down.png) no-repeat right 67.5%;
+}
+
+.tenan_footer .company-info {
+    display: none;
+}
+
+.tenan_footer .footer-menu {
+    width: 76%;
+    margin-top: 32px;
+}
+
+.tenan_footer .footer-menu li {
+    line-height: 28px;
+}
+
+.tenan_footer .footer-menu:after {
+    content: "";
+    display: block;
+    clear: both;
+}
