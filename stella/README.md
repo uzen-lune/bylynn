@@ -52,7 +52,7 @@ https://uzen-lune.github.io/bylynn/stella/html/inquiry.html
 
 <hr>
 <h2><strong>매장안내</strong></h2>
-https://uzen-lune.github.io/bylynn/stella/html/.html
+https://uzen-lune.github.io/bylynn/stella/html/store_info.html
 
 <hr>
 <h2><strong>자주묻는질문</strong></h2>
