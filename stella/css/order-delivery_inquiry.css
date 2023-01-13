@@ -130,10 +130,13 @@ input[type="date"] {
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-size: 14px;
-    text-align: start;
     color: #111;
     background-color: #fff;
     outline: 0;
+}
+
+input[type="date"][value] {
+    text-align: left;
 }
 
 input[type="date"]::-webkit-clear-button,
