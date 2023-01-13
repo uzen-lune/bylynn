@@ -279,6 +279,7 @@
 .enquire-detail-box .order-list .add-product p:first-of-type {
     font-size: 13px;
     color: #111;
+    margin-bottom: 24px;
 }
 
 .enquire-detail-box .order-list .add-product p:first-of-type span {

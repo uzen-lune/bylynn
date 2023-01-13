@@ -196,6 +196,16 @@
     border-bottom: 1px solid #ccc;
 }
 
+.order-list .add-product p:first-of-type {
+    font-size: 13px;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.order-list .add-product p:first-of-type span {
+    font-weight: 500;
+}
+
 /* inquiry-content */
 .inquiry-content {
     margin: 0 20px;

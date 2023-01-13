@@ -13,7 +13,7 @@
     <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
-            
+
             $('.close').click(function() {
                 location.reload();
                 history.back();
@@ -22,6 +22,14 @@
 
             $('.img a button').click(function() {
                 $(this).parent('a').remove();
+            });
+
+            $('.registration').click(function() {
+                var contact = confirm('문의를 등록하시겠습니까?');
+
+                if (contact == true) {
+                    alert('문의등록이 완료되었습니다.');
+                }
             });
 
         });
@@ -47,11 +55,11 @@
                 <div class="inquiry-sel">
                     <select name="inquiry_type" id="inquiry_type">
                         <option value="0">문의유형</option>
-                        <option value="1"></option>
-                        <option value="2"></option>
-                        <option value="3"></option>
-                        <option value="4"></option>
-                        <option value="5"></option>
+                        <option value="1">배송문의</option>
+                        <option value="2">취소/교환/환불문의</option>
+                        <option value="3">상품문의</option>
+                        <option value="4">쿠폰문의</option>
+                        <option value="5">포인트문의</option>
                     </select>
                     <select name="inquiry_type" id="inquiry_detail_type">
                         <option value="0">상세문의유형</option>
