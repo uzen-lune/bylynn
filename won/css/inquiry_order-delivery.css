@@ -118,6 +118,11 @@ form .layer-filter .layer-filter-cont .layer-filter-date-select span {
     font-size: 5.5556vw;
     color: #666;
 }
+/*달력*/
+form .layer-filter .layer-filter-cont .layer-filter-date-select .ui-datepicker-trigger {
+    display: none;
+}
+
 form .layer-filter .apply-btn-area {
     display: flex;
     height: 13.3333vw;

@@ -122,36 +122,75 @@
                         alert('삭제완료:');
                     });
                 };
-                
-                
-                /*그룹타이틀 제거*/
-               /*var box1 = $('#cart-bynn1').parents('.group').find('.box-wrap .box');
-                console.log('박스1:'+box1.length);
-                if(box1.length == 0){
-                    $('#cart-bynn1').parents('.group').remove();
-                }*/
+
+
 
             }); //선택삭제click
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+            /*주문불가 삭제*/
+            $('.unable-delete').click(function() {
+                var con = confirm('정말 삭제 하시겠습니까?');
+                if (con == true) {
+                    $('.soldOut').remove();
+                } else {
+                    return false;
+                };
+            });
+
+            /*상자 X표시*/
+            var close = $('.box').find('.pdt-delete');
+            close.click(function() {
+                var con = confirm('정말 삭제 하시겠습니까?');
+                if (con == true) {
+                    $(this).parents('.box').remove();
+                } else {
+                    return false;
+                }
+                
+                $('.group-title').each(function(){
+                   var a = $(this).siblings('.box-wrap').find('.box').length;
+                    console.log(a);
+                    console.log(this);
+                    if(a == 0){
+                        $(this).parent('.group').remove();
+                    };
+                });
+
+            });
+
+
+
+
+
+
+
             /*변경정보 새로고침*/
-            $('.blind a').click(function(){
+            $('.blind a').click(function() {
                 $(this).parents('.box').removeClass('infoChange');
                 $(this).parent('.blind').remove();
             });
             /*추가 박스 지우기*/
-            $('.delete-add').click(function(){
+            $('.delete-add').click(function() {
                 $(this).parents('select-wrap').remove();
+                
+                
+                
             });
-
-
+            
+            
+            
+            /*그룹타이틀 제거*/
+            $('.delete-area button').click(function() {
+                $('.group-title').each(function(){
+                   var a = $(this).siblings('.box-wrap').find('.box').length;
+                    console.log(a);
+                    console.log(this);
+                    if(a == 0){
+                        $(this).parent('.group').remove();
+                    };
+                });
+                
+            });
 
 
 
@@ -165,12 +204,12 @@
     <header>
         <ul class="navibar">
             <li>
-                <a href="javascript:history.back();">뒤로가기<img src="../images/cart/back.svg" alt=""></a>
-                <a href="index.html">홈<img src="../images/cart/home.svg" alt=""></a>
+                <a href="#none" onclick="window.history.back()">뒤로가기<img src="../images/back.svg" alt=""></a>
+                <a href="index.html">홈<img src="../images/home.svg" alt=""></a>
             </li>
             <li>
-                <a href="#none">검색<img src="../images/cart/search.svg" alt=""></a>
-                <a href="cart.html">장바구니<img src="../images/cart/shopping-bag.svg" alt=""></a>
+                <a href="#none">검색<img src="../images/search.svg" alt=""></a>
+                <a href="cart.html">장바구니<img src="../images/shopping-bag.svg" alt=""></a>
             </li>
         </ul>
     </header>

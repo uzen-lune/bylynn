@@ -179,12 +179,12 @@ aside li:first-child a img{
     background-position: center;
 }
 
-.brand .brandTab .slide-wrap .slide:first-child a {
+.brand .brandTab .slide-wrap .slide:nth-child(2n-1) a {
     background-image: url(../images/display/brand-tab01.svg);
     background-size: 26.1111vw;
 }
 
-.brand .brandTab .slide-wrap .slide:nth-child(2) a {
+.brand .brandTab .slide-wrap .slide:nth-child(2n) a {
     background-image: url(../images/display/brand-tab02.svg);
     background-size: 34.1667vw;
 }

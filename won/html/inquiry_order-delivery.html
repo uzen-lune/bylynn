@@ -10,14 +10,66 @@
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/inquiry_order-delivery.css">
-    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
     <script src="../js/swiper-bundle.min.js"></script>
     <script>
-        $(document).ready(function(){
-           $('.layer-filter-period li a').click(function(){
-               $(this).addClass('active');
-               $(this).parent('li').siblings().find('a').removeClass('active');
-           }); 
+        $(document).ready(function() {
+            $('.layer-filter-period li a').click(function() {
+                $(this).addClass('active');
+                $(this).parent('li').siblings().find('a').removeClass('active');
+            });
+
+            $('.layer-filter-date-select input').datepicker({
+                dateFormat: 'yy-mm-dd' //달력 날짜 형태
+                    ,
+                showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+                    ,
+                showMonthAfterYear: true // 월- 년 순서가아닌 년도 - 월 순서
+                    ,
+                changeYear: true //option값 년 선택 가능
+                    ,
+                changeMonth: true //option값  월 선택 가능                
+                    ,
+                showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+                    ,
+                buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+                    ,
+                buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+                    ,
+                buttonText: "선택" //버튼 호버 텍스트              
+                    ,
+                yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
+                    ,
+                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 텍스트
+                    ,
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip
+                    ,
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 텍스트
+                    ,
+                dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 Tooltip
+                    ,
+                minDate: "-5Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+                    ,
+                maxDate: "+5y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)  
+            });
+            //초기값을 오늘 날짜로 설정
+            $('#datepicker').datepicker('setDate', 'today');
+
+            $('#sdate').datepicker();
+            $('#sdate').datepicker("option", "maxDate", $("#edate").val());
+            $('#sdate').datepicker("option", "onClose", function(selectedDate) {
+                $("#edate").datepicker("option", "minDate", selectedDate);
+            });
+
+            $('#edate').datepicker();
+            $('#edate').datepicker("option", "minDate", $("#sdate").val());
+            $('#edate').datepicker("option", "onClose", function(selectedDate) {
+                $("#sdate").datepicker("option", "maxDate", selectedDate);
+            });
+
         });
     </script>
 </head>
@@ -26,12 +78,12 @@
     <header>
         <ul class="navibar">
             <li>
-                <a href="#none">뒤로가기<img src="../images/mypage/arrow-left.svg" alt=""></a>
+                <a href="#none" onclick="window.history.back()">뒤로가기<img src="../images/arrow-left.svg" alt=""></a>
                 <h1>주문/배송조회</h1>
             </li>
             <li>
-                <a href="#none">검색<img src="../images/ordersheet/search.svg" alt=""></a>
-                <a href="#none">장바구니<img src="../images/ordersheet/shopping-bag.svg" alt=""></a>
+                <a href="#none">검색<img src="../images/search.svg" alt=""></a>
+                <a href="cart.html">장바구니<img src="../images/shopping-bag.svg" alt=""></a>
             </li>
         </ul>
     </header>
@@ -40,15 +92,15 @@
             <div class="layer-filter">
                 <div class="layer-filter-cont">
                     <ul class="layer-filter-period">
-                        <li><a href="#none" class="active">3개월</a></li>
+                        <li id=""><a href="#none" class="active">3개월</a></li>
                         <li><a href="#none">1년</a></li>
                         <li><a href="#none">6개월</a></li>
                         <li><a href="#none">기간조회</a></li>
                     </ul>
                     <div class="layer-filter-date-select">
-                        <input type="text">
+                        <input type="text" id="sdate">
                         <span>~</span>
-                        <input type="text">
+                        <input type="text" id="edate">
                     </div>
                 </div>
                 <div class="apply-btn-area">
@@ -66,7 +118,7 @@
         </form>
         <div class="inquiry-pdt">
             <div class="history-box-wrap">
-               <!--//1-->
+                <!--//1-->
                 <div class="history-box">
                     <div class="order-info-wrap">
                         <ul class="order-info">
@@ -80,8 +132,8 @@
                             </li>
                         </ul>
                         <div class="btn-wrap">
-                        <button>배송지 변경</button>
-                        <button>주문전체취소</button>
+                            <button>배송지 변경</button>
+                            <button>주문전체취소</button>
                         </div>
                     </div>
                     <div class="order-pdt">
@@ -188,112 +240,116 @@
                 </div>
                 <!--//2-->
                 <div class="history-box">
-                        <div class="order-info-wrap">
-                            <ul class="order-info">
-                                <li>
-                                    <em>주문일</em>
-                                    <p>2022-12-23</p>
-                                </li>
-                                <li>
-                                    <em>주문번호</em>
-                                    <p>YYMMDDHHMI0000</p>
-                                </li>
-                            </ul>
-                            <button>배송지 변경</button>
-                        </div>
-                        <div class="order-pdt">
-                            <div class="box">
-                                <div class="pdt-info">
-                                    <div class="pdt-basic">
-                                        <div class="pdt-info-basic">
-                                            <div class="pdt-info-img">
-                                                <img src="../images/cart/pdt.jpg" alt="">
-                                            </div>
-                                            <div class="pdt-info-detail">
-                                                <p class="pdt-brand">LYNN</p>
-                                                <h4>클래식 크롭 테일러드 자켓</h4>
-                                                <ul class="pdt-option">
-                                                    <li>ㄴ구성상품명-1개 (총 2개)</li>
-                                                    <li>ㄴ구성상품명-2개 (총 4개)</li>
-                                                </ul>
-                                            </div>
+                    <div class="order-info-wrap">
+                        <ul class="order-info">
+                            <li>
+                                <em>주문일</em>
+                                <p>2022-12-23</p>
+                            </li>
+                            <li>
+                                <em>주문번호</em>
+                                <p>YYMMDDHHMI0000</p>
+                            </li>
+                        </ul>
+                        <button>배송지 변경</button>
+                    </div>
+                    <div class="order-pdt">
+                        <div class="box">
+                            <div class="pdt-info">
+                                <div class="pdt-basic">
+                                    <div class="pdt-info-basic">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
                                         </div>
-                                        <div class="each-pdt-price">
-                                            <p>주문수량 2개</p>
-                                            <strong>9,000원</strong>
-                                        </div>
-                                        <div class="pdt-status-wrap">
-                                            <ul>
-                                                <li class="pdt-status"><p>주문완료</p></li>
-                                                <li class="pdt-status-btn">
-                                                    <button class="active">구매확정</button>
-                                                    <button>배송조회</button>
-                                                    <button>반품신청</button>
-                                                    <button>교환신청</button>
-                                                </li>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓</h4>
+                                            <ul class="pdt-option">
+                                                <li>ㄴ구성상품명-1개 (총 2개)</li>
+                                                <li>ㄴ구성상품명-2개 (총 4개)</li>
                                             </ul>
                                         </div>
+                                    </div>
+                                    <div class="each-pdt-price">
+                                        <p>주문수량 2개</p>
+                                        <strong>9,000원</strong>
+                                    </div>
+                                    <div class="pdt-status-wrap">
+                                        <ul>
+                                            <li class="pdt-status">
+                                                <p>주문완료</p>
+                                            </li>
+                                            <li class="pdt-status-btn">
+                                                <button class="active">구매확정</button>
+                                                <button>배송조회</button>
+                                                <button>반품신청</button>
+                                                <button>교환신청</button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--//3-->
-                     <div class="history-box">
-                        <div class="order-info-wrap">
-                            <ul class="order-info">
-                                <li>
-                                    <em>주문일</em>
-                                    <p>2022-12-23</p>
-                                </li>
-                                <li>
-                                    <em>주문번호</em>
-                                    <p>YYMMDDHHMI0000</p>
-                                </li>
-                            </ul>
-                            <button>배송지 변경</button>
-                        </div>
-                        <div class="order-pdt">
-                            <div class="box">
-                                <div class="pdt-info">
-                                    <div class="pdt-basic">
-                                        <div class="pdt-info-basic">
-                                            <div class="pdt-info-img">
-                                                <img src="../images/cart/pdt.jpg" alt="">
-                                            </div>
-                                            <div class="pdt-info-detail">
-                                                <p class="pdt-brand">LYNN</p>
-                                                <h4>클래식 크롭 테일러드 자켓<span>옵션변경</span></h4>
-                                                <ul class="pdt-option">
-                                                    <li>ㄴ구성상품명 | 옵션값/옵션값옵션값옵션값 <br>(총 2개)</li>
-                                                    <li>ㄴ구성상품명 | 옵션값/옵션값옵션값옵션값 <br>(총 2개)</li>
-                                                    <li>ㄴ구성상품명 | 옵션값/옵션값옵션값옵션값 <br>(총 2개)</li>
-                                                </ul>
-                                            </div>
+                </div>
+                <!--//3-->
+                <div class="history-box">
+                    <div class="order-info-wrap">
+                        <ul class="order-info">
+                            <li>
+                                <em>주문일</em>
+                                <p>2022-12-23</p>
+                            </li>
+                            <li>
+                                <em>주문번호</em>
+                                <p>YYMMDDHHMI0000</p>
+                            </li>
+                        </ul>
+                        <button>배송지 변경</button>
+                    </div>
+                    <div class="order-pdt">
+                        <div class="box">
+                            <div class="pdt-info">
+                                <div class="pdt-basic">
+                                    <div class="pdt-info-basic">
+                                        <div class="pdt-info-img">
+                                            <img src="../images/cart/pdt.jpg" alt="">
                                         </div>
-                                        <div class="each-pdt-price">
-                                            <p>주문수량 2개</p>
-                                            <strong>9,000원</strong>
-                                        </div>
-                                        <div class="pdt-status-wrap">
-                                            <ul>
-                                                <li class="pdt-status"><p>주문완료</p></li>
-                                                <li class="pdt-status-btn">
-                                                    <button class="active">구매확정</button>
-                                                    <button>배송조회</button>
-                                                    <button>반품신청</button>
-                                                    <button>교환신청</button>
-                                                </li>
+                                        <div class="pdt-info-detail">
+                                            <p class="pdt-brand">LYNN</p>
+                                            <h4>클래식 크롭 테일러드 자켓<span>옵션변경</span></h4>
+                                            <ul class="pdt-option">
+                                                <li>ㄴ구성상품명 | 옵션값/옵션값옵션값옵션값 <br>(총 2개)</li>
+                                                <li>ㄴ구성상품명 | 옵션값/옵션값옵션값옵션값 <br>(총 2개)</li>
+                                                <li>ㄴ구성상품명 | 옵션값/옵션값옵션값옵션값 <br>(총 2개)</li>
                                             </ul>
                                         </div>
+                                    </div>
+                                    <div class="each-pdt-price">
+                                        <p>주문수량 2개</p>
+                                        <strong>9,000원</strong>
+                                    </div>
+                                    <div class="pdt-status-wrap">
+                                        <ul>
+                                            <li class="pdt-status">
+                                                <p>주문완료</p>
+                                            </li>
+                                            <li class="pdt-status-btn">
+                                                <button class="active">구매확정</button>
+                                                <button>배송조회</button>
+                                                <button>반품신청</button>
+                                                <button>교환신청</button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="more">
-                        <a href="#none" class="btn-more">더보기</a>
-                    </div>
+                </div>
+                <div class="more">
+                    <a href="#none" class="btn-more">더보기</a>
+                </div>
 
 
             </div>
