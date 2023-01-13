@@ -278,6 +278,7 @@
     width: 100%;
     background-color: #fff;
     color: #666;
+    font-weight: 500;
     border: 1px solid #666;
     padding: 8px 0;
     box-sizing: border-box;
@@ -322,6 +323,8 @@
 .order-list .add-product .order-check input {
     width: calc(72%/2 - 8px);
     background-color: #fff;
+    color: #666;
+    font-weight: 500;
     border: 1px solid #666;
     padding: 8px 0;
     box-sizing: border-box;

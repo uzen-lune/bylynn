@@ -124,13 +124,15 @@
 }
 
 input[type="date"] {
-    width: 38%;
+    width: 45.5%;
     position: relative;
     padding: 12px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
     font-size: 14px;
     text-align: start;
     color: #111;
+    background-color: #fff;
     outline: 0;
 }
 
