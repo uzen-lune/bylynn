@@ -464,6 +464,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
+    position: relative;
 }
 
 .filter-price-box .min-price p {
@@ -478,8 +479,17 @@
     font-weight: 500;
     color: #111;
     text-align: end;
-    padding-right: 12px;
+    padding-right: 24px;
+    border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.filter-price-box .min-price input+label {
+    position: absolute;
+    right: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
 }
 
 .filter-price-box .min-price input:focus {
@@ -490,6 +500,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .filter-price-box .max-price p {
@@ -504,8 +515,17 @@
     font-weight: 500;
     color: #111;
     text-align: end;
-    padding-right: 12px;
+    padding-right: 24px;
+     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.filter-price-box .max-price input+label {
+    position: absolute;
+    right: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
 }
 
 .filter-price-box .max-price input:focus {

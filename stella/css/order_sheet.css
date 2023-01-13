@@ -1180,6 +1180,7 @@ input[id="pcc-agree2"]:checked + label {
     color: #111;
     text-align: end;
     outline: 0;
+    border: 1px solid #ccc;
 }
 
 .order-sheet_content .coupon dl dd:first-of-type a {
@@ -1248,6 +1249,7 @@ input[id="pcc-agree2"]:checked + label {
     color: #111;
     text-align: end;
     outline: 0;
+    border: 1px solid #ccc;
 }
 
 .order-sheet_content .reserve_deposit dl dd:first-of-type a {
