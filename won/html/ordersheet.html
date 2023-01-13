@@ -205,6 +205,10 @@
                         $('.cash-receipts').focus();
                         return false;
                     };
+                    if('cashPhoneNumber') 
+                    /*cashPhoneNumber
+                    CompanyRegistrationNumber*/
+                    
                 };
 
 
@@ -229,11 +233,15 @@
             //주문자와 동일버튼
 
             $('#sameUser').click(function() {
+                var regex = /[^0-9]/g;		// 숫자가 아닌 문자열을 선택하는 정규식
+                //
+                $('#receiveUserName').val($('.or-user-name').text());
+                $('#receiveUserNumber').val($('.or-user-tel').text().replace(regex, ""));
+                console.log($('.or-user-tel').text());
+                
+                /*readonly*/
                 if ($(this).is(':checked') == true) {
-                    $('#receiveUserName').val($('#orderUserName').val());
                     $('#receiveUserName').prop('readonly', true);
-
-                    $('#receiveUserNumber').val($('#orderUserNumber').val());
                     $('#receiveUserNumber').prop('readonly', true);
                 } else {
                     $('#receiveUserName').prop('readonly', false);
@@ -265,7 +273,35 @@
             /*if ($('#cashChk01').prop('checked') == true) {
                 
             };*/
-
+            
+            /*값이 바뀌면*/
+            $('#orderUserName').change(function(){ //이름 입력
+                var a = $(this).val()
+                console.log(a);
+                $('.or-user-name').text(a);
+            });
+            
+            $('#orderUserNumber').change(function(){ //전화번호 입력
+                var a = $(this).val()
+                console.log(a);
+                $('.or-user-tel').text(a.slice(0,3)+"-"+a.slice(3,7)+"-"+a.slice(7));
+            });
+            
+            $('#orderUserEmail1').change(function(){ //메일1
+                var a = $(this).val()
+                console.log(a);
+                $('.mail1').text(a);
+            });
+            $('#orderUserEmail2').change(function(){ //메일2
+                var a = $(this).val()
+                console.log(a);
+                $('.mail2').text(a);
+            });
+            
+            /*주문하시는 분과 동일*/
+            /*$('#sameUser').click(function(){
+                
+            });*/
 
 
 
@@ -321,9 +357,9 @@
                     <li>실명이 아닌 경우 변경 버튼을 통해 실명으로 변경하여 주시기 바랍니다.</li>
                 </ul>
                 <ul class="order-user-info">
-                    <li>홍길동</li>
-                    <li>010-1234-5678</li>
-                    <li>gildong@mail.com</li>
+                    <li class="or-user-name">홍길동</li>
+                    <li class="or-user-tel">010-1234-5678</li>
+                    <li class="or-user-mail"><span class="mail1">gildong</span>@<span class="mail2">mail.com</span></li>
                 </ul>
                 <input type="text" name="orderUserName" id="orderUserName" placeholder="이름(필수)">
                 <input type="number" name="orderUserNumber" id="orderUserNumber" placeholder="연락처1-없이(필수)">
@@ -349,9 +385,9 @@
                 </ul>
                 <div class="">
                     <ul class="receive-user-info">
-                        <li>홍길동</li>
-                        <li>010-1234-5678 / 02-9876-5432</li>
-                        <li>(12345) 서울특별시 강남구 테헤란로20길 9 동궁빌딩 6층</li>
+                        <li class="re-user-name">홍길동</li>
+                        <li class="re-user-tel">010-1234-5678 / 02-9876-5432</li>
+                        <li class="re-user-add">(12345) 서울특별시 강남구 테헤란로20길 9 동궁빌딩 6층</li>
                     </ul>
                     <ul class="input-wrap">
                         <li>
@@ -743,9 +779,9 @@
                     </div>
                     <div class="cash-number">
                         <h5>휴대폰번호</h5>
-                        <input type="number" name="" id="" placeholder="휴대폰번호-없이 입력">
+                        <input type="number" name="cashPhoneNumber" id="cashPhoneNumber" placeholder="휴대폰번호-없이 입력">
                         <h5>사업자등록번호</h5>
-                        <input type="number" name="" id="" placeholder="사업자등록번호-없이 입력">
+                        <input type="number" name="CompanyRegistrationNumber" id="CompanyRegistrationNumber" placeholder="사업자등록번호-없이 입력">
                     </div>
                 </div>
                 <ul class="agreement-wrap">
