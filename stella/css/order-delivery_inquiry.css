@@ -129,6 +129,8 @@ input[type="date"] {
     padding: 12px;
     border: 1px solid #ccc;
     font-size: 14px;
+    text-align: start;
+    color: #111;
     outline: 0;
 }
 
@@ -381,6 +383,7 @@ input[type="date"]:after {
 .order-product .order-check ul li input {
     width: 100%;
     background-color: #fff;
+    color: #666;
     border: 1px solid #666;
     padding: 8px 0;
     box-sizing: border-box;
@@ -425,6 +428,7 @@ input[type="date"]:after {
 .order-list .add-product .order-check input {
     width: calc(72%/2 - 8px);
     background-color: #fff;
+    color: #666;
     border: 1px solid #666;
     padding: 8px 0;
     box-sizing: border-box;

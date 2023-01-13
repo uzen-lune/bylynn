@@ -475,6 +475,12 @@ input[id="order-chkbox1"]:checked + label {
     margin-bottom: 12px;
 }
 
+.product-information .order-info ul li:nth-child(3) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .product-information .order-info ul li input {
     padding: 16px 0;
     text-indent: 12px;
@@ -493,7 +499,7 @@ input[id="order-chkbox1"]:checked + label {
 }
 
 .order-info ul li input[id="zipcode"] {
-    width: calc(100% - 140.0999px);
+    width: calc(100% - 135px);
     background-color: #eee;
     color: #333;
 }
@@ -504,8 +510,8 @@ input[id="order-chkbox1"]:checked + label {
     font-weight: 500;
     color: #111;
     padding: 15.5px 24px;
-    box-sizing: border-box;
     border: 1px solid #111;
+    box-sizing: border-box;
     background-color: #fff;
     text-indent: 0;
     margin-left: 12px;
