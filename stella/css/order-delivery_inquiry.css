@@ -133,10 +133,10 @@ input[type="date"] {
     color: #111;
     background-color: #fff;
     outline: 0;
+    text-align: left !important;
 }
 
 input[type="date"][value] {
-    resize: none;
     text-align: left;
 }
 
