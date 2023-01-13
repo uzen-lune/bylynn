@@ -484,15 +484,18 @@ input[id="order-chkbox1"]:checked + label {
 
 .order-info ul li input[id="name"] {
     width: 100%;
+    color: #333;
 }
 
 .order-info ul li input[id="phone"] {
     width: 100%;
+    color: #333;
 }
 
 .order-info ul li input[id="zipcode"] {
     width: calc(100% - 140.0999px);
     background-color: #eee;
+    color: #333;
 }
 
 .order-info ul li input[id="zipcode_btn"] {
@@ -511,6 +514,7 @@ input[id="order-chkbox1"]:checked + label {
 .order-info ul li input[id="address"] {
     width: 100%;
     background-color: #eee;
+    color: #333;
 }
 
 .product-information .order-info ul li select {
@@ -536,6 +540,7 @@ input[id="order-chkbox1"]:checked + label {
     box-sizing: border-box;
     outline: 0;
     border: 1px solid #ccc;
+    color: #333;
 }
 
 input[id="order-chkbox2"] {
@@ -1015,7 +1020,7 @@ input[id="bylynn2-all"]:checked + label {
     width: 100%;
     font-size: 14px;
     font-weight: 400;
-    color: #999;
+    color: #333;
     padding: 16px 12px;
     box-sizing: border-box;
     outline: 0;

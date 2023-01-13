@@ -13,13 +13,25 @@
     <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
-            
+
             $('.back').click(function() {
                 location.reload();
                 history.back();
                 location.href = document.referrer;
             });
-            
+
+            $('#inquiry_result').click(function() {
+                var date1 = $('input[id="date1"]').val();
+                //console.log(date1);
+                var date2 = $('input[id="date2"]').val();
+                //console.log(date2);
+
+                if (date1 > date2) {
+                    alert('조회일자를 확인해 주세요.');
+                    return;
+                }
+            });
+
             $('.tenan_footer h4').click(function() {
                 if ($('.tenan_footer .company-info').css('display') == 'none') {
                     $('.tenan_footer .company-info').slideDown(80);
@@ -73,7 +85,7 @@
             <div class="date-inquiry">
                 <input type="date" name="date1" id="date1" value="2022-10-01">
                 <span>~</span>
-                <input type="date" name="date2" value="2022-10-30" min="$[date1]">
+                <input type="date" name="date2" id="date2" value="2022-10-30">
             </div>
             <div class="inquiry-box">
                 <select name="inquiry-selb" id="">
@@ -82,7 +94,7 @@
                     <option value="2"></option>
                 </select>
                 <input type="text" id="" name="" value="">
-                <button type="submit">조회</button>
+                <button type="submit" id="inquiry_result">조회</button>
             </div>
         </section>
 

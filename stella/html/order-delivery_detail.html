@@ -13,13 +13,13 @@
     <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
-            
+
             $('.back').click(function() {
                 location.reload();
                 history.back();
                 location.href = document.referrer;
             });
-            
+
             $('.r_change').click(function() {
                 $('.recipient_change').css('display', 'block');
                 $('.recipient_existing').css('display', 'none');
@@ -39,7 +39,6 @@
                 $('.orderer_change').css('display', 'none');
             });
 
-
             $('.recipient_change button[type="submit"]').click(function() {
                 var name = document.getElementById('name').value;
                 var phone = document.getElementById('phone').value;
@@ -48,23 +47,35 @@
                 var address = document.getElementById('address').value;
                 var address_detail = document.getElementById('address_detail').value;
 
-                document.getElementById('r_name').innerHTML = name;
-                document.getElementById('r_num1').innerHTML = phone;
-                document.getElementById('r_num2').innerHTML = phone2;
-                document.getElementById('r_address').innerHTML = zipcode + "" + address + "" + address_detail;
+                if (!name || !phone || !zipcode || !address || !address_detail) {
+                    alert('변경하실 정보를 다시 입력해주세요. ( *필수입력사항 확인 )');
+                    return;
+                } else if (!phone2) {
+                    document.getElementById('r_name').innerHTML = name;
+                    document.getElementById('r_num1').innerHTML = phone;
+                    document.getElementById('r_address').innerHTML = zipcode + " " + address + " " + address_detail;
+                } else {
+                    document.getElementById('r_name').innerHTML = name;
+                    document.getElementById('r_num1').innerHTML = phone;
+                    document.getElementById('r_num2').innerHTML = phone2;
+                    document.getElementById('r_address').innerHTML = zipcode + " " + address + " " + address_detail;
+                }
             });
-
 
             $('.orderer_change button[type="submit"]').click(function() {
                 var name_o = document.getElementById('name_o').value;
                 var phone_o = document.getElementById('phone_o').value;
                 var receive_email = document.getElementById('receive_email').value;
 
-                document.getElementById('o_name').innerHTML = name_o;
-                document.getElementById('o_num').innerHTML = phone_o;
-                document.getElementById('o_email').innerHTML = receive_email;
+                if (!name_o || !phone_o || !receive_email) {
+                    alert('변경하실 정보를 다시 입력해주세요. ( *필수입력사항 확인 )');
+                    return;
+                } else {
+                    document.getElementById('o_name').innerHTML = name_o;
+                    document.getElementById('o_num').innerHTML = phone_o;
+                    document.getElementById('o_email').innerHTML = receive_email;
+                }
             });
-
 
             $('.tenan_footer h4').click(function() {
                 if ($('.tenan_footer .company-info').css('display') == 'none') {

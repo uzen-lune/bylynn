@@ -13,7 +13,7 @@
     <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
-            
+
             $('.back').click(function() {
                 location.reload();
                 history.back();
@@ -21,7 +21,6 @@
             });
 
             $('.enquire-box').click(function() {
-                //$(this).siblings('.enquire-detail-box').slideToggle();
                 if ($(this).siblings('.enquire-detail-box').css('display') == 'none') {
                     $(this).siblings('.enquire-detail-box').slideDown(200);
                     $(this).children('img').attr({
