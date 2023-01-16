@@ -64,7 +64,7 @@ https://uzen-lune.github.io/bylynn/stella/html/coupon_download.html
 
 <hr>
 <h2><strong>적립금</strong></h2>
-https://uzen-lune.github.io/bylynn/stella/html/.html
+https://uzen-lune.github.io/bylynn/stella/html/saved_point.html
 
 <hr>
 <h2><strong>예치금/환불계좌</strong></h2>
