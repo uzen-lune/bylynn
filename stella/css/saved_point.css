@@ -318,6 +318,37 @@ input[type="date"]:after {
     line-height: 20px;
 }
 
+.point-inquiry .save-none {
+    margin: 0 20px;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.point-inquiry .save-none img {
+    margin-bottom: 24px;
+}
+
+.point-inquiry .save-none p {
+    font-size: 14px;
+    color: #111;
+    line-height: 20px;
+}
+
+.point-inquiry button.more {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    padding: 15.5px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
 /* footer */
 .tenan_footer {
     background-color: #000;
