@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+
+/* coupon_download-header */
+.coupon_download-header {
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.coupon_download-header .inner {
+    margin: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coupon_download-header .inner .header-top {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.coupon_download-header .inner .header-top .back {
+    width: 24px;
+    height: 24px;
+}
+
+.coupon_download-header .inner .header-top h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    line-height: 24px;
+    margin-left: 12px;
+}
+
+.coupon_download-header .inner .util {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.coupon_download-header .inner .util .search {
+    width: 24px;
+    height: 24px;
+}
+
+.coupon_download-header .inner .util .search img {
+    width: 24px;
+    height: 24px;
+}
+
+.coupon_download-header .inner .util .shopping_basket {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+}
+
+.coupon_download-header .inner .util .shopping_basket img {
+    width: 100%;
+}
+
+/* coupon_download_content */
+.coupon_download_content {
+    margin: 52px 0 60px;
+}
+
+/* mycoupon_info */
+.mycoupon_info {
+    margin: 84px 20px 24px;
+    background-color: #fff;
+    border: 1px solid #111;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mycoupon_info dl {
+    width: 50%;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.mycoupon_info dl ~ dl {
+    border-left: 1px solid #eee;
+}
+
+.mycoupon_info dl dt {
+    font-size: 12px;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.mycoupon_info dl dd {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+}
+
+/* coupon-registration */
+.coupon-registration {
+    margin-bottom: 24px;
+}
+
+.coupon-registration form {
+    background-color: #f6f6f6;
+}
+
+.coupon-registration fieldset {
+    border: 0;
+}
+
+.coupon-registration fieldset legend {
+    font-size: 0;
+}
+
+.coupon-registration .registration {
+    margin: 0 20px;
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupon-registration .registration input[type="search"] {
+    width: 74.5%;
+    font-size: 14px;
+    padding: 15.5px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.coupon-registration .registration input[type="button"] {
+    width: 23%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #111;
+    border: 0;
+    padding: 15.5px 24.5px;
+    box-sizing: border-box;
+}
+
+/* coupons */
+.coupons {
+    margin: 0 20px;
+}
+
+.coupons .coupon_menu {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.coupons .coupon_menu li {
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.coupons .coupon_menu li.on {
+    position: relative;
+}
+
+.coupons .coupon_menu li.on:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    bottom: -1px;
+}
+
+.coupons .coupon_menu li a {
+    color: #999;
+}
+
+.coupons .coupon_menu li.on a {
+    font-weight: 500;
+    color: #000;
+}
+
+.coupon-wrap > div {
+    display: none;
+}
+
+.coupon-wrap > div.on {
+    display: block;
+}
+
+.coupon-wrap .coupon_down .coupon-box {
+    margin-bottom: 40px;
+}
+
+.coupon_down .coupon-box .coupon {
+    height: 147px;
+    display: flex;
+    margin-bottom: 12px;
+    /*border: 1px solid #dbdbdb;*/
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.coupon_down .coupon-box .coupon .coupon-info {
+    width: 246px;
+    width: 77%;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px 0 0 12px;
+}
+
+.coupon .coupon-info p:nth-of-type(1) {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 11px;
+}
+
+.coupon .coupon-info p:nth-of-type(1) span {
+    font-size: 30px;
+    font-weight: 600;
+    color: #111;
+    margin-right: 4px;
+}
+
+.coupon .coupon-info > span {
+    font-size: 13px;
+    color: #ff2a00;
+    vertical-align: 1.5px;
+}
+
+.coupon .coupon-info p:nth-of-type(2) {
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+}
+
+.coupon_down .coupon-box .coupon .get-coupon {
+    /*width: 74px;*/
+    /*width: 23%;*/
+    width: 32%;
+    padding: 48px 12px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 0 12px 12px 0;
+}
+
+.coupon_down .coupon-box .coupon .get-coupon.exhaustion {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.coupon_down .coupon-box .coupon .get-coupon img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+
+.coupon_down .coupon-box .coupon .get-coupon p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.coupon_down .coupon-box ul {
+    margin-bottom: 7px;
+}
+
+.coupon_down .coupon-box ul li {
+    font-size: 13px;
+    color: #666;
+    list-style-position: inside;
+    list-style-image: url(../images/list-style-img.png);
+    margin-bottom: 5px;
+}
+
+.coupon_down .coupon-box > p {
+    font-size: 13px;
+    color: #ff2a00;
+}
+
+.coupon_down > a.more {
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    padding: 15.5px 0;
+    text-align: center;
+    border: 1px solid #333;
+    background-color: #fff;
+}
+
+/* footer */
+.tenan_footer {
+    background-color: #000;
+    padding-bottom: 80px;
+}
+
+.tenan_footer h4 {
+    background: url(../images/S-down_white.png) no-repeat right 67.5%;
+    color: #fff;
+}
+
+.tenan_footer .company-info {
+    display: none;
+    color: #999;
+}
+
+.tenan_footer .footer-menu {
+    width: 76%;
+    margin-top: 32px;
+}
+
+.tenan_footer .footer-menu:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.tenan_footer .footer-menu li {
+    line-height: 28px;
+}
+
+.tenan_footer .footer-menu li a {
+    color: #999;
+}
+
+.tenan_footer .footer-menu li:nth-child(3) a {
+    color: #fff;
+}
+
+.tenan_footer .copy {
+    color: #666;
+}
