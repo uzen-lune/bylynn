@@ -1,0 +1,434 @@
+@charset "utf-8";
+
+
+/* deposit-refund_account-header */
+.deposit-refund_account-header {
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.deposit-refund_account-header .inner {
+    margin: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deposit-refund_account-header .inner .header-top {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.deposit-refund_account-header .inner .header-top .back {
+    width: 24px;
+    height: 24px;
+}
+
+.deposit-refund_account-header .inner .header-top h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    line-height: 24px;
+    margin-left: 12px;
+}
+
+.deposit-refund_account-header .inner .util {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.deposit-refund_account-header .inner .util .search {
+    width: 24px;
+    height: 24px;
+}
+
+.deposit-refund_account-header .inner .util .search img {
+    width: 24px;
+    height: 24px;
+}
+
+.deposit-refund_account-header .inner .util .shopping_basket {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+}
+
+.deposit-refund_account-header .inner .util .shopping_basket img {
+    width: 100%;
+}
+
+/* deposit-refund_account_content */
+.deposit-refund_account_content {
+    margin: 52px 0 60px;
+}
+
+.deposit-refund_account_content .saved-deposit {
+    margin: 84px 20px 20px;
+    background-color: #fff;
+    padding: 24px 20px 22px;
+    border: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deposit-refund_account_content .saved-deposit dl dt {
+    font-size: 12px;
+    color: #111;
+    padding: 9px 0;
+    margin-bottom: 10px;
+}
+
+.deposit-refund_account_content .saved-deposit dl dd {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+}
+
+.deposit-refund_account_content .saved-deposit button {
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    padding: 8px 12px;
+    border: 1px solid #666;
+    background-color: #fff;
+}
+
+.deposit-refund_account_content .refund-account {
+    margin: 20px 20px 24px;
+    padding: 24px 20px;
+    border: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deposit-refund_account_content .refund-account dl dt {
+    font-size: 12px;
+    color: #111;
+    padding: 9px 0;
+    margin-bottom: 12px;
+}
+
+.deposit-refund_account_content .refund-account dl dd {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+}
+
+.deposit-refund_account_content .refund-account dl dd ~ dd {
+    margin-top: 8px;
+}
+
+.refund-account .button-wrap button {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    padding: 8px 12px;
+    border: 1px solid #666;
+    background-color: #fff;
+}
+
+.refund-account .button-wrap button ~ button {
+    margin-left: 6px;
+}
+
+/* record-inquiry */
+.record-inquiry {
+    background-color: #f6f6f6;
+    padding: 32px 20px;
+}
+
+.record-inquiry div ~ div {
+    margin-top: 12px;
+}
+
+.record-inquiry .period-inquiry {
+    display: flex;
+}
+
+.record-inquiry .period-inquiry input {
+    display: none;
+}
+
+.record-inquiry .period-inquiry input + label {
+    width: 25%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    text-align: center;
+    padding: 15.5px 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+
+.record-inquiry .period-inquiry input:checked + label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    border: 1px solid #333;
+    z-index: 1;
+}
+
+.record-inquiry .period-inquiry input + label ~ input + label {
+    margin-left: -1px;
+}
+
+.record-inquiry .date-inquiry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.record-inquiry .date-inquiry span {
+    font-size: 20px;
+    color: #666;
+}
+
+input[type="date"] {
+    width: 45.5%;
+    position: relative;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #111;
+    background-color: #fff;
+    outline: 0;
+    text-align: left !important;
+}
+
+input[type="date"][value] {
+    text-align: left;
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    z-index: 1;
+}
+
+input[type="date"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 22%;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/calendar.svg) no-repeat center;
+    z-index: 0;
+}
+
+.record-inquiry .inquiry-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.record-inquiry .inquiry-box select {
+    width: 25%;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #111;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff url('../images/arrow_down.png') no-repeat 75% center;
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+.record-inquiry .inquiry-box input {
+    width: 50%;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #111;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline: 0;
+}
+
+.record-inquiry .inquiry-box button {
+    width: 20%;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    background-color: #111;
+}
+
+/* deposit-inquiry */
+.deposit-inquiry .deposit-select {
+    margin: 24px 20px 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.deposit-inquiry .deposit-select select {
+    width: calc((100% - 8px) /2);
+    padding: 16px;
+    font-size: 14px;
+    color: #999;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/arrow_down.png') no-repeat 90% center;
+    outline: 0;
+}
+
+.deposit-inquiry .inquiry-result {
+    margin: 0 20px;
+}
+
+.deposit-inquiry .inquiry-result li {
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deposit-inquiry .inquiry-result li .inquiry-info h4 {
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.deposit-inquiry .inquiry-result li .inquiry-info h4 span {
+    color: #5d76ff;
+    text-decoration: underline;
+}
+
+.deposit-inquiry .inquiry-result li .inquiry-info dl {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.deposit-inquiry .inquiry-result li .inquiry-info dl ~ dl {
+    margin-top: 12px;
+}
+
+.deposit-inquiry .inquiry-result li .inquiry-info dl dt {
+    font-size: 14px;
+    color: #111;
+    margin-right: 8px;
+    line-height: 20px;
+}
+
+.deposit-inquiry .inquiry-result li .inquiry-info dl dd {
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+}
+
+.deposit-inquiry .inquiry-result li .deposit-info {
+    font-size: 14px;
+    text-align: end;
+}
+
+.deposit-inquiry .inquiry-result li .deposit-info p ~ p {
+    margin-top: 4px;
+}
+
+.deposit-inquiry .inquiry-result li .deposit-info.plus {
+    color: #ff2a00;
+    line-height: 20px;
+}
+
+.deposit-inquiry .inquiry-result li .deposit-info.minus {
+    color: #999;
+    line-height: 20px;
+}
+
+.deposit-inquiry .save-none {
+    margin: 0 20px;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.deposit-inquiry .save-none img {
+    margin-bottom: 24px;
+}
+
+.deposit-inquiry .save-none p {
+    font-size: 14px;
+    color: #111;
+    line-height: 20px;
+}
+
+.deposit-inquiry button.more {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    padding: 15.5px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* footer */
+.tenan_footer {
+    background-color: #000;
+    padding-bottom: 80px;
+}
+
+.tenan_footer h4 {
+    background: url(../images/S-down_white.png) no-repeat right 67.5%;
+    color: #fff;
+}
+
+.tenan_footer .company-info {
+    display: none;
+    color: #999;
+}
+
+.tenan_footer .footer-menu {
+    width: 76%;
+    margin-top: 32px;
+}
+
+.tenan_footer .footer-menu:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.tenan_footer .footer-menu li {
+    line-height: 28px;
+}
+
+.tenan_footer .footer-menu li a {
+    color: #999;
+}
+
+.tenan_footer .footer-menu li:nth-child(3) a {
+    color: #fff;
+}
+
+.tenan_footer .copy {
+    color: #666;
+}

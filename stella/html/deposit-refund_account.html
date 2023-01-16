@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/deposit-refund_account.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.back').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
+
+            $('.tenan_footer h4').click(function() {
+                if ($('.tenan_footer .company-info').css('display') == 'none') {
+                    $('.tenan_footer .company-info').slideDown(80);
+                    $(this).css({
+                        background: 'url(../images/S-up_white.svg) no-repeat right 67.5%'
+                    });
+                } else {
+                    $('.tenan_footer .company-info').slideUp(100);
+                    $(this).css({
+                        background: 'url(../images/S-down_white.png) no-repeat right 67.5%'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="deposit-refund_account-header">
+            <div class="inner">
+                <div class="header-top">
+                    <a href="" class="back">
+                        <img src="../images/back_icon.svg" alt="뒤로가기">
+                    </a>
+                    <h2>예치금/환불계좌</h2>
+                </div>
+                <div class="util">
+                    <a href="#none" class="search"><img src="../images/search.svg" alt="검색"></a>
+                    <a href="shopping-basket.html" class="shopping_basket"><img src="../images/shopping-basket.svg" alt="장바구니"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--deposit-refund_account_content-->
+    <article class="deposit-refund_account_content">
+        <div class="saved-deposit">
+            <dl>
+                <dt>보유 예치금</dt>
+                <dd>10,000,000</dd>
+            </dl>
+            <button type="button" id="withdraw">출금하기</button>
+        </div>
+        <div class="refund-account">
+            <dl>
+                <dt>환불계좌</dt>
+                <dd>한국씨티은행(한미은행)</dd>
+                <dd>환불계좌를 등록해주세요.</dd>
+            </dl>
+            <div class="button-wrap">
+                <button type="button" id="registration-change">등록/변경</button>
+                <button type="button" id="delete">삭제</button>
+            </div>
+        </div>
+        <section class="record-inquiry">
+            <div class="period-inquiry">
+                <input type="radio" id="period-inquiry1" name="period-inquiry" value="">
+                <label for="period-inquiry1">3개월</label>
+                <input type="radio" id="period-inquiry2" name="period-inquiry" value="">
+                <label for="period-inquiry2">6개월</label>
+                <input type="radio" id="period-inquiry3" name="period-inquiry" value="">
+                <label for="period-inquiry3">1년</label>
+                <input type="radio" id="period-inquiry4" name="period-inquiry" value="">
+                <label for="period-inquiry4">기간조회</label>
+            </div>
+            <div class="date-inquiry">
+                <input type="date" name="date1" id="date1" value="2022-10-01">
+                <span>~</span>
+                <input type="date" name="date2" id="date2" value="2022-10-30">
+            </div>
+            <div class="inquiry-box">
+                <select name="inquiry-selb" id="">
+                    <option value="0">전체</option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                </select>
+                <input type="text" id="" name="" value="">
+                <button type="submit" id="inquiry_result">조회</button>
+            </div>
+        </section>
+        <section class= "deposit-inquiry">
+            <div class="deposit-select">
+                <select id="division">
+                    <option value="0">구분전체</option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <ul class="inquiry-result">
+                <li>
+                    <div class="inquiry-info">
+                        <h4>주문 (<span>주문번호</span>)</h4>
+                        <dl>
+                            <dt>발생일</dt>
+                            <dd>2022-03-31</dd>
+                        </dl>
+                    </div>
+                    <div class="deposit-info plus">
+                        <p>+3,000</p>
+                        <p>적립</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inquiry-info">
+                        <h4>주문 (<span>주문번호</span>)</h4>
+                        <dl>
+                            <dt>발생일</dt>
+                            <dd>2022-03-31</dd>
+                        </dl>
+                    </div>
+                    <div class="deposit-info minus">
+                        <p>-10,000</p>
+                        <p>사용</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inquiry-info">
+                        <h4>주문 (<span>주문번호</span>)</h4>
+                        <dl>
+                            <dt>발생일</dt>
+                            <dd>2022-03-31</dd>
+                        </dl>
+                    </div>
+                    <div class="deposit-info plus"> 
+                        <p>+10,000</p>
+                        <p>사용취소</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inquiry-info">
+                        <h4><span>출금상세보기</span></h4>
+                        <dl>
+                            <dt>발생일</dt>
+                            <dd>2022-03-31</dd>
+                        </dl>
+                    </div>
+                    <div class="deposit-info minus">
+                        <p>-10,000</p>
+                        <p>출금</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inquiry-info">
+                        <h4><span>출금상세보기</span></h4>
+                        <dl>
+                            <dt>발생일</dt>
+                            <dd>2022-03-31</dd>
+                        </dl>
+                    </div>
+                    <div class="deposit-info minus">
+                        <p>-10,000</p>
+                        <p>출금</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="save-none">
+                <img src="../images/warn.svg" alt="">
+                <p>기간 내 적립내역이 없습니다.</p>
+            </div>
+            <button type="button" class="more">더보기</button>
+        </section>
+    </article>
+
+    <!--footer-->
+    <footer class="tenan_footer">
+        <h4>(주)테난</h4>
+        <p class="company-info">대표이사 문경란 | 서울 강남구 영동대로 734 <br>개인정보보호책임자 이성춘 <br>사업자등록번호 120-81-84619 <br>통신판매업신고번호 제2018-서울강남-00940 <br>이메일 info@bylynn.shop</p>
+        <ul class="footer-menu clearfix">
+            <li><a href="notice.html">공지사항</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="store_info.html">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="sns clearfix">
+            <li><a href="#none"><img src="../images/googleplay.svg" alt="구글 플레이"></a></li>
+            <li><a href="#none"><img src="../images/apple_white.svg" alt="애플"></a></li>
+            <li><a href="#none"><img src="../images/naver_white.svg" alt="네이버"></a></li>
+            <li><a href="#none"><img src="../images/youtube_white.svg" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="../images/instagram_white.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images/facebook_white.svg" alt="페이스북"></a></li>
+        </ul>
+        <p class="copy">Copyright &copy; BYLYNNSHOP all rights reserved.</p>
+    </footer>
+</body>
+
+</html>
