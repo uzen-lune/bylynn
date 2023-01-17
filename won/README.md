@@ -72,5 +72,5 @@ https://uzen-lune.github.io/bylynn/won/html/deposit_refund.html (완료)
 
 <hr>
 <h2><strong>관심브랜드</strong></h2> 
-https://uzen-lune.github.io/bylynn/won/html/like_store.html (완료)
+https://uzen-lune.github.io/bylynn/won/html/like_brand.html (완료)
 
