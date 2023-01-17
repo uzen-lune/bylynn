@@ -88,9 +88,9 @@
 
 input[id="search"] {
     width: 100%;
-    padding: 16px 12px;
+    padding: 16px 45px 16px 12px;
     font-size: 14px;
-    color: #999;
+    color: #111;
     border: 1px solid #ccc;
     background: url(../images/search.svg) no-repeat 95% center;
     margin-bottom: 12px;
