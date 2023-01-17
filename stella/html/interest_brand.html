@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/interest_brand.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.back').click(function() {
+                location.reload();
+                history.back();
+                location.href = document.referrer;
+            });
+
+            $('.brand-intro-wrap .brand-box img').attr({
+                src: '../images/wish_black.svg'
+            });
+
+            $('.brand-tab li').click(function() {
+                $(this).addClass('on').siblings().removeClass('on');
+                var idx = $(this).index();
+
+                $('.brand-tab_list > div').eq(idx).addClass('on').siblings().removeClass('on');
+            });
+
+            $('.my-tab .brand-box img').attr({
+                src: '../images/wish_black.svg'
+            });
+
+            $('.my-tab .brand-box img').click(function() {
+                var my_del = confirm('선택한 브랜드를 마이브랜드에서 삭제하시겠습니까?');
+
+                if (my_del == true) {
+                    $(this).parents('.brand-box').remove();
+                }
+            });
+
+            $('.brand-list .tab1 li').click(function() {
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+
+            $('.brand-list .tab2 li').click(function() {
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+
+            $('.brand-list-box > ul > li > img').click(function() {
+                var img = $(this).attr('src');
+
+                if (img.match('white')) {
+                    $(this).attr({
+                        src: '../images/wish_black.svg'
+                    });
+                } else {
+                    $(this).attr({
+                        src: '../images/wish_white.svg'
+                    });
+                }
+            });
+
+            $('.tenan_footer h4').click(function() {
+                if ($('.tenan_footer .company-info').css('display') == 'none') {
+                    $('.tenan_footer .company-info').slideDown(80);
+                    $(this).css({
+                        background: 'url(../images/S-up_white.svg) no-repeat right 67.5%'
+                    });
+                } else {
+                    $('.tenan_footer .company-info').slideUp(100);
+                    $(this).css({
+                        background: 'url(../images/S-down_white.png) no-repeat right 67.5%'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="interest_brand-header">
+            <div class="inner">
+                <div class="header-top">
+                    <a href="" class="back">
+                        <img src="../images/back_icon.svg" alt="뒤로가기">
+                    </a>
+                    <h2>브랜드</h2>
+                </div>
+                <div class="util">
+                    <a href="#none" class="search"><img src="../images/search.svg" alt="검색"></a>
+                    <a href="shopping-basket.html" class="shopping_basket"><img src="../images/shopping-basket.svg" alt="장바구니"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--interest_brand_content-->
+    <article class="interest_brand_content">
+        <section class="brand-intro">
+            <div class="brand-intro-wrap">
+                <div class="brand-box">
+                    <img src="../images/wish_white.svg" alt="">
+                    <p class="brand-name"><a href="#none">A.P.C. <br><span>아페쎄</span></a></p>
+                    <p class="flag"><a href="#none">단독</a></p>
+                </div>
+                <div class="brand-box">
+                    <img src="../images/wish_white.svg" alt="">
+                    <p class="brand-name"><a href="#none">AGOLDE <br><span>에이골디</span></a></p>
+                </div>
+                <div class="brand-box">
+                    <img src="../images/wish_white.svg" alt="">
+                    <p class="brand-name"><a href="#none">A.P.C. <br><span>아페쎄</span></a></p>
+                    <p class="flag"><a href="#none">NEW</a></p>
+                </div>
+                <div class="brand-box">
+                    <img src="../images/wish_white.svg" alt="">
+                    <p class="brand-name"><a href="#none">AGOLDE <br><span>에이골디</span></a></p>
+                </div>
+            </div>
+        </section>
+        <section class="brand-search">
+            <input type="search" id="brandsearch" name="brandsearch" placeholder="브랜드명을 입력하세요.">
+            <div class="brand-wrap">
+                <ul class="brand-tab">
+                    <li class="on"><a href="#none">MY</a></li>
+                    <li><a href="#none">A - Z</a></li>
+                    <li><a href="#none">ㄱ - ㅎ</a></li>
+                </ul>
+                <div class="brand-tab_list">
+                    <div class="my-tab on">
+                        <div class="mybrand-wrap">
+                            <div class="brand-box">
+                                <img src="../images/wish_white.svg" alt="">
+                                <p class="brand-name"><a href="#none">A.P.C. <br><span>아페쎄</span></a></p>
+                                <p class="flag"><a href="#none">단독</a></p>
+                            </div>
+                            <div class="brand-box">
+                                <img src="../images/wish_white.svg" alt="">
+                                <p class="brand-name"><a href="#none">AGOLDE <br><span>에이골디</span></a></p>
+                            </div>
+                            <div class="brand-box">
+                                <img src="../images/wish_white.svg" alt="">
+                                <p class="brand-name"><a href="#none">A.P.C. <br><span>아페쎄</span></a></p>
+                                <p class="flag"><a href="#none">NEW</a></p>
+                            </div>
+                            <div class="brand-box">
+                                <img src="../images/wish_white.svg" alt="">
+                                <p class="brand-name"><a href="#none">AGOLDE <br><span>에이골디</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="en-tab">
+
+                    </div>
+                    <div class="ko-tab">
+
+                    </div>
+                </div>
+                <div class="mybrand-txt">
+                    <p><span>로그인</span> 하고 마이브랜드를 등록해주세요.</p>
+                </div>
+            </div>
+        </section>
+        <section class="brand-list">
+            <ul class="tab1">
+                <li class="on"><a href="#none">MY</a></li>
+                <li><a href="#none">A - Z</a></li>
+                <li><a href="#none">ㄱ - ㅎ</a></li>
+            </ul>
+            <div class="tab2-wrap">
+                <ul class="tab2">
+                    <li class="on"><a href="#none">ALL</a></li>
+                    <li><a href="#none">A</a></li>
+                    <li><a href="#none">B</a></li>
+                    <li><a href="#none">C</a></li>
+                    <li><a href="#none">D</a></li>
+                    <li><a href="#none">E</a></li>
+                    <li><a href="#none">F</a></li>
+                    <li><a href="#none">G</a></li>
+                    <li><a href="#none">H</a></li>
+                    <li><a href="#none">I</a></li>
+                    <li><a href="#none">J</a></li>
+                    <li><a href="#none">K</a></li>
+                    <li><a href="#none">L</a></li>
+                    <li><a href="#none">M</a></li>
+                    <li><a href="#none">N</a></li>
+                    <li><a href="#none">O</a></li>
+                    <li><a href="#none">P</a></li>
+                    <li><a href="#none">Q</a></li>
+                    <li><a href="#none">R</a></li>
+                    <li><a href="#none">S</a></li>
+                    <li><a href="#none">T</a></li>
+                    <li><a href="#none">U</a></li>
+                    <li><a href="#none">V</a></li>
+                    <li><a href="#none">W</a></li>
+                    <li><a href="#none">X</a></li>
+                    <li><a href="#none">Y</a></li>
+                    <li><a href="#none">Z</a></li>
+                </ul>
+            </div>
+            <div class="brand-list-wrap">
+                <div class="brand-list-box a">
+                    <h3>A</h3>
+                    <ul>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>A.P.C.</p>
+                                    <p>아페쎄</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>AGOLDE</p>
+                                    <p>에이골디</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>ALO YOGA</p>
+                                    <p>알로 요가</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>AMI PARIS</p>
+                                    <p>아미 파리스</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>ANITA BILARDI</p>
+                                    <p>아니따 빌라디</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>AUTRY</p>
+                                    <p>오트리</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="brand-list-box b">
+                    <h3>B</h3>
+                    <ul>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>BALENCIAGA</p>
+                                    <p>발렌시아가</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>BAOBAO ISSEY MIYAKE</p>
+                                    <p>바오바오 이세이 미야케</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>BARENA</p>
+                                    <p>바레나</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>BOGNER</p>
+                                    <p>보그너</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>BURBERRY</p>
+                                    <p>버버리</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>BY FAR</p>
+                                    <p>바이파</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="brand-list-box c">
+                    <h3>C</h3>
+                    <ul>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>CAMPER</p>
+                                    <p>캠퍼</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/wish_white.svg" alt="">
+                            <div class="brand-name">
+                                <a href="#none">
+                                    <p>CHLOE</p>
+                                    <p>끌로에</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!--footer-->
+    <footer class="tenan_footer">
+        <h4>(주)테난</h4>
+        <p class="company-info">대표이사 문경란 | 서울 강남구 영동대로 734 <br>개인정보보호책임자 이성춘 <br>사업자등록번호 120-81-84619 <br>통신판매업신고번호 제2018-서울강남-00940 <br>이메일 info@bylynn.shop</p>
+        <ul class="footer-menu clearfix">
+            <li><a href="notice.html">공지사항</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="store_info.html">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="sns clearfix">
+            <li><a href="#none"><img src="../images/googleplay.svg" alt="구글 플레이"></a></li>
+            <li><a href="#none"><img src="../images/apple_white.svg" alt="애플"></a></li>
+            <li><a href="#none"><img src="../images/naver_white.svg" alt="네이버"></a></li>
+            <li><a href="#none"><img src="../images/youtube_white.svg" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="../images/instagram_white.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images/facebook_white.svg" alt="페이스북"></a></li>
+        </ul>
+        <p class="copy">Copyright &copy; BYLYNNSHOP all rights reserved.</p>
+    </footer>
+</body>
+
+</html>
