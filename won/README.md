@@ -54,3 +54,23 @@ https://uzen-lune.github.io/bylynn/won/html/direct_inquiry.html (완료)
 <h2><strong>매장안내</strong></h2> 
 https://uzen-lune.github.io/bylynn/won/html/store_info.html (완료)
 
+<hr>
+<h2><strong>자주묻는질문</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/frequently_question.html (완료)
+
+<hr>
+<h2><strong>쿠폰</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/coupon.html (완료)
+
+<hr>
+<h2><strong>적립금</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/savings.html (완료)
+
+<hr>
+<h2><strong>예치금/환불계좌</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/deposit_refund.html (완료)
+
+<hr>
+<h2><strong>관심브랜드</strong></h2> 
+https://uzen-lune.github.io/bylynn/won/html/like_store.html (완료)
+
