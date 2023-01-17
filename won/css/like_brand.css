@@ -135,7 +135,7 @@ header .navibar li h1 {
     line-height: 13.3333vw;
     border: 0.2778vw solid #ccc;
     box-sizing: border-box;
-    padding: 0 3.3333vw;
+    padding: 0 11.1111vw 0 3.3333vw;
     font-size: 3.8889vw;
     background-image: url(../images/like_brand/search.svg);
     background-repeat: no-repeat;
@@ -235,6 +235,7 @@ header .navibar li h1 {
     overflow: hidden;
     display: table;
     white-space: nowrap;
+    padding-right: 5.5556vw;
 }
 
 .like-list-vertical .tab-table ul li{
