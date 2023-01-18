@@ -19,6 +19,16 @@
                 history.back();
                 location.href = document.referrer;
             });
+            
+            $('#inquiry_result').click(function() {
+                var date1 = $('input[id="date1"]').val();
+                var date2 = $('input[id="date2"]').val();
+
+                if (date1 > date2) {
+                    alert('조회일자를 확인해 주세요.');
+                    return;
+                }
+            });
 
             $('.tenan_footer h4').click(function() {
                 if ($('.tenan_footer .company-info').css('display') == 'none') {
