@@ -228,7 +228,6 @@ header .navibar li h1 {
 .detail-order-delivery-pdt .group .box .pdt-info .pdt-status-wrap ul .pdt-status-btn button{
     width: 30.8333vw;
     height: 8.8889vw;
-    line-height: 8.8889vw;
     border: 0.2778vw solid #666;
     box-sizing: border-box;
     background-color: #fff;
@@ -482,6 +481,7 @@ header .navibar li h1 {
     height: 8.8889vw;
     background-color: #fff;
     border: 0.2778vw solid #666;
+    font-size: 3.6111vw;
 }
 .receive .receive-change .receive-change-top .change-top-btn #receiveChangeBtnCancel {
     margin-left: 2.2222vw;
@@ -495,11 +495,11 @@ header .navibar li h1 {
     border: 0.2778vw solid #ccc;
     padding: 0 3.3333vw;
     box-sizing: border-box;
+    font-size: 3.8889vw;
+    line-height: 13.3333vw;
 }
 .receive .receive-change .receive-change-info input::placeholder {
     color: #999;
-    font-size: 3.8889vw;
-    line-height: 13.3333vw;
 }
 .receive .receive-change .receive-change-info input:read-only{
     background-color: #eee;
@@ -533,6 +533,7 @@ header .navibar li h1 {
     background-repeat: no-repeat;
     background-size: 3.8889vw;
     background-position: right 3.8889vw center;
+    font-size: 3.8889vw;
 }
 .receive .receive-change .receive-change-info select option {
     color: #999;
@@ -543,6 +544,7 @@ header .navibar li h1 {
     border: 0.2778vw solid #ccc;
     padding: 4.4444vw 3.3333vw 0;
     box-sizing: border-box;
+    font-size: 3.8889vw;
     resize: none;
 }
 .receive .receive-change .receive-change-info textarea::placeholder {
@@ -611,6 +613,7 @@ header .navibar li h1 {
     height: 8.8889vw;
     background-color: #fff;
     border: 0.2778vw solid #666;
+    font-size: 3.6111vw;
 }
 .order .order-change .order-change-top .change-top-btn #orderChangeBtnCancel {
     margin-left: 2.2222vw;
@@ -624,14 +627,15 @@ header .navibar li h1 {
     border: 0.2778vw solid #ccc;
     padding: 0 3.3333vw;
     box-sizing: border-box;
+    font-size: 3.8889vw;
+    line-height: 13.3333vw;
 }
 .order .order-change .order-change-info input[type=email]{
     margin-bottom: 0;
 }
 .order .order-change .order-change-info input::placeholder {
     color: #999;
-    font-size: 3.8889vw;
-    line-height: 13.3333vw;
+    
 }
 .order .order-change .order-change-info input:read-only{
     background-color: #eee;

@@ -47,15 +47,15 @@ main .main-txt .des {
     border: 0.2778vw solid #666;
     box-sizing: border-box;
     background-color: #666;
-    width: 6px;
-    height: 6px;
+    width: 1.6667vw;
+    height: 1.6667vw;
     opacity: 1;
 }
 
 .main-img .swiper-pagination-bullet-active {
     background-color: #fff;
-    width: 10px;
-    height: 10px;
+    width: 2.7778vw;
+    height: 2.7778vw;
 }
 .navigator {
     padding: 0 5.5556vw;

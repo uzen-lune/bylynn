@@ -432,10 +432,20 @@ form .non-members-agreement div a {
 
 .customer-receive > div .input-wrap li #receiveUserName {
     width: 100%;
+    height: 13.3333vw;
+    line-height: 13.3333vw;
+    padding: 0 3.3333vw;
+    box-sizing: border-box;
+    font-size: 3.8889vw;
 }
 
 .customer-receive > div .input-wrap li #receiveUserNumber {
     width: 100%;
+    height: 13.3333vw;
+    line-height: 13.3333vw;
+    padding: 0 3.3333vw;
+    box-sizing: border-box;
+    font-size: 3.8889vw;
 }
 
 

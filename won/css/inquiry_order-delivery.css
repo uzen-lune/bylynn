@@ -110,6 +110,7 @@ form .layer-filter .layer-filter-cont .layer-filter-date-select input {
     background-position: right 3.3333vw center;
     padding-left: 3.3333vw;
     padding-right: 13.3333vw;
+    font-size: 3.8889vw;
 }
 form .layer-filter .layer-filter-cont .layer-filter-date-select span {
     display: inline-block;
@@ -152,7 +153,7 @@ form .layer-filter .apply-btn-area input[type=text]{
 }
 form .layer-filter .apply-btn-area input[type=button]{
     width: 16.6667vw;
-    border: 0.2778vw solid #ccc;
+    border: 0.2778vw solid #111;
     background-color: #111;
     color: #fff;
     font-size: 3.8889vw;
@@ -329,6 +330,7 @@ form .layer-filter .apply-btn-area input[type=button]{
 .inquiry-pdt .order-pdt .box .pdt-info .pdt-status-wrap ul .pdt-status-btn .active {
     background-color: #111;
     color: #fff;
+    border-color: #111;
 }
 
 .inquiry-pdt .order-pdt .box .pdt-info .add-text {
@@ -392,6 +394,30 @@ form .layer-filter .apply-btn-area input[type=button]{
     font-weight: 500;
     color: #111;
 }
+
+
+/*달력*/
+/*
+#ui-datepicker-div {
+    width: 40.5556vw;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

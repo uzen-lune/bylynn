@@ -205,7 +205,7 @@
                         $('.cash-receipts').focus();
                         return false;
                     };
-                    if('cashPhoneNumber') 
+                   /* if('cashPhoneNumber') */
                     /*cashPhoneNumber
                     CompanyRegistrationNumber*/
                     
@@ -362,7 +362,7 @@
                     <li class="or-user-mail"><span class="mail1">gildong</span>@<span class="mail2">mail.com</span></li>
                 </ul>
                 <input type="text" name="orderUserName" id="orderUserName" placeholder="이름(필수)">
-                <input type="number" name="orderUserNumber" id="orderUserNumber" placeholder="연락처1-없이(필수)">
+                <input type="text" name="orderUserNumber" id="orderUserNumber" placeholder="연락처1-없이(필수)" maxlength="11">
                 <div class="email-wrap">
                     <input type="text" name="orderUserEmail" id="orderUserEmail1" placeholder="수신용 이메일(필수)">@<input type="text" name="orderUserEmail" id="orderUserEmail2">
                     <select name="orderSelectEmail" id="orderSelectEmail">
@@ -398,10 +398,10 @@
                             <input type="text" name="receiveUserName" id="receiveUserName" placeholder="이름 (필수)">
                         </li>
                         <li>
-                            <input type="number" name="receiveUserNumber" id="receiveUserNumber" placeholder="연락처1-없이 (필수)">
+                            <input type="text" name="receiveUserNumber" id="receiveUserNumber" placeholder="연락처1-없이 (필수)" maxlength="11">
                         </li>
                         <li class="zipCodeWrap">
-                            <input type="number" name="receiveZipCode" id="receiveZipCode" placeholder="우편번호 (필수)" readonly>
+                            <input type="text" name="receiveZipCode" id="receiveZipCode" placeholder="우편번호 (필수)" readonly>
                             <label for="receiveZipCode">우편번호</label>
                             <input type="text" name="receiveZipCodeDetail" id="receiveZipCodeDetail" placeholder="주소" readonly>
                         </li>
@@ -779,9 +779,9 @@
                     </div>
                     <div class="cash-number">
                         <h5>휴대폰번호</h5>
-                        <input type="number" name="cashPhoneNumber" id="cashPhoneNumber" placeholder="휴대폰번호-없이 입력">
+                        <input type="text" name="cashPhoneNumber" id="cashPhoneNumber" placeholder="휴대폰번호-없이 입력">
                         <h5>사업자등록번호</h5>
-                        <input type="number" name="CompanyRegistrationNumber" id="CompanyRegistrationNumber" placeholder="사업자등록번호-없이 입력">
+                        <input type="text" name="CompanyRegistrationNumber" id="CompanyRegistrationNumber" placeholder="사업자등록번호-없이 입력">
                     </div>
                 </div>
                 <ul class="agreement-wrap">

@@ -17,11 +17,24 @@
         $(document).ready(function(){
             var deleteImg = $('.pdt-inquiry .add-photo .box-wrap .box a');
             deleteImg.click(function(){ //사진 삭제
-                $(this).parents('.box').remove();
+                var con = confirm('삭제하시겠습니까?');
+                if(con ==true){
+                    $(this).parents('.box').remove();
+                } else{
+                    return false;
+                };
+                
+                
             });
             
             $('.btn-close').click(function(){
-                $(this).parents('.box').remove();
+               var con = confirm('삭제하시겠습니까?');
+                if (con ==true){
+                    $(this).parents('.box').remove();
+                }else{
+                    return false;
+                };
+                
             });
             
         });

@@ -194,13 +194,31 @@ header .navibar li h1 {
     width: 100%;
     height: 100%;
 }
+/*맵 박스*/
+/*
+.place-card {
+    
+}
+.place-card-large {
+}
+.gm-style .place-desc-medium {
+    
+}
 
-
-
-
-
-
-
+.gm-style .place-card .place-name {
+    
+}
+.gm-style .google-maps-link {}
+.gm-style .google-maps-link a{}
+.gm-style .place-desc-large {
+    width: 600px!important;
+    background-color: aquamarine;
+}
+*/
+.gm-style .place-card .bottom-actions .google-maps-link a{
+    background-color: red;
+}
+    
 
 
 
