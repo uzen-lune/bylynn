@@ -14,6 +14,7 @@
     <script>
         $(document).ready(function() {
             
+            /*이전 페이지로 이동*/
             $('.back').click(function() {
                 location.reload();
                 history.back();
@@ -30,7 +31,8 @@
                 }, 10);
             });
         });
-
+        
+        /*상품 정보(상품설명,리뷰,문의,구매정보) 해당 영역 위치 고정*/
         $(window).scroll(function() {
 
             var scTop = $(window).scrollTop();
@@ -68,7 +70,8 @@
                 $('.product-info > ul').show();
             }
         });
-
+        
+        /*제목 클릭시 하위내용 보이기/숨기기*/
         $(document).ready(function() {
 
             $('.product-info > ul li').click(function() {
@@ -264,14 +267,14 @@
 
                 <div class="review">
                     <div class="mark clearfix">
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <p>5.0</p>
-                    </div>
-                    <div class="review-wrap"><a href="#none">리뷰 10 <img src="../images/back.svg" alt="리뷰보기"></a></div>
+                                <img src="../images/star.svg" alt="">
+                                <img src="../images/star.svg" alt="">
+                                <img src="../images/star.svg" alt="">
+                                <img src="../images/star.svg" alt="">
+                                <img src="../images/star.svg" alt="">
+                                <p>5.0</p>
+                            </div>
+                    <div class="review-wrap"><a href="#none">리뷰 10 <img src="../images/S2.svg" alt="리뷰보기"></a></div>
                 </div>
             </div>
         </section>

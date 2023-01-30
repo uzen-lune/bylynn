@@ -173,7 +173,7 @@
 .filter-brand-box li input {
     display: none;
 }
- 
+
 .filter-brand-box li input:checked + label {
     background-color: #333;
     border: 1px solid #333;
@@ -484,7 +484,7 @@
     box-sizing: border-box;
 }
 
-.filter-price-box .min-price input+label {
+.filter-price-box .min-price input + label {
     position: absolute;
     right: 12px;
     font-size: 14px;
@@ -516,11 +516,11 @@
     color: #111;
     text-align: end;
     padding-right: 24px;
-     border: 1px solid #ccc;
+    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-.filter-price-box .max-price input+label {
+.filter-price-box .max-price input + label {
     position: absolute;
     right: 12px;
     font-size: 14px;

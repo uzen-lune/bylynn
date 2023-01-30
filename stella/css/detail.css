@@ -301,20 +301,38 @@
 }
 
 .price .mark {
-    display: flex;
+    margin-right: 24px;
+}
+
+.price .mark:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.price .mark img {
+    float: left;
+}
+
+.price .mark img ~ img {
+    margin-left: 2px;
 }
 
 .price .mark p {
-    margin-left: 8px;
-    margin-right: 21px;
+    float: left;
+    margin-left: 12px;
+    font-weight: 500;
     position: relative;
 }
 
 .price .mark p:after {
-    content: "|";
+    content: "";
     display: block;
+    width: 1px;
+    height: 14px;
+    background-color: #ccc;
     position: absolute;
-    top: 0;
+    top: 2.5px;
     right: -12px;
 }
 

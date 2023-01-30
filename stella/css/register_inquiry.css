@@ -152,10 +152,12 @@
 
 .order-product .product-info > a {
     width: 24px;
+    height: 24px;
 }
 
 .order-product .product-info > a img {
     width: 24px;
+    height: 24px;
     display: block;
 }
 
