@@ -14,6 +14,7 @@
     <script>
         $(document).ready(function() {
             
+            /*이전 페이지로 이동*/
             $('.back').click(function() {
                 location.reload();
                 history.back();
@@ -45,7 +46,8 @@
                     });
                 }
             });
-
+            
+            /*푸터 화살표*/
             $('.tenan_footer h4').click(function() {
                 if ($('.tenan_footer .company-info').css('display') == 'none') {
                     $('.tenan_footer .company-info').slideDown(80);
