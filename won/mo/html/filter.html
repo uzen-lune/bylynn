@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/filter.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <section class="filter-contents">
+        <div class="top">
+            <h2>필터</h2>
+            <a href="#" onclick="window.history.back()">닫기</a>
+        </div>
+        <form action="">
+            <fieldset class="category">
+                <legend>카테고리</legend>
+                <div class="category-contents">
+                    <ul class="depth1">
+                        <li>
+                            <p>전체</p>
+                        </li>
+                        <li>
+                            <p>의류</p>
+                            <ul class="depth2">
+                                <li>
+                                    <p>아우터</p>
+                                    <ul class="depth3">
+                                        <li>
+                                            <input type="checkbox" name="outerList01" id="outerList01">
+                                            <label for="outerList01">자켓</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList02" id="outerList02">
+                                            <label for="outerList02">코트</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList03" id="outerList03">
+                                            <label for="outerList03">점퍼</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList04" id="outerList04">
+                                            <label for="outerList04">패딩</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList05" id="outerList05">
+                                            <label for="outerList05">트렌치코트</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList06" id="outerList06">
+                                            <label for="outerList06">레더</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList07" id="outerList07">
+                                            <label for="outerList07">퍼</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList08" id="outerList08">
+                                            <label for="outerList08">후드집업</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="outerList09" id="outerList09">
+                                            <label for="outerList09">핸드메이드</label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>원피스</p>
+                                </li>
+                                <li>
+                                    <p>블라우스/셔츠</p>
+                                </li>
+                                <li>
+                                    <p>스커트</p>
+                                </li>
+                                <li>
+                                    <p>팬츠</p>
+                                </li>
+                                <li>
+                                    <p>티셔츠</p>
+                                </li>
+                                <li>
+                                    <p>데님</p>
+                                </li>
+                                <li>
+                                    <p>니트</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>가방</p>
+                        </li>
+                        <li>
+                            <p>신발</p>
+                        </li>
+                        <li>
+                            <p>악세서리</p>
+                        </li>
+                        <li>
+                            <p>골프/애슬레저</p>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    $('.category .depth1 li p').click(function() {
+                        $(this).siblings('.depth2').slideToggle();
+                    });
+                    $('.category .depth2 li p').click(function() {
+                        $(this).siblings('.depth3').slideToggle();
+                    });
+                </script>
+            </fieldset>
+            <fieldset class="brand">
+                <legend>브랜드</legend>
+                <div class="brand-contents">
+                    <ul class="brand-list">
+                        <li>
+                            <input type="checkbox" name="dearK" id="dearK">
+                            <label for="dearK">DEAR K</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="huitDeLynn" id="huitDeLynn">
+                            <label for="huitDeLynn">HUIT DE LYNN</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="kennethLady" id="kennethLady">
+                            <label for="kennethLady">KENNETH LADY</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="kl" id="kl">
+                            <label for="kl">KL</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="line" id="line">
+                            <label for="line">LINE</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="lineStudio" id="lineStudio">
+                            <label for="lineStudio">LINE STUDIO ONE</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="lynn" id="lynn">
+                            <label for="lynn">LYNN</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="moe" id="moe">
+                            <label for="moe">MOE</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="nuvo10" id="nuvo10">
+                            <label for="nuvo10">NUVO10</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="apc" id="apc">
+                            <label for="apc">A.P.C</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="dearK1" id="dearK1">
+                            <label for="dearK1">DEAR K1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="huitDeLynn1" id="huitDeLynn1">
+                            <label for="huitDeLynn1">HUIT DE LYNN1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="kennethLady1" id="kennethLady1">
+                            <label for="kennethLady1">KENNETH LADY1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="kl1" id="kl1">
+                            <label for="kl1">KL1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="line1" id="line1">
+                            <label for="line1">LINE1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="lineStudio1" id="lineStudio1">
+                            <label for="lineStudio1">LINE STUDIO ONE1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="lynn1" id="lynn1">
+                            <label for="lynn1">LYNN1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="moe1" id="moe1">
+                            <label for="moe1">MOE1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="nuvo101" id="nuvo101">
+                            <label for="nuvo101">NUVO101</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="apc1" id="apc1">
+                            <label for="apc">A.P.C1</label>
+                        </li>
+
+
+                    </ul>
+                    <a href="#none" class="btn">더보기</a>
+                    <script>
+                        $('.brand-list li').slice(0, 10).show();
+
+                        $('.brand .btn').on('click', function(e) {
+                            e.preventDefault();
+                            $('.brand-list li:hidden').slideDown();
+                             $(this).css({
+                                display : "none"
+                            });
+
+
+
+                        });
+                    </script>
+                </div>
+            </fieldset>
+            <fieldset class="color">
+                <legend>색상</legend>
+                <div class="color-contents">
+                    <ul class="color-list">
+                        <li class="color1">
+                            <input type="checkbox" name="color1" id="color1">
+                            <label for="color1"></label>
+                        </li>
+                        <li class="color2">
+                            <input type="checkbox" name="color2" id="color2">
+                            <label for="color2"></label>
+                        </li>
+                        <li class="color3">
+                            <input type="checkbox" name="color3" id="color3">
+                            <label for="color3"></label>
+                        </li>
+                        <li class="color4">
+                            <input type="checkbox" name="color4" id="color4">
+                            <label for="color4"></label>
+                        </li>
+
+                        <li class="color5">
+                            <input type="checkbox" name="color5" id="color5">
+                            <label for="color5"></label>
+                        </li>
+                        <li class="color6">
+                            <input type="checkbox" name="color6" id="color6">
+                            <label for="color6"></label>
+                        </li>
+                        <li class="color7">
+                            <input type="checkbox" name="color7" id="color7">
+                            <label for="color7"></label>
+                        </li>
+                        <li class="color8">
+                            <input type="checkbox" name="color8" id="color8">
+                            <label for="color8"></label>
+                        </li>
+                        <li class="color9">
+                            <input type="checkbox" name="color9" id="color9">
+                            <label for="color9"></label>
+                        </li>
+                        <li class="color10">
+                            <input type="checkbox" name="color10" id="color10">
+                            <label for="color10"></label>
+                        </li>
+
+                        <li class="color11">
+                            <input type="checkbox" name="color11" id="color11">
+                            <label for="color11"></label>
+                        </li>
+                        <li class="color12">
+                            <input type="checkbox" name="color12" id="color12">
+                            <label for="color12"></label>
+                        </li>
+                        <li class="color13">
+                            <input type="checkbox" name="color13" id="color13">
+                            <label for="color13"></label>
+                        </li>
+                        <li class="color14">
+                            <input type="checkbox" name="color14" id="color14">
+                            <label for="color14"></label>
+                        </li>
+                        <li class="color15">
+                            <input type="checkbox" name="color15" id="color15">
+                            <label for="color15"></label>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </fieldset>
+            <fieldset class="size">
+                <legend>사이즈</legend>
+                <div class="size-contents">
+                    <ul class="size-list">
+                        <li>
+                            <input type="checkbox" name="size1" id="size1">
+                            <label for="size1">44</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size2" id="size2">
+                            <label for="size2">55</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size3" id="size3">
+                            <label for="size3">66</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size4" id="size4">
+                            <label for="size4">77</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size5" id="size5">
+                            <label for="size5">Free</label>
+                        </li>
+
+                    </ul>
+                </div>
+            </fieldset>
+            <fieldset class="benefit">
+                <legend>혜택</legend>
+                <div class="benefit-contents">
+                    <ul class="benefit-list">
+                        <li>
+                            <input type="checkbox" name="benefit1" id="benefit1">
+                            <label for="benefit1">즉시할인쿠폰</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="benefit2" id="benefit2">
+                            <label for="benefit2">세일</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="benefit3" id="benefit3">
+                            <label for="benefit3">예약상품</label>
+                        </li>
+
+                    </ul>
+                </div>
+            </fieldset>
+            <fieldset class="price">
+                <legend>가격</legend>
+                <div class="price-contents">
+                    <div class="priceBox">
+                        <label for="priceMin">최소</label>
+                        <div class="inputBox">
+                            <input type="number" name="priceMin" id="priceMin">
+                            <p>원</p>
+                        </div>
+                    </div>
+                    <div class="priceBox">
+                        <label for="priceMax">최대</label>
+                        <div class="inputBox">
+                            <input type="number" name="priceMax" id="priceMax">
+                            <p>원</p>
+                        </div>
+                    </div>
+                    <div class="serch-btn">
+                        <input type="submit" value="검색">
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="purpose">
+                <legend>쇼핑의 목적</legend>
+                <div class="purpose-contents">
+                    <ul class="purpose-list">
+                        <li>
+                            <input type="checkbox" name="chk-classic" id="chk-classic"><label for="chk-classic">클래식룩</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="chk-date" id="chk-date"><label for="chk-date">데이트룩</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="chk-interview" id="chk-interview"><label for="chk-interview">면접프리패스룩</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="chk-golf" id="chk-golf"><label for="chk-golf">골프라운딩룩</label>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <div class="bottom">
+                <input type="reset" value="초기화" class="reset">
+                <input type="submit" value="적용" class="apply">
+            </div>
+        </form>
+        <script>
+            $('legend').click(function() {
+                if ($(this).siblings('div').is(":visible") != true) {
+
+                    $(this).siblings('div').slideDown();
+                    $(this).find('img').css({
+                        transform: "rotate(180deg)"
+                    });
+
+                } else {
+
+                    $(this).siblings('div').slideUp();
+                    $(this).find('img').css({
+                        transform: "rotate(0deg)"
+                    });
+                    $('.category-contents').find('.depth2').slideUp();
+                    $('.category-contents').find('.depth3').slideUp();
+
+                }
+                
+            });
+        </script>
+    </section>
+</body></html>

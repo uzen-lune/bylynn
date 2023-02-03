@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail_order-delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/detail_order-delivery.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //변경버튼
+            $('.receive-saved-top button').click(function() {
+                $('.receive .receive-saved').hide();
+                $('.receive .receive-change').show();
+            });
+            //취소버튼
+            $('.change-top-btn #receiveChangeBtnCancel').click(function() {
+                $('.receive .receive-saved').show();
+                $('.receive .receive-change').hide();
+            });
+            //확인버튼
+            $('.change-top-btn #receiveChangeBtnSubmit').click(function() {
+                var nameRe = $('#receiveChangeUserName').val(),
+                    numberRe1 = $('#receiveChangeUserNumber1').val(),
+                    numberRe2 = $('#receiveChangeUserNumber2').val(),
+                    addressRe = $('#receiveChangeAddress2').val(),
+                    messageRe = $('#receiveChangeTextarea').val();
+                if (nameRe.length == '') {
+                    alert('변경할 이름을 입력하세요');
+                    return false;
+                } else {
+                    $('.receive-saved-userName').text(nameRe);
+                    /*$('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();*/
+                }
+                if (numberRe1.length == '') {
+                    alert('연락처를 입력하세요');
+                    return false;
+                } else {
+                    $('.receive-saved-userNumber1').text(numberRe1);
+                    /*$('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();*/
+                }
+                if (numberRe2.length == '') {
+                    alert('연락처를 입력하세요');
+                    return false;
+                } else {
+                    $('.receive-saved-userNumber2').text(numberRe2);
+                    /*$('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();*/
+                }
+                if (messageRe.length == '') {
+                    alert('배송메세지를 입력하세요');
+                    return false;
+                } else {
+                    $('.receive-saved-message').text(messageRe);
+                    $('.receive .receive-saved').show();
+                    $('.receive .receive-change').hide();
+                }
+
+
+            });
+            $('#receiveChangeSendMessage').change(function(){
+                $('#receiveChangeTextarea').val($(this).val());
+                /*if(('#receiveChangeSendMessage').val() == '기타' ){
+                    $('#receiveChangeTextarea')
+                }*/
+            });
+            ////받는사람
+            
+            //보내는사람
+            $('.order-saved-top button').click(function(){ //변경버튼
+                $('.order-change').show();
+                $('.order-saved').hide();
+            });
+            
+            $('#orderChangeBtnCancel').click(function(){ //취소버튼
+                $('.order-change').hide();
+                $('.order-saved').show();
+            });
+            
+            $('.change-top-btn #orderChangeBtnSubmit').click(function() { //확인버튼
+                var nameOr = $('#orderChangeUserName').val(),
+                    numberOr = $('#orderChangeUserNumber1').val(),
+                    emailOr = $('#orderChangeEmail').val();
+                    
+                if (nameOr.length == '') {
+                    alert('변경할 이름을 입력하세요');
+                    return false;
+                } else {
+                    $('.order-saved-userName').text(nameOr);
+                    
+                }
+                if (numberOr.length == '') {
+                    alert('연락처를 입력하세요');
+                    return false;
+                } else {
+                    $('.order-saved-userNumber1').text(numberOr);
+                    
+                }
+                if (emailOr.length == '') {
+                    alert('이메일을 입력하세요');
+                    return false;
+                } else {
+                    $('.order-saved-email').text(emailOr);
+                    $('.order .order-saved').show();
+                    $('.order .order-change').hide();
+                }
+
+            });
+            
+            
+            
+        });
+
+    </script>
+</head>
+
+<body>
+    <header class="header-sub">
+        <ul class="navibar">
+            <li>
+                <a href="#none" onclick="window.history.back()" class="back">뒤로가기</a>
+                <h1>주문/배송상태</h1>
+            </li>
+            <li>
+                <a href="#none" class="search">검색</a>
+                <a href="cart.html" class="cart">장바구니</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="detail-order-delivery-contents">
+        <div class="order-delivery-summary">
+            <div class="order-info-wrap">
+                <ul class="order-info">
+                    <li>
+                        <em>주문일</em>
+                        <p>2022-12-23</p>
+                    </li>
+                    <li>
+                        <em>주문번호</em>
+                        <p>YYMMDDHHMI0000</p>
+                    </li>
+                </ul>
+                <div class="btn-wrap">
+                    <button>주문전체취소</button>
+                    <button>영수증발급</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-order-delivery-pdt">
+            <div class="group-wrap">
+                <!--//group1-->
+                <div class="group">
+                    <div class="box-title">
+                        <h2>바이린1 배송상품</h2>
+                    </div>
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="pdt-basic">
+                                <div class="pdt-info-basic">
+                                    <div class="pdt-info-img">
+                                        <img src="../images/cart/pdt.jpg" alt="">
+                                    </div>
+                                    <div class="pdt-info-detail">
+                                        <p class="pdt-brand">LYNN</p>
+                                        <h4>클래식 크롭 테일러드 자켓</h4>
+                                        <ul class="pdt-option">
+                                            <li>브라운 / 55</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="gifts-text-wrap">
+                                    <dl class="gifts-text">
+                                        <dt>[사은품]</dt>
+                                        <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                    </dl>
+                                    <dl class="gifts-text">
+                                        <dt>[사은품]</dt>
+                                        <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                    </dl>
+                                </div>
+                                <div class="each-pdt-price">
+                                    <p>주문수량 1개</p>
+                                    <strong>9,000원</strong>
+                                </div>
+                                <div class="pdt-status-wrap">
+                                    <ul>
+                                        <li class="pdt-status">
+                                            <p>주문완료</p>
+                                        </li>
+                                        <li class="pdt-status-btn">
+                                            <button class="active">구매확정</button>
+                                            <button>배송조회</button>
+                                            <button>반품신청</button>
+                                            <button>교환신청</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pdt-add">
+                                <div class="add-text">
+                                    <em>[추가]</em>
+                                    <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                                </div>
+                                <div class="each-pdt-price">
+                                    <p>주문수량1개</p>
+                                    <strong>9,000원</strong>
+                                </div>
+                                <div class="pdt-status-wrap">
+                                    <ul>
+                                        <li class="pdt-status">
+                                            <p>주문완료</p>
+                                        </li>
+                                        <li class="pdt-status-btn">
+                                            <button>배송조회</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="delivery-price">
+                                    <p>배송비<span>3,000원</span></p>
+                                </div>
+                            </div>
+                            <div class="pdt-basic">
+                                <div class="pdt-info-basic">
+                                    <div class="pdt-info-img">
+                                        <img src="../images/cart/pdt.jpg" alt="">
+                                    </div>
+                                    <div class="pdt-info-detail">
+                                        <p class="pdt-brand">LYNN</p>
+                                        <h4>클래식 크롭 테일러드 자켓</h4>
+                                        <ul class="pdt-option">
+                                            <li>브라운 / 55</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="each-pdt-price">
+                                    <p>주문수량 1개</p>
+                                    <strong>9,000원</strong>
+                                </div>
+                                <div class="pdt-status-wrap">
+                                    <ul>
+                                        <li class="pdt-status">
+                                            <p>주문완료</p>
+                                        </li>
+                                        <li class="pdt-status-btn">
+                                            <button class="active">구매확정</button>
+                                            <button>배송조회</button>
+                                            <button>반품신청</button>
+                                            <button>교환신청</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="delivery-price">
+                                <p>배송비<span>3,000원</span></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--//group2-->
+                <div class="group">
+                    <div class="box-title">
+                        <h2>바이린2 배송상품</h2>
+                    </div>
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="pdt-basic">
+                                <div class="pdt-info-basic">
+                                    <div class="pdt-info-img">
+                                        <img src="../images/cart/pdt.jpg" alt="">
+                                    </div>
+                                    <div class="pdt-info-detail">
+                                        <p class="pdt-brand">LYNN</p>
+                                        <h4>클래식 크롭 테일러드 자켓</h4>
+                                        <ul class="pdt-option">
+                                            <li>브라운 / 55</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="each-pdt-price">
+                                    <p>주문수량 1개</p>
+                                    <strong>9,000원</strong>
+                                </div>
+                                <div class="pdt-status-wrap">
+                                    <ul>
+                                        <li class="pdt-status">
+                                            <p>주문완료</p>
+                                        </li>
+                                        <li class="pdt-status-btn">
+                                            <button class="active">구매확정</button>
+                                            <button>배송조회</button>
+                                            <button>반품신청</button>
+                                            <button>교환신청</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="delivery-price">
+                                <p>배송비<span>3,000원</span></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="order-gifts-info">
+            <div class="gifts-info-title">
+                <h2>주문사은품 정보</h2>
+            </div>
+            <div class="box-wrap">
+                <!--//주문사은품증정쿠폰명-->
+                <div class="box">
+                    <div class="gifts-info-des">
+                        <h3>주문사은품증정 행사명</h3>
+                        <p>2022-11-01~2022-11-30</p>
+                    </div>
+                    <div class="gifts-box-show">
+                        <ul class="gifts-box-wrap">
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div class="no-stock">소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--//사은품증정 행사명-->
+                <div class="box">
+                    <div class="gifts-info-des">
+                        <h3>사은품증정쿠폰명</h3>
+                    </div>
+                    <div class="gifts-box-show">
+                        <ul class="gifts-box-wrap">
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div class="no-stock">소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--//기타사은품증정-->
+                <div class="box">
+                    <div class="gifts-info-des">
+                        <h3>기타 사은품증정</h3>
+                    </div>
+                    <div class="gifts-box-show">
+                        <ul class="gifts-box-wrap">
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div class="no-stock">소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+                            <li class="gifts-box">
+                                <div class="gifts-box-img">
+                                    <img src="../images/detail_order-delivery/gifts-pdt01.svg" alt="">
+                                    <div>소진</div>
+                                </div>
+                                <h4>LYNN</h4>
+                                <p class="gifts-name">사은품명 전체가 표시</p>
+                                <p class="gifts-count">1개</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!---->
+            </div>
+            <div class="order-gifts-notice">
+                <ul>
+                    <li>
+                        <p>부분 주문취소 및 반품 시 사은품 증정이 취소될 수 있습니다.</p>
+                    </li>
+                    <li>
+                        <p>반품 시 지급받은 사은품도 함께 보내주셔야 반품이 진행됩니다.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="customer-info">
+            <!-- RECEIVE -->
+            <div class="receive">
+                <div class="receive-saved">
+                    <div class="receive-saved-top">
+                        <h2>받으시는분</h2>
+                        <button>변경</button>
+                    </div>
+                    <div class="receive-saved-info">
+                        <ul>
+                            <li class="receive-saved-userName">홍길동</li>
+                            <li class="receive-saved-userNumber1">010-1234-5678</li>
+                            <li class="receive-saved-userNumber2">02-9876-5432</li>
+                            <li class="receive-saved-userAddress">12345 서울특별시 강남구 테헤란로20길 9 동궁빌딩 6층</li>
+                            <li class="receive-saved-message">문앞에 놓아주세요.</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!--변경-->
+                <div class="receive-change">
+                    <div class="receive-change-top">
+                        <h2>받으시는분</h2>
+                        <div class="change-top-btn">
+                            <button id="receiveChangeBtnSubmit">확인</button>
+                            <button id="receiveChangeBtnCancel">취소</button>
+                        </div>
+                    </div>
+
+                    <div class="receive-change-info">
+                        <input type="text" name="receiveChangeUserName" id="receiveChangeUserName" placeholder="이름(필수)">
+                        <input type="text" name="receiveChangeUserNumber1" id="receiveChangeUserNumber1" placeholder="연락처1-없이 (필수)" maxlength="11">
+                        <input type="text" name="receiveChangeUserNumber2" id="receiveChangeUserNumber2" placeholder="연락처2-없이" maxlength="11">
+                        <div class="search-zipcode">
+                            <input type="number" placeholder="우편번호 (필수)" name="receiveChangeZipcode" id="receiveChangeZipcode" readonly>
+                            <input type="button" value="우편번호" id="receiveChangeZipcodeBtn" name="receiveChangeZipcodeBtn">
+                        </div>
+                        <input type="text" placeholder="주소" name="receiveChangeAddress1" id="receiveChangeAddress1" readonly>
+                        <input type="text" placeholder="주소상세" name="receiveChangeAddress2" id="receiveChangeAddress2" readonly>
+                        <select name="receiveChangeSendMessage" id="receiveChangeSendMessage">
+                            <option value="배송메세지를 선택하세요.">배송메세지를 선택하세요.</option>
+                            <option value="경비실에 맡겨주세요">경비실에 맡겨주세요</option>
+                            <option value="문앞에 놔주세요">문앞에 놔주세요</option>
+                            <option value="벵을 눌러주세요">벨을 눌러주세요</option>
+                            <option value="기타">기타</option>
+                        </select>
+                        <textarea name="receiveChangeTextarea" id="receiveChangeTextarea" cols="30" rows="10" placeholder="50자 이내로 입력해 주세요."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORDER -->
+            <div class="order">
+                <div class="order-saved">
+                    <div class="order-saved-top">
+                        <h2>주문하시는분</h2>
+                        <button>변경</button>
+                    </div>
+                    <div class="order-saved-info">
+                        <ul>
+                            <li class="order-saved-userName">홍길동</li>
+                            <li class="order-saved-userNumber1">010-1234-5678</li>
+                            <li class="order-saved-email">abcde@mail.com</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!--변경-->
+                <div class="order-change">
+                    <div class="order-change-top">
+                        <h2>주문하시는분</h2>
+                        <div class="change-top-btn">
+                            <button id="orderChangeBtnSubmit">확인</button>
+                            <button id="orderChangeBtnCancel">취소</button>
+                        </div>
+                    </div>
+
+                    <div class="order-change-info">
+                        <input type="text" name="orderChangeUserName" id="orderChangeUserName" placeholder="이름(필수)">
+                        <input type="text" name="orderChangeUserNumber1" id="orderChangeUserNumber1" placeholder="연락처1-없이 (필수)" maxlength="11">
+                        <input type="email" placeholder="수신용 이메일(필수)" name="orderChangeEmail" id="orderChangeEmail">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="payment-details">
+            <div class="payment-details-top">
+                <h2>결제상세</h2>
+            </div>
+            <div class="payment-info-wrap">
+                <div class="payment-amount-info listBox">
+                    <h3>결제금액정보</h3>
+                    <ul class="dep1">
+                        <li>
+                            <strong>상품주문금액</strong>
+                            <p><span>30,000</span>원</p>
+                        </li>
+                        <li>
+                            <div>
+                                <strong class="list-more">회원쿠폰할인금액</strong>
+                                <p><span>-</span><span>3,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품할인쿠폰</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>주문할인쿠폰</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>최종배송비</strong>
+                            <p><span>+</span><span>3,000</span>원</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="payment-details-final">
+                    <h3>최종 결제금액</h3>
+                    <strong><span>29,000,500</span>원</strong>
+                </div>
+                <!--//적립금-->
+                <div class="listBox">
+                    <h3>적립금</h3>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>전용포인트</strong>
+                                <p><span>5,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <div>
+                                        <strong>회원등급별 적립</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <strong class="list-more">상품별 추가적립</strong>
+                                            <p><span>2,500</span>원</p>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>통합포인트</strong>
+                                <p><span>5,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>회원등급별 적립</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>상품별 추가적립</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--결제수단정보-->
+                <div class="payment-method-information listBox">
+                    <h3>결제수단정보</h3>
+                    <ul class="dep1">
+                        <li>
+                            <strong>전용포인트 사용금액</strong>
+                            <p><span>3,000</span>원</p>
+                        </li>
+                        <li>
+                            <strong class="list-more">통합포인트 사용금액</strong>
+                            <p><span>3,000</span>원</p>
+                        </li>
+                        <li>
+                            <strong>예치금 사용금액</strong>
+                            <p><span>3,000</span>원</p>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>신용카드</strong>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <p>카드사명 (1287-****-3172-1231) / 일시불</p>
+                                </li>
+                                <li>
+                                    <p>승인일시 : YYYY-MM-DD</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>간편결제</strong>
+                                <p><span>3,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <p>국민은행 **-******-***-**</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>안심가상계좌</strong>
+                                <p><span>3,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <p>농협 700000000000000(예금주:G1몰)</p>
+                                </li>
+                                <li>
+                                    <p>입금기한 : YYYY-MM-DD</p>
+                                </li>
+                                <li>
+                                    <p>입금일시 : YYYY-MM-DD</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="payment-details-btn-wrap">
+                    <ul>
+                        <li><a href="#none" class="btn-black">입금은행 변경</a></li>
+                        <li><a href="#none" class="btn-black">결제수단 변경</a></li>
+                        <li><a href="#none">현금영수증 전표</a></li>
+                        <li><a href="#none">신용카드 전표</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--payment-info-wrap-->
+        </div>
+        <!-- 환불금액정보 -->
+        <div class="refund-amount-info">
+            <div class="refund-amount-info-top">
+                <h2>환불금액정보</h2>
+            </div>
+            <div class="refund-amount-info-wrap">
+                <div class="listBox">
+                    <h3>YYYY-MM-DD</h3>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>취소 전</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품주문금액</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>회원쿠폰할인금액</strong>
+                                    <p><span>-</span><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>최종배송비</strong>
+                                    <p><span>+</span><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>취소 후</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품주문금액</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>회원쿠폰할인금액</strong>
+                                    <p><span>-</span><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>최종배송비</strong>
+                                    <p><span>+</span><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dep1">
+                        <li>
+                            <div>
+                                <strong>환불금액</strong>
+                                <p><span>3,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>전용포인트</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>통합포인트</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>예치금</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>신용카드</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <p>카드사명 (1234-123-123-1-23-123)/일시불</p>
+                                        </li>
+                                        <li>
+                                            <p>승인취소일시 :YYYY-MM-DD</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>간편결제</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <p>국민은행 (1234-124-123-123-1-23)/일시불</p>
+                                        </li>
+                                        <li>
+                                            <p>승인취소일시 :YYYY-MM-DD</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>환불계좌</strong>
+                                        <p><span>2,500</span>원</p>
+                                    </div>
+                                    <ul class="dep3">
+                                        <li>
+                                            <p>농협 (1234-124-123-123-1-23)/일시불</p>
+                                        </li>
+                                        <li>
+                                            <p>환불일시 :YYYY-MM-DD</p>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+                <div class="listBox">
+                    <h3>YYYY-MM-DD</h3>
+                    <ul class="dep1">
+                        <li class="refund-subject">
+                            <div>
+                                <strong>환불대상</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>상품주문금액</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>회원쿠폰할인금액</strong>
+                                    <p><span>-</span><span>2,500</span>원</p>
+                                </li>
+                                <li>
+                                    <strong>최종배송비</strong>
+                                    <p><span>+</span><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="deduction-subject">
+                            <div>
+                                <strong>차감대상</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>클레임배송비</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="refund-amount">
+                            <div>
+                                <strong>환불금액</strong>
+                                <p><span>30,000</span>원</p>
+                            </div>
+                            <ul class="dep2">
+                                <li>
+                                    <strong>예치금</strong>
+                                    <p><span>2,500</span>원</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--payment-info-wrap-->
+        </div>
+
+    </section>
+
+    <footer>
+        <h3>(주) 린 컴퍼니</h3>
+        <ul class="adress">
+            <li>대표이사 문경란</li>
+            <li>서울 강남구 영동대로 734</li>
+            <li>개인정보보호책임자 이성춘</li>
+            <li>통신판매업신고번호 제2018-서울강남-00940</li>
+            <li>사업자등록번호 120-81-84619</li>
+            <li>이메일 info@bylynn.shop</li>
+        </ul>
+        <ul class="link">
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="foot-sns">
+            <li class="playstore"><a href="#none">플레이스토어</a></li>
+            <li class="appstore"><a href="#none">앱스토어</a></li>
+            <li class="naver"><a href="#none">네이버</a></li>
+            <li class="youtube"><a href="#none">유튜브</a></li>
+            <li class="instagram"><a href="#none">인스타그램</a></li>
+            <li class="facebook"><a href="#none">페이스북</a></li>
+        </ul>
+        <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

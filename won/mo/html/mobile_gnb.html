@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile_menu</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/mobile_gnb.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+
+
+</head>
+
+<body>
+    <section class="mobile-menu">
+
+        <div class="user-info">
+            <div class="user-menu">
+                <p id="userName">회원명<span>님</span></p>
+
+                <div class="util">
+                    <a href="#none" class="search">검색</a>
+                    <a href="#none" class="wish">위시</a>
+                    <a href="cart.html" class="mybag">카트</a>
+                    <a href="javascript:history.back();" class="close">닫기</a>
+                </div>
+
+
+            </div>
+            <div class="user-point">
+                <a href="savings.html">
+                    <p class="point">10,000,000</p>
+                    <p class="point-des">보유 적립금</p>
+                </a>
+                <a href="savings.html">
+                    <p class="point">100</p>
+                    <p class="point-des">당월 소멸예정 적립금</p>
+                </a>
+            </div>
+        </div>
+        <div class="selec">
+            <h2>ALL</h2>
+            <ul class="depth1">
+                <li>
+                    <div class="depth1-txt">
+                        <p>의류</p>
+                    </div>
+                    <ul class="depth2">
+                        <li><a href="#none">전체</a></li>
+                        <li><a href="#none">아우터</a></li>
+                        <li><a href="#none">블라우스/셔츠</a></li>
+                        <li><a href="#none">팬츠</a></li>
+                        <li><a href="#none">티셔츠</a></li>
+                        <li><a href="#none">데님</a></li>
+                        <li><a href="#none">니트</a></li>
+                        <li><a href="#none">스커트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="depth1-txt">
+                        <p>가방</p>
+                    </div>
+                    <ul class="depth2">
+                        <li><a href="#none">전체</a></li>
+                        <li><a href="#none">숄더백</a></li>
+                        <li><a href="#none">토트백</a></li>
+                        <li><a href="#none">버킷백</a></li>
+                        <li><a href="#none">백팩</a></li>
+                        <li><a href="#none">크로스백</a></li>
+                        <li><a href="#none">클러치</a></li>
+                        <li><a href="#none">벨트백</a></li>
+                        <li><a href="#none">샤챌백</a></li>
+                        <li><a href="#none">트래블백</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="depth1-txt">
+                        <p>신발</p>
+                    </div>
+                    <ul class="depth2">
+                        <li><a href="#none">전체</a></li>
+                        <li><a href="#none">부츠</a></li>
+                        <li><a href="#none">펌프스힐/슬링백</a></li>
+                        <li><a href="#none">샌달/뮬</a></li>
+                        <li><a href="#none">스니커즈</a></li>
+                        <li><a href="#none">로퍼</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="depth1-txt">
+                        <p>악세사리</p>
+                    </div>
+                    <ul class="depth2">
+                        <li><a href="#none">전체</a></li>
+                        <li><a href="#none">아우터</a></li>
+                        <li><a href="#none">블라우스/셔츠</a></li>
+                        <li><a href="#none">팬츠</a></li>
+                        <li><a href="#none">티셔츠</a></li>
+                        <li><a href="#none">데님</a></li>
+                        <li><a href="#none">니트</a></li>
+                        <li><a href="#none">스커트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="depth1-txt">
+                        <p>골프/에슬레저</p>
+                    </div>
+                    <ul class="depth2">
+                        <li><a href="#none">전체</a></li>
+                        <li><a href="#none">아우터</a></li>
+                        <li><a href="#none">블라우스/셔츠</a></li>
+                        <li><a href="#none">팬츠</a></li>
+                        <li><a href="#none">티셔츠</a></li>
+                        <li><a href="#none">데님</a></li>
+                        <li><a href="#none">니트</a></li>
+                        <li><a href="#none">스커트</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            
+            <script>
+                var i =0;
+                $('.depth1-txt').click(function(){
+                    if(i === 0){
+                        $(this).next('.depth2').slideDown();
+                        $(this).addClass('active');
+                        i++;
+                    }else{
+                        $(this).next('.depth2').slideUp();
+                        $(this).removeClass('active');
+                        i = 0;
+                    };
+                });
+                
+            </script>
+        </div>
+        <div class="mo-category">
+            <h2>CATEGORY</h2>
+            <ul class="depth1">
+                <li>
+                    <div class="line">
+                        <p>의류</p>
+                    </div>
+                    <ul class="depth2">
+                        <li><a href="#none">전체</a></li>
+                        <li>
+                            <a href="#none">아우터</a>
+                            <ul class="depth3">
+                                <li><a href="#none">자켓</a></li>
+                                <li><a href="#none">코트</a></li>
+                                <li><a href="#none">점퍼</a></li>
+                                <li><a href="#none">패딩</a></li>
+                                <li><a href="#none">트렌치코트</a></li>
+                                <li><a href="#none">레더</a></li>
+                                <li><a href="#none">퍼</a></li>
+                                <li><a href="#none">후드집업</a></li>
+                                <li><a href="#none">핸드메이드</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">원피스</a></li>
+                        <li><a href="#none">블라우스/셔츠</a></li>
+                        <li><a href="#none">스커트</a></li>
+                        <li><a href="#none">팬츠</a></li>
+                        <li><a href="#none">티셔츠</a></li>
+                        <li><a href="#none">데님</a></li>
+                        <li><a href="#none">니트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="line">
+                        <p>가방</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="line">
+                        <p>신발</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="line">
+                        <p>악세사리</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="line">
+                        <p>골프/에슬레저</p>
+                    </div>
+                </li>
+
+            </ul>
+
+
+            <script>
+                var c = 0;
+                $('.depth1 .line').click(function(){
+                    if(c === 0){
+                        $(this).next('.depth2').slideDown();
+                        $(this).addClass('active');
+                        c++;
+                    }else{
+                        $(this).next('.depth2').slideUp();
+                        $(this).removeClass('active');
+                        c =0;
+                    }
+                    
+                });
+            </script>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="mobile-foot">
+            <a href="#none">공지사항</a>
+            <a href="#none">고객센터</a>
+            <a href="#none">로그아웃</a>
+        </div>
+
+    </section>
+</body></html>

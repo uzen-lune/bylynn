@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/ordersheet.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //2개짜리 전체동의
+            $('#lastChk01').click(function() {
+                /*alert("클릭됨");*/
+                var checkSiblings = $(this).parent().siblings().find('input[type=checkbox]');
+                var checked = $(this).prop('checked');
+                console.log(checked);
+                if (checked == true) {
+                    checkSiblings.prop('checked', true);
+                } else {
+                    checkSiblings.prop('checked', false);
+                };
+
+            });
+
+            var a = $('.payment-final-wrap').children('li').find('input[type=checkbox]')
+
+            $(a).
+            click(function() {
+
+                if ($('#lastChk02').prop('checked') == true && $('#lastChk03').prop('checked') == true) {
+
+                    $('#lastChk01').prop(
+                        'checked', true);
+
+                } else {
+
+                    $('#lastChk01').prop('checked', false);
+
+                }
+
+
+            });
+            //2개짜리 전체동의
+            //3개짜리 전체동의
+            /*$('#payInfoFullChk').click(function(){
+                var fullCheckSiblings = $(this).parent().siblings().find('input[type=checkbox]');
+                var checked = $(this).prop('checked');
+                console.log(checked);
+                if (checked == true) {
+                    fullCheckSiblings.prop('checked', true);
+                } else {
+                    fullCheckSiblings.prop('checked', false);
+                };
+            });
+            
+            var agreeInput = $('.agreement-wrap').children('li').find('input[type=checkbox]').not('#payInfoFullChk');
+            $(agreeInput).click(function(){
+               var agreeInputSiblings = $(this).
+            });*/
+
+            ////////////is:checked랑 name값 활용
+            var pAgreeChk = $('input[name*=pAgreeChk]');
+
+            $('#payInfoFullChk').click(function() {
+                if ($(this).is(":checked")) {
+                    pAgreeChk.prop('checked', true);
+                } else {
+                    pAgreeChk.prop('checked', false);
+                }
+            });
+
+            $(pAgreeChk).click(function() {
+                var pAgreeChked = $(pAgreeChk).length,
+                    pAgreeNotChk = $('input[name*=pAgreeChk]:checked').length;
+
+                if (pAgreeChked != pAgreeNotChk) {
+                    $('#payInfoFullChk').prop('checked', false);
+                } else {
+                    $('#payInfoFullChk').prop('checked', true);
+                }
+            });
+
+
+
+            //
+            /*$('#cashChk01').click(function(){
+                if($(this).prop('checked') == true){
+                    console.log($('input[name=cashRadio]:checked').length);
+                    if ($("input[name=cashRadio]:checked").length < 1) {
+                    alert("현금영수증 종류를 선택하세요.");
+                    return false;
+                };
+                };
+            });*/
+
+
+            //입력 안하고 전송하면 알럿띄우기
+            $('.order-btn').click(function() {
+
+
+
+                //비회원 주문 정보수집 동의
+                if ($('#non-members-chkBox').is(":checked") == false) {
+                    alert('정보수집에 동의하세요');
+                    $('label[for=non-members-chkBox]').focus();
+                    return false;
+                };
+                if ($('#up14').is(":checked") == false) {
+                    alert('정보수집에 동의하세요');
+                    $('label[for=up14]').focus();
+                    return false;
+                };
+
+
+                // 보내는사람
+
+                if ($('#orderUserName').val().length == "") {
+                    alert('이름을 입력하세요');
+                    $('#orderUserName').focus();
+                    return false;
+                };
+                if ($('#orderUserNumber').val().length == "") {
+                    alert('연락처를 입력하세요');
+                    $('#orderUserNumber').focus();
+                    return false;
+                };
+                if ($('#orderUserEmail1').val().length == "") {
+                    alert('이메일을 입력하세요');
+                    $('#orderUserEmail1').focus();
+                    return false;
+                };
+                if ($('#orderUserEmail2').val().length == "") {
+                    alert('이메일을 입력하세요');
+                    $('#orderUserEmail2').focus();
+                    return false;
+                };
+                if ($('#orderSelectEmail').val() == "") { //셀렉박스
+                    alert('select선택 경고창');
+                    $('#orderSelectEmail').focus();
+                    return false;
+
+                };
+                if ($('input[type=password]').val().length == "") {
+                    alert('비밀번호를 입력하세요');
+                    $('input[type=password]').focus();
+                    return false;
+                };
+
+
+                // 받는사람
+                if ($('#receiveUserName').val().length == "") {
+                    alert('이름을 입력하세요');
+                    $('#receiveUserName').focus();
+                    return false;
+                };
+                if ($('#receiveUserNumber').val().length == "") {
+                    alert('연락처를 입력하세요');
+                    $('#receiveUserNumber').focus();
+                    return false;
+                };
+                if ($('#receiveMessage').val().length == "") {
+                    alert('배송메세지를 선택하세요');
+                    $('#receiveMessage').focus();
+                    return false;
+                };
+                if ($('#receiveMessageDetail').val().length == "") {
+                    alert('배송메세지를 선택하세요');
+                    $('#receiveMessageDetail').focus();
+                    return false;
+                };
+                // 개인통관고유번호
+                if ($('#overseasNumber').val().length == "") {
+                    alert('개인통관고유번호를 입력하세요');
+                    $('#overseasNumber').focus();
+                    return false;
+                };
+                if ($('#overseasNumber').val().length == "") {
+                    alert('개인통관고유번호를 입력하세요');
+                    $('#overseasNumber').focus();
+                    return false;
+                };
+                if ($('#overseaChk01').val().length == "") {
+                    alert('개인통관고유번호 수집에 동의하세요');
+                    $('#overseaChk01').focus();
+                    return false;
+                };
+                if ($('#overseaChk02').val().length == "") {
+                    alert('개인통관고유부호의 판매자 제공에 동의하세요');
+                    $('#overseaChk02').focus();
+                    return false;
+                };
+
+                /*현금영수증*/
+                if ($('#cashChk01').prop('checked') == true) {
+                    console.log($('input[name=cashRadio]:checked').length);
+                    if ($("input[name=cashRadio]:checked").length < 1) {
+                        alert("현금영수증 종류를 선택하세요.");
+                        $('.cash-receipts').focus();
+                        return false;
+                    };
+                   /* if('cashPhoneNumber') */
+                    /*cashPhoneNumber
+                    CompanyRegistrationNumber*/
+                    
+                };
+
+
+
+
+
+            }); //서밋클릭
+
+            //보내는사람 셀렉박스
+            $('#orderSelectEmail').change(function() {
+                $("#orderUserEmail2").val($(this).val());
+                $("#orderUserEmail2").prop('readonly', true);
+                if ($("#orderUserEmail2").val() == "") {
+                    $("#orderUserEmail2").prop('readonly', false);
+                };
+            });
+            //input태그가 변경 되었을 때, 셀렉박스의 val변경
+
+            $('#orderUserEmail2').change(function() {
+                $('#orderSelectEmail').val($(this).val());
+            });
+            //주문자와 동일버튼
+
+            $('#sameUser').click(function() {
+                var regex = /[^0-9]/g;		// 숫자가 아닌 문자열을 선택하는 정규식
+                //
+                $('#receiveUserName').val($('.or-user-name').text());
+                $('#receiveUserNumber').val($('.or-user-tel').text().replace(regex, ""));
+                console.log($('.or-user-tel').text());
+                
+                /*readonly*/
+                if ($(this).is(':checked') == true) {
+                    $('#receiveUserName').prop('readonly', true);
+                    $('#receiveUserNumber').prop('readonly', true);
+                } else {
+                    $('#receiveUserName').prop('readonly', false);
+                    $('#receiveUserNumber').prop('readonly', false);
+                }
+
+
+            });
+            
+            /*적립금 예치금*/
+            $('.savings').find('button').click(function(e){
+                e.preventDefault();
+                var point = $('.savings .point-available span').text();
+                console.log(point);
+                var input = $('.savings input[type=text]');
+                input.val(point);             
+            });
+            $('.deposit').find('button').click(function(e){
+                e.preventDefault();
+                var point = $('.deposit .point-available span').text();
+                console.log(point);
+                var input = $('.deposit input[type=text]');
+                input.val(point);             
+            });
+            
+            
+            
+            //현금 영수증이 체크되어있을때
+            /*if ($('#cashChk01').prop('checked') == true) {
+                
+            };*/
+            
+            /*값이 바뀌면*/
+            $('#orderUserName').change(function(){ //이름 입력
+                var a = $(this).val()
+                console.log(a);
+                $('.or-user-name').text(a);
+            });
+            
+            $('#orderUserNumber').change(function(){ //전화번호 입력
+                var a = $(this).val()
+                console.log(a);
+                $('.or-user-tel').text(a.slice(0,3)+"-"+a.slice(3,7)+"-"+a.slice(7));
+            });
+            
+            $('#orderUserEmail1').change(function(){ //메일1
+                var a = $(this).val()
+                console.log(a);
+                $('.mail1').text(a);
+            });
+            $('#orderUserEmail2').change(function(){ //메일2
+                var a = $(this).val()
+                console.log(a);
+                $('.mail2').text(a);
+            });
+            
+            /*주문하시는 분과 동일*/
+            /*$('#sameUser').click(function(){
+                
+            });*/
+
+
+
+
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <header class="header-sub">
+        <ul class="navibar">
+            <li>
+                <a href="#none" onclick="window.history.back()" class="back">뒤로가기</a>
+                <a href="index.html" class="home">홈</a>
+            </li>
+            <li>
+                <a href="#none" class="search">검색</a>
+                <a href="cart.html" class="cart">장바구니</a>
+            </li>
+        </ul>
+    </header>
+    <section class="ordersheet-contents">
+        <h2>주문서 작성</h2>
+        <div class="signUp">
+            <p>회원으로 가입하시면 할인 및 적립금 등의<br>
+                다양한 혜택을 받으실 수 있습니다. </p>
+            <h4>신규회원 특별혜택</h4>
+            <a href="#none">회원가입</a>
+        </div>
+        <form action="#none">
+            <fieldset class="non-members-agreement">
+                <legend>비회원 주문 정보수집 동의</legend>
+                <p>비회원 주문 시 쿠폰 및 적립금 등의 혜택을 받을 수 없습니다. 간단한 과정을 거쳐 회원가입 하시고 회원 혜택을 누리시기 바랍니다.</p>
+                <p>비회원 구매 시 입력하신 비밀번호와 결제완료 후 노출되는 주문번호를 통해서 구매내역을 조회하실 수 있습니다.</p>
+                <div>
+                    <input type="checkbox" name="non-members-chkBox" id="non-members-chkBox">
+                    <label for="non-members-chkBox" tabindex="0">비회원 주문 개인정보 수집 및 이용에 동의합니다. <br>(필수)</label>
+                    <a href="#none">전체보기</a>
+                </div>
+                <div>
+                    <input type="checkbox" name="up14" id="up14" tabindex="0">
+                    <label for="up14" tabindex="0">만 14세 이상입니다.(필수)</label>
+                </div>
+
+            </fieldset>
+            <fieldset class="customer-order">
+                <legend>주문하시는분</legend>
+                <ul class="gray-box">
+                    <li>주문결제 및 정확한 배송을 위해 반드시 실명으로 주문해 주셔야 합니다.</li>
+                    <li>실명이 아닌 경우 변경 버튼을 통해 실명으로 변경하여 주시기 바랍니다.</li>
+                </ul>
+                <ul class="order-user-info">
+                    <li class="or-user-name">홍길동</li>
+                    <li class="or-user-tel">010-1234-5678</li>
+                    <li class="or-user-mail"><span class="mail1">gildong</span>@<span class="mail2">mail.com</span></li>
+                </ul>
+                <input type="text" name="orderUserName" id="orderUserName" placeholder="이름(필수)">
+                <input type="text" name="orderUserNumber" id="orderUserNumber" placeholder="연락처1-없이(필수)" maxlength="11">
+                <div class="email-wrap">
+                    <input type="text" name="orderUserEmail" id="orderUserEmail1" placeholder="수신용 이메일(필수)">@<input type="text" name="orderUserEmail" id="orderUserEmail2">
+                    <select name="orderSelectEmail" id="orderSelectEmail">
+                        <option value="">직접입력</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="daum.net">다음</option>
+                        <option value="gmail.com">지메일</option>
+                    </select>
+                </div>
+                <input type="password" placeholder="비밀번호(필수)">
+                <input type="password" placeholder="비밀번호 확인(필수)">
+            </fieldset>
+            <fieldset class="customer-receive">
+                <legend>받으시는 분<span>배송지목록</span></legend>
+
+                <ul class="receive-tab">
+                    <li class="active">상품정보</li>
+                    <li>최근 배송지</li>
+                    <li>신규 배송지</li>
+                </ul>
+                <div class="">
+                    <ul class="receive-user-info">
+                        <li class="re-user-name">홍길동</li>
+                        <li class="re-user-tel">010-1234-5678 / 02-9876-5432</li>
+                        <li class="re-user-add">(12345) 서울특별시 강남구 테헤란로20길 9 동궁빌딩 6층</li>
+                    </ul>
+                    <ul class="input-wrap">
+                        <li>
+                            <input type="checkbox" name="sameUser" id="sameUser">
+                            <label for="sameUser" tabindex="0">주문하시는 분과 동일</label>
+                        </li>
+                        <li>
+                            <input type="text" name="receiveUserName" id="receiveUserName" placeholder="이름 (필수)">
+                        </li>
+                        <li>
+                            <input type="text" name="receiveUserNumber" id="receiveUserNumber" placeholder="연락처1-없이 (필수)" maxlength="11">
+                        </li>
+                        <li class="zipCodeWrap">
+                            <input type="text" name="receiveZipCode" id="receiveZipCode" placeholder="우편번호 (필수)" readonly>
+                            <label for="receiveZipCode">우편번호</label>
+                            <input type="text" name="receiveZipCodeDetail" id="receiveZipCodeDetail" placeholder="주소" readonly>
+                        </li>
+                        <li>
+                            <select name="receiveMessage" id="receiveMessage">
+                                <option value="배송 메세지를 선택하세요.">배송 메세지를 선택하세요.</option>
+                                <option value="집">집</option>
+                                <option value="회사">회사</option>
+                            </select>
+                        </li>
+                        <li>
+                            <textarea name="receiveMessageDetail" id="receiveMessageDetail" cols="30" rows="10" placeholder="50자 이내로 입력해 주세요."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="defaultAddress" id="defaultAddress" checked>
+
+                            <label for="defaultAddress" tabindex="0">기본배송지로 선택</label>
+                        </li>
+
+                    </ul>
+                </div>
+            </fieldset>
+
+            <fieldset class="ordersheet-pdt">
+                <legend>배송상품</legend>
+                <div class="group">
+                    <div class="group-title">
+                        <div>
+                            <input type="checkbox" name="cart-bynn1" id="cart-bynn1">
+
+                            <label for="cart-bynn1" tabindex="0">바이린1 배송상품</label>
+                        </div>
+                        <a href="">지역별 추가배송비</a>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gifts-text-wrap">
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                </dl>
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                </dl>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="add-text">
+                                <em>[추가]</em>
+                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="pdt-benefits">
+                                <p>기본배송비</p>
+                                <p>3,000원</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="pdt-benefits">
+                                <p>상품별 배송비</p>
+                                <p>3,000원</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--/그룹1-->
+                <!--그룹2-->
+                <div class="group">
+                    <div class="group-title">
+                        <div>
+                            <input type="checkbox" name="cart-bynn2" id="cart-bynn2">
+
+                            <label for="cart-bynn2" tabindex="0">바이린2 배송상품</label>
+                        </div>
+                        <a href="">지역별 추가배송비</a>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="pdt-info">
+                            <div class="container">
+                                <div class="pdt-info-img">
+                                    <img src="../images/cart/pdt.jpg" alt="">
+                                </div>
+                                <div class="pdt-info-detail">
+                                    <p class="pdt-brand">LYNN</p>
+                                    <h4>클래식 크롭 테일러드 자켓</h4>
+                                    <ul class="pdt-option">
+                                        <li>브라운 / 55</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gifts-text-wrap">
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)</dd>
+
+                                </dl>
+                                <dl class="gifts-text">
+                                    <dt>[사은품]</dt>
+                                    <dd>브랜드명 사은품명-1개 (2개)<span>*소진</span></dd>
+
+                                </dl>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="add-text">
+                                <em>[추가]</em>
+                                <p>맨투맨티셔츠 빨강/L-1개 (총2개)</p>
+                            </div>
+                            <div class="each-pdt-price">
+                                <p>수량2개</p>
+                                <strong>9,000원</strong>
+                            </div>
+                            <div class="pdt-benefits">
+                                <p>상품별 배송비</p>
+                                <p>3,000원</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+            <fieldset class="promotion">
+                <legend>주문 증정 프로모션</legend>
+                <div class="promotion-title">
+                    <h4>자동지급형 사은품 증정 프로모션 </h4>
+                    <p>(2020-11-01~2022-11-30)</p>
+                </div>
+                <div class="box">
+                    <div class="pdt-info">
+                        <div class="container">
+                            <div class="pdt-info-img">
+                                <img src="../images/cart/pdt.jpg" alt="">
+                            </div>
+                            <div class="pdt-info-detail">
+                                <p class="pdt-brand">LYNN</p>
+                                <h4>클래식 크롭 테일러드 자켓</h4>
+                                <ul class="pdt-option">
+                                    <li>브라운 / 55</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pdt-info">
+                        <div class="container">
+                            <div class="pdt-info-img">
+                                <img src="../images/cart/pdt.jpg" alt="">
+                            </div>
+                            <div class="pdt-info-detail">
+                                <p class="pdt-brand">LYNN</p>
+                                <h4>클래식 크롭 테일러드 자켓</h4>
+                                <ul class="pdt-option">
+                                    <li>브라운 / 55</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pdt-info">
+                        <div class="container">
+                            <div class="pdt-info-img">
+                                <img src="../images/cart/pdt.jpg" alt="">
+                            </div>
+                            <div class="pdt-info-detail">
+                                <p class="pdt-brand">LYNN</p>
+                                <h4>클래식 크롭 테일러드 자켓</h4>
+                                <ul class="pdt-option">
+                                    <li>브라운 / 55</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+            <fieldset class="overseas-direct">
+                <legend>해외직배송 개인통관 고유부호</legend>
+                <input type="text" name="overseasNumber" id="overseasNumber" placeholder="개인통관 고유부호">
+                <p>상품을 받는 분의 명의로 통관이 진행되므로 고객 님의 정보를 입력해주세요.</p>
+                <div class="overseas-checkbox-wrap">
+                    <input type="checkbox" name="overseaChk01" id="overseaChk01">
+                    <label for="overseaChk01" tabindex="0">해외직배송 상품의 수입신고를 위한 개인통관고유부호 수집에 동의합니다.</label>
+
+                </div>
+                <a href="">전체보기</a>
+                <div class="overseas-checkbox-wrap">
+                    <input type="checkbox" name="overseaChk02" id="overseaChk02">
+                    <label for="overseaChk02" tabindex="0">해외직배송 상품의 수입신고를 위한 개인통관고유부호의 판매자 제공에 동의합니다.</label>
+
+                </div>
+                <a href="">전체보기</a>
+                <ul>
+                    <li>개인통관 고유부호 정보수정이 필요할 경우 마이페이지>개인정보>개인통관고유부호 관리에서 수정하실 수 있습니다.</li>
+                    <li>해외배송상품은 통상 5~15일 정도의 배송기간이 소요됩니다.</li>
+                    <li>취소/반품/교환에 항공배송료 등이 발생할 수 있습니다.</li>
+                    <li>해외직배송 상품은 관세청 통관을 위해 '수령인'의 개인통관고유부호를 판매자에게 제공합니다.</li>
+                    <li>주문완료 후, 개인통관고유부호는 수정할 수 없으므로 입력이 올바르게 되었는지 확인해 주시기 바랍니다.</li>
+                    <li>개인통관고유부호는 통관 시 주민등록번호 대신 사용 가능한 번호로, 관세청 사이트에서 발급받으실 수 있습니다. </li>
+                </ul>
+            </fieldset>
+            <fieldset class="benefits">
+                <legend>할인 및 혜택</legend>
+                <div class="coupon">
+                    <h4>상품할인쿠폰</h4>
+                    <div>
+                        <input type="text" name="coupon01" id="coupon01" readonly>
+                        <label for="coupon01">원</label>
+                        <button>쿠폰 조회/적용</button>
+                    </div>
+                    <p>(사용가능한 쿠폰 0장)</p>
+                </div>
+                <div class="coupon">
+                    <h4>주문할인쿠폰</h4>
+                    <div>
+                        <input type="text" name="coupon02" id="coupon02" readonly>
+                        <label for="coupon02">원</label>
+                        <button>쿠폰 조회/적용</button>
+                    </div>
+                    <p>(사용가능한 쿠폰 0장)</p>
+                </div>
+                <div class="coupon">
+                    <h4>무료배송쿠폰</h4>
+                    <div>
+                        <input type="text" name="coupon03" id="coupon03" readonly>
+                        <label for="coupon03">원</label>
+                        <button>쿠폰 조회/적용</button>
+                    </div>
+                    <p>(사용가능한 쿠폰 0장)</p>
+                </div>
+                <div class="coupon">
+                    <h4>사은품증정쿠폰</h4>
+                    <div>
+                        <input type="text" name="coupon04" id="coupon04" re readonly>
+                        <label for="coupon04">원</label>
+                        <button>쿠폰 조회/적용</button>
+                    </div>
+                    <p>(사용가능한 쿠폰 0장)</p>
+                </div>
+                <ul>
+                    <li><span>&middot;</span>추가구성품은 쿠폰할인에서 제외됩니다.</li>
+                </ul>
+
+            </fieldset>
+            <fieldset class="point">
+                <legend>적립금/예치금</legend>
+                <div class="point-apply-wrap">
+                    <div class="point-apply savings">
+                        <h4>적립금</h4>
+                        <div>
+                            <input type="text" name="" id="">
+                            <label for="">원</label>
+                            <button>전체사용</button>
+                        </div>
+                        <p class="point-available">(사용가능 적립금 : 10,000원 / 보유 적립금 : <span>3,000</span>원)</p>
+                        <p class="point-available-des">1,000원 이상부터 10원 단위로 사용 가능합니다.</p>
+                    </div>
+                    <div class="point-apply deposit">
+                        <h4>예치금</h4>
+                        <div>
+                            <input type="text" name="" id="">
+                            <label for="">원</label>
+                            <button>전체사용</button>
+                        </div>
+                        <p class="point-available">(보유 예치금 : <span>3,000</span>원)</p>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="payment-information">
+                <legend>결제정보<span>카트혜택</span></legend>
+                <div class="same-checkBox">
+                    <input type="checkbox" name="same-method-of-payment" id="same-method-of-payment">
+                    <label for="same-method-of-payment" tabindex="0">지금 선택한 결제수단을 다음에도 사용</label>
+                </div>
+                <ul class="method-of-payment">
+                    <li class="active">신용카드</li>
+                    <li>안심가상계좌</li>
+                    <li>간편결제</li>
+                    <li>PAYCO</li>
+                    <li>카카오페이</li>
+                    <li>네이버페이</li>
+                </ul>
+                <div class="select-bank">
+                    <h4>입금은행</h4>
+                    <select name="" id="">
+                        <option value="은행을 선택해 주세요">은행을 선택해 주세요.</option>
+                        <option value="국민은행">국민은행</option>
+                        <option value="신한은행">신한은행</option>
+                        <option value="농협">농협</option>
+                    </select>
+                    <p><span>&middot;</span>입금기한 : 2022-11-30</p>
+                </div>
+                <div class="point-caution">
+                    <p>포인트/예치금으로만 결제됩니다.</p>
+                </div>
+                <div class="cash-receipts">
+                    <div class="cash-check">
+                        <input type="checkbox" name="cashChk01" id="cashChk01" tabindex="0">
+                        <label for="cashChk01" tabindex="0">현금영수증 신청</label>
+                    </div>
+                    <div class="cash-radio">
+                        <input type="radio" name="cashRadio" id="cash-radio01">
+                        <label for="cash-radio01">개인소득공제용</label>
+                        <input type="radio" name="cashRadio" id="cash-radio02">
+                        <label for="cash-radio02">사업자증빙용</label>
+                    </div>
+                    <div class="cash-number">
+                        <h5>휴대폰번호</h5>
+                        <input type="text" name="cashPhoneNumber" id="cashPhoneNumber" placeholder="휴대폰번호-없이 입력">
+                        <h5>사업자등록번호</h5>
+                        <input type="text" name="CompanyRegistrationNumber" id="CompanyRegistrationNumber" placeholder="사업자등록번호-없이 입력">
+                    </div>
+                </div>
+                <ul class="agreement-wrap">
+                    <li class="full-agreement">
+                        <input type="checkbox" name="payInfoFullChk" id="payInfoFullChk">
+                        <label for="payInfoFullChk" tabindex="0">전체동의</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pAgreeChk01" id="pAgreeChk01">
+                        <label for="pAgreeChk01" tabindex="0">전자금융거래 이용약관 (필수)</label>
+                        <a href="#none">전체보기</a>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pAgreeChk02" id="pAgreeChk02">
+                        <label for="pAgreeChk02" tabindex="0">개인정보 수집 및 이용 동의 (필수)</label>
+                        <a href="#none">전체보기</a>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pAgreeChk03" id="pAgreeChk03">
+                        <label for="pAgreeChk03" tabindex="0">개인정보 제3자 제공 동의 (필수)</label>
+                        <a href="#none">전체보기</a>
+                    </li>
+
+                </ul>
+                <div class="grayBox-wrap">
+                    <ul class="grayBox">
+                        <li><span>&middot;</span>주문 변경 시 카드사 혜택 및 할부 적용 여부는 해당 카드사 정책에 따라 변경될 수 있습니다.</li>
+                        <li><span>&middot;</span>네이버페이는 네이버ID로 별도 앱 설치 없이 신용카드 또는 은행계좌 정보를 등록하여 네이버페이 비밀번호로 결제할 수 있는 간편결제 서비스입니다.</li>
+                        <li><span>&middot;</span>결제 가능한 신용카드 : 신한, 삼성, 현대, BC, 국민, 하나, 롯데, NH농협, 씨티, 카카오뱅크</li>
+                        <li><span>&middot;</span>결제 가능한 은행 : NH농협, 국민, 신한, 우리, 기업, SC제일, 부산, 경남, 수협, 우체국, 미래에셋대우, 광주, 대구, 전북, 새마을금고, 제주은행, 신협, 하나은행, 케이뱅크, 카카오뱅크, 삼성증권, KDB산업은행, 씨티은행, SBI은행, 유안타증권, 유진투자증권</li>
+                        <li><span>&middot;</span>네이버페이 카드 간편결제는 네이버페이에서 제공하는 카드사 별 무이자, 청구할인 혜택을 받을 수 있습니다.</li>
+                    </ul>
+                </div>
+                <ul class="payment-sum">
+                    <li>
+                        <h4>결제금액정보</h4>
+                    </li>
+                    <li>
+                        <p>상품주문금액</p>
+                        <p>30,000원</p>
+                    </li>
+                    <li>
+                        <p>회원쿠폰할인금액</p>
+                        <p>-3,000원</p>
+                    </li>
+                    <li>
+                        <p>배송비</p>
+                        <p>+2,500원</p>
+                    </li>
+                    <li>
+                        <p>무료배송쿠폰 면제금액</p>
+                        <p>-3,000원</p>
+                    </li>
+                    <li>
+                        <p>적립금 사용금액</p>
+                        <p>-3,000원</p>
+                    </li>
+                    <li>
+                        <p>예치금 사용금액</p>
+                        <p>-3,000원</p>
+                    </li>
+                </ul>
+                <ul class="payment-final-wrap">
+                    <li class="payment-final">
+                        <p>최종결제금액</p>
+                        <p>29,000,500원</p>
+                    </li>
+                    <li class="reserved">
+                        <p>적립예정 적립금</p>
+                        <p>3,000원</p>
+                    </li>
+                    <li class="all-agreement">
+                        <input type="checkbox" name="lastChk01" id="lastChk01">
+                        <label for="lastChk01" tabindex="0">전체동의</label>
+                    </li>
+                    <li class="law-agreement">
+                        <input type="checkbox" name="lastChk02" id="lastChk02">
+                        <label for="lastChk02" tabindex="0">주문할 상품의 내용,가격,배송정책 등 구매조건을 확인하였으며, 구매진행에 동의합니다. (필수)<br>[전자상거래법 제 8조 2항]</label>
+                    </li>
+                    <li class="terms-of-service">
+                        <input type="checkbox" name="lastChk03" id="lastChk03">
+                        <label for="lastChk03" tabindex="0">G1 이용약관에 동의합니다. (필수)</label>
+                        <a href="#none">전체보기</a>
+                    </li>
+                </ul>
+                <input type="submit" value="주문하기" class="order-btn">
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <h3>(주) 린 컴퍼니</h3>
+        <ul class="adress">
+            <li>대표이사 문경란</li>
+            <li>서울 강남구 영동대로 734</li>
+            <li>개인정보보호책임자 이성춘</li>
+            <li>통신판매업신고번호 제2018-서울강남-00940</li>
+            <li>사업자등록번호 120-81-84619</li>
+            <li>이메일 info@bylynn.shop</li>
+        </ul>
+        <ul class="link">
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">고객센터</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">매장안내</a></li>
+            <li><a href="#none">멤버십 혜택</a></li>
+        </ul>
+        <ul class="foot-sns">
+            <li class="playstore"><a href="#none">플레이스토어</a></li>
+            <li class="appstore"><a href="#none">앱스토어</a></li>
+            <li class="naver"><a href="#none">네이버</a></li>
+            <li class="youtube"><a href="#none">유튜브</a></li>
+            <li class="instagram"><a href="#none">인스타그램</a></li>
+            <li class="facebook"><a href="#none">페이스북</a></li>
+        </ul>
+        <p class="copy">Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html
