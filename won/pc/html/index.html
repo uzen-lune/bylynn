@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bylynn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //스와이퍼
+            /*var swiper = new Swiper('.swiper', {
+                slidesPerView: "auto",
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true,
+                    hide: true,
+
+                },
+            });*/
+
+
+            $('.menu').click(function() {
+                var a = $(this).css('background-image');
+                console.log(a);
+                var menucheck = a.includes('menu');
+                if (menucheck == true) {
+                    $('.gnb').animate({
+                        left: 0
+                    });
+                    $('.menu').css({
+                        backgroundImage: "url(../images/close.svg)"
+                    });
+
+                } else {
+                    $('.gnb').animate({
+                        left: "-100%"
+                    });
+                    $('.menu').css({
+                        backgroundImage: "url(../images/menu.svg)"
+                    });
+
+                };
+
+            });
+            //slide-five
+            var i = 0
+            $('.slide_five .btn-prev').click(function(e) {
+                e.preventDefault();
+                var slide = $('.slide_five .slide-wrap .slide');
+                var slideWidth = slide.width();
+                var marginLeft = slide.css("margin-left");
+                var a = slide.css('margin-right').replace('px', '');
+                var margin = Number(a);
+                var slideMove = slideWidth + (margin * 2);
+                if (i < 1) {
+                    i++;
+                    $('.slide_five .slide-wrap').animate({
+                        left: i * slideMove
+                    });
+                    console.log(i);
+                };
+            });
+            $('.slide_five .btn-next').click(function(e) {
+                e.preventDefault();
+                var slide = $('.slide_five .slide-wrap .slide');
+                var slideWidth = slide.width();
+                var marginLeft = slide.css("margin-left");
+                var a = slide.css('margin-right').replace('px', '');
+                var margin = Number(a);
+                var slideMove = slideWidth + (margin * 2);
+                if (i > -1) {
+                    i--;
+                    $('.slide_five .slide-wrap').animate({
+                        left: i * slideMove
+                    });
+                    console.log(i);
+                };
+            });
+
+            /*search-layer*/
+            $('.search .txt').click(function() {
+                var focus = ($(this).is(':focus'));
+                if (focus == true) {
+                    $('.search-layer').css({
+                        display: "flex"
+                    });
+                };
+
+            });
+            
+            /*$('html').click(function(e) {
+                if (!$(e.target).hasClass(".txt")) {
+                    $('.search-layer').css({
+                        display: "none"
+                    });
+                }
+            });
+            */
+
+
+
+
+        });
+        $(window).scroll(function() {
+            var sctop = $(window).scrollTop();
+            /*console.log(sctop);*/
+            if (sctop > 70) {
+                $('header').css({
+                    backgroundColor: "rgba(255,255,255,0.8)",
+                    borderBottom: "1px solid #333"
+                });
+            } else {
+                $('header').css({
+                    backgroundColor: "transparent",
+                    borderBottom: 0
+                });
+            };
+
+
+            if (sctop > 1000) {
+                $('.aside-top').css({
+                    display: "block"
+                });
+            } else {
+                $('.aside-top').css({
+                    display: "none"
+                });
+            };
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <nav class="gnb">
+                <ul class="depth1">
+                    <li>
+                        <p>의류</p>
+                        <ul class="depth2">
+                            <li><a href="#none">ALL</a></li>
+                            <li><a href="#none">아우터</a></li>
+                            <li><a href="#none">상의</a></li>
+                            <li><a href="#none">하의</a></li>
+                            <li><a href="#none">원피스</a></li>
+                            <li><a href="#none">악세서리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>가방</p>
+                    </li>
+                    <li>
+                        <p>신발</p>
+                    </li>
+                    <li>
+                        <p>액세서리</p>
+                    </li>
+                    <li>
+                        <p>골프/애슬레저</p>
+                    </li>
+                    <li>
+                        <p>쇼핑의목적</p>
+                    </li>
+                    <li>
+                        <p>브랜드</p>
+                    </li>
+                </ul>
+                <ul class="depth1_s">
+                    <li><a href="#none">오늘의 업데이트</a></li>
+                    <li><a href="#none">베스트</a></li>
+                    <li><a href="#none">기획전</a></li>
+                    <li><a href="#none">ABOUT LYNN</a></li>
+                </ul>
+            </nav>
+            <div class="left">
+                <div class="menu"><a href="#none">메뉴버튼</a></div>
+
+                <h1 class="logo"><a href="#none">BYLYNN.SHOP</a></h1>
+            </div>
+            <div class="right">
+                <form action="">
+                    <fieldset>
+                        <legend>검색</legend>
+                        <div class="search">
+                            <input type="text" class="txt">
+                            <button type="button" class="btn">검색</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+                <ul class="util">
+                    <li><a href="#none" class="mypage">마이페이지<i></i></a></li>
+                    <li><a href="#none" class="bag">장바구니<i></i></a></li>
+                    <li><a href="#none" class="login">로그인</a>/<a href="#none" class="join">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="search-layer">
+        <div class="layer">
+            <div class="recent">
+                <h4>최근검색어</h4>
+                <ul>
+                    <li>
+                        <a href="#none">엘바테게브<span>삭제</span></a>
+                    </li>
+                    <li>
+                        <a href="#none">오소이<span>삭제</span></a>
+                    </li>
+                    <li>
+                        <a href="#none">Ette<span>삭제</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="popular">
+                <h4>인기검색어</h4>
+                <ul>
+                    <li>
+                        <p class="number">1</p>
+                        <a href="#none" class="name">숏 패딩</a>
+                        <i class="up">업</i>
+                    </li>
+                    <li>
+                        <p class="number">2</p>
+                        <a href="#none" class="name">핸드메이드 코트</a>
+                        <i class="up">업</i>
+                    </li>
+                    <li>
+                        <p class="number">3</p>
+                        <a href="#none" class="name">머플러</a>
+                        <i class="up">업</i>
+                    </li>
+                    <li>
+                        <p class="number">4</p>
+                        <a href="#none" class="name">니트 원피스</a>
+                        <i class="down">다운</i>
+                    </li>
+                    <li>
+                        <p class="number">5</p>
+                        <a href="#none" class="name">롱 부츠</a>
+                        <i class="up">업</i>
+                    </li>
+                    <li>
+                        <p class="number">6</p>
+                        <a href="#none" class="name">패딩 조끼</a>
+                        <i class="down">다운</i>
+                    </li>
+                    <li>
+                        <p class="number">7</p>
+                        <a href="#none" class="name">숏 코트</a>
+                        <i class="up">업</i>
+                    </li>
+                    <li>
+                        <p class="number">8</p>
+                        <a href="#none" class="name">NIKE</a>
+                        <i class="up">업</i>
+                    </li>
+                    <li>
+                        <p class="number">9</p>
+                        <a href="#none" class="name">더블 코트</a>
+                        <i class="up">업</i>
+                    </li>
+                    <li>
+                        <p class="number">10</p>
+                        <a href="#none" class="name">GANNI</a>
+                        <i class="up">업</i>
+                    </li>
+                </ul>
+            </div>
+            <div class="rank">
+                <h4>판매랭킹</h4>
+                <ul>
+                    <li>
+                        <a href="#none">
+                            <div class="img-box">
+                                <img src="../images/rank01.svg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h5 class="brand">LINE</h5>
+                                <p class="name">비스코트 하프넥 니트</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <div class="img-box">
+                                <img src="../images/rank01.svg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h5 class="brand">LINE</h5>
+                                <p class="name">비스코트 하프넥 니트</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <div class="img-box">
+                                <img src="../images/rank01.svg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h5 class="brand">LINE</h5>
+                                <p class="name">비스코트 하프넥 니트</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <div class="img-box">
+                                <img src="../images/rank01.svg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h5 class="brand">LINE</h5>
+                                <p class="name">비스코트 하프넥 니트</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <div class="img-box">
+                                <img src="../images/rank01.svg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h5 class="brand">가든오브라이프</h5>
+                                <p class="name">마이카인드 여성 멀티비타민 30정</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <main id="main">
+        <div class="swiper slide-show">
+            <ul class="swiper-wrapper slide-wrap">
+                <li class="swiper-slide slide">
+                    <div class="img-box">
+                        <img src="../images/main01.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <p class="tit">winter essential</p>
+                        <p class="des">지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                    </div>
+                </li>
+                <li class="swiper-slide slide">
+                    <div class="img-box">
+                        <img src="../images/main01.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <p class="tit">winter essential</p>
+                        <p class="des">지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                    </div>
+                </li>
+                <li class="swiper-slide slide">
+                    <div class="img-box">
+                        <img src="../images/main01.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <p class="tit">winter essential</p>
+                        <p class="des">지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                    </div>
+                </li>
+                <li class="swiper-slide slide">
+                    <div class="img-box">
+                        <img src="../images/main01.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <p class="tit">winter essential</p>
+                        <p class="des">지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                    </div>
+                </li>
+                <li class="swiper-slide slide">
+                    <div class="img-box">
+                        <img src="../images/main01.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <p class="tit">winter essential</p>
+                        <p class="des">지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script>
+            var swiper = new Swiper(".slide-show", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                    draggable: true,
+                    hide: true,
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+    </main>
+    <article>
+        <!--banner-->
+        <section class="banner">
+            <div class="box b1">
+                <a href="#none">
+                    <img src="../images/banner01.jpg" alt="">
+                    <div class="opacity">
+                        <div class="txt">
+                            <h3>멤버쉽 안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box b2">
+                <a href="#none">
+                    <img src="../images/banner02.jpg" alt="">
+                    <div class="opacity">
+                        <div class="txt">
+                            <h3>멤버쉽 안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box b3">
+                <a href="#none">
+                    <img src="../images/banner03.jpg" alt="">
+                    <div class="opacity">
+                        <div class="txt">
+                            <h3>멤버쉽 안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box b4">
+                <a href="#none">
+                    <img src="../images/banner04.jpg" alt="">
+                    <div class="opacity">
+                        <div class="txt">
+                            <h3>멤버쉽 안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!--trend-->
+        <section class="trend">
+            <h2>요즘 트렌드</h2>
+            <div class="slide_five">
+                <ul class="slide-wrap">
+                    <li class="slide s3">
+                        <a href="#none">
+                            <img src="../images/trend03.jpg" alt="">
+                            <div class="txt">
+                                <p class="tit">SOMEDAY</p>
+                                <p class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slide s1">
+                        <a href="#none">
+                            <img src="../images/trend01.jpg" alt="">
+                            <div class="txt">
+                                <p class="tit">클래식룩</p>
+                                <p class="des">클래식룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slide s2">
+                        <a href="#none">
+                            <img src="../images/trend02.jpg" alt="">
+                            <div class="txt">
+                                <p class="tit">이번주 데이트룩</p>
+                                <p class="des">이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slide s3">
+                        <a href="#none">
+                            <img src="../images/trend03.jpg" alt="">
+                            <div class="txt">
+                                <p class="tit">SOMEDAY</p>
+                                <p class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="slide s1">
+                        <a href="#none">
+                            <img src="../images/trend01.jpg" alt="">
+                            <div class="txt">
+                                <p class="tit">클래식룩</p>
+                                <p class="des">클래식룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn">
+                    <a href="#" class="btn-prev">이전</a>
+                    <a href="#" class="btn-next">다음</a>
+                </div>
+            </div>
+
+
+
+
+        </section>
+        <section class="start">
+            <div class="tit">
+                <h2>시작을 완성하는 샵</h2>
+                <p>당신의 새로운 시작을 응원하며, 모든 변화의 순간을 함께하는 바이린샵이 되겠습니다.</p>
+            </div>
+            <div class="swiper start-swiper">
+                <ul class="swiper-wrapper slide-wrap">
+                    <li class="swiper-slide slide all">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/startAll.svg" alt="">
+                                    <!--<strong>ALL</strong>-->
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">전체(<span>102</span>)</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide slide">
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                        <div class="vertical">
+                            <div class="img-box">
+                                <a href="#none">
+                                    <img src="../images/start02.svg" alt="">
+                                </a>
+                            </div>
+                            <a href="#none" class="txt">디어케이</a>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+
+
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <script>
+                var swiper = new Swiper(".start-swiper", {
+                    slidesPerView: "auto",
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: true,
+                        hide: false,
+                    },
+                });
+            </script>
+        </section>
+
+        <!---->
+        <section class="update">
+            <h2>오늘의 업데이트</h2>
+            <div class="wrap">
+                <div class="left">
+                    <div class="txt">
+                        <p>TODAY'S<br>NEW STYLE</p>
+                        <strong class="noto-serif">175</strong>
+                    </div>
+                    <button type="button">쇼핑하기</button>
+
+                </div>
+                <div class="swiper right">
+                    <ul class="swiper-wrapper">
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+
+                                    <div class="opacity opacity-c">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+
+                                    <div class="opacity opacity-c">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity opacity-c">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+                        <li class="box swiper-slide">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/pdt01.jpg" alt="">
+                                    <div class="opacity">
+                                        <div class="txt">
+                                            <div class="cir noto-serif">
+                                                <p><span>30</span>%</p>
+                                            </div>
+                                            <div class="price">
+                                                <p>500,000</p>
+                                                <strong>359,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdt-des">
+                                    <p class="tit">KENNETH LADY</p>
+                                    <p class="des">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </a>
+                            <button class="wish">좋아요</button>
+                        </li>
+
+
+                    </ul>
+                    <div class="swiper-scrollbar"></div>
+
+                </div>
+            </div>
+            <script>
+                var swiper = new Swiper(".update .right", {
+                    slidesPerView: "auto",
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: true,
+                        hide: false,
+                    },
+                });
+            </script>
+        </section>
+
+        <!--프로모션-->
+        <section class="promotion">
+            <h2>이번주 프로모션</h2>
+            <div class="slide_five">
+                <ul class="slide-wrap">
+                    <li class="slide s1">
+                        <div class="slide-top">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/trend03.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="tit">이번주 데이트룩</p>
+                                    <p class="des">이번주 테이트룩을 추천드립니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide-bottom">
+                            <ul class="list-wrap">
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail05.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">LINE</a>
+                                        <a href="#none" class="name">로엘 헤링본 체크 벨티드 자켓</a>
+                                        <p class="price">219,000원</p>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail06.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">DEAR K</a>
+                                        <a href="#none" class="name">컬러 타이 글로시 블라우스</a>
+                                        <p class="price">104,300원<span></span>149,000원</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slide s2">
+                        <div class="slide-top">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/trend01.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="tit">클래식룩</p>
+                                    <p class="des">클래식룩을 추천드립니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide-bottom">
+                            <ul class="list-wrap">
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail01.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">LINE</a>
+                                        <a href="#none" class="name">머메이드라인 로고 레더 벨티드 원피스</a>
+                                        <p class="price">219,000원</p>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail02.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">KENNETH LADY</a>
+                                        <a href="#none" class="name">아가일 짜임 V넥 니트 베스트</a>
+                                        <p class="price">59,000원</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slide s3">
+                        <div class="slide-top">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/trend02.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="tit">이번주 데이트룩</p>
+                                    <p class="des">이번주 테이트룩을 추천드립니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide-bottom">
+                            <ul class="list-wrap">
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail03.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">DEAR K</a>
+                                        <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                        <p class="price">97,300원<span>139,000원</span></p>
+                                    </div>
+
+                                    <div class="discount">
+                                        <span class="noto-serif">30%</span>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail04.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">LINE</a>
+                                        <a href="#none" class="name">글린 노치드 카라 캐시미어 자켓</a>
+                                        <p class="price">369,000원</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slide s4">
+                        <div class="slide-top">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/trend03.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="tit">SOMEDAY</p>
+                                    <p class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide-bottom">
+                            <ul class="list-wrap">
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail05.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">LINE</a>
+                                        <a href="#none" class="name">로엘 헤링본 체크 벨티드 자켓</a>
+                                        <p class="price">219,000원</p>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail06.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">DEAR K</a>
+                                        <a href="#none" class="name">컬러 타이 글로시 블라우스</a>
+                                        <p class="price">104,300원<span>149,000원</span></p>
+                                    </div>
+                                    <div class="discount">
+                                        <span class="noto-serif">30%</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="slide s5">
+                        <div class="slide-top">
+                            <a href="#none">
+                                <div class="img-box">
+                                    <img src="../images/trend01.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="tit">클래식룩</p>
+                                    <p class="des">클래식룩을 추천드립니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide-bottom">
+                            <ul class="list-wrap">
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail01.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">LINE</a>
+                                        <a href="#none" class="name">머메이드라인 로고 레더 벨티드 원피스</a>
+                                        <p class="price">219,000원</p>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <div class="slide-bottom-img">
+                                        <a href="#none">
+                                            <img src="../images/thumnail02.jpg" alt="">
+                                        </a>
+
+                                    </div>
+                                    <div class="slide-bottom-txt">
+                                        <a href="#none" class="brand">KENNETH LADY</a>
+                                        <a href="#none" class="name">아가일 짜임 V넥 니트 베스트</a>
+                                        <p class="price">59,000원</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn">
+                    <a href="#" class="btn-prev">이전</a>
+                    <a href="#" class="btn-next">다음</a>
+                </div>
+            </div>
+            <script>
+                var a = $('.promotion .slide .img-box').width();
+                var b = $('.promotion .slide .img-box').height();
+                console.log(a);
+                console.log(b);
+                $('.promotion .btn').height(b);
+
+                /*$('.promotion h2').click(function() {
+                    var a = $('.promotion .slide .img-box').width();
+                    var b = $('.promotion .slide .img-box').height();
+                    console.log(a);
+                    console.log(b);
+                });*/
+            </script>
+
+
+        </section>
+
+
+
+
+
+
+        <section class="recommend">
+            <div class="inner">
+                <h2>브랜드 추천 상품</h2>
+                <div class="swiper recommend-box">
+                    <ul class="swiper-wrapper slide-wrap">
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide">
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                            <div class="box">
+                                <div class="img-box">
+                                    <a href="#none">
+                                        <img src="../images/pdt01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <a href="#none" class="brand">DEAR K</a>
+                                    <a href="#none" class="name">플리츠 세일러 카라 블라우스</a>
+                                    <a href="#none" class="price">97,300원<span>139,000원</span></a>
+                                </div>
+                                <button type="button">좋아요</button>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <script>
+                    var swiper = new Swiper(".recommend-box", {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            draggable: true,
+                            hide: false,
+                        },
+                    });
+                </script>
+            </div>
+        </section>
+        <section class="brand-new">
+            <h2>브랜드 신상품</h2>
+            <div class="show">
+                <ul class="slide-wrap">
+                    <li class="slide s1">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/new01.jpg" alt="">
+                                <div class="info">
+                                    <div class="info-txt">
+                                        <h4>린과 준비하는 겨울의 시작</h4>
+                                        <p class="des">11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>
+                                            잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와<br>
+                                            풍성하게 몸을 감싸는 실루엣의 다운 패딩과<br>
+                                            몽글몽글한 원사를 사용한 니트 셋업 등<br>
+                                            모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <p class="more noto-serif">shop now <span>&rarr;</span></p>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="txt">
+                            <p><a href="#none" class="brand">line</a></p>
+                            <a href="#none" class="tit">OUR TIME</a>
+                            <a href="#none" class="des">다정한 프렌드룩으로 완성한 시간을 함께 즐겨주세요.</a>
+                        </div>
+                    </li>
+                    <li class="slide s2">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/new02.jpg" alt="">
+                                <div class="info">
+                                    <div class="info-txt">
+                                        <h4>린과 준비하는 겨울의 시작</h4>
+                                        <p class="des">11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>
+                                            잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와<br>
+                                            풍성하게 몸을 감싸는 실루엣의 다운 패딩과<br>
+                                            몽글몽글한 원사를 사용한 니트 셋업 등<br>
+                                            모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <p class="more noto-serif">shop now <span>&rarr;</span></p>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="brand">line</a>
+                            <a href="#none" class="tit">OUR TIME</a>
+                            <a href="#none" class="des">다정한 프렌드룩으로 완성한 시간을 함께 즐겨주세요.</a>
+                        </div>
+                    </li>
+                    <li class="slide s3 active">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/new03.jpg" alt="">
+                                <div class="info">
+                                    <div class="info-txt">
+                                        <h4>린과 준비하는 겨울의 시작</h4>
+                                        <p class="des">11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>
+                                            잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와<br>
+                                            풍성하게 몸을 감싸는 실루엣의 다운 패딩과<br>
+                                            몽글몽글한 원사를 사용한 니트 셋업 등<br>
+                                            모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <p class="more noto-serif">shop now <span>&rarr;</span></p>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="brand">KENNETH LADY</a>
+                            <a href="#none" class="tit">REWRITTEN</a>
+                            <a href="#none" class="des">트렌디한 아이템과 믹스매치한 다양한 룩을 즐겨보세요.</a>
+                        </div>
+
+                    </li>
+                    <li class="slide s4">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/new04.jpg" alt="">
+                                <div class="info">
+                                    <div class="info-txt">
+                                        <h4>린과 준비하는 겨울의 시작</h4>
+                                        <p class="des">11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>
+                                            잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와<br>
+                                            풍성하게 몸을 감싸는 실루엣의 다운 패딩과<br>
+                                            몽글몽글한 원사를 사용한 니트 셋업 등<br>
+                                            모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <p class="more noto-serif">shop now <span>&rarr;</span></p>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="tit">SOMEDAY</a>
+                            <a href="#none" class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</a>
+                        </div>
+                    </li>
+                    <li class="slide s5">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/new05.jpg" alt="">
+                                <div class="info">
+                                    <div class="info-txt">
+                                        <h4>린과 준비하는 겨울의 시작</h4>
+                                        <p class="des">11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>
+                                            잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와<br>
+                                            풍성하게 몸을 감싸는 실루엣의 다운 패딩과<br>
+                                            몽글몽글한 원사를 사용한 니트 셋업 등<br>
+                                            모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <p class="more noto-serif">shop now <span>&rarr;</span></p>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="brand">LYNN</a>
+                            <a href="#none" class="tit">SOMEDAY</a>
+                            <a href="#none" class="des">이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn">
+                    <button type="button" class="prev">prevvvvvvvvvvv</button>
+                    <button type="button" class="next">nexttttttttttt</button>
+                </div>
+            </div>
+
+
+            <script>
+                /*브라우저 열때 크기*/
+                var img = $('.brand-new .slide .img-box');
+                var imgHight = img.height();
+                $('.brand-new .btn').css({
+                    height: imgHight
+                });
+                i = 0;
+                /*이전*/
+                $('.brand-new .prev').click(function() {
+                    var img = $('.brand-new .slide .img-box');
+                    var slide = $('.brand-new .slide');
+                    var active = $('.brand-new .active');
+                    var slWidth = slide.width();
+                    var acWidth = active.width();
+                    var margin = slide.css('margin-right').replace('px', '');
+                    var a = Number(margin);
+                    var move = slWidth + a;
+                    console.log('이미지박스 높잇값: ' + img.height());
+                    console.log('액티브width값: ' + acWidth);
+                    console.log('마진 :' + margin);
+                    console.log(move);
+                    if (i >= -2 && i < 2) {
+                        i++
+                        $('.brand-new .slide-wrap').animate({
+                            left: i * move
+                        });
+                        active.prev().addClass('active');
+                        active.removeClass('active');
+                        console.log(i);
+                    };
+                });
+                /*다음*/
+                $('.brand-new .next').click(function() {
+                    var img = $('.brand-new .slide .img-box');
+                    var slide = $('.brand-new .slide');
+                    var active = $('.brand-new .active');
+                    var slWidth = slide.width();
+                    var acWidth = active.width();
+                    var margin = slide.css('margin-right').replace('px', '');
+                    var a = Number(margin);
+                    var move = slWidth + a;
+                    console.log('이미지박스 높잇값: ' + img.height());
+                    console.log('액티브width값: ' + acWidth);
+                    console.log('마진 :' + margin);
+                    console.log(move);
+                    if (i > -2 && i <= 2) {
+                        i--;
+                        $('.brand-new .slide-wrap').animate({
+                            left: i * move
+                        });
+                        active.next().addClass('active');
+                        active.removeClass('active');
+                        console.log(i);
+
+                    }
+
+
+
+                });
+                /*브라우저 크기에 따라 버튼*/
+                $(window).resize(function() {
+                    var img = $('.brand-new .slide .img-box');
+                    var imgHight = img.height();
+                    console.log('슬라이드 높이: ' + imgHight);
+                    $('.brand-new .btn').css({
+                        height: imgHight
+                    });
+                });
+            </script>
+        </section>
+        <section class="category">
+            <h2>카테고리별 제품 찾기</h2>
+            <div class="category-list">
+                <ul class="list-wrap">
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category01.jpg" alt="">
+                            <span>#모피</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category02.jpg" alt="">
+                            <span>#데님</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category03.jpg" alt="">
+                            <span>#무스탕</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category04.jpg" alt="">
+                            <span>#블라우스</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category05.jpg" alt="">
+                            <span>#트위드</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category06.jpg" alt="">
+                            <span>#코트</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category07.jpg" alt="">
+                            <span>#원피스</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#none">
+                            <img src="../images/category08.jpg" alt="">
+                            <span>#자켓</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="style">
+            <h2>스타일 코디</h2>
+            <div class="style-container">
+                <div class="box-wrap">
+                    <div class="box">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/cody01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="tit">이번주 데이트룩</a>
+                            <p class="des">이번주 테이트룩을 추천드립니다.</p>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/cody02.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="tit">이번주 데이트룩</a>
+                            <p class="des">이번주 테이트룩을 추천드립니다.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box-wrap">
+                    <div class="box">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/cody03.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="tit">이번주 데이트룩</a>
+                            <p class="des">이번주 테이트룩을 추천드립니다.</p>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/cody04.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="tit">이번주 데이트룩</a>
+                            <p class="des">이번주 테이트룩을 추천드립니다.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box-wrap">
+                    <div class="box">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/cody05.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="tit">이번주 데이트룩</a>
+                            <p class="des">이번주 테이트룩을 추천드립니다.</p>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img-box">
+                            <a href="#none">
+                                <img src="../images/cody06.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <a href="#none" class="tit">이번주 데이트룩</a>
+                            <p class="des">이번주 테이트룩을 추천드립니다.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="notice">
+            <div class="notice-container">
+                <div class="left">
+                    <h2>공지사항</h2>
+                    <div class="contents">
+                        <ul class="list-wrap">
+                            <li class="list">
+                                <a href="#none">우체국 택배 일부지역 배송지연안내<span>2022-11-01</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="btn">
+                        <button type="button" class="prev">이전</button>
+                        <button type="button" class="next">다음</button>
+                    </div>
+                    <a href="#none" class="btn-more">더보기</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </article>
+
+
+    <aside>
+        <ul>
+            <li><a href="#" class="aside-top">위로가기</a></li>
+            <li><a href="#none" class="aside-chat">1:1문의</a></li>
+        </ul>
+    </aside>
+    <footer>
+        <div class="inner">
+            <div class="left">
+                <h3>(주)테난</h3>
+                <ul>
+                    <li class="pad">대표이사 문경란</li>
+                    <li class="pad">서울특별시 강남구 영동대로 734(청담동) 린빌딩</li>
+                    <li>개인정보보호책임자 이성춘</li>
+                    <li class="pad">사업자등록번호 668-88-01050</li>
+                    <li>통신판매업신고번호 *****</li>
+                </ul>
+                <p>Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
+            </div>
+            <div class="right">
+                <div class="util-link">
+                    <ul>
+                        <li><a href="#none">공지사항</a></li>
+                        <li><a href="#none">매장안내</a></li>
+                        <li><a href="#none">이용약관</a></li>
+                        <li><a href="#none">멤버십혜택</a></li>
+                        <li><a href="#none">개인정보처리방침</a></li>
+                    </ul>
+
+                </div>
+                <div class="customer-link">
+                    <h4>고객센터</h4>
+                    <p class="number">02-3218-5105</p>
+                    <p class="email">이메일 customercare@bylynn.shop</p>
+                    <p class="time">10:00 ~ 18:00 (공휴일 제외)</p>
+                </div>
+                <div class="sns-link">
+                    <div>
+                        <a href="#none" class="icon-google">구글</a>
+                        <a href="#none" class="icon-apple">애플</a>
+                    </div>
+                    <div>
+                        <a href="#none" class="icon-naver">네이버</a>
+                        <a href="#none" class="icon-youtube">유튜브</a>
+                        <a href="#none" class="icon-instagram">인스타그램</a>
+                        <a href="#none" class="icon-facebook">페이스북</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>
