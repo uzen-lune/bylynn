@@ -253,32 +253,31 @@
         $(function() {
 
             document.querySelector('.prevbtn3').onclick = function() {
-                slide3(0);
-
-                $('.brand_slide > ul li.on').prev().addClass('on').siblings().removeClass('on');
+                slide(0);
             }
             document.querySelector('.nextbtn3').onclick = function() {
-                slide3(1);
-
-                $('.brand_slide > ul li.on').next().addClass('on').siblings().removeClass('on');
+                slide(1);
             }
+
 
             var prot = 0;
 
-            function slide3(bang) {
+            function slide(direction) {
                 if (prot === 1) return false;
                 prot = 1;
 
                 var brand = document.querySelector('.brand_slide > ul');
                 var brandS = brand.querySelectorAll('li');
 
-                if (bang === 0) { //왼쪽버튼
+                if (direction === 0) { //왼쪽버튼
 
                     brand.insertBefore(brandS.item(brandS.length - 1), brandS.item(0));
+                    $('.brand_slide > ul li.on').prev().addClass('on').siblings().removeClass('on');
 
-                } else if (bang === 1) { //오른쪽버튼
+                } else if (direction === 1) { //오른쪽버튼
 
                     brand.appendChild(brandS.item(0));
+                    $('.brand_slide > ul li.on').next().addClass('on').siblings().removeClass('on');
 
                 }
 

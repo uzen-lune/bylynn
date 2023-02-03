@@ -834,7 +834,7 @@
     color: #666;
 }
 
-.today_update_slide .swiper-scrollbar-horizontal>.swiper-scrollbar {}
+.today_update_slide .swiper-scrollbar-horizontal > .swiper-scrollbar {}
 
 .today-update .today-update-slide-wrap .today_update_slide .swiper-container .swiper-scrollbar {
     width: 100%;
