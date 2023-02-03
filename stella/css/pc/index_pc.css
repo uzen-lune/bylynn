@@ -237,10 +237,6 @@
     cursor: pointer;
 }
 
-#search_menu .search_menu-wrap .recent-search ul li button img {}
-
-#search_menu .search_menu-wrap .popular-search {}
-
 #search_menu .search_menu-wrap .popular-search h3 {
     font-size: 15px;
     font-weight: 600;
@@ -248,8 +244,6 @@
     color: #111;
     margin-bottom: 14px;
 }
-
-#search_menu .search_menu-wrap .popular-search ul {}
 
 #search_menu .search_menu-wrap .popular-search ul li {
     width: 180px;
@@ -277,8 +271,6 @@
     color: #111;
 }
 
-#search_menu .search_menu-wrap .sale-ranking {}
-
 #search_menu .search_menu-wrap .sale-ranking h3 {
     font-size: 15px;
     font-weight: 600;
@@ -286,10 +278,6 @@
     color: #111;
     margin-bottom: 14px;
 }
-
-#search_menu .search_menu-wrap .sale-ranking ul {}
-
-#search_menu .search_menu-wrap .sale-ranking ul li {}
 
 #search_menu .search_menu-wrap .sale-ranking ul li ~ li {
     margin-top: 16px;
@@ -303,8 +291,6 @@
 #search_menu .search_menu-wrap .sale-ranking ul li a img {
     margin-right: 12px;
 }
-
-#search_menu .search_menu-wrap .sale-ranking ul li a dl {}
 
 #search_menu .search_menu-wrap .sale-ranking ul li a dl dt {
     font-size: 13px;
@@ -668,6 +654,7 @@
 /* today-update */
 .today-update {
     width: 100%;
+    height: 900px;
     overflow: hidden;
     margin-bottom: 180px;
 }
@@ -726,6 +713,9 @@
     box-sizing: border-box;
     margin-left: 105px;
     overflow: hidden;
+}
+
+.today_update_slide .swiper-container {
     position: relative;
 }
 
@@ -844,13 +834,15 @@
     color: #666;
 }
 
+.today_update_slide .swiper-scrollbar-horizontal>.swiper-scrollbar {}
+
 .today-update .today-update-slide-wrap .today_update_slide .swiper-container .swiper-scrollbar {
     width: 100%;
     height: 1px;
     background-color: #ccc;
     position: absolute;
     left: 0;
-    bottom: 77px;
+    bottom: -80px;
 }
 
 .today-update .today-update-slide-wrap .today_update_slide .swiper-container .swiper-scrollbar-drag {
@@ -1014,6 +1006,8 @@
 
 /* brand-recommend-item */
 .brand-recommend-item {
+    width: calc(100% - 480px);
+    margin: 0 auto;
     margin-bottom: 180px;
 }
 
@@ -1027,8 +1021,10 @@
 }
 
 .brand-recommend-item .recommend_item_slide {
-    width: calc(100% - 480px);
-    margin: 0 240px;
+    /*width: calc(100% - 480px);
+    margin: 0 auto;*/
+    width: 100%;
+    height: 1410px;
     overflow-x: hidden;
 }
 
