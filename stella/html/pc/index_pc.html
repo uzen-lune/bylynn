@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/pc/common.css">
+    <link rel="stylesheet" href="../../css/pc/index_pc.css">
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 10);
+
+            /*GNB*/
+            $('.header .menu').click(function() {
+
+                //$('#aside').toggleClass('on');
+
+                var gnbOn = $('#aside').hasClass('on');
+
+                if (gnbOn == true) {
+
+                    $('.menu img').hide(100).show(300).attr({
+                        src: "../../images/pc/menu_PC.svg"
+                    });
+
+                    $('#aside').removeClass('on');
+
+                    $('.depth2').slideUp();
+
+                } else {
+
+                    $('.menu img').hide(100).show(300).attr({
+                        src: "../../images/pc/menuPC_opacity.png"
+                    });
+
+                    $('#aside').addClass('on');
+
+                }
+
+            });
+
+            $('.depth1').click(function() {
+                $(this).siblings('.depth2').slideToggle(150);
+            });
+
+
+
+            /*검색창*/
+            $('#integrated_search').focusin(function() {
+                $('#search_menu').fadeIn(400);
+            });
+
+            $('#search_menu').mouseenter(function() {
+                $('#search_menu').fadeIn(400);
+            });
+
+            $('#search_menu .search-close').click(function() {
+                $('#search_menu').fadeOut(200);
+            });
+
+            $('.recent-search button').click(function() {
+                $(this).parent('li').remove();
+            });
+
+
+
+            //초기설정 - 마지막 요소를 맨 앞으로 삽입
+            //첫 번째 이미지가 보여져야 하므로 margin-left:-100% 설정
+
+            $('.main_slide > li:last-child').insertBefore('.main_slide > li:first-child');
+
+            $('.main_slide').css('margin-left', '-100%');
+
+            // 슬라이드 함수 만들기
+            function moveAfter() {
+                $('.main_slide').animate({
+                    marginLeft: '-200%'
+                }, 800, function() {
+                    $('.main_slide > li:first').insertAfter('.main_slide > li:last');
+
+                    $('.main_slide').css('margin-left', '-100%');
+                });
+
+            }
+
+            //자동실행 함수
+            function autoplay() {
+                setInterval(moveAfter, 3000);
+            }
+
+            autoplay();
+
+
+            //var slideW = $('.main_slide li').width();
+
+            //다음버튼
+            $('.btn_R').click(function() {
+
+                $('.main_slide').animate({
+                    marginLeft: '-=' + '100%'
+                    //marginLeft: '-=' + slideW
+                }, 800, function() {
+                    $('.main_slide').css('margin-left', '-100%');
+                    //$('.main_slide').css('margin-left', -slideW);
+                });
+
+            });
+
+
+            //이전버튼
+            $('.btn_L').click(function() {
+
+                $('.main_slide').animate({
+                    marginLeft: '+=' + '100%'
+                    //marginLeft: '+=' + slideW
+                }, 800, function() {
+                    $('.main_slide').css('margin-left', '-100%');
+                    //$('.main_slide').css('margin-left', -slideW);
+                });
+
+            });
+
+            //페이지 번호
+            var currentpg = $('.main_slide li').index();
+            //console.log(currentpg);
+            var pgAll = $('.main_slide li').length;
+            //console.log(pgAll);
+            var showpg = $('.pagenum').text();
+
+            $('.pagenum').text((currentpg + 1) + "/" + pgAll);
+
+
+            $('.totop').click(function(e) {
+
+                e.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 200);
+            });
+
+        });
+
+        $(window).scroll(function() {
+
+            var scTop = $(this).scrollTop();
+            console.log(scTop);
+
+            if (scTop > 500) {
+                $('.side_btn').fadeIn(400);
+            } else {
+                $('.side_btn').fadeOut(300);
+            }
+
+        });
+
+
+        $(function() {
+            $('.today-update-img #wish').click(function() {
+                $(this).toggleClass('on');
+            });
+
+            $('.recommend-item-box #wish').click(function() {
+                $(this).toggleClass('on');
+            });
+
+        });
+
+
+        /*요즘 트렌드 슬라이드*/
+        $(function() {
+
+            document.querySelector('.prevbtn').onclick = function() {
+                slide(0);
+            }
+            document.querySelector('.nextbtn').onclick = function() {
+                slide(1);
+            }
+
+            var prot = 0;
+
+            function slide(direction) {
+                if (prot === 1) return false;
+                prot = 1;
+
+                var trend = document.querySelector('.trend-list');
+                var trendS = trend.querySelectorAll('li');
+
+                if (direction === 0) { //왼쪽버튼
+
+                    trend.insertBefore(trendS.item(trendS.length - 1), trendS.item(0));
+
+                } else if (direction === 1) { //오른쪽버튼
+
+                    trend.appendChild(trendS.item(0));
+
+                }
+
+                setTimeout(function() {
+                    prot = 0;
+                }, 400);
+
+            }
+        });
+
+        /*이번주 프로모션 슬라이드*/
+        $(function() {
+
+            document.querySelector('.prevbtn2').onclick = function() {
+                slide(0);
+            }
+            document.querySelector('.nextbtn2').onclick = function() {
+                slide(1);
+            }
+
+            var prot = 0;
+
+            function slide(direction) {
+                if (prot === 1) return false;
+                prot = 1;
+
+                var promotion = document.querySelector('.promotion-list');
+                var promotionS = promotion.querySelectorAll('li');
+
+                if (direction === 0) { //왼쪽버튼
+
+                    promotion.insertBefore(promotionS.item(promotionS.length - 1), promotionS.item(0));
+
+                } else if (direction === 1) { //오른쪽버튼
+
+                    promotion.appendChild(promotionS.item(0));
+
+                }
+
+                setTimeout(function() {
+                    prot = 0;
+                }, 400);
+
+            }
+        });
+
+
+        /*브랜드 신상품 슬라이드*/
+        $(function() {
+
+            document.querySelector('.prevbtn3').onclick = function() {
+                slide3(0);
+
+                $('.brand_slide > ul li.on').prev().addClass('on').siblings().removeClass('on');
+            }
+            document.querySelector('.nextbtn3').onclick = function() {
+                slide3(1);
+
+                $('.brand_slide > ul li.on').next().addClass('on').siblings().removeClass('on');
+            }
+
+            var prot = 0;
+
+            function slide3(bang) {
+                if (prot === 1) return false;
+                prot = 1;
+
+                var brand = document.querySelector('.brand_slide > ul');
+                var brandS = brand.querySelectorAll('li');
+
+                if (bang === 0) { //왼쪽버튼
+
+                    brand.insertBefore(brandS.item(brandS.length - 1), brandS.item(0));
+
+                } else if (bang === 1) { //오른쪽버튼
+
+                    brand.appendChild(brandS.item(0));
+
+                }
+
+                setTimeout(function() {
+                    prot = 0;
+                }, 400);
+
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="#none" class="menu"><img src="../../images/pc/menu_PC.svg" alt="메뉴"></a>
+                <a href="index_pc.html" class="logo"><img src="../../images/pc/logo.svg" alt=""></a>
+            </div>
+            <div class="header-right">
+                <ul class="util">
+                    <li>
+                        <input type="search" id="integrated_search" name="integrated_search" placeholder="">
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/mypage.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/shopping_bag.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="login">
+                        <a href="#none">
+                            <p>로그인/회원가입</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="aside">
+        <div class="aside-inner">
+            <ul class="gnb">
+                <li>
+                    <a href="#none" class="depth1">의류</a>
+                    <ul class="depth2">
+                        <li><a href="#none">ALL</a></li>
+                        <li><a href="#none">아우터</a></li>
+                        <li><a href="#none">상의</a></li>
+                        <li><a href="#none">하의</a></li>
+                        <li><a href="#none">원피스</a></li>
+                        <li><a href="#none">액세서리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">가방</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">신발</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">액세서리</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">골프/애슬레저</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">쇼핑의 목적</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">브랜드</a>
+                </li>
+            </ul>
+            <ul class="site_map">
+                <li>
+                    <a href="#none">오늘의 업데이트</a>
+                </li>
+                <li>
+                    <a href="#none">베스트</a>
+                </li>
+                <li>
+                    <a href="#none">기획전</a>
+                </li>
+                <li>
+                    <a href="#none">ABOUT LYNN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="search_menu">
+        <ul class="search_menu-wrap">
+            <li class="recent-search">
+                <h3>최근검색어</h3>
+                <ul>
+                    <li>
+                        <a href="#none">엘바테게브</a>
+                        <button><img src="../../images/pc/close_S_btn.svg" alt=""></button>
+                    </li>
+                    <li>
+                        <a href="#none">오소이</a>
+                        <button><img src="../../images/pc/close_S_btn.svg" alt=""></button>
+                    </li>
+                    <li>
+                        <a href="#none">Ette</a>
+                        <button><img src="../../images/pc/close_S_btn.svg" alt=""></button>
+                    </li>
+                </ul>
+            </li>
+            <li class="popular-search">
+                <h3>인기검색어</h3>
+                <ul>
+                    <li class="up"><a href="#none">숏 패딩</a></li>
+                    <li class="up"><a href="#none">핸드메이드 코트</a></li>
+                    <li class="up"><a href="#none">머플러</a></li>
+                    <li class="down"><a href="#none">니트 원피스</a></li>
+                    <li class="up"><a href="#none">롱 부츠</a></li>
+                    <li class="down"><a href="#none">패딩 조끼</a></li>
+                    <li class="up"><a href="#none">숏 코트</a></li>
+                    <li class="up"><a href="#none">NIKE</a></li>
+                    <li class="up"><a href="#none">더플 코트</a></li>
+                    <li class="up"><a href="#none">GANNI</a></li>
+                </ul>
+            </li>
+            <li class="sale-ranking">
+                <h3>판매랭킹</h3>
+                <ul>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>가든오브라이프</dt>
+                                <dd>마이카인드 여성 멀티비타민 30정</dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <button class="search-close"><img src="../../images/pc/close_M_btn.svg" alt=""></button>
+    </div>
+
+    <main class="main">
+        <ul class="main_slide">
+            <li data-seq="0">
+                <a href="#none"><img src="../../images/pc/pc_main.png" alt=""></a>
+                <div class="main_txt">
+                    <h2>winter essential</h2>
+                    <p>지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                </div>
+            </li>
+            <li data-seq="1">
+                <a href="#none"><img src="../../images/pc/pc_main.png" alt=""></a>
+                <div class="main_txt">
+                    <h2>winter essential</h2>
+                    <p>지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                </div>
+            </li>
+            <li data-seq="2">
+                <a href="#none"><img src="../../images/pc/pc_main.png" alt=""></a>
+                <div class="main_txt">
+                    <h2>winter essential</h2>
+                    <p>지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                </div>
+            </li>
+            <li data-seq="3">
+                <a href="#none"><img src="../../images/pc/pc_main.png" alt=""></a>
+                <div class="main_txt">
+                    <h2>winter essential</h2>
+                    <p>지금 사랑받고 있는 겨울 신상품을 만나보세요.</p>
+                </div>
+            </li>
+        </ul>
+
+        <span class="slide_btn btn_L">이전</span>
+        <span class="slide_btn btn_R">다음</span>
+
+        <span class="pagenum"></span>
+    </main>
+
+    <article class="main-content">
+        <section class="intro">
+            <div class="shortcut-wrap">
+                <div class="shortcut-box">
+                    <a href="#none">
+                        <img src="../../images/pc/main_banner1.png" alt="">
+                        <div class="txtbox">
+                            <h3>멤버쉽안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="shortcut-box">
+                    <a href="#none">
+                        <img src="../../images/pc/main_banner2.png" alt="">
+                        <div class="txtbox">
+                            <h3>멤버쉽안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="shortcut-box">
+                    <a href="#none">
+                        <img src="../../images/pc/main_banner3.png" alt="">
+                        <div class="txtbox">
+                            <h3>멤버쉽안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="shortcut-box">
+                    <a href="#none">
+                        <img src="../../images/pc/main_banner4.png" alt="">
+                        <div class="txtbox">
+                            <h3>멤버쉽안내</h3>
+                            <p>membership</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="these-days-trend">
+            <h2>요즘 트렌드</h2>
+            <div class="trend-list-wrap">
+                <ul class="trend-list">
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/trend_look3.png" alt="">
+                            <div class="trend_txtbox">
+                                <h3>SOMEDAY</h3>
+                                <p>이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/trend_look1.png" alt="">
+                            <div class="trend_txtbox">
+                                <h3>클래식룩</h3>
+                                <p>클래식룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/trend_look2.png" alt="">
+                            <div class="trend_txtbox">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/trend_look3.png" alt="">
+                            <div class="trend_txtbox">
+                                <h3>SOMEDAY</h3>
+                                <p>이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/trend_look1.png" alt="">
+                            <div class="trend_txtbox">
+                                <h3>면접프리패스룩</h3>
+                                <p>면접프리패스룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <button class="prevbtn"><img src="../../images/pc/L-back.svg" alt=""></button>
+                <button class="nextbtn"><img src="../../images/pc/L-next.svg" alt=""></button>
+            </div>
+        </section>
+
+        <section class="brand-list">
+            <h2>시작을 완성하는 샵</h2>
+            <p>당신의 새로운 시작을 응원하며, 모든 변화의 순간을 함께하는 바이린샵이 되겠습니다.</p>
+            <div class="brand_list_slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><span>ALL</span></div>
+                                <div class="brand_name">
+                                    <span>전체(102)</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                            <div class="brand-list-box">
+                                <div class="brand_logo"><img src="../../images/pc/brand1.png" alt=""></div>
+                                <div class="brand_name">
+                                    <span>디어케이</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+                <script>
+                    var swiper = new Swiper('.brand_list_slide .swiper-container', {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            draggable: true,
+                            hide: false,
+                        },
+                    });
+                </script>
+            </div>
+        </section>
+
+        <section class="today-update">
+            <h2>오늘의 업데이트</h2>
+            <div class="today-update-slide-wrap">
+                <div class="today-update-txt">
+                    <p class="tit">TODAY'S<br>NEW STYLE <br></p>
+                    <p class="num">175</p>
+                    <a href="#none">쇼핑하기</a>
+                </div>
+                <div class="today_update_slide">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="today-update-img">
+                                    <img src="../../images/pc/today_new_style1.png" alt="" class="today-update-item">
+                                    <button id="wish">keeping item</button>
+                                </div>
+                                <div class="today-update-txtbox">
+                                    <p class="en">KENNETH LADY</p>
+                                    <p class="ko">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="today-update-img">
+                                    <img src="../../images/pc/today_new_style1.png" alt="" class="today-update-item">
+                                    <button id="wish">keeping item</button>
+                                </div>
+                                <div class="today-update-txtbox">
+                                    <p class="en">KENNETH LADY</p>
+                                    <p class="ko">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="today-update-img">
+                                    <img src="../../images/pc/today_new_style1.png" alt="" class="today-update-item">
+                                    <button id="wish">keeping item</button>
+                                </div>
+                                <div class="today-update-txtbox">
+                                    <p class="en">KENNETH LADY</p>
+                                    <p class="ko">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="today-update-img">
+                                    <img src="../../images/pc/today_new_style1.png" alt="" class="today-update-item">
+                                    <button id="wish">keeping item</button>
+                                </div>
+                                <div class="price-info">
+                                    <div class="price-box">
+                                        <p class="discount">30%</p>
+                                        <p class="price">
+                                            <del>500,000</del>
+                                            <br>359,000
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="today-update-txtbox">
+                                    <p class="en">KENNETH LADY</p>
+                                    <p class="ko">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="today-update-img">
+                                    <img src="../../images/pc/today_new_style1.png" alt="" class="today-update-item">
+                                    <button id="wish">keeping item</button>
+                                </div>
+                                <div class="price-info">
+                                    <div class="price-box">
+                                        <p class="price">
+                                            <del>500,000</del>
+                                            <br>359,000
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="today-update-txtbox">
+                                    <p class="en">KENNETH LADY</p>
+                                    <p class="ko">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="today-update-img">
+                                    <img src="../../images/pc/today_new_style1.png" alt="" class="today-update-item">
+                                    <button id="wish">keeping item</button>
+                                </div>
+                                <div class="today-update-txtbox">
+                                    <p class="en">KENNETH LADY</p>
+                                    <p class="ko">레터링 버튼 플리츠 벨티드 원피스</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+
+                    <script>
+                        var swiper = new Swiper('.today_update_slide .swiper-container', {
+                            slidesPerView: "auto",
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                                draggable: true,
+                                hide: false,
+                            },
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+        <section class="this-week-promotion">
+            <h2>이번주 프로모션</h2>
+            <div class="promotion-list-wrap">
+                <ul class="promotion-list">
+                    <li>
+                        <a href="#none" class="promotion-tit">
+                            <img src="../../images/pc/this_week_promotion3.png" alt="">
+                            <div class="promotion_txtbox">
+                                <h3>SOMEDAY</h3>
+                                <p>이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion3-1.png" alt="">
+                            <div class="item-info">
+                                <span>LINE</span>
+                                <p class="item-name">로엘 헤링본 체크 벨티드 자켓</p>
+                                <p class="item-price">219,000원</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion3-2.png" alt="">
+                            <div class="item-info">
+                                <span>DEAR K</span>
+                                <p class="item-name">컬러 타이 글로시 블라우스</p>
+                                <p class="item-price">104,300원<del>149,000원</del></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="promotion-tit">
+                            <img src="../../images/pc/this_week_promotion1.png" alt="">
+                            <div class="promotion_txtbox">
+                                <h3>클래식룩</h3>
+                                <p>클래식룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-1.png" alt="">
+                            <div class="item-info">
+                                <span>LINE</span>
+                                <p class="item-name">머메이드라인 로고 레더 벨티드 원피스</p>
+                                <p class="item-price">219,000원</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-2.png" alt="">
+                            <div class="item-info">
+                                <span>KENNETH LADY</span>
+                                <p class="item-name">아가일 짜임 V넥 니트 베스트</p>
+                                <p class="item-price">59,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="promotion-tit">
+                            <img src="../../images/pc/this_week_promotion2.png" alt="">
+                            <div class="promotion_txtbox">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-1.png" alt="">
+                            <div class="item-info">
+                                <span>DEAR K</span>
+                                <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                <p class="item-price">97,300원<del>139,000원</del></p>
+                            </div>
+                            <p class="discount">30%</p>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-2.png" alt="">
+                            <div class="item-info">
+                                <span>LINE</span>
+                                <p class="item-name">글린 노치드 카라 캐시미어 자켓</p>
+                                <p class="item-price">369,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="promotion-tit">
+                            <img src="../../images/pc/this_week_promotion3.png" alt="">
+                            <div class="promotion_txtbox">
+                                <h3>SOMEDAY</h3>
+                                <p>이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-1.png" alt="">
+                            <div class="item-info">
+                                <span>LINE</span>
+                                <p class="item-name">로엘 헤링본 체크 벨티드 자켓</p>
+                                <p class="item-price">219,000원</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-2.png" alt="">
+                            <div class="item-info">
+                                <span>DEAR K</span>
+                                <p class="item-name">컬러 타이 글로시 블라우스</p>
+                                <p class="item-price">104,300원<del>149,000원</del></p>
+                            </div>
+                            <p class="discount">30%</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="promotion-tit">
+                            <img src="../../images/pc/this_week_promotion1.png" alt="">
+                            <div class="promotion_txtbox">
+                                <h3>면접프리패스룩</h3>
+                                <p>면접프리패스룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-1.png" alt="">
+                            <div class="item-info">
+                                <span>LINE</span>
+                                <p class="item-name">머메이드라인 로고 레더 벨티드 원피스</p>
+                                <p class="item-price">219,000원</p>
+                            </div>
+                        </a>
+                        <a href="#none" class="item-box">
+                            <img src="../../images/pc/promotion1-2.png" alt="">
+                            <div class="item-info">
+                                <span>KENNETH LADY</span>
+                                <p class="item-name">아가일 짜임 V넥 니트 베스트</p>
+                                <p class="item-price">59,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <button class="prevbtn2"><img src="../../images/pc/L-back.svg" alt=""></button>
+                <button class="nextbtn2"><img src="../../images/pc/L-next.svg" alt=""></button>
+            </div>
+        </section>
+        <section class="brand-recommend-item">
+            <h2>브랜드 추천 상품</h2>
+            <div class="recommend_item_slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-item-box">
+                                <a href="#none">
+                                    <img src="../../images/pc/brand_recommend_item1.png" alt="">
+                                    <button id="wish">keeping item</button>
+                                    <div class="recommend-item-info">
+                                        <span>DEAR K</span>
+                                        <p class="item-name">플리츠 세일러 카라 블라우스</p>
+                                        <p class="item-price">97,300원<del>139,000원</del></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+                <script>
+                    var swiper = new Swiper('.recommend_item_slide .swiper-container', {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            draggable: true,
+                            hide: false,
+                        },
+                    });
+                </script>
+            </div>
+        </section>
+
+        <section class="brand-new-item">
+            <h2>브랜드 신상품</h2>
+            <div class="brand_slide_center">
+                <div class="brand_slide">
+                    <ul>
+                        <li><a href="#none">
+                                <div class="imgbox">
+                                    <img src="../../images/pc/brand_new_item1.png" alt="">
+                                    <div class="img-txt">
+                                        <h3>린과 준비하는 겨울의 시작</h3>
+                                        <p>11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와 <br>풍성하게 몸을 감싸는 실루엣의 다운 패딩과 <br>몽글몽글한 원사를 사용한 니트 셋업 등 <br>모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <button>shop now</button>
+                                    </div>
+                                </div>
+                                <div class="con-tit">
+                                    <span>NUVO10</span>
+                                    <h3>Mind Mapping</h3>
+                                    <p>이번 시즌 누보텐은 아이템간에 유기적인 스타일링에 집중하였습니다.</p>
+                                </div>
+                            </a></li>
+                        <li><a href="#none">
+                                <div class="imgbox">
+                                    <img src="../../images/pc/brand_new_item2.png" alt="">
+                                    <div class="img-txt">
+                                        <h3>린과 준비하는 겨울의 시작</h3>
+                                        <p>11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와 <br>풍성하게 몸을 감싸는 실루엣의 다운 패딩과 <br>몽글몽글한 원사를 사용한 니트 셋업 등 <br>모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <button>shop now</button>
+                                    </div>
+                                </div>
+                                <div class="con-tit">
+                                    <span>LINE</span>
+                                    <h3>OUR TIME</h3>
+                                    <p>다정한 프렌드룩으로 완성한 시간을 함께 즐겨주세요.</p>
+                                </div>
+                            </a></li>
+                        <li class="on"><a href="#none">
+                                <div class="imgbox">
+                                    <img src="../../images/pc/brand_new_item3.png" alt="">
+                                    <div class="img-txt">
+                                        <h3>린과 준비하는 겨울의 시작</h3>
+                                        <p>11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와 <br>풍성하게 몸을 감싸는 실루엣의 다운 패딩과 <br>몽글몽글한 원사를 사용한 니트 셋업 등 <br>모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <button>shop now</button>
+                                    </div>
+                                </div>
+                                <div class="con-tit">
+                                    <span>KENNETH LADY</span>
+                                    <h3>REWRITTEN</h3>
+                                    <p>트렌디한 아이템과 믹스매치한 다양한 룩을 즐겨보세요.</p>
+                                </div>
+                            </a></li>
+                        <li><a href="#none">
+                                <div class="imgbox">
+                                    <img src="../../images/pc/brand_new_item4.png" alt="">
+                                    <div class="img-txt">
+                                        <h3>린과 준비하는 겨울의 시작</h3>
+                                        <p>11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와 <br>풍성하게 몸을 감싸는 실루엣의 다운 패딩과 <br>몽글몽글한 원사를 사용한 니트 셋업 등 <br>모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <button>shop now</button>
+                                    </div>
+                                </div>
+                                <div class="con-tit">
+                                    <span>LYNN</span>
+                                    <h3>SOMEDAY</h3>
+                                    <p>이번 시즌 린은 특별한 날의 순간을 스케치하였습니다.</p>
+                                </div>
+                            </a></li>
+                        <li><a href="#none">
+                                <div class="imgbox">
+                                    <img src="../../images/pc/brand_new_item2.png" alt="">
+                                    <div class="img-txt">
+                                        <h3>린과 준비하는 겨울의 시작</h3>
+                                        <p>11월의 시작을 알리는 르베이지의 코어, 르베이지 라인입니다. <br>잔잔하고 차분한 톤의 컬러로 제안하는 체크패턴 아우터와 <br>풍성하게 몸을 감싸는 실루엣의 다운 패딩과 <br>몽글몽글한 원사를 사용한 니트 셋업 등 <br>모든 아이템에서 하이엔드 브랜드의 정수를 느껴보세요.</p>
+                                        <button>shop now</button>
+                                    </div>
+                                </div>
+                                <div class="con-tit">
+                                    <span>DEAR K</span>
+                                    <h3>WHISPER</h3>
+                                    <p>올 가을, 디어케이의 속삭임에 귀 기울여주세요.</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                    <button class="prevbtn3"><img src="../../images/pc/L-back.svg" alt=""></button>
+                    <button class="nextbtn3"><img src="../../images/pc/L-next.svg" alt=""></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-find-item">
+            <h2>카테고리별 제품 찾기</h2>
+            <ul>
+                <li><a href="#none"><img src="../../images/pc/category1.png" alt=""><span>#모피</span></a></li>
+                <li><a href="#none"><img src="../../images/pc/category2.png" alt=""><span>#데님</span></a></li>
+                <li><a href="#none"><img src="../../images/pc/category3.png" alt=""><span>#무스탕</span></a></li>
+                <li><a href="#none"><img src="../../images/pc/category4.png" alt=""><span>#블라우스</span></a></li>
+                <li><a href="#none"><img src="../../images/pc/category5.png" alt=""><span>#트위드</span></a></li>
+                <li><a href="#none"><img src="../../images/pc/category6.png" alt=""><span>#코트</span></a></li>
+                <li><a href="#none"><img src="../../images/pc/category7.png" alt=""><span>#원피스</span></a></li>
+                <li><a href="#none"><img src="../../images/pc/category8.png" alt=""><span>#자켓</span></a></li>
+            </ul>
+        </section>
+
+        <section class="style-coordination">
+            <h2>스타일 코디</h2>
+            <!--<div class="coordination-wrap">
+                <div class="coordination-box">
+                    <div class="recommend-styling">
+                        <a href="#none">
+                            <img src="../../images/pc/style_coordination1.png" alt="">
+                            <div class="coordination-txt">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="recommend-styling">
+                        <a href="#none">
+                            <img src="../../images/pc/style_coordination4.png" alt="">
+                            <div class="coordination-txt">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="coordination-box">
+                    <div class="recommend-styling">
+                        <a href="#none">
+                            <img src="../../images/pc/style_coordination2.png" alt="">
+                            <div class="coordination-txt">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="recommend-styling">
+                        <a href="#none">
+                            <img src="../../images/pc/style_coordination5.png" alt="">
+                            <div class="coordination-txt">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="coordination-box">
+                    <div class="recommend-styling">
+                        <a href="#none">
+                            <img src="../../images/pc/style_coordination3.png" alt="">
+                            <div class="coordination-txt">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="recommend-styling">
+                        <a href="#none">
+                            <img src="../../images/pc/style_coordination6.png" alt="">
+                            <div class="coordination-txt">
+                                <h3>이번주 데이트룩</h3>
+                                <p>이번주 테이트룩을 추천드립니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>-->
+            <div class="style_coordination_slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="recommend-styling">
+                                <a href="#none">
+                                    <img src="../../images/pc/style_coordination1.png" alt="">
+                                    <div class="coordination-txt">
+                                        <h3>이번주 데이트룩</h3>
+                                        <p>이번주 테이트룩을 추천드립니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-styling">
+                                <a href="#none">
+                                    <img src="../../images/pc/style_coordination4.png" alt="">
+                                    <div class="coordination-txt">
+                                        <h3>이번주 데이트룩</h3>
+                                        <p>이번주 테이트룩을 추천드립니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-styling">
+                                <a href="#none">
+                                    <img src="../../images/pc/style_coordination2.png" alt="">
+                                    <div class="coordination-txt">
+                                        <h3>이번주 데이트룩</h3>
+                                        <p>이번주 테이트룩을 추천드립니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-styling">
+                                <a href="#none">
+                                    <img src="../../images/pc/style_coordination5.png" alt="">
+                                    <div class="coordination-txt">
+                                        <h3>이번주 데이트룩</h3>
+                                        <p>이번주 테이트룩을 추천드립니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="recommend-styling">
+                                <a href="#none">
+                                    <img src="../../images/pc/style_coordination3.png" alt="">
+                                    <div class="coordination-txt">
+                                        <h3>이번주 데이트룩</h3>
+                                        <p>이번주 테이트룩을 추천드립니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recommend-styling">
+                                <a href="#none">
+                                    <img src="../../images/pc/style_coordination6.png" alt="">
+                                    <div class="coordination-txt">
+                                        <h3>이번주 데이트룩</h3>
+                                        <p>이번주 테이트룩을 추천드립니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var swiper = new Swiper('.style_coordination_slide .swiper-container', {
+                    slidesPerView: "auto",
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: true,
+                        hide: false,
+                    },
+                });
+            </script>
+        </section>
+
+        <section class="notice">
+            <div class="notice-inner">
+                <div class="notice-tit">
+                    <img src="../../images/pc/notification.svg" alt="">
+                    <h2>공지사항</h2>
+                </div>
+                <div class="notice-content">
+                    <div class="notice-content-wrap">
+                        <dl class="notice-content-box">
+                            <dt>우체국 택배 일부지역 배송지연안내</dt>
+                            <dd>2022-11-01</dd>
+                        </dl>
+                    </div>
+                    <button class="prevbtn4"><img src="../../images/pc/prevbtn_S.svg" alt=""></button>
+                    <button class="nextbtn4"><img src="../../images/pc/nextbtn_S.svg" alt=""></button>
+                    <button class="plusbtn"><img src="../../images/pc/plusbtn_PC_S.svg" alt=""></button>
+                </div>
+            </div>
+        </section>
+    </article>
+    <div class="side_btn">
+        <button class="totop">맨 위로 가기</button>
+        <button class="contact">1:1</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="company-info">
+                <h4>(주)테난</h4>
+                <ul>
+                    <li>대표이사 문경란</li>
+                    <li>서울특별시 강남구 영동대로 734(청담동) 린빌딩</li>
+                    <li>개인정보보호책임자 이성춘</li>
+                    <li>사업자등록번호 668-88-01050</li>
+                    <li>통신판매업신고번호 *****</li>
+                </ul>
+                <p>Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu-box">
+                    <li><a href="#none">공지사항</a></li>
+                    <li><a href="#none">이용약관</a></li>
+                    <li><a href="#none">개인정보처리방침</a></li>
+                </div>
+                <div class="footer-menu-box">
+                    <li><a href="#none">매장안내</a></li>
+                    <li><a href="#none">멤버십 혜택</a></li>
+                </div>
+            </div>
+            <div class="customer-center">
+                <h4>고객센터</h4>
+                <a href="tel:02-3218-5105" class="tel">02-3218-5105</a>
+                <a href="mailto:customercare@bylynn.shop" class="mail">이메일 customercare@bylynn.shop</a>
+                <p>10:00 ~ 18:00 (공휴일 제외)</p>
+            </div>
+            <div class="link">
+                <div class="app">
+                    <a href="#none"><img src="../../images/pc/googleplay.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/apple_white.svg" alt=""></a>
+                </div>
+                <div class="sns">
+                    <a href="#none"><img src="../../images/pc/naver_white.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/youtube_white.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/instagram_white.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/facebook_white.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
