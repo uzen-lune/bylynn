@@ -77,5 +77,5 @@ https://uzen-lune.github.io/bylynn/stella/html/interest_brand.html
 
 <hr>
 <hr>
-<h2><strong>PC </strong></h2>
+<h2><strong>PC 메인</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/pc/index_pc.html
