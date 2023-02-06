@@ -74,7 +74,11 @@ https://uzen-lune.github.io/bylynn/stella/html/deposit-refund_account.html
 <h2><strong>관심브랜드</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/interest_brand.html
 
-
+<hr>
 <hr>
 <h2><strong>PC 메인</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/pc/index_pc.html
+
+<hr>
+<h2><strong>PC 검색결과</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/pc/search_result.html
