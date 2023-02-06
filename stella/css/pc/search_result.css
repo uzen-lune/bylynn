@@ -331,6 +331,8 @@
 }
 
 .search_result_content .search-aside {
+    /*width: 264px;
+    width: 14.65%;*/
     /*width: 256px;*/
     width: 14.2%;
 }
@@ -449,6 +451,7 @@
 }
 
 .color-box {
+    width: 103.12%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 24px;
