@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, viewport-fit=cover">
+  <meta name="keywords" content="키워드">
+  <meta name="description" content="Page description">
+  <meta name="robots" content="all">
+  <meta property="og:type"  content="website">
+  <meta property="og:title" content="page title">
+  <meta property="og:url" content="page url">
+  <meta property="og:image" content="각 페이지별 대표 이미지">
+  <meta property="og:description" content="Page description">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="page title">
+  <meta name="twitter:url" content="page url">
+  <meta name="twitter:image" content="각 페이지별 대표 이미지">
+  <meta name="twitter:description" content="Page description">
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="http://g1-cloud-front-publishing.s3-website.ap-northeast-2.amazonaws.com/html/mo/00_ui/G1_MO_UI0000.html">
+  <title>ZEROGRAM</title>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../../../resources/css/pc/import_html.css">
+  <!-- //css -->
+  
+  <!-- script : html include용 js(개발에서는 불필요한 js파일입니다.)  -->
+  <script src="../../../resources/js/pc/plugins.js"></script>
+  <script src="../../../resources/js/pc/zgm_ui.js"></script>
+  <!-- //script -->
+
+  <style>
+    .pc .main-layer-popup {position:static;}
+    .pc .h2-tit {width:1200px;margin:0 auto;}
+    .pc .h2-tit strong {font-weight:500;}
+    .pc .order .delivery-info {width:550px;}
+    .pc .my-order,
+    .pc .my-benefit {width:955px;}
+    .pc .my-benefit .spot-area {margin-top:0;}
+    .pc .my-order .my-price-info,
+    .pc .my-order .my-refund-info,
+    .pc .my-order .my-return-info {margin-top:0;}
+    .pc .my-order .spot-area {margin-top:0;}
+    .pc .slick-dotted.slick-slider {margin-bottom:0 !important;}
+    .pc .font-set dt {margin-top:20px;font-size:20px;font-weight:700;color:#111;}
+    .pc .font-set dd ul li {margin-top:10px;font-size:16px;color:#111;}
+    .pc .font-set dd ul li:nth-child(1) {font-weight:300;}
+    .pc .font-set dd ul li:nth-child(2) {font-weight:400;}
+    .pc .font-set dd ul li:nth-child(3) {font-weight:700;}
+    .pc .font-set dd ul li:nth-child(4) {font-weight:800;}
+    .pc .font-color {margin-top:20px;}
+    .pc .font-color:after {content:'';display:block;clear:both;}
+    .pc .font-color li {display:block;float:left;margin-left:10px;width:100px;height:100px;border-radius:100px;font-size:24px;line-height:100px;text-align:center;}
+    .pc .font-color li:nth-child(1) {margin-left:0;background-color:#fff;border:1px solid #d3d2d1;color:#d3d2d1;}
+    .pc .font-color li:nth-child(2) {background-color:#888;border:1px solid #888;color:#fff;}
+    .pc .font-color li:nth-child(3) {background-color:#111;border:1px solid #111;color:#fff;}
+    .pc .font-color li:nth-child(4) {background-color:#a22bfe;border:1px solid #a22bfe;color:#fff;}
+    .pc .select-box .option-list {position:static;}
+  </style>
+</head>
+
+<body class="pc">
+<div class="display"> <!-- main | display | product | cart | order | mypage | customer -->
+
+  
+  <!-- header -->
+  <header>
+    <div class="top-banner-wrap" style="background-color:#000;">
+      <div class="inner">
+        <a href="#" class="banner-link">
+          <img src="../../../resources/images/dummy/img_top_banner_20210728_pc.jpg" class="banner-img" alt="택배 노조 파업으로 인한 배송 지연 안내">
+        </a>
+        <a href="#" class="button-banner-close"><span>close</span></a>
+      </div>
+    </div>
+    <div class="header">
+      <div class="inner">
+        <!-- logo -->
+        <h1 class="logo"><a href="#"><img src="../../../resources/images/logo_h1.png" alt="ZEROGRAM"></a></h1>
+        <!-- //logo -->
+
+        <!-- util -->
+        <ul class="util-list">
+          <li><a href="#"><span>JOIN</span></a></li>
+          <li><a href="#"><span>LOGIN</span></a></li>
+          <li><a href="#"><span>CART<em>0</em></span></a></li>
+          <li><a href="#"><span class="ico-search">검색</span></a></li> <!-- 클릭 시 .search-drop에 .on class 추가 -->
+        </ul>
+        <!-- //util -->
+      </div>
+      <!-- search -->
+      <div class="search-drop"> <!-- .on class 제어필요 -->
+        <div class="search-form">
+          <form>
+            <fieldset>
+              <legend class="blind">검색</legend>
+              <div class="keyword-input">
+                <div class="ui-input">
+                  <label for="search" class="blind">키워드검색</label>
+                  <input type="text" value="" id="search" placeholder="검색어를 입력하세요" title="검색어 입력">
+                </div>
+                <button type="button" class="button-search"><span>검색</span></button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- //search -->
+      <!-- gnb -->
+      <div class="gnb-wrap">
+        <nav class="gnb">
+          <a href="#" class="menu"><span>Shop</span></a>
+          <a href="#" class="menu"><span>Brand</span></a>
+          <a href="#" class="menu"><span>Lookbook</span></a>
+          <a href="#" class="menu"><span>Event</span></a>
+          <a href="#" class="menu point"><span>Outlet</span></a>
+        </nav>
+        <div class="ly-gnb"> <!-- 메뉴명에 마우스오버 시 활성화 -->
+          <div class="inner">
+            <div class="menu-list">
+              <div class="item">
+                <a href="#"><span>NEW</span></a>
+                <ul>                  
+                </ul>
+              </div>
+              <div class="item">
+                <a href="#"><span>Gear</span></a>
+                <ul>
+                  <li><a href="#"><span>텐트</span></a></li>
+                  <li><a href="#"><span>타프</span></a></li>
+                  <li><a href="#"><span>침낭/매트</span></a></li>
+                  <li><a href="#"><span>가방</span></a></li>
+                  <li><a href="#"><span>쿡웨어</span></a></li>
+                  <li><a href="#"><span>ACC</span></a></li>
+                  <li><a href="#"><span>도서/지도</span></a></li>
+                </ul>
+              </div>
+              <div class="item">
+                <a href="#"><span>Men</span></a>
+                <ul>
+                  <li><a href="#"><span>아우터</span></a></li>
+                  <li><a href="#"><span>상의</span></a></li>
+                  <li><a href="#"><span>하의</span></a></li>
+                  <li><a href="#"><span>가방</span></a></li>
+                  <li><a href="#"><span>모자</span></a></li>
+                  <li><a href="#"><span>ACC</span></a></li>
+                </ul>
+              </div>
+              <div class="item">
+                <a href="#"><span>Women</span></a>
+                <ul>
+                  <li><a href="#"><span>아우터</span></a></li>
+                  <li><a href="#"><span>상의</span></a></li>
+                  <li><a href="#"><span>하의</span></a></li>
+                  <li><a href="#"><span>가방</span></a></li>
+                  <li><a href="#"><span>모자</span></a></li>
+                  <li><a href="#"><span>ACC</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //gnb -->
+      
+    </div>
+  </header>
+  <!-- //header -->
+
+  <br><br>
+  <h2 class="h2-tit"><strong>로그인후</strong></h2>
+  <div class="header">
+    <div class="inner">
+      <!-- logo -->
+      <h1 class="logo"><a href="#"><img src="../../../resources/images/logo_h1.png" alt="ZEROGRAM"></a></h1>
+      <!-- //logo -->
+      
+      <!-- util -->
+      <ul class="util-list">
+        <li><a href="#" class="link-tooltip link"><span>홍길동님(등급명)</span></a></li>
+        <li><a href="#"><span>LOGOUT</span></a></li>
+        <li><a href="#"><span>CART<em>0</em></span></a></li>
+        <li><a href="#"><span class="ico-search">검색</span></a></li> <!-- 클릭 시 .search-drop에 .on class 추가 -->
+      </ul>
+      <!-- //util -->
+
+      <!-- layer-toast -->
+      <div class="layer-toast on">
+        <div class="cont-box">
+          <a href="#" class="button-close">close</a>
+          <dl class="desc-cont">
+            <dt class="d-tit">만료예정 적립금</dt>
+            <dd class="d-cont">
+              <a href="#" class="link">10,000,000원</a>
+            </dd>
+          </dl>
+          <dl class="desc-cont">
+            <dt class="d-tit">만료예정쿠폰</dt>
+            <dd class="d-cont">
+              <a href="#" class="link">000장</a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!-- layer-toast -->    
+    </div>
+    <!-- search -->
+    <div class="search-drop on">
+      <div class="search-form">
+        <form>
+          <fieldset>
+            <legend class="blind">검색</legend>
+            <div class="keyword-input">
+              <div class="ui-input">
+                <label for="search2" class="blind">키워드검색</label>
+                <input type="text" value="" id="search2" placeholder="검색어를 입력하세요" title="검색어 입력">
+              </div>
+              <button type="button" class="button-search"><span>검색</span></button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- //search -->
+    <!-- gnb -->
+    <div class="gnb-wrap">
+      <nav class="gnb">
+        <a href="#" class="menu on"><span>Shop</span></a>
+        <a href="#" class="menu"><span>Brand</span></a>
+        <a href="#" class="menu"><span>Lookbook</span></a>
+        <a href="#" class="menu"><span>Event</span></a>
+        <a href="#" class="menu point"><span>Outlet</span></a>
+      </nav>
+      <div class="ly-gnb"> <!-- 메뉴명에 마우스오버 시 활성화 -->
+        <div class="inner">
+          <div class="menu-list">
+            <div class="item">
+              <a href="#"><span>Brand Story</span></a>
+            </div>
+            <div class="item">
+              <a href="#"><span>Magazine</span></a>
+            </div>
+            <div class="item">
+              <a href="#"><span>ZEROGRAM HUT</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //gnb -->
+    
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br>
+  <h2 class="h2-tit"><strong>GNB - Shop 클릭한 경우</strong></h2>
+  <div class="gnb-wrap">
+    <div class="ly-gnb on" style="position:static;border-bottom:0 none;">
+      <div class="inner">
+        <div class="menu-list">
+          <div class="item">
+            <a href="#"><span>NEW</span></a>
+            <ul>
+              <li><a href="#"><span>10주년 기념 - 로스트 블루</span></a></li>
+              <li><a href="#"><span>10주년 기념 - 제주 산호</span></a></li>
+              <li><a href="#"><span>얼리버드 가을 백패킹12</span></a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <a href="#"><span>Gear</span></a>
+            <ul>
+              <li><a href="#"><span>텐트</span></a></li>
+              <li><a href="#"><span>타프</span></a></li>
+              <li><a href="#"><span>침낭/매트</span></a></li>
+              <li><a href="#"><span>가방</span></a></li>
+              <li><a href="#"><span>쿡웨어</span></a></li>
+              <li><a href="#"><span>ACC</span></a></li>
+              <li><a href="#"><span>도서/지도</span></a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <a href="#"><span>Men</span></a>
+            <ul>
+              <li><a href="#"><span>아우터</span></a></li>
+              <li><a href="#"><span>상의</span></a></li>
+              <li><a href="#"><span>하의</span></a></li>
+              <li><a href="#"><span>가방</span></a></li>
+              <li><a href="#"><span>모자</span></a></li>
+              <li><a href="#"><span>ACC</span></a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <a href="#"><span>Women</span></a>
+            <ul>
+              <li><a href="#"><span>아우터</span></a></li>
+              <li><a href="#"><span>상의</span></a></li>
+              <li><a href="#"><span>하의</span></a></li>
+              <li><a href="#"><span>가방</span></a></li>
+              <li><a href="#"><span>모자</span></a></li>
+              <li><a href="#"><span>ACC</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <h2 class="h2-tit"><strong>GNB - Brand 오버시 </strong></h2>
+  <div class="gnb-wrap">
+    <div class="ly-gnb on" style="position:static;border-bottom:0 none;">
+      <div class="inner">
+        <div class="menu-list">
+          <div class="item">
+            <a href="#"><span>Brand Story</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><span>Magazine</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><span>ZEROGRAM HUT</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <main class="container">
+    <div class="content">
+      <br><br>
+      <h2><strong>Category Menu</strong></h2>
+      <!-- category-menu -->
+      <nav class="category-menu">
+        <ul>
+          <li>
+            <!-- 하위 메뉴가 없을 경우 .only-link 클래스 추가 -->
+            <button class="only-link" type="button"><span>Shop</span></button>
+          </li>
+          <li>
+            <button class="on" type="button"><span>Gear</span></button>
+            <ul class="on">
+              <li>
+                <a href="#" class="on"><span>텐트</span></a>
+                <ul class="on">
+                  <li><a href="#"><span>1인용</span></a></li>
+                  <li><a href="#"><span>2인용</span></a></li>
+                  <li><a href="#"><span>3인용</span></a></li>
+                  <li><a href="#"><span>4인용</span></a></li>
+                  <li><a href="#"><span>텐트 ACC</span></a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>타프</span></a></li>
+              <li><a href="#"><span>침낭/매트</span></a></li>
+              <li><a href="#"><span>가방</span></a></li>
+              <li><a href="#"><span>쿡웨어</span></a></li>
+              <li><a href="#"><span>ACC</span></a></li>
+              <li><a href="#"><span>도서/지도</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button"><span>Men</span></button>
+            <ul>
+              <li><a href="#"><span>아우터</span></a></li>
+              <li><a href="#"><span>상의</span></a></li>
+              <li><a href="#"><span>하의</span></a></li>
+              <li><a href="#"><span>가방</span></a></li>
+              <li><a href="#"><span>모자</span></a></li>
+              <li><a href="#"><span>ACC</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button"><span>Women</span></button>
+            <ul>
+              <li><a href="#"><span>아우터</span></a></li>
+              <li><a href="#"><span>상의</span></a></li>
+              <li><a href="#"><span>하의</span></a></li>
+              <li><a href="#"><span>가방</span></a></li>
+              <li><a href="#"><span>모자</span></a></li>
+              <li><a href="#"><span>ACC</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- //category-menu -->
+
+      <br><br>
+      <h2><strong>SNB - 마이페이지 메뉴</strong></h2>
+      <!-- snb -->
+      <nav class="snb">
+        <ul class="snb-menu">
+          <li>
+            <a href="#"><span>쇼핑정보</span></a>
+            <ul>
+              <li><a href="#" class="on"><span>주문배송조회</span></a></li>
+              <li><a href="#"><span>반품/교환 내역</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>혜택정보</span></a>
+            <ul>
+              <li><a href="#"><span>적립금</span></a></li>
+              <li><a href="#"><span>쿠폰</span></a></li>
+              <li><a href="#"><span>예치금/환불계좌</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>활동정보</span></a>
+            <ul>
+              <li><a href="#"><span>상품리뷰</span></a></li>
+              <li><a href="#"><span>관심상품</span></a></li>
+              <li><a href="#"><span>재입고알림</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>고객센터</span></a>
+            <ul>
+              <li><a href="#"><span>1:1문의내역</span></a></li>
+              <li><a href="#"><span>상품문의내역</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>회원정보</span></a>
+            <ul>
+              <li><a href="#"><span>회원정보수정</span></a></li>
+              <li><a href="#"><span>비밀번호변경</span></a></li>
+              <li><a href="#"><span>간편결제관리</span></a></li>
+              <li><a href="#"><span>배송지관리</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- //snb -->
+
+      <!-- benefit-summary -->
+      <div class="benefit-summary">
+        <div class="my-info-wrap">
+          <p class="txt">안녕하세요.</p>
+          <div class="grade-wrap">
+            <strong class="user-name">회원명님</strong>
+            <span class="user-grade">회원등급명</span>
+            <a href="#" class="link"><span>등급별 혜택 안내</span></a>
+          </div>
+          <!--
+          <p class="purchase-amount">누적 구매금액 : <span class="price"><span class="amount">100,000,000</span><span class="currency-unit">원</span></span></p>
+          -->
+        </div>
+        <div class="my-box-wrap">
+          <a href="#" class="link">
+            <dl class="d-box">
+              <dd class="d-cont"><span class="price"><span class="amount">1,000,000</span><span class="currency-unit">원</span></span></dd>
+              <dt class="d-tit">적립금</dt>
+            </dl>
+          </a>
+          <a href="#" class="link">
+            <dl class="d-box">
+              <dd class="d-cont">99개</dd>
+              <dt class="d-tit">쿠폰</dt>
+            </dl>
+          </a>
+          <a href="#" class="link">
+            <dl class="d-box">
+              <dd class="d-cont">12개</dd>
+              <dt class="d-tit">관심상품</dt>
+            </dl>
+          </a>
+          <a href="#" class="link">
+            <dl class="d-box">
+              <dd class="d-cont">5개</dd>
+              <dt class="d-tit">작성 가능한 리뷰</dt>
+            </dl>
+          </a>
+        </div>
+      </div>
+      <!-- //benefit-summary -->
+
+      <br><br>
+      <h2><strong>Filter</strong></h2>
+      <!-- filter -->
+      <div class="filter">
+        <!-- 혜택 -->
+        <dl class="filter-benefit">
+          <dt class="d-tit">혜택</dt>
+          <dd class="d-cont">
+            <ul class="check-list">
+              <li>
+                <div class="ui-check left">
+                  <label for="filter1_1">
+                    <input type="checkbox" id="filter1_1" name="filter1_1" checked="">
+                    <i></i>
+                    <span>즉시할인쿠폰</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter1_2">
+                    <input type="checkbox" id="filter1_2" name="filter1_2">
+                    <i></i>
+                    <span>무료배송</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter1_3">
+                    <input type="checkbox" id="filter1_3" name="filter1_3">
+                    <i></i>
+                    <span>즉시할인쿠폰</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter1_4">
+                    <input type="checkbox" id="filter1_4" name="filter1_4">
+                    <i></i>
+                    <span>무료배송</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter1_5">
+                    <input type="checkbox" id="filter1_5" name="filter1_5">
+                    <i></i>
+                    <span>즉시할인쿠폰</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter1_6">
+                    <input type="checkbox" id="filter1_6" name="filter1_6">
+                    <i></i>
+                    <span>무료배송</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <!-- //혜택 -->
+        <!-- 색상 -->
+        <dl class="filter-color">
+          <dt class="d-tit">색상</dt>
+          <dd class="d-cont">
+            <div class="color-list">
+              <div class="color-chip on"><button type="button" class="color-box"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div><div class="color-chip on"><button type="button" class="color-box"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div><div class="color-chip on"><button type="button" class="color-box"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div><div class="color-chip"><button type="button" class="color-box"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div><div class="color-chip"><button type="button" class="color-box"><img src="/resources/pc/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div><div class="color-chip"><button type="button" class="color-box"><img src="/resources/pc/images/dummy/img_prd_color3.jpg" alt="컬러명6"></button></div><div class="color-chip"><button type="button" class="color-box"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div><div class="color-chip"><button type="button" class="color-box"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div><div class="color-chip"><button type="button" class="color-box"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div><div class="color-chip"><button type="button" class="color-box"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div><div class="color-chip"><button type="button" class="color-box"><img src="/resources/pc/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div><div class="color-chip"><button type="button" class="color-box"><img src="/resources/pc/images/dummy/img_prd_color3.jpg" alt="컬러명6"></button></div>
+            </div>
+          </dd>
+        </dl>
+        <!-- //색상 -->
+        <!-- 브랜드 -->
+        <dl class="filter-brand">
+          <dt class="d-tit">브랜드</dt>
+          <dd class="d-cont">
+            <ul class="check-list">
+              <li>
+                <div class="ui-check left">
+                  <label for="filter2_1">
+                    <input type="checkbox" id="filter2_1" name="filter2_1" checked="">
+                    <i></i>
+                    <span>브랜드명</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter2_2">
+                    <input type="checkbox" id="filter2_2" name="filter2_2">
+                    <i></i>
+                    <span>브랜드명</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter2_3">
+                    <input type="checkbox" id="filter2_3" name="filter2_3">
+                    <i></i>
+                    <span>브랜드명</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter2_4">
+                    <input type="checkbox" id="filter2_4" name="filter2_4">
+                    <i></i>
+                    <span>브랜드명</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter2_5">
+                    <input type="checkbox" id="filter2_5" name="filter2_5">
+                    <i></i>
+                    <span>브랜드명</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter2_6">
+                    <input type="checkbox" id="filter2_6" name="filter2_6">
+                    <i></i>
+                    <span>브랜드명</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+            <button type="button" class="button-more"><span>더보기</span></button>
+          </dd>
+        </dl>
+        <!-- //브랜드 -->
+        <!-- 부가속성명 -->
+        <dl class="filter-added">
+          <dt class="d-tit">부가속성명</dt>
+          <dd class="d-cont">
+            <ul class="check-list">
+              <li>
+                <div class="ui-check left">
+                  <label for="filter3_1">
+                    <input type="checkbox" id="filter3_1" name="filter3_1">
+                    <i></i>
+                    <span>부가속성명</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="ui-check left">
+                  <label for="filter3_2">
+                    <input type="checkbox" id="filter3_2" name="filter3_2">
+                    <i></i>
+                    <span>부가속성명</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <!-- //부가속성명 -->
+        <!-- 가격 -->
+        <dl class="filter-price">
+          <dt class="d-tit">가격</dt>
+          <dd class="d-cont">
+            <div class="ui-input">
+              <label for="price1" class="blind">가격</label>
+              <input type="text" value="" id="price1" placeholder="" title="가격 입력">
+            </div>
+            <i>~</i>
+            <div class="ui-input">
+              <label for="price2" class="blind">가격</label>
+              <input type="text" value="" id="price2" placeholder="" title="가격 입력">
+            </div>
+            <button type="button" class="button-search"><span>검색</span></button>
+          </dd>
+        </dl>
+        <!-- //가격 -->
+      </div>
+      <!-- //filter -->
+
+      <br><br>
+      <h2><strong>Filter selected</strong></h2>
+      <!-- fiter-selected -->
+      <div class="filter-selected-area">
+        <button type="button" class="button-filter-reset">
+          <span>전체해제</span>
+        </button>
+        <div class="keyword">
+          <a href="#" class="link">무료배송</a> <!-- 해당 조건값으로 상품 노출 -->
+          <button class="button-delete" type="button"><span>삭제</span></button> <!-- 버튼 클릭 시 li 영역 삭제 -->
+        </div>
+        <div class="keyword">
+          <a href="#" class="link">20,000~30,000원</a>
+          <button class="button-delete" type="button"><span>삭제</span></button>
+        </div>
+        <div class="keyword">
+          <a href="#" class="link">BRAND01</a>
+          <button class="button-delete" type="button"><span>삭제</span></button>
+        </div>
+      </div>
+      <!-- //fiter-selected -->
+
+      <br><br>
+      <h2><strong>페이지 경로</strong></h2>
+      <!-- page-location -->
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">대카테고리</a></li>
+          <li><a href="#">중카테고리</a></li>
+          <li><a href="#">소카테고리</a></li>
+          <li><strong>세카테고리</strong></li>
+        </ul>
+      </div>
+      <!-- //page-location -->
+
+      <br><br>
+      <h2><strong>마이페이지-혜택 > 적립금 정보 </strong></h2>
+      <div class="my-benefit">
+        <div class="spot-area spot-point">
+          <dl class="left">
+            <dt class="d-tit">보유 적립금</dt>
+            <dd class="d-txt"><strong>100,000</strong>원</dd>
+          </dl>
+          <dl class="right">
+            <dt class="d-tit">당월 소멸예정 적립금</dt>
+            <dd class="d-txt"><strong>10,000</strong>원</dd>
+          </dl>
+        </div>
+      </div>
+      <br>
+      <h2><strong>마이페이지-혜택 > 쿠폰 정보 </strong></h2>
+      <div class="my-benefit">
+        <div class="spot-area spot-coupon">
+          <dl class="left">
+            <dt class="d-tit">보유 쿠폰</dt>
+            <dd class="d-txt"><strong>10</strong>장</dd>
+          </dl>
+          <dl class="right">
+            <dt class="d-tit">당월 만료 예정 쿠폰</dt>
+            <dd class="d-txt"><strong>1</strong>장</dd>
+          </dl>
+        </div>
+      </div>
+      <br>
+      <h2><strong>마이페이지-혜택 > 예치금 정보 </strong></h2>
+      <div class="my-benefit">
+        <div class="spot-area spot-deposit">
+          <dl class="left">
+            <dt class="d-tit">보유 예치금</dt>
+            <dd class="d-txt"><strong>100,000</strong>원</dd>
+            <dd class="d-btn">
+              <button class="btn-default btn-md btn-style1 btn-search" type="button"><span>출금하기</span></button>
+            </dd>
+          </dl>
+          <dl class="right">
+            <dt class="d-tit">환불계좌</dt>
+            <dd class="d-txt">국민은행 **-******-***-** (예금주: 홍길동)</dd>
+            <dd class="d-btn">
+              <button class="btn-default btn-md btn-style1" type="button"><span>등록/변경</span></button>
+              <button class="btn-default btn-md btn-style1" type="button"><span>삭제</span></button>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <br><br>
+      <br>
+      <h2><strong>마이페이지-주문 > 주문 정보 </strong></h2>
+      <div class="my-order">
+        <div class="spot-area">
+          <div class="left">
+            <dl>
+              <dt class="d-tit blind">주문일</dt>
+              <dd class="d-txt"><a href="#" class="link"><strong>2021-03-04</strong></a></dd>
+            </dl>
+            <dl>
+              <dt class="d-tit">주문번호</dt>
+              <dd class="d-txt"><strong>123456789</strong></dd>
+            </dl>
+          </div>
+          <div class="right">
+            <button class="btn-default btn-md btn-style1" type="button"><span>주문전체취소</span></button>
+            <button class="btn-default btn-md btn-style1" type="button"><span>영수증 발급</span></button>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <h2><strong>기간별조회 영역</strong></h2>
+      <!-- period-search -->
+      <div class="period-search">
+        <dl class="month">
+          <dt>월단위조회</dt>
+          <dd>
+            <ul class="month-btns">
+              <li><a href="#">8월</a></li>
+              <li class="on"><a href="#">7월</a></li>
+              <li><a href="#">6월</a></li>
+              <li><a href="#">5월</a></li>
+              <li><a href="#">4월</a></li>
+              <li><a href="#">3월</a></li>
+            </ul>
+          </dd>
+        </dl>
+        <div class="date">
+          <div class="ui-input">
+            <label for="search_date1" class="blind">기간입력</label>
+            <input type="text" value="" id="search_date1" placeholder="" title="검색시작일 입력 ">
+          </div>
+          <i>~</i>
+          <div class="ui-input">
+            <label for="search_date2" class="blind">기간입력</label>
+            <input type="text" value="" id="search_date2" placeholder="" title="검색종료일 입력 ">
+          </div>
+          <button class="btn-default btn-md btn-style2 btn-search" type="button"><span>조회하기</span></button>
+        </div>
+      </div>
+      <!-- //period-search -->
+
+      <br><br>
+      <h2><strong>상품목록정렬</strong></h2>
+      <!-- sorting -->
+      <div class="sorting-area">
+        <div class="left">
+          <h3 class="h3-title">상품목록</h3>
+        </div>
+        <div class="right">
+          <span class="list-sorting">
+            <label for="select4_1" class="blind">정렬</label>
+            <select class="ui-select" title="정렬 선택" id="select4_1" name="select4_1">
+              <option>낮은가격순</option>
+              <option>높은가격순</option>
+              <option>신상품순</option>
+              <option>상품평순</option>
+              <option>판매량순</option>
+            </select>
+          </span>
+          <span class="item-amount">
+            <label for="select4_2" class="blind">노출 수</label>
+            <select class="ui-select" title="노출 수 선택" id="select4_2" name="select4_2">
+              <option>24</option>
+              <option>48</option>
+              <option>72</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <!-- //sorting -->
+
+      <br><br>
+      <h2><strong>페이징</strong></h2>
+      <!-- paging -->
+      <div class="paging">
+        <a href="#" class="first"><span>처음</span></a>
+        <a href="#" class="prev"><span>이전</span></a>
+        <a href="#">1</a>
+        <a href="#" class="on">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a href="#" class="next"><span>다음</span></a>
+        <a href="#" class="last"><span>끝</span></a>
+      </div>
+      <!-- //paging -->
+
+
+      <br><br>
+      <h2 class="h2-tit"><strong>Font style</strong></h2>
+      <dl class="font-set">
+        <dt>
+          Nanum Gothic
+        </dt>
+        <dd>
+          <ul>
+            <li>Light 가나다라 1234  (font-weight:300;)</li>
+            <li>Regular 가나다라 1234  (font-weight:400;)</li>
+            <li>Bold 가나다라 1234  (font-weight:700;)</li>
+            <li>Extra Bold 가나다라 1234  (font-weight:800;)</li>
+          </ul>
+        </dd>
+      </dl>
+      <ul class="font-color">
+        <li class="color1">#fff</li>
+        <li class="color2">#888</li>
+        <li class="color3">#111</li>
+        <li class="color4">#a22bfe</li>
+      </ul>
+      
+      <br><br>
+      <h2><strong>BUTTON</strong></h2>
+      <br>
+      <h3>bottom area => extra extra large 60 - btn-default btn-xxl</h3>
+      <div class="btn-wrap">
+        <button class="btn-default btn-xxl btn-style1" type="button"><span>이전 페이지</span></button>
+        <button class="btn-default btn-xxl btn-style2" type="button"><span>결제하기</span></button>
+      </div>
+      <br><br>
+      
+      <div class="btn-wrap">
+        <button class="btn-default btn-xxl btn-style2" type="button"><span>결제하기</span></button>
+      </div>
+      <br>
+      <div class="btn-wrap">
+        <div class="left">
+          <button class="btn-default btn-xxl btn-style1" type="button"><span>이전 페이지</span></button>
+        </div>
+        <div class="right">
+          <button class="btn-default btn-xxl btn-style2" type="button"><span>결제하기</span></button>
+        </div>
+      </div>
+      <br><br>
+      <br><br>
+      <h3>prd area => extra large 50 - btn-default btn-xl</h3>
+      <div class="btn-wrap">
+        <button class="btn-default btn-xl btn-style1" type="button"><span>장바구니 담기</span></button>
+        <button class="btn-default btn-xl btn-style2" type="button"><span>바로구매</span></button>
+      </div>
+
+      <br><br>
+      <h3>popup area => large 40 - btn-default btn-lg</h3>
+      <div class="btn-wrap">
+        <button class="btn-default btn-lg btn-style2" type="button"><span>선택</span></button>
+        <button class="btn-default btn-lg btn-style1" type="button"><span>취소</span></button>
+      </div>
+
+      <br><br>
+      <h3>table top area => medium 40 - btn-default btn-md</h3>
+      <div class="btn-wrap">
+        <div class="left">
+          <button class="btn-default btn-md btn-style1" type="button"><span>기본배송지로 설정</span></button>
+          <button class="btn-default btn-md btn-style1" type="button"><span>배송지 삭제</span></button>
+        </div>
+        <div class="right">
+          <button class="btn-default btn-md btn-style2" type="button"><span>배송지 추가</span></button>
+        </div>
+      </div>
+
+      <br><br>
+      <h3>table area => medium 40 - btn-default btn-md</h3>
+      <button class="btn-default btn-md btn-style1" type="button"><span>우편번호</span></button>
+      <button class="btn-default btn-md btn-style1 btn-account-number" type="button"><span>계좌변경</span></button>
+      <button class="btn-default btn-md btn-style3 btn-confirm" type="button"><span>확인</span></button>
+      <button class="btn-default btn-md btn-style1 btn-cancel" type="button"><span>취소</span></button>
+
+      <br><br>
+      <h3>table area => small 32 - btn-default btn-sm</h3>
+      <div class="btn-wrap-row">
+        <button class="btn-default btn-sm btn-style1" type="button"><span>배송중</span></button>
+        <button class="btn-default btn-sm btn-style2" type="button"><span>구매확정</span></button>
+        <button class="btn-default btn-sm btn-style1" type="button"><span>반품접수</span></button>
+        <button class="btn-default btn-sm btn-style1" type="button"><span>교환접수</span></button>
+      </div>
+      <br><br>
+      <h3>table area => small 32 - btn-default btn-sm</h3>
+      <div>
+        <button class="btn-default btn-sm btn-style3" type="button"><span>수정</span></button>
+        <button class="btn-default btn-sm btn-style1" type="button"><span>삭제</span></button>
+      </div>
+
+      <br><br>
+      <h3>btn-style1</h3>
+      <div>
+        <button class="btn-default btn-md btn-style1" type="button"><span>확인</span></button>
+      </div>
+      <br>
+      <h3>btn-style2</h3>
+      <div>
+        <button class="btn-default btn-md btn-style2" type="button"><span>확인</span></button>
+      </div>
+      <br>
+      <h3>btn-style3</h3>
+      <div>
+        <button class="btn-default btn-md btn-style3" type="button"><span>확인</span></button>
+      </div>
+      <br>
+      <h3>btn-style4</h3>
+      <div>
+        <button class="btn-default btn-md btn-style4" type="button"><span>확인</span></button>
+      </div>
+      <br>
+      <h3>[a] btn-default btn-lg btn-style1 btn-ico facebook</h3>
+      <div>
+        <a href="#" class="btn-default btn-lg btn-style1 btn-ico facebook"><span><i class="ico">Facebook</i> 계정으로 가입</span></a>
+      </div>
+      <br>
+      <h3>[button] btn-default btn-lg btn-style1 btn-ico kakao</h3>
+      <div>
+        <button class="btn-default btn-lg btn-style1 btn-ico kakao"><span><i class="ico">kakao</i> 계정으로 가입</span></button>
+      </div>
+
+      <br><br>
+      <h2><strong>ICON FLAG</strong></h2>
+      <h3>전시 > 상품유닛, 상품상세 > 상품기본정보영역</h3>
+      <div class="item-flag">
+        <i class="ico-new">NEW</i>
+        <i class="ico-hot">HOT</i>
+        <i class="ico-default">임의 아이콘</i>
+        <i class="ico-recycle">리사이클 소재</i>
+        <i class="ico-eco">친환경 소재</i>
+        <i class="ico-limitid">리미티드</i>
+        <i class="ico-TIME_SALE">TIME SALE</i>
+        <i class="ico-delivery">무료배송</i>
+        <i class="ico-sale">즉시할인쿠폰</i>
+        <i class="ico-gift">사은품</i>
+      </div>
+      <br>
+      <h3>마이페이지 > 상품평, 상품상세 > 상품평</h3>
+      <div class="review-">
+        <div class="item-flag">
+          <i class="ico-purchase">구매</i>
+          <i class="ico-non-purchase">비구매</i>  
+          <i class="ico-best">BEST</i>
+          <i class="ico-use-month">한달사용</i>
+          <i class="ico-default">임의 아이콘</i>
+        </div>
+      </div>
+
+      
+      <br><br>
+      <h2><strong>INPUT</strong></h2>
+      
+      <div class="ui-input">
+        <label for="input1" class="blind">이름</label>
+        <input type="text" value="" id="input1" placeholder="이름 입력" title="이름 입력">
+      </div>
+      <br>
+      <div class="ui-input">
+        <label for="input2" class="blind">이름</label>
+        <input type="text" value="" id="input2" placeholder="이름 입력" title="이름 입력" disabled="">
+      </div>
+      <br>
+      <div class="ui-input error">
+        <label for="input3" class="blind">이름</label>
+        <input type="text" value="" id="input3" placeholder="이름 입력" title="이름 입력">
+      </div>
+      <br><br>
+      <h3>textarea</h3>
+      <div class="ui-textarea">
+        <label for="textarea1" class="blind">내용</label>
+        <textarea id="textarea1" name="textarea1" rows="10" placeholder="내용을 입력하세요." title="내용 입력"></textarea>
+      </div>
+      <br>
+      <div class="ui-textarea">
+        <label for="textarea2" class="blind">내용</label>
+        <textarea id="textarea2" name="textarea2" rows="10" placeholder="내용을 입력하세요." title="내용 입력" disabled=""></textarea>
+      </div>
+      <br>
+      
+      <br>
+      <h3>select</h3>
+      <label for="select1" class="blind">관련 카테고리</label>
+      <select class="ui-select" title="관련 카테고리 선택" id="select1" name="select1">
+        <option>선택</option>
+        <option>옵션1</option>
+        <option>옵션2</option>
+      </select>
+      <br>
+      <br>
+      <label for="select2" class="blind">관련 카테고리</label>
+      <select class="ui-select" title="관련 카테고리 선택" id="select2" name="select2" disabled="">
+        <option>선택</option>
+        <option>옵션1</option>
+        <option>옵션2</option>
+      </select>
+      <br>
+      <br>
+
+      <br><br>
+      <h2 class="h2-tit"><strong>Option Select</strong></h2>
+      <!-- option-select-on -->
+      <div class="select-box on"> <!-- 버튼 클릭 시 부모 select-box에 .on class 추가 -->
+        <button class="option-box" type="button">
+          <span class="txt">옵션명1/옵션명2/옵션명3/옵션명4</span>
+        </button>
+        <div class="option-list-wrap">
+          <ul class="option-list">
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><p class="txt"><span>옵션값</span></p></div>
+                <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><p class="txt"><span>옵션값</span></p></div>
+                <div class="col-right"><del class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></del><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><p class="txt"><span>옵션값</span></p></div>
+                <div class="col-right"><strong class="point">[혜택제외]</strong><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+            <li class="disabled">
+              <a href="#" class="row-wrap">
+                <div class="col-left"><p class="txt"><span>옵션값 (품절)</span></p></div>
+                <div class="col-right"><button class="btn-default btn-sm btn-style1" type="button"><span>재입고알림</span></button></div>
+              </a>
+            </li>
+            <li class="disabled">
+              <a href="#" class="row-wrap">
+                <div class="col-left"><p class="txt"><span>옵션값</span></p></div>
+                <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><img src="/resources/pc/images/dummy/img_option_color1.jpg" alt=""><p class="txt"><span>옵션1</span></p></div>
+                <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><span data-v-94532792="" class="prd-color" style="background: red;"></span><p class="txt"><span>빨강 (품절)</span></p></div>
+                <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><span class="prd-color" style="background-color:#ba3427;"></span><p class="txt"><span>옵션값aaaaaaaaaaaaaaaaaaaa1/옵션값aaaaaaaaaaaaaaaaaaaa2/옵션값aaaaaaaaaaaaaaaaaaaa3/옵션값aaaaaaaaaaaaaaaaaaaa4</span></p></div>
+                <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //option-select-on -->
+      <br>
+      <!-- option-select -->
+      <div class="select-box"> <!-- 버튼 클릭 시 부모 select-box에 .on class 추가 -->
+        <button class="option-box" type="button">
+          <span class="txt">옵션명</span>
+        </button>
+        <div class="option-list-wrap">
+          <ul class="option-list">
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><p class="txt"><span>옵션값</span></p></div>
+                <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //option-select -->
+      <!-- option-select-disabled -->
+      <div class="select-box"> <!-- 버튼 클릭 시 부모 select-box에 .on class 추가 -->
+        <button class="option-box" type="button" disabled="">
+          <span class="txt">옵션명 (품절)</span>
+        </button>
+        <div class="option-list-wrap">
+          <ul class="option-list">
+            <li>
+              <a href="#" class="row-wrap">
+                <div class="col-left"><p class="txt"><span>옵션값</span></p></div>
+                <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //option-select-disabled -->
+      
+      <br><br>
+      <h3>radio</h3>
+      <div class="ui-radio left">
+        <label for="radio1_1">
+          <input type="radio" id="radio1_1" name="radio1" checked="">
+          <i></i>
+          <span>text1</span>
+        </label>
+      </div>
+      <div class="ui-radio left">
+        <label for="radio1_2">
+          <input type="radio" id="radio1_2" name="radio1">
+          <i></i>
+          <span>text1</span>
+        </label>
+      </div>
+      <br>
+      <label for="radio1_3" class="ui-radio">
+        <input type="radio" id="radio1_3" name="radio1" checked="">
+        <i></i>
+      </label>
+      <br>
+      <label for="radio1_4" class="ui-radio left">
+        <input type="radio" id="radio1_4" name="radio1" checked="">
+        <i></i>
+        <span>text1</span>
+      </label>
+      
+      <br><br>
+      <h3>check box - left</h3>
+      <div class="ui-check left">
+        <label for="agree1">
+          <input type="checkbox" id="agree1" name="agree" checked="">
+          <i></i>
+          <span>text</span>
+        </label>
+      </div>
+      <br>
+      <div class="ui-check left">
+        <label for="agree2">
+          <input type="checkbox" id="agree2" name="agree">
+          <i></i>
+          <span>text</span>
+        </label>
+      </div>
+      <br>
+      <div class="ui-check left">
+        <label for="agree3">
+          <input type="checkbox" id="agree3" name="agree" disabled="">
+          <i></i>
+          <span>text</span>
+        </label>
+      </div>
+      <br>
+      <div class="ui-check left">
+        <label for="agree4">
+          <input type="checkbox" id="agree4" name="agree" checked="" disabled="">
+          <i></i>
+          <span>text (checked & disabled)</span>
+        </label>
+      </div>
+      <br>
+      <label for="agree5" class="ui-check left">
+        <input type="checkbox" id="agree5" name="agree" checked="">
+        <i></i>
+        <span>text</span>
+      </label>
+      <br>
+      <label for="agree6" class="ui-check">
+        <input type="checkbox" id="agree6" name="agree">
+        <i></i>
+      </label>
+      <br><br>
+
+      <br><br>
+      <h3>check box - right</h3>
+      <div class="ui-check right">
+        <label for="agree2-1">
+          <input type="checkbox" id="agree2-1" name="agree" checked="">
+          <i></i>
+          <span>text</span>
+        </label>
+      </div>
+      <br>
+      <div class="ui-check right">
+        <label for="agree2-2">
+          <input type="checkbox" id="agree2-2" name="agree">
+          <i></i>
+          <span>text</span>
+        </label>
+      </div>
+      <br>
+      <div class="ui-check right">
+        <label for="agree2-3">
+          <input type="checkbox" id="agree2-3" name="agree" disabled="">
+          <i></i>
+          <span>text</span>
+        </label>
+      </div>
+
+      <br><br>
+      <h3>spin box</h3>
+      <span class="spin-box">
+        <input type="text" value="3" readonly="">
+        <button type="button" class="minus">-</button>
+        <button type="button" class="plus">+</button>
+      </span>
+      <br><br>
+      <span class="spin-box">
+        <input type="text" value="3" readonly="" disabled="">
+        <button type="button" class="minus" disabled="">-</button>
+        <button type="button" class="plus" disabled="">+</button>
+      </span>
+
+      <br><br>
+      <h2 class="h2-tit"><strong>img attach</strong></h2>
+      <!-- img-attach -->
+      <div class="img-attach-area">
+        <div class="img-wrap">
+          <img src="/resources/pc/images/dummy/thumb_prd1.jpg" alt="">
+          <button type="button" class="button-del"><span>삭제</span></button>
+        </div>
+        <div class="img-wrap">
+          <img src="/resources/pc/images/dummy/thumb_prd1.jpg" alt="">
+          <button type="button" class="button-del"><span>삭제</span></button>
+        </div>
+        <div class="img-wrap">
+          <img src="/resources/pc/images/dummy/thumb_prd1.jpg" alt="">
+          <button type="button" class="button-del"><span>삭제</span></button>
+        </div>
+        <button type="button" class="button-attach"><span>첨부하기</span></button>
+      </div>
+      <!-- //img-attach -->
+      
+      <br><br>
+      <h2><strong>tab-style1 </strong></h2>
+      <ul class="tab-style1">
+        <li class="on"><button type="button"><span>상품설명</span></button></li>
+        <li><button type="button"><span>상품후기<em>(100)</em></span></button></li>
+        <li><button type="button"><span>상품문의</span></button></li>
+        <li><button type="button"><span>배송/교환/반품</span></button></li>
+      </ul>
+
+      <br><br>
+      <h2><strong>tab-style2</strong></h2>
+      <ul class="tab-style2">
+        <li class="on"><button type="button"><span>고객센터</span></button></li>
+        <li><button type="button"><span>공지사항</span></button></li>
+        <li><button type="button"><span>FAQ</span></button></li>
+        <li><button type="button"><span>1:1문의</span></button></li>
+      </ul>
+      <br><br>
+      <ul class="tab-style2">
+        <li class="on"><a href="#"><span>작성 가능한 상품리뷰</span></a></li>
+        <li><a href="#"><span>내가 작성한 상품리뷰</span></a></li>
+      </ul>
+
+      <br><br>
+      <h2><strong>tab-style3</strong></h2>
+      <ul class="tab-style3">
+        <li class="on"><button type="button"><span>회원/멤버십</span></button></li>
+        <li><button type="button"><span>상품</span></button></li>
+        <li><button type="button"><span>주문/결제</span></button></li>
+        <li><button type="button"><span>배송</span></button></li>
+        <li><button type="button"><span>클레임</span></button></li>
+        <li><button type="button"><span>이벤트</span></button></li>
+        <li><button type="button"><span>기타</span></button></li>
+      </ul>
+
+      <br><br>
+      <h2><strong>tab-style4</strong></h2>
+      <ul class="tab-style4">
+        <li class="on"><button type="button"><span>전체</span></button></li>
+        <li><button type="button"><span>가입/탈퇴</span></button></li>
+        <li><button type="button"><span>회원정보</span></button></li>
+        <li><button type="button"><span>회원혜택</span></button></li>
+        <li><button type="button"><span>멤버십</span></button></li>
+      </ul>
+
+      <br><br>
+      <h2><strong>tab-style5</strong></h2>
+      <ul class="tab-style5">
+        <li class="on"><a href="#prd-group1"><span>상품그룹명1상품그룹명1상품그룹명1상품그룹명1상품그룹명1</span></a></li>
+        <li><a href="#prd-group2"><span>상품그룹명2상품그룹명2상품그룹명2상품그룹명2</span></a></li>
+        <li><a href="#prd-group3"><span>상품그룹명3</span></a></li>
+        <li><a href="#prd-group4"><span>상품그룹명4</span></a></li>
+      </ul>
+
+      <br><br>
+      <h2><strong>tab-style6</strong></h2>
+      <div class="tab-style6">
+        <div class="item on"><a href="#"><span>기본배송지</span></a></div>
+        <div class="item"><a href="#"><span>최근배송지</span></a></div>
+        <div class="item"><a href="#"><span>신규배송지</span></a></div>
+      </div>
+
+      <br><br>
+      <h2><strong>table-style1</strong></h2>
+      <table class="table-style1">
+        <colgroup>
+          <col style="width:120px">
+          <col style="width:120px">
+          <col style="width:120px">
+          <col style="width:auto">
+        </colgroup>
+        <thead>
+        <tr>
+          <th class="date">발생일시</th>
+          <th class="category">구분</th>
+          <th class="point">포인트</th>
+          <th class="description">상세내용</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="date">2021-01-01</td>
+          <td class="category">적립</td>
+          <td class="point"><span class="plus">+ 3,000</span></td>
+          <td class="description">주문 (<a href="#" class="link">주문번호</a>)</td>
+        </tr>
+        <tr>
+          <td class="date">2021-01-01</td>
+          <td class="category">적립</td>
+          <td class="point"><span class="minus">+ 3,000</span></td>
+          <td class="description">주문 (<a href="#" class="link">주문번호</a>)</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <br><br>
+      <h2><strong>table-style2</strong></h2>
+      <table class="table-style2">
+        <colgroup>
+          <col style="width:210px">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+        <tr>
+          <th>제품소재</th>
+          <td>면 100%</td>
+        </tr>
+        <tr>
+          <th>제조년월</th>
+          <td>2019년 01월 01일</td>
+        </tr>
+        </tbody>
+      </table>
+
+      
+
+      <br><br>
+      <h2><strong>기본 상품유닛 unit-type1(220px) </strong></h2>
+      <!-- unit-type1 -->
+      <div class="list-product unit-type1">
+        <div class="row">
+          <div class="item">
+            <!-- unit -->
+            <div class="prd-item">
+              <a href="#1">
+                <strong class="best-num">1</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like on" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:none;"><span>품절</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다 말줄임 표시 합니다 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:20%;"></span>
+                    </span>
+                    <span class="item-review-score">1.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-new">NEW</i>
+                    <i class="ico-hot">HOT</i>
+                    <i class="ico-recycle">리사이클 소재</i>
+                    <i class="ico-eco">친환경 소재</i>
+                    <i class="ico-limitid">리미티드</i>
+                    <i class="ico-delivery">무료배송</i>
+                    <i class="ico-sale">즉시할인쿠폰</i>
+                    <i class="ico-gift">사은품</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit -->
+          </div>
+          <div class="item">
+            <!-- unit2 -->
+            <div class="prd-item">
+              <a href="#2">
+                <strong class="best-num">2</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:none;"><span>품절</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color"><!-- 컬러칩이 없어도 감싸는 div는 유지 -->
+                    <div class="color-list">
+                    </div>
+                  </div>
+                  <div class="item-title">상품명</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong></span>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit2 -->
+          </div>
+          <div class="item">
+            <!-- unit3 -->
+            <div class="prd-item">
+              <a href="#3">
+                <strong class="best-num">3</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:none;"><span>판매대기</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다 말줄임 표시 합니다 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:60%;"></span>
+                    </span>
+                    <span class="item-review-score">3.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-new">NEW</i>
+                    <i class="ico-hot">HOT</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit3 -->
+          </div>
+          <div class="item">
+            <!-- unit4 -->
+            <div class="prd-item">
+              <a href="#4">
+                <strong class="best-num">4</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like on" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:none;"><span>판매중지</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(6)"><span class="prd-color" style="background-color:#fff;">컬러명6</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(7)"><span class="prd-color" style="background-color:#c4b39c;">컬러명7</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(8)"><span class="prd-color" style="background-color:#959595;">컬러명8</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(9)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명9"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(10)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명10"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:80%;"></span>
+                    </span>
+                    <span class="item-review-score">4.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-recycle">리사이클 소재</i>
+                    <i class="ico-eco">친환경 소재</i>
+                    <i class="ico-limitid">리미티드</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit4 -->
+          </div>
+          <div class="item">
+            <!-- unit5 -->
+            <div class="prd-item">
+              <a href="#5">
+                <strong class="best-num">5</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like on" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:none;"><span>품절</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다 말줄임 표시 합니다 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:100%;"></span>
+                    </span>
+                    <span class="item-review-score">5.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-new">NEW</i>
+                    <i class="ico-hot">HOT</i>
+                    <i class="ico-recycle">리사이클 소재</i>
+                    <i class="ico-eco">친환경 소재</i>
+                    <i class="ico-limitid">리미티드</i>
+                    <i class="ico-delivery">무료배송</i>
+                    <i class="ico-sale">즉시할인쿠폰</i>
+                    <i class="ico-gift">사은품</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit5 -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="item">
+            <!-- unit6 -->
+            <div class="prd-item">
+              <a href="#6">
+                <strong class="best-num">6</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:block;"><span>품절</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color"><!-- 컬러칩이 없어도 감싸는 div는 유지 -->
+                    <div class="color-list">
+                    </div>
+                  </div>
+                  <div class="item-title">상품명</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong></span>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit6 -->
+          </div>
+          <div class="item">
+            <!-- unit7 -->
+            <div class="prd-item">
+              <a href="#7">
+                <strong class="best-num">7</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:block;"><span>판매대기</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다 말줄임 표시 합니다 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:40%;"></span>
+                    </span>
+                    <span class="item-review-score">2.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-new">NEW</i>
+                    <i class="ico-hot">HOT</i>
+                    <i class="ico-recycle">리사이클 소재</i>
+                    <i class="ico-delivery">무료배송</i>
+                    <i class="ico-sale">즉시할인쿠폰</i>
+                    <i class="ico-gift">사은품</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit7 -->
+          </div>
+          <div class="item">
+            <!-- unit8 -->
+            <div class="prd-item">
+              <a href="#8">
+                <strong class="best-num">8</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like on" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:block;"><span>판매중지</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(6)"><span class="prd-color" style="background-color:#fff;">컬러명6</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(7)"><span class="prd-color" style="background-color:#c4b39c;">컬러명7</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(8)"><span class="prd-color" style="background-color:#959595;">컬러명8</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(9)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명9"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(10)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명10"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:60%;"></span>
+                    </span>
+                    <span class="item-review-score">3.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-recycle">리사이클 소재</i>
+                    <i class="ico-eco">친환경 소재</i>
+                    <i class="ico-limitid">리미티드</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit8 -->
+          </div>
+          <div class="item">
+            <!-- unit9 -->
+            <div class="prd-item">
+              <a href="#9">
+                <strong class="best-num">9</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like on" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:none;"><span>판매중지</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(6)"><span class="prd-color" style="background-color:#fff;">컬러명6</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(7)"><span class="prd-color" style="background-color:#c4b39c;">컬러명7</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(8)"><span class="prd-color" style="background-color:#959595;">컬러명8</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(9)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명9"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(10)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명10"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:80%;"></span>
+                    </span>
+                    <span class="item-review-score">4.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-new">NEW</i>
+                    <i class="ico-hot">HOT</i>
+                    <i class="ico-delivery">무료배송</i>
+                    <i class="ico-sale">즉시할인쿠폰</i>
+                    <i class="ico-gift">사은품</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit9 -->
+          </div>
+          <div class="item">
+            <!-- unit10 -->
+            <div class="prd-item">
+              <a href="#10">
+                <strong class="best-num">10</strong>
+                <div class="item-like">
+                  <button type="button" class="button-like on" onclick="alert('관심')"> <!-- class .on 처리 -->
+                    <span>관심상품</span>
+                  </button>
+                </div>
+                <figure class="item-img">
+                  <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="상품명+컬러명1">
+                  <div class="prd-state" style="display:none;"><span>판매중지</span></div>
+                  <figcaption class="blind">상품명+컬러명1</figcaption>
+                </figure>
+                <div class="item-info">
+                  <div class="item-color">
+                    <div class="color-list">
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(1)"><span class="prd-color" style="background-color:#fff;">컬러명1</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(2)"><span class="prd-color" style="background-color:#c4b39c;">컬러명2</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(3)"><span class="prd-color" style="background-color:#959595;">컬러명3</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(4)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명4"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(5)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명5"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(6)"><span class="prd-color" style="background-color:#fff;">컬러명6</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(7)"><span class="prd-color" style="background-color:#c4b39c;">컬러명7</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(8)"><span class="prd-color" style="background-color:#959595;">컬러명8</span></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(9)"><img src="/resources/pc/images/dummy/img_prd_color1.jpg" alt="컬러명9"></button></div>
+                      <div class="color-chip"><button type="button" class="color-box" onclick="alert(10)"><img src="../../../resources/images/dummy/img_prd_color2.jpg" alt="컬러명10"></button></div>
+                    </div>
+                  </div>
+                  <div class="item-title">상품명 2줄 초과 시 말줄임 표시 합니다</div>
+                  <div class="item-price">
+                    <span class="price-wrap"><strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span><span class="tilde">~</span></strong><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span><span class="tilde">~</span></del><span class="sale">15%</span></span>
+                  </div>
+                  <!--
+                  <div class="item-review">
+                    <span class="item-review-star">
+                      <span class="item-review-bg" style="width:100%;"></span>
+                    </span>
+                    <span class="item-review-score">5.0</span>
+                    <span class="item-review-txt">1,234</span>
+                  </div>
+                  -->
+                  <div class="item-flag">
+                    <i class="ico-delivery">무료배송</i>
+                    <i class="ico-sale">즉시할인쿠폰</i>
+                    <i class="ico-gift">사은품</i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+            <!-- //unit10 -->
+          </div>
+        </div>
+      </div>
+      <!-- //unit-type1 -->
+
+      <h2 class="h2-tit"><strong>리뷰 상품유닛 - 일반상품(옵션)</strong></h2>
+      <!-- item-prd-info1 -->
+      <div class="item-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="order-number">주문번호 : 202006011500056</div>
+        <div class="confirm-date">구매확정일 : YYYY-MM-DD</div>
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명 상품명 상품명 상품명</strong>
+        </div>
+        <div class="prd-option">옵션값 옵션값 옵션값</div>
+      </div>
+      <!-- //item-prd-info1 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>리뷰 상품유닛 - 묶음상품</strong></h2>
+      <!-- item-prd-info1-1 -->
+      <div class="item-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="order-number">주문번호 : 202006011500056</div>
+        <div class="confirm-date">구매확정일 : YYYY-MM-DD</div>
+        <div class="prd-title">
+          <a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명</a>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명 구성상품명</strong><span class="unit">0개</span></p>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명 구성상품명</strong><span class="unit">0개</span></p>
+        </div>
+      </div>
+      <!-- //item-prd-info1-1 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>리뷰 상품유닛 - 묶음상품 (상품명에 a태그)</strong></h2>
+      <!-- item-prd-info1-2 -->
+      <div class="item-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="order-number">주문번호 : 202006011500056</div>
+        <div class="confirm-date">구매확정일 : YYYY-MM-DD</div>
+        <div class="prd-title">
+          <a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명</a>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong><span class="unit">0개</span></p>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong><span class="unit">0개</span></p>
+        </div>
+      </div>
+      <!-- //item-prd-info1-2 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>문의 상품유닛 - 일반상품(옵선)</strong></h2>
+      <!-- item-prd-info2 -->
+      <div class="item-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <button class="btn-delete" type="button"><span>삭제</span></button>
+        <div class="order-number">주문번호 : 202006011500056</div>
+        <div class="order-state"><span>주문완료</span></div>
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명 상품명 상품명 상품명</strong>
+        </div>
+        <div class="prd-option">옵션값 옵션값 옵션값</div>
+      </div>
+      <!-- //item-prd-info2 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>문의 상품유닛 - 묶음상품</strong></h2>
+      <!-- item-prd-info2-1 -->
+      <div class="item-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <button class="btn-delete" type="button"><span>삭제</span></button>
+        <div class="order-number">주문번호 : 202006011500056</div>
+        <div class="order-state"><span>주문완료</span></div>
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명 상품명 상품명 상품명</strong>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong><span class="unit">0개</span></p>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong><span class="unit">0개</span></p>
+        </div>
+      </div>
+      <!-- //item-prd-info2-1 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>문의 상품유닛 - 사은품, 추가구성품</strong></h2>
+      <!-- item-prd-info2-2 -->
+      <div class="item-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <button class="btn-delete" type="button"><span>삭제</span></button>
+        <div class="order-number">주문번호 : 202006011500056</div>
+        <div class="order-state"><span>주문완료</span></div>
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명 상품명 상품명 상품명</strong>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong><span class="unit">0개</span></p>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong><span class="unit">0개</span></p>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong>사은품명사은품명사은품명사은품명사은품명</strong><span class="unit">수량 당 0개</span></p>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong>사은품명사은품명사은품명사은품명사은품명</strong><span class="unit">수량 당 0개</span></p>
+        </div>
+        <div class="prd-add">
+          <p class="tit"><i class="ico">추가</i><strong>추가구성품명추가구성품명추가구성품명</strong><span class="unit">0개</span></p>
+        </div>
+      </div>
+      <!-- //item-prd-info2-2 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>상품유닛 - 마이페이지-주문 > 배송정보 레이어팝업</strong></h2>
+      <!-- item-prd-info4 -->
+      <div class="item-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="order-number">주문번호 : 202006011500056</div>
+        <div class="date">주문일 : YYYY-MM-DD</div>
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명 상품명 상품명 상품명</strong>
+          <span class="unit">0개</span>
+        </div>
+        <div class="prd-option">옵션값 옵션값 옵션값</div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong><span class="unit">0개</span></p>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong>사은품명사은품명사은품명</strong><span class="unit">0개</span></p>
+        </div>
+        <div class="prd-add">
+          <p class="tit"><i class="ico">추가</i><strong>추가구성품명추가구성품명추가구성품명</strong><span class="unit">0개</span></p>
+        </div>
+      </div>
+      <!-- //item-prd-info4 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>상품유닛 - 주문서 > 쿠폰 레이어팝업</strong></h2>
+      <!-- item-prd-info5 -->
+      <div class="item-prd-info">
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</strong>
+          <strong class="price"><span class="amount">5,000</span><span class="currency-unit">원</span></strong>
+          <span class="unit">0개</span>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong></p>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1</strong></p>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit"><strong>구성상품명1구성상품명1구성상품명1구성상품명1</strong></p>
+        </div>
+      </div>
+      <!-- //item-prd-info5 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>상품유닛 - 마이페이지-재입고 > 재입고 알림내력</strong></h2>
+      <!-- item-prd-info6 -->
+      <div class="item-prd-info">
+         <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="state"><span>알림신청</span></div><!-- 알림상태 : 알림신청 | 알림만료 | 알림발송 | 알림취소 -->
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명</strong>
+        </div>
+        <div class="prd-option">옵션값 옵션값 옵션값</div>
+        <div class="date"><i class="ico">알림신청기간 :</i> YYYY-MM-DD ~ YYYY-MM-DD</div>
+      </div>
+      <!-- //item-prd-info6 -->
+      <br><br>
+      <!-- item-prd-info6-1 -->
+      <div class="item-prd-info">
+         <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title">
+          <strong>상품명 상품명 상품명</strong>
+        </div>
+        <div class="select-box"> <!-- 버튼 클릭 시 부모 select-box에 .on class 추가 -->
+          <button class="option-box" type="button">
+            <span class="txt">옵션값1/옵션값2/옵션값3/옵션값4</span>
+          </button>
+          <div class="option-list-wrap">
+            <ul class="option-list">
+              <li>
+                <a href="#" class="row-wrap">
+                  <div class="col-left"><p class="txt"><span>옵션값</span></p></div>
+                  <div class="col-right"><span class="price"><span class="amount">1,000</span><span class="currency-unit">원</span></span></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- //item-prd-info6-1 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 일반상품</strong></h2>
+      <!-- ui-prd-info3-1 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-like on"> <!-- class .on 처리 -->
+            <span>관심상품</span>
+          </button>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명</a></div>
+        <div class="prd-price">
+          <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+        </div>
+      </div>
+      <!-- //ui-prd-info3-1 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 일반상품(옵션)</strong></h2>
+      <!-- ui-prd-info3-2 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-like"> <!-- class .on 처리 -->
+            <span>관심상품</span>
+          </button>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명</a></div>
+        <div class="prd-option">
+          <p>옵션값 옵션값 옵션값 옵션값</p>
+          <button class="btn-option" type="button"><span>옵션변경</span></button>
+        </div>
+        <div class="prd-price">
+          <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          <div class="layer-tooltip">
+            <a href="#" class="link-tooltip link"><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span></del></a>
+          </div>
+        </div>
+      </div>
+      <!-- //ui-prd-info3-2 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 묶음상품</strong></h2>
+      <!-- ui-prd-info3-3 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-like"> <!-- class .on 처리 -->
+            <span>관심상품</span>
+          </button>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명</a></div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명1 구성상품명1 구성상품명1 구성상품명1</p>
+          <span class="unit">2개</span>
+        </div>
+        <div class="prd-price">
+          <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          <div class="layer-tooltip">
+            <a href="#" class="link-tooltip link"><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span></del></a>
+            <div class="cont-box prd-detail-sale on"> <!-- class .on 처리 -->
+              <a href="#" class="button-tooltip-close">close</a>
+              <dl class="desc-cont">
+                <dt class="d-tit">상품유형할인</dt>
+                <dd class="d-cont">
+                  <ul class="txt-list">
+                    <li>할인 3,000원</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //ui-prd-info3-3 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 사은품</strong></h2>
+      <!-- ui-prd-info3-4 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-like on"> <!-- class .on 처리 -->
+            <span>관심상품</span>
+          </button>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-option">
+          <p>옵션값 옵션값 옵션값 옵션값</p>
+          <button class="btn-option" type="button"><span>옵션변경</span></button>
+        </div>
+        <div class="prd-price">
+          <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          <div class="layer-tooltip">
+            <a href="#" class="link-tooltip link"><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span></del></a>
+          </div>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong class="name">사은품명 사은품명 사은품명</strong></p><em class="unit">(2개)</em>
+        </div>
+      </div>
+      <!-- //ui-prd-info3-4 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 추가구성품</strong></h2>
+      <!-- ui-prd-info3-5 -->
+      <div class="ui-prd-info">
+        <div class="add-prd">
+          <div class="tit">
+            <i class="ico">추가</i>
+            <strong class="name">추가구성품명 추가구성품명 추가구성품명</strong>
+            <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          </div>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+      </div>
+      <!-- //ui-prd-info3-5 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 일반상품 (안내사항)</strong></h2>
+      <!-- ui-prd-info3-6 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+          <div class="prd-state">품절</div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-like on"> <!-- class .on 처리 -->
+            <span>관심상품</span>
+          </button>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명</a></div>
+        <div class="prd-price">
+          <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+        </div>
+        <p class="txt-desc">* 안내사항 문구입니다.</p>
+      </div>
+      <!-- //ui-prd-info3-6 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 추가구성품 (안내사항)</strong></h2>
+      <!-- ui-prd-info3-7 -->
+      <div class="ui-prd-info">
+        <div class="add-prd">
+          <div class="tit">
+            <i class="ico">추가</i>
+            <strong class="name">추가구성품명 추가구성품명 추가구성품명</strong>
+            <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          </div>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+        <p class="txt-desc">* 안내사항 문구입니다.</p>
+      </div>
+      <!-- //ui-prd-info3-7 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 사은품 (상품상태 표기)</strong></h2>
+      <!-- ui-prd-info3-8 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+          <div class="prd-state">품절</div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-like on"> <!-- class .on 처리 -->
+            <span>관심상품</span>
+          </button>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+          <i class="ico-state">판매중지</i>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+          <i class="ico-state">품절</i>
+        </div>
+        <div class="prd-price">
+          <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          <div class="layer-tooltip">
+            <a href="#" class="link-tooltip link"><del class="price"><span class="amount">30,000</span><span class="currency-unit">원</span></del></a>
+          </div>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong class="name">사은품명 사은품명 사은품명</strong></p><em class="unit">(2개)</em><i class="ico-state">소진</i>
+        </div>
+        <p class="txt-desc">* 안내사항 문구입니다.</p>
+      </div>
+      <!-- //ui-prd-info3-8 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>장바구니 상품유닛 - 추가구성품 (상품상태 표기)</strong></h2>
+      <!-- ui-prd-info3-9 -->
+      <div class="ui-prd-info">
+        <div class="add-prd">
+          <div class="tit">
+            <i class="ico">추가</i>
+            <strong class="name">추가구성품명 추가구성품명 추가구성품명</strong>
+            <strong class="price"><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+            <i class="ico-state">판매중지</i>
+          </div>
+          <button class="btn-delete" type="button"><span>삭제</span></button>
+        </div>
+      </div>
+      <!-- //ui-prd-info3-9 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>주문서 상품유닛 - 일반상품</strong></h2>
+      <!-- ui-prd-info2-1 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+      </div>
+      <!-- //ui-prd-info2-1 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>주문서 상품유닛 - 일반상품(옵션)</strong></h2>
+      <!-- ui-prd-info2-2 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-option">
+          <p>옵션값 옵션값 옵션값 옵션값</p>
+        </div>
+      </div>
+      <!-- //ui-prd-info2-2 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>주문서 상품유닛 - 묶음상품</strong></h2>
+      <!-- ui-prd-info2-3 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+        </div>        
+      </div>
+      <!-- //ui-prd-info2-3 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>주문서 상품유닛 - 사은품</strong></h2>
+      <!-- ui-prd-info2-4 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong class="name">사은품명 사은품명 사은품명</strong></p><em class="unit">(수량 당 2개)</em>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong class="name">사은품명 사은품명 사은품명</strong></p><em class="unit">(수량 당 2개)</em>
+        </div>
+      </div>
+      <!-- //ui-prd-info2-4 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>주문서 상품유닛 - 추가구성품</strong></h2>
+      <!-- ui-prd-info2-5 -->
+      <div class="ui-prd-info">
+        <div class="add-prd">
+          <div class="tit">
+            <i class="ico">추가</i>
+            <strong class="name">추가구성품명 추가구성품명 추가구성품명</strong>
+          </div>
+        </div>
+      </div>
+      <!-- //ui-prd-info2-5 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>마이페이지 상품유닛 - 일반상품</strong></h2>
+      <!-- ui-prd-info1-1 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-price">
+          <div class="layer-tooltip">
+            <a href="#" class="link-tooltip link"><strong class="price"><i class="ico">상품주문금액</i><span class="amount">28,000</span><span class="currency-unit">원</span></strong></a>
+          </div>
+        </div>
+      </div>
+      <!-- //ui-prd-info1-1 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>마이페이지 상품유닛 - 일반상품(옵션)</strong></h2>
+      <!-- ui-prd-info1-2 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-option">
+          <p>옵션값 옵션값 옵션값 옵션값</p>
+          <button class="btn-option" type="button"><span>옵션변경</span></button>
+        </div>
+        <div class="prd-price">
+          <div class="layer-tooltip">
+            <strong class="price"><i class="ico">상품주문금액</i><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          </div>
+        </div>
+      </div>
+      <!-- //ui-prd-info1-2 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>마이페이지 상품유닛 - 묶음상품</strong></h2>
+      <!-- ui-prd-info1-3 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+          <span class="unit">(총 2개)</span>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+          <span class="unit">(총 2개)</span>
+        </div>
+        <div class="prd-price">
+          <div class="layer-tooltip">
+            <strong class="price"><i class="ico">상품주문금액</i><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          </div>
+        </div>        
+      </div>
+      <!-- //ui-prd-info1-3 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>마이페이지 상품유닛 - 사은품</strong></h2>
+      <!-- ui-prd-info1-4 -->
+      <div class="ui-prd-info">
+        <div class="img-wrap">
+          <a href="#" class="link">
+            <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+          </a>
+        </div>
+        <div class="prd-title"><a href="#" class="link">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</a></div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+          <span class="unit">(총 2개)</span>
+        </div>
+        <div class="prd-bundle">
+          <p class="tit">구성상품명 구성상품명 구성상품명 구성상품명</p>
+          <span class="unit">2개</span>
+          <span class="unit">(총 2개)</span>
+        </div>
+        <div class="prd-price">
+          <div class="layer-tooltip">
+            <strong class="price"><i class="ico">상품주문금액</i><span class="amount">28,000</span><span class="currency-unit">원</span></strong>
+          </div>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong class="name">사은품명 사은품명 사은품명</strong></p><em class="unit">(수량 당 2개)</em>
+        </div>
+        <div class="prd-gift">
+          <p class="tit"><i class="ico">사은품</i><strong class="name">사은품명 사은품명 사은품명</strong></p><em class="unit">(수량 당 2개)</em>
+        </div>
+      </div>
+      <!-- //ui-prd-info1-4 -->
+
+      <br><br>
+      <h2 class="h2-tit"><strong>마이페이지 상품유닛 - 추가구성품</strong></h2>
+      <!-- ui-prd-info1-5 -->
+      <div class="ui-prd-info">
+        <div class="add-prd">
+          <div class="tit">
+            <i class="ico">추가</i>
+            <strong class="name">추가구성품명 추가구성품명 추가구성품명</strong>
+            <strong class="price"><i class="ico">상품주문금액</i><span class="amount">28,000</span><span class="currency-unit">원</span></strong> 
+          </div>
+        </div>
+      </div>
+      <!-- //ui-prd-info1-5 -->
+
+    </div>
+  </main>
+
+  <!-- footer -->
+  <!-- side-quick -->
+  <!--<aside class="side-quick-wrap">
+    <a href="#" class="button-recent-prd">
+      <span class="count-recent-prd">999</span>
+      <figure class="img-wrap">
+        <img src="../../../resources/images/dummy/img_recent_prd1.jpg" alt="">
+        <figcaption class="blind">최근 본 상품</figcaption>
+      </figure>
+    </a>
+    <a href="#" class="kakao-link"><span>Kakao talk</span></a>
+    <div class="layer-recent-prd" style="display:none;">
+      <strong class="tit">최근 본 상품</strong> <span class="count-recent-prd">100</span>
+      <a href="#" class="button-layer-close">close</a>
+      <div class="recent-prd-list">
+        <div class="item">
+          <button class="button-delete" type="button"><span>삭제</span></button>
+          <a href="#" class="link">
+            <div class="img-wrap">
+              <img src="../../../resources/images/dummy/thumb_prd1.jpg" alt="">
+            </div>
+            <div class="prd-title">상품명 상품명 상품명상품명 상품명 상품명 상품명 상품명 상품명상품명 상품명 상품명</div>
+            <div class="item-price">
+              <span class="price-wrap"><strong class="price bold"><b class="amount">28,000</b><em class="currency-unit">원</em><em class="tilde">~</em></strong><strong class="price line-through"><del class="amount">30,000</del><em class="currency-unit">원</em><em class="tilde">~</em></strong></span><span class="sale">15%</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="button-top-wrap"><a href="#" class="button-top"><span class="txt">TOP</span></a></div>
+  </aside>-->
+  <!-- //side-quick -->
+  <footer class="footer">
+    <div class="inner">
+      <!-- util -->
+      <div class="left">
+      <div class="footer-info">
+        <div class="company-info">
+            <h2>(주)젠아웃도어</h2>
+          <div class="txt">
+            <p>대표이사: 이종훈/이상훈 </p>
+            
+            <p>서울시 강남구 테헤란로20길 9, 동궁빌딩 7층</p>
+            
+            <p>Tel : 1644-7805(유료)   Fax : 02-2051-9153   <a href="mailto:zerogr/am@zerogram.co.kr">E-mail : zerogram@zerogram.co.kr</a></p>
+            
+            <p>통신판매업 신고번호 : 제2021-서울강남-06056  사업자번호 : 105-87-97247   <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1058797247" target="_blank" class="link">사업자정보확인</a></p>
+            
+            <p>Copyright(C) G1Mall All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="footer-util">
+            <ul class="util-link">
+              <li><a href="#" class="bold-700"><span>개인정보처리방침</span></a></li>
+              <li><a href="#"><span>구매안전서비스(에스크로)확인</span></a></li>
+              <li><a href="#"><span>이용약관</span></a></li>
+              <li><a href="#"><span>콜라보레이션 제안</span></a></li>
+            </ul>
+        </div>
+      </div>
+      </div>
+      <div class="right">
+       <div class="link-info">
+        <div class="cs-menu">
+           <ul>
+               <li><a href="#none" class="bold-700">A/S안내</a></li>
+               <li><a href="#none">오프라인매장</a></li>
+               <li><a href="#none">1:1문의</a></li>
+               <li><a href="#none">자주 묻는 질문</a></li>
+               <li><a href="#none">공지사항</a></li>
+           </ul>
+        </div>
+        <div class="global-link">
+          <h2 class="tit">+ Global ZEROGRAM</h2>
+          <a href="https://www.zerogramgear.com/" class="kr">한국</a>
+          <a href="https://www.zerogram.co.jp/" target="_blank" class="jp">일본</a>
+        </div>
+        
+        </div>
+        <div class="cs-info">
+           <div class="customer-link">
+            <h2><a href="#none">고객센터</a></h2>
+            <strong>1644-7805</strong>
+            <p>제로그램 카톡 채널</p>
+            <p>평일 10:30~17:00   점심 : 12:30~13:30</p>
+            <p>토/일 공휴일 휴무</p>
+            </div>
+            <div class="sns-link">
+                <ul>
+                    <li><a href="https://pf.kakao.com/_iSUxou/chat" class="kakao" target="_blank">카카오톡</a></li>
+                    <li><a href="https://www.instagram.com/zerogram_official/" class="instagram" target="_blank">인스타그램</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCbB2WfUJMVg1bsDL9ZSUG1A" class="youtube" target="_blank">유튜브</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+        
+      <!-- //util -->
+      <!-- info -->
+      
+      <!-- //info -->
+    </div>
+  </footer>
+  <!-- //footer -->
+
+</div>
+</body>
+
+</html>

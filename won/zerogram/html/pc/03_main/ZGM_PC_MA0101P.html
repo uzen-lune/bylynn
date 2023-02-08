@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, viewport-fit=cover">
+  <meta name="keywords" content="키워드">
+  <meta name="description" content="Page description">
+  <meta name="robots" content="all">
+  <meta property="og:type"  content="website">
+  <meta property="og:title" content="page title">
+  <meta property="og:url" content="page url">
+  <meta property="og:image" content="각 페이지별 대표 이미지">
+  <meta property="og:description" content="Page description">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="page title">
+  <meta name="twitter:url" content="page url">
+  <meta name="twitter:image" content="각 페이지별 대표 이미지">
+  <meta name="twitter:description" content="Page description">
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="">
+  <title>ZEROGRAM</title>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../../../resources/css/pc/import_html.css">
+  <!-- //css -->
+  
+  <!-- script : html include용 js(개발에서는 불필요한 js파일입니다.)  -->
+  <script src="../../../resources/js/pc/plugins.js"></script>
+  <script src="../../../resources/js/pc/zgm_ui.js"></script>
+  <!-- //script -->
+</head>
+
+<body class="pc">
+<div class="main"> <!-- main | display | product | cart | order | mypage | customer -->
+  
+    <!-- header -->
+  <header>
+    <div class="top-banner-wrap" style="background-color:#000;">
+      <div class="inner">
+        <a href="#" class="banner-link">
+          <img src="../../../resources/images/dummy/img_top_banner_20210728_pc.jpg" class="banner-img" alt="택배 노조 파업으로 인한 배송 지연 안내">
+        </a>
+        <a href="#" class="button-banner-close"><span>close</span></a>
+      </div>
+    </div>
+    <div class="header">
+      <div class="inner">
+        <!-- logo -->
+        <h1 class="logo"><a href="#"><img src="../../../resources/images/logo_h1.png" alt="ZEROGRAM"></a></h1>
+        <!-- //logo -->
+
+        <div id="google_translate_element"></div>
+        <style>
+          #google_translate_element .goog-te-gadget img {display:none;}
+          #google_translate_element .goog-te-gadget-simple {padding-right:15px;font-size:12px;background:#fff url(../../../resources/images/ico_select.png) calc(100% - 5px) 50% no-repeat;background-size:8px;border:1px solid #000;}
+          #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span {border-left:0 none !important;}
+          #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span:last-child {display:none;}
+
+          .pc .header #google_translate_element {position:relative;z-index:1;float:right;margin-top:20px;}
+        </style>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'ko',
+              includedLanguages: 'ko,en,ja,zh-CN,es',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');}
+        </script>
+
+        <!-- util -->
+        <ul class="util-list">
+          <li><a href="#"><span class="ico-search">검색</span></a></li> <!-- 클릭 시 .search-drop에 .on class 추가 -->
+          <li><a href="#"><span>JOIN</span></a></li>
+          <li><a href="#"><span>LOGIN</span></a></li>
+          <li><a href="#"><span>CART<em>0</em></span></a></li>
+        </ul>
+        <!-- //util -->
+
+      </div>
+      <!-- search -->
+      <div class="search-drop"> <!-- .on class 제어필요 -->
+        <div class="search-form">
+          <form>
+            <fieldset>
+              <legend class="blind">검색</legend>
+              <div class="keyword-input">
+                <div class="ui-input">
+                  <label for="search" class="blind">키워드검색</label>
+                  <input type="text" value="" id="search" placeholder="검색어를 입력하세요" title="검색어 입력">
+                </div>
+                <button type="button" class="button-search"><span>검색</span></button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- //search -->
+      <!-- gnb -->
+      <div class="gnb-wrap">
+        <nav class="gnb">
+          <a href="#" class="menu"><span>Shop</span></a>
+          <a href="#" class="menu"><span>Brand</span></a>
+          <a href="#" class="menu"><span>Lookbook</span></a>
+          <a href="#" class="menu"><span>Event</span></a>
+          <a href="#" class="menu point"><span>Outlet</span></a>
+        </nav>
+        <div class="ly-gnb"> <!-- 메뉴명에 마우스오버 시 활성화 -->
+          <div class="inner">
+            <div class="menu-list">
+              <div class="item">
+                <a href="#"><span>NEW</span></a>
+                <ul>                  
+                </ul>
+              </div>
+              <div class="item">
+                <a href="#"><span>Gear</span></a>
+                <ul>
+                  <li><a href="#"><span>텐트</span></a></li>
+                  <li><a href="#"><span>타프</span></a></li>
+                  <li><a href="#"><span>침낭/매트</span></a></li>
+                  <li><a href="#"><span>가방</span></a></li>
+                  <li><a href="#"><span>쿡웨어</span></a></li>
+                  <li><a href="#"><span>ACC</span></a></li>
+                  <li><a href="#"><span>도서/지도</span></a></li>
+                </ul>
+              </div>
+              <div class="item">
+                <a href="#"><span>Men</span></a>
+                <ul>
+                  <li><a href="#"><span>아우터</span></a></li>
+                  <li><a href="#"><span>상의</span></a></li>
+                  <li><a href="#"><span>하의</span></a></li>
+                  <li><a href="#"><span>가방</span></a></li>
+                  <li><a href="#"><span>모자</span></a></li>
+                  <li><a href="#"><span>ACC</span></a></li>
+                </ul>
+              </div>
+              <div class="item">
+                <a href="#"><span>Women</span></a>
+                <ul>
+                  <li><a href="#"><span>아우터</span></a></li>
+                  <li><a href="#"><span>상의</span></a></li>
+                  <li><a href="#"><span>하의</span></a></li>
+                  <li><a href="#"><span>가방</span></a></li>
+                  <li><a href="#"><span>모자</span></a></li>
+                  <li><a href="#"><span>ACC</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //gnb -->
+      
+    </div>
+  </header>
+  <!-- //header -->
+  
+  <main class="container">
+    <div class="content">
+      <!-- main-banner -->
+      <section class="simple-slide-wrap main-banner fluid">
+        <h2 class="blind"><span>메인 배너 영역</span></h2>
+        <div class="simple-slide">
+          <div class="slide-show">
+            <div class="slide-show-wrap">
+              <div class="slide-show-track">
+                <div class="slide-show-item-wrap">
+                  <div class="item" style="background-color:#fff;">
+                    <a href="#img">
+                      <div class="img-wrap">
+                      </div>
+                      <div class="text-container">
+                        <div class="text-wrap">
+                          <strong class="tit">New Arrivals<br>Black Butte 1P&3P</strong>
+                          <p class="des">21년 새롭게 선보이는 등산과 백패킹에 적합한<br>제로그램 의류를 만나보세요!</p>
+                          <p class="des"></p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="btn main-banner-prev">이전</div>
+            <div class="btn main-banner-next">다음</div>
+            <div class="slide-show-num-wrap">
+              <p><span class="page-number-now">2</span> / <span class="page-number-total">5</span></p>
+          </div>
+          </div>
+          
+        </div>
+      </section>
+      <!-- //main-banner -->
+      <!-- best-list-wrap -->
+      <section class="tab-slide-prd best">
+        <div class="inner">
+          <h2 class="h-tit"><span>BEST ITEMS</span></h2>
+          <div class="tab-slide-prd-slide">
+            <div class="tab-menu">
+              <ul>
+                  <li class="active"><a href="#none"><span>전체</span></a></li>
+                  <li><a href="#none"><span>아우터</span></a></li>
+                  <li><a href="#none"><span>상의</span></a></li>
+                  <li><a href="#none"><span>하의</span></a></li>
+                  <li><a href="#none"><span>잡화</span></a></li>
+              </ul>
+            </div>
+            <div class="product-item-slider">
+              <div class="slide-show">
+                <div class="item-wrap">
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+              </div>
+              <div class="btn best-prev">이전</div>
+            <div class="btn best-next">다음</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //best-list-wrap -->
+      <!-- sub-banner -->
+      <section class="sub-banner1">
+         <h2 class="blind"><span>서브베너</span></h2>
+          <div class="banner-bg-area"><!--bg-color-->
+           <div class="banner-img-area"><!--bg-img-->
+            <div class="slide-show">
+               <a href="#none">
+                <div class="slide-wrap">
+                    <div class="slide"><!--bg-color-->
+                       <div class="slide-img-area"><!--bg-img-->
+                        <div class="text-container">
+                            <div class="text-wrap">
+                                <strong class="tit">WITH HEAD GEAR</strong>
+                                <p class="des">새로운 패션으로 힘차게 출발<br>
+                                    모자와 같이 스타일링하기 좋은 아이템</p>
+                                <div class="btn-more">
+                                <p href="#none">VIEW MORE</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn best-prev" onclick="alert(1);">이전</div>
+                <div class="btn best-next" onclick="alert(2);">다음</div>
+                </a>
+            </div>
+            
+            </div>
+          </div>
+      </section>
+      <!-- //sub-banner -->
+      
+      <!-- whats-new -->
+      <section class="whats-new">
+        <h2 class="h-tit"><span>WHAT'S NEW</span></h2>
+        <div class="product-item-slider">
+              <div class="slide-show">
+                <div class="item-wrap">
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                       <a href="#none">
+                        <div class="img-box">
+                            <img src="../../../resources/images/pdt01.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="item-name">그래미 플리스 우먼 베이지</p>
+                            <p class="item-price"><span>229,000</span>원</p>
+                        </div>
+                        </a>
+                    </div>
+                    
+                </div>
+              </div>
+              <div class="btn best-prev" onclick="alert(1)">이전</div>
+            <div class="btn best-next" onclick="alert(2)">다음</div>
+            </div>
+      </section>
+      <!-- //whats-new -->
+      <!-- main-video -->
+      <section class="main-video">
+        <h2 class="blind">동영상 영역</h2>
+        <div class="simple-slide">
+          <div class="slide-show">
+            <div class="item-wrap">
+             <div class="item">
+              <div class="video-area">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tj5ZafXSwv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="txt">
+                <strong class="video-tit">RARE EARTH 22FW </strong>
+                <p class="video-des">RARE EARTH 지구 본연의 모습 그대로</p>
+              </div>
+             </div>
+            </div>
+             <div class="btn best-prev" onclick="alert(1)">이전</div>
+             <div class="btn best-next" onclick="alert(2)">다음</div>
+             <script>
+                $('.video-area').mouseenter(function(){
+                    $('.main-video .btn').show();
+                });
+                  $('.video-area').mouseleave(function(){
+                    $('.main-video .btn').hide();
+                });
+              </script>
+          </div>
+        </div>
+      </section>
+      <!-- //main-video -->
+      
+      <!-- collection -->
+      <section class="img-and-slide collection">
+        <a href="#"><h2 class="h-tit"><span>Collection</span></h2></a>
+        <div class="big-img-wrap">
+          <div class="slide-show">
+           <div class="slide-wrap">
+             <div class="slide">
+                <a href="#none">
+                 <div class="img-box">
+                     <img src="" alt="">
+                 </div>
+                </a> 
+             </div>
+          </div>
+         </div>
+         
+         
+         
+         
+          <a href="#none">
+            <div class="img-wrap">
+              <img src="../../../resources/images/dummy/img_collection_big1_pc.jpg" alt="Welcome Coupon 신규가입 5% 할인 쿠폰">
+            </div>
+          </a>
+        </div>
+        <div class="simple-slide">
+          <div class="slide-show">
+            <div class="slide-show-wrap">
+              <div class="slide-show-track">
+                <div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_collection_small1_pc.jpg" alt="collection1"><figcaption class="blind">collection1</figcaption></figure></a></div></div><div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_collection_small2_pc.jpg" alt="collection2"><figcaption class="blind">collection2</figcaption></figure></a></div></div><div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_collection_small3_pc.jpg" alt="collection3"><figcaption class="blind">collection3</figcaption></figure></a></div></div><div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_collection_small4_pc.jpg" alt="collection4"><figcaption class="blind">collection4</figcaption></figure></a></div></div><div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_collection_small5_pc.jpg" alt="collection5"><figcaption class="blind">collection5</figcaption></figure></a></div></div>
+              </div>
+            </div>
+            <div class="slide-show-previous slide-show-button" onclick="alert(1);"></div>
+            <div class="slide-show-next slide-show-button" onclick="alert(2);"></div>
+          </div>
+        </div>
+      </section>
+      <!-- //collection -->
+      <!-- category-exhibition-banner -->
+      <section class="simple-slide-wrap category-exhibition-banner">
+        <a href="#"><h2 class="h-tit"><span>Magazine</span></h2></a>
+        <div class="simple-slide">
+          <div class="slide-show">
+            <div class="slide-show-wrap">
+              <div class="slide-show-track">
+                <div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_contents1.jpg" alt=""><figcaption class="blind">Magazine1</figcaption></figure><div class="text-container"><div class="text-wrap"><strong class="tit">제목1</strong><p class="txt">내용1</p></div></div></a></div></div><div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_contents2.jpg" alt=""><figcaption class="blind">Magazine2</figcaption></figure><div class="text-container"><div class="text-wrap"><strong class="tit">제목2</strong><p class="txt">내용2</p></div></div></a></div></div><div class="slide-show-item-wrap"><div class="item"><a href="#img"><figure class="img-wrap"><img src="../../../resources/images/dummy/img_contents3.jpg" alt=""><figcaption class="blind">Magazine3</figcaption></figure><div class="text-container"><div class="text-wrap"><strong class="tit">제로그램은 왜 쓰레기 옆에서 화보를 찍었을까? 제로그램은 왜 쓰레기 옆에서 화보를 찍었을까? 제로그램은 왜 쓰레기 옆에서 화보를 찍었을까?</strong><p class="txt">제로그램은 왜 쓰레기 옆에서 화보를 찍었을까?제로그램은 왜 쓰레기 옆에서 화보를 찍었을까?제로그램은 왜 쓰레기 옆에서 화보를 찍었을까?</p></div></div></a></div></div>
+              </div>
+            </div>
+            <div class="slide-show-previous slide-show-button disable" onclick="alert(1);"></div>
+            <div class="slide-show-next slide-show-button" onclick="alert(2);"></div>
+          </div>
+          <!--div class="slide-show-dot-wrap rect-indicator">
+            <div class="slide-show-dot active" onclick="alert(1);"></div><div class="slide-show-dot" onclick="alert(2);"></div><div class="slide-show-dot" onclick="alert(3);"></div>
+          </div-->
+        </div>
+      </section>
+      <!-- //category-exhibition-banner -->
+      <!-- middle-band-banner
+      <section class="simple-slide-wrap middle-band-banner">
+        <h2 class="blind">띠배너 코너 영역</h2>
+        <div class="simple-slide">
+          <div class="slide-show">
+            <div class="slide-show-wrap">
+              <div class="slide-show-track">
+                <div class="slide-show-item-wrap">
+                  <div class="item" style="background-color:#fff;">
+                    <a href="#img">
+                      <figure class="img-wrap">
+                        <img src="../../../resources/images/dummy/img_display_banner1_pc.jpg" alt="Welcome Coupon 신규가입 5% 할인 쿠폰">
+                        <figcaption class="blind">21SS COLLECTION Save Earth Save Us</figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-show-dot-wrap rect-indicator">
+            <div class="slide-show-dot active" onclick="alert(1);"></div><div class="slide-show-dot" onclick="alert(2);"></div><div class="slide-show-dot" onclick="alert(3);"></div>
+          </div>
+        </div>
+      </section-->
+      <!-- //middle-band-banner -->
+      
+      <!-- notice-list-wrap 
+      <section class="notice-list-wrap">
+        <div class="inner-wrap">
+          <h2 class="h-tit">공지사항</h2>
+          <div class="notice-list">
+            <div class="slider">
+              <div class="item">
+                <a href="#">
+                  <h3 class="subject">제로그램 온라인몰 리뉴얼 기념 EVENT</h3><span class="date">2021-03-09</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-default btn-sm btn-style4"><span>전체보기</span></a>
+        </div>
+      </section>
+       //notice-list-wrap -->
+    </div>
+  </main>
+    
+    <!-- @include footer -->
+  
+  </div>
+</body>
+
+</html>
