@@ -58,9 +58,7 @@
 
 
 /* pc */
-/*메인header*/
-.pc header {display:none;}
-
+.pc .main header {display: none;}
 /*메인베너*/
 .pc .main-banner {margin-bottom: 100px; width: 100%; height: 100vh;}
 .pc .main-banner .simple-slide { height: 100vh; position:relative;}
@@ -122,8 +120,9 @@ background-position: center; background-size: 14px;cursor: pointer;}
 .pc .main .sub-banner1 .slide-show-wrap {width: 1700px;height: 500px; margin: 0 auto;position: relative;}
 .pc .main .sub-banner1 .slide-show {width:1200px;margin: 0 auto;}
 .pc .main .sub-banner1 .slide-show .slide {width: 1200px;height: 500px;position: relative;}
-.pc .main .sub-banner1 .slide-show .slide .slide-img-area{width: 100%;height: 100%; background-image: url(../../images/sub-banner01.jpg);background-repeat: no-repeat;background-position: center;
-background-size: 1600px;}
+.pc .main .sub-banner1 .slide-show .slide .slide-img-area{display: flex;align-items: center; width: 100%;height: 100%; /*background-image: url(../../images/sub-banner01.jpg);background-repeat: no-repeat;background-position: center;
+background-size: 1600px;*/}
+.pc .main .sub-banner1 .slide-show .slide .slide-img-area img {display: block; width: 100%;}
 .pc .main .sub-banner1 .slide-show .slide .text-container {width: 1200px;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
 .pc .main .sub-banner1 .slide-show .slide .text-wrap {text-align: left;}
@@ -198,15 +197,15 @@ transform: translateY(-50%);font-size: 0;background-repeat: no-repeat;background
 .pc .main .collection-display .title {margin-bottom: 45px;line-height: 1;}
 .pc .main .collection-display .tit{font-size: 30px;font-weight: 700;margin-bottom: 15px;}
 .pc .main .collection-display .des {font-size: 18px;font-weight: 500; color: #979797;}
-.pc .main .collection-display .slide-wrap{display: flex;flex-wrap: wrap;margin-bottom: 12px;}
+.pc .main .collection-display .slide-wrap{display: flex;flex-wrap: wrap;margin-bottom: 15px;}
 .pc .main .collection-display .slide {width: 230px;margin-bottom: 30px;}
 .pc .main .collection-display .slide .img-box {width: 100%;height: 230px;margin-bottom: 8px;}
 .pc .main .collection-display .slide .img-box img {display: block; width: 100%;}
 .pc .main .collection-display .slide .txt {text-align: center;}
 .pc .main .collection-display .slide .tit {font-size:11px;font-weight: 500;margin-bottom: 8px;}
 .pc .main .collection-display .slide .des {font-size:13px;font-weight: 700;color: #0A0A0A;}
-.pc .main .collection-display .slide-show-wrap .bar-wrap {width: 100%;height: 3px; display: flex;background: #D9D9D9}
-.pc .main .collection-display .slide-show-wrap .bar-wrap .bar {width: 25%;height: 3px;font-size: 0;}
+.pc .main .collection-display .slide-show-wrap .bar-wrap {width: 100%;height: 3px; display: flex; background: #D9D9D9;cursor: pointer;}
+.pc .main .collection-display .slide-show-wrap .bar-wrap .bar {/*width: 25%;*/ height: 3px;flex-grow: 1;font-size: 0;}
 .pc .main .collection-display .slide-show-wrap .bar-wrap .active {background-color: #2C2C2C;}
 /* //collection */
 
@@ -223,8 +222,12 @@ transform: translateY(-50%);font-size: 0;background-repeat: no-repeat;background
 .pc .main .styling .slide-show .slide{width: 300px; }
 .pc .main .styling .slide .slide-top{width: 100%;margin-bottom: 12px; position: relative;}
 .pc .main .styling .slide .slide-top .user-name{position: absolute;left: 30px;bottom: 22px;color: #fff;}
-.pc .main .styling .slide-top .img-box{width: 100%;height: 300px; border-radius: 20px;overflow: hidden;/*position: relative;*/}
-.pc .main .styling .slide-top .img-box img{display: block;width: 100%;font-weight: 500;}
+
+.pc .main .styling .slide-top .img-box{position: relative;width: 100%;height: 300px; border-radius: 20px;overflow: hidden;/*position: relative;*/}
+
+
+.pc .main .styling .slide-top .img-box img{display: block;width: 100%;height: 100%; font-weight: 500;}
+.pc .main .styling .slide-top .img-box .gradient{width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 17.63%, rgba(0, 0, 0, 0.160938) 38.62%, rgba(0, 0, 0, 0) 87.11%);position: absolute;top: 0;bottom: 0;font-size: 0;}
 .pc .main .styling .slide .slide-bottom{display: flex;align-items: center;}
 .pc .main .styling .slide .slide-bottom .thumb{width: 80px;height: 80px;margin-right: 12px;}
 .pc .main .styling .slide-bottom .thumb img{display: block;width: 100%;}
