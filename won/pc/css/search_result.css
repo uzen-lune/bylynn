@@ -1,0 +1,454 @@
+@charset "utf-8";
+section {
+    width: 100%;
+}
+section .inner {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 152px 50px 0 50px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.search-result-contents .filter-layer {
+    width: 256px;
+}
+
+.search-result-contents .filter-layer form {}
+
+.search-result-contents .filter-layer form fieldset {
+    border: 0;
+}
+
+.search-result-contents .filter-layer form fieldset legend {
+    display: none;
+}
+
+.search-result-contents .filter-layer form fieldset h4 {
+    font-weight: 500;
+}
+
+.search-result-contents .filter-layer form fieldset input[type=checkbox] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+/*카테고리*/
+.search-result-contents .filter-layer form fieldset .category {}
+
+.search-result-contents .filter-layer form fieldset .category ul {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-result-contents .filter-layer form fieldset .category ul li {
+    margin-bottom: 16px;
+}
+
+.search-result-contents .filter-layer form fieldset .category ul li label {
+    font-weight: 500;
+}
+/*브랜드*/
+.search-result-contents .filter-layer .brand {
+    padding: 32px 0;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.search-result-contents .filter-layer .brand h4 {
+    margin-bottom: 16px;;
+}
+
+.search-result-contents .filter-layer .brand ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.search-result-contents .filter-layer .brand ul li{
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.search-result-contents .filter-layer .brand ul li input{}
+.search-result-contents .filter-layer .brand ul li label{
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+.search-result-contents .filter-layer .brand ul .active label{
+    border-color: #111;
+    background-color: #111;
+    color: #fff;
+}
+.search-result-contents .filter-layer .brand button {
+    border: 1px solid #111;
+    background-color: #fff;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    font-weight: 500;
+}
+/*색상*/
+.search-result-contents .filter-layer .color {
+    padding: 32px 0;
+    border-bottom: 1px solid #eee;
+}
+.search-result-contents .filter-layer .color h4{
+    margin-bottom: 24px;
+}
+.search-result-contents .filter-layer .color ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-result-contents .filter-layer .color ul li{
+    margin-right: 8px;
+}
+.search-result-contents .filter-layer .color ul li:nth-child(8n){
+    margin-right: 0;
+}
+.search-result-contents .filter-layer .color ul li label{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    font-size: 0;
+    box-sizing: border-box;
+    
+}
+.search-result-contents .filter-layer .color ul li label[for="cCheck01"] {background-color:#fff;border: 1px solid #ccc;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck02"] {background-color:#856D63;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck03"] {background-color:#1C2B4C;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck04"] {background-color:#92C298;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck05"] {background-color: #FED12E;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck06"] {background-color:#6A5179;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck07"] {background-color:#E9D8BA;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck08"] {background-color:#FFA94C;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck09"] {background-color:#000000;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck10"] {background-color: #C5913D;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck11"] {background-color:#A02921;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck12"] {background-color:#84AEE8;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck13"] {background-color:#AAAAAA;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck14"] {background-color:#FCB9C2;}
+.search-result-contents .filter-layer .color ul li label[for="cCheck15"] {background-image: url(../images/search_result/color-check.svg);background-repeat: no-repeat;background-position: center;background-size: 25px;}
+
+/*size*/
+.search-result-contents .filter-layer .size {
+    padding: 32px 0;
+    border-bottom: 1px solid #eee;
+}
+.search-result-contents .filter-layer .size h4{
+    margin-bottom: 16px;
+}
+.search-result-contents .filter-layer .size ul {
+    display: flex;
+}
+.search-result-contents .filter-layer .size ul li {
+    margin-right: 8px;
+    
+}
+.search-result-contents .filter-layer .size ul li input{}
+.search-result-contents .filter-layer .size ul li label{
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    font-size: 12px;
+}
+
+/*benefits*/
+.search-result-contents .filter-layer .benefits {
+    padding: 32px 0;
+    border-bottom: 1px solid #eee;
+}
+.search-result-contents .filter-layer .benefits h4 {
+    margin-bottom: 16px;
+}
+.search-result-contents .filter-layer .benefits ul {
+    display: flex;
+}
+.search-result-contents .filter-layer .benefits ul li {
+    margin-right: 8px;
+    
+}
+.search-result-contents .filter-layer .benefits ul li input{}
+.search-result-contents .filter-layer .benefits ul li label{
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    font-size: 12px;
+}
+.search-result-contents .filter-layer .benefits .active label{
+    background-color: #000;
+    color: #fff;
+}
+.search-result-contents .filter-layer .price {
+    padding: 32px 0 24px;
+}
+.search-result-contents .filter-layer .price h4 {
+    margin-bottom: 16px;
+}
+.search-result-contents .filter-layer .price ul{
+}
+.search-result-contents .filter-layer .price ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+}
+.search-result-contents .filter-layer .price ul li label{
+    font-size: 13px;
+    font-weight: 500;
+   
+}
+.search-result-contents .filter-layer .price ul li label::after {
+    content: "원";
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.search-result-contents .filter-layer .price ul li input{
+    width: 190px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: end;
+    padding: 12px 24px 11px 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+.search-result-contents .filter-layer .submit-wrap {
+    width: 100%;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #eee;
+}
+.search-result-contents .filter-layer .submit-wrap .search-btn{
+    width: 256px;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid #333;
+}
+.search-result-contents .filter-layer .purpose {
+    padding: 32px 0;
+    border-bottom: 1px solid #eee; 
+}
+.search-result-contents .filter-layer .purpose h4{
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.search-result-contents .filter-layer .purpose ul{}
+.search-result-contents .filter-layer .purpose ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.search-result-contents .filter-layer .purpose ul li input{}
+.search-result-contents .filter-layer .purpose ul li label  {
+    padding-left: 28px;
+    position: relative;
+}
+.search-result-contents .filter-layer .purpose ul li label::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.search-result-contents .filter-layer .purpose ul li input:checked + label::before {
+    background-image:url(../images/search_result/checkbox-black.svg);
+    background-position: center;
+    background-size: 20px;
+}
+/*result*/
+.search-result-contents .result {
+    width: 100%;
+    min-width: 1280px;
+    padding-left: 50px;
+}
+.search-result-contents .result .txt-result {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.search-result-contents .result .filter-selected {}
+.search-result-contents .result .filter-selected ul{
+    display: flex;
+    margin-bottom: 40px;
+}
+.result .filter-selected ul li{
+    margin-right: 8px;
+}
+.result .filter-selected ul li a{
+    display: inline-block;
+    padding: 12px 37px 12px 20px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    color: #111;
+}
+.result .filter-selected ul .reset a{
+    padding: 20px;
+    font-size: 0;
+    background-image: url(../images/search_result/reset.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+}
+.result .filter-selected ul li:not(.reset) a {
+    background-image: url(../images/search_result/close-s.svg);
+    background-repeat: no-repeat;
+    background-size: 9px;
+    background-position: right 20px top 14px;
+}
+.result .sorting-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.result .sorting-area .num{}
+.result .sorting-area .num span{}
+.result .sorting-area ul{
+    display: flex;
+    
+}
+.result .sorting-area ul li {}
+.result .sorting-area ul li:nth-child(2){
+    margin-left: 24px;
+}
+.result .sorting-area ul li select{
+    
+}
+.result .search-pdt {}
+.result .search-pdt .box-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.result .search-pdt .box-wrap .box{
+    width: 19.2%;
+    margin-right: 1%;
+    margin-bottom: 80px;
+}
+.result .search-pdt .box-wrap .box:nth-child(5n){
+    margin-right: 0;
+}
+.result .search-pdt .box-wrap .box .img-box{
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.result .search-pdt .box-wrap .box .img-box > a{}
+.result .search-pdt .box-wrap .box .img-box > a img{
+    display: block;
+    width: 100%;
+}
+.result .search-pdt .box-wrap .box .img-box button {
+     position: absolute;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    background-color: transparent;
+    background-image:url(../images/wish.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+    border: 0;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+    
+}
+.result .search-pdt .box-wrap .box .txt {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.result .search-pdt .box-wrap .box .txt .brand{
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 8px;
+}
+.result .search-pdt .box-wrap .box .txt .name{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #111;
+}
+.result .search-pdt .box-wrap .box .txt .price{
+    color: #111;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+/*.result .search-pdt .box-wrap .box .txt .currency-unit{}*/
+.result .search-pdt .box-wrap .box .txt .price del {
+    font-size: 13px;
+    color: #999;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.result .search-pdt .box-wrap .box .txt .price .sale {
+    margin-left: 10px;
+}
+.result .search-pdt .box-wrap .box .txt .sel-color {
+    display: flex;
+    margin-bottom: 30px;
+}
+.result .search-pdt .box-wrap .box .txt .sel-color li{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+.result .search-pdt .box-wrap .box .txt .sel-color li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    font-size: 0;
+}
+.result .search-pdt .box-wrap .box .txt .sel-color .black-color a{
+    background-color: #111;
+}
+.result .search-pdt .box-wrap .box .txt .sel-color .apricot-color a{
+    background-color: #E9D8BA;
+}
+.result .search-pdt .box-wrap .box .txt >div {
+    display: flex;
+}
+.result .search-pdt .box-wrap .box .txt >div .like{
+    padding-left: 16px;
+    background-image: url(../images/search_result/wish-gray.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 12px;
+    font-size: 13px;
+    padding-right: 24px;
+    position: relative;
+}
+.result .search-pdt .box-wrap .box .txt >div .like::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: #ccc;
+    position: absolute;
+    right:10px;
+    top: 2px;
+    
+}
+.result .search-pdt .box-wrap .box .txt >div .review{
+    font-size: 13px;
+}
+
+
+
+

@@ -15,6 +15,9 @@
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/include.js"></script>
+
+
     <script>
         $(document).ready(function() {
             //스와이퍼
@@ -106,6 +109,7 @@
                 }
             });
             */
+        
 
 
 
@@ -141,71 +145,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="inner">
-            <nav class="gnb">
-                <ul class="depth1">
-                    <li>
-                        <p>의류</p>
-                        <ul class="depth2">
-                            <li><a href="#none">ALL</a></li>
-                            <li><a href="#none">아우터</a></li>
-                            <li><a href="#none">상의</a></li>
-                            <li><a href="#none">하의</a></li>
-                            <li><a href="#none">원피스</a></li>
-                            <li><a href="#none">악세서리</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p>가방</p>
-                    </li>
-                    <li>
-                        <p>신발</p>
-                    </li>
-                    <li>
-                        <p>액세서리</p>
-                    </li>
-                    <li>
-                        <p>골프/애슬레저</p>
-                    </li>
-                    <li>
-                        <p>쇼핑의목적</p>
-                    </li>
-                    <li>
-                        <p>브랜드</p>
-                    </li>
-                </ul>
-                <ul class="depth1_s">
-                    <li><a href="#none">오늘의 업데이트</a></li>
-                    <li><a href="#none">베스트</a></li>
-                    <li><a href="#none">기획전</a></li>
-                    <li><a href="#none">ABOUT LYNN</a></li>
-                </ul>
-            </nav>
-            <div class="left">
-                <div class="menu"><a href="#none">메뉴버튼</a></div>
-
-                <h1 class="logo"><a href="#none">BYLYNN.SHOP</a></h1>
-            </div>
-            <div class="right">
-                <form action="">
-                    <fieldset>
-                        <legend>검색</legend>
-                        <div class="search">
-                            <input type="text" class="txt">
-                            <button type="button" class="btn">검색</button>
-                        </div>
-
-                    </fieldset>
-                </form>
-                <ul class="util">
-                    <li><a href="#none" class="mypage">마이페이지<i></i></a></li>
-                    <li><a href="#none" class="bag">장바구니<i></i></a></li>
-                    <li><a href="#none" class="login">로그인</a>/<a href="#none" class="join">회원가입</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <div data-include1="header" id="header"></div><!--헤더 인클루드-->
     <div class="search-layer">
         <div class="layer">
             <div class="recent">
@@ -2197,14 +2137,15 @@
 
     </article>
 
-
-    <aside>
+    <div data-include2="aside" id="aside"></div><!--사이드 메뉴 인클루드-->
+    <!-- <aside>
         <ul>
             <li><a href="#" class="aside-top">위로가기</a></li>
             <li><a href="#none" class="aside-chat">1:1문의</a></li>
         </ul>
-    </aside>
-    <footer>
+    </aside> -->
+    <div data-include3="footer" id="footer" class="clearfix"></div><!--푸터 인클루드-->
+    <!-- <footer>
         <div class="inner">
             <div class="left">
                 <h3>(주)테난</h3>
@@ -2248,5 +2189,5 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body></html>
