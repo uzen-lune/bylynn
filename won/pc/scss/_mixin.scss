@@ -35,7 +35,7 @@
 
 
 //포지션
-@mixin position(){position: absolute;left: $x;top: $h;z-index: $z;width: $w;
+@mixin position($x,$y){position:absolute; left: $x; top: $y;
     @if $x == 50% and $y == 50%{
         transform: translate(-50%, -50%);
     }@else if $x == 50%{
@@ -54,6 +54,14 @@
     background-color: $bg-color;
 }
 //bg
-@mixin bg($name, $path: "/images/", $format: "jpg") {
+@mixin bg($name, $path: "../images/", $format: "jpg",$s) {
     background-image: url("#{$path}#{$name}.#{$format}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $s;
+}
+@mixin after {
+  content: "";
+  display: block;
+  position:absolute;
 }
