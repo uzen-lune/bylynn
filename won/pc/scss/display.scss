@@ -148,11 +148,11 @@ section {
           cursor: pointer;
           &.prev {
             left: 0;
-            @include bg($name: "L-prev", $format: "svg", $s: 60px);
+            @include bg($name: "black-prev", $format: "svg", $s: 60px);
           }
           &.next {
             right: 0;
-            @include bg($name: "L-next", $format: "svg", $s: 60px);
+            @include bg($name: "black-next", $format: "svg", $s: 60px);
           }
           font-size: 0;
         }

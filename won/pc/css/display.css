@@ -152,14 +152,14 @@ section .category .depth2 li.active a {
 }
 .slide-area .slide-show .btn-arrow ul li.prev {
   left: 0;
-  background-image: url("../images/L-prev.svg");
+  background-image: url("../images/black-prev.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60px;
 }
 .slide-area .slide-show .btn-arrow ul li.next {
   right: 0;
-  background-image: url("../images/L-next.svg");
+  background-image: url("../images/black-next.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60px;
