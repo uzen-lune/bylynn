@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display-detail</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/display-detail.css" />
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/bylynn.js"></script>
+  </head>
+  <body>
+    <div data-include1="header" id="header"></div>
+    <!--헤더 인클루드-->
+    <div data-include4="search-layer" id="search-layer"></div>
+    <!--search-layer 인클루드-->
+    <section>
+      <div class="inner">
+        <div class="pdt-top-area">
+          <div class="left-area">
+            <div class="pdt-thumb">
+              <ul class="">
+                <li>
+                  <a href="#"><img src="../images/pdt-img01.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../images/pdt-img02.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../images/pdt-img03.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../images/pdt-img04.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../images/pdt-img05.jpg" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="pdt-main">
+              <ul>
+                <li class="img-box">
+                  <div><img src="../images/pdt-img01.jpg" alt="" /></div>
+                </li>
+                <li class="img-box">
+                  <div><img src="../images/pdt-img02.jpg" alt="" /></div>
+                </li>
+                <li class="img-box">
+                  <div><img src="../images/pdt-img03.jpg" alt="" /></div>
+                </li>
+                <li class="img-box">
+                  <div><img src="../images/pdt-img04.jpg" alt="" /></div>
+                </li>
+                <li class="img-box">
+                  <div><img src="../images/pdt-img05.jpg" alt="" /></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right-area">
+            <div class="inner">
+              <div class="pdt-info">
+                <a class="pdt-brand">LINE STUDIO ONE</a>
+                <p class="pdt-tit">플리츠 미니스커트</p>
+                <p class="pdt-code">JWSKMI0100</p>
+                <div class="price-wrap">
+                  <div class="pdt-price">
+                    <p class="amount">
+                      197,100 <span class="currency-unit">원</span>
+                    </p>
+                    <p class="pdt-sale">219,000<span>원</span></p>
+                    <p class="pdt-per">10%</p>
+                  </div>
+                  <div class="link-tooltip">
+                    <a href="#">할인내역</a>
+                  </div>
+                </div>
+                <p class="pdt-des">
+                  가볍고 신축성 있는 소재의 플리츠 미니스커트입니다. <br />
+                  플리츠 주름이 연출되어 발랄하고 사랑스러운 무드를 선사하며
+                  입체감 있는 실루엣을 연출할 수 있습니다.
+                </p>
+                <p class="pdt-add-info">
+                  *함께 코디 착용한 자켓은 JWJKMI4100 제품입니다. <br />
+                  *화면 해상도에 따라 보이는 컬러가 상이할 수 있으나 실제 컬러는
+                  제품컷의 컬러를 참고해주세요.
+                </p>
+              </div>
+              <div class="reserve-wrap">
+                <dl class="pdt-reserve">
+                  <dt>적립금</dt>
+                  <dd>
+                    전용포인트 2% / 통합포인트 3% <br />적립금 적립제외
+                    상품입니다.
+                  </dd>
+                </dl>
+                <dl class="pdt-add-reserve">
+                  <dt>추가적립금</dt>
+                  <dd>전용포인트 500P / 통합포인트 1000P</dd>
+                </dl>
+                <dl class="pdt-delivery">
+                  <dt>배송비</dt>
+                  <dd>2,500원 (30,000원 이상 무료)</dd>
+                  <dd class="link-tooltip">
+                    <a href="#">지역별 추가배송비</a>
+                  </dd>
+                </dl>
+              </div>
+              <div class="pdt-color">
+                <dl>
+                  <dt>색상</dt>
+                  <dd class="color-name">
+                    <p>BEIGE</p>
+                    <div class="color-button">
+                      <button type="button" href="#" class="col-beige active">
+                        <span></span>
+                      </button>
+                      <button type="button" href="#" class="col-black">
+                        <span></span>
+                      </button>
+                      <button type="button" href="#" class="col-navy">
+                        <span></span>
+                      </button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="pdt-size">
+                <dl>
+                  <dt>사이즈</dt>
+                  <dd>
+                    <div class="des-area">
+                      <p>XS <span class="execpt">혜택제외</span></p>
+                      <p class="price"><span>10,000원</span>9,000원</p>
+                    </div>
+                    <div class="size-button">
+                      <button type="button" class="active">XS</button>
+                      <button type="button">S</button>
+                      <button type="button">M</button>
+                      <button type="button" class="sold-out">
+                        L<span class="alrm">알람버튼</span>
+                      </button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="cody">
+                <strong>코디상품</strong>
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../images/thumb-cody.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <p class="brand">LYNN</p>
+                    <p class="name">클래식 크롭 테일러드 자켓</p>
+                    <p class="price">155,000원</p>
+                    <div class="select-wrap">
+                      <div class="select">옵션을 선택하세요.</div>
+                      <ul class="select-ul">
+                        <li>옵션을 선택하세요. 옵션1</li>
+                        <li>옵션을 선택하세요. 옵션2</li>
+                        <li>옵션을 선택하세요. 옵션3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="img-box">
+                    <img src="../images/thumb-cody.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <p class="brand">LYNN</p>
+                    <p class="name">클래식 크롭 테일러드 자켓</p>
+                    <p class="price">155,000원</p>
+                    <div class="select-wrap">
+                      <div class="select">옵션을 선택하세요.</div>
+                      <ul class="select-ul">
+                        <li>옵션을 선택하세요. 옵션1</li>
+                        <li>옵션을 선택하세요. 옵션2</li>
+                        <li>옵션을 선택하세요. 옵션3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  $(".select").click(function () {
+                    $(this).siblings(".select-ul").fadeToggle();
+                  });
+                </script>
+              </div>
+              <div class="option-total">
+                <p>Beige / 55</p>
+                <div>
+                  <div class="count-btn">
+                    <button class="minus">-</button>
+                    <div>1</div>
+                    <button class="plus">+</button>
+                  </div>
+                  <div class="option-total-result">
+                    <p>197,100원</p>
+                    <button type="button">닫기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="total">
+                <div>
+                  <p>합계</p>
+                  <strong>197,000<span>원</span></strong>
+                </div>
+                <div>
+                  <button type="button" class="wish"><i></i></button>
+                  <button type="button" class="cart">장바구니</button>
+                  <button type="button" class="purchase">바로구매</button>
+                </div>
+              </div>
+              <div class="size-info">
+                <div class="top">
+                  <a href="">
+                    <p>사이즈 정보</p>
+                  </a>
+                </div>
+                <div class="info">
+                  <div class="size-table">
+                    <strong>SIZE INFO</strong>
+                    <p>
+                      측정 기준에 따라길이는 상이 할 수 있으며, 케어라벨에
+                      기재된 치수는 인체에 기준되는 치수로 실제 상품의 측정
+                      사이즈와는 무관합니다.
+                    </p>
+                    <table>
+                      <tr>
+                        <th>사이즈명(cm)</th>
+                        <th>전체길이</th>
+                        <th>허리둘레</th>
+                      </tr>
+                      <tr>
+                        <td>55</td>
+                        <td>42</td>
+                        <td>68</td>
+                      </tr>
+                      <tr>
+                        <td>55</td>
+                        <td>42</td>
+                        <td>68</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="model-size">
+                    <strong>MODEL SIZE</strong>
+                    <div class="img-box">
+                      <img src="../images/thumb-size.jpg" alt="" />
+                    </div>
+                    <p>키 172cm / 30-23-35 / 발사이즈 245 (S사이즈 착용)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="gifts">
+                <div class="top">
+                  <p>사은품</p>
+                  <a href=""></a>
+                </div>
+                <div class="info">
+                  <p>20,000원 이상 구매 시 사은품을 증정합니다.</p>
+                  <div>
+                    <div class="img-box">
+                      <img src="../images/thumbnail-gift.jpg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <p class="tit">LYNN</p>
+                      <p class="name">
+                        사은품명 사은품명 사은품명 사은품명 사은품명 사은품명
+                        사은품명 사은품명 사은품명
+                      </p>
+                      <p class="count">1개</p>
+                      <p class="link-tooltip"><a href="#">상세보기</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //prd-top-area -->
+        <div class="pdt-btm-area">
+          <div class="pdt-tab">
+            <ul>
+              <li class="active"><a href="#">브랜드안내</a></li>
+              <li><a href="#">추천상품</a></li>
+              <li><a href="#">리뷰(<span>1,000</span>)</a></li>
+              <li><a href="#">구매정보</a></li>
+            </ul>
+          </div>
+          <div class="pdt-tab-brand">
+            <div class="sub-banner">
+              <div>
+                <ul>
+                  <li>
+                    <div class="txt">
+                      <p class="tit">
+                        LINE STUDIO ONE <span class="wish">하트</span>
+                      </p>
+                      <p class="des">
+                        브랜드 한 줄 설명이 보여집니다. 브랜드 한 줄 설명이
+                        보여집니다.
+                      </p>
+                      <button class="btn">브랜드 홈 바로가기</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="btm-box-wrap">
+              <div class="box-column">
+                <div class="box">
+                  <div class="img-box">
+                    <a href="">
+                      <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                      <span class="wish"><i>위시</i></span>
+                    </a>
+                  </div>
+                  <div class="txt">
+                    <a href="#" class="brand">LYNN</a>
+                    <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                    <p class="price">
+                      197,100원<span class="discount">219,000원</span
+                      ><span class="per">10%</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="img-box">
+                    <a href="">
+                      <img src="../images/thumnail-bg-gray02.jpg" alt="" />
+                      <span class="wish"><i>위시</i></span>
+                    </a>
+                  </div>
+                  <div class="txt">
+                    <a href="#" class="brand">LYNN</a>
+                    <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                    <p class="price">
+                      197,100원<span class="discount">219,000원</span
+                      ><span class="per">10%</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="img-box">
+                    <a href="">
+                      <img src="../images/thumnail-bg-gray03.jpg" alt="" />
+                      <span class="wish"><i>위시</i></span>
+                    </a>
+                  </div>
+                  <div class="txt">
+                    <a href="#" class="brand">LYNN</a>
+                    <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                    <p class="price">
+                      197,100원<span class="discount">219,000원</span
+                      ><span class="per">10%</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="img-box">
+                    <a href="">
+                      <img src="../images/thumnail-bg-gray04.jpg" alt="" />
+                      <span class="wish"><i>위시</i></span>
+                    </a>
+                  </div>
+                  <div class="txt">
+                    <a href="#" class="brand">LYNN</a>
+                    <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                    <p class="price">
+                      197,100원<span class="discount">219,000원</span
+                      ><span class="per">10%</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="img-box">
+                    <a href="">
+                      <img src="../images/thumnail-bg-gray05.jpg" alt="" />
+                      <span class="wish"><i>위시</i></span>
+                    </a>
+                  </div>
+                  <div class="txt">
+                    <a href="#" class="brand">LYNN</a>
+                    <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                    <p class="price">
+                      197,100원<span class="discount">219,000원</span
+                      ><span class="per">10%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pdt-tab-recommend">
+            <div class="recommend-sec02">
+              <div class="slide-control">
+                <p>추천상품</p>
+                <ul>
+                  <li class="prev"><a href="#">이전</a></li>
+                  <li class="next"><a href="#">다음</a></li>
+                </ul>
+              </div>
+
+              <div class="btm-box-wrap">
+                <div class="box-column">
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray02.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray03.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray04.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray05.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="recommend-sec01">
+              <div class="slide-control">
+                <p>스커트 BEST</p>
+                <ul>
+                  <li class="prev"><a href="#">이전</a></li>
+                  <li class="next"><a href="#">다음</a></li>
+                </ul>
+              </div>
+
+              <div class="btm-box-wrap">
+                <div class="box-column">
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray02.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray03.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray04.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="img-box">
+                      <a href="">
+                        <img src="../images/thumnail-bg-gray05.jpg" alt="" />
+                        <span class="wish"><i>위시</i></span>
+                      </a>
+                    </div>
+                    <div class="txt">
+                      <a href="#" class="brand">LYNN</a>
+                      <a href="#" class="tit">클래식 크롭 테일러드 자켓</a>
+                      <p class="price">
+                        197,100원<span class="discount">219,000원</span
+                        ><span class="per">10%</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pdt-tab-review">
+            <div class="tit">
+              <h2>상품리뷰</h2>
+            </div>
+            <div class="review">
+              <div class="md-review">
+                <h3>MD 상품리뷰</h3>
+                <div class="img-box-wrap">
+                  <div class="img-box">
+                    <img src="../images/review-thumb01.jpg" alt="" />
+                  </div>
+                  <div class="img-box">
+                    <img src="../images/review-thumb02.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="txt">
+                  <p class="option"><span>브라운</span>/<span>55</span></p>
+                  <p class="date">작성일 :<span>2022-12-01</span></p>
+                  <p class="des">
+                    BO 운영자상품평에 등록된 내용이 표시됩니다. BO
+                    운영자상품평에 등록된 내용이 표시됩니다. BO 운영자상품평에
+                    등록된 내용이 표시됩니다. BO 운영자상품평에 등록된 내용이
+                    표시됩니다. BO 운영자상품평에 등록된 내용이 표시됩니다. BO
+                    운영자상품평에 등록된 내용이 표시됩니다. BO 운영자상품평에
+                    등록된 내용이 표시됩니다. BO 운영자상품평에 등록된 내용이
+                    표시됩니다. BO 운영자상품평에 등록된 내용이 표시됩니다.
+                  </p>
+                </div>
+              </div>
+              <div class="cus-review">
+                <h3>고객상품리뷰</h3>
+                <div class="total-grade">
+                  <p class="grade">총평점</p>
+                  <div class="star">
+                    <i class="full">★</i>
+                    <i class="full">★</i>
+                    <i class="full">★</i>
+                    <i class="half">☆</i>
+                    <i class="empty">☆</i>
+                  </div>
+                  <p class="grade">3.5</p>
+                </div>
+
+                <div class="review-wrap">
+                  <div class="align">
+                    <div><button type="button">리뷰전체</button></div>
+                  </div>
+                  <ul class="list-wrap">
+                    <li>
+                      <p class="option"><span>브라운</span>/<span>55</span></p>
+                      <div class="se-line">
+                        <div class="star">
+                          <i>★</i>
+                          <i>★</i>
+                          <i>★</i>
+                          <i>☆</i>
+                          <i>☆</i>
+                        </div>
+                        <p class="link-tooltip">
+                          <a href="#">처음 리뷰 보기</a>
+                        </p>
+                      </div>
+                      <div class="th-line">
+                        <div class="date">
+                          <p>작성일 :<span>2022-12-01</span></p>
+                          <p>홍기동</p>
+                          <p class="link-tooltip"><a href="">신고</a></p>
+                        </div>
+                        <div class="btn-recommend">
+                          <button type="button"><span>0</span></button>
+                        </div>
+                      </div>
+                      <div class="review-detail">
+                        <div class="txt">
+                          <p>
+                            <span class="flag"><i class="black">best</i></span
+                            ><span class="flag"
+                              ><i class="white">한달사용</i></span
+                            >상품리뷰 내용이 표시됩니다. 해당 플래그아이콘이
+                            있는 경우 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 해당
+                            플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아...
+                          </p>
+                        </div>
+                        <div class="img-box">
+                          <img src="../images/review-thumb03.jpg" alt="" />
+                          <div class="number"><p>2</p></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="option"><span>브라운</span>/<span>55</span></p>
+                      <div class="se-line">
+                        <div class="star">
+                          <i>★</i>
+                          <i>★</i>
+                          <i>★</i>
+                          <i>☆</i>
+                          <i>☆</i>
+                        </div>
+                        <p class="link-tooltip">
+                          <a href="#">처음 리뷰 보기</a>
+                        </p>
+                      </div>
+                      <div class="th-line">
+                        <div class="date">
+                          <p>작성일 :<span>2022-12-01</span></p>
+                          <p>홍기동</p>
+                          <p class="link-tooltip"><a href="">신고</a></p>
+                        </div>
+                        <div class="btn-recommend">
+                          <button type="button"><span>0</span></button>
+                        </div>
+                      </div>
+                      <div class="review-detail">
+                        <div class="txt">
+                          <p>
+                            <span class="flag"><i class="black">best</i></span
+                            ><span class="flag"
+                              ><i class="white">한달사용</i></span
+                            >상품리뷰 내용이 표시됩니다. 해당 플래그아이콘이
+                            있는 경우 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 해당
+                            플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아이콘이 있는 경우 상품리뷰 내용 앞에
+                            표시됩니다. 상품리뷰 내용 앞에 표시됩니다. 상품리뷰
+                            내용 앞에 표시됩니다. 상품리뷰 내용 앞에 표시됩니다.
+                            해당 플래그아...
+                          </p>
+                        </div>
+                        <div class="img-box">
+                          <img src="../images/review-thumb03.jpg" alt="" />
+                          <div class="number"><p>2</p></div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                  <button class="btn-more">더보기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pdt-tab-purchase">
+
+              
+
+          </div>
+        </div>
+        <!-- //pdt-btm-area -->
+      </div>
+    </section>
+    <div data-include3="footer" id="footer" class="clearfix"></div>
+    <!--푸터 인클루드-->
+  </body>
+</html>
