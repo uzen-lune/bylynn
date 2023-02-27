@@ -82,3 +82,15 @@ https://uzen-lune.github.io/bylynn/stella/html/pc/index_pc.html
 <hr>
 <h2><strong>PC 검색결과</strong></h2>
 https://uzen-lune.github.io/bylynn/stella/html/pc/search_result.html
+
+<hr>
+<h2><strong>PC 전시</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/pc/display_pc.html
+
+<hr>
+<h2><strong>PC 상세</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/pc/detail_pc.html
+
+<hr>
+<h2><strong>PC 장바구니</strong></h2>
+https://uzen-lune.github.io/bylynn/stella/html/pc/shopping_basket_pc.html
