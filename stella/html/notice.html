@@ -35,28 +35,20 @@
             $('.notice-tit').click(function() {
                 if ($(this).siblings('.notice-detail').css('display') == 'none') {
                     $(this).siblings('.notice-detail').slideDown(120);
-                    $(this).children('.arrow').css({
-                        background: 'url(../images/up_big.svg) no-repeat center'
-                    });
+                    $(this).children('.arrow').addClass('on');
                 } else if ($(this).siblings('.notice-detail').css('display') != 'none') {
                     $(this).siblings('.notice-detail').slideUp(140);
-                    $(this).children('.arrow').css({
-                        background: 'url(../images/down_big.svg) no-repeat center'
-                    });
+                    $(this).children('.arrow').removeClass('on');
                 }
             });
 
             $('.tenan_footer h4').click(function() {
                 if ($('.tenan_footer .company-info').css('display') == 'none') {
                     $('.tenan_footer .company-info').slideDown(80);
-                    $(this).css({
-                        background: 'url(../images/arrow_up.svg) no-repeat right 67.5%'
-                    });
+                    $(this).addClass('on');
                 } else {
                     $('.tenan_footer .company-info').slideUp(100);
-                    $(this).css({
-                        background: 'url(../images/arrow_down.png) no-repeat right 67.5%'
-                    });
+                    $(this).removeClass('on');
                 }
             });
 

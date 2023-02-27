@@ -438,6 +438,11 @@
     box-sizing: border-box;
 }
 
+.brand a.more:hover {
+    background-color: #333;
+    color: #fff;
+}
+
 .search-aside .search-aside-wrap li.color {
     padding-bottom: 24px;
 }
@@ -738,6 +743,11 @@
     border: 1px solid #333;
     box-sizing: border-box;
     margin-top: 24px;
+}
+
+.price-box .search:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 .search-aside .search-aside-wrap li.purpose {
@@ -1130,6 +1140,11 @@ input[id="purpose4"]:checked + label {
     background-color: #fff;
     border: 1px solid #333;
     cursor: pointer;
+}
+
+.search-result-contents > button.more:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 .search-result-contents .notification1 {

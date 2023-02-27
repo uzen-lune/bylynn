@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/* footer */
+.footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer .footer-inner {
+    margin: 0 50px;
+    padding: 64px 0 80px;
+    display: flex;
+}
+
+.footer .footer-inner .company-info {
+    width: 540px;
+    width: 29.95%;
+    margin-right: 370px;
+    margin-right: 12%;
+}
+
+.footer .company-info h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.footer .company-info ul {
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 56px;
+}
+
+.footer .company-info ul li {
+    width: auto;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #999;
+    margin-right: 4.2%;
+    margin-bottom: 8px;
+}
+
+.footer .company-info p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #666;
+}
+
+.footer .footer-inner .footer-menu {
+    width: 218px;
+    display: flex;
+    margin-right: 5%;
+}
+
+.footer .footer-menu .footer-menu-box ~ .footer-menu-box {
+    margin-left: 56px;
+}
+
+.footer .footer-menu .footer-menu-box li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.footer .footer-menu .footer-menu-box li a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #999;
+}
+
+.footer .footer-inner .customer-center {
+    width: 205px;
+    margin-right: 5.5%;
+}
+
+.footer .customer-center h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.footer .customer-center .tel {
+    width: 100%;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.footer .customer-center .mail {
+    width: 100%;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #999;
+}
+
+.footer .customer-center p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #999;
+}
+
+.footer .footer-inner .link div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer .footer-inner .link div a {
+    display: block;
+}
+
+.footer .footer-inner .link div a img {
+    display: block;
+}

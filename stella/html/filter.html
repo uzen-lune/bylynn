@@ -17,6 +17,7 @@
 
             $('.filter-category-wrap legend').click(function() {
                 $('.filter-category-box').stop().slideToggle(200).css('display', 'block').children().find('.category-wrap').slideUp(80);
+                $('.filter-category-wrap').toggleClass('on');
             });
 
             $('.depth1').click(function() {
@@ -32,31 +33,38 @@
             /* filter-brand */
             $('.filter-brand-wrap legend').click(function() {
                 $('.filter-brand-box, a.more').stop().slideToggle(250).css('display', 'flex');
+                $('.filter-brand-wrap').toggleClass('on');
+
             });
 
             /* filter-color */
             $('.filter-color-wrap legend').click(function() {
                 $('.filter-color-box').stop().slideToggle(200).css('display', 'flex');
+                $('.filter-color-wrap').toggleClass('on');
             });
 
             /* filter-size */
             $('.filter-size-wrap legend').click(function() {
                 $('.filter-size-box').stop().slideToggle(200).css('display', 'flex');
+                $('.filter-size-wrap').toggleClass('on');
             });
 
             /* filter-benefit */
             $('.filter-benefit-wrap legend').click(function() {
                 $('.filter-benefit-box').stop().slideToggle(200).css('display', 'flex');
+                $('.filter-benefit-wrap').toggleClass('on');
             });
 
             /* filter-price */
             $('.filter-price-wrap legend').click(function() {
                 $('.filter-price-box').stop().slideToggle(200).css('display', 'block');
+                $('.filter-price-wrap').toggleClass('on');
             });
 
             /* filter-purpose */
             $('.filter-purpose-wrap legend').click(function() {
                 $('.filter-purpose-box').stop().slideToggle(200).css('display', 'block');
+                $('.filter-purpose-wrap').toggleClass('on');
             });
         });
     </script>

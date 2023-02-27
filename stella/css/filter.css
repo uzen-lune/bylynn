@@ -66,6 +66,9 @@
     border-bottom: 1px solid #eee;
     background: url(../images/down_big.svg) no-repeat 100% 50%;
 }
+.filter-category-wrap.on legend {
+    background: url(../images/up_big.svg) no-repeat 100% 50%;
+}
 
 .filter-category-wrap .all {
     width: 100%;
@@ -120,6 +123,8 @@
 }
 
 .filter-category-wrap .depth3 li a {
+    display: inline-block;
+    width: 100%;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
@@ -156,6 +161,10 @@
     padding: 24px 0;
     border-bottom: 1px solid #eee;
     background: url(../images/down_big.svg) no-repeat 100% 50%;
+}
+
+.filter-brand-wrap.on legend {
+    background: url(../images/up_big.svg) no-repeat 100% 50%;
 }
 
 .filter-brand-box {
@@ -233,6 +242,10 @@
     padding: 24px 0;
     border-bottom: 1px solid #eee;
     background: url(../images/down_big.svg) no-repeat 100% 50%;
+}
+
+.filter-color-wrap.on legend {
+    background: url(../images/up_big.svg) no-repeat 100% 50%;
 }
 
 .filter-color-box {
@@ -348,6 +361,10 @@
     background: url(../images/down_big.svg) no-repeat 100% 50%;
 }
 
+.filter-size-wrap.on legend {
+    background: url(../images/up_big.svg) no-repeat 100% 50%; 
+}
+
 .filter-size-box {
     display: flex;
     flex-wrap: wrap;
@@ -401,6 +418,10 @@
     background: url(../images/down_big.svg) no-repeat 100% 50%;
 }
 
+.filter-benefit-wrap.on legend {
+    background: url(../images/up_big.svg) no-repeat 100% 50%;
+}
+
 .filter-benefit-box {
     display: flex;
     flex-wrap: wrap;
@@ -452,6 +473,10 @@
     padding: 24px 0;
     border-bottom: 1px solid #eee;
     background: url(../images/down_big.svg) no-repeat 100% 50%;
+}
+
+.filter-price-wrap.on legend {
+    background: url(../images/up_big.svg) no-repeat 100% 50%;
 }
 
 .filter-price-box {
@@ -575,6 +600,10 @@
     padding: 24px 0;
     border-bottom: 1px solid #eee;
     background: url(../images/down_big.svg) no-repeat 100% 50%;
+}
+
+.filter-purpose-wrap.on legend {
+    background: url(../images/up_big.svg) no-repeat 100% 50%;
 }
 
 .filter-purpose-wrap .filter-purpose-box {

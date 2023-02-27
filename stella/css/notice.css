@@ -264,6 +264,10 @@
     background: url(../images/down_big.svg) no-repeat center;
 }
 
+.notice-result li.notice-result-list .notice-tit .arrow.on {
+    background: url(../images/up_big.svg) no-repeat center;
+} 
+
 .notice-result li.notice-result-list .notice-detail {
     font-size: 14px;
     color: #666;
@@ -319,6 +323,9 @@
 .tenan_footer h4 {
     background: url(../images/arrow_down.png) no-repeat right 67.5%;
 }
+.tenan_footer h4.on {
+    background: url(../images/arrow_up.svg) no-repeat right 67.5%;
+} 
 
 .tenan_footer .company-info {
     display: none;

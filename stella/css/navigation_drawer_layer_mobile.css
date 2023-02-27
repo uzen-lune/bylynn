@@ -172,6 +172,10 @@ select::-ms-expand {
     background: url(../images/down_big.svg) no-repeat 100% 50%;
 }
 
+.detail-category .depth1.on {
+    background: url(../images/up_big.svg) no-repeat 100% 50%;
+}
+
 .detail-wrap {
     display: none;
 }
@@ -209,6 +213,8 @@ select::-ms-expand {
 }
 
 .detail-category .depth3 li a {
+    display: inline-block;
+    width: 100%;
     font-size: 14px;
     line-height: 17px;
     color: #333;
