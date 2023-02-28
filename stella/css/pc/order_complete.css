@@ -1,0 +1,268 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+.order-complete-content {
+  width: 100%;
+  position: relative;
+  padding-top: 65px;
+}
+.order-complete-content::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+.order-complete-content .order-complete {
+  width: 79.6%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+.order-complete-content .order-complete .sec-tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.order-complete-content .order-complete .sec-tit h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+  color: #111;
+}
+.order-complete-content .order-complete .sec-tit .breadcrumb {
+  display: flex;
+}
+.order-complete-content .order-complete .sec-tit .breadcrumb li ~ li {
+  margin-left: 28px;
+  position: relative;
+}
+.order-complete-content .order-complete .sec-tit .breadcrumb li ~ li::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../../images/pc/paging1.svg) no-repeat center;
+  position: absolute;
+  left: -26px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.order-complete-content .order-complete .sec-tit .breadcrumb li:last-child a {
+  color: #111;
+}
+.order-complete-content .order-complete .sec-tit .breadcrumb li a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #999;
+}
+.order-complete-content .order-complete .order-complete-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents {
+  /* width: 1055px; */
+  width: 69.65%;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-complete-notify {
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 80px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-complete-notify h4 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  color: #111;
+  margin-bottom: 24px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-complete-notify p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #111;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-confirm-notify {
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 80px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-confirm-notify h4 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  color: #111;
+  margin-bottom: 24px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-confirm-notify p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #111;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-confirm-notify p:nth-of-type(1) {
+  margin-bottom: 24px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-confirm-notify p:nth-of-type(2) {
+  line-height: 20px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-info {
+  width: 100%;
+  border-top: 1px solid #333;
+  margin-bottom: 64px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-info dl {
+  display: flex;
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-info dl dt {
+  width: 153px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #111;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-info dl dd {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #111;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-info dl dd p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #111;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-info dl dd p ~ p {
+  margin-top: 20px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .order-info dl dd span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #666;
+  margin-left: 25px;
+  margin-top: 14px;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .btn-wrap button {
+  display: block;
+  width: 250px;
+  height: 56px;
+  padding: 17.5px 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .btn-wrap button.keep-shopping {
+  border: 1px solid #111;
+  background-color: #111;
+  color: #fff;
+  color: #fff;
+}
+.order-complete-content .order-complete .order-complete-wrap .order-complete_contents .btn-wrap button.view-purchase-history {
+  border: 1px solid #111;
+  background-color: #fff;
+  color: #111;
+  color: #111;
+  margin-left: 16px;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment {
+  /* width: 410px; */
+  width: 27.05%;
+  padding: 48px 50px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment dl {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment dl dt {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment dl dt strong {
+  font-size: 18px;
+  font-size: 0.9375vw;
+  font-weight: 500;
+  line-height: 30px;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment dl dd {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment dl dd strong {
+  font-size: 24px;
+  font-size: 1.25vw;
+  font-weight: 700;
+  line-height: 30px;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment dl.total {
+  padding-top: 24px;
+  border-top: 1px solid #333;
+  margin-top: 4px;
+  padding-bottom: 16px;
+}
+.order-complete-content .order-complete .order-complete-wrap .final-payment dl:last-of-type {
+  padding-bottom: 0;
+}
+
+.side_btn {
+  display: none;
+}
+.side_btn .totop {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 0;
+  background: url(../../images/pc/top.svg) no-repeat center;
+  background-color: #111;
+  position: fixed;
+  right: 50px;
+  bottom: 98px;
+  z-index: 999;
+}
+.side_btn .contact {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #fff;
+  padding: 11.5px 10px;
+  box-sizing: border-box;
+  background-color: #111;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 999;
+}

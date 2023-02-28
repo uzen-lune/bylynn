@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>BYLYNN.SHOP</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/pc/order_complete.css">
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 10);
+
+            /*GNB*/
+            $('.header .menu').click(function() {
+
+                //$('#aside').toggleClass('on');
+
+                var gnbOn = $('#aside').hasClass('on');
+
+                if (gnbOn == true) {
+
+                    $('.menu img').hide(100).show(300).attr({
+                        src: "../../images/pc/menu_PC.svg"
+                    });
+
+                    $('#aside').removeClass('on');
+
+                    $('.depth2').slideUp();
+
+                } else {
+
+                    $('.menu img').hide(100).show(300).attr({
+                        src: "../../images/pc/menuPC_opacity.png"
+                    });
+
+                    $('#aside').addClass('on');
+
+                }
+
+            });
+
+            $('.depth1').click(function() {
+                $(this).siblings('.depth2').slideToggle(150);
+            });
+
+
+            /*검색창*/
+            $('#integrated_search').focusin(function() {
+                $('#search_menu').fadeIn(400);
+            });
+
+            $('#search_menu').mouseenter(function() {
+                $('#search_menu').fadeIn(400);
+            });
+
+            $('#search_menu .search-close').click(function() {
+                $('#search_menu').fadeOut(200);
+            });
+
+            $('.recent-search button').click(function() {
+                $(this).parent('li').remove();
+            });
+
+
+            /* 위시리스트 추가 */
+            $('.button-wrap #wish').click(function() {
+                $(this).toggleClass('on');
+            });
+           
+        });
+
+
+        $(window).scroll(function() {
+
+            var scTop = $(this).scrollTop();
+            console.log(scTop);
+
+            if (scTop > 500) {
+                $('.side_btn').fadeIn(400);
+            } else {
+                $('.side_btn').fadeOut(300);
+            }
+
+        }); 
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="#none" class="menu"><img src="../../images/pc/menu_PC.svg" alt="메뉴"></a>
+                <a href="index_pc.html" class="logo"><img src="../../images/pc/logo.svg" alt=""></a>
+            </div>
+            <div class="header-right">
+                <ul class="util">
+                    <li>
+                        <input type="search" id="integrated_search" name="integrated_search" placeholder="">
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/mypage.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/shopping_bag.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="login">
+                        <a href="#none">
+                            <p>로그인/회원가입</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="aside">
+        <div class="aside-inner">
+            <ul class="gnb">
+                <li>
+                    <a href="#none" class="depth1">의류</a>
+                    <ul class="depth2">
+                        <li><a href="#none">ALL</a></li>
+                        <li><a href="#none">아우터</a></li>
+                        <li><a href="#none">상의</a></li>
+                        <li><a href="#none">하의</a></li>
+                        <li><a href="#none">원피스</a></li>
+                        <li><a href="#none">액세서리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">가방</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">신발</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">액세서리</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">골프/애슬레저</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">쇼핑의 목적</a>
+                </li>
+                <li>
+                    <a href="#none" class="depth1">브랜드</a>
+                </li>
+            </ul>
+            <ul class="site_map">
+                <li>
+                    <a href="#none">오늘의 업데이트</a>
+                </li>
+                <li>
+                    <a href="#none">베스트</a>
+                </li>
+                <li>
+                    <a href="#none">기획전</a>
+                </li>
+                <li>
+                    <a href="#none">ABOUT LYNN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="search_menu">
+        <ul class="search_menu-wrap">
+            <li class="recent-search">
+                <h3>최근검색어</h3>
+                <ul>
+                    <li>
+                        <a href="#none">엘바테게브</a>
+                        <button><img src="../../images/pc/close_S_btn.svg" alt=""></button>
+                    </li>
+                    <li>
+                        <a href="#none">오소이</a>
+                        <button><img src="../../images/pc/close_S_btn.svg" alt=""></button>
+                    </li>
+                    <li>
+                        <a href="#none">Ette</a>
+                        <button><img src="../../images/pc/close_S_btn.svg" alt=""></button>
+                    </li>
+                </ul>
+            </li>
+            <li class="popular-search">
+                <h3>인기검색어</h3>
+                <ul>
+                    <li class="up"><a href="#none">숏 패딩</a></li>
+                    <li class="up"><a href="#none">핸드메이드 코트</a></li>
+                    <li class="up"><a href="#none">머플러</a></li>
+                    <li class="down"><a href="#none">니트 원피스</a></li>
+                    <li class="up"><a href="#none">롱 부츠</a></li>
+                    <li class="down"><a href="#none">패딩 조끼</a></li>
+                    <li class="up"><a href="#none">숏 코트</a></li>
+                    <li class="up"><a href="#none">NIKE</a></li>
+                    <li class="up"><a href="#none">더플 코트</a></li>
+                    <li class="up"><a href="#none">GANNI</a></li>
+                </ul>
+            </li>
+            <li class="sale-ranking">
+                <h3>판매랭킹</h3>
+                <ul>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>LINE</dt>
+                                <dd>비스코트 하프넥 니트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="../../images/pc/ranking_img.png" alt="">
+                            <dl>
+                                <dt>가든오브라이프</dt>
+                                <dd>마이카인드 여성 멀티비타민 30정</dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <button class="search-close"><img src="../../images/pc/close_M_btn.svg" alt=""></button>
+    </div> 
+
+    <article class="order-complete-content">
+        <section class="order-complete">
+            <div class="sec-tit">
+                <h2>주문완료</h2>
+                <ul class="breadcrumb">
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">주문서 작성</a></li>
+                    <li><a href="#">주문완료</a></li>
+                </ul>
+            </div>
+            <div class="order-complete-wrap">
+                <div class="order-complete_contents">
+                    <div class="order-complete-notify">
+                        <h4>주문이 정상적으로 완료되었습니다.</h4>
+                        <p>주문하신 상품은 배송예정일(YYYY-MM-DD) 보다 빨리 출고될 수 있습니다.</p>
+                    </div>
+                    <div class="order-confirm-notify">
+                        <h4>주문이 확인되었습니다.</h4>
+                        <p>YYYY-MM-DD까지 입금이 완료되면 배송이 진행됩니다.</p>
+                        <p>YYYY-MM-DD까지 입금이 완료되면 배송예정일에 배송이 진행됩니다. <br>주문하신 상품은 배송예정일(YYYY-MM-DD) 보다 빨리 출고될 수 있습니다.</p>
+                    </div>
+                    <div class="order-info">
+                        <dl>
+                            <dt>주문번호</dt>
+                            <dd>123456789</dd>
+                        </dl>
+                        <dl>
+                            <dt>배송정보</dt>
+                            <dd>
+                                <p>홍길동</p>
+                                <p>010-1234-5678</p>
+                                <p>02-9876-5432</p>
+                                <p>12345 서울특별시 강남구 테헤란로20길 9 동궁빌딩 6층</p>
+                                <p>문 앞에 놓아주세요.</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>결제정보</dt>
+                            <dd>
+                                <p>적립금/예치금 전액 결제</p>
+                                <p>신용카드</p>
+                                <span>카드사명 (1234-****-1234-1234)</span>
+                                <span>일시불</span>
+                                <span>승인일시 : YYYY-MM-DD</span>
+                                <p>간편결제</p>
+                                <span>국민은행 **-******-***-**</span>
+                                <p>안심가상계좌</p>
+                                <span>농협 79004483982261 (예금주 : 바이린)</span>
+                                <span>입금기한 : YYYY-MM-DD</span>
+                                <span>입금일시 : YYYY-MM-DD</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="keep-shopping">계속 쇼핑하기</button>
+                        <button class="view-purchase-history">구매내역 보기</button> 
+                    </div>
+                </div>
+                <div class="final-payment"> 
+                    <dl>
+                        <dt>상품주문금액</dt>
+                        <dd>30,000원</dd>
+                    </dl>
+                    <dl>
+                        <dt>회원쿠폰할인금액</dt>
+                        <dd>-3,000원</dd>
+                    </dl>
+                    <dl>
+                        <dt>배송비</dt>
+                        <dd>+2,500원</dd>
+                    </dl>
+                    <dl>
+                        <dt>무료배송쿠폰 면제금액</dt>
+                        <dd>-3,000원</dd>
+                    </dl>
+                    <dl>
+                        <dt>적립금 사용금액</dt>
+                        <dd>-3,000원</dd>
+                    </dl>
+                    <dl>
+                        <dt>예치금 사용금액</dt>
+                        <dd>-3,000원</dd>
+                    </dl>
+                    <dl class="total">
+                        <dt><strong>최종 결제금액</strong></dt>
+                        <dd><strong>29,000,500원</strong></dd>
+                    </dl>
+                    <dl>
+                        <dt>적립예정 적립금</dt>
+                        <dd>3,000원</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <div class="side_btn">
+        <button class="totop">맨 위로 가기</button>
+        <button class="contact">1:1</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="company-info">
+                <h4>(주)테난</h4>
+                <ul>
+                    <li>대표이사 문경란</li>
+                    <li>서울특별시 강남구 영동대로 734(청담동) 린빌딩</li>
+                    <li>개인정보보호책임자 이성춘</li>
+                    <li>사업자등록번호 668-88-01050</li>
+                    <li>통신판매업신고번호 *****</li>
+                </ul>
+                <p>Copyright ⓒ BYLYNNSHOP all rights reserved.</p>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu-box">
+                    <li><a href="#none">공지사항</a></li>
+                    <li><a href="#none">이용약관</a></li>
+                    <li><a href="#none">개인정보처리방침</a></li>
+                </div>
+                <div class="footer-menu-box">
+                    <li><a href="#none">매장안내</a></li>
+                    <li><a href="#none">멤버십 혜택</a></li>
+                </div>
+            </div>
+            <div class="customer-center">
+                <h4>고객센터</h4>
+                <a href="tel:02-3218-5105" class="tel">02-3218-5105</a>
+                <a href="mailto:customercare@bylynn.shop" class="mail">이메일 customercare@bylynn.shop</a>
+                <p>10:00 ~ 18:00 (공휴일 제외)</p>
+            </div>
+            <div class="link">
+                <div class="app">
+                    <a href="#none"><img src="../../images/pc/googleplay.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/apple_white.svg" alt=""></a>
+                </div>
+                <div class="sns">
+                    <a href="#none"><img src="../../images/pc/naver_white.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/youtube_white.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/instagram_white.svg" alt=""></a>
+                    <a href="#none"><img src="../../images/pc/facebook_white.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
