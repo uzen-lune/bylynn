@@ -262,7 +262,7 @@
   outline: 0;
 }
 .shopping-basket-content .shopping-basket .basket-contents .basket-contents-wrap .shopping-list .bylynn1-list .bylynn1-list-wrap .bylynn1-list-box .bylynn1-item .item-sum select:disabled {
-  background-color: #eee;
+  background: #eee url(../../images/pc/arrow_select_disabled.svg) no-repeat 82% center;
   color: #999;
 }
 .shopping-basket-content .shopping-basket .basket-contents .basket-contents-wrap .shopping-list .bylynn1-list .bylynn1-list-wrap .bylynn1-list-box .bylynn1-item .item-sum .sel-price {
@@ -586,7 +586,7 @@
   outline: 0;
 }
 .shopping-basket-content .shopping-basket .basket-contents .basket-contents-wrap .shopping-list .bylynn2-list .bylynn2-list-wrap .bylynn2-list-box .bylynn2-item .add-item .item-sum select:disabled {
-  background-color: #eee;
+  background: #eee url(../../images/pc/arrow_select_disabled.svg) no-repeat 82% center;
   color: #999;
 }
 .shopping-basket-content .shopping-basket .basket-contents .basket-contents-wrap .shopping-list .bylynn2-list .bylynn2-list-wrap .bylynn2-list-box .bylynn2-item .add-item .item-sum .sel-price {

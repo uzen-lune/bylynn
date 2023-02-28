@@ -176,6 +176,7 @@
 .these-days-trend .trend-list-wrap .trend-list li {
     width: 472px;
     position: relative;
+    /* transition: all 1s ease-in-out; */
 }
 
 .these-days-trend .trend-list-wrap .trend-list li ~ li {
