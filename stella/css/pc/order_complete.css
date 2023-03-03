@@ -173,6 +173,7 @@
   font-weight: 500;
   line-height: 18px;
   text-align: center;
+  cursor: pointer;
 }
 .order-complete-content .order-complete .order-complete-wrap .order-complete_contents .btn-wrap button.keep-shopping {
   border: 1px solid #111;
@@ -248,6 +249,7 @@
   right: 50px;
   bottom: 98px;
   z-index: 999;
+  cursor: pointer;
 }
 .side_btn .contact {
   display: block;
@@ -265,4 +267,5 @@
   right: 50px;
   bottom: 50px;
   z-index: 999;
+  cursor: pointer;
 }

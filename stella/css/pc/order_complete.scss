@@ -199,6 +199,7 @@
                         font-weight: 500;
                         line-height: 18px;
                         text-align: center;
+                        cursor: pointer;
 
                         &.keep-shopping {
                             @include btn_style2;
@@ -285,6 +286,7 @@
         right: 50px;
         bottom: 98px;
         z-index: 999;
+        cursor: pointer;
     }
 
     .contact {
@@ -303,5 +305,6 @@
         right: 50px;
         bottom: 50px;
         z-index: 999;
+        cursor: pointer;
     }
 }

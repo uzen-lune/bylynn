@@ -69,12 +69,10 @@
                 $(this).parent('li').remove();
             });
 
-
-            /* 위시리스트 추가 */
-            $('.button-wrap #wish').click(function() {
-                $(this).toggleClass('on');
+            /* 알림창 닫기 */
+            $('.pcc-info-box .close-btn').click(function(){
+                $(this).parent('.pcc-info-box').hide();
             });
-           
         });
 
 

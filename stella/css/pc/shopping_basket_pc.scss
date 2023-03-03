@@ -101,6 +101,7 @@
                                 height: 20px;
                                 border: 1px solid #ccc;
                                 box-sizing: border-box;
+                                cursor: pointer;
 
                                 &:checked {
                                     border: 1px solid #111;
@@ -125,6 +126,7 @@
                                 color: #666;
                                 padding: 8px 12px;
                                 border: 1px solid #666;
+                                cursor: pointer;
 
                                 &:nth-of-type(3) {
                                     padding-left: 40px;
@@ -302,10 +304,12 @@
                                             appearance: none;
                                             background: url(../../images/pc/s-arrow_down.svg) no-repeat 82% center;
                                             outline: 0;
+                                            cursor: pointer;
 
                                             &:disabled {
                                                 background: #eee url(../../images/pc/arrow_select_disabled.svg) no-repeat 82% center;
                                                 color: #999;
+                                                cursor: no-drop;
                                             }
                                         }
 
@@ -334,6 +338,7 @@
                                             height: 24px;
                                             background: url(../../images/pc/wish.svg) no-repeat center;
                                             font-size: 0;
+                                            cursor: pointer;
 
                                             &.on {
                                                 background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -342,6 +347,7 @@
 
                                         .remove {
                                             margin-left: 16px;
+                                            cursor: pointer;
 
                                             img {
                                                 display: block;
@@ -578,6 +584,7 @@
                                                 appearance: none;
                                                 background: url(../../images/pc/s-arrow_down.svg) no-repeat 82% center;
                                                 outline: 0;
+                                                cursor: pointer;
                                             }
         
                                             .sel-price {
@@ -605,6 +612,7 @@
                                                 height: 24px;
                                                 background: url(../../images/pc/wish.svg) no-repeat center;
                                                 font-size: 0;
+                                                cursor: pointer;
 
                                                 &.on {
                                                     background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -613,6 +621,7 @@
         
                                             .remove {
                                                 margin-left: 16px;
+                                                cursor: pointer;
         
                                                 img {
                                                     display: block;
@@ -683,10 +692,13 @@
                                                 appearance: none;
                                                 background: url(../../images/pc/s-arrow_down.svg) no-repeat 82% center;
                                                 outline: 0;
+                                                cursor: pointer;
                                                 
                                                 &:disabled {
                                                     background: #eee url(../../images/pc/arrow_select_disabled.svg) no-repeat 82% center;
                                                     color: #999;
+                                                    cursor: default;
+                                                    cursor: no-drop;
                                                 }
                                             }
         
@@ -715,6 +727,7 @@
                                                 height: 24px;
                                                 background: url(../../images/pc/wish.svg) no-repeat center;
                                                 font-size: 0;
+                                                cursor: pointer;
 
                                                 &.on {
                                                     background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -723,6 +736,7 @@
         
                                             .remove {
                                                 margin-left: 16px;
+                                                cursor: pointer;
         
                                                 img {
                                                     display: block;
@@ -765,6 +779,7 @@
                                         left: 50%;
                                         top: 102px;
                                         transform: translateX(-50%);
+                                        cursor: pointer;
 
                                         img {
                                             display: block;
@@ -1030,6 +1045,7 @@
                     padding: 17.5px 0;
                     text-align: center;
                     @include btn_style2;
+                    cursor: pointer;
                 }
             }
         }
@@ -1051,6 +1067,7 @@
         right: 50px;
         bottom: 98px;
         z-index: 999;
+        cursor: pointer;
     }
 
     .contact {
@@ -1069,5 +1086,6 @@
         right: 50px;
         bottom: 50px;
         z-index: 999;
+        cursor: pointer;
     }
 }

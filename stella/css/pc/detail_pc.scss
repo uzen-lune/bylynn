@@ -107,6 +107,7 @@
                         position: absolute;
                         right: 0;
                         top: -24px;
+                        cursor: pointer;
 
                         img {
                             display: block;
@@ -172,6 +173,7 @@
                                 .review {
                                     margin-left: 26px;
                                     position: relative;
+                                    cursor: pointer;
 
                                     &::before {
                                         content: '';
@@ -191,6 +193,7 @@
                                         line-height: 14px;
                                         color: #111;
                                     }
+
                                     img {
                                         margin-left: 8px;
                                         vertical-align: -1.2px;
@@ -315,6 +318,7 @@
                                             box-sizing: border-box;
                                             font-size: 0;
                                             position: relative;
+                                            cursor: pointer;
 
                                             &:nth-of-type(1) {
                                                 span {
@@ -434,6 +438,7 @@
                                             &:disabled+label {
                                                 color: #dbdbdb;
                                                 background-color: #f6f6f6;
+                                                cursor: no-drop;
                                             }
                                         }
 
@@ -448,6 +453,7 @@
                                             line-height: 16px;
                                             color: #666;
                                             position: relative;
+                                            cursor: pointer;
 
                                             span {
                                                 position: absolute;
@@ -536,6 +542,7 @@
                                             -moz-appearance: none;
                                             appearance: none;
                                             background: #fff url(../../images/pc/s-arrow_down.svg) no-repeat  98% center;
+                                            cursor: pointer;
                                         }
                                     }
                                 }
@@ -558,8 +565,7 @@
 
                                     dd {
                                         display: flex;
-                                        justify-content: space-between;
-                                        background: url(../../images/pc/close_M_thin.svg) no-repeat 100% center;
+                                        align-items: center;
 
                                         .quantity {
                                             width: 104px;
@@ -568,12 +574,14 @@
                                             display: flex;
                                             box-sizing: border-box;
                                             background-color: #fff;
+                                            margin-right: calc(100% - 208px);
 
                                             .qty {
                                                 width: 30px;
                                                 height: 30px;
                                                 box-sizing: border-box;
                                                 position: relative;
+                                                cursor: pointer;
 
                                                img {
                                                 display: block;
@@ -599,11 +607,19 @@
                                         }
 
                                         p {
+                                            width: 80px;
                                             font-size: 16px;
                                             font-weight: 500;
-                                            line-height: 30px;
+                                            line-height: 16px;
                                             color: #111;
-                                            padding-right: 31px;
+                                        }
+
+                                        .remove {
+                                            width: 24px;
+                                            height: 24px;
+                                            background: url(../../images/pc/close_M_thin.svg) no-repeat center;
+                                            font-size: 0;
+                                            cursor: pointer;
                                         }
                                     }
                                 }
@@ -663,6 +679,7 @@
                             background-color: #fff;
                             border: 1px solid #111;
                             color: #111;
+                            cursor: pointer;
                         }
 
                         .buy-now {
@@ -674,6 +691,7 @@
                             font-weight: 500;
                             background-color: #111;
                             color: #fff;
+                            cursor: pointer;
                         }
                     }
                 }
@@ -840,6 +858,7 @@
                     text-align: center;
                     padding: 20px 0 22px;
                     border-bottom: 1px solid #eee;
+                    cursor: pointer;
 
                     a {
                          font-size: 18px;
@@ -928,6 +947,7 @@
                                 text-indent: 24px;
                                 border: 1px solid #fff;
                                 background: url(../../images/pc/arrow_white.svg) no-repeat 90% center;
+                                cursor: pointer;
                             }
                         }
                     }
@@ -962,6 +982,7 @@
                                             top: 0;
                                             background: url(../../images/pc/wish.svg) no-repeat center;
                                             font-size: 0;
+                                            cursor: pointer;
     
                                             &.on {
                                                 background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -1066,6 +1087,7 @@
                                                 top: 0;
                                                 font-size: 0;
                                                 background: url(../../images/pc/wish.svg) no-repeat center;
+                                                cursor: pointer;
     
                                                 &.on {
                                                     background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -1165,6 +1187,7 @@
                                                 right: 0;
                                                 top: 0;
                                                 font-size: 0;
+                                                cursor: pointer;
     
                                                 &.on {
                                                     background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -1344,6 +1367,7 @@
                                     -moz-appearance: none;
                                     appearance: none;
                                     background: #fff url(../../images/pc/select_down.svg) no-repeat  100% center;
+                                    cursor: pointer;
                                 }
                             }
     
@@ -1367,6 +1391,7 @@
                                             position: absolute;
                                             right: 0;
                                             top: 88px;
+                                            cursor: pointer;
         
                                             img {
                                                 display: block;
@@ -1394,6 +1419,7 @@
                                             position: absolute;
                                             right: 0;
                                             top: 88px;
+                                            cursor: pointer;
     
                                             img {
                                                 display: block;
@@ -1579,6 +1605,7 @@
                             padding-bottom: 24px;
                             border-bottom: 1px solid #333;
                             background: url(../../images/pc/M-down.png) no-repeat 100% top;
+                            cursor: pointer;
                             
                             &.active {
                                 background: url(../../images/pc/M-up.svg) no-repeat 100% top;
@@ -1636,6 +1663,7 @@
                             padding-bottom: 24px;
                             border-bottom: 1px solid #333;
                             background: url(../../images/pc/M-down.png) no-repeat 100% top;
+                            cursor: pointer;
                             
                             &.active {
                                 background: url(../../images/pc/M-up.svg) no-repeat 100% top;
@@ -1675,6 +1703,7 @@
                             padding-bottom: 24px;
                             border-bottom: 1px solid #333;
                             background: url(../../images/pc/M-down.png) no-repeat 100% top;
+                            cursor: pointer;
                             
                             &.active {
                                 background: url(../../images/pc/M-up.svg) no-repeat 100% top;
@@ -1730,6 +1759,7 @@
                             padding-bottom: 24px;
                             border-bottom: 1px solid #333;
                             background: url(../../images/pc/M-down.png) no-repeat 100% top;
+                            cursor: pointer;
                             
                             &.active {
                                 background: url(../../images/pc/M-up.svg) no-repeat 100% top;
@@ -1778,6 +1808,7 @@
         right: 50px;
         bottom: 98px;
         z-index: 999;
+        cursor: pointer;
     }
 
     .contact {
@@ -1796,5 +1827,6 @@
         right: 50px;
         bottom: 50px;
         z-index: 999;
+        cursor: pointer;
     }
 }

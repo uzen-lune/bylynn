@@ -716,6 +716,7 @@ $color2: #E9D8BA;
                         top: 50%;
                         transform: translateY(-50%);
                         z-index: 90;
+                        cursor: pointer;
                     }
                     .dis_prevbtn2 {
                         position: absolute;
@@ -723,6 +724,7 @@ $color2: #E9D8BA;
                         top: 50%;
                         transform: translateY(-50%);
                         z-index: 90;
+                        cursor: pointer;
                     }
                 }
 
@@ -803,6 +805,7 @@ $color2: #E9D8BA;
                         top: 50%;
                         transform: translateY(-50%);
                         z-index: 90;
+                        cursor: pointer;
                     }
                     .dis_prevbtn4 {
                         position: absolute;
@@ -810,6 +813,7 @@ $color2: #E9D8BA;
                         top: 50%;
                         transform: translateY(-50%);
                         z-index: 90;
+                        cursor: pointer;
                     }
                 }
             }
@@ -882,6 +886,7 @@ $color2: #E9D8BA;
                         border: 1px solid #ccc;
                         background-color: #fff;
                         position: relative;
+                        cursor: pointer;
 
                         img {
                             display: block;
@@ -970,6 +975,7 @@ $color2: #E9D8BA;
                             position: absolute;
                             right: 0;
                             top: 0;
+                            cursor: pointer;
 
                             &.on {
                                 background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -1063,6 +1069,7 @@ $color2: #E9D8BA;
                             color: #666;
                             margin-left: 24px;
                             position: relative;
+                            cursor: pointer;
 
                             &::before {
                                 content: "";
@@ -1095,6 +1102,7 @@ $color2: #E9D8BA;
                     border: 1px solid #333;
                     box-sizing: border-box;
                     margin: 0 auto;
+                    cursor: pointer;
 
                     &:hover {
                         background-color: #333;
@@ -1121,6 +1129,7 @@ $color2: #E9D8BA;
         right: 50px;
         bottom: 98px;
         z-index: 999;
+        cursor: pointer;
     }
 
     .contact {
@@ -1139,5 +1148,6 @@ $color2: #E9D8BA;
         right: 50px;
         bottom: 50px;
         z-index: 999;
+        cursor: pointer;
     }
 }

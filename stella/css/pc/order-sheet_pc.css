@@ -106,6 +106,7 @@
   border: 1px solid #111;
   background-color: #111;
   color: #fff;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .non-member-agree {
   margin-bottom: 80px;
@@ -139,6 +140,7 @@
   background-color: #fff;
   border: 1px solid #eee;
   margin-right: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .non-member-agree .agree-box .agree-inputbox input:checked {
   background: #111 url(../../images/pc/checkbox_check.svg) no-repeat center;
@@ -149,6 +151,7 @@
   font-weight: 500;
   line-height: 17px;
   color: #111;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .non-member-agree .agree-box .agree-inputbox a {
   font-size: 13px;
@@ -186,6 +189,7 @@
   background-color: #fff;
   border: 1px solid #666;
   padding: 7.5px 12px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .orderer .tit-top .btn-wrap button ~ button {
   margin-left: 5px;
@@ -288,6 +292,7 @@
   background-color: #fff;
   border: 1px solid #666;
   padding: 8px 12px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap {
   margin-bottom: 80px;
@@ -386,6 +391,7 @@
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 50%;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap .del-des-info-contents .basic-del-des dl:nth-of-type(2) .dd-wrap dd input:checked {
   background-color: #111;
@@ -459,6 +465,7 @@
   border: 1px solid #ccc;
   margin-left: 16px;
   outline: 0;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap .del-des-info-contents .basic-del-des .recipient-info-input .inputbox:nth-of-type(1) .chkbox input[id=same-name-chk]:checked {
   background: #111 url(../../images/pc/checkbox_check.svg) no-repeat center;
@@ -469,6 +476,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #666;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap .del-des-info-contents .basic-del-des .recipient-info-input .inputbox:nth-of-type(2) label {
   width: 152px;
@@ -538,6 +546,7 @@
   font-size: 14px;
   font-weight: 500;
   margin-left: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap .del-des-info-contents .basic-del-des .recipient-info-input .inputbox:nth-of-type(4) button:hover {
   border: 1px solid #111;
@@ -554,6 +563,7 @@
   border: 1px solid #ccc;
   margin-left: 16px;
   outline: 0;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap .del-des-info-contents .basic-del-des .recipient-info-input .inputbox:nth-of-type(4) .chkbox input[id=basic-del-des]:checked {
   background: #111 url(../../images/pc/checkbox_check.svg) no-repeat center;
@@ -564,6 +574,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #666;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap .del-des-info-contents .basic-del-des .recipient-info-input .inputbox:nth-of-type(4) input[id=recipient-add] {
   width: calc(100% - 152px);
@@ -618,6 +629,7 @@
   appearance: none;
   background: url(../../images/pc/s-arrow_down.svg) no-repeat 99% center;
   outline: 0;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .recipient .del-des-info-wrap .del-des-info-contents .basic-del-des .recipient-info-input .inputbox:nth-of-type(5) input[id=del-message] {
   width: calc(100% - 152px);
@@ -1078,6 +1090,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   margin-right: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .pcc .pcc-agree-chkbox input:checked {
   background: #111 url(../../images/pc/checkbox_check.svg) no-repeat center;
@@ -1088,6 +1101,7 @@
   font-weight: 400;
   line-height: 18px;
   color: #666;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .pcc .pcc-agree-chkbox a {
   margin-left: 12px;
@@ -1122,6 +1136,7 @@
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .pcc .pcc-info-wrap {
   display: flex;
+  justify-content: flex-start;
   align-items: flex-start;
   position: absolute;
   right: -628px;
@@ -1263,6 +1278,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   margin-right: 8px;
+  outline: 0;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .discount .coupon-inputbox label {
   font-size: 14px;
@@ -1281,6 +1297,7 @@
   padding: 15.5px 0;
   box-sizing: border-box;
   margin-left: 48px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .discount .coupon-inputbox span {
   margin-left: 16px;
@@ -1357,6 +1374,7 @@
   padding: 15.5px 0;
   box-sizing: border-box;
   margin-left: 48px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .use-point .save-point-input-box span {
   margin-left: 16px;
@@ -1417,6 +1435,7 @@
   padding: 15.5px 0;
   box-sizing: border-box;
   margin-left: 48px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .use-point .deposit-inputbox span {
   margin-left: 16px;
@@ -1447,6 +1466,7 @@
   background-color: #fff;
   padding: 8px 12px;
   border: 1px solid #666;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .chkbox {
   display: flex;
@@ -1459,6 +1479,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   margin-right: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .chkbox input[id=payment-method-keep]:checked {
   border: 1px solid #111;
@@ -1469,6 +1490,7 @@
   font-weight: 400;
   line-height: 18px;
   color: #666;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .payment-method {
   display: flex;
@@ -1493,6 +1515,7 @@
   background-color: #fff;
   border: 1px solid #eee;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .payment-method input[type=radio]:checked + label {
   color: #fff;
@@ -1531,6 +1554,7 @@
   appearance: none;
   background: url(../../images/pc/s-arrow_down.svg) no-repeat 99% center;
   outline: 0;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .deposit-bank .bank-select ul {
   margin-top: 8px;
@@ -1569,6 +1593,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   margin-right: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .cash-receipt-apply .chkbox input[id=cash-receipt]:checked {
   border: 1px solid #111;
@@ -1591,6 +1616,7 @@
   border-radius: 50%;
   border: 1px solid #ccc;
   margin-right: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .cash-receipt-apply .cash-receipt-method input:checked {
   background: #111;
@@ -1615,6 +1641,7 @@
   line-height: 18px;
   color: #666;
   margin-right: 40px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .cash-receipt-apply .inputwrap .inputbox {
   display: flex;
@@ -1669,6 +1696,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   margin-right: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .payment-refer-wrap .payment-agree-box li input:checked {
   background: #111 url(../../images/pc/checkbox_check.svg) no-repeat center;
@@ -1679,6 +1707,7 @@
   font-weight: 400;
   line-height: 18px;
   color: #666;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .order-sheet_contents .payment-info .payment-refer-wrap .payment-agree-box li a {
   margin-left: 12px;
@@ -1776,6 +1805,7 @@
   border: 1px solid #ccc;
   box-sizing: border-box;
   margin-right: 8px;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .payment-amount-info .agree-box li input:checked {
   border: 1px solid #111;
@@ -1787,6 +1817,7 @@
   font-weight: 400;
   line-height: 18px;
   color: #666;
+  cursor: pointer;
 }
 .order-sheet-content .order-sheet .order-sheet-wrap .payment-amount-info .agree-box li:first-child label {
   font-size: 16px;
@@ -1812,6 +1843,7 @@
   border: 1px solid #111;
   background-color: #111;
   color: #fff;
+  cursor: pointer;
 }
 
 .side_btn {
@@ -1829,6 +1861,7 @@
   right: 50px;
   bottom: 98px;
   z-index: 999;
+  cursor: pointer;
 }
 .side_btn .contact {
   display: block;
@@ -1846,4 +1879,5 @@
   right: 50px;
   bottom: 50px;
   z-index: 999;
+  cursor: pointer;
 }

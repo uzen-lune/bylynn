@@ -618,6 +618,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 90;
+  cursor: pointer;
 }
 .display-content .display-contents .display-slide-content .display-slide-wrap .display_slide1 .dis_prevbtn2 {
   position: absolute;
@@ -625,6 +626,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 90;
+  cursor: pointer;
 }
 .display-content .display-contents .display-slide-content .display-slide-wrap .display_slide2 {
   width: 732px;
@@ -692,6 +694,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 90;
+  cursor: pointer;
 }
 .display-content .display-contents .display-slide-content .display-slide-wrap .display_slide2 .dis_prevbtn4 {
   position: absolute;
@@ -699,6 +702,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 90;
+  cursor: pointer;
 }
 .display-content .display-contents .recommend-brand {
   margin-bottom: 100px;
@@ -763,6 +767,7 @@
   border: 1px solid #ccc;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
 }
 .display-content .display-contents .display-item-contents .display-item-top .filter-value button img {
   display: block;
@@ -840,6 +845,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  cursor: pointer;
 }
 .display-content .display-contents .display-item-contents .display-item-wrap .display-item > li a #wish.on {
   background: url(../../images/pc/wish_on.svg) no-repeat center;
@@ -919,6 +925,7 @@
   color: #666;
   margin-left: 24px;
   position: relative;
+  cursor: pointer;
 }
 .display-content .display-contents .display-item-contents .display-item-wrap .display-item > li a .item-rating .review::before {
   content: "";
@@ -944,6 +951,7 @@
   border: 1px solid #333;
   box-sizing: border-box;
   margin: 0 auto;
+  cursor: pointer;
 }
 .display-content .display-contents .display-item-contents .display-item-wrap .more:hover {
   background-color: #333;
@@ -965,6 +973,7 @@
   right: 50px;
   bottom: 98px;
   z-index: 999;
+  cursor: pointer;
 }
 .side_btn .contact {
   display: block;
@@ -982,4 +991,5 @@
   right: 50px;
   bottom: 50px;
   z-index: 999;
+  cursor: pointer;
 }

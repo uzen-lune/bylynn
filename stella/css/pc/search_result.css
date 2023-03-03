@@ -891,6 +891,7 @@ input[id="purpose4"]:checked + label {
     height: 40px;
     border: 1px solid #ccc;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .search_result_content .search-result-wrap .filter-value .search-content {
@@ -1208,6 +1209,7 @@ input[id="purpose4"]:checked + label {
     right: 50px;
     bottom: 98px;
     z-index: 999999;
+    cursor: pointer;
 }
 
 .side_btn .contact {
@@ -1226,6 +1228,7 @@ input[id="purpose4"]:checked + label {
     right: 50px;
     bottom: 50px;
     z-index: 999999;
+    cursor: pointer;
 }
 
 

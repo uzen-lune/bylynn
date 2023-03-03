@@ -56,6 +56,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 0;
+    cursor: pointer;
 }
 
 .main .slide_btn.btn_L {
@@ -272,6 +273,10 @@
 
 .brand-list .brand_list_slide .swiper-container .swiper-wrapper .swiper-slide ~ .swiper-slide {
     margin-left: 16px;
+}
+
+.swiper-container .swiper-scrollbar {
+    display: block;
 }
 
 .brand_list_slide .swiper-container .swiper-wrapper .swiper-slide .brand-list-box {
@@ -1204,6 +1209,7 @@
     right: 50px;
     bottom: 98px;
     z-index: 999999;
+    cursor: pointer;
 }
 
 .side_btn .contact {
@@ -1222,4 +1228,5 @@
     right: 50px;
     bottom: 50px;
     z-index: 999999;
+    cursor: pointer;
 }
