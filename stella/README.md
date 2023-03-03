@@ -97,7 +97,7 @@ https://uzen-lune.github.io/bylynn/stella/html/pc/shopping_basket_pc.html
 
 <hr>
 <h2><strong>PC 주문서작성</strong></h2>
-https://uzen-lune.github.io/bylynn/stella/html/pc/.html
+https://uzen-lune.github.io/bylynn/stella/html/pc/order-sheet_pc.html
 
 <hr>
 <h2><strong>PC 주문완료</strong></h2>
