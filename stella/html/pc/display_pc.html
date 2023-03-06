@@ -82,7 +82,7 @@
 
             /* display-aside */
             $('.category-box > li > a').click(function(){
-                    $(this).parent('li').toggleClass('active').siblings().removeClass('active');
+                    $(this).parent('li').toggleClass('active').siblings().removeClass('active').children('.depth2').slideUp();
                     $(this).siblings('ul').slideToggle(300);
             });
 
@@ -279,12 +279,12 @@
             <ul class="display-aside-wrap">
                 <li class="category">
                     <ul class="category-box">
-                        <li>
+                        <li class="depth1">
                             <a href="#none">전체</a>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">아우터</a>
-                            <ul>
+                            <ul class="depth2">
                                 <li class="on"><a href="#none">전체</a></li>
                                 <li><a href="#none">자켓</a></li>
                                 <li><a href="#none">코트</a></li>
@@ -297,25 +297,25 @@
                                 <li><a href="#none">핸드메이드</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">원피스</a>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">블라우스/셔츠</a>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">스커트</a>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">팬츠</a>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">티셔츠</a>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">데님</a>
                         </li>
-                        <li>
+                        <li class="depth1">
                             <a href="#none">니트</a>
                         </li>
                     </ul>
