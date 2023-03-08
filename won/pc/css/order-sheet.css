@@ -1,0 +1,1400 @@
+@charset "UTF-8";
+section {
+  padding-top: 158px;
+}
+section .inner {
+  width: 1514px;
+  margin: 0 auto;
+  /* display: flex;
+    justify-content: space-between; */
+}
+section fieldset {
+  border: 0;
+}
+section fieldset legend {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+section fieldset legend .tit {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 64px;
+}
+section fieldset legend .sorting-area {
+  display: flex;
+}
+section fieldset legend .sorting-area li {
+  padding-right: 28px;
+  background-image: url("../images/arrow-next-gray.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  background-position: right center;
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+}
+section fieldset legend .sorting-area li:last-of-type {
+  margin-right: 0;
+  background: none;
+}
+section fieldset legend .sorting-area .active {
+  color: #111;
+}
+section fieldset .order-sheet-contents {
+  display: flex;
+  justify-content: space-between;
+}
+section .left-area {
+  width: 1055px;
+  padding-bottom: 150px;
+  /*  */
+  /* // */
+  /* 주문 증정 프로모션 */
+  /* //주문증정 프로모션 */
+  /* 해외직배송 개인통관 고유부호 */
+  /* //해외직배송 개인통관 고유부호 */
+  /* //savings */
+}
+section .left-area > div h3 {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 24px 0;
+  border-bottom: 1px solid #333;
+}
+section .left-area .join-member {
+  width: 100%;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #eee;
+  padding: 64px 0;
+  text-align: center;
+  margin-bottom: 80px;
+}
+section .left-area .join-member .txt p {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 32px;
+}
+section .left-area .join-member .txt strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+section .left-area .join-member .txt .img-box {
+  width: 441px;
+  margin: 0 auto 32px;
+}
+section .left-area .join-member .txt .img-box img {
+  display: block;
+  width: 100%;
+}
+section .left-area .join-member .txt button {
+  width: 300px;
+  height: 56px;
+  line-height: 56px;
+  color: #fff;
+  background-color: #111;
+}
+section .left-area .non-members-agreement {
+  margin-bottom: 56px;
+}
+section .left-area .non-members-agreement h3 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #333;
+}
+section .left-area .non-members-agreement .agreement-detail {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .non-members-agreement .agreement-detail .txt {
+  margin-bottom: 24px;
+}
+section .left-area .non-members-agreement .agreement-detail .txt p {
+  font-size: 14px;
+  line-height: 20px;
+}
+section .left-area .non-members-agreement .agreement-detail .checkbox-wrap label {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+section .left-area .non-members-agreement .agreement-detail .checkbox-wrap label .link-tooltip {
+  margin-left: 12px;
+}
+section .left-area .customer-order {
+  margin-bottom: 56px;
+}
+section .left-area .customer-order .tit-button-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+section .left-area .customer-order .tit-button-wrap h3 {
+  font-size: 24px;
+  font-weight: 500;
+  border: 0;
+}
+section .left-area .customer-order .tit-button-wrap .btn {
+  display: flex;
+}
+section .left-area .customer-order .tit-button-wrap .btn button {
+  padding: 0 12px;
+  height: 32px;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+section .left-area .customer-order .tit-button-wrap .btn button:last-of-type {
+  margin-right: 0;
+}
+section .left-area .customer-order .customer-order-detail {
+  padding-top: 32px;
+}
+section .left-area .customer-order .customer-order-detail .info {
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 32px;
+  box-sizing: border-box;
+}
+section .left-area .customer-order .customer-order-detail .info li {
+  font-size: 13px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  color: #666;
+  padding-left: 12px;
+  position: relative;
+}
+section .left-area .customer-order .customer-order-detail .info li::before {
+  content: "·";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .left-area .customer-order .customer-order-detail .info li:last-of-type {
+  margin-bottom: 0;
+}
+section .left-area .customer-order .customer-order-detail .order-user-info {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .customer-order .customer-order-detail .order-user-info dl {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+section .left-area .customer-order .customer-order-detail .order-user-info dl:last-of-type {
+  margin-bottom: 0;
+}
+section .left-area .customer-order .customer-order-detail .order-user-info dl dt {
+  width: 153px;
+  font-size: 14px;
+  font-weight: 500;
+}
+section .left-area .customer-order .customer-order-detail .order-user-info dl dd {
+  font-size: 14px;
+  font-weight: 400;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input > div:last-of-type {
+  margin-bottom: 0;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input > div p {
+  font-size: 13px;
+  margin-left: 8px;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input > div .rule {
+  color: #999;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input > div .notice {
+  color: #ff2a00;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input label {
+  width: 153px;
+  font-weight: 500;
+  font-size: 14px;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input input {
+  width: 250px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #999;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+section .left-area .customer-order .customer-order-detail .order-user-input input::placeholder {
+  color: #999;
+}
+section .left-area .customer-receive .tit-button-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+section .left-area .customer-receive .tit-button-wrap h3 {
+  font-size: 24px;
+  font-weight: 500;
+  border: 0;
+}
+section .left-area .customer-receive .tit-button-wrap .btn button {
+  padding: 0 12px;
+  height: 32px;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+section .left-area .customer-receive .tit-button-wrap .btn button:last-of-type {
+  margin-right: 0;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab ul {
+  width: 100%;
+  display: flex;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab ul li {
+  width: 33.33%;
+  height: 64px;
+  line-height: 64px;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab ul li a {
+  display: block;
+  font-size: 18px;
+  color: #999;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab ul li.active a {
+  color: #111;
+  font-weight: 600;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab ul li.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background-color: #111;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl {
+  padding: 32px 0;
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dt {
+  width: 153px;
+  font-size: 14px;
+  font-weight: 500;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd {
+  width: 100%;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd .txt {
+  padding-top: 3px;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd .active p {
+  font-weight: 500;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd p:last-of-type {
+  margin-bottom: 0;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd .input-wrap {
+  width: 100%;
+  display: flex;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd .input-wrap:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd .input-wrap .input-radio {
+  margin-right: 8px;
+}
+section .left-area .customer-receive .customer-receive-detail .receive-tab-defalt dl dd .input-wrap input[type=radio] {
+  width: 20px;
+  height: 20px;
+  accent-color: #fff;
+}
+section .left-area .customer-receive .receive-user-input {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 56px;
+}
+section .left-area .customer-receive .receive-user-input .row {
+  margin-bottom: 12px;
+}
+section .left-area .customer-receive .receive-user-input .row dl {
+  display: flex;
+}
+section .left-area .customer-receive .receive-user-input .row dl:last-of-type {
+  margin-bottom: 0;
+}
+section .left-area .customer-receive .receive-user-input .row dl dt {
+  width: 153px;
+  font-size: 14px;
+  line-height: 48px;
+  font-weight: 500;
+}
+section .left-area .customer-receive .receive-user-input .row dl dd {
+  width: calc(100% - 153px);
+}
+section .left-area .customer-receive .receive-user-input .row input {
+  width: 250px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  color: #999;
+  border: 1px solid #ccc;
+}
+section .left-area .customer-receive .receive-user-input .row input::placeholder {
+  color: #999;
+}
+section .left-area .customer-receive .receive-user-input .name dd {
+  display: flex;
+}
+section .left-area .customer-receive .receive-user-input .name dd input[type=text] {
+  margin-right: 16px;
+}
+section .left-area .customer-receive .receive-user-input .name dd label {
+  font-size: 14px;
+  color: #666;
+}
+section .left-area .customer-receive .receive-user-input .name dd label i {
+  margin-right: 8px;
+}
+section .left-area .customer-receive .receive-user-input .address dd > div {
+  display: flex;
+  margin-bottom: 12px;
+}
+section .left-area .customer-receive .receive-user-input .address dd > div:last-of-type {
+  margin-bottom: 0;
+}
+section .left-area .customer-receive .receive-user-input .address dd > div input[type=text] {
+  width: 100%;
+}
+section .left-area .customer-receive .receive-user-input .address dd > div #receiveUseradd {
+  margin-right: 8px;
+}
+section .left-area .customer-receive .receive-user-input .address dd > div button {
+  margin-right: 8px;
+  height: 48px;
+  padding: 0 24px;
+  background-color: #fff;
+  border: 1px solid #111;
+  font-size: 14px;
+}
+section .left-area .customer-receive .receive-user-input .address dd > div label {
+  font-size: 14px;
+  color: #666;
+}
+section .left-area .customer-receive .receive-user-input .address dd > div label i {
+  margin-right: 8px;
+}
+section .left-area .customer-receive .receive-user-input .message .select-box {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #ccc;
+  padding: 0 12px;
+  color: #999;
+  background-image: url("../images/arrow-down-10.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px;
+  background-position: right 12px center;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 200;
+  cursor: pointer;
+}
+section .left-area .customer-receive .receive-user-input .message .select-ul {
+  display: none;
+}
+section .left-area .customer-receive .receive-user-input .message textarea {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 16px 12px 15px;
+  font-size: 14px;
+  color: #999;
+  border-color: #ccc;
+}
+section .left-area .customer-receive .receive-user-input .message textarea::-webkit-scrollbar {
+  display: none;
+}
+section .left-area .customer-receive .receive-user-input .message textarea::placeholder {
+  color: #999;
+}
+section .left-area .customer-receive .receive-user-input .information {
+  padding-left: 153px;
+  font-size: 13px;
+  color: #999;
+}
+section .left-area .receive-pdt-info h2 {
+  padding: 24px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+section .left-area .group {
+  margin-bottom: 80px;
+}
+section .left-area .group .title {
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #333;
+}
+section .left-area .group .ui-prd-wrap .box .add {
+  display: flex;
+  align-items: center;
+  padding: 16px 0 24px 153px;
+  position: relative;
+}
+section .left-area .group .ui-prd-wrap .box .add .txt {
+  width: 488px;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-count {
+  margin-right: 77px;
+  width: 80px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-count .select {
+  width: 80px;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  line-height: 48px;
+  border: 1px solid #ccc;
+  background-image: url("../images/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-position: right 16px center;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-count .select-ul {
+  display: none;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 48px;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-count .select-ul li {
+  padding: 16px;
+  background-color: #fff;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-price {
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 75px;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-util {
+  position: absolute;
+  left: "50%";
+  right: 0;
+  width: 64px;
+  display: flex;
+  justify-content: end;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-util a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-util .wish {
+  background-image: url("../images/wish.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+section .left-area .group .ui-prd-wrap .box .add .box-util .delete {
+  background-image: url("../images/close-m.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+section .left-area .group .ui-prd-wrap .box .add .sold-out-select {
+  background-color: #eee;
+  cursor: default;
+}
+section .left-area .group .ui-prd-wrap .box-detail {
+  display: flex;
+  position: relative; /* util */
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt {
+  display: flex;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .img-box {
+  width: 101px;
+  margin-right: 16px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .img-box img {
+  display: block;
+  width: 100%;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt {
+  width: 488px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .brand {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 8px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .name {
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 12px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .option {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .option a {
+  margin-left: 12px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .price {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 20px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .price span {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #999;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .price i {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/circle-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  font-size: 0;
+  margin-left: 8px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .gift {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .gift .badge {
+  font-weight: 500;
+  margin-right: 4px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-pdt .txt .gift .notice {
+  color: #ff2a00;
+}
+section .left-area .group .ui-prd-wrap .box-detail .center {
+  display: flex;
+  align-items: center;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-count {
+  margin-right: 77px;
+  width: 80px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-count .select {
+  width: 80px;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  line-height: 48px;
+  border: 1px solid #ccc;
+  background-image: url("../images/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-position: right 16px center;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-count .sold-out-select {
+  background-color: #eee;
+  cursor: default;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-count .select-ul {
+  display: none;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 48px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-count .select-ul li {
+  padding: 16px;
+  background-color: #fff;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-price {
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 75px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-util {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-util a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-util .wish {
+  background-image: url("../images/wish.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+section .left-area .group .ui-prd-wrap .box-detail .box-util .delete {
+  background-image: url("../images/close-m.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+section .left-area .group .ui-prd-wrap .delivery-wrap {
+  display: flex;
+  padding: 22px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+section .left-area .group .ui-prd-wrap .delivery-wrap .txt {
+  font-size: 14px;
+  color: #666;
+}
+section .left-area .group .ui-prd-wrap .delivery-wrap .price {
+  font-size: 14px;
+  color: #111;
+}
+section .left-area .group .gifts-box {
+  /* 사은품박스 */
+}
+section .left-area .group .gifts-box .box-detail-wrap {
+  border-bottom: 1px solid #eee;
+}
+section .left-area .group .gifts-box .box-detail {
+  border-bottom: 0;
+  position: relative;
+}
+section .left-area .group .gifts-box .box-detail::after {
+  content: "";
+  display: block;
+  width: calc(100% - 153px);
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section .left-area .group .max-box .box-detail-wrap {
+  border-bottom: 1px solid #eee;
+}
+section .left-area .group .max-box .box-detail {
+  border-bottom: 0;
+  position: relative;
+}
+section .left-area .group .max-box .box-detail::after {
+  content: "";
+  display: block;
+  width: calc(100% - 153px);
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section .left-area .group .max-box .add {
+  position: relative;
+}
+section .left-area .group .max-box .add::after {
+  content: "";
+  display: block;
+  width: calc(100% - 153px);
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section .left-area .group .max-box .add:last-of-type::after {
+  display: none;
+}
+section .left-area .group .max-box .add .txt p:first-of-type {
+  margin-bottom: 8px;
+}
+section .left-area .group .max-box .add .txt .notice {
+  font-size: 13px;
+  color: #ff2a00;
+}
+section .left-area .order-promotion h3 {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 24px 0;
+  border-bottom: 1px solid #333;
+}
+section .left-area .order-promotion .promotion-pdt-wrap {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 56px;
+}
+section .left-area .order-promotion .promotion-pdt-wrap > p {
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+section .left-area .order-promotion .promotion-pdt-wrap > p span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+  margin-left: 4px;
+}
+section .left-area .order-promotion .promotion-pdt-wrap .box-wrap {
+  display: flex;
+}
+section .left-area .order-promotion .promotion-pdt-wrap .box-wrap .box {
+  display: flex;
+  width: 33.33%;
+}
+section .left-area .order-promotion .promotion-pdt-wrap .box-wrap .box .img-box {
+  width: 101px;
+  margin-right: 16px;
+  position: relative;
+}
+section .left-area .order-promotion .promotion-pdt-wrap .box-wrap .box .img-box img {
+  display: block;
+  width: 100%;
+}
+section .left-area .order-promotion .promotion-pdt-wrap .box-wrap .box .img-box div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #666;
+}
+section .left-area .order-promotion .promotion-pdt-wrap .box-wrap .box .txt .brand {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 8px;
+}
+section .left-area .order-promotion .promotion-pdt-wrap .box-wrap .box .txt .name {
+  font-size: 14px;
+  color: #111;
+}
+section .left-area .overseas {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 56px;
+  position: relative;
+}
+section .left-area .overseas .wrap {
+  padding: 32px 0;
+}
+section .left-area .overseas .wrap .input-wrap {
+  margin-bottom: 32px;
+}
+section .left-area .overseas .wrap input[type=text] {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+section .left-area .overseas .wrap input[type=text]::placeholder {
+  color: #999;
+}
+section .left-area .overseas .wrap > p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+section .left-area .overseas .wrap .checkbox-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+section .left-area .overseas .wrap .checkbox-wrap label {
+  font-size: 14px;
+  color: #666;
+  margin-right: 14px;
+}
+section .left-area .overseas .wrap .information {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+section .left-area .overseas .wrap .information li {
+  position: relative;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+section .left-area .overseas .wrap .information li::before {
+  content: "·";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .left-area .overseas .popup-layer {
+  width: 285px;
+  position: absolute;
+  /* right: -320px;
+  top: 270px; */
+}
+section .left-area .overseas .popup-layer .bollom {
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: #7f7f7f solid 1px;
+  position: absolute;
+  font-size: 16px;
+  text-align: left;
+}
+section .left-area .overseas .popup-layer .bollom .bollom-top {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .overseas .popup-layer .bollom .bollom-top p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+section .left-area .overseas .popup-layer .bollom:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 12px 10px;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section .left-area .overseas .popup-layer .bollom:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 12px 10px;
+  border-color: #7f7f7f transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section .left-area .overseas .popup-layer .bollom button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background-color: transparent;
+  font-size: 0;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px;
+}
+section .left-area .overseas .popup-layer strong {
+  display: block;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+section .left-area .overseas .popup-layer ul li {
+  font-size: 13px;
+  line-height: 1.6;
+}
+section .left-area .overseas .layer1 {
+  right: -260px;
+  top: 250px;
+}
+section .left-area .overseas .layer2 {
+  right: -560px;
+  top: 250px;
+}
+section .left-area .overseas .layer2 ul {
+  padding-left: 14px;
+  list-style: decimal;
+}
+section .left-area .benefits {
+  margin-bottom: 56px;
+}
+section .left-area .benefits .wrap {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .benefits dl {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+section .left-area .benefits dl dt {
+  font-size: 14px;
+  font-weight: 500;
+  width: 153px;
+}
+section .left-area .benefits dl dd {
+  display: flex;
+  align-items: center;
+}
+section .left-area .benefits dl dd .text-wrap {
+  position: relative;
+  margin-right: 8px;
+}
+section .left-area .benefits dl dd .text-wrap input {
+  width: 250px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #ccc;
+}
+section .left-area .benefits dl dd .text-wrap label {
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+}
+section .left-area .benefits dl dd button {
+  width: 130px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid;
+  background-color: #fff;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  margin-right: 16px;
+}
+section .left-area .benefits dl dd > p {
+  font-size: 14px;
+  color: #666;
+}
+section .left-area .savings {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 56px;
+}
+section .left-area .savings .wrap {
+  padding: 32px 0;
+}
+section .left-area .savings .wrap dl {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+section .left-area .savings .wrap dl:last-of-type {
+  margin-bottom: 0;
+}
+section .left-area .savings .wrap dl dt {
+  font-size: 14px;
+  font-weight: 500;
+  width: 153px;
+}
+section .left-area .savings .wrap dl dd {
+  display: flex;
+  align-items: center;
+}
+section .left-area .savings .wrap dl dd .text-wrap {
+  position: relative;
+  margin-right: 8px;
+}
+section .left-area .savings .wrap dl dd .text-wrap input {
+  width: 250px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #ccc;
+}
+section .left-area .savings .wrap dl dd .text-wrap label {
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+}
+section .left-area .savings .wrap dl dd button {
+  width: 130px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid;
+  background-color: #fff;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  margin-right: 16px;
+}
+section .left-area .savings .wrap dl dd > p {
+  font-size: 14px;
+  color: #666;
+}
+section .left-area .savings .wrap .guide {
+  padding-left: 153px;
+  margin: 8px 0 17px;
+}
+section .left-area .savings .wrap .guide p {
+  font-size: 13px;
+  color: #666;
+  padding-left: 12px;
+  position: relative;
+}
+section .left-area .savings .wrap .guide p::before {
+  content: "·";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .left-area .payment-info .tit-button-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-bottom: 1px solid #333;
+}
+section .left-area .payment-info .tit-button-wrap h3 {
+  padding: 0;
+  border: 0;
+}
+section .left-area .payment-info .tit-button-wrap button {
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  box-sizing: border-box;
+  color: #666;
+  background-color: #fff;
+  border: 1px solid #666;
+}
+section .left-area .payment-info .wrap .payment-method {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .payment-info .wrap .checkbox-wrap {
+  margin-bottom: 32px;
+  display: flex;
+}
+section .left-area .payment-info .wrap .checkbox-wrap label {
+  font-size: 14px;
+  color: #666;
+}
+section .left-area .payment-info .wrap .tab-payment-info {
+  margin-bottom: 32px;
+}
+section .left-area .payment-info .wrap .tab-payment-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section .left-area .payment-info .wrap .tab-payment-info ul li {
+  width: 346px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+section .left-area .payment-info .wrap .tab-payment-info ul li a {
+  display: block;
+  border: 1px solid #eee;
+  font-size: 18px;
+  color: #666;
+}
+section .left-area .payment-info .wrap .tab-payment-info ul .active a {
+  color: #fff;
+  background-color: #111;
+  border-color: #111;
+}
+section .left-area .payment-info .wrap .bank-select dl {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+section .left-area .payment-info .wrap .bank-select dl dt {
+  width: 153px;
+  font-size: 14px;
+  font-weight: 500;
+}
+section .left-area .payment-info .wrap .bank-select dl dd {
+  width: calc(100% - 153px);
+}
+section .left-area .payment-info .wrap .bank-select dl dd .select-box-wrap {
+  position: relative;
+}
+section .left-area .payment-info .wrap .bank-select dl dd .select-box-wrap .select-box {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #ccc;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+section .left-area .payment-info .wrap .bank-select dl dd .select-box-wrap .select-box p {
+  line-height: 48px;
+  font-size: 14px;
+  color: #999;
+}
+section .left-area .payment-info .wrap .bank-select dl dd .select-ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-top: 0;
+  padding: 0 16px;
+  background-color: #fff;
+}
+section .left-area .payment-info .wrap .bank-select dl dd .select-ul li {
+  line-height: 48px;
+  font-size: 14px;
+  color: #999;
+}
+section .left-area .payment-info .wrap .bank-select .deadline {
+  font-size: 13px;
+  color: #666;
+  padding-left: 153px;
+}
+section .left-area .payment-info .wrap .bank-select .deadline p {
+  padding-left: 12px;
+  position: relative;
+}
+section .left-area .payment-info .wrap .bank-select .deadline p::before {
+  content: "·";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .left-area .payment-info .wrap .info-register .information {
+  padding: 64px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts {
+  padding: 32px 0 24px;
+  border-bottom: 1px solid #eee;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .checkbox-wrap {
+  display: flex;
+  margin-bottom: 24px;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .radio-wrap {
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .radio-wrap input {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  accent-color: #111;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .radio-wrap label {
+  font-size: 14px;
+  color: #666;
+  margin-right: 40px;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .text-wrap dl {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .text-wrap dl:last-child {
+  margin-bottom: 0;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .text-wrap dl dt {
+  width: 153px;
+  font-size: 14px;
+  font-weight: 500;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .text-wrap dl dd input {
+  width: 290px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+section .left-area .payment-info .wrap .info-register .cash-receipts .text-wrap dl dd input::placeholder {
+  color: #999;
+}
+section .left-area .payment-info .wrap .info-register .info-register-agreement {
+  padding: 32px 0;
+}
+section .left-area .payment-info .wrap .info-register .info-register-agreement .checkbox-wrap {
+  display: flex;
+  flex-direction: column;
+}
+section .left-area .payment-info .wrap .info-register .info-register-agreement .checkbox-wrap .checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+section .left-area .payment-info .wrap .info-register .info-register-agreement .checkbox-wrap .checkbox .link-tooltip {
+  margin-left: 12px;
+}
+section .left-area .payment-info .wrap .info-register .info-register-agreement .information {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  text-align: left;
+}
+section .left-area .payment-info .wrap .info-register .info-register-agreement .information ul li {
+  padding-left: 12px;
+  position: relative;
+  font-size: 13px;
+  color: #666;
+}
+section .left-area .payment-info .wrap .info-register .info-register-agreement .information ul li::before {
+  content: "·";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .right-area .total-box {
+  width: 409px;
+  padding: 48px 50px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+}
+section .right-area .total-box .tit {
+  display: block;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+section .right-area .total-box .total-price-detail {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #333;
+}
+section .right-area .total-box .total-price-detail dl {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+section .right-area .total-box .total-price-detail dl dt {
+  font-size: 14px;
+}
+section .right-area .total-box .total-price-detail dl dd {
+  font-size: 14px;
+}
+section .right-area .total-box .payment-amount {
+  padding: 22px 0 27px;
+}
+section .right-area .total-box .payment-amount dl {
+  display: flex;
+  justify-content: space-between;
+}
+section .right-area .total-box .payment-amount dl dt {
+  font-size: 18px;
+  font-weight: 500;
+}
+section .right-area .total-box .payment-amount dl dd {
+  font-size: 24px;
+  font-weight: 700;
+}
+section .right-area .total-box .payment-amount .payment-amount-saving {
+  margin-top: 8px;
+}
+section .right-area .total-box .payment-amount .payment-amount-saving dt {
+  font-size: 14px;
+  font-weight: 500;
+}
+section .right-area .total-box .payment-amount .payment-amount-saving dd {
+  font-size: 14px;
+  font-weight: 400;
+}
+section .right-area .total-box .agreement {
+  margin-bottom: 32px;
+}
+section .right-area .total-box .agreement ul li {
+  font-size: 13px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  color: #666;
+  padding-left: 10px;
+  position: relative;
+  display: flex;
+}
+section .right-area .total-box .agreement ul li p {
+  line-height: 18px;
+  padding-top: 2px;
+}
+section .right-area .total-box button {
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  background-color: #111;
+}
