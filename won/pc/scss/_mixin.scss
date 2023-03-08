@@ -1,67 +1,101 @@
 @charset "utf-8";
+$red: #ff2a00;
 //한줄 말줄임
-@mixin ellipsis($w){overflow:hidden; display:block; width:$w;text-oveflow:ellipsis; white-space:nowrap;}
+@mixin ellipsis($w) {
+ overflow: hidden;
+ display: block;
+ width: $w;
+ text-oveflow: ellipsis;
+ white-space: nowrap;
+}
 
 //여러줄
-@mixin ellipsis2($w,$h){overflow:hidden; display : -webkit-box; -webkit-line-clamp:$line; width:$w; height:$h; -webkit-box-orient:vertical; text-overflow: ellipsis;}
+@mixin ellipsis2($w, $h) {
+ overflow: hidden;
+ display: -webkit-box;
+ -webkit-line-clamp: $line;
+ width: $w;
+ height: $h;
+ -webkit-box-orient: vertical;
+ text-overflow: ellipsis;
+}
 
 //말줄임 통합
 @mixin ellipsis($lines: 1) {
-  @if ($lines==1) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  } @else {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: $lines;
-    -webkit-box-orient: vertical;
-  }
+ @if ($lines==1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ } @else {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+ }
 }
 
 //블라인드
 @mixin blind {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  white-space: nowrap;
-  clip: rect(0, 0, 0, 0);
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ margin: -1px;
+ padding: 0;
+ overflow: hidden;
+ border: 0;
+ white-space: nowrap;
+ clip: rect(0, 0, 0, 0);
 }
-
 
 //포지션
-@mixin position($x,$y){position:absolute; left: $x; top: $y;
-    @if $x == 50% and $y == 50%{
-        transform: translate(-50%, -50%);
-    }@else if $x == 50%{
-        transform: translateX(-50%);
-    }@else if $y == 50% {
-        transform: translateY(-50%);
-    }
-    
+@mixin position($x, $y) {
+ position: absolute;
+ left: $x;
+ top: $y;
+ @if $x == 50% and $y == 50% {
+  transform: translate(-50%, -50%);
+ } @else if $x == 50% {
+  transform: translateX(-50%);
+ } @else if $y == 50% {
+  transform: translateY(-50%);
+ }
 }
 //flexbox
-@mixin flex($x,$y,$d){display: flex;justify-content: $x;align-items: $y;flex-direction: $d}
+@mixin flex($x, $y, $d) {
+ display: flex;
+ justify-content: $x;
+ align-items: $y;
+ flex-direction: $d;
+}
 
 //color
 @mixin set-color($color, $bg-color) {
-    color: $color;
-    background-color: $bg-color;
+ color: $color;
+ background-color: $bg-color;
 }
 //bg
-@mixin bg($name, $path: "../images/", $format: "jpg",$s) {
-    background-image: url("#{$path}#{$name}.#{$format}");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: $s;
+@mixin bg($name, $path: "../images/", $format: "jpg", $s) {
+ background-image: url("#{$path}#{$name}.#{$format}");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: $s;
 }
 @mixin after {
-  content: "";
-  display: block;
-  position:absolute;
+ content: "";
+ display: block;
+ position: absolute;
+}
+@mixin btnS {
+ padding: 0 12px;
+ height: 32px;
+ background-color: #fff;
+ color: #666;
+ border: 1px solid #ccc;
+ margin-right: 8px;
+ font-size: 14px;
+ font-weight: 500;
+ &:last-of-type {
+  margin-right: 0;
+ }
 }

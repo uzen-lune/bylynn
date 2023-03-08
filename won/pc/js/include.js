@@ -3,6 +3,7 @@ $(function(){
     var includes2 = $('[data-include2="aside"]');
     var includes3 = $('[data-include3="footer"]');
     var includes4 = $('[data-include4="search-layer"]');
+    var includes5 = $('[data-include5="box-wrap"]');
     jQuery.each(includes1, function(){
        $(this).load('header.html');
     });
@@ -14,5 +15,8 @@ $(function(){
     });
     jQuery.each(includes4, function(){
       $(this).load('search-layer.html');
+    });
+    jQuery.each(includes5, function(){
+      $(this).load('box-wrap.html');
     });
   });

@@ -1,17 +1,50 @@
-@charset "utf-8";
-/*reset*/
+@charset "utf-8"; @import "box-wrap.css"; /*reset*/
 * { margin: 0; padding: 0; } 
 
 ul,
 ol { list-style: none; } 
 
 a { text-decoration: none; } 
+h1,h2,h3,h4,h5 a,p,strong,span{line-height: 1;}
+
+/* input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=checkbox] { 
+ display: none; 
+ } 
+input[type=checkbox] + label { 
+ display: flex; 
+ align-items: center; 
+ } 
+input[type=checkbox] + label i { 
+ display: inline-block; 
+ width: 20px; 
+ height: 20px; 
+ border: 1px solid #ccc; 
+ margin-right: 16px; 
+ font-size: 0; 
+ } 
+input[type=checkbox]:checked + label i { 
+ background-image: url("../images/checkbox-black.svg"); 
+ background-repeat: no-repeat; 
+ background-position: center; 
+ background-size: 20px; 
+ } 
+
+/* //input */
 
 body { font-family: 'Pretendard'; } 
 
+button { cursor: pointer; } 
+
 .noto-serif { font-family: 'Noto Serif KR', serif; } 
 
-
+.link-tooltip a { color: #999; text-decoration: underline; font-size: 13px; } /* link-tooltip */
+ a.link-tooltip { color: #999; text-decoration: underline; font-size: 13px; } 
 /*header*/
 header { width: 100%; height: 88px; position: fixed; top: 0; left: 0; z-index: 9999; } 
 
@@ -147,7 +180,7 @@ header .right .util li .login { margin-left: 24px; }
 .filter-layer .color ul { display: flex; flex-wrap: wrap; } 
 .filter-layer .color ul li { margin-right: 8px; } 
 .filter-layer .color ul li:nth-child(8n) { margin-right: 0; } 
-.filter-layer .color ul li label { display: inline-block; width: 25px; height: 25px; border-radius: 100%; font-size: 0; box-sizing: border-box; }
+.filter-layer .color ul li label { display: inline-block; width: 25px; height: 25px; border-radius: 100%; font-size: 0; box-sizing: border-box; } 
 .filter-layer .color ul li label[for="cCheck01"] { background-color:#fff; border: 1px solid #ccc; } 
 .filter-layer .color ul li label[for="cCheck02"] { background-color:#856D63; } 
 .filter-layer .color ul li label[for="cCheck03"] { background-color:#1C2B4C; } 
@@ -168,7 +201,7 @@ header .right .util li .login { margin-left: 24px; }
 .filter-layer .size { padding: 32px 0; border-bottom: 1px solid #eee; } 
 .filter-layer .size h4 { margin-bottom: 16px; } 
 .filter-layer .size ul { display: flex; } 
-.filter-layer .size ul li { margin-right: 8px; }
+.filter-layer .size ul li { margin-right: 8px; } 
 .filter-layer .size ul li input { } 
 .filter-layer .size ul li label { display: inline-block; padding: 8px 12px; border: 1px solid #eee; font-size: 12px; } 
 
@@ -176,7 +209,7 @@ header .right .util li .login { margin-left: 24px; }
 .filter-layer .benefits { padding: 32px 0; border-bottom: 1px solid #eee; } 
 .filter-layer .benefits h4 { margin-bottom: 16px; } 
 .filter-layer .benefits ul { display: flex; } 
-.filter-layer .benefits ul li { margin-right: 8px; }
+.filter-layer .benefits ul li { margin-right: 8px; } 
 .filter-layer .benefits ul li input { } 
 .filter-layer .benefits ul li label { display: inline-block; padding: 8px 12px; border: 1px solid #eee; font-size: 12px; } 
 .filter-layer .benefits .active label { background-color: #000; color: #fff; } 
@@ -184,10 +217,10 @@ header .right .util li .login { margin-left: 24px; }
 .filter-layer .price h4 { margin-bottom: 16px; } 
 .filter-layer .price ul { } 
 .filter-layer .price ul li { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; position: relative; } 
-.filter-layer .price ul li label { font-size: 13px; font-weight: 500; }
+.filter-layer .price ul li label { font-size: 13px; font-weight: 500; } 
 .filter-layer .price ul li label::after { content: "원"; display: block; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 14px; } 
 
-.filter-layer .price ul li input { width: 190px; height: 40px; border: 1px solid #ccc; text-align: end; padding: 12px 24px 11px 12px; box-sizing: border-box; font-size: 14px; font-weight: 500; }
+.filter-layer .price ul li input { width: 190px; height: 40px; border: 1px solid #ccc; text-align: end; padding: 12px 24px 11px 12px; box-sizing: border-box; font-size: 14px; font-weight: 500; } 
 .filter-layer .submit-wrap { width: 100%; padding-bottom: 32px; border-bottom: 1px solid #eee; } 
 .filter-layer .submit-wrap .search-btn { width: 256px; height: 48px; background-color: #fff; border: 1px solid #333; } 
 .filter-layer .purpose { padding: 32px 0; border-bottom: 1px solid #eee; } 
