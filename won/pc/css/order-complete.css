@@ -1,0 +1,212 @@
+section {
+  padding-top: 158px;
+}
+section .inner {
+  width: 1514px;
+  margin: 0 auto;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.section-top h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+.section-top .sorting-area {
+  display: flex;
+}
+.section-top .sorting-area li {
+  padding-right: 28px;
+  background-image: url("../images/arrow-next-gray.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  background-position: right center;
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+}
+.section-top .sorting-area li:last-of-type {
+  margin-right: 0;
+  background: none;
+}
+.section-top .sorting-area .active {
+  color: #111;
+}
+
+.order-complete-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-area {
+  width: 1055px;
+}
+.left-area .info-box {
+  padding: 80px 0;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 80px;
+}
+.left-area .info-box strong {
+  display: block;
+  line-height: 1;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 500;
+}
+.left-area .info-box p {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.left-area .info-box p:last-of-type {
+  margin-bottom: 0;
+}
+.left-area .order-info {
+  margin-bottom: 64px;
+  border-top: 1px solid #333;
+}
+.left-area .order-info dl {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+.left-area .order-info dl dt {
+  width: 153px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.left-area .order-info dl dd {
+  font-size: 14px;
+}
+.left-area .order-info dl dd ul li {
+  margin-bottom: 16px;
+}
+.left-area .order-info dl dd ul li > p {
+  margin-bottom: 16px;
+}
+.left-area .order-info dl dd ul li:last-of-type {
+  margin-bottom: 0;
+}
+.left-area .order-info dl dd .des {
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+.left-area .order-info dl dd .des:last-of-type {
+  margin-bottom: 0;
+}
+.left-area .order-info dl dd .des p {
+  color: #999;
+  margin-bottom: 16px;
+}
+.left-area .order-info dl dd .des p:last-of-type {
+  margin-bottom: 0;
+}
+.left-area .btn-wrap {
+  text-align: center;
+  margin-bottom: 150px;
+}
+.left-area .btn-wrap button {
+  width: 250px;
+  height: 56px;
+  line-height: 56px;
+  border: 1px solid #111;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 500;
+}
+.left-area .btn-wrap .btn-black {
+  background-color: #111;
+  color: #fff;
+  margin-right: 16px;
+}
+.left-area .btn-wrap .btn-white {
+  background-color: #fff;
+  color: #111;
+}
+
+.right-area .total-box {
+  width: 409px;
+  padding: 48px 50px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+}
+.right-area .total-box .tit {
+  display: block;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.right-area .total-box .total-price-detail {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #333;
+}
+.right-area .total-box .total-price-detail dl {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.right-area .total-box .total-price-detail dl dt {
+  font-size: 14px;
+}
+.right-area .total-box .total-price-detail dl dd {
+  font-size: 14px;
+}
+.right-area .total-box .payment-amount {
+  padding: 22px 0 27px;
+}
+.right-area .total-box .payment-amount dl {
+  display: flex;
+  justify-content: space-between;
+}
+.right-area .total-box .payment-amount dl dt {
+  font-size: 18px;
+  font-weight: 500;
+}
+.right-area .total-box .payment-amount dl dd {
+  font-size: 24px;
+  font-weight: 700;
+}
+.right-area .total-box .payment-amount .payment-amount-saving {
+  margin-top: 8px;
+}
+.right-area .total-box .payment-amount .payment-amount-saving dt {
+  font-size: 14px;
+  font-weight: 500;
+}
+.right-area .total-box .payment-amount .payment-amount-saving dd {
+  font-size: 14px;
+  font-weight: 400;
+}
+.right-area .total-box .agreement {
+  margin-bottom: 32px;
+}
+.right-area .total-box .agreement ul li {
+  font-size: 13px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  color: #666;
+  padding-left: 10px;
+  position: relative;
+  display: flex;
+}
+.right-area .total-box .agreement ul li p {
+  line-height: 18px;
+  padding-top: 3px;
+}
+.right-area .total-box button {
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  background-color: #111;
+}
