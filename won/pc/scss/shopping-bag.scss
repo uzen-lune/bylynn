@@ -1,0 +1,549 @@
+@charset "utf-8";
+@import "mixin.scss";
+section {
+ padding-top: 158px;
+ input[type="checkbox"] {
+  display: none;
+  & + label {
+   display: flex;
+   align-items: center;
+   i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    margin-right: 16px;
+    font-size: 0;
+   }
+  }
+  &:checked + label i {
+   @include bg($name: "checkbox-black", $format: "svg", $s: 20px);
+  }
+ }
+
+ .inner {
+  width: 1514px;
+  margin: 0 auto;
+  /* display: flex;
+    justify-content: space-between; */
+ }
+
+ fieldset {
+  border: 0;
+  legend {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   .tit {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 64px;
+   }
+   .sorting-area {
+    display: flex;
+    li {
+     padding-right: 28px;
+     @include bg($name: "arrow-next-gray", $format: "svg", $s: 24px);
+     background-position: right center;
+     color: #999;
+     font-size: 14px;
+     font-weight: 500;
+     &:last-of-type {
+      margin-right: 0;
+      background: none;
+     }
+    }
+    .active {
+     color: #111;
+    }
+   }
+  }
+  .bag-contents {
+   display: flex;
+   justify-content: space-between;
+  }
+ }
+ .left-area {
+  width: 1055px;
+  padding-bottom: 150px;
+
+  .top-area {
+   padding: 16px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   .bag-all-check {
+    display: flex;
+    label {
+     font-size: 14px;
+     font-weight: 400;
+     color: #666;
+    }
+   }
+   .btn {
+    display: flex;
+    button {
+     padding: 0 12px;
+     line-height: 30px;
+     font-size: 13px;
+     font-weight: 500;
+     color: #666;
+     margin-right: 8px;
+     background-color: #fff;
+     border: 1px solid #666;
+    }
+    .reset {
+     margin-right: 0;
+     padding-left: 40px;
+     @include bg($name: "reset-gray", $format: "svg", $s: 24px);
+     background-position: left 12px center;
+    }
+   }
+  }
+  .group {
+   margin-bottom: 80px;
+   .title {
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #333;
+   }
+   .ui-prd-wrap {
+    .box {
+     .add {
+      display: flex;
+      align-items: center;
+      padding: 16px 0 24px 153px;
+      position: relative;
+      .txt {
+       width: 488px;
+      }
+      .box-count {
+       margin-right: 77px;
+       width: 80px;
+       height: 48px;
+       position: relative;
+       cursor: pointer;
+       .select {
+        width: 80px;
+        height: 48px;
+        box-sizing: border-box;
+        padding: 0 16px;
+        line-height: 48px;
+        border: 1px solid #ccc;
+        @include bg($name: "arrow-down", $format: "svg", $s: 10px);
+        background-position: right 16px center;
+       }
+       .select-ul {
+        display: none;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-top: 0;
+        box-sizing: border-box;
+        position: absolute;
+        top: 48px;
+        li {
+         padding: 16px;
+         background-color: #fff;
+        }
+       }
+      }
+      .box-price {
+       font-size: 16px;
+       font-weight: 700;
+       min-width: 75px;
+      }
+      .box-util {
+       @include position($x: "50%", $y: null);
+       right: 0;
+       width: 64px;
+       display: flex;
+       justify-content: end;
+       a {
+        display: block;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+       }
+       .wish {
+        @include bg($name: "wish", $format: "svg", $s: 24px);
+       }
+       .delete {
+        @include bg($name: "close-m", $format: "svg", $s: 24px);
+       }
+      }
+      .sold-out-select {
+       background-color: #eee;
+       cursor: default;
+      }
+     }
+    }
+    .box-detail {
+     display: flex;
+     position: relative; /* util */
+     padding: 24px 0;
+     border-bottom: 1px solid #eee;
+     .box-pdt {
+      display: flex;
+      .img-box {
+       width: 101px;
+       margin-right: 16px;
+       img {
+        display: block;
+        width: 100%;
+       }
+      }
+      .txt {
+       width: 488px;
+       .brand {
+        font-size: 13px;
+        color: #999;
+        margin-bottom: 8px;
+       }
+       .name {
+        font-size: 14px;
+        color: #111;
+        margin-bottom: 12px;
+       }
+       .option {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+        a {
+         margin-left: 12px;
+        }
+       }
+       .price {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: #111;
+        margin-bottom: 20px;
+        span {
+         margin-left: 10px;
+         font-size: 13px;
+         font-weight: 400;
+         text-decoration: line-through;
+         color: #999;
+        }
+        i {
+         display: block;
+         width: 20px;
+         height: 20px;
+         @include bg($name: "circle-down", $format: "svg", $s: 20px);
+         font-size: 0;
+         margin-left: 8px;
+        }
+       }
+       .gift {
+        font-size: 14px;
+        margin-bottom: 8px;
+        .badge {
+         font-weight: 500;
+         margin-right: 4px;
+        }
+        .notice {
+         color: $red;
+        }
+       }
+      }
+     }
+     .center {
+      display: flex;
+      align-items: center;
+     }
+     .box-count {
+      margin-right: 77px;
+      width: 80px;
+      height: 48px;
+      position: relative;
+      cursor: pointer;
+      .select {
+       width: 80px;
+       height: 48px;
+       box-sizing: border-box;
+       padding: 0 16px;
+       line-height: 48px;
+       border: 1px solid #ccc;
+       @include bg($name: "arrow-down", $format: "svg", $s: 10px);
+       background-position: right 16px center;
+      }
+      .sold-out-select {
+       background-color: #eee;
+       cursor: default;
+      }
+      .select-ul {
+       display: none;
+       width: 100%;
+       border: 1px solid #ccc;
+       border-top: 0;
+       box-sizing: border-box;
+       position: absolute;
+       top: 48px;
+       li {
+        padding: 16px;
+        background-color: #fff;
+       }
+      }
+     }
+     .box-price {
+      font-size: 16px;
+      font-weight: 700;
+      min-width: 75px;
+     }
+     .box-util {
+      position: absolute;
+      top: 24px;
+      right: 0;
+      width: 64px;
+      display: flex;
+      justify-content: space-between;
+      a {
+       display: block;
+       width: 24px;
+       height: 24px;
+       font-size: 0;
+      }
+      .wish {
+       @include bg($name: "wish", $format: "svg", $s: 24px);
+      }
+      .delete {
+       @include bg($name: "close-m", $format: "svg", $s: 24px);
+      }
+     }
+    }
+    .delivery-wrap {
+     display: flex;
+     padding: 22px 0;
+     justify-content: space-between;
+     border-bottom: 1px solid #ccc;
+     .txt {
+      font-size: 14px;
+      color: #666;
+     }
+     .price {
+      font-size: 14px;
+      color: #111;
+     }
+    }
+   }
+   .sold-out-box {
+    /* 품절박스 */
+    .img-box {
+     position: relative;
+     div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: #666;
+      background-color: rgba(255, 255, 255, 0.8);
+     }
+    }
+    .notice {
+     color: $red;
+     font-size: 13px;
+    }
+    .box-price {
+     p {
+      text-align: center;
+     }
+    }
+   } /* //품절박스 */
+   .gifts-box {
+    /* 사은품박스 */
+    .box-detail-wrap {
+     border-bottom: 1px solid #eee;
+    }
+    .box-detail {
+     border-bottom: 0;
+     position: relative;
+     &::after {
+      content: "";
+      display: block;
+      width: calc(100% - 153px);
+      height: 1px;
+      background-color: #eee;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+     }
+    }
+   }
+   .change-box {
+    position: relative;
+    .changed {
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-color: rgba(17, 17, 17, 0.6);
+     .txt {
+      text-align: center;
+      p {
+       margin-bottom: 12px;
+       font-size: 14px;
+       font-weight: 500;
+       color: #fff;
+      }
+      button {
+       padding: 0 12px 0 40px;
+       height: 32px;
+       @include bg($name: "reset-gray", $format: "svg", $s: 24px);
+       background-position: left 12px center;
+       border: 1px solid #666;
+       span {
+        display: inline-block;
+        line-height: 32px;
+        font-size: 13px;
+        font-weight: 500;
+       }
+      }
+     }
+    }
+   }
+   .max-box {
+    .box-detail-wrap {
+     border-bottom: 1px solid #eee;
+    }
+    .box-detail {
+     border-bottom: 0;
+     position: relative;
+     &::after {
+      content: "";
+      display: block;
+      width: calc(100% - 153px);
+      height: 1px;
+      background-color: #eee;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+     }
+    }
+    .add {
+     position: relative;
+     &::after {
+      content: "";
+      display: block;
+      width: calc(100% - 153px);
+      height: 1px;
+      background-color: #eee;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+     }
+     &:last-of-type::after {
+      display: none;
+     }
+     .txt {
+      p {
+       &:first-of-type {
+        margin-bottom: 8px;
+       }
+      }
+      .notice {
+       font-size: 13px;
+       color: $red;
+      }
+     }
+    }
+   }
+  }
+  .recently-seen-pdt {
+   margin-bottom: 80px;
+   h3 {
+    margin-bottom: 24px;
+   }
+  }
+  .interested-pdt {
+   h3 {
+    margin-bottom: 24px;
+   }
+  }
+ }
+ .right-area {
+  .total-box {
+   width: 409px;
+   padding: 48px 50px;
+   box-sizing: border-box;
+   border: 1px solid #eee;
+   .tit {
+    display: block;
+    line-height: 1;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+   }
+   .total-price-detail {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #333;
+    dl {
+     margin-bottom: 18px;
+     display: flex;
+     justify-content: space-between;
+     dt {
+      font-size: 14px;
+     }
+     dd {
+      font-size: 14px;
+     }
+    }
+   }
+   .payment-amount {
+    padding: 22px 0 27px;
+    dl {
+     display: flex;
+     justify-content: space-between;
+     dt {
+      font-size: 18px;
+      font-weight: 500;
+     }
+     dd {
+      font-size: 24px;
+      font-weight: 700;
+     }
+    }
+   }
+   .notice {
+    ul {
+     li {
+      font-size: 13px;
+      line-height: 19px;
+      margin-bottom: 5px;
+      color: #666;
+      padding-left: 10px;
+      position: relative;
+      &::before {
+       content: "·";
+       display: block;
+       position: absolute;
+       left: 2px;
+       top: 0;
+      }
+     }
+    }
+   }
+   button {
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    background-color: #111;
+   }
+  }
+ }
+}

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shopping-bag</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/shopping-bag.css" />
+  <script src="../js/jquery-3.6.1.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/include.js"></script>
+  <script src="../js/bylynn.js"></script>
+</head>
+
+<body>
+  <div data-include1="header" id="header"></div>
+  <!--헤더 인클루드-->
+  <div data-include4="search-layer" id="search-layer"></div>
+  <!--search-layer 인클루드-->
+  <section>
+    <div class="inner">
+      <form action="">
+        <fieldset>
+          <legend>
+            <span class="tit">장바구니</span>
+            <span>
+              <ul class="sorting-area">
+                <li class="active">장바구니</li>
+                <li>주문서 작성</li>
+                <li>주문완료</li>
+              </ul>
+            </span>
+          </legend>
+          <div class="bag-contents">
+            <div class="left-area">
+  
+              <div class="top-area">
+                <div class="bag-all-check">
+                  <input type="checkbox" name="bagAllCheck" id="bagAllCheck" />
+                  <label for="bagAllCheck"><i>체크박스</i>전체선택</label>
+                </div>
+                <div class="btn">
+                  <button type="button" class="select-delete">선택삭제</button>
+                  <button type="button" class="disorder-delete">
+                    주문불가 삭제
+                  </button>
+                  <button type="button" class="reset">상품정보 새로고침</button>
+                </div>
+              </div>
+              <div class="group-wrap">
+                <div class="group"> <!-- 그룹1 -->
+                  <div class="ui-prd-row title">
+                    <div class="tit">
+                      <input type="checkbox" name="listTit01" id="listTit01" />
+                      <label for="listTit01"><i>체크박스</i>바이린 1배송상품</label>
+                    </div>
+                    <div>
+                      <a href="#" class="link-tooltip">지역별 추가배송비</a>
+                    </div>
+                  </div>
+                  <div class="ui-prd-wrap">
+                    <div class="box"> <!-- 기본박스 -->
+                      <div class="box-detail">
+                        <div class="box-check">
+                          <input type="checkbox" name="boxCheck01" id="boxCheck01" />
+                          <label for="boxCheck01"><i>체크박스</i></label>
+                        </div>
+                        <div class="box-pdt">
+                          <div class="img-box">
+                            <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                          </div>
+                          <div class="txt">
+                            <p class="brand">LYNN</p>
+                            <p class="name">클래식 크롭 테일러드 자켓</p>
+                            <p class="option">
+                              브라운 / 55 <a href="#" class="link-tooltip">옵션변경</a>
+                            </p>
+                            <p class="price">
+                              197,100원<span>219,000원</span><i>화살표</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="center">
+                          <div class="box-count">
+                            <div class="select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              <span>197,100 <span class="unit">원</span></span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="box-util">
+                          <a href="#" class="wish">위시</a>
+                          <a href="#" class="delete">닫기</a>
+                        </div>
+                      </div>
+                      <div class="delivery-wrap">
+                        <div class="txt">배송비 (50,000원 이상 구매 시 무료)</div>
+                        <div class="price">3,000<span class="unit">원</span></div>
+                      </div>
+                    </div> <!-- //기본 박스 -->
+  
+                    <div class="box sold-out-box"> <!-- 품절박스 -->
+                      <div class="box-detail">
+                        <div class="box-check">
+                          <input type="checkbox" name="boxCheck02" id="boxCheck02" />
+                          <label for="boxCheck02"><i>체크박스</i></label>
+                        </div>
+                        <div class="box-pdt">
+                          <div class="img-box">
+                            <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                            <div>
+                              품절
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p class="brand">LYNN</p>
+                            <p class="name">클래식 크롭 테일러드 자켓</p>
+                            <p class="option">
+                              브라운 / 55 <a href="#" class="link-tooltip"></a>
+                            </p>
+                            <p class="notice">* 주문할 수 없습니다. </p>
+                            <!-- <p class="price">
+                                      197,100원<span>219,000원</span><i>화살표</i>
+                                    </p> -->
+                          </div>
+                        </div>
+                        <div class="center">
+                          <div class="box-count">
+                            <div class="select sold-out-select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              -
+                              <!-- <span>197,100 <span class="unit">원</span></span> -->
+                            </p>
+                          </div>
+                        </div>
+                        <div class="box-util">
+                          <a href="#" class="wish">위시</a>
+                          <a href="#" class="delete">닫기</a>
+                        </div>
+                      </div>
+                    </div><!-- //품절 박스 -->
+                  </div>
+                </div>
+                <div class="group"> <!-- 그룹2 -->
+                  <div class="ui-prd-row title">
+                    <div class="tit">
+                      <input type="checkbox" name="listTit02" id="listTit02" />
+                      <label for="listTit02"><i>체크박스</i>바이린 2배송상품</label>
+                    </div>
+                    <div>
+                      <a href="#" class="link-tooltip">지역별 추가배송비</a>
+                    </div>
+                  </div>
+                  <div class="ui-prd-wrap">
+                    <div class="box gifts-box"> <!-- 사은품박스 -->
+                      <div class="box-detail-wrap">
+                        <div class="box-detail">
+                          <div class="box-check">
+                            <input type="checkbox" name="boxCheck03" id="boxCheck03" />
+                            <label for="boxCheck03"><i>체크박스</i></label>
+                          </div>
+                          <div class="box-pdt">
+                            <div class="img-box">
+                              <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <p class="brand">LYNN</p>
+                              <p class="name">클래식 크롭 테일러드 자켓</p>
+                              <p class="option">
+                                브라운 / 55 <a href="#" class="link-tooltip">옵션변경</a>
+                              </p>
+                              <p class="price">
+                                197,100원<span>219,000원</span>
+                              </p>
+                              <p class="gift"><span class="badge">[사은품]</span>브랜드명 사은품명 (<span>2</span>개) <span
+                                  class="notice">* 소진</span></p>
+  
+                            </div>
+                          </div>
+                          <div class="center">
+                            <div class="box-count">
+                              <div class="select">1</div>
+                              <ul class="select-ul">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                              </ul>
+                            </div>
+                            <div class="box-price">
+                              <p>
+                                <span>197,100 <span class="unit">원</span></span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="box-util">
+                            <a href="#" class="wish">위시</a>
+                            <a href="#" class="delete">닫기</a>
+                          </div>
+                        </div>
+                        <div class="add">
+                          <div class="txt">
+                            <p><span class="badge">[추가]</span>맨투맨티셔츠 빨강/L-1개 (총<span class="add-count">2</span>개) <span
+                                class="add-price">5,000<span class="unit">원</span></span></p>
+                          </div>
+                          <div class="box-count">
+                            <div class="select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              <span>197,100 <span class="unit">원</span></span>
+                            </p>
+                          </div>
+                          <div class="box-util">
+                            <!-- <a href="#" class="wish">위시</a> -->
+                            <a href="#" class="delete">닫기</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="delivery-wrap">
+                        <div class="txt">배송비 (11월 무료배송 프로모션 : 2022.11.01 ~ 2022.11.30)</div>
+                        <div class="price">3,000<span class="unit">원</span></div>
+                      </div>
+                    </div> <!-- //사은품박스 -->
+  
+                    <div class="box mini-box"> <!-- 최소박스 -->
+                      <div class="box-detail">
+                        <div class="box-check">
+                          <input type="checkbox" name="boxCheck04" id="boxCheck04" />
+                          <label for="boxCheck04"><i>체크박스</i></label>
+                        </div>
+                        <div class="box-pdt">
+                          <div class="img-box">
+                            <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                          </div>
+                          <div class="txt">
+                            <p class="brand">LYNN</p>
+                            <p class="name">클래식 크롭 테일러드 자켓</p>
+                            <p class="option">
+                              브라운 / 55 <a href="#" class="link-tooltip"></a>
+                            </p>
+                            <!-- <p class="price">
+                              197,100원<span>219,000원</span><i>화살표</i>
+                            </p> -->
+                          </div>
+                        </div>
+                        <div class="center">
+                          <div class="box-count">
+                            <div class="select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              <span>197,100 <span class="unit">원</span></span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="box-util">
+                          <a href="#" class="wish">위시</a>
+                          <a href="#" class="delete">닫기</a>
+                        </div>
+                      </div>
+                      <div class="delivery-wrap">
+                        <div class="txt">배송비 (수량 1개당)</div>
+                        <div class="price">6,000<span class="unit">원</span></div>
+                      </div>
+                    </div> <!-- //최소박스 -->
+  
+                    <div class="box change-box"> <!-- 변동박스 -->
+                      <div class="box-detail">
+                        <div class="box-check">
+                          <input type="checkbox" name="boxCheck05" id="boxCheck05" />
+                          <label for="boxCheck05"><i>체크박스</i></label>
+                        </div>
+                        <div class="box-pdt">
+                          <div class="img-box">
+                            <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                          </div>
+                          <div class="txt">
+                            <p class="brand">LYNN</p>
+                            <p class="name">클래식 크롭 테일러드 자켓</p>
+                            <p class="option">
+                              브라운 / 55 <a href="#" class="link-tooltip"></a>
+                            </p>
+                            <!-- <p class="price">
+                              197,100원<span>219,000원</span><i>화살표</i>
+                            </p> -->
+                          </div>
+                        </div>
+                        <div class="center">
+                          <div class="box-count">
+                            <div class="select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              <span>197,100 <span class="unit">원</span></span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="box-util">
+                          <a href="#" class="wish">위시</a>
+                          <a href="#" class="delete">닫기</a>
+                        </div>
+                      </div>
+                      <div class="changed">
+                        <div class="txt">
+                          <p>가격 및 혜택 정보가 변경되었습니다.</p>
+                          <button type="button"><span>변경정보 새로고침</span></button>
+                        </div>
+                      </div>
+                    </div> <!-- //변동박스 -->
+                    <div class="box max-box"> <!-- 종합적인박스 -->
+                      <div class="box-detail-wrap">
+                        <div class="box-detail">
+                          <div class="box-check">
+                            <input type="checkbox" name="boxCheck06" id="boxCheck06" />
+                            <label for="boxCheck06"><i>체크박스</i></label>
+                          </div>
+                          <div class="box-pdt">
+                            <div class="img-box">
+                              <img src="../images/thumnail-bg-gray01.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <p class="brand">LYNN</p>
+                              <p class="name">클래식 크롭 테일러드 자켓</p>
+                              <!-- <p class="option">
+                                브라운 / 55 <a href="#" class="link-tooltip">옵션변경</a>
+                              </p> -->
+                              <p class="price">
+                                197,100원<!-- <span>219,000원</span><i>화살표</i> -->
+                              </p>
+                              <p class="gift"><span class="badge">[사은품]</span>브랜드명 사은품명 (<span>2</span>개) <span
+                                  class="notice">* 소진</span></p>
+                              <p class="gift"><span class="badge">[사은품]</span>브랜드명 사은품명1 사은품명2 (<span>2</span>개)</p>
+                            </div>
+                          </div>
+                          <div class="center">
+                            <div class="box-count">
+                              <div class="select">1</div>
+                              <ul class="select-ul">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                              </ul>
+                            </div>
+                            <div class="box-price">
+                              <p>
+                                <span>197,100 <span class="unit">원</span></span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="box-util">
+                            <a href="#" class="wish">위시</a>
+                            <a href="#" class="delete">닫기</a>
+                          </div>
+                        </div>
+                        <div class="add">
+                          <div class="txt">
+                            <p>[추가] 맨투맨티셔츠 빨강/L-1개 (총2개) 5,000원</p>
+                            <p class="notice">* 해당 상품의 판매가능수량은 {0}개 입니다.</p>
+                          </div>
+                          <div class="box-count">
+                            <div class="select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              <span>197,100 <span class="unit">원</span></span>
+                            </p>
+                          </div>
+                          <div class="box-util">
+                            <!-- <a href="#" class="wish">위시</a> -->
+                            <a href="#" class="delete">닫기</a>
+                          </div>
+                        </div>
+                        <div class="add">
+                          <div class="txt">
+                            <p>[추가] 맨투맨티셔츠 빨강/L-1개 (총2개) <span class="notice">* 품절</span></p>
+                            <p class="notice">* 주문할 수 없습니다.</p>
+                          </div>
+                          <div class="box-count">
+                            <div class="select sold-out-select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              <span>197,100 <span class="unit">원</span></span>
+                            </p>
+                          </div>
+                          <div class="box-util">
+                            <!-- <a href="#" class="wish">위시</a> -->
+                            <a href="#" class="delete">닫기</a>
+                          </div>
+                        </div>
+                        <div class="add">
+                          <div class="txt">
+                            <p>[추가] 맨투맨티셔츠 빨강/L-1개 (총2개) <span class="notice">* 판매중지</span></p>
+                            <p class="notice">* 주문할 수 없습니다.</p>
+                          </div>
+                          <div class="box-count">
+                            <div class="select sold-out-select">1</div>
+                            <ul class="select-ul">
+                              <li>1</li>
+                              <li>2</li>
+                              <li>3</li>
+                            </ul>
+                          </div>
+                          <div class="box-price">
+                            <p>
+                              <span>197,100 <span class="unit">원</span></span>
+                            </p>
+                          </div>
+                          <div class="box-util">
+                            <!-- <a href="#" class="wish">위시</a> -->
+                            <a href="#" class="delete">닫기</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="delivery-wrap">
+                        <div class="txt">배송비 (11월 무료배송 프로모션 : 2022.11.01 ~ 2022.11.30)</div>
+                        <div class="price">3,000<span class="unit">원</span></div>
+                      </div>
+                    </div> <!-- //종합적인박스 -->
+  
+  
+                  </div>
+                </div>
+              </div>
+  
+  
+              <script>
+                $(".box-count .select").click(function () {
+                  $(this).next(".select-ul").slideToggle();
+                  /*  $(this).toggleClass("active"); */
+                  /* if($('.select-ul')is(":visible") == true){
+                                      $(this).add
+                                  } */
+                });
+              </script>
+  
+              <div class="recently-seen-pdt">
+                <h3>최근 본 상품</h3>
+                <div data-include5="box-wrap" id="box-wrap" class="clearfix"></div>
+                <!--박스 인클루드-->
+              </div>
+              <div class="interested-pdt">
+                <h3>관심 상품</h3>
+                <div data-include5="box-wrap" id="box-wrap" class="clearfix"></div>
+                <!--박스 인클루드-->
+              </div>
+  
+            </div>
+            <div class="right-area">
+              <div class="total-box">
+                <strong class="tit">총 {0}개 합계</strong>
+                <div class="total-price-detail">
+                  <dl>
+                    <dt>정상판매금액</dt>
+                    <dd>300,000원</dd>
+                  </dl>
+                  <dl>
+                    <dt>할인금액</dt>
+                    <dd>-3,000원</dd>
+                  </dl>
+                  <dl>
+                    <dt>배송비</dt>
+                    <dd>2,500원</dd>
+                  </dl>
+                </div>
+                <div class="payment-amount">
+                  <dl>
+                    <dt>결제예정금액</dt>
+                    <dd>290,500원</dd>
+                  </dl>
+                </div>
+                <div class="notice">
+                  <ul>
+                    <li>장바구니에 담을 수 있는 상품의 품목은 최대 {0}개입니다.</li>
+                    <li>오랫동안 장바구니에 보관된 상품을 주문하실 경우, 가격이나 혜택이 변동 될 수 있습니다.</li>
+                    <li>구매하기 선택 시, 구매시점에 품절된 상품은 제외하고 주문이 진행됩니다.</li>
+                  </ul>
+                </div>
+                <button type="button">총 <span class="">{0}</span>개 구매하기</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <!-- <div class="right-area">
+      <div class="total-box">
+        <strong class="tit">총 {0}개 합계</strong>
+        <div class="total-price-detail">
+          <dl>
+            <dt>정상판매금액</dt>
+            <dd>300,000원</dd>
+          </dl>
+          <dl>
+            <dt>할인금액</dt>
+            <dd>-3,000원</dd>
+          </dl>
+          <dl>
+            <dt>배송비</dt>
+            <dd>2,500원</dd>
+          </dl>
+        </div>
+        <div class="payment-amount">
+          <dl>
+            <dt>결제예정금액</dt>
+            <dd>290,500원</dd>
+          </dl>
+        </div>
+        <div class="notice">
+          <ul>
+            <li>장바구니에 담을 수 있는 상품의 품목은 최대 {0}개입니다.</li>
+            <li>오랫동안 장바구니에 보관된 상품을 주문하실 경우, 가격이나 혜택이 변동 될 수 있습니다.</li>
+            <li>구매하기 선택 시, 구매시점에 품절된 상품은 제외하고 주문이 진행됩니다.</li>
+          </ul>
+        </div>
+        <button type="button">총 <span class="">{0}</span>개 구매하기</button>
+      </div>
+    </div> -->
+    </div>
+
+  </section>
+  <div data-include3="footer" id="footer" class="clearfix"></div>
+  <!--푸터 인클루드-->
+</body>
+
+</html>
