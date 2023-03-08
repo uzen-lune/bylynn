@@ -11,11 +11,6 @@ section {
     width: 1514px;
     margin: 0 auto;
   }
-  .link-tooltip a {
-    color: #999;
-    text-decoration: underline;
-    font-size: 13px;
-  } /* link-tooltip */
   .pdt-top-area {
     width: 100%;
     display: flex;
@@ -568,6 +563,7 @@ section {
     }
   } /* //pdt-top-area */
   .pdt-btm-area {
+    margin-bottom: 110px;
     div[class^=recommend-sec] {
       margin-bottom: 120px;
     }
@@ -1002,7 +998,60 @@ section {
     }
 
     .pdt-tab-purchase{
+      li{
+        margin-bottom: 46px;
+        >div {
+          p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 6px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .txt {
+          div {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+            &:last-of-type {
+              padding-bottom: 36px;
+            }
+          }
+        }
+      }
 
+      h4{
+        font-size: 18px;
+        font-weight: 500;
+        padding: 24px 0;
+        border-bottom: 1px solid #333;
+        box-sizing: border-box;
+        @include bg ($name:"arrow-up-24",$format:"svg",$s:24px);
+        background-position: right 26px;
+        margin-bottom: 16px;
+      }
+      .tab-purchase-detail {
+        dl {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 16px 0;
+          border-bottom: 1px solid #eee;
+          &:last-of-type {
+            padding-bottom: 32px;
+          }
+          dt {
+            width: 150px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+          }
+          dd {
+            font-size: 14px;
+            color: #666;
+          }
+        }
+      }
     }
 
 
